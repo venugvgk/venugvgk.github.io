@@ -1,5 +1,5 @@
 ---
-title: "Venugvgk.github.io"
+title: "Venu GVGK"
 ---
 
 This is a Quarto website.
