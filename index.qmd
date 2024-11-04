@@ -1,5 +1,5 @@
 ---
-title: "Venu GVGK"
+title: "Venu Gopala"
 ---
 
 This is a Quarto website.
