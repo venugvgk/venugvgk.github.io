@@ -8,10 +8,6 @@ website:
       left:
        - text: Curriculum Vitae
          href: about.qmd
-  page-footer: 
-    left:
-      - text: Farm Hill Education Trust
-        href: https://farmhill.in
   
 
 format:
