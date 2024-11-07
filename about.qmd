@@ -28,7 +28,10 @@ Additionally, at different points during my professional career, I taught Electr
 
 
 
+
 # Education
+
+
 ```{=html}
 <div style="text-align:center;">
             <span style="float:left"> Tata Institute of Social Sciences </span>

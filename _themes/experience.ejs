@@ -1,16 +1,15 @@
 ```{=html}
 <div>
 <% for (const item of items) { %>
-    <b>
-        <div style="text-align:center;">
-            <span style="float:left"><%= item.organization %></span>
-            <span style="float:right"><%= item.period %></span>
-            <span style="text-align:center"><%= item.title %></span>
-            <br><br>
+<div class="exp-section">
+        <div style="text-align:center; font-weight: bold;" class="grid exp-header">
+            <div class="g-col-12 g-col-md-4 exp-org"><%= item.organization %></div>
+            <div class="g-col-12 g-col-md-4 exp-period"><%= item.period %></div>
+            <div class="g-col-12 g-col-md-4 exp-title"><%= item.title %></div>
+           
         </div> 
-    </b>
     <div><%= item.details %></div>
-    <br>
+</div> 
 <% } %>
     
 </div>
