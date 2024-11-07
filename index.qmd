@@ -7,7 +7,7 @@ about:
   links:
     - icon: instagram
       text: instagram
-      href: https:/instagram.com/venu.gvgk
+      href: https://instagram.com/venu.gvgk
     - icon: github
       text: github
       href: https://github.com/venugvgk
