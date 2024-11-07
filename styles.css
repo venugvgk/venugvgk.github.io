@@ -1,1 +1,26 @@
 /* css styles */
+.exp-section { 
+    padding-bottom: 20px;
+    }
+
+.exp-header {
+    padding-bottom: 10px;
+    }
+
+.exp-org { 
+    text-align: left;
+}
+
+.exp-period {
+    text-align:center;
+}
+
+.exp-title {
+    text-align:right;
+}
+
+@media (max-width: 768px) {
+    .exp-org, .exp-period, .exp-title {
+        text-align: left;
+    }
+}
