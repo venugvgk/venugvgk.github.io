@@ -23,4 +23,8 @@
     .exp-org, .exp-period, .exp-title {
         text-align: left;
     }
+
+    .exp-header {
+        gap: 0;
+    }
 }
