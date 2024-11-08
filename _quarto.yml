@@ -3,6 +3,8 @@ project:
 
 website:
   title: "Venu GVGK Raju"
+  open-graph: true
+  twitter-card: true
   navbar:
       href: /index.qmd
       left:
