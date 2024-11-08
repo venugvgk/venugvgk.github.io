@@ -10,6 +10,8 @@ website:
          href: about.qmd
        - text: English Blog
          href: blog-english/index.qmd
+       - text: Telugu Blog
+         href: blog-telugu/index.qmd
         
   
 
