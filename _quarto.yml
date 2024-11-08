@@ -8,6 +8,9 @@ website:
       left:
        - text: Curriculum Vitae
          href: about.qmd
+       - text: English Blog
+         href: blog-english/index.qmd
+        
   
 
 format:

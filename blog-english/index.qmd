@@ -1,0 +1,9 @@
+---
+title: Thinking in English
+listing:
+  contents: "*/index.qmd"
+  sort: "date desc"
+  type: grid
+  categories: true
+---
+
