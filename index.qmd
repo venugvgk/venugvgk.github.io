@@ -3,7 +3,7 @@ title: "Venu GVGK Raju"
 page-layout: full
 about:
   template: trestles
-  image: venu.jpg
+  image: venu2024.jpg
   links:
     - icon: instagram
       text: instagram
