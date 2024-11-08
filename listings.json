@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/blog-telugu/index.html",
+    "items": [
+      "/blog-telugu/rukmini/index.html"
+    ]
+  },
+  {
     "listing": "/blog-english/index.html",
     "items": [
       "/blog-english/Turning45/index.html"
