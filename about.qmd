@@ -5,6 +5,9 @@ listing:
   - id: work
     template: _themes/experience.ejs
     contents: work.yml
+  - id: education
+    template: _themes/experience.ejs
+    contents: education.yml
 
 ---
 # Profile Summary
@@ -31,35 +34,6 @@ Additionally, at different points during my professional career, I taught Electr
 
 # Education
 
+::: {#education}
 
-```{=html}
-<div style="text-align:center;">
-            <span style="float:left"> Tata Institute of Social Sciences </span>
-            <span style="float:right"> 2024 - present </span>
-            <span style="text-align:center"> M.A (El.Ed.)   </span>
-            <br><br>
-        </div> 
-
-<div style="text-align:center;">
-            <span style="float:left"> IIM Bangalore</span>
-            <span style="float:right"> 2005 - 2007 </span>
-            <span style="text-align:center"> &emsp; &emsp;&emsp;&emsp;PGDM   </span>
-            <br><br>
-        </div> 
-
-<div style="text-align:center;">
-            <span style="float:left"> Osmania University </span>
-            <span style="float:right"> 1998 - 2002 </span>
-            <span style="text-align:center"> &emsp; B.E.  </span>
-            <br><br>
-        </div> 
-
-<div style="text-align:center;">
-            <span style="float:left"> Jawahar Navodaya Vidyalaya </span>
-            <span style="float:right"> 1990 - 1995 </span>
-            <span style="text-align:center">  Schooling  </span>
-            <br><br>
-        </div> 
-```
-
-
+::: 
