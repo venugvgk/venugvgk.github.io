@@ -5,29 +5,33 @@ about:
   template: trestles
   image: venu2024.jpg
   links:
-    - icon: instagram
-      text: instagram
-      href: https://instagram.com/venu.gvgk
+    - icon: envelope-at
+      text: email
+      href: mailto:venu.gvgk@gmail.com
     - icon: github
       text: github
       href: https://github.com/venugvgk
     - icon: facebook
       text: facebook
       href: https://www.facebook.com/venu.gvgk
+    - icon: instagram
+      text: instagram
+      href: https://instagram.com/venu.gvgk
+    
 ---
 I am a nonprofit leader focused on building and running high-performance teams in the education/alternative living space. My work spans the following interrelated streams, that flow in and out of each other. 
 
-1. Teaching: mathematics, science and economics at school level; have taught engineering at college level.
+1. Teaching: mathematics, science and economics at school level; have taught engineering at college level
 
-2. Curriculum design and teacher training: deeply involved in both activities at Farm Hill Learning. 
+2. Curriculum design and teacher training: deeply involved in both activities at Farm Hill Learning
 
-3. Consulting: advising education firms and non-profit teams on organizational development, project formulation, implementation, monitoring and impact assessment. 
+3. Consulting: advising education firms and non-profit teams on organizational development, project formulation, implementation, monitoring and impact assessment
 
 4. Autism: working with families and individuals on the spectrum; leading teams of professionals providing services in the space; developing guides and resources
 
 4. Writing and Translating: Writing for children in Telugu and English; translating poetry, fiction as well as non-fiction between Telugu and English
 
-5. Research and learning: I am pursuing an M.A in education at Tata Institute of Social Sciences. My areas of interest are philosophy and sociology of education. 
+5. Research and learning: I am pursuing an M.A in education at Tata Institute of Social Sciences (2024-26). My areas of interest are philosophy and sociology of education. 
 
 In addition to these areas, I am deeply interested in various uses of technology - in teaching and learning and productivity. I also pursue literature in Telugu, Sanskrit, English and Tamil as a hobby. 
 

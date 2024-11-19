@@ -5,6 +5,20 @@ website:
   title: "Venu GVGK Raju"
   open-graph: true
   twitter-card: true
+  page-footer:
+    border: true
+    left: |
+      Currently associated with [_Farm Hill Education Trust_](https://farmhill.in)
+    right: 
+      - icon: envelope-at
+        href: mailto:venu.gvgk@gmail.com
+      - icon: github
+        href: https://github.com/venugvgk
+      - icon: facebook
+        href: https://www.facebook.com/venu.gvgk
+      - icon: instagram
+        href: https://instagram.com/venu.gvgk
+  
   navbar:
       href: /index.qmd
       left:
