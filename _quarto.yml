@@ -2,7 +2,8 @@ project:
   type: website
 
 website:
-  title: "Venu GVGK Raju"
+  title: "venu GVGK Raju"
+  
   open-graph: true
   twitter-card: true
   page-footer:
@@ -20,6 +21,7 @@ website:
         href: https://instagram.com/venu.gvgk
   
   navbar:
+      logo: venu-logo-nobg.png
       href: /index.qmd
       left:
        - text: Curriculum Vitae
@@ -33,7 +35,9 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: 
+     - cosmo
+     - styles.scss
     css: styles.css
     toc: true
 
