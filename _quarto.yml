@@ -34,12 +34,13 @@ website:
   
 
 format:
-  html:
+  html: 
     theme: 
-     - cosmo
-     - styles.scss
+      - cosmo
+      - styles.scss
     css: styles.css
     toc: true
+    mainfont: Nunito
 
 
 
