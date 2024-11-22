@@ -3,6 +3,12 @@ title: Books
 subtitle: |
   I write for children in Telugu and English. Two of my picture books in Telugu are published by Manchi Pustakam. I also translated a few from English to Telugu. <br>
   తెలుగులోనూ, ఇంగ్లీషులోనూ పిల్లల కోసం రాస్తుంటాను. నేను పిల్లల కోసం రాసిన రెండు బొమ్మల పుస్తకాలను  మంచి పుస్తకం ద్వారా ప్రచురించారు. కొన్ని పుస్తకాలను ఇంగ్లీషు నుంచీ తెలుగులోకి అనువదించాను. 
+
+listing:
+  - id: storyweaver-books
+    template: ../_themes/book-image-descr.ejs
+    contents: storyweaver.yml
+ 
 ---
 
 ## Children's Picture Books <br> పిల్లల బొమ్మల పుస్తకాలు 
@@ -66,19 +72,9 @@ subtitle: |
 
 ## Children's Pictures books translated for Storyweaver <br> స్టోరీవీవర్ కోసం అనువదించిన పిల్లల బొమ్మల పుస్తకాలు 
 
-:::: {.columns}
 
-::: {.column width="60%"}
-![](bommalu-geese-aata.jpg){fig-align="center" width=50%}
+::: {#storyweaver-books}
+
 :::
 
-::: {.column width="40%"}
-### బొమ్మలు గీసే ఆట
-
-జీనూ, అమ్మమ్మా కలిసి వృత్తాలూ, త్రిభుజాలూ, చతురస్రాలూ గీసి, వాటిని కొత్త కొత్త బొమ్మలుగా మార్చేశారు. సులువైన ఈ కథ పిల్లలకి రకరకాల ఆకారాలను పరిచయం చేసి, వాళ్ళ ఊహాశక్తిని వాడటాన్ని ప్రోత్సహిస్తుంది.
-:::
-
-::::
-
-
-https://storyweaver.org.in/en/users/34679-venu-gopala-krishna
+All the above Story Weaver books can accessed from the author dashboard of [Venu Gopala Krishna](https://storyweaver.org.in/en/users/34679-venu-gopala-krishna) on Story Weaver. 

@@ -1,0 +1,16 @@
+```{=html}
+
+<div class="grid">
+<% for (const item of items) { %>
+    <div class="g-col-12 g-col-md-6">
+        <img class="img-fluid" src="<%= item.image %>">
+    </div>
+
+    <div class="g-col-12 g-col-md-6">
+        <h4 style="margin-top: 0px;"><%= item.title %></h4>
+        <div><%= item.descr %></div>
+    </div>
+   
+    <% } %>
+</div>
+```
