@@ -21,7 +21,7 @@ website:
         href: https://instagram.com/venu.gvgk
   
   navbar:
-      logo: venu-logo-nobg.png
+      
       href: /index.qmd
       left:
        - text: Curriculum Vitae
