@@ -30,6 +30,8 @@ website:
          menu: 
           - en/blog/index.qmd
           - te/blog/index.qmd
+       - text: Books
+         href: books/index.qmd
         
   
 
