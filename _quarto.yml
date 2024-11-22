@@ -26,10 +26,10 @@ website:
       left:
        - text: Curriculum Vitae
          href: about.qmd
-       - text: English Blog
-         href: blog-english/index.qmd
-       - text: Telugu Blog
-         href: blog-telugu/index.qmd
+       - text: Blog
+         menu: 
+          - en/blog/index.qmd
+          - te/blog/index.qmd
         
   
 
@@ -40,7 +40,7 @@ format:
       - styles.scss
     css: styles.css
     toc: true
-    mainfont: Nunito
+    mainfont: Nunito, Mallanna
 
 
 

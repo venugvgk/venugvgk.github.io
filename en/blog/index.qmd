@@ -1,0 +1,10 @@
+---
+title: English
+subtitle: My writings here are ecclectic, covering topics such as poetry to technology, economics to sociology. Use the categories to navigate! 
+listing:
+  contents: "*/index.qmd"
+  sort: "date desc"
+  type: grid
+  categories: true
+---
+

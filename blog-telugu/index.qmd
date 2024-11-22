@@ -1,9 +1,0 @@
----
-title: తెలుగు, సంస్కృతము, ఇతర భాషలలొ ఆలోచనలు 
-listing:
-  contents: "*/index.qmd"
-  sort: "date desc"
-  type: grid
-  categories: true
----
-

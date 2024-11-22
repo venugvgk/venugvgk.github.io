@@ -1,0 +1,17 @@
+---
+title: Books
+subtitle: I have written a couple of picture books for children in Telugu, and translated a few from English to Telugu. తెలుగులో పిల్లల కోసం రెండు బొమ్మల కథల పుస్తకాలు రాశాను. కొన్ని పుస్తకాలను తెలుగులోకి అనువాదించాను. 
+
+listing:
+  - id: picture-books
+    template: _theme/two-column-sections.ejs
+    contents: picture-books.yml
+
+---
+
+## Children's Picture Books పిల్లల బొమ్మల పుస్తకాలు 
+
+::: {#picture-books}
+
+:::
+
