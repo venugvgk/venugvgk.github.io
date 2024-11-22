@@ -4,7 +4,7 @@ subtitle: I have written a couple of picture books for children in Telugu, and t
 
 listing:
   - id: picture-books
-    template: _theme/two-column-sections.ejs
+    template: _themes/two-column-sections.ejs
     contents: picture-books.yml
 
 ---
