@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -66,7 +68,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-storyweaver-books .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-descr',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-image","listing-descr"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-storyweaver-books'] = new List('listing-storyweaver-books', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Books – venu GVGK Raju">
@@ -237,21 +297,30 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="childrens-pictures-books-translated-for-storyweaver-సటరవవర-కస-అనవదచన-పలలల-బమమల-పసతకల" class="level2">
 <h2 class="anchored" data-anchor-id="childrens-pictures-books-translated-for-storyweaver-సటరవవర-కస-అనవదచన-పలలల-బమమల-పసతకల">Children’s Pictures books translated for Storyweaver <br> స్టోరీవీవర్ కోసం అనువదించిన పిల్లల బొమ్మల పుస్తకాలు</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="bommalu-geese-aata.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
+<div id="listing-storyweaver-books" class="quarto-listing quarto-listing-container-custom">
+
+<div class="grid">
+
+    <div class="g-col-12 g-col-md-6">
+        <img class="img-fluid" src="bommalu-geese-aata.jpg">
+    </div>
+
+    <div class="g-col-12 g-col-md-6">
+        <h4 style="margin-top: 0px;" class="anchored">బొమ్మలు గీసే ఆట</h4>
+        <div>జీనూ, అమ్మమ్మా కలిసి వృత్తాలూ, త్రిభుజాలూ, చతురస్రాలూ గీసి, 
+వాటిని కొత్త కొత్త బొమ్మలుగా మార్చేశారు. సులువైన ఈ కథ పిల్లలకి రకరకాల 
+ఆకారాలను పరిచయం చేసి, వాళ్ళ ఊహాశక్తిని వాడటాన్ని ప్రోత్సహిస్తుంది.
 </div>
-</div><div class="column" style="width:40%;">
-<section id="బమమల-గస-ఆట" class="level3">
-<h3 class="anchored" data-anchor-id="బమమల-గస-ఆట">బొమ్మలు గీసే ఆట</h3>
-<p>జీనూ, అమ్మమ్మా కలిసి వృత్తాలూ, త్రిభుజాలూ, చతురస్రాలూ గీసి, వాటిని కొత్త కొత్త బొమ్మలుగా మార్చేశారు. సులువైన ఈ కథ పిల్లలకి రకరకాల ఆకారాలను పరిచయం చేసి, వాళ్ళ ఊహాశక్తిని వాడటాన్ని ప్రోత్సహిస్తుంది.</p>
-</section>
+    </div>
+   
+    
+</div>
+<div class="listing-no-matching d-none">
+No matching items
 </div>
 </div>
-<p>https://storyweaver.org.in/en/users/34679-venu-gopala-krishna</p>
+<p>All the above Story Weaver books can accessed from the author dashboard of <a href="https://storyweaver.org.in/en/users/34679-venu-gopala-krishna">Venu Gopala Krishna</a> on Story Weaver.</p>
+
 
 
 </section>
