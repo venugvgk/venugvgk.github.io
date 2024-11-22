@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://venugvgk.github.io/blog-telugu/index.html</loc>
-    <lastmod>2024-11-22T05:14:03.602Z</lastmod>
-  </url>
-  <url>
     <loc>https://venugvgk.github.io/index.html</loc>
-    <lastmod>2024-11-22T05:14:03.602Z</lastmod>
+    <lastmod>2024-11-22T08:45:16.669Z</lastmod>
   </url>
   <url>
-    <loc>https://venugvgk.github.io/blog-english/Turning45/index.html</loc>
-    <lastmod>2024-11-22T05:14:03.598Z</lastmod>
+    <loc>https://venugvgk.github.io/en/blog/turning45/index.html</loc>
+    <lastmod>2024-11-22T08:45:16.665Z</lastmod>
   </url>
   <url>
-    <loc>https://venugvgk.github.io/blog-english/index.html</loc>
-    <lastmod>2024-11-22T05:14:03.598Z</lastmod>
+    <loc>https://venugvgk.github.io/te/blog/rukmini/index.html</loc>
+    <lastmod>2024-11-22T08:45:16.669Z</lastmod>
   </url>
   <url>
     <loc>https://venugvgk.github.io/about.html</loc>
-    <lastmod>2024-11-22T05:14:03.598Z</lastmod>
+    <lastmod>2024-11-22T08:45:16.657Z</lastmod>
   </url>
   <url>
-    <loc>https://venugvgk.github.io/blog-telugu/rukmini/index.html</loc>
-    <lastmod>2024-11-22T05:14:03.602Z</lastmod>
+    <loc>https://venugvgk.github.io/books/index.html</loc>
+    <lastmod>2024-11-22T08:45:16.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://venugvgk.github.io/te/blog/index.html</loc>
+    <lastmod>2024-11-22T08:45:16.669Z</lastmod>
+  </url>
+  <url>
+    <loc>https://venugvgk.github.io/en/blog/index.html</loc>
+    <lastmod>2024-11-22T08:45:16.665Z</lastmod>
   </url>
 </urlset>

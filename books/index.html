@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Thinking in English – venu GVGK Raju</title>
+<title>Books – venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,20 +71,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-picture-books .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-image','listing-body',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-image","listing-body"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-picture-books'] = new List('listing-picture-books', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -129,10 +129,14 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Thinking in English – venu GVGK Raju">
+<meta property="og:title" content="Books – venu GVGK Raju">
+<meta property="og:description" content="I have written a couple of picture books for children in Telugu, and translated a few from English to Telugu. తెలుగులో పిల్లల కోసం రెండు బొమ్మల కథల పుస్తకాలు రాశాను. కొన్ని పుస్తకాలను తెలుగులోకి అనువాదించాను.">
+<meta property="og:image" content="https://venugvgk.github.io/books/appu-cover.jpg">
 <meta property="og:site_name" content="venu GVGK Raju">
-<meta name="twitter:title" content="Thinking in English – venu GVGK Raju">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Books – venu GVGK Raju">
+<meta name="twitter:description" content="I have written a couple of picture books for children in Telugu, and translated a few from English to Telugu. తెలుగులో పిల్లల కోసం రెండు బొమ్మల కథల పుస్తకాలు రాశాను. కొన్ని పుస్తకాలను తెలుగులోకి అనువాదించాను.">
+<meta name="twitter:image" content="https://venugvgk.github.io/books/appu-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -159,14 +163,21 @@ window.Quarto = {
     <a class="nav-link" href="../about.html"> 
 <span class="menu-text">Curriculum Vitae</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="../blog-english/index.html" aria-current="page"> 
-<span class="menu-text">English Blog</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Blog</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">    
+        <li>
+    <a class="dropdown-item" href="../en/blog/index.html">
+ <span class="dropdown-text">English</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../blog-telugu/index.html"> 
-<span class="menu-text">Telugu Blog</span></a>
+        <li>
+    <a class="dropdown-item" href="../te/blog/index.html">
+ <span class="dropdown-text">తెలుగు, సంస్కృతము, ఇతర భాషలు</span></a>
   </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -179,14 +190,21 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="personal">personal <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#childrens-picture-books-పలలల-బమమల-పసతకల" id="toc-childrens-picture-books-పలలల-బమమల-పసతకల" class="nav-link active" data-scroll-target="#childrens-picture-books-పలలల-బమమల-పసతకల">Children’s Picture Books పిల్లల బొమ్మల పుస్తకాలు</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Thinking in English</h1>
+<h1 class="title">Books</h1>
+<p class="subtitle lead">I have written a couple of picture books for children in Telugu, and translated a few from English to Telugu. తెలుగులో పిల్లల కోసం రెండు బొమ్మల కథల పుస్తకాలు రాశాను. కొన్ని పుస్తకాలను తెలుగులోకి అనువాదించాను.</p>
 </div>
 
 
@@ -203,47 +221,54 @@ window.Quarto = {
 </header>
 
 
+<section id="childrens-picture-books-పలలల-బమమల-పసతకల" class="level2">
+<h2 class="anchored" data-anchor-id="childrens-picture-books-పలలల-బమమల-పసతకల">Children’s Picture Books పిల్లల బొమ్మల పుస్తకాలు</h2>
+<div id="listing-picture-books" class="quarto-listing quarto-listing-container-custom">
 
+<div class="grid">
 
+    <div class="g-col-12 g-col-md-6">
+        <div class="grid">
+        
+            <div class="g-col-12 g-col-md-4">
+                <img class="img-fluid" src="appu-cover.jpg">
+            </div>
+            <div class="g-col-12 g-col-md-8">
+                <h4 style="margin-top: 0px;" class="anchored">అప్పు</h4>
+                <div>అప్పు రోజువారీ విన్యాసాలు, సాహసాల గురించి రాసిన కథ. ఈ కథలో ఉన్న అప్పు మా ఇంట్లోనే ఉంటాడు!
+</div>
+            </div>
+        
+        </div>
+    </div>
 
+    <div class="g-col-12 g-col-md-6">
+        <div class="grid">
+        
+            <div class="g-col-12 g-col-md-4">
+                <img class="img-fluid" src="laddoo.jpg">
+            </div>
+            <div class="g-col-12 g-col-md-8">
+                <h4 style="margin-top: 0px;" class="anchored">ఈ లడ్డూలు ఎక్కడివి?</h4>
+                <div>'కొండ తోట' అనే ప్రకృతి బడిలో ఇరా, అవి చదువుకుంటున్నారు. వేసవి సెలవుల తరవాత ఈ రోజే బడికి  తిరిగి వచ్చారు. వంటగదిలో చూస్తే లడ్డూలు ఉన్నాయి. ఏమిటీ విశేషం అని అడిగితే వేణు అన్న వాళ్ళకి ఈ కథంతా  చెప్పాడు. ఆ కథ ఏమిటో చూద్దాం రండి!
+కొండతోట అంటే మేమందరం ఉండే ఫామ్ హిల్. అక్కడికి వస్తే ఇప్పుడు కూడా మీరు అవిని కలిసి మాట్లాడ వచ్చు.  లడ్డూలు కూడా తినవచ్చు. 
+</div>
+            </div>
+        
+        </div>
+    </div>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="personal" data-listing-date-sort="1730937600000" data-listing-file-modified-sort="1732252443598" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="78">
-<a href="../blog-english/Turning45/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../blog-english/Turning45/venu-45.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Turning 45
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('personal'); return false;">
-personal
-</div>
-</div>
-<div class="card-text listing-description">
-Yes, that was today. Here are the gifts I got.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Venu GVGK
-</div>
-<div class="listing-date">
-Nov 7, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
