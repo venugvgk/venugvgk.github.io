@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,73 +66,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-picture-books .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-image','listing-body',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-image","listing-body"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-picture-books'] = new List('listing-picture-books', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Books – venu GVGK Raju">
-<meta property="og:description" content="I have written a couple of picture books for children in Telugu, and translated a few from English to Telugu. తెలుగులో పిల్లల కోసం రెండు బొమ్మల కథల పుస్తకాలు రాశాను. కొన్ని పుస్తకాలను తెలుగులోకి అనువాదించాను.">
+<meta property="og:description" content="I write for children in Telugu and English. Two of my picture books in Telugu are published by Manchi Pustakam. I also translated a few from English to Telugu.  తెలుగులోనూ, ఇంగ్లీషులోనూ పిల్లల కోసం రాస్తుంటాను. నేను పిల్లల కోసం రాసిన రెండు బొమ్మల పుస్తకాలను మంచి పుస్తకం ద్వారా ప్రచురించారు. కొన్ని పుస్తకాలను ఇంగ్లీషు నుంచీ తెలుగులోకి అనువదించాను.">
 <meta property="og:image" content="https://venugvgk.github.io/books/appu-cover.jpg">
 <meta property="og:site_name" content="venu GVGK Raju">
 <meta name="twitter:title" content="Books – venu GVGK Raju">
-<meta name="twitter:description" content="I have written a couple of picture books for children in Telugu, and translated a few from English to Telugu. తెలుగులో పిల్లల కోసం రెండు బొమ్మల కథల పుస్తకాలు రాశాను. కొన్ని పుస్తకాలను తెలుగులోకి అనువాదించాను.">
+<meta name="twitter:description" content="I write for children in Telugu and English. Two of my picture books in Telugu are published by Manchi Pustakam. I also translated a few from English to Telugu.  తెలుగులోనూ, ఇంగ్లీషులోనూ పిల్లల కోసం రాస్తుంటాను. నేను పిల్లల కోసం రాసిన రెండు బొమ్మల పుస్తకాలను మంచి పుస్తకం ద్వారా ప్రచురించారు. కొన్ని పుస్తకాలను ఇంగ్లీషు నుంచీ తెలుగులోకి అనువదించాను.">
 <meta name="twitter:image" content="https://venugvgk.github.io/books/appu-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -178,6 +118,10 @@ window.Quarto = {
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="../books/index.html" aria-current="page"> 
+<span class="menu-text">Books</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -194,7 +138,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#childrens-picture-books-పలలల-బమమల-పసతకల" id="toc-childrens-picture-books-పలలల-బమమల-పసతకల" class="nav-link active" data-scroll-target="#childrens-picture-books-పలలల-బమమల-పసతకల">Children’s Picture Books పిల్లల బొమ్మల పుస్తకాలు</a></li>
+  <li><a href="#childrens-picture-books-పలలల-బమమల-పసతకల" id="toc-childrens-picture-books-పలలల-బమమల-పసతకల" class="nav-link active" data-scroll-target="#childrens-picture-books-పలలల-బమమల-పసతకల">Children’s Picture Books పిల్లల బొమ్మల పుస్తకాలు</a>
+  <ul class="collapse">
+  <li><a href="#అపప" id="toc-అపప" class="nav-link" data-scroll-target="#అపప">అప్పు</a></li>
+  <li><a href="#ఈ-లడడల-ఎకకడవ" id="toc-ఈ-లడడల-ఎకకడవ" class="nav-link" data-scroll-target="#ఈ-లడడల-ఎకకడవ">ఈ లడ్డూలు ఎక్కడివి?</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -204,7 +152,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Books</h1>
-<p class="subtitle lead">I have written a couple of picture books for children in Telugu, and translated a few from English to Telugu. తెలుగులో పిల్లల కోసం రెండు బొమ్మల కథల పుస్తకాలు రాశాను. కొన్ని పుస్తకాలను తెలుగులోకి అనువాదించాను.</p>
+<p class="subtitle lead"></p><p>I write for children in Telugu and English. Two of my picture books in Telugu are published by Manchi Pustakam. I also translated a few from English to Telugu. <br> తెలుగులోనూ, ఇంగ్లీషులోనూ పిల్లల కోసం రాస్తుంటాను. నేను పిల్లల కోసం రాసిన రెండు బొమ్మల పుస్తకాలను మంచి పుస్తకం ద్వారా ప్రచురించారు. కొన్ని పుస్తకాలను ఇంగ్లీషు నుంచీ తెలుగులోకి అనువదించాను.</p><p></p>
 </div>
 
 
@@ -223,49 +171,19 @@ window.Quarto = {
 
 <section id="childrens-picture-books-పలలల-బమమల-పసతకల" class="level2">
 <h2 class="anchored" data-anchor-id="childrens-picture-books-పలలల-బమమల-పసతకల">Children’s Picture Books పిల్లల బొమ్మల పుస్తకాలు</h2>
-<div id="listing-picture-books" class="quarto-listing quarto-listing-container-custom">
-
-<div class="grid">
-
-    <div class="g-col-12 g-col-md-6">
-        <div class="grid">
-        
-            <div class="g-col-12 g-col-md-4">
-                <img class="img-fluid" src="appu-cover.jpg">
-            </div>
-            <div class="g-col-12 g-col-md-8">
-                <h4 style="margin-top: 0px;" class="anchored">అప్పు</h4>
-                <div>అప్పు రోజువారీ విన్యాసాలు, సాహసాల గురించి రాసిన కథ. ఈ కథలో ఉన్న అప్పు మా ఇంట్లోనే ఉంటాడు!
-</div>
-            </div>
-        
-        </div>
-    </div>
-
-    <div class="g-col-12 g-col-md-6">
-        <div class="grid">
-        
-            <div class="g-col-12 g-col-md-4">
-                <img class="img-fluid" src="laddoo.jpg">
-            </div>
-            <div class="g-col-12 g-col-md-8">
-                <h4 style="margin-top: 0px;" class="anchored">ఈ లడ్డూలు ఎక్కడివి?</h4>
-                <div>'కొండ తోట' అనే ప్రకృతి బడిలో ఇరా, అవి చదువుకుంటున్నారు. వేసవి సెలవుల తరవాత ఈ రోజే బడికి  తిరిగి వచ్చారు. వంటగదిలో చూస్తే లడ్డూలు ఉన్నాయి. ఏమిటీ విశేషం అని అడిగితే వేణు అన్న వాళ్ళకి ఈ కథంతా  చెప్పాడు. ఆ కథ ఏమిటో చూద్దాం రండి!
-కొండతోట అంటే మేమందరం ఉండే ఫామ్ హిల్. అక్కడికి వస్తే ఇప్పుడు కూడా మీరు అవిని కలిసి మాట్లాడ వచ్చు.  లడ్డూలు కూడా తినవచ్చు. 
-</div>
-            </div>
-        
-        </div>
-    </div>
-
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<section id="అపప" class="level3">
+<h3 class="anchored" data-anchor-id="అపప">అప్పు</h3>
+<p><img src="appu-cover.jpg" class="img-fluid"></p>
+<p>అప్పు రోజువారీ విన్యాసాలు, సాహసాల గురించి రాసిన కథ. ఈ కథలో ఉన్న అప్పు మా ఇంట్లోనే ఉంటాడు!</p>
+</section>
+<section id="ఈ-లడడల-ఎకకడవ" class="level3">
+<h3 class="anchored" data-anchor-id="ఈ-లడడల-ఎకకడవ">ఈ లడ్డూలు ఎక్కడివి?</h3>
+<p><img src="laddoo.jpg" class="img-fluid"></p>
+<p>‘కొండ తోట’ అనే ప్రకృతి బడిలో ఇరా, అవి చదువుకుంటున్నారు. వేసవి సెలవుల తరవాత ఈ రోజే బడికి తిరిగి వచ్చారు. వంటగదిలో చూస్తే లడ్డూలు ఉన్నాయి. ఏమిటీ విశేషం అని అడిగితే వేణు అన్న వాళ్ళకి ఈ కథంతా చెప్పాడు. ఆ కథ ఏమిటో చూద్దాం రండి!</p>
+<p>కొండతోట అంటే మేమందరం ఉండే ఫామ్ హిల్. అక్కడికి వస్తే ఇప్పుడు కూడా మీరు అవిని కలిసి మాట్లాడ వచ్చు. లడ్డూలు కూడా తినవచ్చు.</p>
 
 
-
+</section>
 </section>
 
 </main> <!-- /main -->
