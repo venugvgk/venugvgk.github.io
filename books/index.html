@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Books – venu GVGK Raju</title>
+<title>Books పుస్తకాలు – venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,20 +71,76 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-storyweaver-books .list');
+    const listingTargetEl = window.document.querySelector('#listing-own-picture-books .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-image','listing-descr',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-image","listing-descr"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-storyweaver-books'] = new List('listing-storyweaver-books', options);
+    window['quarto-listings']['listing-own-picture-books'] = new List('listing-own-picture-books', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-translated-story-books .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-translated-story-books'] = new List('listing-translated-story-books', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-story-weaver .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-story-weaver'] = new List('listing-story-weaver', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -129,14 +185,12 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Books – venu GVGK Raju">
+<meta property="og:title" content="Books పుస్తకాలు – venu GVGK Raju">
 <meta property="og:description" content="I write for children in Telugu and English. Two of my picture books in Telugu are published by Manchi Pustakam. I also translated a few from English to Telugu.  తెలుగులోనూ, ఇంగ్లీషులోనూ పిల్లల కోసం రాస్తుంటాను. నేను పిల్లల కోసం రాసిన రెండు బొమ్మల పుస్తకాలను మంచి పుస్తకం ద్వారా ప్రచురించారు. కొన్ని పుస్తకాలను ఇంగ్లీషు నుంచీ తెలుగులోకి అనువదించాను.">
-<meta property="og:image" content="https://venugvgk.github.io/books/appu-cover.jpg">
 <meta property="og:site_name" content="venu GVGK Raju">
-<meta name="twitter:title" content="Books – venu GVGK Raju">
+<meta name="twitter:title" content="Books పుస్తకాలు – venu GVGK Raju">
 <meta name="twitter:description" content="I write for children in Telugu and English. Two of my picture books in Telugu are published by Manchi Pustakam. I also translated a few from English to Telugu.  తెలుగులోనూ, ఇంగ్లీషులోనూ పిల్లల కోసం రాస్తుంటాను. నేను పిల్లల కోసం రాసిన రెండు బొమ్మల పుస్తకాలను మంచి పుస్తకం ద్వారా ప్రచురించారు. కొన్ని పుస్తకాలను ఇంగ్లీషు నుంచీ తెలుగులోకి అనువదించాను.">
-<meta name="twitter:image" content="https://venugvgk.github.io/books/appu-cover.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -195,18 +249,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#childrens-picture-books-పలలల-బమమల-పసతకల" id="toc-childrens-picture-books-పలలల-బమమల-పసతకల" class="nav-link active" data-scroll-target="#childrens-picture-books-పలలల-బమమల-పసతకల">Children’s Picture Books <br> పిల్లల బొమ్మల పుస్తకాలు</a>
-  <ul class="collapse">
-  <li><a href="#అపప" id="toc-అపప" class="nav-link" data-scroll-target="#అపప">అప్పు</a></li>
-  <li><a href="#ఈ-లడడల-ఎకకడవ" id="toc-ఈ-లడడల-ఎకకడవ" class="nav-link" data-scroll-target="#ఈ-లడడల-ఎకకడవ">ఈ లడ్డూలు ఎక్కడివి?</a></li>
-  </ul></li>
-  <li><a href="#childrens-chapter-books---translations-పలలల-కథల-పసతకలక-అనవదల" id="toc-childrens-chapter-books---translations-పలలల-కథల-పసతకలక-అనవదల" class="nav-link" data-scroll-target="#childrens-chapter-books---translations-పలలల-కథల-పసతకలక-అనవదల">Children’s Chapter Books - Translations <br> పిల్లల కథల పుస్తకాలకు అనువాదాలు</a>
-  <ul class="collapse">
-  <li><a href="#ఆకశల-అతన-వత" id="toc-ఆకశల-అతన-వత" class="nav-link" data-scroll-target="#ఆకశల-అతన-వత">ఆకాశంలో అతని వంతు</a></li>
-  <li><a href="#ఎదదల-జడ" id="toc-ఎదదల-జడ" class="nav-link" data-scroll-target="#ఎదదల-జడ">ఎద్దుల జోడీ</a></li>
-  <li><a href="#అపప-పరపచ" id="toc-అపప-పరపచ" class="nav-link" data-scroll-target="#అపప-పరపచ">అప్పు ప్రపంచం</a></li>
-  <li><a href="#అలలర-అవతక" id="toc-అలలర-అవతక" class="nav-link" data-scroll-target="#అలలర-అవతక">అల్లరి అవంతిక</a></li>
-  </ul></li>
+  <li><a href="#childrens-picture-books-పలలల-బమమల-పసతకల" id="toc-childrens-picture-books-పలలల-బమమల-పసతకల" class="nav-link active" data-scroll-target="#childrens-picture-books-పలలల-బమమల-పసతకల">Children’s Picture Books <br> పిల్లల బొమ్మల పుస్తకాలు</a></li>
+  <li><a href="#childrens-chapter-books---translations-పలలల-కథల-పసతకలక-అనవదల" id="toc-childrens-chapter-books---translations-పలలల-కథల-పసతకలక-అనవదల" class="nav-link" data-scroll-target="#childrens-chapter-books---translations-పలలల-కథల-పసతకలక-అనవదల">Children’s Chapter Books - Translations <br> పిల్లల కథల పుస్తకాలకు అనువాదాలు</a></li>
   <li><a href="#childrens-pictures-books-translated-for-storyweaver-సటరవవర-కస-అనవదచన-పలలల-బమమల-పసతకల" id="toc-childrens-pictures-books-translated-for-storyweaver-సటరవవర-కస-అనవదచన-పలలల-బమమల-పసతకల" class="nav-link" data-scroll-target="#childrens-pictures-books-translated-for-storyweaver-సటరవవర-కస-అనవదచన-పలలల-బమమల-పసతకల">Children’s Pictures books translated for Storyweaver <br> స్టోరీవీవర్ కోసం అనువదించిన పిల్లల బొమ్మల పుస్తకాలు</a></li>
   </ul>
 </nav>
@@ -216,7 +260,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Books</h1>
+<h1 class="title">Books పుస్తకాలు</h1>
 <p class="subtitle lead"></p><p>I write for children in Telugu and English. Two of my picture books in Telugu are published by Manchi Pustakam. I also translated a few from English to Telugu. <br> తెలుగులోనూ, ఇంగ్లీషులోనూ పిల్లల కోసం రాస్తుంటాను. నేను పిల్లల కోసం రాసిన రెండు బొమ్మల పుస్తకాలను మంచి పుస్తకం ద్వారా ప్రచురించారు. కొన్ని పుస్తకాలను ఇంగ్లీషు నుంచీ తెలుగులోకి అనువదించాను.</p><p></p>
 </div>
 
@@ -236,198 +280,360 @@ window.Quarto = {
 
 <section id="childrens-picture-books-పలలల-బమమల-పసతకల" class="level2">
 <h2 class="anchored" data-anchor-id="childrens-picture-books-పలలల-బమమల-పసతకల">Children’s Picture Books <br> పిల్లల బొమ్మల పుస్తకాలు</h2>
-<section id="అపప" class="level3">
-<h3 class="anchored" data-anchor-id="అపప">అప్పు</h3>
-<p><img src="appu-cover.jpg" class="img-fluid"></p>
-<p>అప్పు రోజువారీ విన్యాసాలు, సాహసాల గురించి రాసిన కథ. ఈ కథలో ఉన్న అప్పు మా ఇంట్లోనే ఉంటాడు!</p>
-</section>
-<section id="ఈ-లడడల-ఎకకడవ" class="level3">
-<h3 class="anchored" data-anchor-id="ఈ-లడడల-ఎకకడవ">ఈ లడ్డూలు ఎక్కడివి?</h3>
-<p><img src="laddoo.jpg" class="img-fluid"></p>
-<p>‘కొండ తోట’ అనే ప్రకృతి బడిలో ఇరా, అవి చదువుకుంటున్నారు. వేసవి సెలవుల తరవాత ఈ రోజే బడికి తిరిగి వచ్చారు. వంటగదిలో చూస్తే లడ్డూలు ఉన్నాయి. ఏమిటీ విశేషం అని అడిగితే వేణు అన్న వాళ్ళకి ఈ కథంతా చెప్పాడు. ఆ కథ ఏమిటో చూద్దాం రండి!</p>
-<p>కొండతోట అంటే మేమందరం ఉండే ఫామ్ హిల్. అక్కడికి వస్తే ఇప్పుడు కూడా మీరు అవిని కలిసి మాట్లాడ వచ్చు. లడ్డూలు కూడా తినవచ్చు.</p>
-</section>
-</section>
-<section id="childrens-chapter-books---translations-పలలల-కథల-పసతకలక-అనవదల" class="level2">
-<h2 class="anchored" data-anchor-id="childrens-chapter-books---translations-పలలల-కథల-పసతకలక-అనవదల">Children’s Chapter Books - Translations <br> పిల్లల కథల పుస్తకాలకు అనువాదాలు</h2>
-<section id="ఆకశల-అతన-వత" class="level3">
-<h3 class="anchored" data-anchor-id="ఆకశల-అతన-వత">ఆకాశంలో అతని వంతు</h3>
-<p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="akasamlo.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
+<div id="listing-own-picture-books" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-left" data-index="0" data-listing-date-sort="1690848000000" data-listing-file-modified-sort="1732342402268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="101">
+<div class="thumbnail">
+<p><a href="../books/own-picture-books/laddoo/index.html" class="no-external"></a></p><a href="../books/own-picture-books/laddoo/index.html" class="no-external">
+<p class="card-img-top"><img src="own-picture-books/laddoo/laddoo.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../books/own-picture-books/laddoo/index.html" class="no-external"></a></p>
 </div>
-<p>బర్సూ పది ఏళ్ల పిల్లవాడు. పేదరికంలో ఉన్నాడు, కానీ అతను పేదవాడు కాదు. అతను పేరున్న బడికి వెళ్లటం లేదు, కానీ ప్రకృతి నుంచి ఎంతో నేర్చుకుంటాడు. అతని పరిధి పెద్దది కాదు, కానీ పుడమి మొత్తం అతనిది. అతని తల మీద అతని వంతు నీలి ఆకాశంతో, గంతులు వేసే కాళ్ల కింద అతని వంతు నేలతో తనవైన సాహసాలతో అతను సంబరంగా ఉంటాడు.</p>
-<p>అసోంలోని కోక్రాఝర్ జిల్లాలో జుయిమా నది పక్కన ఉండే ఒక బోడో గ్రామం నేపథ్యంగా చెప్పిన ‘అతని వంతు ఆకాశం’ అన్న కథలు అసాధారణమైనవి, తీవ్రంగా కదిలించేవి. తనదైన లోకంలో సంతోషంగా తిరిగి ఒక బోడో బాలుని చుట్టూ అల్లిన ఈ కథలు భిన్న పరిస్థితులను తెలియచేస్తాయి. కొన్ని నవ్విస్తే, కొన్ని తీవ్రంగా కలిచివేస్తాయి, ఆలోచనల్లో ముంచేస్తాయి. తెలివి, హాస్యం కలగలిపిన బర్సూలో అందరు పిల్లలు తమను తాము చూసుకుంటారు. ఈశాన్య భారత గ్రామీణ నేపథ్యం ఉన్న ఈ కథలలో బర్సూ కొంటెతనం అన్ని ప్రదేశాలలో, అన్ని కాలాలలో కనపడుతూ ఉంటుంది.</p>
-</section>
-<section id="ఎదదల-జడ" class="level3">
-<h3 class="anchored" data-anchor-id="ఎదదల-జడ">ఎద్దుల జోడీ</h3>
-<p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="eddula-jodi.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../books/own-picture-books/laddoo/index.html" class="no-external">ఈ లడ్డూలు ఎక్కడివి?</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../books/own-picture-books/laddoo/index.html" class="no-external">వంటగదిలో ప్రత్యక్షమయిన లడ్డూల కథ</a>
 </div>
-<p>మున్షీ ప్రేమ్ చంద్ (1880-1936) ఇరవయ్యవ శతాబ్దపు ప్రసిద్ధ కథకులలో ఒకరు. భారత సమాజాన్ని నిశితంగా చూసి, ఖచ్చితంగా చిత్రీకరించటం ఆయన ప్రత్యేకత. గత శతాబ్దపు మొదటిరోజులలో రాసినప్పటికీ ఆయన కథలు ఇంకా ప్రాసంగికత కలిగి ఉన్నాయనే చెప్పాలి</p>
-<p>ఎద్దుల జోడీ అనే కథ అన్ని జీవుల పట్లా కరుణ కలిగిఉండటం గురించి చెబుతుంది. హీరా, మోతీ అనే ఎద్దులు తాము పెరిగిన ఇంటి బయటి ప్రపంచపు దయలేనితనానికి బెదిరిపోతాయి. ఆ ప్రపంచంలో వాళ్ళని, మిగిలిన జంతువులనీ,వాడుకునే వారే కానీ అర్థం చేసుకునే వారు లేరు.</p>
-<p>ముసలి అవ్వ అనే కథలో ఒక చిన్న పాపకీ, ఆమె ముసలి అవ్వకి మధ్య ఉన్న బంధాన్ని చూస్తాము. ఇంట్లో మిగిలిన అందరూ అవ్వ గురించి మరిచిపోయి, ఆమె చలితో, ఆకలితో బాధ పడుతున్నప్పుడు, లాడ్లీ తన ప్రేమతో, ఆత్మీయతతో ఆమె జీవితంలో వెలుగు నింపుతుంది.</p>
-</section>
-<section id="అపప-పరపచ" class="level3">
-<h3 class="anchored" data-anchor-id="అపప-పరపచ">అప్పు ప్రపంచం</h3>
-<p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Appu-Prapancham-Cover.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
+<div class="listing-description">
+<a href="../books/own-picture-books/laddoo/index.html" class="no-external">‘కొండ తోట’ అనే ప్రకృతి బడిలో ఇరా, అవి చదువుకుంటున్నారు. వేసవి సెలవుల తరవాత ఈ రోజే బడికి తిరిగి వచ్చారు. వంటగదిలో చూస్తే లడ్డూలు ఉన్నాయి.</a>
 </div>
-<p>అయిదేళ్ళ అప్పు కేరళలో సముద్రం పక్కన ఒక ఊళ్ళో ఉంటాడు. అతని చుట్టూ అందరూ తరతరాలుగా చేపలు పట్టుకు జీవిస్తున్న మత్స్యకారులు. అక్కడి మనుషులూ, వాళ్ళ జీవితాల్లో జరిగే సంఘటనలే అతని ప్రపంచం. అతను పెరిగి పెద్దవటంలో ఉన్న ఆనందమూ, అందులోని బాధా, స్నేహమూ అలాగే దురాశా, నమ్మకమూ దానితో పాటు మోసమూ వంటి వాటి గురించి నేర్చుకోవటాన్ని ఈ పుస్తకంలో అతని అమాయకమైన కళ్ళలో నుంచి చూస్తాం.</p>
-</section>
-<section id="అలలర-అవతక" class="level3">
-<h3 class="anchored" data-anchor-id="అలలర-అవతక">అల్లరి అవంతిక</h3>
-<p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="avantika.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
 </div>
-<p>ఎనిమిదేళ్ల అవంతికా, ఆమె కుటుంబమూ, పూణే నగరం దగ్గరలో ఒక కాలనీలో ఉంటారు. ఆమె తోటివాళ్లతో పోలిస్తే<br>
-అవంతిక చాలా తొందరగా చిక్కుల్లో ఇరుక్కుంటుంది అనే చెప్పాలి. చాలా సార్లు ఈ చిక్కులు ఆమె అంతులేని కుతూహలం వల్ల, కొన్నిసార్లు ఇతరులకి సహాయపడటానికి పోవటం వల్ల వస్తుంటాయి. వీటితో పాటు కేవలం చిలిపి పనుల వలన కలిగే చిక్కులు కూడా ఉంటాయి మరి!</p>
-</section>
-</section>
-<section id="childrens-pictures-books-translated-for-storyweaver-సటరవవర-కస-అనవదచన-పలలల-బమమల-పసతకల" class="level2">
-<h2 class="anchored" data-anchor-id="childrens-pictures-books-translated-for-storyweaver-సటరవవర-కస-అనవదచన-పలలల-బమమల-పసతకల">Children’s Pictures books translated for Storyweaver <br> స్టోరీవీవర్ కోసం అనువదించిన పిల్లల బొమ్మల పుస్తకాలు</h2>
-<div id="listing-storyweaver-books" class="quarto-listing quarto-listing-container-custom">
-
-<div class="grid">
-
-    <div class="g-col-12 g-col-md-6">
-        <img class="img-fluid" src="bommalu-geese-aata.jpg">
-    </div>
-
-    <div class="g-col-12 g-col-md-6">
-        <h4 style="margin-top: 0px;" class="anchored">బొమ్మలు గీసే ఆట</h4>
-        <div>జీనూ, అమ్మమ్మా కలిసి వృత్తాలూ, త్రిభుజాలూ, చతురస్రాలూ గీసి, 
-వాటిని కొత్త కొత్త బొమ్మలుగా మార్చేశారు. సులువైన ఈ కథ పిల్లలకి రకరకాల 
-ఆకారాలను పరిచయం చేసి, వాళ్ళ ఊహాశక్తిని వాడటాన్ని ప్రోత్సహిస్తుంది.
+<div class="metadata">
+<a href="../books/own-picture-books/laddoo/index.html" class="no-external">
+<div class="listing-date">
+Aug 1, 2023
 </div>
-    </div>
-   
-    
-    <div class="g-col-12 g-col-md-6">
-        <img class="img-fluid" src="password.jpg">
-    </div>
-
-    <div class="g-col-12 g-col-md-6">
-        <h4 style="margin-top: 0px;" class="anchored">పాస్‌వర్డ్ చెప్పవూ?</h4>
-        <div>మంజుకి వాళ్ళ అక్క ఫోనుతో ఆడుకోవాలని ఉంది. కానీ ఆ ఫోనుకి పాస్‌వర్డ్ కావాలి!
-సమాచారం భద్రంగా ఉంచుకోవడానికి తాళాల్లాగా పాస్‌వర్డ్స్ ఎలా ఉపయోగపడతాయో 
-ఈ పుస్తకం పరిచయం చేస్తుంది. 
-ఇంకా తెలుసుకోవాలని ఉంటే పుస్తకం తెరవండి; దీనికి పాస్‌వర్డ్ అక్కర్లేదు!
+</a>
 </div>
-    </div>
-   
-    
-    <div class="g-col-12 g-col-md-6">
-        <img class="img-fluid" src="art-gallery.jpg">
-    </div>
-
-    <div class="g-col-12 g-col-md-6">
-        <h4 style="margin-top: 0px;" class="anchored">ప్రిన్సెస్ వీధిలో ఆర్ట్ గేలరీ</h4>
-        <div>ఆధునిక భారతీయ చిత్రకళ ప్రపంచవ్యాప్తంగా తనదైన ముద్ర వేయటానికి 
-కేకూ, ఖోర్షేద్ గాంధీ ఒక గొప్ప అవకాశం కల్పించారు. 
-వాళ్లు నడిపిన కేముల్డ్ ఆర్ట్ గేలరీ చాలామంది చిత్రకారులకి సొంత ఇల్లులాగా ఉండేది.
 </div>
-    </div>
-   
-    
-    <div class="g-col-12 g-col-md-6">
-        <img class="img-fluid" src="inti-daggara.jpeg">
-    </div>
-
-    <div class="g-col-12 g-col-md-6">
-        <h4 style="margin-top: 0px;" class="anchored">ఇంటి దగ్గర</h4>
-        <div>అమ్మిణికి బడికి వెళ్లాలని ఉంది. ఆమె తమ్ముడు ఉన్నికి పిన్నిని చూడాలని ఉంది. 
-ఇద్దరికీ బయటికి వెళ్లి మైదానంలో ఆడుకోవాలని ఉంది. కానీ ప్రతి రోజూ ఇంట్లోనే ఉండాలి. 
-ఏమో, ఈ రోజు బయటికి వెళ్ల వచ్చేమో? అలా జరగాలని అమ్మిణి ఆశ.
-లాక్ డౌన్, భౌతిక దూరాల నేపథ్యంలో ఇద్దరు పిల్లల జీవితాల్లో ఒక రోజు.
+<div class="quarto-post image-left" data-index="1" data-listing-date-sort="1641081600000" data-listing-file-modified-sort="1732342402268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="54">
+<div class="thumbnail">
+<p><a href="../books/own-picture-books/appu/index.html" class="no-external"></a></p><a href="../books/own-picture-books/appu/index.html" class="no-external">
+<p class="card-img-top"><img src="own-picture-books/appu/appu-cover.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../books/own-picture-books/appu/index.html" class="no-external"></a></p>
 </div>
-    </div>
-   
-    
-    <div class="g-col-12 g-col-md-6">
-        <img class="img-fluid" src="mana-bhoomi.jpg">
-    </div>
-
-    <div class="g-col-12 g-col-md-6">
-        <h4 style="margin-top: 0px;" class="anchored">మన భూమి, మన ఇల్లు వాతావరణ మార్పుపై కవితలు</h4>
-        <div>భూమి కథ అంటే అది జీవితం కథ, జీవం కథ. ఇది ఒక నష్టం కథ, 
-పర్యావరణ మార్పు వల్ల ఇంకా ఎక్కువైన ఒక హాని కథ కూడా. 
-పర్యావరణ విపత్తు ఒక వినాశపు కథగా వినిపించినప్పటికీ, ఈ విపత్తుని ఎదుర్కోవటానికి, 
-దాని ప్రభావం తగ్గించటానికి, దానికి తగ్గట్టుగా నడుచుకోటానికీ జరుగుతున్న ప్రయత్నాలు 
-ఆశను కలిగిస్తున్నాయి. భవిష్యత్తు మన చేతిలోనే ఉందని గుర్తు చేస్తున్నాయి. 
-ఈ పుస్తకంలో ఉన్న కవితలు ఒరంగుటాన్, హసదేవో అరండ్ అడవి, గంగా నది డాల్ఫిన్, 
-పాండిచేరి సొరచేపల స్వరాల్లో ఈ కథలను వినిపిస్తాయి.
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../books/own-picture-books/appu/index.html" class="no-external">అప్పు</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../books/own-picture-books/appu/index.html" class="no-external">ఒక పెంపుడు కుక్క కథ</a>
 </div>
-    </div>
-   
-    
-    <div class="g-col-12 g-col-md-6">
-        <img class="img-fluid" src="ambedkar.jpg">
-    </div>
-
-    <div class="g-col-12 g-col-md-6">
-        <h4 style="margin-top: 0px;" class="anchored">బి. ఆర్. అంబేద్కర్ - పుస్తకాలతో జీవితం</h4>
-        <div>భారత రాజ్యాంగ నిర్మాత బి. ఆర్. అంబేద్కర్ కథ ఇది. అందరూ ప్రేమతో బాబాసాహెబ్ అని 
-పిలుచుకునే అంబేద్కర్ గొప్ప దార్శనికుడు, ఆర్థిక శాస్త్రవేత్త, విప్లవకారుడు మాత్రమే కాక జీవిత కాలపు చదువరి. 
-చదవటంలో ఆయనకి ఉన్న ఆసక్తి ఆయన జీవన పయనాన్ని ఎలా నడిపించిందో తెలియచేసే కథ ఇది.
+<div class="listing-description">
+<a href="../books/own-picture-books/appu/index.html" class="no-external">అప్పు రోజువారీ విన్యాసాలు, సాహసాల గురించి రాసిన కథ. ఈ కథలో ఉన్న అప్పు మా ఇంట్లోనే ఉంటాడు!</a>
 </div>
-    </div>
-   
-    
-    <div class="g-col-12 g-col-md-6">
-        <img class="img-fluid" src="amma-intiki.jpg">
-    </div>
-
-    <div class="g-col-12 g-col-md-6">
-        <h4 style="margin-top: 0px;" class="anchored">అమ్మ ఇంటికి ఎప్పుడు వస్తుంది?</h4>
-        <div>రోజా వాళ్ళ అమ్మ పొద్దున్నే పనికి వెళుతుంది. రాత్రి పడుకునే వేళకి వస్తానని మాట ఇచ్చింది. 
-అమ్మ లేకుండా రోజంతా రోజా ఏం చేయబోతోంది?
 </div>
-    </div>
-   
-    
-    <div class="g-col-12 g-col-md-6">
-        <img class="img-fluid" src="chakrala-kurchi.jpg">
-    </div>
-
-    <div class="g-col-12 g-col-md-6">
-        <h4 style="margin-top: 0px;" class="anchored">మా అన్నయ్య చక్రాల కుర్చీ</h4>
-        <div>దుర్వా, ధృబోలని, వాళ్ళతోపాటు ధృబో చక్రాల కుర్చీని కలుద్దాం రండి! 
-ఆ అన్నా చెల్లెళ్ళతో పార్కులు, సంతలు చూద్దాం, సాహస యాత్రలు చేద్దాం. 
-తోబుట్టువుల మధ్య ఆత్మీయ అనుబంధానికి కవితా రూపం ఈ పుస్తకం.
+<div class="metadata">
+<a href="../books/own-picture-books/appu/index.html" class="no-external">
+<div class="listing-date">
+Jan 2, 2022
 </div>
-    </div>
-   
-    
-    <div class="g-col-12 g-col-md-6">
-        <img class="img-fluid" src="battalu-utike.jpg">
-    </div>
-
-    <div class="g-col-12 g-col-md-6">
-        <h4 style="margin-top: 0px;" class="anchored">బట్టలు ఉతికే రోజు</h4>
-        <div>అది మేరికి రోజులో చాలా ఇష్టమైన సమయం - బట్టలు ఉతికే సమయం! 
-మేరీ, ఆమె చుట్టుపక్కల వాళ్ళూ చక్కగా, శుభ్రంగా బట్టలు ఉతుక్కునే రోజున వాళ్ళని కలుద్దాం పదండి!
+</a>
 </div>
-    </div>
-   
-    
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
 </div>
-<p>All the above Story Weaver books can accessed from the author dashboard of <a href="https://storyweaver.org.in/en/users/34679-venu-gopala-krishna">Venu Gopala Krishna</a> on Story Weaver.</p>
+</section>
+<section id="childrens-chapter-books---translations-పలలల-కథల-పసతకలక-అనవదల" class="level2">
+<h2 class="anchored" data-anchor-id="childrens-chapter-books---translations-పలలల-కథల-పసతకలక-అనవదల">Children’s Chapter Books - Translations <br> పిల్లల కథల పుస్తకాలకు అనువాదాలు</h2>
+<div id="listing-translated-story-books" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1732342402272" data-listing-reading-time-sort="1" data-listing-word-count-sort="119">
+<div class="thumbnail">
+<p><a href="../books/translated-story-books/akaasamlo/index.html" class="no-external"></a></p><a href="../books/translated-story-books/akaasamlo/index.html" class="no-external">
+<p class="card-img-top"><img src="translated-story-books/akaasamlo/akasamlo.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../books/translated-story-books/akaasamlo/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../books/translated-story-books/akaasamlo/index.html" class="no-external">ఆకాశంలో అతని వంతు</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../books/translated-story-books/akaasamlo/index.html" class="no-external">అసోం రాష్ట్రంలో ఒక గ్రామంలో పెరుగుతున్న బోడో పిల్లవాడి కథలు</a>
+</div>
+<div class="listing-description">
+<a href="../books/translated-story-books/akaasamlo/index.html" class="no-external">బర్సూ పది ఏళ్ల పిల్లవాడు. పేదరికంలో ఉన్నాడు, కానీ అతను పేదవాడు కాదు. అతను పేరున్న బడికి వెళ్లటం లేదు, కానీ ప్రకృతి నుంచి ఎంతో నేర్చుకుంటాడు. అతని పరిధి పెద్దది కాదు, కానీ పుడమి మొత్తం అతనిది. అతని తల మీద అతని వంతు నీలి ఆకాశంతో, గంతులు వేసే కాళ్ల కింద అతని వంతు నేలతో తనవైన సాహసాలతో అతను సంబరంగా ఉంటాడు.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../books/translated-story-books/akaasamlo/index.html" class="no-external"></a></p><a href="../books/translated-story-books/akaasamlo/index.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1762819200000" data-listing-file-modified-sort="1732342402272" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
+<div class="thumbnail">
+<p><a href="../books/translated-story-books/appu-prapancham/index.html" class="no-external"></a></p><a href="../books/translated-story-books/appu-prapancham/index.html" class="no-external">
+<p class="card-img-top"><img src="translated-story-books/appu-prapancham/Appu-Prapancham-Cover.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../books/translated-story-books/appu-prapancham/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../books/translated-story-books/appu-prapancham/index.html" class="no-external">అప్పు ప్రపంచం</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../books/translated-story-books/appu-prapancham/index.html" class="no-external">ఒక కుక్క కథ</a>
+</div>
+<div class="listing-description">
+<a href="../books/translated-story-books/appu-prapancham/index.html" class="no-external">అయిదేళ్ళ అప్పు కేరళలో సముద్రం పక్కన ఒక ఊళ్ళో ఉంటాడు. అతని చుట్టూ అందరూ తరతరాలుగా చేపలు పట్టుకు జీవిస్తున్న మత్స్యకారులు. అక్కడి మనుషులూ, వాళ్ళ జీవితాల్లో జరిగే సంఘటనలే అతని ప్రపంచం. అతను పెరిగి పెద్దవటంలో ఉన్న ఆనందమూ, అందులోని బాధా, స్నేహమూ అలాగే దురాశా, నమ్మకమూ దానితో పాటు మోసమూ వంటి వాటి గురించి నేర్చుకోవటాన్ని ఈ పుస్తకంలో అతని అమాయకమైన కళ్ళలో నుంచి చూస్తాం.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../books/translated-story-books/appu-prapancham/index.html" class="no-external">
+<div class="listing-date">
+Nov 11, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1762819200000" data-listing-file-modified-sort="1732342402272" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="53">
+<div class="thumbnail">
+<p><a href="../books/translated-story-books/avantika/index.html" class="no-external"></a></p><a href="../books/translated-story-books/avantika/index.html" class="no-external">
+<p class="card-img-top"><img src="translated-story-books/avantika/avantika.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../books/translated-story-books/avantika/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../books/translated-story-books/avantika/index.html" class="no-external">అల్లరి అవంతిక</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../books/translated-story-books/avantika/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../books/translated-story-books/avantika/index.html" class="no-external">ఎనిమిదేళ్ల అవంతికా, ఆమె కుటుంబమూ, పూణే నగరం దగ్గరలో ఒక కాలనీలో ఉంటారు. ఆమె తోటివాళ్లతో పోలిస్తే అవంతిక చాలా తొందరగా చిక్కుల్లో ఇరుక్కుంటుంది అనే చెప్పాలి. చాలా సార్లు ఈ చిక్కులు ఆమె అంతులేని కుతూహలం వల్ల, కొన్నిసార్లు ఇతరులకి సహాయపడటానికి పోవటం వల్ల వస్తుంటాయి. వీటితో పాటు కేవలం చిలిపి పనుల వలన కలిగే చిక్కులు కూడా ఉంటాయి మరి!</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../books/translated-story-books/avantika/index.html" class="no-external">
+<div class="listing-date">
+Nov 11, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1731283200000" data-listing-file-modified-sort="1732342402272" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
+<div class="thumbnail">
+<p><a href="../books/translated-story-books/eddula-jodi/index.html" class="no-external"></a></p><a href="../books/translated-story-books/eddula-jodi/index.html" class="no-external">
+<p class="card-img-top"><img src="translated-story-books/eddula-jodi/eddula-jodi.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../books/translated-story-books/eddula-jodi/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../books/translated-story-books/eddula-jodi/index.html" class="no-external">ఎద్దుల జోడీ</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../books/translated-story-books/eddula-jodi/index.html" class="no-external">మున్షీ ప్రేమ్ చంద్ రాసిన రెండు కథలు</a>
+</div>
+<div class="listing-description">
+<a href="../books/translated-story-books/eddula-jodi/index.html" class="no-external">మున్షీ ప్రేమ్ చంద్ (1880-1936) ఇరవయ్యవ శతాబ్దపు ప్రసిద్ధ కథకులలో ఒకరు. భారత సమాజాన్ని నిశితంగా చూసి, ఖచ్చితంగా చిత్రీకరించటం ఆయన ప్రత్యేకత. ఎద్దుల జోడీ అనే కథ అన్ని జీవుల పట్లా కరుణ కలిగిఉండటం గురించి చెబుతుంది. ముసలి అవ్వ అనే కథలో ఒక చిన్న పాపకీ, ఆమె ముసలి అవ్వకి మధ్య ఉన్న బంధాన్ని చూస్తాము.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../books/translated-story-books/eddula-jodi/index.html" class="no-external">
+<div class="listing-date">
+Nov 11, 2024
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="childrens-pictures-books-translated-for-storyweaver-సటరవవర-కస-అనవదచన-పలలల-బమమల-పసతకల" class="level2">
+<h2 class="anchored" data-anchor-id="childrens-pictures-books-translated-for-storyweaver-సటరవవర-కస-అనవదచన-పలలల-బమమల-పసతకల">Children’s Pictures books translated for Storyweaver <br> స్టోరీవీవర్ కోసం అనువదించిన పిల్లల బొమ్మల పుస్తకాలు</h2>
+<div id="listing-story-weaver" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1732342402268" data-listing-reading-time-sort="1" data-listing-word-count-sort="29">
+<a href="../books/story-weaver/bommalu-geese/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="story-weaver/bommalu-geese/bommalu-geese-aata.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+బొమ్మలు గీసే ఆట
+</h5>
+<div class="card-text listing-description">
+జీనూ, అమ్మమ్మా కలిసి వృత్తాలూ, త్రిభుజాలూ, చతురస్రాలూ గీసి, వాటిని కొత్త కొత్త బొమ్మలుగా మార్చేశారు. సులువైన ఈ కథ పిల్లలకి రకరకాల ఆకారాలను పరిచయం చేసి, వాళ్ళ ఊహాశక్తిని…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1732342402272" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
+<a href="../books/story-weaver/password/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="story-weaver/password/password.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+పాస్‌వర్డ్ చెప్పవూ?
+</h5>
+<div class="card-text listing-description">
+మంజుకి వాళ్ళ అక్క ఫోనుతో ఆడుకోవాలని ఉంది. కానీ ఆ ఫోనుకి పాస్‌వర్డ్ కావాలి! సమాచారం భద్రంగా ఉంచుకోవడానికి తాళాల్లాగా పాస్‌వర్డ్స్ ఎలా ఉపయోగపడతాయో ఈ పుస్తకం పరిచయం చేస్తుంది.…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1732342402268" data-listing-reading-time-sort="1" data-listing-word-count-sort="29">
+<a href="../books/story-weaver/art-gallery/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="story-weaver/art-gallery/art-gallery.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ప్రిన్సెస్ వీధిలో ఆర్ట్ గేలరీ
+</h5>
+<div class="card-text listing-description">
+ఆధునిక భారతీయ చిత్రకళ ప్రపంచవ్యాప్తంగా తనదైన ముద్ర వేయటానికి కేకూ, ఖోర్షేద్ గాంధీ ఒక గొప్ప అవకాశం కల్పించారు. వాళ్లు నడిపిన కేముల్డ్ ఆర్ట్ గేలరీ చాలామంది చిత్రకారులకి సొంత…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1732342402272" data-listing-reading-time-sort="1" data-listing-word-count-sort="46">
+<a href="../books/story-weaver/inti-daggara/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="story-weaver/inti-daggara/inti-daggara.jpeg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ఇంటి దగ్గర
+</h5>
+<div class="card-text listing-description">
+అమ్మిణికి బడికి వెళ్లాలని ఉంది. ఆమె తమ్ముడు ఉన్నికి పిన్నిని చూడాలని ఉంది. ఇద్దరికీ బయటికి వెళ్లి మైదానంలో ఆడుకోవాలని ఉంది. కానీ ప్రతి రోజూ ఇంట్లోనే ఉండాలి. ఏమో, ఈ రోజు…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1732342402272" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
+<a href="../books/story-weaver/mana-bhoomi/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="story-weaver/mana-bhoomi/mana-bhoomi.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+మన భూమి, మన ఇల్లు వాతావరణ మార్పుపై కవితలు
+</h5>
+<div class="card-text listing-description">
+భూమి కథ అంటే అది జీవితం కథ, జీవం కథ. ఇది ఒక నష్టం కథ, పర్యావరణ మార్పు వల్ల ఇంకా ఎక్కువైన ఒక హాని కథ కూడా. పర్యావరణ విపత్తు ఒక వినాశపు కథగా వినిపించినప్పటికీ, ఈ విపత్తుని…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1732342402268" data-listing-reading-time-sort="1" data-listing-word-count-sort="41">
+<a href="../books/story-weaver/ambedkar/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="story-weaver/ambedkar/ambedkar.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+బి. ఆర్. అంబేద్కర్ - పుస్తకాలతో జీవితం
+</h5>
+<div class="card-text listing-description">
+భారత రాజ్యాంగ నిర్మాత బి. ఆర్. అంబేద్కర్ కథ ఇది. అందరూ ప్రేమతో బాబాసాహెబ్ అని పిలుచుకునే అంబేద్కర్ గొప్ప దార్శనికుడు, ఆర్థిక శాస్త్రవేత్త, విప్లవకారుడు మాత్రమే కాక జీవిత…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1732342402268" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
+<a href="../books/story-weaver/amma-intiki/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="story-weaver/amma-intiki/amma-intiki.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+అమ్మ ఇంటికి ఎప్పుడు వస్తుంది?
+</h5>
+<div class="card-text listing-description">
+రోజా వాళ్ళ అమ్మ పొద్దున్నే పనికి వెళుతుంది. రాత్రి పడుకునే వేళకి వస్తానని మాట ఇచ్చింది. అమ్మ లేకుండా రోజంతా రోజా ఏం చేయబోతోంది?
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1732342402272" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
+<a href="../books/story-weaver/chakrala-kurchi/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="story-weaver/chakrala-kurchi/chakrala-kurchi.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+మా అన్నయ్య చక్రాల కుర్చీ
+</h5>
+<div class="card-text listing-description">
+దుర్వా, ధృబోలని, వాళ్ళతోపాటు ధృబో చక్రాల కుర్చీని కలుద్దాం రండి! ఆ అన్నా చెల్లెళ్ళతో పార్కులు, సంతలు చూద్దాం, సాహస యాత్రలు చేద్దాం. తోబుట్టువుల మధ్య ఆత్మీయ అనుబంధానికి కవితా…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1732342402268" data-listing-reading-time-sort="1" data-listing-word-count-sort="27">
+<a href="../books/story-weaver/battalu-utike/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="story-weaver/battalu-utike/battalu-utike.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+బట్టలు ఉతికే రోజు
+</h5>
+<div class="card-text listing-description">
+అది మేరీకి రోజులో చాలా ఇష్టమైన సమయం - బట్టలు ఉతికే సమయం! మేరీ, ఆమె చుట్టుపక్కల వాళ్ళూ చక్కగా, శుభ్రంగా బట్టలు ఉతుక్కునే రోజున వాళ్ళని కలుద్దాం పదండి!
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 
 
 
