@@ -1,0 +1,21 @@
+---
+title: Timeline Morph on PPT
+date: 2024-11-24
+page-layout: article
+author: Venu GVGK
+Category: presentation-video
+---
+
+[Video](https://www.youtube.com/watch?v=nzH4KPz_cIs)
+
+timeline can become very interesting with this morphing. 
+
+If images are copied across slides, and moved, morph makes them look like they move. 
+
+Select all the slides where such images are and then apply morph. 
+
+Unrelated images can be morphed by naming them the same in the animation pane. The name has to start with !! (two exclamation marks).
+
+character morph makes it look like the words disintegrate into letters and letters rearrange themselves. 
+
+

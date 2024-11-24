@@ -32,6 +32,9 @@ website:
           - te/blog/index.qmd
        - text: Books
          href: books/index.qmd
+       - text: TIL
+         href: til/index.qmd
+
         
   
 

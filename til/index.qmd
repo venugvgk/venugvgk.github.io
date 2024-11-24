@@ -1,0 +1,10 @@
+---
+title: Today I Learnt
+subtitle: Short Snippets of Learning
+
+listing:
+  contents: "til-posts/*/*.qmd"
+  sort: "date desc"
+  type: table
+  categories: true
+---
