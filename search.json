@@ -98,11 +98,18 @@
     "text": "I have a bunch of books I wrote/translated. I needed a listing page to show them. I decided to use the type: default\nincluded this in the title block on the index.qmd\n- id: translated-story-books\n  contents: \"translated-story-books/*/index.qmd\"\n  sort: \"date desc\"\n  type: default\n  max-description-length: 500\n  categories: false\n\nthis resulted in a page like this:\n\nthe last column with the date wasn’t adding much value so I wanted to remove that. An inspection showed that this was coming from div.quarto-post .metadata, so I wrote this in the .css file to set the display to none.\ndiv.quarto-post .metadata {\n    display: none;\n    }\n\nThat removed the metadata column but this was impacting all the places where type:default was being used for listing. So, I got this idea from anand\nfirst, write a bodyclasses for the page, by including this in the title block for the listing page.\nbody-classes: books-page\n\nnow, specify this class in the .css so that the css applies only to this instance.\n.books-page div.quarto-post .metadata {\n    display: none;\n}\nnow the cleaner page looks like this."
   },
   {
+    "objectID": "til/quarto/quarto-modify-table-listing.html",
+    "href": "til/quarto/quarto-modify-table-listing.html",
+    "title": "modifying table listing page on quarto",
+    "section": "",
+    "text": ".quarto-listing-table th:nth-child(3), td:nth-child(3) { display:none; }"
+  },
+  {
     "objectID": "til/index.html",
     "href": "til/index.html",
     "title": "Today I Learnt",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nNov 26, 2024\n\n\nadding google fonts to quarto pages\n\n\nVenu GVGK\n\n\n\n\nNov 25, 2024\n\n\nmodifying default listing page on quarto\n\n\nVenu GVGK\n\n\n\n\nNov 24, 2024\n\n\nTimeline Morph on PPT\n\n\nVenu GVGK\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nNov 26, 2024\n\n\nadding google fonts to quarto pages\n\n\nVenu GVGK\n\n\n\n\nNov 26, 2024\n\n\nmodifying table listing page on quarto\n\n\nVenu GVGK\n\n\n\n\nNov 25, 2024\n\n\nmodifying default listing page on quarto\n\n\nVenu GVGK\n\n\n\n\nNov 24, 2024\n\n\nTimeline Morph on PPT\n\n\nVenu GVGK\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
