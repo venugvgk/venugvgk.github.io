@@ -6,25 +6,48 @@ author: Venu GVGK
 categories:
     - quarto
 ---
+I have a bunch of books I wrote/translated. I needed a listing page to show them. I decided to use the type: default 
 
+included this in the title block on the index.qmd
 
+```
+- id: translated-story-books
+  contents: "translated-story-books/*/index.qmd"
+  sort: "date desc"
+  type: default
+  max-description-length: 500
+  categories: false
 
+```
 
+this resulted in a page like this:
+
+![](listing-with-metadata.jpg)
+
+the last column with the date wasn't adding much value so I wanted to remove that. An inspection showed that this was coming from div.quarto-post .metadata, so I wrote this in the .css file to set the display to none. 
+
+```
 div.quarto-post .metadata {
     display: none;
-    flex-direction: column;
-    font-size: .8em;
-    font-family: Nunito, Mallanna;
-    flex-basis: 33%;
-}
+    }
 
+```
+That removed the metadata column but this was impacting all the places where type:default was being used for listing. So, I got this idea from ![anand](https://anandology.com)
+
+first, write a bodyclasses for the page, by including this in the title block for the listing page. 
+
+```
 body-classes: books-page
 
+```
+now, specify this class in the .css so that the css applies only to this instance. 
 
+```
 .books-page div.quarto-post .metadata {
     display: none;
-    flex-direction: column;
-    font-size: .8em;
-    font-family: Nunito, Mallanna;
-    flex-basis: 33%;
 }
+```
+
+now the cleaner page looks like this. 
+
+![](listing-without-metadata.jpg)
