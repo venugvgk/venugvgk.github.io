@@ -73,10 +73,12 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="modifying listing page on quarto – venu GVGK Raju">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://venugvgk.github.io/til/quarto/listing-with-metadata.jpg">
 <meta property="og:site_name" content="venu GVGK Raju">
 <meta name="twitter:title" content="modifying listing page on quarto – venu GVGK Raju">
 <meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://venugvgk.github.io/til/quarto/listing-with-metadata.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -174,9 +176,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>div.quarto-post .metadata { display: none; flex-direction: column; font-size: .8em; font-family: Nunito, Mallanna; flex-basis: 33%; }</p>
-<p>body-classes: books-page</p>
-<p>.books-page div.quarto-post .metadata { display: none; flex-direction: column; font-size: .8em; font-family: Nunito, Mallanna; flex-basis: 33%; }</p>
+<p>I have a bunch of books I wrote/translated. I needed a listing page to show them. I decided to use the type: default</p>
+<p>included this in the title block on the index.qmd</p>
+<pre><code>- id: translated-story-books
+  contents: "translated-story-books/*/index.qmd"
+  sort: "date desc"
+  type: default
+  max-description-length: 500
+  categories: false
+</code></pre>
+<p>this resulted in a page like this:</p>
+<p><img src="listing-with-metadata.jpg" class="img-fluid"></p>
+<p>the last column with the date wasn’t adding much value so I wanted to remove that. An inspection showed that this was coming from div.quarto-post .metadata, so I wrote this in the .css file to set the display to none.</p>
+<pre><code>div.quarto-post .metadata {
+    display: none;
+    }
+</code></pre>
+<p>That removed the metadata column but this was impacting all the places where type:default was being used for listing. So, I got this idea from <img src="https://anandology.com" class="img-fluid" alt="anand"></p>
+<p>first, write a bodyclasses for the page, by including this in the title block for the listing page.</p>
+<pre><code>body-classes: books-page
+</code></pre>
+<p>now, specify this class in the .css so that the css applies only to this instance.</p>
+<pre><code>.books-page div.quarto-post .metadata {
+    display: none;
+}</code></pre>
+<p>now the cleaner page looks like this.</p>
+<p><img src="listing-without-metadata.jpg" class="img-fluid"></p>
 
 
 
