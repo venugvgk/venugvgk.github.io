@@ -7,4 +7,8 @@ listing:
   sort: "date desc"
   type: table
   categories: true
+
+body-classes: til-page
+
 ---
+

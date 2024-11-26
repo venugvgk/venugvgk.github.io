@@ -23,3 +23,11 @@
     font-family: Nunito, Mallanna;
     flex-basis: 33%;
 }
+
+
+.quarto-listing-table th:nth-child(3), td:nth-child(3) {
+    display:none;
+}
+
+
+

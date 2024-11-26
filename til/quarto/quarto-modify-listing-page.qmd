@@ -1,5 +1,5 @@
 ---
-title: modifying listing page on quarto
+title: modifying default listing page on quarto
 date: 2024-11-25
 page-layout: article
 author: Venu GVGK
