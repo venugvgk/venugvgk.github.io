@@ -3,7 +3,7 @@ title: Books పుస్తకాలు
 subtitle: |
   I write for children in Telugu and English. Two of my picture books in Telugu are published by Manchi Pustakam. I also translated a few from English to Telugu. <br>
   తెలుగులోనూ, ఇంగ్లీషులోనూ పిల్లల కోసం రాస్తుంటాను. నేను పిల్లల కోసం రాసిన రెండు బొమ్మల పుస్తకాలను  మంచి పుస్తకం ద్వారా ప్రచురించారు. కొన్ని పుస్తకాలను ఇంగ్లీషు నుంచీ తెలుగులోకి అనువదించాను. 
-
+toc: false
 listing:
 - id: own-picture-books
   contents: "own-picture-books/*/index.qmd"
