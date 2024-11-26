@@ -25,6 +25,8 @@ listing:
   type: grid
   categories: false
 
+body-classes: books-page
+
 ---
 ## Children's Picture Books <br> పిల్లల బొమ్మల పుస్తకాలు 
 
