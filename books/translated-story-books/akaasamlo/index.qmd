@@ -1,5 +1,7 @@
 ---
 title: ఆకాశంలో అతని వంతు 
+date: 01-01-2023
+date-format: "YYYY"
 subtitle: అసోం రాష్ట్రంలో ఒక గ్రామంలో పెరుగుతున్న బోడో పిల్లవాడి కథలు 
 page-layout: article
 ---
