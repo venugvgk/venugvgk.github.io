@@ -1,0 +1,39 @@
+---
+title: adding google fonts to quarto pages
+date: 2024-11-26
+page-layout: article
+author: Venu GVGK
+categories:
+    - quarto
+---
+
+When writing in quarto, we usually do not worry about the font. such trivial decisions are left to the theme. 
+
+however, part of my webpage is in Telugu. and the font chosen with cosmo theme was horrible to read. 
+at the same time, I was reading through this excellent presentation on customizing quarto sites when this [set main font](https://ucsb-meds.github.io/customizing-quarto-websites/#/set-mainfont) slide caught my eye. 
+
+so i did what was recommended. 
+
+imported a good to read telugu google font called mallanna ino the .scss
+
+```
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Mallanna&display=swap');
+
+```
+
+then, added it in my _quarto.yml.
+
+```
+format:
+  html: 
+    theme: 
+      - cosmo
+      - styles.scss
+    css: styles.css
+    toc: true
+    mainfont: Nunito, Mallanna
+
+```
+that's it! now, all the telugu font is in mallanna. 

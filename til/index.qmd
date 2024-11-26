@@ -3,7 +3,7 @@ title: Today I Learnt
 subtitle: Short Snippets of Learning
 
 listing:
-  contents: "til-posts/*/*.qmd"
+  contents: "/*/*.qmd"
   sort: "date desc"
   type: table
   categories: true
