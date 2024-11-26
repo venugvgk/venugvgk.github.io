@@ -10,4 +10,5 @@ page-layout: article
 సమాచారం భద్రంగా ఉంచుకోవడానికి తాళాల్లాగా పాస్‌వర్డ్స్ ఎలా ఉపయోగపడతాయో 
 ఈ పుస్తకం పరిచయం చేస్తుంది. ఇంకా తెలుసుకోవాలని ఉంటే పుస్తకం తెరవండి; దీనికి పాస్‌వర్డ్ అక్కర్లేదు!
 
-ఈ పుస్తకాన్ని మీరు [ఇక్కడ](https://storyweaver.org.in/en/stories/39160-password-cheppavoo) చదవవచ్చు. 
+
+[ఈ పుస్తకాన్ని ఇక్కడ చదవండి](https://storyweaver.org.in/en/stories/39160-password-cheppavoo){.btn .btn-primary .btn-lg}

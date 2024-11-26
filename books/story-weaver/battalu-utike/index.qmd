@@ -8,4 +8,5 @@ page-layout: article
 
 అది మేరీకి రోజులో చాలా ఇష్టమైన సమయం - బట్టలు ఉతికే సమయం! మేరీ, ఆమె చుట్టుపక్కల వాళ్ళూ చక్కగా, శుభ్రంగా బట్టలు ఉతుక్కునే రోజున వాళ్ళని కలుద్దాం పదండి!
 
-ఈ పుస్తకాన్ని మీరు [ఇక్కడ](https://storyweaver.org.in/en/stories/625797-battalu-utike-roju) చదవవచ్చు. 
+
+[ఈ పుస్తకాన్ని ఇక్కడ చదవండి](https://storyweaver.org.in/en/stories/625797-battalu-utike-roju){.btn .btn-primary .btn-lg}

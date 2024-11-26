@@ -16,7 +16,7 @@
 //in the default type of display in listing
 //used on books page to suppress first column
 
-div.quarto-post .metadata {
+.books-page div.quarto-post .metadata {
     display: none;
     flex-direction: column;
     font-size: .8em;

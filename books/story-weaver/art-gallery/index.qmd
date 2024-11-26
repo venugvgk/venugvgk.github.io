@@ -8,4 +8,6 @@ page-layout: article
 
 ఆధునిక భారతీయ చిత్రకళ ప్రపంచవ్యాప్తంగా తనదైన ముద్ర వేయటానికి కేకూ, ఖోర్షేద్ గాంధీ ఒక గొప్ప అవకాశం కల్పించారు. వాళ్లు నడిపిన కేముల్డ్ ఆర్ట్ గేలరీ చాలామంది చిత్రకారులకి సొంత ఇల్లులాగా ఉండేది.
 
-ఈ పుస్తకాన్ని మీరు [ఇక్కడ](https://storyweaver.org.in/en/stories/126597-princess-veedhilo-art-gallery) చదవవచ్చు. 
+
+
+[ఈ పుస్తకాన్ని ఇక్కడ చదవండి](https://storyweaver.org.in/en/stories/126597-princess-veedhilo-art-gallery){.btn .btn-primary .btn-lg}
