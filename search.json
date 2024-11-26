@@ -77,18 +77,32 @@
     "text": "ఆధునిక భారతీయ చిత్రకళ ప్రపంచవ్యాప్తంగా తనదైన ముద్ర వేయటానికి కేకూ, ఖోర్షేద్ గాంధీ ఒక గొప్ప అవకాశం కల్పించారు. వాళ్లు నడిపిన కేముల్డ్ ఆర్ట్ గేలరీ చాలామంది చిత్రకారులకి సొంత ఇల్లులాగా ఉండేది.\nఈ పుస్తకాన్ని ఇక్కడ చదవండి"
   },
   {
-    "objectID": "til/til-posts/24-21-2024/powerpoint-morph-timeline.html",
-    "href": "til/til-posts/24-21-2024/powerpoint-morph-timeline.html",
+    "objectID": "til/powerpoint/powerpoint-morph-timeline.html",
+    "href": "til/powerpoint/powerpoint-morph-timeline.html",
     "title": "Timeline Morph on PPT",
     "section": "",
-    "text": "Video\ntimeline can become very interesting with this morphing.\nIf images are copied across slides, and moved, morph makes them look like they move.\nSelect all the slides where such images are and then apply morph.\nUnrelated images can be morphed by naming them the same in the animation pane. The name has to start with !! (two exclamation marks).\ncharacter morph makes it look like the words disintegrate into letters and letters rearrange themselves."
+    "text": "timeline can become very interesting with this morphing.\nIf images are copied across slides, and moved, morph makes them look like they move.\nSelect all the slides where such images are and then apply morph.\nUnrelated images can be morphed by naming them the same in the animation pane. The name has to start with !! (two exclamation marks).\ncharacter morph makes it look like the words disintegrate into letters and letters rearrange themselves."
+  },
+  {
+    "objectID": "til/quarto/quarto-add-custom-font.html",
+    "href": "til/quarto/quarto-add-custom-font.html",
+    "title": "adding google fonts to quarto pages",
+    "section": "",
+    "text": "When writing in quarto, we usually do not worry about the font. such trivial decisions are left to the theme.\nhowever, part of my webpage is in Telugu. and the font chosen with cosmo theme was horrible to read. at the same time, I was reading through this excellent presentation on customizing quarto sites when this set main font slide caught my eye.\nso i did what was recommended.\nimported a good to read telugu google font called mallanna ino the .scss\n/*-- scss:defaults --*/\n\n@import url('https://fonts.googleapis.com/css2?family=Mallanna&display=swap');\n\nthen, added it in my _quarto.yml.\nformat:\n  html: \n    theme: \n      - cosmo\n      - styles.scss\n    css: styles.css\n    toc: true\n    mainfont: Nunito, Mallanna\n\nthat’s it! now, all the telugu font is in mallanna."
+  },
+  {
+    "objectID": "til/quarto/quarto-modify-listing-page.html",
+    "href": "til/quarto/quarto-modify-listing-page.html",
+    "title": "modifying listing page on quarto",
+    "section": "",
+    "text": "div.quarto-post .metadata { display: none; flex-direction: column; font-size: .8em; font-family: Nunito, Mallanna; flex-basis: 33%; }\nbody-classes: books-page\n.books-page div.quarto-post .metadata { display: none; flex-direction: column; font-size: .8em; font-family: Nunito, Mallanna; flex-basis: 33%; }"
   },
   {
     "objectID": "til/index.html",
     "href": "til/index.html",
     "title": "Today I Learnt",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nNov 24, 2024\n\n\nTimeline Morph on PPT\n\n\nVenu GVGK\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nNov 26, 2024\n\n\nadding google fonts to quarto pages\n\n\nVenu GVGK\n\n\n\n\nNov 25, 2024\n\n\nmodifying listing page on quarto\n\n\nVenu GVGK\n\n\n\n\nNov 24, 2024\n\n\nTimeline Morph on PPT\n\n\nVenu GVGK\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
