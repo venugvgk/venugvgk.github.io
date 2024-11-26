@@ -32,7 +32,7 @@ div.quarto-post .metadata {
     }
 
 ```
-That removed the metadata column but this was impacting all the places where type:default was being used for listing. So, I got this idea from ![anand](https://anandology.com)
+That removed the metadata column but this was impacting all the places where type:default was being used for listing. So, I got this idea from [anand](https://anandology.com)
 
 first, write a bodyclasses for the page, by including this in the title block for the listing page. 
 
