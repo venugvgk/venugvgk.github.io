@@ -10,3 +10,6 @@ page-layout: article
 
 
 [ఈ పుస్తకాన్ని ఇక్కడ చదవండి](https://storyweaver.org.in/en/stories/625797-battalu-utike-roju){.btn .btn-primary .btn-lg}
+
+
+<iframe src="https://storyweaver.org.in/stories/show-in-iframe/625797-battalu-utike-roju?iframe=true" style="height: 513px; width: 365px;" allowfullscreen webkitallowfullscreen mozallowfullscreen>

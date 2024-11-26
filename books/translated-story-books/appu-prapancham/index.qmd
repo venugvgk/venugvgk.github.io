@@ -1,6 +1,5 @@
 ---
 title: అప్పు ప్రపంచం 
-subtitle: ఒక కుక్క కథ 
 date: 23-11-2024
 categories: 
 page-layout: article
