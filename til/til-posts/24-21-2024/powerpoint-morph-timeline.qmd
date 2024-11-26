@@ -3,7 +3,7 @@ title: Timeline Morph on PPT
 date: 2024-11-24
 page-layout: article
 author: Venu GVGK
-Category: presentation-video
+categories: presentation-video
 ---
 
 [Video](https://www.youtube.com/watch?v=nzH4KPz_cIs)
