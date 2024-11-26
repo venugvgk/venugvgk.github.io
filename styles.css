@@ -27,4 +27,8 @@
     .exp-header {
         gap: 0;
     }
+
+    .books-page .quarto-post {
+        flex-direction: column-reverse !important;
+    }
 }
