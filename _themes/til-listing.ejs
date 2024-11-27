@@ -1,0 +1,32 @@
+<!--
+<ul>
+    <% for (const item of items) { %>
+      <li><a href="<%- item.path %>"><%= item.title %></a></li>
+      <%= item['date'] %>
+    <% } %>
+    </ul>
+-->
+<table class="til-table">
+    <thead>
+        <th>
+          Date
+        </th>
+        <th>
+            Title
+        </th>
+    </thead>
+    <tbody>
+        <% for (const item of items) { %>
+            <tr>
+                <td>
+                    <%= item['date'] %> 
+                </td>
+                
+                <td>
+                    <a href="<%- item.path %>"><%= item.title %></a></li>
+                 </td>
+            </tr>
+        <% } %>
+        
+    </tbody>
+</table>
