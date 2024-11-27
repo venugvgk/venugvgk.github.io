@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Venu GVGK">
-<meta name="dcterms.date" content="2024-11-26">
+<meta name="dcterms.date" content="2024-11-27">
 
 <title>modifying table listing page on quarto – venu GVGK Raju</title>
 <style>
@@ -73,10 +73,12 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="modifying table listing page on quarto – venu GVGK Raju">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://venugvgk.github.io/til/quarto/table-listing-with-author.jpg">
 <meta property="og:site_name" content="venu GVGK Raju">
 <meta name="twitter:title" content="modifying table listing page on quarto – venu GVGK Raju">
 <meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://venugvgk.github.io/til/quarto/table-listing-with-author.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -162,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 26, 2024</p>
+      <p class="date">November 27, 2024</p>
     </div>
   </div>
   
@@ -174,7 +176,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>.quarto-listing-table th:nth-child(3), td:nth-child(3) { display:none; }</p>
+<p>For this til page listing, I used table type listing. It looks good but it was including author field, which was unnecessary.</p>
+<p><img src="table-listing-with-author.jpg" class="img-fluid"></p>
+<p>Encouraged by the success of the previous effort to <a href="https://venugvgk.github.io/til/quarto/quarto-modify-listing-page.html">modify the default listing page</a>, I wrote this in the .scss…</p>
+<pre><code>.quarto-listing-table th:nth-child(3), td:nth-child(3) {
+    display:none;
+}
+</code></pre>
+<p>…and that promptly removed the author column completely. ofcourse, I had to inspect, see the th and td are the 3rd ones, find the nth-child selector etc. but thats the details. However, this would impact all the table listings I would ever use. So, tried the same approach as before by defining body-classes in the listing page and including this in the .scss</p>
+<pre><code>.til-page .quarto-listing-table th:nth-child(3), td:nth-child(3) {
+    display:none;
+}</code></pre>
+<p>and that refused to work. Finally gaveup on that approach and decided to write a custom listing. That went the following.</p>
+<p>First, wrote an til-listing.ejs</p>
+<pre><code>&lt;div&gt;
+&lt;table class="til-table"&gt;
+    &lt;thead&gt;
+        &lt;th&gt;
+          Date
+        &lt;/th&gt;
+        &lt;th&gt;
+            Title
+        &lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;% for (const item of items) { %&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    &lt;%= item['date'] %&gt; 
+                &lt;/td&gt;
+                
+                &lt;td&gt;
+                    &lt;a href="&lt;%- item.path %&gt;"&gt;&lt;%= item.title %&gt;&lt;/a&gt;&lt;/li&gt;
+                 &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;% } %&gt;
+        
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;</code></pre>
+<p>Modified the listing page to include this .ejs as the template. template: ../_themes/til-listing.ejs</p>
+<p>then, included the following in the .scss to pad properly. this was iterative. first wrote the above without the class, the table was looking crowded so looked up how to add padding.</p>
+<pre><code>.til-table td {
+    padding:0px 20px 10px 0px;
+}</code></pre>
+<p>just played around with the numbers till i got a good looking table.</p>
+<p>and, the listing page is changed. Categories is not working though. going to look into it next.</p>
 
 
 
