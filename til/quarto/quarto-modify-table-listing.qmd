@@ -21,6 +21,7 @@ Encouraged by the success of the previous effort to [modify the default listing 
 ```
 ...and that promptly removed the author column completely. 
 ofcourse, I had to inspect, see the th and td are the 3rd ones, find the nth-child selector etc. but thats the details. 
+
 However, this would impact all the table listings I would ever use. So, tried the same approach as before by defining body-classes in the listing page and including this in the .scss
 
 ```
@@ -37,7 +38,7 @@ First, wrote an til-listing.ejs
 <table class="til-table">
     <thead>
         <th>
-          Date
+            Date
         </th>
         <th>
             Title
@@ -51,7 +52,7 @@ First, wrote an til-listing.ejs
                 </td>
                 
                 <td>
-                    <a href="<%- item.path %>"><%= item.title %></a></li>
+                    <a href="<%- item.path %>"><%= item.title %></a>
                  </td>
             </tr>
         <% } %>
