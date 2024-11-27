@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -176,8 +176,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>For this til page listing, I used table type listing. It looks good but it was including author field, which was unnecessary. :::{.column-margin} <img src="table-listing-with-author.jpg" class="img-fluid"> :::</p>
-<p>Encouraged by the success of the previous effort to <a href="https://venugvgk.github.io/til/quarto/quarto-modify-listing-page.html">modify the default listing page</a>, I wrote this in the .scss…</p>
+<p>For this til page listing, I used table type listing. It looks good but it was including author field, which was unnecessary.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="table-listing-with-author.jpg" class="img-fluid figure-img"></p>
+<figcaption>quarto table listing by default</figcaption>
+</figure>
+</div>
+</div></div><p>Encouraged by the success of the previous effort to <a href="https://venugvgk.github.io/til/quarto/quarto-modify-listing-page.html">modify the default listing page</a>, I wrote this in the .scss…</p>
 <pre><code>.quarto-listing-table th:nth-child(3), td:nth-child(3) {
     display:none;
 }
