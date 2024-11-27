@@ -7,8 +7,11 @@ categories:
     - quarto
 ---
 For this til page listing, I used table type listing. It looks good but it was including author field, which was unnecessary. 
-:::{.column-margin}
-![](table-listing-with-author.jpg)
+
+::: {.column-margin}
+
+![quarto table listing by default](table-listing-with-author.jpg)
+
 :::
 
 Encouraged by the success of the previous effort to [modify the default listing page](https://venugvgk.github.io/til/quarto/quarto-modify-listing-page.html), I wrote this in the .scss... 
