@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-32bd5e68e2feb014439e9619e75852ca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-72c01f115dba81f5d5b49a854791e49e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -222,141 +222,93 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cXVhcnRv" data-listing-date-sort="1732579200000" data-listing-file-modified-sort="1732696407650" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="138">
-<div class="thumbnail">
-<p><a href="../til/quarto/quarto-add-custom-font.html" class="no-external"></a></p><a href="../til/quarto/quarto-add-custom-font.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../til/quarto/quarto-add-custom-font.html" class="no-external"></a></p>
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/quarto/quarto-add-custom-font.html" class="no-external">adding google fonts to quarto pages</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../til/quarto/quarto-add-custom-font.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRv'); return false;">
-quarto
-</div>
-</div>
-<div class="listing-description">
-<a href="../til/quarto/quarto-add-custom-font.html" class="no-external">When writing in quarto, we usually do not worry about the font. such trivial decisions are left to the theme.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../til/quarto/quarto-add-custom-font.html" class="no-external">
-<div class="listing-date">
-Nov 26, 2024
-</div>
-<div class="listing-author">
-Venu GVGK
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cXVhcnRv" data-listing-date-sort="1732579200000" data-listing-file-modified-sort="1732696407650" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="thumbnail">
-<p><a href="../til/quarto/quarto-modify-table-listing.html" class="no-external"></a></p><a href="../til/quarto/quarto-modify-table-listing.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../til/quarto/quarto-modify-table-listing.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/quarto/quarto-modify-table-listing.html" class="no-external">modifying table listing page on quarto</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../til/quarto/quarto-modify-table-listing.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRv'); return false;">
-quarto
-</div>
-</div>
-<div class="listing-description">
-<a href="../til/quarto/quarto-modify-table-listing.html" class="no-external">.quarto-listing-table th:nth-child(3), td:nth-child(3) { display:none; }</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../til/quarto/quarto-modify-table-listing.html" class="no-external">
-<div class="listing-date">
-Nov 26, 2024
-</div>
-<div class="listing-author">
-Venu GVGK
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="cXVhcnRv" data-listing-date-sort="1732492800000" data-listing-file-modified-sort="1732696407650" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
-<div class="thumbnail">
-<p><a href="../til/quarto/quarto-modify-listing-page.html" class="no-external"></a></p><a href="../til/quarto/quarto-modify-listing-page.html" class="no-external">
-<p class="card-img-top"><img src="quarto/listing-with-metadata.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="../til/quarto/quarto-modify-listing-page.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/quarto/quarto-modify-listing-page.html" class="no-external">modifying default listing page on quarto</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../til/quarto/quarto-modify-listing-page.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRv'); return false;">
-quarto
-</div>
-</div>
-<div class="listing-description">
-<a href="../til/quarto/quarto-modify-listing-page.html" class="no-external">I have a bunch of books I wrote/translated. I needed a listing page to show them. I decided to use the type: default</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../til/quarto/quarto-modify-listing-page.html" class="no-external">
-<div class="listing-date">
-Nov 25, 2024
-</div>
-<div class="listing-author">
-Venu GVGK
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="cG93ZXJwb2ludA==" data-listing-date-sort="1732406400000" data-listing-file-modified-sort="1732696407646" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="77">
-<div class="thumbnail">
-<p><a href="../til/powerpoint/powerpoint-morph-timeline.html" class="no-external"></a></p><a href="../til/powerpoint/powerpoint-morph-timeline.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../til/powerpoint/powerpoint-morph-timeline.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../til/powerpoint/powerpoint-morph-timeline.html" class="no-external">Timeline Morph on PPT</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../til/powerpoint/powerpoint-morph-timeline.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('cG93ZXJwb2ludA=='); return false;">
-powerpoint
-</div>
-</div>
-<div class="listing-description">
-<a href="../til/powerpoint/powerpoint-morph-timeline.html" class="no-external">timeline can become very interesting with this morphing.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../til/powerpoint/powerpoint-morph-timeline.html" class="no-external">
-<div class="listing-date">
-Nov 24, 2024
-</div>
-<div class="listing-author">
-Venu GVGK
-</div>
-</a>
-</div>
-</div>
-</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="cXVhcnRv" data-listing-date-sort="1732579200000" data-listing-file-modified-sort="1732696607467" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="138" data-listing-title-sort="adding google fonts to quarto pages" data-listing-filename-sort="quarto-add-custom-font.qmd">
+<td>
+<span class="listing-date">Nov 26, 2024</span>
+</td>
+<td>
+<a href="../til/quarto/quarto-add-custom-font.html" class="title listing-title">adding google fonts to quarto pages</a>
+</td>
+<td>
+<span class="listing-author">Venu GVGK</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="cXVhcnRv" data-listing-date-sort="1732579200000" data-listing-file-modified-sort="1732696607467" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8" data-listing-title-sort="modifying table listing page on quarto" data-listing-filename-sort="quarto-modify-table-listing.qmd">
+<td>
+<span class="listing-date">Nov 26, 2024</span>
+</td>
+<td>
+<a href="../til/quarto/quarto-modify-table-listing.html" class="title listing-title">modifying table listing page on quarto</a>
+</td>
+<td>
+<span class="listing-author">Venu GVGK</span>
+</td>
+</tr>
+<tr data-index="2" data-categories="cXVhcnRv" data-listing-date-sort="1732492800000" data-listing-file-modified-sort="1732696607467" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182" data-listing-title-sort="modifying default listing page on quarto" data-listing-filename-sort="quarto-modify-listing-page.qmd">
+<td>
+<span class="listing-date">Nov 25, 2024</span>
+</td>
+<td>
+<a href="../til/quarto/quarto-modify-listing-page.html" class="title listing-title">modifying default listing page on quarto</a>
+</td>
+<td>
+<span class="listing-author">Venu GVGK</span>
+</td>
+</tr>
+<tr data-index="3" data-categories="cG93ZXJwb2ludA==" data-listing-date-sort="1732406400000" data-listing-file-modified-sort="1732696607467" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="77" data-listing-title-sort="Timeline Morph on PPT" data-listing-filename-sort="powerpoint-morph-timeline.qmd">
+<td>
+<span class="listing-date">Nov 24, 2024</span>
+</td>
+<td>
+<a href="../til/powerpoint/powerpoint-morph-timeline.html" class="title listing-title">Timeline Morph on PPT</a>
+</td>
+<td>
+<span class="listing-author">Venu GVGK</span>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
