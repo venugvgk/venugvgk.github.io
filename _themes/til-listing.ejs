@@ -7,18 +7,18 @@
     </ul>
 -->
 ```{=html}
-<div class="til-listing">
+<div class="til-listing list">
 <% for (const item of items) { %>
-    <div class="til-item">
+    <div class="til-item" <%= metadataAttrs(item) %>>
         <div class="til-item-header">
-            <span class="til-item-date"><%= item['date'] %></dspan>
+            <span class="til-item-date listing-date"><%= item['date'] %></dspan>
             <span class="til-item-categories">
                 <% for (const c of item.categories) { %>
-                    <span class="til-category"><%= c %></span>
+                    <span class="til-category listing-categories"><%= c %></span>
                 <% } %>
             </span>
         </div>
-        <div class="til-item-title"><a href="<%- item.path %>"><%= item.title %></a></div>
+        <div class="til-item-title"><a href="<%- item.path %>"><span class="listing-name"><%= item.title %></span></a></div>
     </div>
 <% } %>
 </div>
