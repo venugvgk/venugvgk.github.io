@@ -5,7 +5,7 @@ subtitle: Short Snippets of Learning
 listing:
   contents: "/*/*.qmd"
   sort: "date desc"
-  type: default
+  type: table
   categories: true
 
 body-classes: til-page
