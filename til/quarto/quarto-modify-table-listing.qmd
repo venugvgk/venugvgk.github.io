@@ -1,13 +1,75 @@
 ---
 title: modifying table listing page on quarto
-date: 2024-11-26
+date: 2024-11-27
 page-layout: article
 author: Venu GVGK
 categories:
     - quarto
 ---
+For this til page listing, I used table type listing. It looks good but it was including author field, which was unnecessary. 
 
+![](table-listing-with-author.jpg)
 
+Encouraged by the success of the previous effort to [modify the default listing page](https://venugvgk.github.io/til/quarto/quarto-modify-listing-page.html), I wrote this in the .scss... 
+
+```
 .quarto-listing-table th:nth-child(3), td:nth-child(3) {
     display:none;
 }
+
+```
+...and that promptly removed the author column completely. 
+ofcourse, I had to inspect, see the th and td are the 3rd ones, find the nth-child selector etc. but thats the details. 
+However, this would impact all the table listings I would ever use. So, tried the same approach as before by defining body-classes in the listing page and including this in the .scss
+
+```
+.til-page .quarto-listing-table th:nth-child(3), td:nth-child(3) {
+    display:none;
+}
+```
+and that refused to work. Finally gaveup on that approach and decided to write a custom listing. That went the following.
+
+First, wrote an til-listing.ejs
+
+```
+<div>
+<table class="til-table">
+    <thead>
+        <th>
+          Date
+        </th>
+        <th>
+            Title
+        </th>
+    </thead>
+    <tbody>
+        <% for (const item of items) { %>
+            <tr>
+                <td>
+                    <%= item['date'] %> 
+                </td>
+                
+                <td>
+                    <a href="<%- item.path %>"><%= item.title %></a></li>
+                 </td>
+            </tr>
+        <% } %>
+        
+    </tbody>
+</table>
+</div>
+```
+Modified the listing page to include this .ejs as the template. 
+template: ../_themes/til-listing.ejs
+
+then, included the following in the .scss to pad properly. this was iterative. first wrote the above without the class, the table was looking crowded so looked up how to add padding. 
+ 
+```
+.til-table td {
+    padding:0px 20px 10px 0px;
+}
+```
+just played around with the numbers till i got a good looking table. 
+
+and, the listing page is changed. Categories is not working though. going to look into it next. 
+
