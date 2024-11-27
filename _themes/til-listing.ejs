@@ -7,30 +7,19 @@
     </ul>
 -->
 ```{=html}
-<div>
-<table class="til-table">
-    <thead>
-        <th>
-          Date
-        </th>
-        <th>
-            Title
-        </th>
-    </thead>
-    <tbody>
-        <% for (const item of items) { %>
-            <tr>
-                <td>
-                    <%= item['date'] %> 
-                </td>
-                
-                <td>
-                    <a href="<%- item.path %>"><%= item.title %></a></li>
-                 </td>
-            </tr>
-        <% } %>
-        
-    </tbody>
-</table>
+<div class="til-listing">
+<% for (const item of items) { %>
+    <div class="til-item">
+        <div class="til-item-header">
+            <div class="til-item-date"><%= item['date'] %></div>
+            <div class="til-item-categories">
+                <% for (const c of item.categories) { %>
+                    <span class="til-category"><%= c %></span>
+                <% } %>
+            </div>
+        </div>
+        <div class="til-item-title"><a href="<%- item.path %>"><%= item.title %></a></div>
+    </div>
+<% } %>
 </div>
 ```
