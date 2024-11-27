@@ -182,7 +182,8 @@ ul.task-list li input[type="checkbox"] {
     display:none;
 }
 </code></pre>
-<p>…and that promptly removed the author column completely. ofcourse, I had to inspect, see the th and td are the 3rd ones, find the nth-child selector etc. but thats the details. However, this would impact all the table listings I would ever use. So, tried the same approach as before by defining body-classes in the listing page and including this in the .scss</p>
+<p>…and that promptly removed the author column completely. ofcourse, I had to inspect, see the th and td are the 3rd ones, find the nth-child selector etc. but thats the details.</p>
+<p>However, this would impact all the table listings I would ever use. So, tried the same approach as before by defining body-classes in the listing page and including this in the .scss</p>
 <pre><code>.til-page .quarto-listing-table th:nth-child(3), td:nth-child(3) {
     display:none;
 }</code></pre>
@@ -192,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 &lt;table class="til-table"&gt;
     &lt;thead&gt;
         &lt;th&gt;
-          Date
+            Date
         &lt;/th&gt;
         &lt;th&gt;
             Title
@@ -206,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
                 &lt;/td&gt;
                 
                 &lt;td&gt;
-                    &lt;a href="&lt;%- item.path %&gt;"&gt;&lt;%= item.title %&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;a href="&lt;%- item.path %&gt;"&gt;&lt;%= item.title %&gt;&lt;/a&gt;
                  &lt;/td&gt;
             &lt;/tr&gt;
         &lt;% } %&gt;
