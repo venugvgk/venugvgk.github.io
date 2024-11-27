@@ -9,6 +9,5 @@ listing:
   categories: true
 
 body-classes: til-page
-
 ---
 

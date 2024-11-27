@@ -24,10 +24,10 @@
     flex-basis: 33%;
 }
 
+//this suppresses the third column "author"
+//in the table type of display in listing
+//used on TIL page to suppress author column
 
 .quarto-listing-table th:nth-child(3), td:nth-child(3) {
-    display:none;
+    display:none !important;
 }
-
-
-
