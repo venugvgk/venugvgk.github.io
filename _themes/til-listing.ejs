@@ -11,12 +11,12 @@
 <% for (const item of items) { %>
     <div class="til-item">
         <div class="til-item-header">
-            <div class="til-item-date"><%= item['date'] %></div>
-            <div class="til-item-categories">
+            <span class="til-item-date"><%= item['date'] %></dspan>
+            <span class="til-item-categories">
                 <% for (const c of item.categories) { %>
                     <span class="til-category"><%= c %></span>
                 <% } %>
-            </div>
+            </span>
         </div>
         <div class="til-item-title"><a href="<%- item.path %>"><%= item.title %></a></div>
     </div>
