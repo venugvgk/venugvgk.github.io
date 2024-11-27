@@ -6,37 +6,37 @@ author: Venu GVGK
 categories:
     - quarto
 ---
-For this til page listing, I used table type listing. It looks good but it was including author field, which was unnecessary. 
+For this til page listing, I used table type listing. It looks good but it was including author field, which was unnecessary.
 
 ::: {.column-margin}
 
-![quarto table listing by default](table-listing-with-author.jpg)
+![quarto table listing by default](table-listing-with-author.jpg){.border}
 
 :::
 
-Encouraged by the success of the previous effort to [modify the default listing page](https://venugvgk.github.io/til/quarto/quarto-modify-listing-page.html), I wrote this in the .scss... 
+Encouraged by the success of the previous effort to [modify the default listing page](https://venugvgk.github.io/til/quarto/quarto-modify-listing-page.html), I wrote this in the .scss...
 
-```
+```css
 .quarto-listing-table th:nth-child(3), td:nth-child(3) {
     display:none;
 }
 
 ```
-...and that promptly removed the author column completely. 
-ofcourse, I had to inspect, see the th and td are the 3rd ones, find the nth-child selector etc. but thats the details. 
+...and that promptly removed the author column completely.
+ofcourse, I had to inspect, see the th and td are the 3rd ones, find the nth-child selector etc. but thats the details.
 
 However, this would impact all the table listings I would ever use. So, tried the same approach as before by defining body-classes in the listing page and including this in the .scss
 
-```
+```css
 .til-page .quarto-listing-table th:nth-child(3), td:nth-child(3) {
     display:none;
 }
 ```
 and that refused to work. Finally gaveup on that approach and decided to write a custom listing. That went the following.
 
-First, wrote an til-listing.ejs
+First, wrote an `til-listing.ejs`
 
-```
+```html
 <div>
 <table class="til-table">
     <thead>
@@ -51,30 +51,30 @@ First, wrote an til-listing.ejs
         <% for (const item of items) { %>
             <tr>
                 <td>
-                    <%= item['date'] %> 
+                    <%= item['date'] %>
                 </td>
-                
+
                 <td>
                     <a href="<%- item.path %>"><%= item.title %></a>
                  </td>
             </tr>
         <% } %>
-        
+
     </tbody>
 </table>
 </div>
 ```
-Modified the listing page to include this .ejs as the template. 
+Modified the listing page to include this .ejs as the template.
 template: ../_themes/til-listing.ejs
 
-then, included the following in the .scss to pad properly. this was iterative. first wrote the above without the class, the table was looking crowded so looked up how to add padding. 
- 
-```
+then, included the following in the .scss to pad properly. this was iterative. first wrote the above without the class, the table was looking crowded so looked up how to add padding.
+
+```css
 .til-table td {
     padding:0px 20px 10px 0px;
 }
 ```
-just played around with the numbers till i got a good looking table. 
+just played around with the numbers till i got a good looking table.
 
-and, the listing page is changed. Categories is not working though. going to look into it next. 
+and, the listing page is changed. Categories is not working though. going to look into it next.
 
