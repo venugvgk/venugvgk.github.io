@@ -78,3 +78,51 @@ just played around with the numbers till i got a good looking table.
 
 and, the listing page is changed. Categories is not working though. going to look into it next.
 
+Update:
+
+When [Anand](https://anandology.com) saw all this drama, he stepped in and changed the .ejs to this. 
+
+```html
+
+```{=html}
+<div class="til-listing list">
+<% for (const item of items) { %>
+    <div class="til-item" <%= metadataAttrs(item) %>>
+        <div class="til-item-header">
+            <span class="til-item-date listing-date"><%= item['date'] %></dspan>
+            <span class="til-item-categories">
+                <% for (const c of item.categories) { %>
+                    <span class="til-category listing-categories"><%= c %></span>
+                <% } %>
+            </span>
+        </div>
+        <div class="til-item-title"><a href="<%- item.path %>"><span class="listing-name"><%= item.title %></span></a></div>
+    </div>
+<% } %>
+</div>
+```
+and added the following to .scss.
+
+```css
+
+.til-item {
+    margin: 20px 0;
+}
+
+.til-item-header {
+    color: #888;
+    font-size: 0.8em;
+}
+
+.til-category {
+    text-transform: uppercase;
+    color: #666;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0px 5px;
+    font-size: 0.7em;
+}
+```
+
+notice the <%= metadataAttrs(item) %> and such stuff, which is the result of followng [this part](https://quarto.org/docs/websites/website-listings-custom.html#sorting-filtering-and-pagination) pf the quarto guide on enabling sorting for custom listings. That fixed the categories sorting too!

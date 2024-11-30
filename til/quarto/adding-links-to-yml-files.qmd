@@ -1,0 +1,13 @@
+---
+title: adding links to yml content files
+date: 2024-11-30
+page-layout: article
+author: Venu GVGK
+categories:
+    - quarto
+---
+I needed a custom listing to display locations of our centers on the homepage of the website for [Sambhavam](https://sambhavam-autism.com). Naturally, I wrote a .ejs file, and created a .yml for the content. The yml contents were the title, image and body, which contained the address of the center. 
+
+Now, we have decided we need a page for each of the locations. Pages are created. I tried to link the pages to the title field in the .yml using [title](page link). Does not work. 
+
+Found that <a href="page link">title</a> works. It is working now! 

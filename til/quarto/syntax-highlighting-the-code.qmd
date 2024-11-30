@@ -1,0 +1,24 @@
+---
+title: syntax highlihgting code
+date: 2024-11-28
+page-layout: article
+author: Venu GVGK
+categories:
+    - quarto
+---
+this is silly, but still. 
+
+instead of enclosing code blocks in three back quotes like this:
+
+"```
+
+```"
+
+include in three back quotes followed by css or html as the case maybe,
+
+"
+```css
+
+```"
+
+to get the syntax highlights!
