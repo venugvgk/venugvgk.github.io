@@ -1,5 +1,5 @@
 ---
-Title: Treekar and Shomus
+title: Treekar and Shomus
 subtitle: The story of two teenage boys as they navigate the challenges of daily life! 
 image: 23.jpg
 date: 01/10/2023
