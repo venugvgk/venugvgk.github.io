@@ -1,5 +1,5 @@
 ---
-Title: "Treekar and Shomus"
+Title: Treekar and Shomus
 subtitle: The story of two teenage boys as they navigate challenges of daily life! 
 title-slide-attributes:
   data-background-image: 21.jpg
