@@ -1,23 +1,8 @@
 [
   {
-    "listing": "/til/index.html",
-    "items": [
-      "/til/python/merge-pdfs-python.html",
-      "/til/quarto/adding-links-to-yml-files.html",
-      "/til/quarto/syntax-highlighting-the-code.html",
-      "/til/quarto/quarto-modify-table-listing.html",
-      "/til/quarto/quarto-add-custom-font.html",
-      "/til/quarto/quarto-modify-listing-page.html",
-      "/til/powerpoint/powerpoint-morph-timeline.html"
-    ]
-  },
-  {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
     "listing": "/books/index.html",
     "items": [
+      "/books/own-picture-books/treekar-shomus/index.html",
       "/books/own-picture-books/laddoo/index.html",
       "/books/own-picture-books/appu/index.html",
       "/books/translated-story-books/avantika/index.html",
@@ -33,6 +18,22 @@
       "/books/story-weaver/amma-intiki/index.html",
       "/books/story-weaver/chakrala-kurchi/index.html",
       "/books/story-weaver/battalu-utike/index.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
+    "listing": "/til/index.html",
+    "items": [
+      "/til/python/merge-pdfs-python.html",
+      "/til/quarto/adding-links-to-yml-files.html",
+      "/til/quarto/syntax-highlighting-the-code.html",
+      "/til/quarto/quarto-modify-table-listing.html",
+      "/til/quarto/quarto-add-custom-font.html",
+      "/til/quarto/quarto-modify-listing-page.html",
+      "/til/powerpoint/powerpoint-morph-timeline.html"
     ]
   },
   {
