@@ -102,7 +102,7 @@
     "href": "til/quarto/adding-links-to-yml-files.html",
     "title": "adding links to yml content files",
     "section": "",
-    "text": "I needed a custom listing to display locations of our centers on the homepage of the website for Sambhavam. Naturally, I wrote a .ejs file, and created a .yml for the content. The yml contents were the title, image and body, which contained the address of the center.\nNow, we have decided we need a page for each of the locations. Pages are created. I tried to link the pages to the title field in the .yml using title. Does not work.\nFound that title works. It is working now!"
+    "text": "I needed a custom listing to display locations of our centers on the homepage of the website for Sambhavam. Naturally, I wrote a .ejs file, and created a .yml for the content. The yml contents were the title, image and body, which contained the address of the center.\nNow, we have decided we need a page for each of the locations. Pages are created. I tried to link the pages to the title field in the .yml using\n [title](page link)\n\nIt does not work. The following works. it is working now!\n&lt;a href=\"page link\"&gt;title&lt;/a&gt;"
   },
   {
     "objectID": "til/quarto/quarto-modify-listing-page.html",

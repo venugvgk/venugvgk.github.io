@@ -175,8 +175,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>I needed a custom listing to display locations of our centers on the homepage of the website for <a href="https://sambhavam-autism.com">Sambhavam</a>. Naturally, I wrote a .ejs file, and created a .yml for the content. The yml contents were the title, image and body, which contained the address of the center.</p>
-<p>Now, we have decided we need a page for each of the locations. Pages are created. I tried to link the pages to the title field in the .yml using <a href="page link">title</a>. Does not work.</p>
-<p>Found that <a href="page link">title</a> works. It is working now!</p>
+<p>Now, we have decided we need a page for each of the locations. Pages are created. I tried to link the pages to the title field in the .yml using</p>
+<pre><code> [title](page link)
+</code></pre>
+<p>It does not work. The following works. it is working now!</p>
+<pre><code>&lt;a href="page link"&gt;title&lt;/a&gt;
+</code></pre>
 
 
 
