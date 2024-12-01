@@ -2,73 +2,73 @@
 format: revealjs
 ---
 ## {background-color="#ebdef0"}
-![](0_Title.jpg)
+![](0_Title.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](0_Title1.jpg)
+![](0_Title1.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](1.jpg)
+![](1.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](2.jpg)
+![](2.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](3.jpg)
+![](3.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](4.jpg)
+![](4.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](5.jpg)
+![](5.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](6.jpg)
+![](6.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](7a.jpg)
+![](7a.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](7b.jpg)
+![](7b.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](8.jpg)
+![](8.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](9.jpg)
+![](9.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](10.jpg)
+![](10.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](11.jpg)
+![](11.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](12.jpg)
+![](12.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](13.jpg)
+![](13.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](14.jpg)
+![](14.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](15.jpg)
+![](15.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](16.jpg)
+![](16.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](17.jpg)
+![](17.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](18.jpg)
+![](18.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](19.jpg)
+![](19.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](20.jpg)
+![](20.jpg){fig-align="center"}
 
 ## {background-color="#ebdef0"}
-![](21.jpg)
+![](21.jpg){fig-align="center"}
