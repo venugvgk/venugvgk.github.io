@@ -2,6 +2,7 @@
   {
     "listing": "/til/index.html",
     "items": [
+      "/til/python/merge-pdfs-python.html",
       "/til/quarto/adding-links-to-yml-files.html",
       "/til/quarto/syntax-highlighting-the-code.html",
       "/til/quarto/quarto-modify-table-listing.html",

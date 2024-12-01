@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Venu GVGK">
+<meta name="dcterms.date" content="2024-12-01">
 
-<title>Today I Learnt – Venu GVGK Raju</title>
+<title>Merging pdf files using python – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-595aa0ba1df8a051cb3a6c4092e57e07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-595aa0ba1df8a051cb3a6c4092e57e07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,72 +102,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-language','listing-title','listing-date','listing-page-layout','listing-author','listing-categories','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-website","listing-format","listing-language","listing-title","listing-date","listing-page-layout","listing-author","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Today I Learnt – Venu GVGK Raju">
-<meta property="og:description" content="Short Snippets of Learning">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Merging pdf files using python – Venu GVGK Raju">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Today I Learnt – Venu GVGK Raju">
-<meta name="twitter:description" content="Short Snippets of Learning">
+<meta name="twitter:title" content="Merging pdf files using python – Venu GVGK Raju">
+<meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -144,7 +120,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Venu GVGK Raju</span>
     </a>
   </div>
@@ -155,7 +131,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">Curriculum Vitae</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -164,21 +140,21 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">    
         <li>
-    <a class="dropdown-item" href="../en/blog/index.html">
+    <a class="dropdown-item" href="../../en/blog/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../te/blog/index.html">
+    <a class="dropdown-item" href="../../te/blog/index.html">
  <span class="dropdown-text">తెలుగు, సంస్కృతము, ఇతర భాషలు</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../books/index.html"> 
+    <a class="nav-link" href="../../books/index.html"> 
 <span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../til/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../til/index.html"> 
 <span class="menu-text">TIL</span></a>
   </li>  
 </ul>
@@ -192,23 +168,37 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="cG93ZXJwb2ludA==">powerpoint <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cXVhcnRv">quarto <span class="quarto-category-count">(5)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Today I Learnt</h1>
-<p class="subtitle lead">Short Snippets of Learning</p>
-</div>
+<h1 class="title">Merging pdf files using python</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">python</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Venu GVGK </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 1, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -218,128 +208,40 @@ window.Quarto = {
 </header>
 
 
+<p>A term paper is due in a week. As part of research, I had to download a thesis, which was available in parts, as multiple pdf files. It becomes difficult to manage these in zotero, which I use to keep track of research and insert citations. so, learnt to combine pdf files using python. code below.</p>
+<p>oh, first installed pyPDF2 - pip install pyPDF2</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> PyPDF2 <span class="co"># this is the library for pdf mashing </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os <span class="co"># module for management of files and directories  </span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a PdfFileMerger object</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>merger <span class="op">=</span> PyPDF2.PdfMerger()</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># folder structure - pdfmerge/to-merge has the pdf files.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Wanter to keep all pdf files to be merged in a folder.</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># pdfmerge/ is where the .py file is. </span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Get list of pdf files from the folder into a list. </span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">"../pdfmerge/to-merge/"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>file_names <span class="op">=</span> os.listdir(path)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># directory name is added to each file name</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>string <span class="op">=</span> <span class="st">"to-merge/"</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>paths_files <span class="op">=</span> [string <span class="op">+</span> x <span class="cf">for</span> x <span class="kw">in</span> file_names]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(paths_files) <span class="co">#printing the file names just to check they are appearing in order</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Append each PDF to the merger</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pdf <span class="kw">in</span> paths_files:</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    merger.append(pdf)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Write out the merged PDF, the name of the target file can be anything. </span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>merger.write(<span class="st">"result.pdf"</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>merger.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
-<!--
-<ul>
-    
-      <li><a href="/til/python/merge-pdfs-python.qmd">Merging pdf files using python</a></li>
-      Dec 1, 2024
-    
-      <li><a href="/til/quarto/adding-links-to-yml-files.qmd">adding links to yml content files</a></li>
-      Nov 30, 2024
-    
-      <li><a href="/til/quarto/syntax-highlighting-the-code.qmd">syntax highlihgting code</a></li>
-      Nov 28, 2024
-    
-      <li><a href="/til/quarto/quarto-modify-table-listing.qmd">modifying table listing page on quarto</a></li>
-      Nov 27, 2024
-    
-      <li><a href="/til/quarto/quarto-add-custom-font.qmd">adding google fonts to quarto pages</a></li>
-      Nov 26, 2024
-    
-      <li><a href="/til/quarto/quarto-modify-listing-page.qmd">modifying default listing page on quarto</a></li>
-      Nov 25, 2024
-    
-      <li><a href="/til/powerpoint/powerpoint-morph-timeline.qmd">Timeline Morph on PPT</a></li>
-      Nov 24, 2024
-    
-    </ul>
--->
-<div class="til-listing list">
-
-    <div class="til-item" data-index="0" data-categories="cHl0aG9u" data-listing-date-sort="1733011200000" data-listing-file-modified-sort="1733037983770" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="189">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Dec 1, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">python</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/python/merge-pdfs-python.html"><span class="listing-name">Merging pdf files using python</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="1" data-categories="cXVhcnRv" data-listing-date-sort="1732924800000" data-listing-file-modified-sort="1733037983770" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="93">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 30, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/adding-links-to-yml-files.html"><span class="listing-name">adding links to yml content files</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="2" data-categories="cXVhcnRv" data-listing-date-sort="1732752000000" data-listing-file-modified-sort="1733037983774" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 28, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/syntax-highlighting-the-code.html"><span class="listing-name">syntax highlihgting code</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="3" data-categories="cXVhcnRv" data-listing-date-sort="1732665600000" data-listing-file-modified-sort="1733037983774" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="726">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 27, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/quarto-modify-table-listing.html"><span class="listing-name">modifying table listing page on quarto</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="4" data-categories="cXVhcnRv" data-listing-date-sort="1732579200000" data-listing-file-modified-sort="1733037983774" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="138">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 26, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/quarto-add-custom-font.html"><span class="listing-name">adding google fonts to quarto pages</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="5" data-categories="cXVhcnRv" data-listing-date-sort="1732492800000" data-listing-file-modified-sort="1733037983774" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 25, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/quarto-modify-listing-page.html"><span class="listing-name">modifying default listing page on quarto</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="6" data-categories="cG93ZXJwb2ludA==" data-listing-date-sort="1732406400000" data-listing-file-modified-sort="1733037983770" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="77">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 24, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">powerpoint</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/powerpoint/powerpoint-morph-timeline.html"><span class="listing-name">Timeline Morph on PPT</span></a></div>
-    </div>
-
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
