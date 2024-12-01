@@ -1,5 +1,7 @@
 ---
-format: revealjs
+format:
+  revealjs:
+    transition: slide
 ---
 ## {background-color="#ebdef0"}
 ![](0_Title.jpg){fig-align="center"}
