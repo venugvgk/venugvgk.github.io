@@ -1,0 +1,43 @@
+---
+title: Merging pdf files using python
+date: 2024-12-01
+page-layout: article
+author: Venu GVGK
+categories:
+    - python
+---
+
+A term paper is due in a week. As part of research, I had to download a thesis, which was available in parts, as multiple pdf files. It becomes difficult to manage these in zotero, which I use to keep track of research and insert citations. so, learnt to combine pdf files using python. code below. 
+
+oh, first installed pyPDF2 - pip install pyPDF2
+
+```python
+
+import PyPDF2 # this is the library for pdf mashing 
+import os # module for management of files and directories  
+
+# Create a PdfFileMerger object
+
+merger = PyPDF2.PdfMerger()
+
+# folder structure - pdfmerge/to-merge has the pdf files.
+# Wanter to keep all pdf files to be merged in a folder.
+# pdfmerge/ is where the .py file is. 
+
+# Get list of pdf files from the folder into a list. 
+path = "../pdfmerge/to-merge/"
+file_names = os.listdir(path)
+
+# directory name is added to each file name
+string = "to-merge/"
+paths_files = [string + x for x in file_names]
+print(paths_files) #printing the file names just to check they are appearing in order
+
+# Append each PDF to the merger
+for pdf in paths_files:
+    merger.append(pdf)
+
+# Write out the merged PDF, the name of the target file can be anything. 
+merger.write("result.pdf")
+merger.close()
+```
