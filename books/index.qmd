@@ -46,8 +46,3 @@ body-classes: books-page
 
 :::
 
-## Unpublished books ఇంకెక్కడా ప్రచురించని పుస్తకాలు 
-
-::: {#treekar}
-
-:::
