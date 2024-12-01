@@ -1,0 +1,83 @@
+---
+Title: "Treekar and Shomus"
+subtitle: The story of two teenage boys as they navigate challenges of daily life! 
+title-slide-attributes:
+  data-background-image: 21.jpg
+  data-background-size: contain
+  data-background-opacity: "0.5"
+image: 21.jpg
+date: 01/10/2023
+date-format: "MMM YYYY"
+format: revealjs
+---
+## {background-color="#ebdef0"}
+![](0_Title.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](0_Title1.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](1.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](2.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](3.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](4.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](5.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](6.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](7a.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](7b.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](8.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](9.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](10.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](11.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](12.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](13.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](14.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](15.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](16.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](17.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](18.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](19.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](20.jpg){.bordered fig-align="center"}
+
+## {background-color="#ebdef0"}
+![](21.jpg){.bordered fig-align="center"}
