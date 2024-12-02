@@ -4,8 +4,8 @@ format:
     transition: slide
     auto-stretch: true
     css: style.css
-    # width: 1120
-    # height: 800
+    width: 1120
+    height: 800
 ---
 ## 
 
