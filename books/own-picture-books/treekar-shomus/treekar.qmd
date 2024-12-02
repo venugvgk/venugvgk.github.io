@@ -102,3 +102,10 @@ format:
 ##
 
 ![](21.jpg)
+
+##
+
+### Thanks for reading!
+
+### Go back to [books page](/books/index.html){.centre}
+
