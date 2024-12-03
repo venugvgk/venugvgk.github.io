@@ -3,7 +3,8 @@ project:
 
 website:
   title: "Venu GVGK Raju"
-  
+  site-url: https://gvgk.in/
+
   open-graph: true
   twitter-card: true
   page-footer:
