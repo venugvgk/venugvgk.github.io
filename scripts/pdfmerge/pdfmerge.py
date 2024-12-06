@@ -1,12 +1,13 @@
 import PyPDF2
 import os
+from natsort import os_sorted
 
 # Create a PdfFileMerger object
 merger = PyPDF2.PdfMerger()
 
 # List of PDF files to merge
 path = "C:/Users/Venu/Documents/GitHub/venugvgk.github.io/scripts/pdfmerge/to-merge/"
-file_names = os.listdir(path)
+file_names = os_sorted(os.listdir(path))
 string = "to-merge/"
 paths_files = [string + x for x in file_names]
 print(paths_files)
