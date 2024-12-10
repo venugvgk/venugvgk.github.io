@@ -1,0 +1,45 @@
+---
+categories:
+- musings
+date: '2013-08-11T06:28:32+05:30'
+title: Who killed Karna?
+---
+
+Just completed a project – young team, tight timelines, new technical tools etc. and sat down to think about how it went, what went right/wrong and so on. In such an exercise, while one can identify areas that can be improved, the question “What went wrong?” does not have a single, definitive answer. There are a bunch of relatively small things that go wrong, that finally contribute to what visibly goes wrong.
+
+ As I was thinking about it, was reminded of this question – “who killed Karna?” which, incidentally, was asked much before “who killed palomino Molero?”  Arjuna asks this question and Krishna answers: “By you, by me, by your mother Kunti, by the lord Indra, by mother earth and by his guru Parashurama. If you think about it, Karna was killed by six of us.”
+
+ For those that can read Telugu, the poem goes like this:
+
+ నీ చేతను నా చేతను
+
+ వరమడిగిన కుంతి చేత వాసవు చేతన్
+
+ ధర చేత భార్గవు చేతన్
+
+ అరయంగా కర్ణుడీల్గె నార్వురి చేతన్
+
+ (వాసవుడు \= ఇంద్రుడు; భార్గవుడు \= పరశురాముడు; అరయంగా \= చూస్తే, ఆలోచిస్తే; కర్ణుడు\+ఈల్గె \= కర్ణుడు చనిపోయాడు)
+
+ What Krishna is saying, is that there are lots of things that contributed to Karna’s death, the principal contributions coming from these six. He was also probably trying to assuage the guilt felt by Arjuna after discovering that Karna was also the eldest son of Kunti, and therefore an elder brother.
+
+ Now for the stories of these six contributions:
+
+ By you – Arjuna was the one who actually kills Karna in the battle
+
+ By me – Krishna is the one who plotted it (and directed the entire war, by the way)
+
+ By Kunti – before the beginning of the war, Kunti goes to Karna, tells him the secret o his birth and asks for a boon. Karna agrees to not kill any of the Pandavas, other than Arjuna. This puts him at a huge disadvantage.
+
+ By Lord Indra – according to the legend, Arjuna is the son of Indra. Karna was born with golden armor that made him impossible to kill. So, before the beginning of the war, Indra goes to him in the guise of a Brahmin and asks him for the armor as a gift. Since Karna also took this oath saying he will grant anyone what he asks for, he was obliged to part with the armor, becoming vulnerable.
+
+ By mother earth – Once a little girl spills some ghee and was crying because her mother would scold her for that. Karna, passing that way, wants to help and squeezes the mother earth till the ghee oozes back, pure. Mother earth gets angry at this and curses him saying she will not support his chariot in the most crucial battle of his life. The chariot actually gets stuck during the final battle.
+
+ By his guru parashurama – Parashurama took an oath saying he will not teach any king or one born into a ruling family and teaches only Brahmins. Karna goes to him in the guise of a Brahmin and learns the secrets of weapons from him. When parashurama discovers this, he curses Karna saying the knowledge he acquired by deceit, will not help him in his moment of need.
+
+ One would also notice that in all these six cases, and generally for most of his life, Karna was actually betrayed by his good intentions. That’s a story for another day.
+
+<!--
+post-418
+https://venugvgk.wordpress.com/2013/08/11/who-killed-karna/
+-->

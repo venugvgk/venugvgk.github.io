@@ -1,0 +1,19 @@
+---
+categories:
+- musings
+date: '2011-01-18T17:23:40+05:30'
+title: 'UID: the downside'
+---
+
+For sometime now, I have been thinking of the UID scheme and wondering why the negative side of the system has not been getting any attention, while there seems to be a lot of euphoria around the scheme (Gulzar’s [articles](http://gulzar05.blogspot.com/search/label/UID) on UID, for example). May be I did not look hard enough, but there has been very little debate on the issue, at least in the mainstream media.
+
+ There are some serious issues involved: issues like invasion of privacy and huge cost of the scheme. A more worrying prospect is the of misuse of information and the lack of any meaningful laws to prevent the same. If you think misuse of personal information is limited to e\-mail and facebook hacking, think of the way riots in ‘shining’ modern India are organised around voter list print\-outs. One more issue is that all this information is going to be available to a significant number of bureaucrats – people who are notorious for complicity in government backed crimes.
+
+ Today I found [this article](http://business.in.com/article/resolution/master-card-the-uid-faces-opposition/21272/1) on Forbes India Business, that talks about some of these issues. I hope the dissenting voices get heard. But then, these voices got picked up by Forbes is no reason to hope that the debate would become mainstream.
+
+ What do I mean by that? I am just thinking about the length of time it took for the Radia tapes to break into headlines, even after the transcripts were put on the web.
+
+<!--
+post-313
+https://venugvgk.wordpress.com/2011/01/18/uid-the-downside/
+-->

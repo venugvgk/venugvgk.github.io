@@ -1,0 +1,28 @@
+---
+categories:
+- life-as-it-happens
+date: '2016-09-26T14:21:44+05:30'
+image: orkutlogin.png
+title: Last chance to save your Orkut pictures – September 2016
+---
+
+Or How I ignored all warnings, then needed some pictures last night and grabbed them just in time! And may be you should do the same, now!
+
+ ![orkutlogin](orkutlogin.png)
+
+ I used Orkut last in 2012 and Google shut it down sometime in 2014\. During this period, I was reminded a few times to save my data – pictures, testimonials and scraps (how weird this word sounds now!!). I ignored all of them.
+
+ Last night, I was trying to put together a face book album for my son’s 10th birthday, with a picture from each of the 9 previous birthdays. Suddenly, we found we were missing birthday pictures from 2009\. After a bit of all round panic and searching through a couple of drives, missus remembered that there was an album on Orkut.
+
+ But Orkut shutdown in 2014! They reminded us to download data and we ignored!! An immediate Google search then revealed that there is still a way to get the pictures. You go to [Google Takeout](https://takeout.google.com/settings/takeout/custom/orkut), log in, make a couple of choices and, your data is downloaded. You can save it to the drive as well.
+
+ And that is when I noticed the deadline was September 2016, and had I not run into this difficulty this week, I would have lost a few important pictures. Hence this post!
+
+ Now that I have the data, I went through it and discovered that about 70% the friends I had on Orkut are still my friends on Facebook. I am thinking of getting in touch with some of the remaining 30%…should be fun!
+
+ I am looking forward to it and if you are in that 30%, you have been warned 🙂
+
+<!--
+post-572
+https://venugvgk.wordpress.com/2016/09/26/last-chance-to-save-your-orkut-pictures-september-2016/
+-->

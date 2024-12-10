@@ -1,0 +1,120 @@
+---
+categories:
+- books
+date: '2010-10-10T14:59:43+05:30'
+image: compare-the-width.jpg
+title: 'Infibeam Pi: A regular reader’s review'
+---
+
+I had been thinking of buying an e\-book reader ever since Amazon announced Kindle. So, when Infibeam announced Pi around a year (or more) back, I noticed it immediately. Initially, the only way to buy the device was to look at the pictures and description on the website, trust them and place an order. Unfortunately, I was not that advanced a user of e\-commerce. Also, I was secretely waiting for Kindle to come to India. When Kindle finally came to India, the price tag looked prohibitive. I reasoned that I did not anyway have that much time to read books; and may be an e\-book reader, priced as much as a netbook, was a little overkill. The irrational reasoning went like this – between Kindle and Pi, I would rather buy Kindle; damn thing is overpriced; I will wait till I can bring myself around to shell out that kind of money; or I will not buy an e\-book reader at all.
+
+ These days, I have quite a lot of time on my hands and as Economics would have it, not too much money. That means I can do justice to an e\-book reader in terms of usage and Kindle hopes are dashed due to economic reasons. So, when I saw the Pi in Swapna Bookstore, I was tempted. I came home and tried to get reviews on the web. Very surprisingly, I found none that could help me make up my mind. Some reviews were desultory. Some gave basic facts and a lot of unhelpful details. Some were more like propaganda. None of the reviewers seemed to have spent enough time with the device to be able to take a regular reader’s perspective. I generally went back to the store the next day, took one more look at the device and bought it.
+
+ I have read a dozen (yes, 12\) books on the device since and the post purchase dissonance has, hopefully, subsided enough now. Hence, this review. I am going to write about the device in a lot of detail, a significant part of which might look like nitpicking. But what the heck, I spend so much time with it!
+
+ Before we get in to it, here is the official link – <http://www.infibeam.com/Pi> it gives a list of specifications and all the standard information. A couple of reviews are also displayed on the page.
+
+ **The Device**
+
+                                                      [![](compare-the-width.jpg&h=225 "compare the width")](compare-the-width.jpg)
+
+Compare the width of the device
+
+<br>
+
+<br>
+
+ [![](pi-switched-off.jpg&h=225 "Pi - switched off")](pi-switched-off.jpg)
+
+Pi \- switched off
+
+<br>
+
+ <br>
+
+ **The Best**
+
+ *E\-ink display:* The best thing about the device is it’s E\-ink display. The display is very, very pleasing to the eye. It does not strain your eyes at all. There is practically no difference between reading from a page and reading on this screen. One look at the device and you are definitely going to notice this.
+
+ **The Good**
+
+ *File formats handled:* The device can comfortably handle notepad, MS word, html and pdf files. It can actually handle more file types as listed on the product page but these are the formats I have tried. With some html files, the alignment and line breaks go for a toss and it is impossible (at least for me) to read it but by and large, it handles files well. One great advantage of this is that you need not buy any books. I have a significant number of e\-books downloaded from all over the place and I have not yet ***bought*** any. (Project Gutenberg is an awesome source of free books).
+
+ *The battery life:* Very good. The device actually runs a week if you read about an hour or two per day. You can leave the device on all the time. Charging is quick – about two hours can last you up to two – three days. There is an auto power off option but I do not see the need to use this at all – the device lasts such a long time anyway.
+
+ *Software and connecting to a computer:* There is no complicated software (think of an i\-pod here). The device works just like a pen drive when connected to the USB port.
+
+ *Reading History:* The device maintains a reading history where it tracks the books you are reading or you have been reading. Also, it opens each book at the last page you were reading. Some times, this history gets truncated, I am yet to figure out that logic.
+
+ *Space:*  The device has 512 MB internal memory. If this is not enough for you, there is an SD card slot that can handle 4 GB.
+
+ *Music player:*  Apparently, there is an option to play music files. I am so indifferent to this that I haven’t tried it yet. Even then, I guess this falls under the good.
+
+ **The Irritating**
+
+ *Screen flicker:* Whenever a page is turned, the screen first goes completely black (yes, not blank) and then the next screen is displayed. This was the biggest cause of the above mentioned post\-purchase dissonace for me. I could not get over it for about a day or two. Now, most of the time, I don’t even notice it happens. You get accustomed to it very quickly. Still, it is irritating once in a while. The video below shows the screen flicker towards the end.
+
+ *Pictures folder:* There is no folder organization for pictures. You just dump your pictures wherever you want to on the device and it opens all the picture files in one mega folder. Major problems trying to search out the picture you want or setting a sequence. But then, the device is completely black and white. May be it’s a little too much asking for this.
+
+ **The Bad**
+
+ *The scroll button:* The button used to turn pages in on the bottom right hand corner. The right edge or the bottom edge of the button need to be pressed to turn a page. The location of the button and it’s working make it nearly impossible to hold in your left hand. And belive me, holding it for a long time in your right hand, especially when reading in bed can get very painful.
+
+ *The audio jack:* It’s a 3 mm audio jack. This is, like, outright criminal. One more set of ear phones to trip over.
+
+ Here is a video that shows Pi in operation.
+
+  **The Missing**
+
+ *Search function:* there is no search function for files. Period. Once you are reading a book, you can search for any words in the book. In the library, there is no search function by name of the file (the why of this has got me beaten). The screen displays only so many titles per page and so, if you have a large folder with let’s say 50 files, you will simply have to manually scroll through the pages to find what you want. Add the fact that there is no path display on the top and it becomes very easy to get lost in a maze of folders.
+
+ As a last resort, you connect the device to the computer and search the file out. Alternatively, you keep making appropriately named nested folders so that you don’t have to crawl through 50 screens every time you want that particular book – but you still end up clicking through 10 folders. .Anyhow, a ‘path’ display would greatly enhance the usability of the device.
+
+ **The Neglected**
+
+ There are a number of things that are neglected. It’s a decent product, no doubts about it, but certain small things that can potentially enhance the product experience have been neglected.
+
+<br>
+
+ [![](buttons-on-the-left-spine.jpg&h=225 "buttons on the left spine")](buttons-on-the-left-spine.jpg)
+
+4 buttons on the left spine
+
+<br>
+
+ *Time and date bar:* the home screen of the device shows both time and date on two bars. When you are reading a book, the time bar gets hidden and only the date bar is shown on the top. Most of time, when I am reading a book, I am more worried about time than about the date. I guess this would be a small change to make and I hope it is made.
+
+ *The buttons:* there are four buttons on the left spine – settings, previous screen, portrait/landscape view switch and one more (I think it is music). These are slightly difficult to access. While we do not need to use the other three buttons as frequently, the ‘previous screen’ button could have been placed in a more accessible position – may some where on the rather empty front panel.
+
+<br>
+
+ [![](font-size-buttons-on-the-right-spine.jpg&h=225 "font size buttons on the right spine")](font-size-buttons-on-the-right-spine.jpg)
+
+font size buttons on the right spine
+
+<br>
+
+ *Cover:* The cover is not sold along with the Pi. It is now getting very difficult for me as I start carrying it around. Without a cover, the screen acquires all sorts of smudges. The Swapna Bookstore guys did not have covers when I bought the Pi. It would be a very good idea to sell the cover along with every Pi.
+
+<br>
+
+ [![](power-button-and-sd-card-slot-on-the-top.jpg&h=225 "power button and SD card slot on the top")](power-button-and-sd-card-slot-on-the-top.jpg)
+
+power button and SD card slot on the top
+
+<br>
+
+ *Most importantly, A polished, finished look:* I don’t know how to say this in better words, but the device lacks a finished, polished look. It looks a little crude and amateurish right now. May be fixing some of the issues discussed above can help; may be some thing else needs to be done about this.
+
+ **The Final Take**
+
+ If you are looking for an e\-book reader, Pi is very good. It has a very very good screen, it can handle a large number of file formats and it is quite comfortable to use. If you are in the habit of reading for a couple of hours a day, it can save you a lot of time, money, space and discomfort.
+
+ Having said that, I feel a little cheated by the product. For a product priced at 10k, there should not have been so many issues that I want to crib about. As they said, I am willing to forgive one serious shortcoming in my friends but a there is a whole lot of them, however small, here. The beauty of it is that I will feel more cheated as they improve the product and keep selling it at the same (or, much worse, a slightly reduced) price. I guess I will just have to live with it.
+
+<br>
+
+<!--
+post-229
+https://venugvgk.wordpress.com/2010/10/10/infibeam-pi-a-regular-readers-review/
+-->

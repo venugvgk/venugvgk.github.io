@@ -1,0 +1,50 @@
+---
+categories:
+- musings
+date: '2016-06-17T08:42:54+05:30'
+image: grahams_hierarchy_of_disagreement-en-svg-1.png
+title: Paul Graham’s Disagreement Hierarchy
+---
+
+This is especially for people who like to interact with others, on Facebook and elsewhere. Awareness and understanding of this hierarchy (and obviously, the willingness to use it) will help you, whether you are a writer or a reader. It will likely increase the quality of conversations and make people having them happier – as outlined by Graham in his 2008 essay [How to Disagree](http://paulgraham.com/disagree.html).
+
+ I think it is important because the predominant mind set of the ‘interactions’ these days seems to be – ‘I have an opinion and however uninformed it might be, I am going to defend it with my life and honor’. Anything that changes this is indeed likely to increase the overall well being of people.
+
+ The following is a pictorial representation of the disagreement hierarchy.  The hierarchy describes levels of disagreement DH0 to DH6 starting from the bottom.
+
+ ![Graham's_Hierarchy_of_Disagreement-en.svg (1)](grahams_hierarchy_of_disagreement-en-svg-1.png)
+
+ *Source: Wikipedia, By ‘Loudacris’.*
+
+ Read the [original essay](http://paulgraham.com/disagree.html) for a more detailed explanation. Paul Graham says the following about why it is important to classify and label forms of disagreement.
+
+ **It helps the readers**
+
+ “The most obvious advantage of classifying the forms of disagreement is that it will help people to evaluate what they read. In particular, it will help them to see through intellectually dishonest arguments. An eloquent speaker or writer can give the impression of vanquishing an opponent merely by using forceful words. In fact that is probably the defining quality of a demagogue. By giving names to the different forms of disagreement, we give critical readers a pin for popping such balloons.”
+
+ **It helps the people who are writing**
+
+ “Such labels may help writers too. Most intellectual dishonesty is unintentional. Someone arguing against the tone of something he disagrees with may believe he’s really saying something. Zooming out and seeing his current position on the disagreement hierarchy may inspire him to try moving up to counterargument or refutation.”
+
+ **Such an awareness will decrease the need to be mean and make people happier**
+
+ “But the greatest benefit of disagreeing well is not just that it will make conversations better, but that it will make the people who have them happier. If you study conversations, you find there is a lot more meanness down in DH1 than up in DH6\. You don’t have to be mean when you have a real point to make. In fact, you don’t want to. If you have something real to say, being mean just gets in the way.
+
+ If moving up the disagreement hierarchy makes people less mean, that will make most of them happier. Most people don’t really enjoy being mean; they do it because they can’t help it.”
+
+ Happy conversations!!
+
+ PS: I have some immediate evidence in support of “you don’t have to be mean when you have a real point to make”. My original first paragraph (which I am now reproducing from memory as I had deleted it) was:
+
+ This is especially for people who like to interact with others, on Facebook and elsewhere. Note that I am saying ‘interact’ and not ‘argue’ or ‘discuss’ because at least in my mind, an argument has some logic to it and a discussion has some sanity, some scope for nuance, and some space for disagreement. The predominant mindset behind ‘interactions’ today seems to be ‘I have an opinion and however uninformed it is, I will defend it with my life and honor.
+
+ As you can see, the current paragraph is much less meaner than this and that is because after the first draft, I think I realized that the sarcasm may not really help much to get the point across to the demographic that needs it most. Or I have a strong confirmation bias. Whatever.
+
+<br>
+
+<br>
+
+<!--
+post-468
+https://venugvgk.wordpress.com/2016/06/17/paul-grahams-disagreement-hierarchy/
+-->

@@ -1,0 +1,17 @@
+---
+categories:
+- education
+- cagegory-farmhill
+date: '2018-01-25T10:17:54+05:30'
+image: education-marjorie-sykes.jpg
+title: Wise planning in education
+---
+
+The most clear sighted explanation for the variety of approaches to education we see all around. From the preface of the book “education in search of a philosophy” by Marjorie Sykes.
+
+ ![education marjorie sykes](education-marjorie-sykes.jpg)
+
+<!--
+post-595
+https://venugvgk.wordpress.com/2018/01/25/wise-planning-in-education/
+-->

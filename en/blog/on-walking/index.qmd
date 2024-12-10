@@ -1,0 +1,28 @@
+---
+categories:
+- poetry
+- sonta-kavitvam
+- musings
+date: '2019-11-08T18:14:41+05:30'
+image: img_20210411_062639946_hdr.jpg
+title: On Walking
+---
+
+With head slightly down<br>
+One step after another<br>
+And another after that one<br>
+A few more even steps<br>
+and a few more still<br>
+And soon,<br>
+There is no path, no feet<br>
+Me no more<br>
+And then there is only the walk<br>
+And the chirping of birds.<br>
+
+
+ ![](img_20210411_062639946_hdr.jpg)
+
+<!--
+post-737
+https://venugvgk.wordpress.com/2019/11/08/on-walking/
+-->

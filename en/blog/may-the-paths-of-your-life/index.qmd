@@ -1,0 +1,29 @@
+---
+categories:
+- poetry
+- farmhill
+- sonta-kavitvam
+date: '2020-04-09T09:50:00+05:30'
+image: tree.jpg
+title: May the paths of your life…
+---
+
+May the paths of your life,<br>
+Be planted,<br>
+With seeds of goodness
+
+ May they grow into trees,<br>
+Of fond memories
+
+ That shade your mind<br>
+And keep you sane,<br>
+When on days of despair<br>
+You go on a walk<br>
+Down that lane!
+
+ [![](tree.jpg)](tree.jpg)
+
+<!--
+post-756
+https://venugvgk.wordpress.com/2020/04/09/may-the-paths-of-your-life/
+-->

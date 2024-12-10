@@ -1,0 +1,27 @@
+---
+categories:
+- poetry
+- sonta-kavitvam
+date: '2020-05-20T09:30:01+05:30'
+image: img-20201121-wa0006.jpg
+title: The Road
+---
+
+జీవితమే ఒక పయనం, కాదేదీ కవితకనర్హం! ☺️
+
+ ![](img-20201121-wa0006.jpg) The road,<br>
+She has always been as lovely as she is.<br>
+It is I,<br>
+It is I, that has changed,<br>
+And so has the pleasure of taking her!<br>
+The road,<br>
+She has always been as lovely as she is.<br>
+I see now,<br>
+It is I,<br>
+It is I, that needed to change<br>
+To better enjoy the pleasure of taking her!
+
+<!--
+post-722
+https://venugvgk.wordpress.com/2020/05/20/the-road/
+-->

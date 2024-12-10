@@ -1,0 +1,51 @@
+---
+categories:
+- poetry
+- translation
+- tamil
+- classics
+date: '2024-05-27T09:31:21+05:30'
+title: Thirukkural – Separation
+---
+
+1102\.
+
+ பிணிக்கு மருந்து பிறமன் அணியிழை<br>
+தன்நோய்க்குத் தானே மருந்து.
+
+piṇikku maruntu piṟamaṉ aṇiyiḻai<br>
+taṉnōykkut tāṉē maruntu.
+
+cure for ailments <br>
+are found elsewhere <br>
+for the disease she causes<br>
+she alone is the cure
+
+జ్వర కారణం ఒకటైతే మందు వేరొకటి<br>
+తానే ఒక జ్వరం, మరి తానే మందు!
+
+1104\.
+
+நீங்கின் தெறூஉம் குறுகுங்கால் தண்ணென்னும்<br>
+தீயாண்டுப் பெற்றாள் இவள்
+
+nīṅkiṉ teṟū’um kuṟukuṅkāl taṇṇeṉṉum<br>
+tīyāṇṭup peṟṟāḷ ivaḷ.
+
+If I move away, it burns<br>
+if I come closer, it cools,<br>
+where did she <br>
+get this fire?
+
+దూరమైతే దహనం, దగ్గరైతే చందనం<br>
+ఎక్కడిదీ ఈమె జ్వలనం?
+
+Thirukkural<br>
+The book of desire by Tiruvalluvar <br>
+English Tr. Meena Kandasamy<br>
+Telugu mine
+
+<!--
+post-822
+https://venugvgk.wordpress.com/2024/05/27/thirukkural-separation/
+-->

@@ -1,0 +1,30 @@
+---
+categories:
+- poetry
+- musings
+- sonta-kavitvam
+- cagegory-telugu
+date: '2019-03-04T10:03:00+05:30'
+title: This Suffering/ఈ వేదన
+---
+
+This suffering, is finite!<br>
+The end is well in sight.<br>
+The life one still has left to live<br>
+Is shorter than the one so far lived<br>
+(And may be easier as well, one hopes!)<br>
+The thought arrives in a flash<br>
+And leaves me with a strange peace!
+
+ <br>
+ఈ వేదన అనంతమేమీ కాదు<br>
+అదుగో కనిపిస్తోంది వెలుగు<br>
+ఇన్నాళ్లూ బతికిన దానికన్నా<br>
+ఇక ముందున్న జీవితం చిన్న<br>
+మెరుపులా క్షణం మెరిసిన ఈ తలపు కాంతిలో<br>
+మనసుకు ఇదివరకెన్నడూ లేని కొత్త శాంతి!
+
+<!--
+post-766
+https://venugvgk.wordpress.com/2019/03/04/this-suffering-%e0%b0%88-%e0%b0%b5%e0%b1%87%e0%b0%a6%e0%b0%a8/
+-->

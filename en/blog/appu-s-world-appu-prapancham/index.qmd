@@ -1,0 +1,17 @@
+---
+categories:
+- books
+- sonta-kavitvam
+date: '2020-04-02T09:57:00+05:30'
+image: appu-2.jpg
+title: Appu’s world/అప్పు ప్రపంచం
+---
+
+One more book translated…
+
+ [![](appu-2.jpg)](appu-2.jpg) [![](appu-3.jpg)](appu-3.jpg)
+
+<!--
+post-760
+https://venugvgk.wordpress.com/2020/04/02/appus-world-%e0%b0%85%e0%b0%aa%e0%b1%8d%e0%b0%aa%e0%b1%81-%e0%b0%aa%e0%b1%8d%e0%b0%b0%e0%b0%aa%e0%b0%82%e0%b0%9a%e0%b0%82/
+-->

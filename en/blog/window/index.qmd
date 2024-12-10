@@ -1,0 +1,19 @@
+---
+categories:
+- poetry
+- philosophy
+- sonta-kavitvam
+date: '2020-01-20T11:03:00+05:30'
+image: window.jpg
+title: Window
+---
+
+What you see as a window to the other soul;<br>
+Is often a mirror reflecting your own.
+
+ [![](window.jpg)](window.jpg)
+
+<!--
+post-773
+https://venugvgk.wordpress.com/2020/01/20/window/
+-->
