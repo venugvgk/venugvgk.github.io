@@ -28,9 +28,7 @@ website:
        - text: Curriculum Vitae
          href: about.qmd
        - text: Blog
-         menu: 
-          - en/blog/index.qmd
-          - te/blog/index.qmd
+         href: blog/index.qmd
        - text: Books
          href: books/index.qmd
        - text: TIL

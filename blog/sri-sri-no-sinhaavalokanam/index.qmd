@@ -1,7 +1,7 @@
 ---
 categories:
 - telugu
-- cagtegory-musings
+- musings
 date: '2017-11-24T10:34:42+05:30'
 title: Sri Sri – no సింహావలోకనం
 ---

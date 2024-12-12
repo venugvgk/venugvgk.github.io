@@ -3,7 +3,7 @@ categories:
 - poetry
 - musings
 - sonta-kavitvam
-- cagegory-telugu
+- telugu
 date: '2019-03-04T10:03:00+05:30'
 title: This Suffering/ఈ వేదన
 ---

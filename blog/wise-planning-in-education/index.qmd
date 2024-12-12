@@ -1,7 +1,7 @@
 ---
 categories:
 - education
-- cagegory-farmhill
+- farmhill
 date: '2018-01-25T10:17:54+05:30'
 image: education-marjorie-sykes.jpg
 title: Wise planning in education

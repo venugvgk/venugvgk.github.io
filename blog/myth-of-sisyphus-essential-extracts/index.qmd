@@ -1,6 +1,6 @@
 ---
 categories:
-- book-review
+- books
 - philosophy
 date: '2018-11-08T00:06:02+05:30'
 title: Myth of Sisyphus – Essential Extracts

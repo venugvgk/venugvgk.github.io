@@ -4,7 +4,7 @@ subtitle: How we celebrated and the gifts I got
 date: 2024-11-07
 image: venu-45.jpg
 categories:
-  - personal
+  - musings
 author: Venu GVGK
 page-layout: article
 ---
