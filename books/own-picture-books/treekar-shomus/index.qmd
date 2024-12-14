@@ -13,7 +13,7 @@ Treekar and Shomus are two teenage boys living in a learning community, on a man
 However, they are also teenagers, like we said! This story is about their choice of hairstyle and the challenges they face! 
 
 
-[Read the book in English](/books/own-picture-books/treekar-shomus/treekar.html){.btn .btn-primary}     [తెలుగులో చదవండి](books\own-picture-books\treekar-shomus\treekar-shomus-telugu\treekar-telugu.html){.btn .btn-primary}
+[Read the book in English](/books/own-picture-books/treekar-shomus/treekar.html){.btn .btn-primary}     [తెలుగులో చదవండి](/books/own-picture-books/treekar-shomus/treekar-telugu.html){.btn .btn-primary}
 
 {{< downloadthis Treekar-Shomas-storybook.pdf dname=treekar-shomus-farmhill label="Download the pdf" icon=file-earmark-pdf type=success >}}
 
