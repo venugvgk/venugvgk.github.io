@@ -1,3 +1,13 @@
+---
+format:
+  revealjs:
+    transition: slide
+    auto-stretch: true
+    css: ../style.css
+    width: 1120
+    height: 800
+---
+
 
 ##
 
@@ -91,6 +101,8 @@
 
 ![](Slide23.JPG)
 
-##
 
-![](treekar-telugu.qmd)
+##
+### Thanks for reading!
+
+### Go back to [book page](https://gvgk.in/books/own-picture-books/treekar-shomus/){.centre}

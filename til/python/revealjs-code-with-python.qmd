@@ -1,0 +1,38 @@
+---
+title: Using code to write code - revealjs using python
+date: 2024-12-06
+page-layout: article
+author: Venu GVGK
+categories:
+    - python
+---
+I have always been fascinated by the idea of code that writes code. Found an opportunity to do this and feel awesome!
+
+I wrote about how I used [revealjs to display a picture book](til\quarto\reading-book-revealjs.qmd). That book was in English. I wrote a copy of the book in Telugu. Now I needed to put that book also online. 
+
+revealjs code is a header and just a long list of names of jpg files. So, I decided to write this python to generate the revealjs code. My jpg files are in the folder named pictures. 
+
+```python
+
+import os
+from natsort import os_sorted
+path= "/pictures"
+file_names = os_sorted(os.listdir(path))
+print(file_names) #just to check things are working ok
+f = open("reveal.txt", "w")
+for name in file_names:
+    f = open("reveal.txt", "a")
+    f.write("\n##\n\n![]" + name + "\n")
+f.close()
+
+```
+that read the names of all the files in the folder and generated a text file which had entries like:
+
+```
+##
+![](1.jpg)
+
+```
+All I needed was to open a .qmd file, add the header and be done!
+
+and yeah, that 'natsort' thing helps put numbers in natural sorting order. Otherwise, python does this thing where 1 is followed by 10 to 19 and then 2 is followed by 21 to 29 and so on. 

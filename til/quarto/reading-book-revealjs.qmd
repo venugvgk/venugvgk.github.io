@@ -1,0 +1,40 @@
+---
+title: making a book readable online using revealjs
+date: 2024-12-03
+page-layout: article
+author: Venu GVGK
+categories:
+    - quarto
+---
+So far, I have added books that were already publiched so I added a page for each book with a picture, some description and a link to the publisher's website. 
+
+Now, I have a book that is not published elsewhere and I wanted people to be able to read it on this website itself. I have all the pages of the book, each page as a separate jpg file. 
+
+Opened a .qmd file and wrote this in the header. 
+
+```yml
+---
+format:
+  revealjs:
+    transition: slide
+    auto-stretch: true
+    css: style.css
+    width: 1120
+    height: 800
+---
+```
+
+The rest of the file is in this format.
+
+```html
+##
+
+![](page1.jpg)
+
+```
+
+that's it and included a button with the link to this qmd in the book page. you can read the book [here](/books/own-picture-books/treekar-shomus/treekar.html). 
+
+oh, also, there is no easy way to exit a revealjs presentation. Included a link on the last slide to the books page for people to come back. 
+
+and I have a hearty chuckle thinking if anyone ever imagined revealjs being used to display children's picture books online! 
