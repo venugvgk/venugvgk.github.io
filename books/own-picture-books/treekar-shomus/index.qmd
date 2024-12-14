@@ -17,8 +17,12 @@ However, they are also teenagers, like we said! This story is about their choice
 అయితే, వాళ్ళిద్దరూ టీనేజీలో ఉన్నారు. జుట్టు పెంచుకోవటం గురించి వాళ్ళ ఆలోచనలు, అందువల్ల వాళ్ళు పడిన కష్టాల గురించి ఈ పుస్తకంలో చదవండి!  
 
 
-[Read in English](/books/own-picture-books/treekar-shomus/treekar.html){.btn .btn-primary}&emsp;&emsp;[తెలుగులో చదవండి](/books/own-picture-books/treekar-shomus/treekar-telugu.html){.btn .btn-primary}
+[Read in English](/books/own-picture-books/treekar-shomus/treekar.html){.btn .btn-primary}
 
-{{< downloadthis Treekar-Shomas-storybook.pdf dname=treekar-shomus-farmhill label="Download English pdf" icon=file-earmark-pdf type=success >}}&emsp; &emsp;{{< downloadthis treekar-shomas-telugu.pdf dname=treekar-shomus-telugu label="Download Telugu pdf" icon=file-earmark-pdf type=success >}}
+[తెలుగులో చదవండి](/books/own-picture-books/treekar-shomus/treekar-telugu.html){.btn .btn-primary}
+
+{{< downloadthis Treekar-Shomas-storybook.pdf dname=treekar-shomus-farmhill label="Download English pdf" icon=file-earmark-pdf type=success >}}
+
+{{< downloadthis treekar-shomas-telugu.pdf dname=treekar-shomus-telugu label="Download Telugu pdf" icon=file-earmark-pdf type=success >}}
 
 
