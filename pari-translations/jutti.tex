@@ -1,0 +1,489 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+]{interact}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LL]{}
+\fancyhead[R]{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
+\usepackage{orcidlink}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\author{}
+
+\thanks{CONTACT: }
+\begin{document}
+\captionsetup{labelsep=space}
+
+
+`No one can craft a jutti like I do'
+
+నేను చేసినట్టు జుత్తీ చేసేవాళ్ళు ఇంకెవరూ లేరు
+
+నేను చేసినంత బాగా జుత్తీ ఇంకెవరూ చేయలేరు
+
+In the village of Rupana, veteran shoemaker Hans Raj is the only artisan
+who still makes leather juttis by hand, a craft requiring great skill
+and precision, and traditionally practised by Dalit families from Punjab
+
+``Lai de ve jutti mainu, Muktsari kadai wali, Pairan wich mere channa,
+jachugi payi bahali'\,'
+
+``Buy me a jutti , the one with Muktsar's embroidery, In my feet, oh my
+beloved, it will look amazing.''
+
+Hans Raj tightens his grip on the coarse cotton thread. Using a sharp
+steel needle to guide it, the veteran shoemaker pierces the tough
+leather, skillfully moving the needle in and out roughly 400 times to
+hand-stitch a pair of Punjabi juttis (closed shoes). As he does so, his
+heavy sighs followed by `hmms' punctuate the silence.
+
+In the village of Rupana in Sri Muktsar Sahib district of Punjab, Hans
+Raj is the only artisan who makes these juttis the traditional way.
+
+``Most people are unaware how a Punjabi jutti is made and who crafts it.
+There is a common misconception that machines make it. But from
+preparation to stitching, everything is done by hand,'' says the
+63-year-old artisan who has been crafting juttis for nearly half a
+century now. ``Wherever you go, Muktsar, Malout, Gidderbaha or Patiala,
+no one can meticulously craft a jutti like I do,'' Hans Raj says
+matter-of-factly.
+
+Every day, starting at 7 a.m., he sits on a cotton mattress on the floor
+near the entrance of his rented workshop, part of the walls covered with
+a collection of Punjabi juttis for both men and women. A pair is priced
+between Rs. 400 to Rs. 1,600, and he says he can earn about Rs. 10,000 a
+month from this livelihood.
+
+Left: Hans Raj's rented workshop where he hand stitches and crafts
+leather juttis. Right: Inside the workshop, parts of the walls are
+covered with juttis he has made
+
+Hansraj has been practicing this craft for nearly half a century. He
+rolls the extra thread between his teeth before piercing the tough
+leather with the needle
+
+Leaning against the weathered wall, he spends the next 12 hours crafting
+handmade shoes. The place where he leans his tired back on the wall is
+patchy -- the cement has worn off exposing the bricks underneath. ``The
+body aches, especially the legs,'' Hans Raj says, massaging his knee
+joints. In summer, he says, ``We get dane je {[}boils{]} on the back
+from all the sweating that causes pain.''
+
+Hans Raj learnt the craft when he was around 15, and he was tutored by
+his father. ``I was more interested in exploring the outdoors. Some days
+I would sit down to learn, some days I would not.'' But as he grew up
+and the pressure to work increased, so did the hours of being seated.
+
+Speaking in a mix of Punjabi and Hindi he says, ``this work needs bariki
+{[}precision{]}.'' Hans Raj has been working without glasses for years,
+``but I have started noticing changes to my eyesight now. If I work for
+many hours, my eyes feel the strain. I see two of everything.''
+
+During a regular work day, he drinks tea and listens to the news, songs
+and cricket commentary on his radio. His favourite programme is the ``
+pharmaishi programme,'' where listeners' request of old Hindi and
+Punjabi songs are played. He himself has never called up the radio
+station to request any song saying, ``I don't understand numbers and
+can't dial.''
+
+`I always start by stitching the upper portion of the jutti from the tip
+of the sole. The person who manages to do this right is a craftsman,
+others are not', he says
+
+Hans Raj has never been to school, but finds great joy in exploring new
+places beyond his village, especially with his friend, a holy man in the
+neighbouring village: ``Every year we take a trip. He has his own car,
+and he often invites me to join him on travels. Together, with one or
+two more people, we've visited places in Haryana and Alwar and Bikaner
+in Rajasthan.''
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+It is well past 4 p.m, and Rupana village is bathed in the warm glow of
+a lingering mid-November sun. One of Hans Raj's loyal customers has
+arrived with a friend to pick up a pair of Punjabi juttis . ``Could you
+also make a jutti for him by tomorrow?'' he asks Hans Raj. The friend
+has come from far away -- Tohana in Haryana -- 175 kilometres from here.
+
+Hans Raj smiles, responding to the customer's request with a friendly,
+`` yaar , it is not possible by tomorrow.'' The customer, however, is
+persistent: ``Muktsar is renowned for Punjabi juttis .'' The customer
+then turns to us saying, ``there are thousands of jutti shops in the
+city. But here in Rupana, it is only he who crafts them by hand. We are
+familiar with his work.''
+
+The customer tells us that till Diwali, the entire shop was filled with
+juttis . A month later in November, only 14 pairs remain. What makes
+Hans Raj's juttis so special? ``The ones he makes are flatter in the
+middle,'' the customer says, pointing to the juttis hanging on the wall,
+``The difference lies in the hands {[}of the craftsperson{]}.
+
+`There are thousands of jutti shops in the city. But here in Rupana, it
+is only he who crafts them by hand,' says one of Hans Raj's customers
+
+Hans Raj doesn't work alone -- he gets some of the juttis stitched by
+Sant Ram, a skilled shoemaker in his native village, Khunan Khurd, 12
+kms away. During Diwali or the paddy season, when the demand is high, he
+outsources his work, paying Rs. 80 for stitching a pair.
+
+The master shoemaker tells us the difference between a craftsman and a
+workman: ``I always start by stitching the panna {[}upper portion{]} of
+the jutti from the tip of the sole. This is the most challenging phase
+of crafting juttis . The person who manages to do this right is a
+mistiri {[}craftsman{]}, others are not.''
+
+It wasn't a skill he learnt easily. ``Initially, I was not good at
+stitching shoes with thread,'' Hans Raj recalls. ``But when I committed
+to learning it, I mastered it in two months. The rest of the skill I
+picked up over time, first by asking my father, and later by observing
+him,'' he adds.
+
+Over the years, he has innovated, incorporating a technique of stitching
+small strips of leather on both sides of the jutti , seamlessly
+connecting all the joints. ``These small strips add strength to the
+jutti . The shoes become more resistant to breakage,'' he explains.
+
+The craft of jutti- making requires precision. `Initially, I was not
+good at stitching shoes with thread,' he recalls. But once he put his
+mind to it, he learnt it in two months
+
+Hans Raj and his family of four, including his wife, Veerpal Kaur, and
+two sons and a daughter -- now married and parents themselves --
+relocated from Khunan Khurd to Rupana some 18 years ago. At that time,
+their eldest son, who is 36 now, began working at the paper mill in the
+village here.
+
+``It was mostly {[}Dalit{]} families who made juttis in Khunan Khurd,
+working from their homes. As time passed, the new generation didn't
+learn the craft. And those who knew, passed away,'' says Hans Raj.
+
+Today, in his old village, only three craftsmen, all from his community
+of Ramdasi Chamars (listed as Scheduled Caste in the state), are still
+engaged in the art of handcrafting Punjabi juttis while Hans Raj is the
+only one in Rupana.
+
+``We saw no future for our children in Khunan Khurd, so we sold our
+property there and bought one here,'' Veerpal Kaur says, her voice a mix
+of determination and hope. She speaks fluent Hindi, a result of the
+diversity in the neighbourhood which is populated by migrants from Uttar
+Pradesh and Bihar, many of whom work in the paper mill and live in
+rented rooms in the vicinity.
+
+Veerpal Kaur, Hans Raj's wife, learnt to embroider juttis from her
+mother-in-law. She prefers to sit alone while she works, without any
+distractions
+
+It takes her about an hour to embroider one pair. She uses sharp needles
+that can pierce her fingers if she is not careful, Veerpal says
+
+This is not the first time Hans Raj's family has migrated. ``My father
+came to Punjab from Narnaul {[}in Haryana{]} and started making juttis
+,'' says Hans Raj.
+
+A 2017 study by the Guru Nanak College of Girls in Sri Muktsar Sahib
+district shows that thousands of jutti -makers families migrated from
+Rajasthan to Punjab in the 1950s. Hans Raj's ancestral village Narnaul
+is situated on the border of Haryana and Rajasthan.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+``When I started, a pair would only cost Rs. 30. Now a full embroidered
+jutti can cost over Rs 2,500,'' Hans Raj recounts.
+
+From the small and large scattered pieces of leather at his workshop,
+Hans Raj shows us two kinds: cowhide and buffalo hide. ``The buffalo
+hide is used for the sole, and the cowhide is for the upper half of the
+shoes,'' he explains, his hands stroking the raw material that once
+formed the backbone of the craft.
+
+As he holds up the tanned cowhide he asks if we are comfortable touching
+the animal skin. When we express our willingness, he goes on to observe
+not just the tanned leather but the contrast. The buffalo hide feels as
+thick as 80 paper sheets stacked together. The cowhide, on the other
+hand, is much thinner, maybe around 10 paper sheets. In terms of
+texture, the buffalo hide has a smoother and stiffer feel, while the
+cowhide, though slightly rougher, exhibits greater flexibility and ease
+of bending.
+
+Hans Raj opens a stack of thick leather pieces that he uses to make the
+soles of the jutti . `Buffalo hide is used for the sole, and the cowhide
+is for the upper half of the shoes,' he explains
+
+Left: He soaks the tanned buffalo hide before it can be used. Right: The
+upper portion of a jutti made from cow hide
+
+The growing hike in leather prices -- his critical raw material -- and
+the switch to shoes and slippers what he calls, `` boot-chappal '' has
+led to a fall in the number of people willing to take up this
+profession.
+
+Hans Raj treats his tools with great care. For shaping the jutti he uses
+a rambi (cutter) to carve and scrape the leather; a morga (wooden
+hammer) for beating it until it is stiff and more. The wooden morga
+belonged to his father as did a deer horn which he uses to shape the tip
+of the shoes from inside as it is difficult to fix only with his hands.
+
+The shoemaker travels to the shoe market in Jalandhar, 170 kms away from
+his village, to buy the tanned hides. To reach the mandi (wholesale
+market), he takes a bus to Moga and another from Moga to Jalandhar. His
+travel costs add up to over Rs. 200 one way.
+
+His most recent journey took place two months prior to Diwali when he
+acquired 150 kilograms of tanned leather, valued at Rs. 20,000. Has he
+ever faced any trouble carrying the leather, we ask him. ``The concern
+is more about transporting untanned leather than the tanned one,'' he
+clarifies.
+
+Hans Raj takes great care of all his tools, two of which he has
+inherited from his father
+
+he wooden morga {[}hammer{]} he uses to beat the leather with is one of
+his inheritances
+
+He visits the mandi to carefully choose the desired quality of leather,
+and the traders arrange for its transportation to a nearby city, Muktsar
+where he collects it. ``Carrying such heavy material alone on the bus is
+anyway not possible,'' he remarks.
+
+Over the years, the material for making juttis has evolved and younger
+shoemakers like Raj Kumar and Mahinder Kumar of the Guru Ravidas colony
+in Malout say that artificial leather such as rexine and micro cellular
+sheets are now more commonly used. Raj and Mahinder, both in their early
+forties, belong to the Dalit Jatav community.
+
+``Where a micro sheet cost Rs. 130 per kg, the cowhide now costs ranging
+from Rs. 160 to over Rs. 200 per kg,'' says Mahinder. They say leather
+has become a rare commodity in the area. ``Earlier, the colony was full
+of tanneries and a stench of untanned leather hung in the air. But as
+the basti grew, the tanneries were shut down,'' says Raj.
+
+Youngsters are no longer keen on joining the profession, they add, and
+low income is not the only reason. ``The stench gets into the clothes,''
+Mahinder says, ``and sometimes their friends won't shake their hands.''
+
+oung shoemakers like Raj Kumar (left) say that artificial leather is now
+more commonly used for making juttis . In Guru Ravidas Colony in Malout
+where he lives and works, tanneries have shut
+
+``In my own family the children don't make juttis ,'' says Hans Raj,
+``my sons never entered the shop to understand the craft, how could they
+have learned it? Ours is the last generation now to know the skill. I
+may also be able to do it for another five years, after me who else will
+do it?'' he asks.
+
+As she chops vegetables for dinner, Veerpal Kaur says, ``It isn't
+possible to build homes by just making juttis . Almost two years ago,
+the family completed the construction of a pucca house, facilitated by
+their eldest son's employee loan from the paper mill.
+
+``I had also asked her to learn embroidery, but she didn't learn it
+all,'' Hans Raj says, teasing his wife . The two have been married for
+38 years. ``I wasn't interested,'' Veerpal chimes back. Based on what
+she learnt from her mother-in-law, she can embroider a pair in an hour
+at home with zari thread.
+
+Their home, shared with their eldest son's family of three, comprises
+two rooms, a kitchen, and a drawing room, with an outdoor toilet.
+Adorning the rooms and hall are photos of B.R. Ambedkar and Sant
+Ravidas. A similar image of the saint graces Hans Raj's workshop.
+
+ans Raj's juttis have travelled across India with their customers. These
+are back in vogue after a gap of about 15 years. Now, `every day feels
+like Diwali for me,' a joyous Hans Raj says
+
+``It is in the last 10-15 years that people have started wearing juttis
+again,'' Veerpal says,``before that, many had also stopped asking for
+the shoemakers.''
+
+During that time, Hans Raj worked as a farm labourer and occasionally
+crafted juttis within a day or two when a customer came by.
+
+``Now, more college going boys and girls are interested in wearing these
+juttis ,'' Veerpal says.
+
+Customers have also carried juttis to various places, including
+Ludhiana, Rajasthan, Gujarat, and Uttar Pradesh. Hans Raj fondly recalls
+crafting eight pairs of Punjabi juttis for a mill worker during his last
+big order. The mill worker purchased them for his relatives in Uttar
+Pradesh.
+
+Since there's a consistent demand for his craftsmanship in his current
+location, ``Every day feels like Diwali for me,'' a joyous Hans Raj
+says.
+
+In November 2023, a few weeks after this story was reported, Hans Raj
+suffered a partial stroke. He is now recovering.
+
+This story is supported by a fellowship from Mrinalini Mukherjee
+Foundation (MMF).
+
+\#leather \#dalit \#leather-worker \#dalit-communities \#craftpersons
+
+Sanskriti Talwar
+
+Sanskriti Talwar is an independent journalist based in New Delhi, and a
+PARI MMF Fellow for 2023.
+
+Naveen Macro
+
+Naveen Macro is a Delhi-based independent photojournalist and
+documentary filmmaker and a PARI MMF Fellow for 2023.
+
+Editor : Sarbajaya Bhattacharya
+
+Sarbajaya Bhattacharya is a Senior Assistant Editor at PARI. She is an
+experienced Bangla translator. Based in Kolkata, she is interested in
+the history of the city and travel literature.
+
+
+
+
+\end{document}
