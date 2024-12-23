@@ -1,0 +1,14 @@
+---
+title: course outline
+subtitle: Outline of the course for grad students
+---
+
+cover 
+
+Zotero - setting it up with google drive desktop
+VScode - setting up and adding quarto
+github - setting up a repository and connecting to a local repository
+extensions - generating word, pdf etc. word count extention
+setting up a website and publishing
+
+
