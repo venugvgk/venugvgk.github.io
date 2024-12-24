@@ -1,4 +1,15 @@
-#| label: circles
+---
+title: embed code and output
+date: 2024-11-26
+page-layout: article
+author: Venu GVGK
+categories:
+    - quarto
+    - python
+---
+```{python}
+#| code-fold: true
+#| code-summary: "Show the code"
 import numpy as np
 import matplotlib.pyplot as plt
 import random
@@ -60,3 +71,5 @@ for spine in axes.spines.values():
     spine.set_visible(False)
 
 plt.show()
+
+```
