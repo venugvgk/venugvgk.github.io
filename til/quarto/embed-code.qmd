@@ -1,12 +1,14 @@
 ---
 title: write code and show output
-date: 2024-11-26
+date: 2024-12-24
 page-layout: article
 author: Venu GVGK
 categories:
     - quarto
     - python
 ---
+Here we go.
+
 ```{python}
 #| code-fold: true
 #| code-summary: "Show the code"
