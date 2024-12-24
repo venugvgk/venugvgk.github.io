@@ -173,6 +173,7 @@
   {
     "listing": "/til/index.html",
     "items": [
+      "/til/quarto/adding-code.html",
       "/til/python/revealjs-code-with-python.html",
       "/til/quarto/reading-book-revealjs.html",
       "/til/python/merge-pdfs-python.html",
