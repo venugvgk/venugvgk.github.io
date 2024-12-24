@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>write code and show output – Venu GVGK Raju</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="write code and show output – Venu GVGK Raju">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Venu GVGK Raju">
+<meta name="twitter:title" content="write code and show output – Venu GVGK Raju">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Venu GVGK Raju</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">Curriculum Vitae</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../books/index.html"> 
+<span class="menu-text">Books</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../til/index.html"> 
+<span class="menu-text">TIL</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">write code and show output</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>‘No one can craft a jutti like I do’</p>
+<p>జుత్తీ చేయటంలో నన్ను మించినవాళ్ళు లేరు</p>
+<p>In the village of Rupana, veteran shoemaker Hans Raj is the only artisan who still makes leather juttis by hand, a craft requiring great skill and precision, and traditionally practised by Dalit families from Punjab</p>
+<p>రూపానా గ్రామంలో చెప్పులు కుట్టే వృత్తిలో చేయి తిరిగిన హన్స్ రాజ్ ఒక్కరికే ఇంకా చేతితో తోలు జుత్తీ కుట్టే పనితనం ఉంది. సాంప్రదాయికంగా పంజాబులో దళిత కుటుంబాలు చేస్తూ ఉన్న ఈ చేతిపని చేయటానికి చాలా నేర్పరితనము, సున్నితమైన ఖచ్చితత్వమూ కావాలి.</p>
+<p>“Lai de ve jutti mainu, Muktsari kadai wali, Pairan wich mere channa, jachugi payi bahali’’</p>
+<p>“లాయ్ దే వే జుత్తీ మేనూ, ముక్త్ సరీ కడాయీ వాలీ పైరన్ విచ్ మేరే ఛన్నా జచూగీ పాయి బహాలీ”</p>
+<p>“Buy me a jutti , the one with Muktsar’s embroidery, In my feet, oh my beloved, it will look amazing.”</p>
+<p>“ముక్తసర్ చేతికుట్టు పని చేసిన జుత్తీ నాకు కొనిస్తావా ప్రియా అందమైన నా పాదాలకి అవి ఎంత చక్కగా అమరుతాయో కదా”</p>
+<p>Hans Raj tightens his grip on the coarse cotton thread. Using a sharp steel needle to guide it, the veteran shoemaker pierces the tough leather, skillfully moving the needle in and out roughly 400 times to hand-stitch a pair of Punjabi juttis (closed shoes). As he does so, his heavy sighs followed by ‘hmms’ punctuate the silence.</p>
+<p>తన చేతిలో ఉన్న బిరుసైన నూలు దారాన్ని ఇంకొంచెం బిగించి పట్టుకున్నారు హన్స్ రాజ్. మొనదేరిన స్టీలు సూది సహాయంతో ఆ దారాన్ని గట్టి తోలులోకి దించి, ఎంతో చాకచక్యంగా సూదిని కదిలిస్తూ, దగ్గర దగ్గర నాలుగు వందల కుట్లు వేస్తేనే ఒక జత పంజాబీ జుత్తీ (మూసిఉండే ఒకరకం చెప్పులు) తయారవుతాయి. ఆయన పని చేస్తున్నప్పుడు బరువైన నిట్టూర్పులు, ‘హుమ్మ్’ అనే శబ్దాలు తప్ప అంతా నిశ్శబ్దంగా ఉంటుంది.</p>
+<p>In the village of Rupana in Sri Muktsar Sahib district of Punjab, Hans Raj is the only artisan who makes these juttis the traditional way.</p>
+<p>పంజాబులోని శ్రీ ముక్తసర్ సాహిబ్ జిల్లాలో, ఈ జుత్తీలని సాంప్రదాయక పద్ధతిలో తయారుచేయగల ఏకైక చేతిపనివాడు హన్స్ రాజ్ మాత్రమే.</p>
+<p>“Most people are unaware how a Punjabi jutti is made and who crafts it. There is a common misconception that machines make it. But from preparation to stitching, everything is done by hand,” says the 63-year-old artisan who has been crafting juttis for nearly half a century now. “Wherever you go, Muktsar, Malout, Gidderbaha or Patiala, no one can meticulously craft a jutti like I do,” Hans Raj says matter-of-factly.</p>
+<p>“చాలా మందికి పంజాబీ జుత్తీ ఎలా, ఎవరు తయారు చేస్తారో తెలియదు. అందరూ వీటిని యంత్రాలు చేస్తాయని అనుకుంటారు. కానీ, మొదటి నుంచీ చివరివరకూ, పూర్తిగా చేతితోనే తయారు అవుతాయి,” అంటారు హన్స్ రాజ్. అరవై మూడు సంవత్సరాల ఆయన, దాదాపు అర్థ శతాబ్దకాలంగా ఈ జుత్తీలను తయారు చేస్తున్నారు. “మీరు ఎక్కడికైనా వెళ్ళండి, ముక్తసర్, మాలౌత్, గిద్దర్బహా, కావాలంటే పటియాలా, నా అంత శ్రద్ధగా జుత్తీలు చేసేవాళ్ళు మీకు దొరకరు,” అని చాలా మామూలుగా అంటారు హన్స్ రాజ్.</p>
+<p>Every day, starting at 7 a.m., he sits on a cotton mattress on the floor near the entrance of his rented workshop, part of the walls covered with a collection of Punjabi juttis for both men and women. A pair is priced between Rs. 400 to Rs. 1,600, and he says he can earn about Rs. 10,000 a month from this livelihood.</p>
+<p>ప్రతి రోజూ ఉదయం ఏడు గంటల నుంచీ ఆయన తన అద్దె దుకాణం ద్వారం దగ్గర ఒక దూది పరుపు మీద కూర్చుని ఉంటారు. ఆ దుకాణం గోడలలో కొంత భాగం జుత్తీలతో నిండి ఉంటాయి. అందులో మగవాళ్ళ కోసం చేసినవి, ఆడవాళ్ళ కోసం చేసినవి కూడా ఉంటాయి. ఒక జత ఖరీదు 400 రూపాయల నుండీ 1600 రూపాయలకు ఉంటుంది. ఈ వృత్తి నుంచీ తనకు నెలకు 10,000 రూపాయల వరకూ సంపాదన ఉంటుందని చెప్పారు.</p>
+<p>Left: Hans Raj’s rented workshop where he hand stitches and crafts leather juttis. Right: Inside the workshop, parts of the walls are covered with juttis he has made</p>
+<p>ఎడమ: హన్స్ రాజ్ చేతితో కుట్టి, తోలు జుత్తీలు తయారు చేసే అద్దె దుకాణం. కుడి: దుకాణం లోపల గోడలు కొంతభాగం అతను తయారు చేసిన జుత్తీలతో నిండి ఉంటాయి.</p>
+<p>Hansraj has been practicing this craft for nearly half a century. He rolls the extra thread between his teeth before piercing the tough leather with the needle</p>
+<p>ఈ పనిని హన్స్ రాజ్ దాదాపు అర్థ శతాబ్దంగా చేస్తున్నారు. గట్టి తోలులోకి సూది దించేముందు దారాన్ని పళ్ల మధ్య పట్టి తిప్పుతారు.</p>
+<p>Leaning against the weathered wall, he spends the next 12 hours crafting handmade shoes. The place where he leans his tired back on the wall is patchy – the cement has worn off exposing the bricks underneath. “The body aches, especially the legs,” Hans Raj says, massaging his knee joints. In summer, he says, “We get dane je [boils] on the back from all the sweating that causes pain.”</p>
+<p>మాసిపోయిన ఆ గోడకి ఆనుకుని కూర్చుని, ఆయన రోజుకి పన్నెండు గంటల పాటు చేతితో చెప్పులు కుడుతూనే ఉంటారు. అతను అలసిపోయిన వీపుని ఆన్చి కూర్చునే చోట గోడ అరిగిపోయి ఉంది - సిమెంటు పెచ్చులు రాలి కింద ఉన్న ఇటుకలు కనిపిస్తున్నాయి. “ఒళ్ళు నొప్పులుగా ఉంటుంది, కాళ్లయితే మరీనూ,” అంటారు హన్స్ రాజ్, తన మోకాళ్ళ చిప్పలు రుద్దుకుంటూ. “వేసవి కాలంలో చెమట పోసి, వీపు మీద వచ్చే దానే జా (కురుపులు) బాగా నొప్పి పెడతాయి,” అంటారు.</p>
+<p>Hans Raj learnt the craft when he was around 15, and he was tutored by his father. “I was more interested in exploring the outdoors. Some days I would sit down to learn, some days I would not.” But as he grew up and the pressure to work increased, so did the hours of being seated.</p>
+<p>హన్స్ రాజ్ తనకి పదిహేనేళ్ళ వయసులో, వాళ్ళ నాన్న దగ్గర ఈ వృత్తివిద్య నేర్చుకున్నారు. “అప్పట్లో నాకు బయట తిరగటం మీద ఎక్కువ ఆసక్తి ఉండేది. కొన్నిరోజులు కూర్చుని నేర్చుకునే వాడిని, కొన్నిరోజులు లేదు.” అయితే అతను పెద్దవాడు అయ్యే కొద్దీ పని చేయాలన్న వత్తిడి, కూర్చునే గంటలూ పెరిగాయి.</p>
+<p>Speaking in a mix of Punjabi and Hindi he says, “this work needs bariki [precision].” Hans Raj has been working without glasses for years, “but I have started noticing changes to my eyesight now. If I work for many hours, my eyes feel the strain. I see two of everything.”</p>
+<p>పంజాబీ, హిందీ కలిపిన భాష మాట్లాడుతూ ఆయన, “ఈ పనికి చాలా బారీకీ (ఖచ్చితత్వం) కావాలి,” అంటారు. ఇన్ని సంవత్సరాలుగా కళ్ళద్దాల అవసరం లేకుండానే పనిచేశారు కానీ, “ఈ మధ్య కంటిచూపులో తేడా తెలుస్తుంది. కొన్ని గంటలు పనిచేసిన తర్వాత కళ్ళకి అలసట వస్తుంది. అన్నీ రెండుగా కనబడతాయి.”</p>
+<p>During a regular work day, he drinks tea and listens to the news, songs and cricket commentary on his radio. His favourite programme is the “ pharmaishi programme,” where listeners’ request of old Hindi and Punjabi songs are played. He himself has never called up the radio station to request any song saying, “I don’t understand numbers and can’t dial.”</p>
+<p>అతను మామూలు పని రోజుల్లో టీ తాగుతూ, రేడియోలో పాటలు, వార్తలు, క్రికెట్ వ్యాఖ్యానము వింటూ ఉంటారు. శ్రోతలు కోరిన హిందీ, పంజాబీ పాటలు వినిపించే ‘ఫర్మాయిషీ కార్యక్రమం’ అతనికి ఇష్టమైన కార్యక్రమం. అయితే, అతను ఎప్పుడూ ఆ కార్యక్రమానికి ఫోను చేయలేదు. “నాకు అంకెలు అర్థం కావు, ఫోను కలపలేను,” అంటారు.</p>
+<p>‘I always start by stitching the upper portion of the jutti from the tip of the sole. The person who manages to do this right is a craftsman, others are not’, he says</p>
+<p>‘నేను ఎప్పుడూ చెప్పు అడుగు అట్ట కొననుంచీ జుత్తీ పై భాగం కుట్టటంతో మొదలు పెడతాను. అలా సరిగ్గా కుట్ట గలిగిన వాడు పని తెలిసిన కళాకారుడు, లేకపోతే లేదు’, అంటారు ఆయన.</p>
+<p>Hans Raj has never been to school, but finds great joy in exploring new places beyond his village, especially with his friend, a holy man in the neighbouring village: “Every year we take a trip. He has his own car, and he often invites me to join him on travels. Together, with one or two more people, we’ve visited places in Haryana and Alwar and Bikaner in Rajasthan.”</p>
+<p>హన్స్ రాజ్ బడికి ఎప్పుడూ వెళ్లలేదు కానీ వాళ్ళ ఊరు దాటి కొత్త కొత్త ప్రదేశాలు చూడటం అంటే అతనికి ఎంతో సంతోషం. పక్క ఊళ్ళో మతపెద్దగా ఉన్న స్నేహితుడితో కలిసి వెళుతుంటారు. “ప్రతి సంవత్సరం, ఒక యాత్ర చేస్తాము. అతనికి సొంత కారు ఉంది, అందులో నన్ను కూడా తీసుకు వెళతాడు. ఇంకొక ఇద్దరు ముగ్గురితో కలిసి, మేము హర్యానాలో చాలా స్థలాలు, రాజస్థాన్ లో అల్వార్, బికనేర్ తిరిగి చూసాము.”</p>
+<hr>
+<p>It is well past 4 p.m, and Rupana village is bathed in the warm glow of a lingering mid-November sun. One of Hans Raj’s loyal customers has arrived with a friend to pick up a pair of Punjabi juttis . “Could you also make a jutti for him by tomorrow?” he asks Hans Raj. The friend has come from far away – Tohana in Haryana – 175 kilometres from here.</p>
+<p>అప్పటికి సాయంత్రం నాలుగు గంటలు దాటేసింది. రూపానా గ్రామం వదిలి పోలేక పోతున్న చలికాలపు సూర్యుడి వెచ్చటి వెలుగుతో నిండిపోయింది. ఎప్పటి నుంచో హన్స్ రాజ్ దగ్గర జుత్తీలు కొంటున్న ఖాతాదారుడు ఒకాయన, తన స్నేహితుణ్ణి కూడా తీసుకుని వచ్చారు. “ఇతనికి కూడా ఒక జుత్తీ కావాలి. రేపటి కల్లా చేస్తారా?” అని అడుగుతున్నారు అతను. ఆ స్నేహితుడు ఎంతో దూరం నుంచీ - హర్యానాలోని తోహానా - అంటే 175 కిలోమీటర్ల దూరం నుంచీ వచ్చారు.</p>
+<p>Hans Raj smiles, responding to the customer’s request with a friendly, “ yaar , it is not possible by tomorrow.” The customer, however, is persistent: “Muktsar is renowned for Punjabi juttis .” The customer then turns to us saying, “there are thousands of jutti shops in the city. But here in Rupana, it is only he who crafts them by hand. We are familiar with his work.”</p>
+<p>హన్స్ రాజ్ చిన్నగా నవ్వుతూ, స్నేహంగా సమాధానం ఇచ్చారు, “రేపటికల్లా అంటే కుదరదు.” అయితే ఆ వచ్చిన ఖాతాదారుడు వదలలేదు: “ముక్తసర్ పంజాబీ జుత్తీలకి పేరు మోసింది.” అతను మావైపు తిరిగి, “పట్నంలో వేల కొద్దీ జుత్తీ దుకాణాలు ఉన్నాయి. కానీ ఇక్కడ రూపానాలో చేతితో జుత్తీలు తయారు చేసేది ఇతను ఒక్కడే. మాకు ఇతని పనితనం బాగా తెలుసు..”</p>
+<p>The customer tells us that till Diwali, the entire shop was filled with juttis . A month later in November, only 14 pairs remain. What makes Hans Raj’s juttis so special? “The ones he makes are flatter in the middle,” the customer says, pointing to the juttis hanging on the wall, “The difference lies in the hands [of the craftsperson].</p>
+<p>కొనటానికి వచ్చిన ఆయన, దీపావళి వరకూ మొత్తం దుకాణం నిండా జుత్తీలు ఉంటాయని చెప్పారు. ఒక నేల తర్వాత నవంబర్లో 14 జతలు మాత్రం మిగిలిఉన్నాయి. హన్స్ రాజ్ జుత్తీల ప్రత్యేకత ఏమిటి? “ఈయన చేసే జుత్తీలు మధ్యలో చదునుగా ఉంటాయి,” గోడమీద జుత్తీలు చూపిస్తూ చెప్పారు. “ప్రత్యేకత పని తెలిసిన వాడి చేతిలో ఉంటుంది.”</p>
+<p>‘There are thousands of jutti shops in the city. But here in Rupana, it is only he who crafts them by hand,’ says one of Hans Raj’s customers</p>
+<p>‘పట్నంలో వేల కొద్దీ జుత్తీ దుకాణాలు ఉన్నాయి. కానీ ఇక్కడ రూపానాలో చేతితో జుత్తీలు తయారు చేసేది ఇతను ఒక్కడే’ అంటారు హన్స్ రాజ్ దగ్గర కొనేవాళ్ళలో ఒకరు</p>
+<p>Hans Raj doesn’t work alone – he gets some of the juttis stitched by Sant Ram, a skilled shoemaker in his native village, Khunan Khurd, 12 kms away. During Diwali or the paddy season, when the demand is high, he outsources his work, paying Rs. 80 for stitching a pair.</p>
+<p>హన్స్ రాజ్ పని అంతా ఒక్కడే చేయరు - కొన్ని జుత్తీలు 12 కిలోమీటర్ల దూరంలో వాళ్ళ సొంత ఊరు ఖునన్ ఖుర్ద్ లో ఉండే సంత్ రామ్ అనే చెప్పులు కుట్టే నిపుణుడి చేత కుట్టిస్తారు. దీపావళి లేదా వరి పండే కాలంలో గిరాకీ ఎక్కువగా ఉన్నప్పుడు, ఒక్కొక్క జత 80 రూపాయల చొప్పున అతనితో కుట్టించుకుంటారు.</p>
+<p>The master shoemaker tells us the difference between a craftsman and a workman: “I always start by stitching the panna [upper portion] of the jutti from the tip of the sole. This is the most challenging phase of crafting juttis . The person who manages to do this right is a mistiri [craftsman], others are not.”</p>
+<p>చేతి పని తెలిసిన కళాకారుడికీ, ఊరికే చేతి పనిచేసేవాడికీ తేడా ఏమిటో ఆయన ఇలా చెప్పారు: “నేను ఎప్పుడూ జుత్తీ యొక్క పన్నా (పై భాగం) అడుగు అట్ట చివరి నుంచీ కుట్టటం మొదలు పెడతాను. జుత్తీలు తయారు చేయటంలో ఇది అన్నిటికన్నా కష్టమైన భాగం. ఇది సరిగ్గా చేయగలిగిన వాడు మిస్త్రీ (చేతిపని తెలిసిన వాడు), లేకపోతే లేదు..”</p>
+<p>It wasn’t a skill he learnt easily. “Initially, I was not good at stitching shoes with thread,” Hans Raj recalls. “But when I committed to learning it, I mastered it in two months. The rest of the skill I picked up over time, first by asking my father, and later by observing him,” he adds.</p>
+<p>అయితే, ఆ విద్య ఆయనకి సులువుగా ఏమీ రాలేదు. “మొదట్లో నాకు దారంతో చెప్పులు కుట్టటం సరిగ్గా వచ్చేది కాదు,” అని గుర్తుచేసుకున్నారు హన్స్ రాజ్. “అయితే నేర్చుకోవాలని నేను నిశ్చయించుకున్న తర్వాత, రెండు నెలల్లో నేర్చేసుకున్నాను. ఇక మిగిలిన విద్య అంతా మెల్లగా నేర్చుకున్నాను. మొదట్లో మా నాన్నని అడిగి నేర్చుకునేవాడిని, తర్వాత చూసి నేర్చుకున్నాను.”</p>
+<p>Over the years, he has innovated, incorporating a technique of stitching small strips of leather on both sides of the jutti , seamlessly connecting all the joints. “These small strips add strength to the jutti . The shoes become more resistant to breakage,” he explains.</p>
+<p>సంవత్సరాల తరబడి పని చేయటంలో, అతను కొన్ని కొత్త ప్రక్రియలు కనిపెట్టారు. జుత్తీకి రెండు వైపులా, అన్ని అతుకులనీ కలుపుతూ చిన్న తోలు ముక్కలు కుట్టటం వాటిలో ఒకటి. “ఈ చిన్న ముక్కలు జుత్తీని బలంగా చేస్తాయి. చెప్పులు తొందరగా తెగకుండా ఉంటాయి,” అని వివరించారు.</p>
+<p>The craft of jutti- making requires precision. ‘Initially, I was not good at stitching shoes with thread,’ he recalls. But once he put his mind to it, he learnt it in two months</p>
+<p>జుత్తీలు కుట్టే విద్యలో ఖచ్చితత్వం చాలా అవసరం. ‘మొదట్లో నాకు దారంతో చెప్పులు కుట్టటం సరిగ్గా వచ్చేది కాదు,’ అని గుర్తుచేసుకున్నారు. అయితే, నేర్చుకోవాలని అనుకున్న తర్వాత, రెండునెలల్లో నేర్చేసుకున్నారు.</p>
+<p>Hans Raj and his family of four, including his wife, Veerpal Kaur, and two sons and a daughter – now married and parents themselves – relocated from Khunan Khurd to Rupana some 18 years ago. At that time, their eldest son, who is 36 now, began working at the paper mill in the village here.</p>
+<p>హన్స్ రాజ్, అతని నలుగురు మనుషుల కుటుంబంతో - భార్య వీర్ పాల్ కౌర్ - ఇప్పుడు పెళ్ళిళ్ళు చేసుకుని పిల్లలు ఉన్న - ఇద్దరు కొడుకులు, ఒక కూతురు - అందరూ ఖునాన్ ఖుర్ద్ నుండీ రూపానాకి 18 సంవత్సరాల క్రితం వచ్చారు. ఇప్పుడు 36 సంవత్సరాలు ఉన్న వాళ్ళ పెద్ద అబ్బాయి అప్పుడు ఇక్కడ పేపర్ మిల్లులో పనిచేయటం మొదలు పెట్టాడు.</p>
+<p>“It was mostly [Dalit] families who made juttis in Khunan Khurd, working from their homes. As time passed, the new generation didn’t learn the craft. And those who knew, passed away,” says Hans Raj.</p>
+<p>“ఖునన్ ఖుర్ద్ లో జుత్తీలు తయారు చేసే కుటుంబాలు దాదాపుగా అందరూ దళితులే. ఇళ్లలోనే పనిచేసేవాళ్ళు. కాలం గడిచే కొద్దీ, కొత్త తరం ఆ విద్య నేర్చుకోలేదు. తెలిసిన వాళ్ళు చనిపోయారు,” అన్నారు హన్స్ రాజ్.</p>
+<p>Today, in his old village, only three craftsmen, all from his community of Ramdasi Chamars (listed as Scheduled Caste in the state), are still engaged in the art of handcrafting Punjabi juttis while Hans Raj is the only one in Rupana.</p>
+<p>ఇప్పుడు వాళ్ళ ఊళ్ళో ముగ్గురే చేతిపని కళాకారులు చేతితో పంజాబీ జుత్తీలు తయారు చేస్తున్నారు. అందరూ అతనిలాగే (ఆ రాష్ట్రంలో షెడ్యూల్ కులంగా గుర్తించబడిన) రామ్ దాసీ చమర్ కులానికి చెందినవారు రూపానాలో అయితే హన్స్ రాజ్ ఒక్కరే.</p>
+<p>“We saw no future for our children in Khunan Khurd, so we sold our property there and bought one here,” Veerpal Kaur says, her voice a mix of determination and hope. She speaks fluent Hindi, a result of the diversity in the neighbourhood which is populated by migrants from Uttar Pradesh and Bihar, many of whom work in the paper mill and live in rented rooms in the vicinity.</p>
+<p>మాకు ఖునన్ ఖుర్ద్ లో పిల్లలకి భవిష్యత్తు ఏమీ కనపడలేదు , అందుకే అక్కడ స్థలం అమ్మేసి ఇక్కడ కొనుక్కున్నాం,” అని చెప్పారు వీర్ పాల్ కౌర్. ఆమె గొంతులో ఒక నిశ్చయం, ఒక ఆశ కలిసి వినిపించాయి.</p>
+<p>Veerpal Kaur, Hans Raj’s wife, learnt to embroider juttis from her mother-in-law. She prefers to sit alone while she works, without any distractions</p>
+<p>It takes her about an hour to embroider one pair. She uses sharp needles that can pierce her fingers if she is not careful, Veerpal says</p>
+<p>This is not the first time Hans Raj’s family has migrated. “My father came to Punjab from Narnaul [in Haryana] and started making juttis ,” says Hans Raj.</p>
+<p>A 2017 study by the Guru Nanak College of Girls in Sri Muktsar Sahib district shows that thousands of jutti -makers families migrated from Rajasthan to Punjab in the 1950s. Hans Raj’s ancestral village Narnaul is situated on the border of Haryana and Rajasthan.</p>
+<hr>
+<p>“When I started, a pair would only cost Rs. 30. Now a full embroidered jutti can cost over Rs 2,500,” Hans Raj recounts.</p>
+<p>From the small and large scattered pieces of leather at his workshop, Hans Raj shows us two kinds: cowhide and buffalo hide. “The buffalo hide is used for the sole, and the cowhide is for the upper half of the shoes,” he explains, his hands stroking the raw material that once formed the backbone of the craft.</p>
+<p>As he holds up the tanned cowhide he asks if we are comfortable touching the animal skin. When we express our willingness, he goes on to observe not just the tanned leather but the contrast. The buffalo hide feels as thick as 80 paper sheets stacked together. The cowhide, on the other hand, is much thinner, maybe around 10 paper sheets. In terms of texture, the buffalo hide has a smoother and stiffer feel, while the cowhide, though slightly rougher, exhibits greater flexibility and ease of bending.</p>
+<p>Hans Raj opens a stack of thick leather pieces that he uses to make the soles of the jutti . ‘Buffalo hide is used for the sole, and the cowhide is for the upper half of the shoes,’ he explains</p>
+<p>Left: He soaks the tanned buffalo hide before it can be used. Right: The upper portion of a jutti made from cow hide</p>
+<p>The growing hike in leather prices – his critical raw material – and the switch to shoes and slippers what he calls, “ boot-chappal ” has led to a fall in the number of people willing to take up this profession.</p>
+<p>Hans Raj treats his tools with great care. For shaping the jutti he uses a rambi (cutter) to carve and scrape the leather; a morga (wooden hammer) for beating it until it is stiff and more. The wooden morga belonged to his father as did a deer horn which he uses to shape the tip of the shoes from inside as it is difficult to fix only with his hands.</p>
+<p>The shoemaker travels to the shoe market in Jalandhar, 170 kms away from his village, to buy the tanned hides. To reach the mandi (wholesale market), he takes a bus to Moga and another from Moga to Jalandhar. His travel costs add up to over Rs. 200 one way.</p>
+<p>His most recent journey took place two months prior to Diwali when he acquired 150 kilograms of tanned leather, valued at Rs. 20,000. Has he ever faced any trouble carrying the leather, we ask him. “The concern is more about transporting untanned leather than the tanned one,” he clarifies.</p>
+<p>Hans Raj takes great care of all his tools, two of which he has inherited from his father</p>
+<p>he wooden morga [hammer] he uses to beat the leather with is one of his inheritances</p>
+<p>He visits the mandi to carefully choose the desired quality of leather, and the traders arrange for its transportation to a nearby city, Muktsar where he collects it. “Carrying such heavy material alone on the bus is anyway not possible,” he remarks.</p>
+<p>Over the years, the material for making juttis has evolved and younger shoemakers like Raj Kumar and Mahinder Kumar of the Guru Ravidas colony in Malout say that artificial leather such as rexine and micro cellular sheets are now more commonly used. Raj and Mahinder, both in their early forties, belong to the Dalit Jatav community.</p>
+<p>“Where a micro sheet cost Rs. 130 per kg, the cowhide now costs ranging from Rs. 160 to over Rs. 200 per kg,” says Mahinder. They say leather has become a rare commodity in the area. “Earlier, the colony was full of tanneries and a stench of untanned leather hung in the air. But as the basti grew, the tanneries were shut down,” says Raj.</p>
+<p>Youngsters are no longer keen on joining the profession, they add, and low income is not the only reason. “The stench gets into the clothes,” Mahinder says, “and sometimes their friends won’t shake their hands.”</p>
+<p>oung shoemakers like Raj Kumar (left) say that artificial leather is now more commonly used for making juttis . In Guru Ravidas Colony in Malout where he lives and works, tanneries have shut</p>
+<p>“In my own family the children don’t make juttis ,” says Hans Raj, “my sons never entered the shop to understand the craft, how could they have learned it? Ours is the last generation now to know the skill. I may also be able to do it for another five years, after me who else will do it?” he asks.</p>
+<p>As she chops vegetables for dinner, Veerpal Kaur says, “It isn’t possible to build homes by just making juttis . Almost two years ago, the family completed the construction of a pucca house, facilitated by their eldest son’s employee loan from the paper mill.</p>
+<p>“I had also asked her to learn embroidery, but she didn’t learn it all,” Hans Raj says, teasing his wife . The two have been married for 38 years. “I wasn’t interested,” Veerpal chimes back. Based on what she learnt from her mother-in-law, she can embroider a pair in an hour at home with zari thread.</p>
+<p>Their home, shared with their eldest son’s family of three, comprises two rooms, a kitchen, and a drawing room, with an outdoor toilet. Adorning the rooms and hall are photos of B.R. Ambedkar and Sant Ravidas. A similar image of the saint graces Hans Raj’s workshop.</p>
+<p>ans Raj’s juttis have travelled across India with their customers. These are back in vogue after a gap of about 15 years. Now, ‘every day feels like Diwali for me,’ a joyous Hans Raj says</p>
+<p>“It is in the last 10-15 years that people have started wearing juttis again,” Veerpal says,“before that, many had also stopped asking for the shoemakers.”</p>
+<p>During that time, Hans Raj worked as a farm labourer and occasionally crafted juttis within a day or two when a customer came by.</p>
+<p>“Now, more college going boys and girls are interested in wearing these juttis ,” Veerpal says.</p>
+<p>Customers have also carried juttis to various places, including Ludhiana, Rajasthan, Gujarat, and Uttar Pradesh. Hans Raj fondly recalls crafting eight pairs of Punjabi juttis for a mill worker during his last big order. The mill worker purchased them for his relatives in Uttar Pradesh.</p>
+<p>Since there’s a consistent demand for his craftsmanship in his current location, “Every day feels like Diwali for me,” a joyous Hans Raj says.</p>
+<p>In November 2023, a few weeks after this story was reported, Hans Raj suffered a partial stroke. He is now recovering.</p>
+<p>This story is supported by a fellowship from Mrinalini Mukherjee Foundation (MMF).</p>
+<p>#leather #dalit #leather-worker #dalit-communities #craftpersons</p>
+<p>Sanskriti Talwar</p>
+<p>Sanskriti Talwar is an independent journalist based in New Delhi, and a PARI MMF Fellow for 2023.</p>
+<p>Naveen Macro</p>
+<p>Naveen Macro is a Delhi-based independent photojournalist and documentary filmmaker and a PARI MMF Fellow for 2023.</p>
+<p>Editor : Sarbajaya Bhattacharya</p>
+<p>Sarbajaya Bhattacharya is a Senior Assistant Editor at PARI. She is an experienced Bangla translator. Based in Kolkata, she is interested in the history of the city and travel literature.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/gvgk\.in\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Currently associated with <a href="https://farmhill.in"><em>Farm Hill Education Trust</em></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:venu.gvgk@gmail.com">
+      <i class="bi bi-envelope-at" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/venugvgk">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/venu.gvgk">
+      <i class="bi bi-facebook" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/venu.gvgk">
+      <i class="bi bi-instagram" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
