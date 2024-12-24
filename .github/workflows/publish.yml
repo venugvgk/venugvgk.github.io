@@ -21,6 +21,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Install dependencies
+        run: pip install jupyter nbformat
+
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
