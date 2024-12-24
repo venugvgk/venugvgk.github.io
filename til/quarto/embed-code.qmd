@@ -1,5 +1,7 @@
 ---
 title: write code and show output
+format: html
+jupyter: python3
 date: 2024-12-24
 page-layout: article
 author: Venu GVGK
