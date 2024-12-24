@@ -1,11 +1,6 @@
 ---
-format:
-  docx:
-    keep-tex: true
-    toc: false
-    number-sections: true
-    highlight-style: github
-   
+title: write code and show output
+format: html
 ---
 
 ‘No one can craft a jutti like I do’
