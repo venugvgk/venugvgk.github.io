@@ -10,13 +10,13 @@ r = 10
 draw_center_circle=plt.Circle((0,0),10, fill=False, edgecolor='white')
 
 # Draw 24 circles with random colors
-for i in range(6):
-    theta = i * (2 * np.pi / 6)
+for i in range(24):
+    theta = i * (2 * np.pi / 24)
     x1 = r * np.cos(theta)
     y1 = r * np.sin(theta)
     color = random_hex_color()
     print (color)
-    draw_circle = plt.Circle((x1, y1), r, fill=True, edgecolor='black',facecolor=color,alpha=0.2)
+    draw_circle = plt.Circle((x1, y1), r, fill=True, edgecolor='black',facecolor=color,alpha=0.1)
     axes.add_artist(draw_circle)
 
 

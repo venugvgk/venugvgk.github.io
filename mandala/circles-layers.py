@@ -10,7 +10,7 @@ def random_hex_color():
 figure, axes = plt.subplots()
 
 r = 20 #radius of center circle
-n = 24# number of circles around 
+n = 24 # number of circles around 
 num_layers = 15  # Number of layers of circles to draw
 current_r = r
 

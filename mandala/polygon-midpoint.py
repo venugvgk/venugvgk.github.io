@@ -8,7 +8,7 @@ def random_hex_color():
 
 figure, axes = plt.subplots()
 r = 10  # radius of the circumcircle of the polygon
-n = 8  # number of sides of the polygon
+n = 6 # number of sides of the polygon
 num_layers = 7*n # number of layers of polygons to draw
 
 # Function to calculate midpoints of a polygon

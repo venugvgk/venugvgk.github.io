@@ -1,5 +1,5 @@
 ---
-title: write code and show output
+title: write code and show output on the same qmd file
 date: 2024-12-24
 jupyter_client: 5.4.0
 page-layout: article
@@ -7,63 +7,71 @@ author: Venu GVGK
 categories:
     - quarto
 ---
+I know quarto allows writing code and showing the output on the same page. I wanted to do it. 
+So, first I wrote the code in a python file, checked it is working and then copied it here. and then I pushed it to be published. The run failed. 
 
-Here we go.
+ah, that's because the dependencies listed in the code were not available on the github repository. To fix the issue, one needs to specify dependencies in the quarto document so that they are installed when the document is rendered. 
+
+There are many ways of doing it. 
+
+1. specify dependencies in the page header.
+```    
+    dependencies:
+        - numpy
+        - matplotlib
+```
+2. Add the dependendencies to the publish.yml document
+
+```
+- name: Install dependencies
+      run: |
+        pip install numpy
+        pip install matplotlib
+        # Add other dependencies here
+```
+3. Add dependecies to a text document like requirements.txt and then use this to install dependencies through publish.yml. This has the advantage that all you need to do is keep the requirements.txt updated and that will take care of the dependencies. 
+
+```
+- name: Install dependencies
+        run: pip install -r requirements.txt
+```
+Now, the file gets published and the code runs. Example code below. 
 
 ```{python}
-#| code-fold: true
-#| code-summary: "Show the code"
 import numpy as np
 import matplotlib.pyplot as plt
 import random
-import math
 
+# function generates random hex color
 def random_hex_color():
     return "#{:06x}".format(random.randint(0, 0xFFFFFF))
 
+# sets up the subplot
 figure, axes = plt.subplots()
 
-r = 20 #radius of center circle
-n = 24# number of circles around 
-num_layers = 15  # Number of layers of circles to draw
-current_r = r
+# define radius of the center circle, around whose circumference other circles are drawn
 
-#calculate the radius of the smaller circles
+r = 10
 
-def calc_r_small(r,n):
-    theta1 = (2*np.pi)/n
-    x2 = r*np.cos(theta1)
-    y2 = r*np.sin(theta1)
-    r_small = math.sqrt((x2-r)**2+(y2)**2)/2
-    return(r_small)
+# Draw 24 circles with random colors, 2*np.pi angle is divided into 24 parts, each theta. the center of each circle is determined as r*cos theta and r*sin theta. at this center, circle is drawn with r as radius. 
 
-# Draw n circles with random colors and add to the plot - shift_theta shifts starting angle by .5 times theta for odd layers
-def draw_n_circles(r, n, shift_theta=False):
-    theta = np.linspace(0, 2 * np.pi, n, endpoint=False)
-    if shift_theta:
-        theta += (np.pi / n)  # Shift by 0.5 theta
-    for t in theta:
-        x = r * np.cos(t)
-        y = r * np.sin(t)
-        color = random_hex_color()
-        r_small = calc_r_small(r,n)
-        draw_circle = plt.Circle((x, y), r_small, fill=True, edgecolor='black',facecolor=color,alpha=0.2)
-        axes.add_artist(draw_circle)
-    
-# calculate subsequent radii and draw for the number of layers
+for i in range(24):
+    theta = i * (2 * np.pi / 24)
+    x1 = r * np.cos(theta)
+    y1 = r * np.sin(theta)
+    color = random_hex_color()
+    draw_circle = plt.Circle((x1, y1), r, fill=True, edgecolor='black',facecolor=color,alpha=0.2)
+    axes.add_artist(draw_circle) # this adds the circle to the plot. 
 
-for i in range(num_layers):
-    shift_theta = (i % 2 == 1)  # Shift theta for odd layers
-    current_r -= 1.6 * calc_r_small(current_r, n)
-    draw_n_circles(current_r, n, shift_theta)
+# draw the center circle, this is optional. 
+draw_center_circle=plt.Circle((0,0),10, fill=False, edgecolor='white')
+axes.add_artist(draw_center_circle)
 
 
-#set the figure area square
+# the plot area aspect ratio and limits are setup
 axes.set_aspect(1)
-
-#set axes limits 
-axes.set_xlim(-r, r)
-axes.set_ylim(-r, r)
+axes.set_xlim(-2*r, 2*r)
+axes.set_ylim(-2*r, 2*r)
 
 # Hide axes labels
 axes.set_xticks([])
@@ -73,6 +81,8 @@ axes.set_yticks([])
 for spine in axes.spines.values():
     spine.set_visible(False)
 
-plt.show()
+plt.show() # this displays the plot. important. 
 
 ```
+
+That is sorted! 

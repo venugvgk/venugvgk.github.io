@@ -3,7 +3,9 @@ title: Today I Learnt
 subtitle: Short Snippets of Learning
 
 listing:
-  contents: "/*/*.qmd"
+  contents: 
+    - "/*/*.qmd"
+    - "/*/*.ipynb"
   template: ../_themes/til-listing.ejs
   sort: "date desc"
   # type: table

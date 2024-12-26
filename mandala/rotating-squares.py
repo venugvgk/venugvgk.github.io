@@ -9,7 +9,7 @@ def random_hex_color():
 figure, axes = plt.subplots()
 
 s = 10  # side length of the initial square
-rot = 5 # set to 2, to rotate 90 degrees. larger values rotate by smaller degrees
+rot = 15 # set to 2, to rotate 90 degrees. larger values rotate by smaller degrees
 # the side of each square is divided into rot:1 ratio 
 num_layers = 5*rot  # Number of layers of squares to draw
 
