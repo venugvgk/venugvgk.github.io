@@ -9,7 +9,7 @@
 <meta name="author" content="Venu GVGK">
 <meta name="dcterms.date" content="2024-12-24">
 
-<title>write code and show output on the same qmd file – Venu GVGK Raju</title>
+<title>using jupyter notebook – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -105,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="write code and show output on the same qmd file – Venu GVGK Raju">
+<meta property="og:title" content="using jupyter notebook – Venu GVGK Raju">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="write code and show output on the same qmd file – Venu GVGK Raju">
+<meta name="twitter:title" content="using jupyter notebook – Venu GVGK Raju">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -165,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">write code and show output on the same qmd file</h1>
+<h1 class="title">using jupyter notebook</h1>
   <div class="quarto-categories">
     <div class="quarto-category">quarto</div>
   </div>
@@ -197,83 +163,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>I know quarto allows writing code and showing the output on the same page. I wanted to do it. So, first I wrote the code in a python file, checked it is working and then copied it here. and then I pushed it to be published. The run failed.</p>
-<p>ah, that’s because the dependencies listed in the code were not available on the github repository. To fix the issue, one needs to specify dependencies in the quarto document so that they are installed when the document is rendered.</p>
-<p>There are many ways of doing it.</p>
-<ol type="1">
-<li>specify dependencies in the page header.</li>
-</ol>
-<pre><code>    dependencies:
-        - numpy
-        - matplotlib</code></pre>
-<ol start="2" type="1">
-<li>Add the dependendencies to the publish.yml document</li>
-</ol>
-<pre><code>- name: Install dependencies
-      run: |
-        pip install numpy
-        pip install matplotlib
-        # Add other dependencies here</code></pre>
-<ol start="3" type="1">
-<li>Add dependecies to a text document like requirements.txt and then use this to install dependencies through publish.yml. This has the advantage that all you need to do is keep the requirements.txt updated and that will take care of the dependencies.</li>
-</ol>
-<pre><code>- name: Install dependencies
-        run: pip install -r requirements.txt</code></pre>
-<p>Now, the file gets published and the code runs. Example code below.</p>
-<div id="7c173876" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># function generates random hex color</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> random_hex_color():</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"#</span><span class="sc">{:06x}</span><span class="st">"</span>.<span class="bu">format</span>(random.randint(<span class="dv">0</span>, <span class="bn">0xFFFFFF</span>))</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># sets up the subplot</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>figure, axes <span class="op">=</span> plt.subplots()</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># define radius of the center circle, around whose circumference other circles are drawn</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw 24 circles with random colors, 2*np.pi angle is divided into 24 parts, each theta. the center of each circle is determined as r*cos theta and r*sin theta. at this center, circle is drawn with r as radius. </span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">24</span>):</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    theta <span class="op">=</span> i <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">/</span> <span class="dv">24</span>)</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    x1 <span class="op">=</span> r <span class="op">*</span> np.cos(theta)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    y1 <span class="op">=</span> r <span class="op">*</span> np.sin(theta)</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> random_hex_color()</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    draw_circle <span class="op">=</span> plt.Circle((x1, y1), r, fill<span class="op">=</span><span class="va">True</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>,facecolor<span class="op">=</span>color,alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    axes.add_artist(draw_circle) <span class="co"># this adds the circle to the plot. </span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co"># draw the center circle, this is optional. </span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>draw_center_circle<span class="op">=</span>plt.Circle((<span class="dv">0</span>,<span class="dv">0</span>),<span class="dv">10</span>, fill<span class="op">=</span><span class="va">False</span>, edgecolor<span class="op">=</span><span class="st">'white'</span>)</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>axes.add_artist(draw_center_circle)</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co"># the plot area aspect ratio and limits are setup</span></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>axes.set_aspect(<span class="dv">1</span>)</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>axes.set_xlim(<span class="op">-</span><span class="dv">2</span><span class="op">*</span>r, <span class="dv">2</span><span class="op">*</span>r)</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>axes.set_ylim(<span class="op">-</span><span class="dv">2</span><span class="op">*</span>r, <span class="dv">2</span><span class="op">*</span>r)</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Hide axes labels</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>axes.set_xticks([])</span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>axes.set_yticks([])</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the border</span></span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> spine <span class="kw">in</span> axes.spines.values():</span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    spine.set_visible(<span class="va">False</span>)</span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>plt.show() <span class="co"># this displays the plot. important. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="adding-code_files/figure-html/cell-2-output-1.png" width="389" height="389" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>That is sorted!</p>
+<p>to display jupyter notebooks in the listing page,</p>
+<ul>
+<li>“/<em>/</em>.ipynb”</li>
+</ul>
 
 
 
