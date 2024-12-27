@@ -173,7 +173,7 @@
   {
     "listing": "/til/index.html",
     "items": [
-      "/til/tir.html",
+      "/til/quarto/today-I-read.html",
       "/til/quarto/adding-code.html",
       "/til/quarto/using-jupyter-notebook.html",
       "/til/python/revealjs-code-with-python.html",
