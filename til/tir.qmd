@@ -1,6 +1,8 @@
 ---
 title: today I read
 date: 2024-12-27
+categories:
+ - history
 subtitle: an article
 ---
 
