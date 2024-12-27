@@ -1,3 +1,15 @@
 ---
-title: trying this out
+title: Today I Read
+subtitle: Keeping track of short reads
+
+listing:
+  contents: 
+    - "/*/*.qmd"
+    - "/*/*.ipynb"
+
+  template: ../_themes/til-listing.ejs
+  sort: "date desc"
+  # type: table
+  categories: true
+
 ---
