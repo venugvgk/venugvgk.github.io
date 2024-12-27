@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-language','listing-title','listing-categories','listing-date','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-language","listing-title","listing-categories","listing-date","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -183,7 +183,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="history">history <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -215,9 +215,24 @@ window.Quarto = {
 <!--
 <ul>
     
+      <li><a href="/tir/history/indian-syncretism.qmd">A Sanskrit Bible story was written in Ayodhya</a></li>
+      Dec 27, 2024
+    
     </ul>
 -->
 <div class="til-listing list">
+
+    <div class="til-item" data-index="0" data-categories="history" data-listing-date-sort="1735257600000" data-listing-file-modified-sort="1735273814334" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="119">
+        <div class="til-item-header">
+            <span class="til-item-date listing-date">Dec 27, 2024
+            <span class="til-item-categories">
+                
+                    <span class="til-category listing-categories">history</span>
+                
+            </span>
+        </span></div>
+        <div class="til-item-title"><a href="../tir/history/indian-syncretism.html"><span class="listing-name">A Sanskrit Bible story was written in Ayodhya</span></a></div>
+    </div>
 
 </div>
 <div class="listing-no-matching d-none">

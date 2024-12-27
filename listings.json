@@ -172,7 +172,9 @@
   },
   {
     "listing": "/tir/index.html",
-    "items": []
+    "items": [
+      "/tir/history/indian-syncretism.html"
+    ]
   },
   {
     "listing": "/til/index.html",
