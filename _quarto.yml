@@ -33,6 +33,8 @@ website:
          href: books/index.qmd
        - text: TIL
          href: til/index.qmd
+       - text: TIR
+         href: tir/index.qmd
 
         
   
