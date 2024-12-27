@@ -1,6 +1,6 @@
 ---
 title: spacebar does not work using jupyter in VS code
-date: 2024-12-27
+date: 2024-12-24
 page-layout: article
 author: Venu GVGK
 categories:
