@@ -2,7 +2,9 @@
 title: Blog
 subtitle: My writings here are ecclectic, covering topics such as education, philosophy, poetry and technology. Use the categories to navigate! ఇంగ్లీషుతో పాటు తెలుగులో కూడా రాస్తుంటాను, అనువాదాలు చేస్తుంటాను. 
 listing:
-  contents: "*/index.qmd"
+  contents: 
+   - "*/index.qmd"
+   - "*/*.ipynb"
   sort: "date desc"
   type: grid
   categories: true

@@ -1,0 +1,11 @@
+---
+title: spacebar does not work using jupyter in VS code
+date: 2024-12-27
+page-layout: article
+author: Venu GVGK
+categories:
+    - quarto
+---
+In a jupyter notebook, spacebar was not working. With a little bit of experimentation I found shift+spacebar works but it is tedious to write.
+
+Found that going to keyboard shortcuts, find everything that starts with space and resetting all keybindings helps. I don't know what other problems this is going to cause but it works for now. 
