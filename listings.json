@@ -1,7 +1,56 @@
 [
   {
+    "listing": "/til/index.html",
+    "items": [
+      "/til/quarto/adding-code.html",
+      "/til/quarto/spacebar-jupyter.html",
+      "/til/quarto/using-jupyter-notebook.html",
+      "/til/python/revealjs-code-with-python.html",
+      "/til/quarto/reading-book-revealjs.html",
+      "/til/python/merge-pdfs-python.html",
+      "/til/quarto/adding-links-to-yml-files.html",
+      "/til/quarto/syntax-highlighting-the-code.html",
+      "/til/quarto/quarto-modify-table-listing.html",
+      "/til/quarto/quarto-add-custom-font.html",
+      "/til/quarto/quarto-modify-listing-page.html",
+      "/til/powerpoint/powerpoint-morph-timeline.html"
+    ]
+  },
+  {
+    "listing": "/tir/index.html",
+    "items": [
+      "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
+    "listing": "/books/index.html",
+    "items": [
+      "/books/own-picture-books/treekar-shomus/index.html",
+      "/books/own-picture-books/laddoo/index.html",
+      "/books/own-picture-books/appu/index.html",
+      "/books/translated-story-books/avantika/index.html",
+      "/books/translated-story-books/eddula-jodi/index.html",
+      "/books/translated-story-books/akaasamlo/index.html",
+      "/books/translated-story-books/appu-prapancham/index.html",
+      "/books/story-weaver/bommalu-geese/index.html",
+      "/books/story-weaver/password/index.html",
+      "/books/story-weaver/art-gallery/index.html",
+      "/books/story-weaver/inti-daggara/index.html",
+      "/books/story-weaver/mana-bhoomi/index.html",
+      "/books/story-weaver/ambedkar/index.html",
+      "/books/story-weaver/amma-intiki/index.html",
+      "/books/story-weaver/chakrala-kurchi/index.html",
+      "/books/story-weaver/battalu-utike/index.html"
+    ]
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/geometric-art-python/index.html",
       "/blog/turning45/index.html",
       "/blog/the-palace-of-illusions-a-few-thoughts/index.html",
       "/blog/gaduggaayi-rukmini/index.html",
@@ -143,54 +192,6 @@
       "/blog/book-review-ian-rankin/index.html",
       "/blog/babaspeak-freedom/index.html",
       "/blog/here-we-go/index.html"
-    ]
-  },
-  {
-    "listing": "/books/index.html",
-    "items": [
-      "/books/own-picture-books/treekar-shomus/index.html",
-      "/books/own-picture-books/laddoo/index.html",
-      "/books/own-picture-books/appu/index.html",
-      "/books/translated-story-books/avantika/index.html",
-      "/books/translated-story-books/eddula-jodi/index.html",
-      "/books/translated-story-books/akaasamlo/index.html",
-      "/books/translated-story-books/appu-prapancham/index.html",
-      "/books/story-weaver/bommalu-geese/index.html",
-      "/books/story-weaver/password/index.html",
-      "/books/story-weaver/art-gallery/index.html",
-      "/books/story-weaver/inti-daggara/index.html",
-      "/books/story-weaver/mana-bhoomi/index.html",
-      "/books/story-weaver/ambedkar/index.html",
-      "/books/story-weaver/amma-intiki/index.html",
-      "/books/story-weaver/chakrala-kurchi/index.html",
-      "/books/story-weaver/battalu-utike/index.html"
-    ]
-  },
-  {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
-    "listing": "/tir/index.html",
-    "items": [
-      "/tir/history/indian-syncretism.html"
-    ]
-  },
-  {
-    "listing": "/til/index.html",
-    "items": [
-      "/til/quarto/adding-code.html",
-      "/til/quarto/spacebar-jupyter.html",
-      "/til/quarto/using-jupyter-notebook.html",
-      "/til/python/revealjs-code-with-python.html",
-      "/til/quarto/reading-book-revealjs.html",
-      "/til/python/merge-pdfs-python.html",
-      "/til/quarto/adding-links-to-yml-files.html",
-      "/til/quarto/syntax-highlighting-the-code.html",
-      "/til/quarto/quarto-modify-table-listing.html",
-      "/til/quarto/quarto-add-custom-font.html",
-      "/til/quarto/quarto-modify-listing-page.html",
-      "/til/powerpoint/powerpoint-morph-timeline.html"
     ]
   }
 ]
