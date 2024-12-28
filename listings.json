@@ -33,6 +33,7 @@
   {
     "listing": "/til/index.html",
     "items": [
+      "/til/python/function-return-multiple-values.html",
       "/til/quarto/adding-code.html",
       "/til/quarto/spacebar-jupyter.html",
       "/til/quarto/using-jupyter-notebook.html",
