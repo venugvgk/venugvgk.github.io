@@ -1,0 +1,27 @@
+---
+title: Returning multiple values from a function in python
+date: 2024-12-28
+page-layout: article
+author: Venu GVGK
+categories:
+    - python
+---
+A function can return multiple values in a list. Each value can be used at multiple places using the index of the list. 
+
+For example,
+```{python}
+def add(x,y,z):
+    i = x+y
+    j = y+z
+    k = x+z
+    return [i,j,k]
+
+a = add(3,4,5)[0] # this gives us i, 7
+b = add(3,4,5)[1] # this gives us j, 9
+c = add(3,4,5)[2] # this gives us k, 8
+
+print(a,b,c)
+
+```
+
+
