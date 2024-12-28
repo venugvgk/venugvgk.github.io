@@ -270,7 +270,7 @@
     "href": "blog/geometric-art-python/index.html#draw-a-simple-mandala",
     "title": "Mandalas, high school math and Python",
     "section": "Draw a simple mandala",
-    "text": "Draw a simple mandala\nI started with drawing a six petal mandala and by drawing more and more circles, ended up with a 24 circle mandala. One does not need any calculation to do this on paper. Draw a circle, and at any point of the circumference, draw a circle of the same radius. At the points the circles intersect, draw more circles. You get six circles.\nNow identify the midpoint of the centers of any two circles and with that as the starting point, repeat the process. Go on and do this a couple more times, and you end up with a figure that has 24 overlapping circles going around the first circle. After a few more circles and some coloring, you have a mandala.\n\n6 circles12 circles18 circles24 circles"
+    "text": "Draw a simple mandala\nI started with drawing a six petal mandala and by drawing more and more circles, ended up with a 24 circle mandala. One does not need any calculation to do this on paper. Draw a circle, and at any point of the circumference, draw a circle of the same radius. At the points the circles intersect, draw more circles. You get six circles.\nNow identify the midpoint of the centers of any two circles and with that as the starting point, repeat the process. Go on and do this a couple more times, and you end up with a figure that has 24 overlapping circles going around the first circle. After a few more circles and some coloring, you have a mandala.\n\n6 circles12 circles24 circlesMandala"
   },
   {
     "objectID": "blog/geometric-art-python/index.html#write-some-code-to-create-it",
