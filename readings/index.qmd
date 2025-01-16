@@ -1,0 +1,11 @@
+---
+title: Readings
+subtitle: Notes from readings - MAEE - TISS
+listing:
+  contents: 
+   - "/*.qmd"
+  sort: "date desc"
+  type: grid
+  categories: true
+---
+

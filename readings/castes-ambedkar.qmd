@@ -1,7 +1,8 @@
 ---
-title: Dr. Ambedkar's 1916 speech on castes in India
+title: Dr. Ambedkar's Columbia speech on castes in India
+date: 2025-01-16
 ---
-## Notes from the reading
+#### Notes from the reading
 
 * "if Hindus migrate to other regions of earth, Indian caste will become a world problem." 
 
