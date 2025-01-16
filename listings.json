@@ -149,13 +149,9 @@
     ]
   },
   {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
-    "listing": "/tir/index.html",
+    "listing": "/readings/index.html",
     "items": [
-      "/tir/history/indian-syncretism.html"
+      "/readings/castes-ambedkar.html"
     ]
   },
   {
@@ -175,6 +171,16 @@
       "/til/quarto/quarto-modify-listing-page.html",
       "/til/powerpoint/powerpoint-morph-timeline.html"
     ]
+  },
+  {
+    "listing": "/tir/index.html",
+    "items": [
+      "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
   },
   {
     "listing": "/books/index.html",
