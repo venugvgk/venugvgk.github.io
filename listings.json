@@ -149,9 +149,13 @@
     ]
   },
   {
-    "listing": "/readings/index.html",
+    "listing": "/about.html",
+    "items": []
+  },
+  {
+    "listing": "/tir/index.html",
     "items": [
-      "/readings/castes-ambedkar.html"
+      "/tir/history/indian-syncretism.html"
     ]
   },
   {
@@ -173,14 +177,11 @@
     ]
   },
   {
-    "listing": "/tir/index.html",
+    "listing": "/readings/index.html",
     "items": [
-      "/tir/history/indian-syncretism.html"
+      "/readings/socialogy-ambedkar-1916.html",
+      "/readings/castes-ambedkar.html"
     ]
-  },
-  {
-    "listing": "/about.html",
-    "items": []
   },
   {
     "listing": "/books/index.html",
