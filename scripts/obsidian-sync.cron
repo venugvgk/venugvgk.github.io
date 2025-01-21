@@ -1,0 +1,8 @@
+# crontab entry for running obsidian sync every 5 minutes
+#
+# Install this using:
+#
+#  sudo cp $PWD/scripts/obsidian-sync.cron /etc/cron.d/venu-obsidian-sync
+#
+
+*/5 * * * * anand cd /home/anand/venu/venugvgk.github.io && ./venv/bin/python scripts/obsidian-sync.py -d ../Obsidian >> ../obsidian-sync.log 2>&1
