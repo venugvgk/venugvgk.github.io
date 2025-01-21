@@ -98,9 +98,9 @@ def sync_files(obsidian_directory):
         f.sync(state)
     return state['modified_files']
 
-def run_command(cmd):
+def run_command(cmd, check=True, **kwargs):
     logger.info("RUN %s", cmd)
-    subprocess.run(cmd, shell=True, check=True)
+    subprocess.run(cmd, shell=True, check=check, **kwargs)
 
 def main():
     setup_logging()
@@ -115,7 +115,8 @@ def main():
     if args.git:
         for f in modified_files:
             run_command(f"git add {f}")
-        run_command("git commit -m 'obsidian sync'")
+        # commit fails when there are no changes. Ignore checking for exit status.
+        run_command("git commit -m 'obsidian sync'", check=False)
         run_command("git push")
 
     logger.info("END OBSIDIAN SYNC")
