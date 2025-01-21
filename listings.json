@@ -149,16 +149,6 @@
     ]
   },
   {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
-    "listing": "/tir/index.html",
-    "items": [
-      "/tir/history/indian-syncretism.html"
-    ]
-  },
-  {
     "listing": "/til/index.html",
     "items": [
       "/til/python/function-return-multiple-values.html",
@@ -177,9 +167,20 @@
     ]
   },
   {
+    "listing": "/tir/index.html",
+    "items": [
+      "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
     "listing": "/readings/index.html",
     "items": [
       "/readings/socialogy-ambedkar-1916.html",
+      "/readings/history-timeline-education.html",
       "/readings/castes-ambedkar.html"
     ]
   },
