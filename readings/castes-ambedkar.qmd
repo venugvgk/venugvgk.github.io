@@ -5,6 +5,7 @@ author: Venu GVGK
 categories:
     - sociology
 date: 2025-01-16
+image: castes-ambedkar.jpg
 ---
 #### Notes from the reading
 
