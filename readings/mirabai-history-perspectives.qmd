@@ -12,6 +12,9 @@ quarto-sync: "true"
 
 Mira was brought up in an orthodox, upper caste household. She was devoted to Krishna from childhood. She was forcibly married off to a prince or someone in a high position. She refused to accept the marriage and continued to be devoted to Krishna. She was persecuted by her in-laws and their family. Finally, the husband also came around and let her be. She is well known as a Bhakti poet and counted among the saints of the Bhakti movement. 
 
+
+![[mirabai.jpg]]
+
 ## Notes from Mukta Parita's essay and class discussion
 
 Mira lived from 1498 to 1540 or so. Born in Marwar region of Rajasthan.  
@@ -24,7 +27,7 @@ She is celebrated by the lower castes engaged in leather work and weaving. Peasa
 
 These groups believe that Mira accepted Ravidas, a sant from the leather working chamar caste, as her guru. It is not historically possible for Ravidas (13th century) to have met Mira, however, it is possible followers of Ravidas visited her and influenced her in her maternal home. The lower caste groups see her as a rebel that stood against the power of the ranas. 
 
-	Gramci's quote about history - this is a very specific, situational quote that serves the present case where the past has left a trace in the present.  Would we say that all lost history was dross, chronicle and not history?
+*Gramci's quote about history - this is a very specific, situational quote that serves the present case where the past has left a trace in the present.  Would we say that all lost history was dross, chronicle and not history?*
 
 In turn, the Rajput histories have tried to erase her name and history. 
 
@@ -73,9 +76,11 @@ When one sees through the lens of academic history, the stories of Mira told by 
 When we see that there are groups that believe in these stories, keeping the tradition of bhajan singing alive, the question changes from - are these stories historically correct?, to - why and how have these stories persisted for so long? 
 
 Then the sources of historical enquiry are no longer limited to written and archival records but start encompassing legends and oral histories. 
+
 ## Different sources used by Mukta Parita 
 
 Bhajans sung by people across the land, experiences of people who believe
+
 
 ### Absence of certain histories 
 
@@ -86,6 +91,7 @@ There are no written records in the Rajput archives which are otherwise meticulo
 
 "Through distinctive cultural representation, oppressed groups have created for themselves a normative world in which they have dignity, self-respect and even a measure of power (Chakaravarti, 2006)"
 
+The example of the Dalit woman who sings about the Brahmin having no real power (*ibid*)
 
 
 Chakravarti, U. (2006). Understanding Caste. In _Gendering caste: Through a Feminist Lens_. STREE.
