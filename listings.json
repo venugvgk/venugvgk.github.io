@@ -1,5 +1,16 @@
 [
   {
+    "listing": "/readings/index.html",
+    "items": [
+      "/readings/history-timeline-education.html",
+      "/readings/sociology-ambedkar-1916.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/geometric-art-python-3/index.html",
@@ -149,15 +160,25 @@
     ]
   },
   {
-    "listing": "/readings/index.html",
+    "listing": "/books/index.html",
     "items": [
-      "/readings/history-timeline-education.html",
-      "/readings/sociology-ambedkar-1916.html"
+      "/books/own-picture-books/treekar-shomus/index.html",
+      "/books/own-picture-books/laddoo/index.html",
+      "/books/own-picture-books/appu/index.html",
+      "/books/translated-story-books/avantika/index.html",
+      "/books/translated-story-books/eddula-jodi/index.html",
+      "/books/translated-story-books/akaasamlo/index.html",
+      "/books/translated-story-books/appu-prapancham/index.html",
+      "/books/story-weaver/bommalu-geese/index.html",
+      "/books/story-weaver/password/index.html",
+      "/books/story-weaver/art-gallery/index.html",
+      "/books/story-weaver/inti-daggara/index.html",
+      "/books/story-weaver/mana-bhoomi/index.html",
+      "/books/story-weaver/ambedkar/index.html",
+      "/books/story-weaver/amma-intiki/index.html",
+      "/books/story-weaver/chakrala-kurchi/index.html",
+      "/books/story-weaver/battalu-utike/index.html"
     ]
-  },
-  {
-    "listing": "/about.html",
-    "items": []
   },
   {
     "listing": "/tir/index.html",
@@ -181,27 +202,6 @@
       "/til/quarto/quarto-add-custom-font.html",
       "/til/quarto/quarto-modify-listing-page.html",
       "/til/powerpoint/powerpoint-morph-timeline.html"
-    ]
-  },
-  {
-    "listing": "/books/index.html",
-    "items": [
-      "/books/own-picture-books/treekar-shomus/index.html",
-      "/books/own-picture-books/laddoo/index.html",
-      "/books/own-picture-books/appu/index.html",
-      "/books/translated-story-books/avantika/index.html",
-      "/books/translated-story-books/eddula-jodi/index.html",
-      "/books/translated-story-books/akaasamlo/index.html",
-      "/books/translated-story-books/appu-prapancham/index.html",
-      "/books/story-weaver/bommalu-geese/index.html",
-      "/books/story-weaver/password/index.html",
-      "/books/story-weaver/art-gallery/index.html",
-      "/books/story-weaver/inti-daggara/index.html",
-      "/books/story-weaver/mana-bhoomi/index.html",
-      "/books/story-weaver/ambedkar/index.html",
-      "/books/story-weaver/amma-intiki/index.html",
-      "/books/story-weaver/chakrala-kurchi/index.html",
-      "/books/story-weaver/battalu-utike/index.html"
     ]
   }
 ]
