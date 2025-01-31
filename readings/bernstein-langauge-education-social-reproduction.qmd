@@ -12,14 +12,13 @@ quarto-sync: "true"
 
 This material is based on the following books, read through notebooklm. 
 
-The four volumes of class, codes and control by Basil Bernstein
-Basil Bernstein - Code Theory and Beyond by Brian Barrett 
-Language, Structure and Reproduction - An introduction to the sociology of Basil Bernstein by Paul Atkinson
-Knowledge, Power and Educational Reform - Applying the Sociology of Basil Bernstein by Rob Moore
+* The four volumes of class, codes and control by Basil Bernstein
+* Basil Bernstein - Code Theory and Beyond by Brian Barrett 
+* Language, Structure and Reproduction - An introduction to the sociology of Basil Bernstein by Paul Atkinson
+* Knowledge, Power and Educational Reform - Applying the Sociology of Basil Bernstein by Rob Moore
 
 
 ![](language-reproduction.png)
-
 
 ## Role of language and education in reproduction of social inequalities
 
