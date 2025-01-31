@@ -12,7 +12,7 @@ quarto-sync: "true"
 
 Mira was brought up in an orthodox, upper caste household. She was devoted to Krishna from childhood. She was forcibly married off to a prince or someone in a high position. She refused to accept the marriage and continued to be devoted to Krishna. She was persecuted by her in-laws and their family. Finally, the husband also came around and let her be. She is well known as a Bhakti poet and counted among the saints of the Bhakti movement. 
 
-![[mirabai.jpg]]
+![](mirabai.jpg)
 
 ## Notes from Mukta Parita's essay and class discussion
 
