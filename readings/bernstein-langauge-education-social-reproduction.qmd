@@ -1,0 +1,497 @@
+---
+title: Bernstein - Language, Education and Social Reproduction
+author: Venu GVGK
+quarto-filename: readings/bernstein-langauge-education-social-reproduction.qmd
+categories: sociology
+date: 2025-01-31
+image: bernstein1.jpg
+quarto-sync: "true"
+---
+
+## Sources 
+
+This material is based on the following books, read through notebooklm. 
+
+The four volumes of class, codes and control by Basil Bernstein
+Basil Bernstein - Code Theory and Beyond by Brian Barrett 
+Language, Structure and Reproduction - An introduction to the sociology of Basil Bernstein by Paul Atkinson
+Knowledge, Power and Educational Reform - Applying the Sociology of Basil Bernstein by Rob Moore
+
+
+![](language-reproduction.png)
+
+
+## Role of language and education in reproduction of social inequalities
+
+This is an overview of Bernstein's sociological approach to social inequalities. 
+
+Language and education are central to the perpetuation of social inequalities. Linguistic codes, which are shaped by social structures, play a significant role in how individuals are socialised, how they access knowledge, and how they navigate educational systems. These codes are not simply reflections of existing social structures but are active mechanisms in maintaining those structures.
+
+Here's how language and education interact to create and reinforce social inequalities:
+
+- **Differential Access to Linguistic Codes:**
+    
+    - **Elaborated codes**, characterised by explicit and universalistic meanings, are often privileged in educational settings. These codes are typically associated with the middle class.
+    - **Restricted codes**, characterised by implicit and context-dependent meanings, may be more common in working-class communities.
+    - This differential access to, and facility with, these codes leads to inequalities in education, because the school system is often predicated upon elaborated codes. Children who are not socialised into an elaborated code, may experience the school as a place of "symbolic and social change".
+    - The school's preference for elaborated codes, tends to "favour certain modes of learning over others", which creates a "continuity of culture between home and school" for some children, while denying it to others.
+
+- **Language as a Barrier:**
+    
+    - The sources argue against the idea of "language failure" as a deficit or difference based on dialect or accent. Instead they suggest that different social groups place different values on language.
+    - When the semiotic modes stressed by one group are positive in relation to the school, and those stressed by another group are irrelevant or negative, this provides an interpretation of the role of language in educational failure.
+    - It is not the form of language (accent, dialect) but the "meaning and social function" of language that is important.
+    - **Differences in the relative orientation of different social groups towards the functions of language** may have a profound effect on a child's social learning and response to education.
+
+- **Education as a Cultural Relay:**
+    
+    - Pedagogic practices act as cultural relays of the distribution of power.
+    - **The inner logic of pedagogic practice is provided by a set of rules, which act selectively on the content of any pedagogic practice**.
+    - The social class assumptions of visible pedagogies differ from those of invisible pedagogies, thus carrying consequences for the children who are able to exploit the possibilities of the pedagogic practices.
+    - Education is positioned within theories of cultural reproduction, meaning that class relations produce a bias in culture and education acts as a crucial amplifier for this bias.
+
+- **Socialisation and Family Communication:**
+    
+    - **Social class influences the structure of communication within the family**, which in turn shapes a child's initial socio-linguistic coding orientation.
+    - Different family types may emphasise different aspects of communication. For example, positional families use more restricted codes while personal families may use elaborated codes.
+    - The family, as a primary agency of socialisation, plays a key role in transmitting linguistic codes, which have a lasting effect on a child's communication style and their ability to navigate various social contexts.
+    - **These patterns of communication in the family can either align with, or conflict with, the expectations of the school**, which can affect a child's educational journey.
+
+- **The Role of Power and Control:**
+    
+    - The distribution of power and principles of control regulate communicative performance, which differentially position speakers with respect to interactional power and context management.
+    - Linguistic codes are linked to the structure of power, through the way they affect the culture and role systems of the major socializing agencies, especially the family and school.
+    - **Linguistic codes are "culturally determined positioning devices" that position subjects with respect to dominant and dominated forms of communication**.
+    - The use of elaborated codes can render the implicit explicit, while the use of restricted codes reduces the possibility of such explicitness.
+
+- **Curriculum and Knowledge:**
+    
+    - **How a society selects, classifies, distributes, transmits, and evaluates educational knowledge reflects both the distribution of power and the principles of social control**.
+    - The curriculum itself may reflect social class biases.
+    - Educational codes offer opportunities to study how experience is given a distinctive form, through the analysis of "classification and frames".
+    - The strength of classification and framing in formal education, shapes the system of meanings and interpretative procedures.
+
+- **Social Reproduction:**
+    
+    - Social class influences the availability of elaborated codes and the class system affects their distribution.
+    - **The structure of social relationships determines the principles of communication**, and so the shaping of forms of consciousness.
+    - The linguistic code is considered a means of "initiating, synthesising and reinforcing ways of thinking, feeling and behaviour" that are functionally related to the social group.
+    - Linguistic codes, therefore, contribute to the reproduction of social structures by reinforcing existing patterns of behavior and social relations.
+
+- **Limitations of a Deficit Model:**
+    
+    - The sources argue against a "deficit" model, which states that one group is lacking attributes that are present in another.
+    - The idea of "linguistic deprivation" is also criticised because it fails to recognise the cultural and linguistic richness of all communities.
+    - The focus needs to shift from perceived deficiencies in some groups, to the role of the school and its role in reproducing social inequalities.
+
+In summary, language and education are deeply intertwined and contribute to the maintenance of social inequalities. **Linguistic codes, shaped by social structures, influence how children are socialised, their access to knowledge, and their ability to navigate the educational system.** The education system often privileges elaborated codes, which are more commonly used by the middle class, and this can disadvantage children who are more familiar with restricted codes. This dynamic reinforces existing power structures and contributes to the perpetuation of social inequalities.
+
+## Classification and Framing
+
+From here on, Bernstein goes on to talk about how to examine the way educational knowledge is structured. 
+
+According to Basil Bernstein, the structure of educational knowledge is determined by the principles of **classification and framing**. These concepts are central to understanding how knowledge is organised, transmitted, and evaluated within educational institutions.
+
+### Classification
+
+**Classification** refers to the **degree of boundary maintenance between different contents or subjects**. It indicates how strongly insulated the various domains of knowledge are from one another.
+
+- **Strong classification** exists when the boundaries between subjects are rigid and well-defined. This leads to a **collection code**, where knowledge is compartmentalized and specialized.
+- **Weak classification**, on the other hand, implies that the boundaries between subjects are blurred or reduced, leading to an **integrated code** where different areas of knowledge are interconnected.
+
+### Framing 
+
+**Framing** relates to the **form of the context in which knowledge is transmitted and received**. It refers to the **control over the pedagogical relationship** between teacher and taught, encompassing the selection, organisation, pacing and timing of the knowledge.
+
+- **Strong framing** indicates that the **teacher has maximal control**, with reduced options for the learner. This implies a sharp boundary between what can and cannot be transmitted in the pedagogical relationship.
+- **Weak framing** suggests that there is **more control with the acquirer**, with a wider range of options available to both teacher and pupil. It means a blurred boundary between what may or may not be transmitted.
+
+Bernstein argues that **classification and framing can vary independently of each other**. For instance, programmed learning might have weak classification (blurred boundaries between educational contents) but strong framing (little control by the pupil over what is learned).
+
+### Classification and framing can vary independently
+
+Bernstein's concepts of **classification** and **framing** are fundamental to his analysis of educational codes and the structuring of social relations. These concepts, while interconnected, can vary independently of each other. This means that the strength of classification does not necessarily determine the strength of framing, and vice versa.
+
+Here's an explanation of how classification and framing can vary independently:
+
+**Independent Variation:**
+
+The independence of classification and framing means that you can have various combinations:
+
+- **Strong classification and strong framing:** This would be the case with a traditional, highly subject-based curriculum where the teacher has considerable control over what is taught and how. For example, a highly structured, lecture-based classroom with a fixed curriculum.
+- **Strong classification and weak framing:** This might be seen where the curriculum is still highly subject-based and specialized, but the teacher allows students more input into how they learn, perhaps through project-based learning within the subject, or where students have some control over the pacing of their learning. An example might be where a teacher offers a range of options in the way knowledge is acquired.
+- **Weak classification and strong framing:** This might occur in a programmed learning environment where the boundaries between subject areas are blurred (weak classification), but the student has little control over the learning process itself (strong framing).
+- **Weak classification and weak framing:** This is likely to be seen in a progressive educational setting with a highly integrated curriculum, where students have considerable freedom in what they learn and how they learn it.
+
+**Examples and Implications:**
+
+- A **programmed learning** scenario illustrates weak classification with strong framing. The boundaries between educational contents may be blurred, but the pupil has limited control over what is learned.
+- In the **English educational system**, Bernstein suggests there may be exceptionally strong classification but relatively weaker framing compared to the European system. This can lead to more options for the pupil within the pedagogical relationship, while also maintaining strong boundaries between subjects.
+- The **European system**, by contrast, is seen to have strong classification and strong framing. There are fewer options for the teacher and taught, with explicit curricula and syllabi.
+- A **lavatory** can illustrate the relationship between classification and framing; a strongly classified lavatory with a lock and a closed door has strong framing because communication from outside to inside is restricted. Conversely a weakly classified lavatory, with no door, or an unlocked door, will have weak framing, because the occupant has less control over the space.
+- **Different theories of instruction** can also be understood through the lens of classification and framing, with different theories emphasizing different values and relationships, affecting both 'what' and 'how' of any pedagogic practice.
+
+**Why the independence matters:**
+
+- The independent variation of classification and framing allows for a more nuanced analysis of educational and social structures.
+- It demonstrates that power and control can be exerted in different ways. Strong classification is linked to strong boundary maintainers, while strong framing reduces the power of the pupil over the knowledge they receive.
+- It moves beyond a simple dichotomy and highlights the complexities of social control and the structuring of experience.
+- It allows for the analysis of change and variation, for example, changes in the strength of framing can create different social relations.
+- It can help to reveal the tacit assumptions that underpin various educational practices and codes, as well as the power relations that are expressed through them.
+
+In summary, while classification and framing are interconnected aspects of how knowledge and social relations are organised, they are not directly determined by each other. Their independent variation allows for a complex and nuanced understanding of the different forms that power and control can take, as well as the ways in which social structures are reproduced and potentially challenged.
+
+## Classification and framing to Educational knowledge codes
+
+**Educational knowledge codes** are defined by the relationship between classification and framing. These codes shape the **curriculum, pedagogy and evaluation** within the educational system.
+
+- **Curriculum** defines what counts as valid knowledge.
+- **Pedagogy** defines what counts as valid transmission of knowledge
+- **Evaluation** defines what counts as a valid realization of this knowledge on the part of the taught
+
+**Different combinations of classification and framing give rise to different types of educational codes**. For example, the **collection code** is associated with strong classification and tends to have strong framing. This code is related to the traditional academic curriculum.
+
+## Collection and Integrated curricula - classification lens
+
+Bernstein distinguishes between **collection** and **integrated curricula** based on the strength of boundaries between educational content.
+
+Here are the key differences:
+
+- **Collection Curriculum**:
+    
+    - Contents are **clearly bounded and insulated from each other**.
+    - Subjects or courses are treated as **separate, self-contained units**.
+    - There is **strong classification**, meaning the boundaries between different content areas are well-maintained.
+    - The learner has to collect a group of favored content areas to meet criteria, often involving public examinations.
+    - The curriculum is organised around subjects that stand in a closed relation to each other.
+    - Specialisation is a key characteristic, where learners know more and more about less.
+    - There is a tendency towards a didactic pedagogy.
+    - The deep structure of knowledge is revealed gradually after a protracted apprenticeship.
+    - Evaluation often involves assessing the fit between a narrow range of competencies and pre-established criteria.
+    - A collection curriculum often creates a clear educational identity.
+    - This type of curriculum can lead to the formation of subject loyalties.
+    - There is a tendency to keep categories pure and to avoid blurred identities.
+    - The content's autonomy is maintained, with those who teach and evaluate holding control.
+    - The knowledge is organised and distributed through subject hierarchies, often leading to oligarchic control of the institution.
+    - There are strong vertical work relationships within departments, and strong horizontal work relationships between senior staff.
+	- The system is self-perpetuating through the form of socialisation.    
+	- It is a highly selective mode.
+    
+- **Integrated Curriculum**:
+    
+    - Contents **stand in an open relation to each other**.
+    - The boundaries between subjects or courses are **weak or blurred**.
+    - There is **reduced insulation** between subjects, and they are subordinate to a relational idea.
+    - Subjects are viewed as subordinate to general principles or ideas.
+	- Integration involves the subordination of previously insulated subjects or courses to a relational idea, which blurs the boundaries between them.    
+	- The curriculum is intended to be a greater whole with each content's function made explicit.	    
+	- There is a move towards a common pedagogy and a common examining style.	    
+	- Pedagogy is likely to emphasise ways of knowing rather than states of knowledge.	    
+	- The deep structure of the knowledge is emphasised from the beginning of the pupil's educational career.	    
+	- The underlying theory of learning may be more group or self-regulated.	    
+	- The relational idea acts selectively on the knowledge within each subject, focusing on its deep structure.	    
+	- Integrated codes can reduce the authority of separate contents, affecting existing authority structures.	    
+	- The increased discretion of pupils is paralleled by the reduced discretion of teachers.	    
+	- There is likely to be a movement towards homogeneity in teaching practice.	    
+	- The weak classification and relaxed frames may permit greater expression of differences.	    
+	- The moral basis of educational choices is likely to be explicit at the planning stage.	    
+	- It is likely to create flexible teaching groups.
+	    
+
+Bernstein also notes that these are ideal types, and real-world curricula may not perfectly align with either extreme. He uses these concepts to analyse the underlying structure of the message systems of curriculum, pedagogy and evaluation.
+
+Additionally, the shift from a collection to an integrated curriculum can bring about disturbances in authority structures and existing educational identities. The move towards integrated codes also carries implications for the social order, requiring consensus about the integrating idea.
+
+## Visible and Invisible pedagogies - classification and framing
+
+Different theories of instruction can be analysed using the concepts of classification and framing, as these theories embody different values and relationships which affect both the 'what' and 'how' of pedagogic practice.
+
+#### Visible pedagogies 
+
+- **Visible Pedagogies**: These tend to have **strong classification and strong framing**.
+    - **Strong classification** in this context means that what counts as valid knowledge is clearly defined and separated into distinct categories. This can be seen in traditional subject-based curricula where subjects are taught in isolation, with clear boundaries.
+    - **Strong framing** means the teacher has a high degree of control over the selection, sequencing, pacing, and criteria of knowledge transmission. The teacher decides what is to be taught, in what order, and how it is to be evaluated..
+    - Theories of instruction in visible pedagogies often emphasize **graded performances** of the pedagogic discourse, with expected differences between learners.
+    - These theories tend to focus on **transmission**, aiming for the explicit and effective ordering of the discourse to be acquired by the learner.
+    - Visible pedagogies often present knowledge as a **state to be achieved**, emphasizing the acquisition of facts, procedures, and received problems.
+    - The criteria for evaluation are **explicit and specific**, often focusing on what is missing in the learner's product. The learner is made aware of these criteria, even if they do not agree with them.
+    - These pedagogies tend to be **didactic**, and the relationship between teacher and student is asymmetrical, with the teacher as the authority.
+
+#### Invisible pedagogies 
+
+- **Invisible Pedagogies**: These tend to have **weak classification and weak framing**.
+    - **Weak classification** implies that the boundaries between different areas of knowledge are blurred or integrated. Different subjects might be combined, or knowledge might be organised around broader themes.
+    - **Weak framing** means the learner has more control over their learning process, including the selection, organisation, and pacing of knowledge.
+    - Theories of instruction associated with invisible pedagogies emphasize **shared competences** of the acquirer.
+    - These theories privilege **acquisition**, focusing on universal processes internal to learners, and they emphasize the active role of the learner in their own learning.
+    - Invisible pedagogies often emphasize **ways of knowing**, and constructing problems, rather than the acquisition of knowledge itself.
+    - Evaluation criteria are often **implicit, multiple, and diffuse**, with a focus on the learner's unique consciousness, rather than a focus on what is missing.
+    - The learner is transformed into a text that only the transmitter can read. The signs have meaning only to the teacher and the child is unaware of this.
+    - These pedagogies tend to **facilitate learning**, with the teacher as a guide rather than an instructor. The theories of learning may be more self-regulated or group-regulated.
+
+**Interplay of Classification and Framing:**
+
+- The interplay of classification and framing is central to how theories of instruction are realized.
+- Changes in the strength of classification and framing can create different social relationships and learning experiences. For example, moving from a visible to an invisible pedagogy implies a change in the principles of relation and evaluation.
+- The classification and framing of knowledge affects the authority and power structure controlling the dissemination of that knowledge, shaping consciousness through the codes.
+- Different theories of instruction can be mapped onto a matrix based on whether they emphasize relations within the individual or between social groups, and whether they emphasize a logic of transmission or a logic of acquisition.
+
+In summary, different theories of instruction embody distinct approaches to knowledge, learning, and the relationships between teachers and students, and these differences can be analysed using the concepts of classification and framing. Visible pedagogies tend to have strong classification and framing, emphasizing transmission and explicit criteria, while invisible pedagogies tend to have weak classification and framing, prioritizing acquisition and implicit criteria. The choice of instructional theory and its corresponding code values will have significant consequences for the learning experience and for the social relations within the pedagogic context.
+
+## Theories of Instruction underpinning invisible pedagogies
+
+The theories of instruction that underpin invisible pedagogies often represent a **bricolage**, where a range of different theories, such as those of Piaget, Freud, Chomsky, or ethological theories are combined. This means that the theories are not internally consistent, and are a result of selecting and combining elements from different theoretical contexts.
+
+- **Bricolage:** The term 'bricolage' refers to the act of cobbling together available resources, rather than adhering to a custom-built design. In the context of invisible pedagogies, it means that the underlying theory of instruction is created by combining elements from various psychological and developmental theories.
+    
+- **Diverse Theoretical Sources:**
+    
+    - **Piaget:** His theories of child development, particularly his structuralist approach, have been influential. Piaget's work focuses on the development of cognitive operations.
+    - **Freud:** Freudian and neo-Freudian ideas about the development of the psyche, and how the child is active in their own acquisition.
+    - **Chomsky:** His theories of linguistics, particularly the concept of an in-built grammar, have been taken up in invisible pedagogies.
+    - **Ethological theories of critical learning:** These theories emphasize the importance of critical learning periods and innate behaviours.
+    - **Gestalt Psychology:** Theories of perception and learning that focus on the whole rather than the parts.
+    
+- **Common Features despite Diversity**: Despite the diverse origins of these theories, they share some common features when used to support invisible pedagogies:
+    
+    - **Developmental and Sequential:** They are generally developmental theories, concerned with the sequences of learning. Context is only interesting insofar as it sheds light on a sequence.
+    - **Tacit Learning:** They consider learning to be a tacit, invisible act, not facilitated by explicit public control.
+    - **Abstraction of Context:** They tend to abstract the child’s personal and local context from their cultural and institutional biography.
+    - **Critique of Socialisers:** The theories often see socialisers as potentially dangerous, as they may impose adult-focused perspectives on the child. Exemplary models become facilitators.
+    - **Implicit Hierarchy**: They imply an implicit hierarchy where the transmitter is looking for signs that only they can read, using complex theories. The child cannot understand the meaning of their own signs, and the child becomes a text that only the transmitter can read.
+    - **Child-Centred:** These theories are often child-focused, giving priority to the child's time and space, rather than the adult's.
+    -
+- **Recontextualisation**: These theories are not applied directly, but are recontextualised and translated into a practical form. This means that the original theories are modified, and transformed for use in the pedagogic context.
+
+- **Implicit Hierarchy:** The use of these theories implies an implicit hierarchy, where the child is transformed into a text that only the transmitter can read. The signs have meaning only to the teacher, and the child can never be aware of the meaning of its own signs, as their reading requires complex theories.
+    
+- **Theology of the Infant School:** Bernstein refers to this collection of theories as the "theology of the infant school," suggesting that it forms a set of beliefs that may not be internally consistent, but which serve to justify the practice of invisible pedagogy.
+    
+- **Theory into Practice:** These theories influence the way in which invisible pedagogies function in practice. The emphasis on play, readiness, and 'doing' fit well with the underlying principles of these theories, reinforcing the idea that learning is a tacit, invisible act.
+    
+In summary, the theories of instruction underpinning invisible pedagogies are a **bricolage** of diverse theoretical sources, unified by a shared emphasis on tacit learning, child-centredness, and a critique of traditional authority. The application of these theories is not direct, but involves a **recontextualising** process, and creates an **implicit hierarchy** where the teacher becomes an interpreter of the child. The theories form a 'theology' that justifies the practices of the invisible pedagogy.
+
+### Theories of instruction are themselves recontextualized 
+
+The statement "**theories of instruction are themselves constituted by recontextualizing principles**" highlights how these theories are not simply objective or neutral frameworks but are actively constructed through a process of selection, transformation, and reapplication within specific contexts. This process of recontextualization shapes the form and function of these theories within educational practice.
+
+Here's a breakdown of what this means, drawing from the sources:
+
+- **Recontextualization as a core principle:** Pedagogic discourse itself is a **recontextualizing principle**, which means that it operates by taking existing ideas, knowledge, and practices from their original contexts, and relocating them within the educational setting. Theories of instruction, as a part of this process, are also subject to this principle of recontextualization.
+- **Theories of instruction are not 'original':** Theories of instruction are not created in a vacuum. They draw upon a range of disciplines, particularly social sciences like psychology, and are modified as they are moved from their primary context into the educational field. This means they are not directly applied but are 'borrowed', reinterpreted and reshaped through a process of bricolage.
+- **Theories of instruction are 'secondary':** Pedagogic discourse, including theories of instruction, is always secondary, which means that it is not the original form of knowledge. Instead, it is a way of re-writing and reorganising primary discourses.
+- **Selection and Transformation:** The recontextualizing process involves the selection of specific elements from various theories, simplifying and transforming them to fit the needs of the pedagogic context. This selection process is not neutral but is influenced by existing power structures and dominant ideologies.
+- **Regulation of Internal Orderings:** The recontextualizing principles that constitute theories of instruction regulate the internal orderings of pedagogic practice. This includes how knowledge is structured, the temporal pacing of learning, and how it is contextualised.
+    - **Internal orderings** include the sequencing, pacing and relations within and between the content to be learned, and the theories of instruction from which the transmission rules are derived.
+- **Constructing Models:** Recontextualizing principles that shape theories of instruction also constructs models of the key elements of the educational process:
+    - The model of the **pedagogic subject** (the acquirer).
+    - The model of the **transmitter** (the teacher).
+    - The model of the **pedagogic context** (the learning environment).
+    - The model of **communicative pedagogic competence** (the skills and knowledge expected of learners).
+- **Shaping 'What' and 'How'**: Recontextualizing principles shape both the 'what' (the content of instruction) and 'how' (the methods of transmission) of pedagogic discourse. This is achieved through selecting content from the intellectual fields and by recontextualising theories from the social sciences (usually psychology).
+- **From Actual to Virtual Practice**: Through recontextualization, original discourses are transformed from 'actual' practices to 'virtual' or 'imaginary' practices. This means that the social basis and power relations of the original discourse are removed, and new social relations are created in their place, where the text becomes a signifier for something other than itself.
+- **Influence on Pedagogic Practice**: The way theories of instruction are recontextualized has a direct impact on how teaching and learning are approached. Different theories of instruction will have different effects on what is considered legitimate communication, social relations, and positions within the educational context.
+    - For example, a theory oriented to the logic of transmission will privilege graded performances of the pedagogic discourse, whereas a theory oriented to the logic of acquisition will privilege the shared competences of the acquirer.
+    - Theories of instruction regulate the selection, sequence, pace and relations with other subjects.
+
+In summary, the statement that "**theories of instruction are themselves constituted by recontextualizing principles**" implies that these theories are not simply neutral tools, but are actively shaped through a process of selection, modification, and reapplication within the educational context. This process is not neutral, but is shaped by underlying power dynamics and principles of social control. Understanding this process is crucial for a full understanding of how educational practices and the transmission of knowledge are constructed.
+
+## Recontextualization of knowledge - actual to imaginary practice 
+
+The concept that "through recontextualization, original discourses are transformed from 'actual' practices to 'virtual' or 'imaginary' practices" highlights a key aspect of how knowledge and practices are reshaped when they are taken from their original settings and incorporated into educational contexts. This transformation involves a shift in the nature of the discourse itself, moving away from its concrete, situated use to a more abstract and symbolic representation.
+
+Here’s a breakdown of this process:
+
+- **Delocation:** Recontextualization begins with the **removal of a discourse from its original context**. This 'delocation' means that the discourse is no longer tied to the specific practices, social relations, and power dynamics of its original setting.
+    
+    - For example, physics as it is practiced by physicists is different from the physics that is taught in schools.
+    - A manual practice such as carpentry is abstracted from the power relations of its social context and is transformed by the school's instructional and regulative discourse.
+- **Relocation:** Once a discourse has been delocated, it is **relocated within the pedagogic setting**. This means it is integrated into the structures, practices, and goals of education. The relocation is not neutral; it involves a **selective reordering and focusing** of the original discourse according to the principles of the pedagogic discourse.
+    
+- **Transformation**: Through this process of delocation and relocation, the original discourse undergoes a **fundamental transformation**. It is no longer the same discourse as it was in its original context. The original discourse is transformed from an actual practice to a virtual or imaginary practice.
+    
+    - The discourse is often **simplified, condensed, and reorganized** to fit the curriculum and the perceived needs of learners.
+    - The discourse is **repositioned and refocused** to achieve specific educational goals.
+    - **The original social basis of the practice, including its power relations, is removed**.
+- **Virtual or Imaginary Practice:** The relocated discourse becomes a ‘virtual’ or ‘imaginary’ practice because it now exists within a different framework of meanings and social relations. This means that the discourse is no longer experienced in its actual, concrete form but is a representation of that form.
+    
+    - The new discourse is a **signifier for something other than itself**, carrying a meaning that is determined by the principles of the recontextualizing discourse.
+    - The recontextualizing grammar transforms the appropriated discourses into imaginary discourses.
+- **Creation of Imaginary Subjects:** This process of recontextualization creates **imaginary subjects**. This refers to the way in which educational practices and discourses position learners and teachers within a specific set of roles, expectations and power relations. The new discourse becomes part of the process of shaping the consciousness and identity of those involved in the transmission/acquisition process.
+    
+- **Ideological Repositioning**: The transformation of discourses is not just a matter of simplification or abstraction. It involves the new **ideological positioning** of the text in its process of relocation within the educational field. This means that the text is made to serve a particular set of values, beliefs, and social arrangements.
+    
+- **Pedagogic Discourse is 'empty'**: Pedagogic discourse is not articulated by the skill and dispositions to be transmitted, but is a way of recontextualizing or reformulating primary discourse. It is always secondary and in that sense is 'empty'.
+    
+- **Recontextualizing principle**: Pedagogic discourse is a recontextualizing principle, which means that it selectively appropriates, relocates, refocuses, and relates other discourses to constitute its own order and orderings.
+    
+In summary, the transformation of original discourses from 'actual' to 'virtual' or 'imaginary' practices involves the **delocation** of the discourse from its original context, the **relocation** within the educational setting, and a **transformation** that involves selecting, simplifying, condensing and reorganising. Through this process, the discourse is reshaped to serve the aims of the pedagogic setting and its own order and creates **imaginary subjects** and new social relations. This highlights the **active, selective, and transformative** nature of educational processes, where knowledge is not simply transmitted but is actively constructed through a process of recontextualization.
+
+
+## Strength of classification and framing - social relationships and learning experiences
+
+Changes in the strength of **classification** and **framing** can significantly alter social relationships and learning experiences within educational and other social contexts. These concepts are key to understanding how power and control are exercised and how knowledge is transmitted and acquired.
+
+Here’s an explanation of how variations in classification and framing impact social interactions and learning:
+
+- **Classification:** This refers to the degree of **insulation or boundary strength** between categories, whether these are subjects, agents, practices or contexts within a social division of labour.
+    
+    - **Strong classification (+C)** indicates a high degree of insulation between categories, leading to clearly defined and distinct roles, knowledge areas, and practices. In education, this could mean that subjects are taught separately, with little overlap and with teachers and students having clearly defined roles. There are strong boundaries between different types of discourse, with each having a specialised 'voice'.
+    - **Weak classification (-C)**, on the other hand, means there is reduced insulation, with more overlap and less rigid boundaries between categories. In education, this could translate to integrated curricula where different subjects are linked and there is more flexibility in roles and practices.
+- **Framing**: This concept refers to the **location of control over the rules of communication** within a social relation. It regulates the selection, sequencing, pacing, and criteria of communication and interaction.
+    
+    - **Strong framing (+F)** means the transmitter (e.g., teacher) has more control over the selection of content, the mode of interaction, and the criteria for evaluation. This often translates to a highly structured learning environment, with limited input from the acquirer (e.g., student). Strong framing can also determine what outside knowledge may be brought into the pedagogic frame and can make educational knowledge appear esoteric.
+    - **Weak framing (-F)** means the acquirer has more control over the learning process, including the selection of content, the mode of communication and the criteria of evaluation. This leads to a more flexible and open learning environment where there is more room for learners to explore, negotiate and direct their learning.
+
+**Impact on Social Relationships and Learning Experiences:**
+
+1. **Power and Control:**
+    
+    - **Strong classification** can create strong senses of membership and specific identities and reinforces existing power structures, often resulting in hierarchical relationships. It establishes clear boundaries and roles, limiting the power of those in subordinate positions. The emphasis tends to be on the past and what is already known.
+    - **Weak classification** tends to blur distinctions between categories, thereby disrupting established power structures and opening up opportunities for more flexible interactions. It emphasizes the relationships between things, making those relationships explicit and problematic.
+    - **Strong framing** reinforces the authority of the transmitter, limiting opportunities for acquirers to influence the learning process and makes the control more explicit.
+    - **Weak framing** empowers acquirers, giving them more agency over their learning and encouraging them to make their subjective experiences public.
+2. **Modes of Communication:**
+    
+    - **Strong classification** and **strong framing** tend to be associated with explicit and formal communication with an emphasis on structure, rules and hierarchies. In such contexts, the 'voice' of the category, and the limits of its legitimate communicative potential are strongly defined.
+    - **Weak classification** and **weak framing** can lead to more implicit and negotiated communication with an emphasis on openness, flexibility and co-operation. Such a context promotes a more collaborative approach to teaching and learning and permits more expression of differences.
+3. **Learning Environments:**
+    
+    - **Strong classification** and **strong framing** tend to create more rigid, structured and predictable learning environments with less room for flexibility or personal expression. They reinforce social order.
+    - **Weak classification** and **weak framing** promote more open, flexible and dynamic learning environments where there is a greater emphasis on exploration, creativity, and learner autonomy. They can also encourage more visibility of the socialised, and their unique qualities.
+4. **Identity and Socialisation**:
+    
+    - **Strong classification** creates strong social types with explicit distancing techniques and discourages the expression of subjective experience. It emphasizes membership in a particular category and a specific identity. It may socialize learners into the concept of knowledge as private property.
+    - **Weak classification** can lead to more ambiguous personal identities and more flexible role performances. This creates opportunities for change and challenges to existing power structures. It may be associated with socialisation that emphasizes the development of the person rather than the individual.
+5. **Resistance and Change:**
+    
+    - Even with strong classification and framing, there is potential for resistance and change, often arising from the contradictions and dilemmas inherent in the system.
+    - Changes in the strength of classification and framing can lead to conflicts over the distribution of power and can threaten established identities.
+
+- Changes in classification and framing can be a means of challenging and exposing existing power relations.
+
+6. **Educational Codes:**
+    
+    - **Collection codes** in education are characterised by strong classification and can vary in terms of framing. They are often rigid, hierarchical and resistant to change. They tend to create specific and bounded educational identities and have an emphasis on specialisation.
+    - **Integrated codes**, on the other hand, have weak classification and are more variable in terms of framing. They may be more open to change but may require a high level of ideological consensus.
+7. **Internal and External Values**:
+    
+    - Both classification and framing have internal (i) and external (e) values.
+        - Internal values refer to the regulation within a communicative context. In the context of a school, for example, this may be the relationships within a classroom.
+        - External values refer to the regulation between communicative contexts. In the context of a school this may refer to the relationship between the school and the family or work.
+
+In summary, changes in the strength of classification and framing are not simply variations in pedagogical methods; they are fundamental shifts in how social relationships are organised, how power is distributed and how knowledge is constructed and acquired. These changes shape not only the learning experiences of individuals but also their sense of self, their social identities, and their relationship to the wider social order.
+
+## Evaluation
+
+Bernstein's theory posits that **evaluation**, like curriculum and pedagogy, is a message system that is fundamentally shaped by the principles of **classification and framing**. These concepts determine what counts as a valid realization of knowledge on the part of the learner.
+
+Here’s how classification and framing impact evaluation:
+
+- **Classification and Evaluation:**
+    
+    - **Strong classification** in the curriculum leads to evaluation that is focused on assessing the acquisition of **specialised knowledge within specific subject areas**. This may involve exams or assignments that test specific facts, skills, or competencies within a clearly defined subject boundary.
+    - Where there is **weak classification** between subjects or areas of knowledge, evaluation may be more focused on assessing the ability to make **connections between different areas**. This might involve projects, presentations or other assessments that require the integration of knowledge from different fields or subjects.
+- **Framing and Evaluation:**
+    
+    - **Strong framing** in pedagogy typically leads to **explicit criteria for evaluation**, which are controlled by the teacher/transmitter. This can involve assessments with very specific instructions and expectations, leaving little room for learner interpretation or negotiation. The focus is likely to be on whether the learner has met the expectations of the assessment rather than on a demonstration of personal meaning making.
+    - **Weak framing** can lead to a more flexible approach to evaluation, where the **learner has more input into the criteria for assessment**. This may involve self-assessment, peer assessment or project work where the criteria are negotiated or co-constructed between the learner and the teacher. There may also be a greater emphasis on process than on product.
+- **The Interplay of Classification and Framing in Evaluation:**
+    
+    - The relationship between classification and framing in evaluation is not fixed, and these factors can vary independently of one another. For example, a curriculum with **weak classification** (such as an integrated or interdisciplinary programme) can still have **strong framing** if the assessment criteria are very tightly controlled. Conversely, a traditional subject-based curriculum with **strong classification** may have elements of **weak framing** if the teacher allows some flexibility in the form of assessments.
+    - **Strong classification and framing** in evaluation tends to create a situation in which there is an emphasis on the reproduction of existing knowledge, with little emphasis on individual interpretation or unique expressions of understanding. The focus is often on demonstrating competence within existing boundaries.
+    - **Weak classification and framing** may create opportunities for learners to express their own interpretations and perspectives. Evaluation in such settings may allow a more creative and innovative approach to the application of knowledge.
+- **Evaluation as Socialisation**:
+    
+    - Evaluation plays a crucial role in the socialization of learners into the values and expectations of the educational system and can transmit the moral order of the school. The way that knowledge is evaluated sends a clear message about what counts as ‘valid’ knowledge and can reinforce existing power relationships. For example, when evaluation practices emphasize individual achievement in clearly defined subjects it is more likely to favour particular kinds of learners and particular forms of knowledge.
+    - Evaluation criteria may also be used to create social hierarchies within the school. For example, if assessment practices are largely based on criteria aligned with the cultural resources of the dominant social group, then that group is more likely to succeed in those assessments.
+    - By emphasizing different kinds of learning and meaning making, evaluation can play a part in creating continuity or discontinuity between the home and school contexts. Where there is a strong mismatch in the expectations of different contexts, children may struggle to adapt to the differing 'rules' of the school.
+- **Change and Resistance:**
+    
+    - Changes in the modes of evaluation can cause conflict, especially if those changes threaten the established order. For example, an integrated curriculum with a more open system of evaluation can be perceived as a threat to those teachers or students who prefer a more traditional and strongly classified system.
+    - Because they are key sites for the transmission of power and control in educational institutions, evaluation practices can also be a site for resistance and social change. For example, in more flexible educational environments, learners may challenge the criteria for evaluation, or suggest alternative means of assessing their learning.
+
+In summary, Bernstein's framework suggests that the way knowledge is evaluated is not a neutral process. The strength of classification and framing determines the social relations that are established in pedagogic practice and, in doing so, shapes how learners will understand the purpose and value of what is being taught and learned.
+
+## Curriculum, pedagogy and evaluation are message systems
+
+Bernstein's work describes **curriculum, pedagogy, and evaluation as message systems** that communicate underlying principles about what counts as valid knowledge, its transmission, and its realization. These message systems are not neutral, but are shaped by social principles of classification and framing, which reflect power relations and social control.
+
+Here's a breakdown of each message system:
+
+- **Curriculum:**
+    
+    - The curriculum defines **what is considered valid knowledge**. It is a selection of content from a range of possibilities. The curriculum is not just about the content, but also about the **relationships between different contents**.
+    - Bernstein identifies two types of curricula:
+        - **Collection:** Characterized by strong boundaries and insulation between different subjects or contents. There are clear divisions between what is taught.
+        - **Integrated:** Characterized by reduced insulation between contents, with blurred boundaries and an open relationship between subjects.
+    - The curriculum is structured by the principle of **classification**, which determines the strength of boundaries between contents. Strong classification means well-insulated subjects, while weak classification means more integrated subjects.
+- **Pedagogy:**
+    
+    - Pedagogy defines **what counts as a valid transmission of knowledge**. It is concerned with how knowledge is communicated, the relationship between teacher and taught, and the context of transmission.
+    - Pedagogy is structured by the principle of **framing**, which refers to the strength of the boundaries around the control of what is transmitted and received in the pedagogical relationship.
+    - **Strong framing** entails reduced options for the teacher and the taught, with tightly controlled selection, organization, pacing and timing of knowledge. **Weak framing** allows for a range of options and more control by the teacher and the taught over the transmission and acquisition of knowledge.
+    - Frames also concern the boundary between educational knowledge and everyday knowledge.
+- **Evaluation:**
+    
+    - Evaluation defines **what counts as a valid realization of knowledge** by the learner. It is the means by which the competence of the acquirer is judged. It is also a form of social control which transmits the moral order of the school and can produce social hierarchies.
+    - Evaluation is also structured by the principles of **classification and framing**.
+        - **Strong classification** tends to result in evaluation that focuses on assessing specialized knowledge within specific subject areas.
+        - **Weak classification** may lead to evaluation that focuses on assessing the ability to make connections between different areas of knowledge.
+        - **Strong framing** usually leads to explicit criteria for evaluation, controlled by the teacher, with little room for learner interpretation.
+        - **Weak framing** can result in more flexible evaluation, where the learner has more input into the criteria or methods of assessment.
+
+**Interrelations of the Message Systems**
+
+- These three message systems are not separate but form a whole, and should be treated together.
+- The strength of classification and framing can vary independently of each other, leading to different types of educational codes. For example, you can have a curriculum with weak classification but very strong framing in the pedagogy and evaluation.
+- Changes in one message system can lead to changes in the others. For example, an integrated curriculum might require changes in pedagogy and evaluation to be fully realized.
+- The relationships between these message systems can shape the nature of authority relationships in the classroom. For example, relaxed frames in pedagogy may also lead to an increase in the status of the taught.
+- The structure of these message systems and the relationships between them are not fixed, but are subject to change and are shaped by the distribution of power and principles of social control.
+
+In summary, curriculum, pedagogy, and evaluation are message systems that work together to communicate what counts as valid knowledge, how it should be transmitted, and how it should be demonstrated. These message systems are shaped by the principles of classification and framing which reflect underlying social relations. By analyzing these message systems, it's possible to understand how education reproduces and transforms knowledge, culture and power relations.
+
+
+## Pure and Impure knowledge and curricula
+
+In this context the terms "pure" and "impure" are primarily used to describe types of knowledge and curricula, particularly in relation to the organisation of subjects and disciplines within educational settings. These terms relate to the strength of boundaries between different areas of knowledge and whether they are drawn from a single, unified source or from diverse, separate areas.
+
+Here's a breakdown of what "pure" and "impure" mean in this context:
+
+- **Pure Variety:**
+    
+    - A pure variety exists when subjects or disciplines are drawn from a **common universe of knowledge**.
+    - This is exemplified by subjects such as **chemistry, physics, and mathematics**, which are all rooted in a shared scientific and mathematical framework.
+    - A curriculum based on a pure variety emphasises a **unified and internally consistent body of knowledge**.
+    - In the past, this type of education received higher status as an honours degree.
+    - Such an approach to knowledge is associated with a particular emphasis on **specialisation and the demarcation of disciplines**. Knowledge is seen as something that should be "confined to special well-chosen persons and even divorced from practical concerns". The transmission of knowledge tends to be hierarchical and ritualised.
+- **Impure Variety:**
+    
+    - An impure variety exists when subjects or disciplines are drawn from **different universes of knowledge**.
+    - This is exemplified by combinations such as **religion, physics, and economics**, which have distinct origins, assumptions, and methodologies.
+    - A curriculum based on an impure variety brings together **knowledge from diverse and sometimes incompatible fields**.
+    - Traditionally, this type of education received lower status as a general degree.
+- **Underlying Concepts:**
+    
+    - The distinction between pure and impure varieties is related to the concept of **"classification,"** which refers to the degree of boundary maintenance between different contents.
+    - A **strong classification** of knowledge leads to a **pure variety**, where subjects are well-insulated from each other and belong to a single universe of knowledge.
+    - A **weak classification** of knowledge leads to an **impure variety,** where boundaries are blurred, and subjects are drawn from diverse universes of knowledge.
+- **Symbolic Significance:**
+    
+    - The concept of "purity" is linked to ideas about **the "sacred"** and knowledge that is seen as **special, exclusive, and not easily accessible or exchangeable**.
+    - The pure form of knowledge is often associated with the notion that it is dangerous and "must be confined to special well-chosen persons".
+    - Strong boundaries are placed around domains of knowledge, which are treated as sacred.
+    - This idea of "purity" is also linked to a fear of "pollution" that occurs when boundaries are transgressed, which could lead to "debased" or "dangerous innovations". In this sense, an "impure" combination of subjects could be seen as a form of pollution.
+    - Conversely, a shift from "pure" to "impure" is associated with less formal authority relations and weakening of insulation between subjects.
+- **Historical Context:**
+    
+    - Historically, in England, the **"pure" variety has been more prestigious**, especially at the university level, with the "impure" variety being associated with lower status degrees.
+    - However, there has been a gradual shift from the "pure" to the "impure" variety, which is an attempt to move towards a more non-specialised approach to education.
+- **Social implications**
+    
+    - Strong classification of knowledge creates specific identities.
+    - It also relates to the notion of property, in that knowledge is seen as something to be protected and not easily exchanged.
+    - The notion of "purity of categories" in knowledge is seen as a means of social control.
+    - A system of knowledge that celebrates "purity of categories" tends to produce "strong social types".
+
+In summary, in this context, **"pure" refers to knowledge and curricula that are strongly classified, unified, specialised, and derived from a single, coherent framework**. **"Impure,"** by contrast, refers to knowledge and curricula that are weakly classified, diverse, and drawn from multiple, potentially conflicting frameworks. The distinction is not merely descriptive but carries symbolic, historical, and social implications, reflecting power relations, and principles of social control within educational systems.
