@@ -14,6 +14,7 @@ quarto-sync: "true"
 This transcript records a class discussion analyzing Deb Roy's TED Talk, "The Birth of a Word," which details a study using extensive home video recordings to model a child's language acquisition. Participants discuss the study's methodology, the child's progression from babbling to using words like "water," and the role of caregivers in simplifying language to facilitate learning. The conversation also explores broader implications for language acquisition theories, contrasting Roy's findings with Chomsky's, and considers the impact of context on language development. Finally, the class reflects on Jerome Bruner's work on meaning-making and the social context of learning.
 
 (generated from the transcript of zoom recording using notebook-lm)
+
 ## How does contextual usage shape language acquisition in young children?
 
 Contextual usage plays a crucial role in language acquisition for young children. The sources highlight several key aspects of this relationship:
@@ -119,6 +120,7 @@ Summary
 In summary, Chomsky's theory emphasizes innate biological mechanisms and universal principles governing language structure, while Bruner's theory focuses on social interaction, cultural context, and the active role of learners in constructing meaning through narrative. Both theories contribute significantly to our understanding of language acquisition but reflect fundamentally different emphases on nature versus nurture and the processes involved in learning language.
 
 (Perplexity generated)
+
 ## Examples of Entry into Meaning from life
 
 Bruner's concept of "entry into meaning" can be observed in various practical examples in everyday life, illustrating how individuals, particularly children, engage with and construct meaning through cultural narratives and social interactions. Here are some key examples:
