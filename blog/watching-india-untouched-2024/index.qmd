@@ -3,7 +3,7 @@ categories:
 - documentary
 - caste
 date: 2024-11-13
-image: india-untouched.jpeg
+image: india-untouched.jpg
 title: Watching India Untouched in 2024
 subtitle: Reflections from a history of education class
 author: venu GVGK 
