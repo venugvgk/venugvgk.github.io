@@ -21,11 +21,16 @@
     ]
   },
   {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/geometric-art-python-3/index.html",
       "/blog/geometric-art-python-2/index.html",
       "/blog/geometric-art-python/index.html",
+      "/blog/watching-india-untouched-2024/index.html",
       "/blog/turning45/index.html",
       "/blog/the-palace-of-illusions-a-few-thoughts/index.html",
       "/blog/gaduggaayi-rukmini/index.html",
@@ -168,10 +173,6 @@
       "/blog/babaspeak-freedom/index.html",
       "/blog/here-we-go/index.html"
     ]
-  },
-  {
-    "listing": "/about.html",
-    "items": []
   },
   {
     "listing": "/readings/index.html",
