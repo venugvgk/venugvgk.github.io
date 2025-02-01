@@ -21,10 +21,6 @@
     ]
   },
   {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/geometric-art-python-3/index.html",
@@ -173,6 +169,10 @@
       "/blog/babaspeak-freedom/index.html",
       "/blog/here-we-go/index.html"
     ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
   },
   {
     "listing": "/readings/index.html",
