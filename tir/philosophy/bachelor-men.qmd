@@ -2,6 +2,7 @@
 title: Most philosophers were bachelor men
 categories: 
  - philosophy
+date: 15-02-2025
 ---
 
 Mary Midgley 
