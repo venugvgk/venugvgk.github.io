@@ -1,0 +1,14 @@
+---
+title: Ellora - and how history looks like
+published: 2025-02-27
+quarto-filename: tir/ellora-how-history-looks.qmd
+author:
+  - Venu GVGK
+quarto-sync: "true"
+categories: history
+---
+That's what history looks like. Real history invites you to examine your own assumptions and recognise that there are surprises everywhere. 
+
+People, and therefore events, do not unfold the way we expect them to. Real stories are seldom as linear as fictional ones. 
+
+[https://open.substack.com/pub/travelsofsamwise/p/the-absolute-insanity-of-ellora?utm_source=share&utm_medium=android&r=led3q](elllora a wonder of the world - Sam Dalrymple)
