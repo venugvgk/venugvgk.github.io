@@ -3,7 +3,7 @@ title: "Venu GVGK Raju"
 page-layout: full
 about:
   template: trestles
-  image: venu2024.jpg
+  image: venu-2025.jpg
   links:
     - icon: envelope-at
       text: email
