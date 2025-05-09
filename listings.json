@@ -1,23 +1,5 @@
 [
   {
-    "listing": "/til/index.html",
-    "items": [
-      "/til/python/function-return-multiple-values.html",
-      "/til/quarto/adding-code.html",
-      "/til/quarto/spacebar-jupyter.html",
-      "/til/quarto/using-jupyter-notebook.html",
-      "/til/python/revealjs-code-with-python.html",
-      "/til/quarto/reading-book-revealjs.html",
-      "/til/python/merge-pdfs-python.html",
-      "/til/quarto/adding-links-to-yml-files.html",
-      "/til/quarto/syntax-highlighting-the-code.html",
-      "/til/quarto/quarto-modify-table-listing.html",
-      "/til/quarto/quarto-add-custom-font.html",
-      "/til/quarto/quarto-modify-listing-page.html",
-      "/til/powerpoint/powerpoint-morph-timeline.html"
-    ]
-  },
-  {
     "listing": "/books/index.html",
     "items": [
       "/books/own-picture-books/treekar-shomus/index.html",
@@ -189,15 +171,6 @@
     ]
   },
   {
-    "listing": "/tir/index.html",
-    "items": [
-      "/tir/philosophy/bachelor-men.html",
-      "/tir/history/indias-prettiest-library.html",
-      "/tir/sociology/ravidas-begumpura.html",
-      "/tir/history/indian-syncretism.html"
-    ]
-  },
-  {
     "listing": "/about.html",
     "items": []
   },
@@ -209,6 +182,33 @@
       "/readings/history-timeline-education.html",
       "/readings/mirabai-history-perspectives.html",
       "/readings/sociology-ambedkar-1916.html"
+    ]
+  },
+  {
+    "listing": "/tir/index.html",
+    "items": [
+      "/tir/philosophy/bachelor-men.html",
+      "/tir/history/indias-prettiest-library.html",
+      "/tir/sociology/ravidas-begumpura.html",
+      "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
+    "listing": "/til/index.html",
+    "items": [
+      "/til/python/function-return-multiple-values.html",
+      "/til/quarto/adding-code.html",
+      "/til/quarto/spacebar-jupyter.html",
+      "/til/quarto/using-jupyter-notebook.html",
+      "/til/python/revealjs-code-with-python.html",
+      "/til/quarto/reading-book-revealjs.html",
+      "/til/python/merge-pdfs-python.html",
+      "/til/quarto/adding-links-to-yml-files.html",
+      "/til/quarto/syntax-highlighting-the-code.html",
+      "/til/quarto/quarto-modify-table-listing.html",
+      "/til/quarto/quarto-add-custom-font.html",
+      "/til/quarto/quarto-modify-listing-page.html",
+      "/til/powerpoint/powerpoint-morph-timeline.html"
     ]
   }
 ]
