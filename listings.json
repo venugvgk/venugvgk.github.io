@@ -18,6 +18,10 @@
     ]
   },
   {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
     "listing": "/books/index.html",
     "items": [
       "/books/own-picture-books/treekar-shomus/index.html",
@@ -36,16 +40,6 @@
       "/books/story-weaver/amma-intiki/index.html",
       "/books/story-weaver/chakrala-kurchi/index.html",
       "/books/story-weaver/battalu-utike/index.html"
-    ]
-  },
-  {
-    "listing": "/readings/index.html",
-    "items": [
-      "/readings/bernstein-langauge-education-social-reproduction.html",
-      "/readings/flp-bruner-chomsky-deb-roy.html",
-      "/readings/history-timeline-education.html",
-      "/readings/mirabai-history-perspectives.html",
-      "/readings/sociology-ambedkar-1916.html"
     ]
   },
   {
@@ -200,16 +194,22 @@
     ]
   },
   {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
     "listing": "/tir/index.html",
     "items": [
       "/tir/philosophy/bachelor-men.html",
       "/tir/history/indias-prettiest-library.html",
       "/tir/sociology/ravidas-begumpura.html",
       "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
+    "listing": "/readings/index.html",
+    "items": [
+      "/readings/bernstein-langauge-education-social-reproduction.html",
+      "/readings/flp-bruner-chomsky-deb-roy.html",
+      "/readings/history-timeline-education.html",
+      "/readings/mirabai-history-perspectives.html",
+      "/readings/sociology-ambedkar-1916.html"
     ]
   }
 ]
