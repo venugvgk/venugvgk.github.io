@@ -1,6 +1,6 @@
 ---
-title: Readings
-subtitle: Notes from readings - MAEE - TISS
+title: Readings and Research
+subtitle: Notes on Education
 listing:
   contents: 
    - "/*.qmd"

@@ -1,9 +1,9 @@
 ---
-title: FLP - Language acquisition - Bruner, Chomsky and Deb Roy
+title: Language acquisition - Bruner, Chomsky and Deb Roy
 author: Venu GVGK
-quarto-filename: readings/flp-bruner-chomsky-deb-roy.qmd
+quarto-filename: readings/bruner-chomsky-deb-roy.qmd
 date: 2025-01-30
-categories: FLP
+categories: Language
 image: chomsky-bruner.png
 quarto-sync: "true"
 ---
@@ -13,7 +13,7 @@ quarto-sync: "true"
 
 This transcript records a class discussion analyzing Deb Roy's TED Talk, "The Birth of a Word," which details a study using extensive home video recordings to model a child's language acquisition. Participants discuss the study's methodology, the child's progression from babbling to using words like "water," and the role of caregivers in simplifying language to facilitate learning. The conversation also explores broader implications for language acquisition theories, contrasting Roy's findings with Chomsky's, and considers the impact of context on language development. Finally, the class reflects on Jerome Bruner's work on meaning-making and the social context of learning.
 
-(generated from the transcript of zoom recording using notebook-lm)
+(generated from the transcript of zoom recording using notebooklm)
 
 ## How does contextual usage shape language acquisition in young children?
 

@@ -1,0 +1,83 @@
+---
+title: Timeline of Milestones in Indian Education - 17th Century onwards
+author: Venu GVGK
+quarto-sync: "true"
+quarto-filename: readings/history-timeline-education.qmd
+categories: history of education
+date: 2025-01-21
+---
+## timeline
+
+1600: East India Company receives its charter
+
+1698: Charter act required the company to maintain priests and schools for its own staff and their children
+
+1793 - 1835: The approach to education was to continue what people-Warren Hastings did - encourage Hindu and Muslim culture, education and practices by supporting some centers of higher learning and printing books in Persian and Sanskrit. Hastings believed people had a right to be governed by their own laws. The company under Hastings also did not allow missionaries to open schools in India. They did not want the preaching of Christian missionaries to inflame Indian opinion.
+
+1793 - 1813: East India Company did not allow missionaries to work in India. The company did not interfere in Indian education system.
+
+1813: In the Charter Act of 1813, Governor-General-in-Council introduced a clause that directed the company to set aside a sum of one lakh rupees a year for the revival and improvement of literature and encouragement of the learned natives in India and promotion of the knowledge of science among the inhabitants of the British territories in India. This was the beginning of British education system in India. The charter act led to many controversies and disagreements about the aims, agencies, methods, medium of instruction, etc.
+
+1823: General committee of public Instruction was set up by the Governor-General-in-Council in Calcutta to implement the 1813 legislation. Majority members of the committee were orientalists who subscribed to Orientalism. The committee decided to spend major portions of the grant for the improvement of Oriental literature. However, the attitude towards the importance of English education kept changing due to the missionaries as well as the growing importance of knowledge of English for administrative positions. The court of directors of the company was in favor of English education. The controversies went on without resolution.
+
+1833: Charter act came up for renewal after 20 years. While renewing the charter act, British Parliament increased the sum of money to be spent on education in India to one million rupees from one lakh rupees stipulated in 1813.
+
+1835: The arguments were put before Lord Macaulay, who supported the spread of western learning through English as the medium of instruction, in a forceful minute known as Macaulay's Minute. Lord William Bentinck accepted the minute and the English Education Act of 1835 was legislated. In 1837, English was adopted as the language of courts of law and in 1844, high posts were thrown open to Indians. This eventually led to English education taking off in the country. With this, Anglicism won ove Orientalism. 
+
+1841: First Engineering College in the country
+
+1842: First Industrial school
+
+1849: Calcutta Female School was opened by John Bethune in Calcutta, with financial support from Dakshinaranjan Mukherjee. This was taken over by the British Government and renamed Bethune School in 1856. This was the first British school for girls. 
+
+1853: The charter act was up for renewal after another 20 years. A selection committee set up by the British Parliament studied the issue of education in India and reported that the question of Indian Education should not be ignored. At this time, Sir Charles Wood was the president of the board of control, the chief official in London, responsible for overseeing the affairs of the East India Company.
+
+1854: Sir Charles Wood sent a dispatch to Governor General Dalhousie on the general education in India. This is known as Wood’s Dispatch. 
+
+British Government in London constituted General Council of Education in India.
+
+1858: East India Company is abolished and crown takes direct control of the government in India.
+
+1882: Indian Education commission, also called Hunter commission, was constituted by Lord Ripon. 7 of the 20 members were Indian. Hunter commission recommended focus on primary education. Indigenous schools should be encouraged and incorporated into the official system. Grand-in-aid system for secondary education, schools to be run by Indians.
+
+Education of the masses, female education, education for backward classes and untouchables - what did Hunter commission do about this?
+
+Five yearly systematized education data collection started.
+
+1902: Indian University Commission
+
+1904: Government of India Resolution on Education Policy
+
+1917-19: Sadler Commission also known as Calcutta university commission
+
+1919: Government of India Act 1919 -known as Montague - Chelmsford reforms 
+
+1927: Simon commission to review the working of the 1919 act. 
+
+1929: Hartog Committee was an auxiliary committee of the Simon commission.
+
+1932: B.Ed. was started in Andhra University
+
+1935: control of provincial misters and legislature
+
+1936-37: Abbot and Wood committee on vocational education - Delhi Polytechnic
+
+1937: Wardha Scheme
+
+Sergeant report
+
+1948 University Education Commission S. Radhakrishnan
+
+1951 IIT Kharagpur started. by 1961, IITs in Bombay, madras, Kanpur and Delhi were established. IIT Guawahati started in 1995.
+
+1952-53 Secondary Education commission Dr. AL Mudaliar
+
+1961 JEE started
+
+1964-66 Kothari Commission
+
+1985: challenge of education - a policy perspective by Ministry of education under Rajiv Gandhi government
+
+1986 National Education Policy
+
+1990 Rammurthy Review Committee review of national policy of education 1986 - introduced entrance exams?
