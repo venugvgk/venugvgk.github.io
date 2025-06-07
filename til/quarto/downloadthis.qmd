@@ -10,7 +10,7 @@ categories:
     - quarto
 ---
 
-Check this out. This extension shortcode provides support for adding download buttons in the html files with attached small image/pdf/txt/csv files using shortcode {{< downloadthis >}}.
+Check this out. This extension shortcode provides support for adding download buttons in the html files with attached small image/pdf/txt/csv files using a shortcode.
 
 I use this to make pdf copies of my books avaialble for download. 
 
