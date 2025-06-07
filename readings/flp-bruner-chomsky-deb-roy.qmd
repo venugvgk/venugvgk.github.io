@@ -1,5 +1,5 @@
 ---
-title: FLP - Language acquisition - Bruner, Chomsky and Deb Roy
+title: Language acquisition - Bruner, Chomsky and Deb Roy
 author: Venu GVGK
 quarto-filename: readings/flp-bruner-chomsky-deb-roy.qmd
 date: 2025-01-30
