@@ -3,6 +3,7 @@ title: Timeline of Milestones in Indian Education - 17th Century onwards
 author: Venu GVGK
 quarto-sync: "true"
 quarto-filename: readings/history-timeline-education.qmd
+image: milestones.png
 categories: history of education
 date: 2025-01-21
 ---
