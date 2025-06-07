@@ -1,0 +1,17 @@
+---
+title: Downloadthis - make your files downloadable!
+date: 2025-03-07
+jupyter_client: 5.4.0
+page-layout: article
+author: Venu GVGK
+execute:
+  freeze: auto
+categories:
+    - quarto
+---
+
+Check this out. This extension shortcode provides support for adding download buttons in the html files with attached small image/pdf/txt/csv files using shortcode {{< downloadthis >}}.
+
+I use this to make pdf copies of my books avaialble for download. 
+
+https://github.com/shafayetShafee/downloadthis

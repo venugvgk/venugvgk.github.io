@@ -1,0 +1,20 @@
+---
+title: Extract audio from video files with VLC
+date: 2025-04-05
+jupyter_client: 5.4.0
+page-layout: article
+author: Venu GVGK
+execute:
+  freeze: auto
+categories:
+    - Using AI
+---
+I have been using OBS to screen record my calls on meet. I find it easier to extract audio files and upload them to perplexity or notebooklm. Found VLC to be super useful for this. 
+
+1. Open VLC. 
+2. Select media>convert/save
+3. Add a file and click convert/save
+4. Choose profile as audio-mp3
+5. Choose destination file - I usually use the original file name and "-audio". When there are multiple files, it automatically suggests adding "-converted" to all file names. 
+6. Click start and you will be done in minutes, if not seconds!
+
