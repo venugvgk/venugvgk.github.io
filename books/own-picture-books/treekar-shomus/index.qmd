@@ -21,8 +21,8 @@ However, they are also teenagers, like we said! This story is about their choice
 
 [తెలుగులో చదవండి](/books/own-picture-books/treekar-shomus/treekar-telugu.html){.btn .btn-primary}
 
-{{< downloadthis Treekar-Shomas-storybook.pdf dname=treekar-shomus-farmhill label="Download English pdf" icon=file-earmark-pdf type=success >}}
+{{< downloadthis file="books\own-picture-books\treekar-shomus\Treekar-Shomas-storybook.pdf" dname=treekar-shomus-farmhill label="Download English pdf" icon=file-earmark-pdf type=success >}}
 
-{{< downloadthis treekar-shomas-telugu.pdf dname=treekar-shomus-telugu label="Download Telugu pdf" icon=file-earmark-pdf type=success >}}
+{{< downloadthis file="books\own-picture-books\treekar-shomus\treekar-shomas-telugu.pdf" label="Download Telugu pdf" icon=file-earmark-pdf type=success >}}
 
 
