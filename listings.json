@@ -1,11 +1,47 @@
 [
   {
-    "listing": "/tir/index.html",
+    "listing": "/books/index.html",
     "items": [
-      "/tir/philosophy/bachelor-men.html",
-      "/tir/history/indias-prettiest-library.html",
-      "/tir/sociology/ravidas-begumpura.html",
-      "/tir/history/indian-syncretism.html"
+      "/books/own-picture-books/treekar-shomus/index.html",
+      "/books/own-picture-books/laddoo/index.html",
+      "/books/own-picture-books/appu/index.html",
+      "/books/translated-story-books/avantika/index.html",
+      "/books/translated-story-books/eddula-jodi/index.html",
+      "/books/translated-story-books/akaasamlo/index.html",
+      "/books/translated-story-books/appu-prapancham/index.html",
+      "/books/story-weaver/bommalu-geese/index.html",
+      "/books/story-weaver/password/index.html",
+      "/books/story-weaver/art-gallery/index.html",
+      "/books/story-weaver/inti-daggara/index.html",
+      "/books/story-weaver/mana-bhoomi/index.html",
+      "/books/story-weaver/ambedkar/index.html",
+      "/books/story-weaver/amma-intiki/index.html",
+      "/books/story-weaver/chakrala-kurchi/index.html",
+      "/books/story-weaver/battalu-utike/index.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
+    "listing": "/til/index.html",
+    "items": [
+      "/til/Using AI/extract-audio-with-VLC.html",
+      "/til/quarto/downloadthis.html",
+      "/til/python/function-return-multiple-values.html",
+      "/til/quarto/adding-code.html",
+      "/til/quarto/spacebar-jupyter.html",
+      "/til/quarto/using-jupyter-notebook.html",
+      "/til/python/revealjs-code-with-python.html",
+      "/til/quarto/reading-book-revealjs.html",
+      "/til/python/merge-pdfs-python.html",
+      "/til/quarto/adding-links-to-yml-files.html",
+      "/til/quarto/syntax-highlighting-the-code.html",
+      "/til/quarto/quarto-modify-table-listing.html",
+      "/til/quarto/quarto-add-custom-font.html",
+      "/til/quarto/quarto-modify-listing-page.html",
+      "/til/powerpoint/powerpoint-morph-timeline.html"
     ]
   },
   {
@@ -161,55 +197,18 @@
     ]
   },
   {
-    "listing": "/til/index.html",
+    "listing": "/tir/index.html",
     "items": [
-      "/til/Using AI/extract-audio-with-VLC.html",
-      "/til/quarto/downloadthis.html",
-      "/til/python/function-return-multiple-values.html",
-      "/til/quarto/adding-code.html",
-      "/til/quarto/spacebar-jupyter.html",
-      "/til/quarto/using-jupyter-notebook.html",
-      "/til/python/revealjs-code-with-python.html",
-      "/til/quarto/reading-book-revealjs.html",
-      "/til/python/merge-pdfs-python.html",
-      "/til/quarto/adding-links-to-yml-files.html",
-      "/til/quarto/syntax-highlighting-the-code.html",
-      "/til/quarto/quarto-modify-table-listing.html",
-      "/til/quarto/quarto-add-custom-font.html",
-      "/til/quarto/quarto-modify-listing-page.html",
-      "/til/powerpoint/powerpoint-morph-timeline.html"
-    ]
-  },
-  {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
-    "listing": "/books/index.html",
-    "items": [
-      "/books/own-picture-books/treekar-shomus/index.html",
-      "/books/own-picture-books/laddoo/index.html",
-      "/books/own-picture-books/appu/index.html",
-      "/books/translated-story-books/avantika/index.html",
-      "/books/translated-story-books/eddula-jodi/index.html",
-      "/books/translated-story-books/akaasamlo/index.html",
-      "/books/translated-story-books/appu-prapancham/index.html",
-      "/books/story-weaver/bommalu-geese/index.html",
-      "/books/story-weaver/password/index.html",
-      "/books/story-weaver/art-gallery/index.html",
-      "/books/story-weaver/inti-daggara/index.html",
-      "/books/story-weaver/mana-bhoomi/index.html",
-      "/books/story-weaver/ambedkar/index.html",
-      "/books/story-weaver/amma-intiki/index.html",
-      "/books/story-weaver/chakrala-kurchi/index.html",
-      "/books/story-weaver/battalu-utike/index.html"
+      "/tir/philosophy/bachelor-men.html",
+      "/tir/history/indias-prettiest-library.html",
+      "/tir/sociology/ravidas-begumpura.html",
+      "/tir/history/indian-syncretism.html"
     ]
   },
   {
     "listing": "/readings/index.html",
     "items": [
       "/readings/bernstein-langauge-education-social-reproduction.html",
-      "/readings/bruner-chomsky-deb-roy.html",
       "/readings/flp-bruner-chomsky-deb-roy.html",
       "/readings/history-timeline-education.html",
       "/readings/mirabai-history-perspectives.html",
