@@ -36,7 +36,7 @@ website:
        - text: TIR
          href: tir/index.qmd
        - text: On Education
-         href: reasearch-readings/index.qmd
+         href: readings/index.qmd
 
         
   
