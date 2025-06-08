@@ -5,6 +5,7 @@ subtitle: Keeping track of short reads
 listing:
   contents: 
     - "/*/*.qmd"
+    - "/*.qmd"
     - "/*/*.ipynb"
 
   template: ../_themes/til-listing.ejs
