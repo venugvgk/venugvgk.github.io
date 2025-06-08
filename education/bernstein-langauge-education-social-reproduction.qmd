@@ -1,11 +1,9 @@
 ---
 title: Bernstein - Language, Education and Social Reproduction
 author: Venu GVGK
-quarto-filename: readings/bernstein-langauge-education-social-reproduction.qmd
-categories: sociology
+categories: Sociology
 date: 2025-01-31
 image: bernstein1.jpg
-quarto-sync: "true"
 ---
 
 ## Sources 

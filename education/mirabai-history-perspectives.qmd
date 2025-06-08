@@ -1,6 +1,6 @@
 ---
 title: Mirabai - Perspectives and Sources of History
-categories: social science
+categories: History
 author: Venu GVGK
 date: 2025-01-21
 image: mirabai.jpg

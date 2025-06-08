@@ -1,13 +1,10 @@
 ---
 title: Language acquisition - Bruner, Chomsky and Deb Roy
 author: Venu GVGK
-quarto-filename: readings/flp-bruner-chomsky-deb-roy.qmd
 date: 2025-01-30
 categories: Language
-image: chomsky-bruner.png
-quarto-sync: "true"
 ---
-![](chomsky-bruner.png)
+![](bruner-chomsky-debroy.png)
 
 ## Summary of class discussion
 

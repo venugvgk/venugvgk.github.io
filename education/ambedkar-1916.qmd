@@ -1,10 +1,8 @@
 ---
 title: Notes from Ambedkar's Columbia lecture on Caste
-quarto-sync: "true"
-quarto-filename: readings/sociology-ambedkar-1916.qmd
-categories: sociology
+categories: Sociology
 date: 2025-01-16
-image: castes-ambedkar.jpg
+image: ambedkar.jpg
 author: Venu GVGK
 ---
 * "if Hindus migrate to other regions of earth, Indian caste will become a world problem." 

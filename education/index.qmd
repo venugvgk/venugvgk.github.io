@@ -1,0 +1,11 @@
+---
+title: Research and Writings on Education
+subtitle: A collection of reading notes as well as own thoughts
+listing:
+  contents: 
+   - "/*.qmd"
+  sort: "date desc"
+  type: grid
+  categories: true
+---
+
