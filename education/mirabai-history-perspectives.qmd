@@ -4,8 +4,6 @@ categories: History
 author: Venu GVGK
 date: 2025-01-21
 image: mirabai.jpg
-quarto-filename: readings/mirabai-history-perspectives.qmd
-quarto-sync: "true"
 ---
 
 ## Ideas of Mirabai before the reading
