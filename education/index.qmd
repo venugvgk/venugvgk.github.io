@@ -1,6 +1,6 @@
 ---
 title: Research and Writings on Education
-subtitle: A collection of reading notes as well as own thoughts
+subtitle: A collection of reading notes, thoughts and experiences
 listing:
   contents: 
    - "/*.qmd"
