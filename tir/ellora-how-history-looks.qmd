@@ -1,6 +1,6 @@
 ---
 title: Ellora - and how history looks like
-published: 2025-02-27
+date: 2025-02-27
 author:
   - Venu GVGK
 categories: History
