@@ -1,0 +1,52 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: Returning multiple values from a function in python\n",
+        "date: 2024-12-28\n",
+        "page-layout: article\n",
+        "author: Venu GVGK\n",
+        "categories:\n",
+        "    - python\n",
+        "---\n",
+        "\n",
+        "A function can return multiple values in a list. Each value can be used at multiple places using the index of the list. \n",
+        "\n",
+        "For example,"
+      ],
+      "id": "70201384"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "def add(x,y,z):\n",
+        "    i = x+y\n",
+        "    j = y+z\n",
+        "    k = x+z\n",
+        "    return [i,j,k]\n",
+        "\n",
+        "a = add(3,4,5)[0] # this gives us i, 7\n",
+        "b = add(3,4,5)[1] # this gives us j, 9\n",
+        "c = add(3,4,5)[2] # this gives us k, 8\n",
+        "\n",
+        "print(a,b,c)"
+      ],
+      "id": "2d45c920",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
