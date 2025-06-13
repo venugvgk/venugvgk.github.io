@@ -1,5 +1,31 @@
 [
   {
+    "listing": "/tir/index.html",
+    "items": [
+      "/tir/engineering-economic-exploitation.html",
+      "/tir/ellora-how-history-looks.html",
+      "/tir/philosophy/bachelor-men.html",
+      "/tir/history/indias-prettiest-library.html",
+      "/tir/sociology/ravidas-begumpura.html",
+      "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
+    "listing": "/education/index.html",
+    "items": [
+      "/education/reflections.html",
+      "/education/bernstein-langauge-education-social-reproduction.html",
+      "/education/bruner-chomsky-deb-roy.html",
+      "/education/mirabai-history-perspectives.html",
+      "/education/timeline-indian-education.html",
+      "/education/ambedkar-1916.html"
+    ]
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/jasmine-birdnest/index.html",
@@ -16,6 +42,7 @@
       "/blog/nachiyar-thirumozhi-karpuram-naarumo/index.html",
       "/blog/two-books/index.html",
       "/blog/christmas/index.html",
+      "/blog/satakam-preface/index.html",
       "/blog/tapobhangamu-kumaara-sambhavam/index.html",
       "/blog/a-play-for-children-about-dr-ambedkar/index.html",
       "/blog/ganesha/index.html",
@@ -172,21 +199,6 @@
     ]
   },
   {
-    "listing": "/education/index.html",
-    "items": [
-      "/education/reflections.html",
-      "/education/bernstein-langauge-education-social-reproduction.html",
-      "/education/bruner-chomsky-deb-roy.html",
-      "/education/mirabai-history-perspectives.html",
-      "/education/timeline-indian-education.html",
-      "/education/ambedkar-1916.html"
-    ]
-  },
-  {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
     "listing": "/books/index.html",
     "items": [
       "/books/own-picture-books/treekar-shomus/index.html",
@@ -205,17 +217,6 @@
       "/books/story-weaver/amma-intiki/index.html",
       "/books/story-weaver/chakrala-kurchi/index.html",
       "/books/story-weaver/battalu-utike/index.html"
-    ]
-  },
-  {
-    "listing": "/tir/index.html",
-    "items": [
-      "/tir/engineering-economic-exploitation.html",
-      "/tir/ellora-how-history-looks.html",
-      "/tir/philosophy/bachelor-men.html",
-      "/tir/history/indias-prettiest-library.html",
-      "/tir/sociology/ravidas-begumpura.html",
-      "/tir/history/indian-syncretism.html"
     ]
   }
 ]
