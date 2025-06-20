@@ -4,6 +4,7 @@ subtitle: philosophical questions about responsibility and the practical answers
 author: Venu GVGK
 bibliography: rethinking-responsibility.bib
 date: 2024-12-13
+image: rethinking-responsibility.jpg
 description: An attempt to outline the thinking involved in raising a child on the autism spectrum and bringing together an alternative learning community. 
 ---
 
