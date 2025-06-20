@@ -1,0 +1,115 @@
+---
+title: Rethinking Responsibility - Parenting, Education, and Community
+subtitle: philosophical questions about responsibility and the practical answers found through lived experience and community engagement
+author: Venu GVGK
+bibliography: rethinking-responsibility.bib
+date: 2024-12-13
+description: An attempt to outline the thinking involved in raising a child on the autism spectrum and bringing together an alternative learning community. 
+---
+
+# Introduction
+
+When we thought of having a child, we had decided that the mother would stay home till the time the child was ready to go to school independently. What we did not expect was that it would take more than 18 years, pull both of us in and lead us to start institutions focused on education, working with parents and children.
+
+We had the child in 2006 and for the first three years, the child and the mother were at home. As he was nearing 4, and we were starting to think of a playschool, we received the diagnosis of him being on the autism spectrum. While we were already thinking that our child will not be a part of the rat race that education and life was becoming, this diagnosis changed things completely. Considering the lack of understanding about autism among doctors, therapists as well as schools, there was no way we could take the usual path of entrusting the child and his education to someone else. We had to think from the fundamentals and we were determined to do what is best for him.
+
+What follows is an outline of how we went about making the decisions we did.
+
+# Whose responsibility is a child?
+
+This questions sounds odd because it does not get asked often, when things are all going according to plan. The responsibility for the child's immediate needs is shared between the parents, grand parents and other family members. Schools and hospitals take care of their education and health. The responsibility of ensuring the child's well being is thus shared between various people and institutions. These people and institutions come with natural abilities to bear that responsibility.
+
+However, when the child has autism and requires constant support, no one, including the parents, is adequately equipped to provide that support. Hospitals do not know how to cater to them when they are sick. Schools do not know how to keep them engaged. Anyone who intends to support the child needs to specifically acquire the skills needed to understand and support them. Their high support needs and the lack of expertise all around usually means one person has to be fully available. That is when this question of responsibility comes up.
+
+The first answer that one hears loud and clear, despite any number of philosophical and policy positions that may argue whichever way, is that the responsibility is with the parents. A government hospital or a school is not going to task itself to learn about autism and help your child. That's how one knows the state does not take that responsibility. Grand parents and other family members are equally uncertain as the parents. Schools turn the child away the moment they hear the "A-word", as some parents refer to it.
+
+That leads to the next question - which parent? In our case, the overwhelming advice we got was that the father, who has a good earning potential, should continue to work and earn. The mother, who had anyway taken a break to be with the child, should continue to be available and take care of the child. This choice also plays into the societal biases that allocate childcare predominantly to the woman.
+
+However, we saw significant disadvantages in that position - only one person will be able to support the child directly. The work could be overwhelming for that person, and can potentially leave the child without support every time that person needs to take a break. Both parents will be isolated from each other - one busy with taking care of the child and the other making money. The reliability, efficacy and efficiency of this approach appeared seriously questionable.
+
+So, we took the call that both the parents will be available for the child, as needed. We will work together to support the child and find ways to make a living that are compatible with that commitment. This position meant we had to rethink our lives completely and retrain ourselves. We relocated to a different city where therapy and parent training options were available. One of us trained as a therapist and primary support for the child. The other found work in education space, anticipating the future.
+
+# Whose responsibility is the child's education? Or why did we home school the child?
+
+The first couple of years went in to ensuring the child had support to overcome some basic challenges like learning to eat, get a haircut, be able to communicate etc. We also used a checklist called Assessment of Basic Language and Learning Skills - ABLLS [@gabig2013] as a guide. As the child was nearing five, we had this question of how to ensure the child's education. Like many parents, we believed the child was better off going to school. However, schools were not able to provide the specific support the child needed. They either penalized or condoned the child's behavior, never focusing on understanding and working with him. After a couple of experiences over a couple of years, we came to the conclusion that schools are not going to work for him.
+
+That led us to this question - whose responsibility is the child's education? As parents we were ready to support the child but no institution was willing to look into what the child actually needed. Mainstream schools had one-size-fits-all approach. Alternative schools were no different - some had their own alternative one-size-fits-all approach, some were extremely cautious about working with neurologically diverse, and some were free-for-all places where there was no thinking about designing the learning environment.
+
+As Rasheed puts it, "Within ECD those closest to the child, the parents and guardians, are held, for the most part, accountable for the failure to adequately address children’s needs. However, the responsibility, the position of power, for selecting best practices is taken up by those who control the resources, the expert external to family, community and often too, external to the culture" [@rasheed2024]. While she says this in the overall context of decolonizing health in the global south, and by external, she means the experts in the global north, this statement is true even within the country and it's frameworks for education and development of children. The parents and guardians are responsible for the failure to address children's needs but the requirements, standards and modalities of education are set by the government, using a universal standard that may not be suitable to the context of each child.
+
+Once again, we were reminded that the responsibility of the child is with the parent. We decided we were going to equip ourselves to support the child's learning as long as he needed it and We continued to work with the child at home.
+
+# What should the child learn? What are the aims of education?
+
+The first 2-3 years were relatively easy as we went ahead and focused on basic literacy and numeracy skills but as the child was nearing 8, we had these questions about what should the child really learn. What is the point of 'education' or 'learning', whatever name we call it by? What are the necessary skills, attitudes and competencies the child needs to imbibe through the process? Should the child be prepared for the 'world'? To what extent should we allow our imagination of the world out there to influence their learning? In short, while we did not know it at that time, we were asking the question - what are the aims of education?
+
+The reason we did not simply take the syllabus or a textbook as the goal is that the child seemed to have difficulties that would not be addressed by learning according to the syllabus. For example, there was nothing in the syllabus or the books about self-regulation, emotional education or social intelligence, which the child had a problem with. We could really not see any goal that would be achieved by following the textbooks, apart from the ability to read, remember and repeat.
+
+We spent time reading through the frameworks and approach to education documents, starting from those developed in India and pursuing those from various other countries. Most of these documents touched upon holistic goals at a very broad level but unlike the goals in mathematics or science, the non-academic goals were not discussed in detail and rarely were any teaching-learning approaches outlined. The predominant teaching method is also the talking method - whether it is chalk-and-talk, talk in a group discussion or talk on video.
+
+This led us to research further to identify all the important areas and various goals across age levels. For example, how does one teach a child to take success and failure in their stride? Is it important to teach a child to share their toys with friends? How does one help the children around see that this child is different but not less? At what age can one expect a child to be sensitive to the parents' feelings? Can we expect a child to learn to learn by themselves? By what age? How do we teach children the value of work and self-discipline? How do we support children to grow into sensitive and mindful human beings? Is it necessary for a child to be happy all the time?
+
+As we explored these questions, we were struck with the realization that children in general, and not just those with specific needs, were not getting the kind of attention and learning opportunities they deserve. There is a disconnect between what parents believe is needed, what the schools are able to deliver and what children actually need. This is, even without us going into questions like what the society needs, how education is going to impact the society and how the world is going to be in the future.
+
+We were basically trying to solve a two level problem - one, what are the aims of education and how can they be achieved and two, how do the answers change when the child is neurodiverse. As we went about it, we realized that the answers - to the extent we could find them - were not very different for the neurotypical and neurodiverse children. All children need much more support and attention than they are getting now. We are all systematically underestimating the time, energy and resources it takes to properly educate our children.
+
+We were fortunate to have made the acquaintance of people trying out a few alternatives. While we did not find any one approach comprehensive and suitable for our child, we were able to piece together a few important ideas that work across contexts. At a very broad level, we wanted to "make him independent – in the sense that he will be able to plan and manage his day, be able to manage his behaviors and his learning – by the time he is about 12" [@seshadri2014].
+
+# A few thoughts on aims of education
+
+The following are some of the aims we thought were important.
+
+1.  The child has a comfortable daily routine that helps them maintain good physical health. This means the child gets into the habit of waking up early, getting some physical exercise, learns to eat in moderation etc. We found that no amount of talking about the importance of this is helping. The approach was to model it for the child, do this along with them and provide support as needed.
+
+2.  The child shall experience, and eventually be able to create, a safe environment which supports their mental well being - this means we pay attention to the child's mental health and take their emotional life as an important area of focus. The approach involves supporting the child to identify emotions, helping them with approaches for self-regulation, eventually leading to them comfortably using dialogue and counseling to regulate themselves.
+
+3.  The child learns to learn - this means the child is not entirely dependent on a teacher to help them learn. This was a goal for 12 years of age. We focused on making self-study resources available, encourage learning by doing, support the child in reflection and consolidation of learning.
+
+4.  The child is able to think and make decisions for oneself - we support this by helping them think through different options, support them in making decisions, help them learn negotiation, prioritization, optimization and making choices.
+
+5.  The child has, and is able to create, the time and space needed for learning - this means there is no timelines for learning, especially the academic kind of learning. Education cannot be delivered through a system that expects all children to simultaneously achieve the yearly, half-yearly and quarterly learning goals set by a centralized department.
+
+6.  The child shall be free from the anxieties of the parents and other institutions, and in time, learn to identify and manage own anxieties - this means we do not automatically respond from our insecurities and imagination about the world that is out there. We examine our beliefs - about the world, our imagination of 'success', our convictions about what the child must learn etc. - we try and see where they are coming from, how valid they are and make a genuine effort to separate fact from fiction.
+
+# Transitioning to a community
+
+Homeschooling was resource intensive, especially in terms of the time it demanded of us. It was also lonely, both for us and for the child.
+
+Initially, we connected with other families who had children in similar age groups - we would run into them at bus stops, parks and in hobby classes. We would spend time in the evenings and over the weekends engaging the children in interesting fun and learning activities. This ensured the child and us had a community that we connected to.
+
+As the child grew up and other children became busier with their school and academic schedules, we connected with other homeschoolers. The key was not to be influenced by everything that everyone else was doing and try not to influence others. We kept the connects to a comfortable level, engaging in activities that had value to everyone - for example, a monthly get together where children presented their learning, meeting for birthdays and other celebrations etc.
+
+As the child reached the age of 10, we felt the child needed to transition to an outside environment. We felt he needed to learn from people other than his parents and places that were not as deeply sympathetic as home. We found a school that worked more like a community. That lasted till the child entered his teens - at that age, every child was struggling and parents were also hyper focused on ensuring each child turns out alright. We left that school.
+
+# Building a community
+
+By this time, we were running a small therapy center catering to the needs of other families like ours. We were focused in the area of early intervention - starting from about 2.5 years to about 7-8 years of age. We kept hearing from the parents that there is really no alternative for children who could not go to school.
+
+All of this led us to start a learning community which was built grounds up, keeping neurodiverse needs in mind. Like we said before, the needs, aims and methods of educating neurotypical children are not all that different from working with neurodiverse children. This is very similar to the thinking about ramps - steps are suited for people who walk but ramps work for both wheel chair users and walkers.
+
+However, we needed to be clear about the way the community would work and deal with various issues that crop up from different families trying to work together. Very often, as in mainstream schools, there is a tension between the the aims of an activity and the constraints imposed by the organization built to achieve these aims. Organizations tend to have their own pushes and pulls that can distract from the aims with which they were setup.
+
+Over a period of time, we have evolved a few ideas and approaches that seem to work. The important ones are:
+
+1.  The community is a learning community - this means both the parents and the children are here to learn about themselves, the society around them and identify appropriate ways of managing their lives. To the extent we agree what we are today is the result of series of influences and accidents, each of us has to understand the confusion of our own nature [@jiddu2017] before we try to impose our thoughts on our children and others.
+
+2.  To the extent that our ideas of education are derived from our exposure to the mainstream society, we will exercise caution in blindly advocating values, goals and methods we are familiar with. We will examine each idea and arrive at a more holistic understanding of education and continue to engage in exploration.
+
+3.  We are all acutely aware of the one failing of the current education system - the education it provides and the goals it encourages are not conducive to the survival of the species. To quote Mukherjee, "It seems plausible to hold, that the most progressive, enlightened forms of thinking on education fail to offer a sustainable perspective on the survival of the species" [@mukherji2017]. To this extent, building an awareness of resource consumption and minimizing the footprint we leave shall be explicit goals of the community.
+
+The community has been around for five years now and we continue to explore and evolve together.
+
+# Way forward
+
+In this paper, we have tried to present a quick outline of ideas and thoughts that went into making some of the decisions we made while educating our child who has very specific needs. We have also tried to present our thinking that led us to try and build a neurodiverse learning community.
+
+While this may read autobiographical or seem to be focused on children who have special needs, we think that the key questions - what our children are getting an education for, what are the institutions we are entrusting their education to, what are the methods being used to impart the education, how is the education impacting their lives, what is the kind of future society we are imagining, etc. - are of interest to every parent who deeply cares about their children, as well as to everyone interested in the education of our children and the future of our society.
+
+We see the difficult nature of the questions we deal with, and while we had to push towards answers that would enable us to act, we are aware of the deep philosophical implications of the questions, answers and the actions. We hope to be able to explore these further from a philosophical lens.
+
+With respect to the learning community, it is a constantly evolving space where we hope to learn much more as we go forward.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
