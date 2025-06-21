@@ -1,0 +1,79 @@
+---
+title: Kaka Muttai - A Philosophical Analysis
+author: GVGK Raju    
+bibliography: kaka-muttai-ref.bib
+date: 2024-11-18
+image: kaka-muttai.jpeg
+description: This article presents an analysis of philosophical ideas in the 2014 movie Kakka Muttai (The Crow's Egg). This movie was awarded the best children's film and best child actor awards at the 62nd National Film Awards. The movie traces the lives of two young brothers living in a Chennai slum, as they try to get their first taste of pizza. 
+---
+
+# The Movie
+
+Kakka Muttai (The Crow's Egg) is a 2014 Tamil language film that traces of the lives of two young brothers living in a Chennai slum, as they try to get their first taste of pizza, an unfamiliar yet aspirational food item for them.
+
+The two young brothers live in a tiny slum dwelling along with their mother and grandmother. Their father is in jail, for an unspecified reason. The family is trying to put together a large sum of money needed to bail him out. The mother works in a utensil factory to make ends meet. The brothers have stopped going to school as there is hardly any money to eat. They collect coal fallen along the railway tracks and sell it in a scrap shop to make some money. At the end of a typical day, they manage to make about ten rupees, all of which they give to their mother.
+
+The slum children use a vacant lot as a playground. The brothers eat crow's eggs from the nests on a tree there, for which the other children make fun of them. The children proudly declare that their names are Chinna Kakka Muttai (Small Crow's Egg) and Periya Kakka Muttai (Big Crow's Egg). Throughout the movie, these are the names we know the children by.
+
+One day, the vacant lot is locked up, the tree is felled, and construction starts there. Soon, a new pizzeria has come up and a popular film actor comes for the inauguration. The children see the obvious enjoyment of the actor eating the pizza and decide they too want to eat pizza.
+
+They start working harder, collecting more coal with the help of Pazharasam, a railway lineman they befriend. They stop giving the money to their mother and soon, they have the Rs. 300 needed to buy a pizza. When they try to go into the pizzeria, the security guard recognises them to be slum children and rudely sends them back. When their grandmother hears this story, she tries to make a pizza out of dosa batter and vegetables but they don't like it and tell her off.
+
+On the advice of Pazharasam, they acquire good looking clothes and try to go to the pizzeria again. The security guard stops them again but this time they protest saying they have the money and they are wearing good clothes too. Hearing the commotion, the pizzeria supervisor comes out and in the ensuing argument, he slaps Periya Kakka Muttai. All the other slum children who have gathered to see the brothers eat pizza laugh at them, and the brothers return humiliated. They are further shocked to find their grandmother died in the meanwhile.
+
+However, one of the slum children records the entire incident on a cell phone video. When Naina, a local petty thief, sees the video, he realizes it can fetch a lot of money and approaches the owner of the pizzeria. The owner of the pizzeria is afraid of the consequences if the video of his supervisor abusing and slapping slum children becomes public. He tries various ways to stop it from becoming public but when it comes out eventually, and creates a furor, he decides to publicly apologize to the boys.
+
+Meanwhile, the boys have run away from home as people are looking for them, and are hiding with their friend Pazharasam. They are quickly found and welcomed to the pizzeria on a red carpet, in the presence of the media, just like the film star. The owner gives them a pizza and promises they will get one whenever they choose to come to the place. The boys start eating the pizza and realise it is not all that they imagined. The credits role as they struggle to finish the pizza sheepishly.
+
+# Philosophical Questions and Ideas
+
+In so much as philosophical activity includes the metaphysical and speculative as well as analytical and critical thinking [@phillips2010], we examine the following thoughts and questions in the rest of the article.
+
+The children live in a slum, their father is in jail, they do not go to school and barely have enough to eat.
+
+1.  Despite having so many needs, they decide they want pizza and work hard to get it. Are such choices rational?
+
+2.  Does the choice of their goal reflect their irrationality or is it a sign of autonomy and authenticity?
+
+3.  In the end, the pizzeria owner apologizes, welcomes them to the pizzeria and promises they will get a pizza whenever they come around. Everyone is rejoicing, even as there is no substantial change in the lives of the children otherwise. What conceptions of justice are at work here?
+
+# Discussion
+
+## Rationality and Autonomy
+
+Are the brothers being rational when they decide they want pizza? The key to this question is another question - by what rationality? Kant regarded people as morally autonomous if in their actions they bound themselves by laws legislated by their own reason as opposed to being governed by their inclinations [@bonnett2002]. What is this 'own reason'? Dearden saw the activities of mind referred to by Kant as needing to be based upon the independent criteria for judgment provided by the public forms of reason. Only then can they be free from various internal sources of heteronomy such as obsessions, addictions, and the power of our wishes and purposes to distort our perceptions of truth [@bonnett2002].
+
+Since the brothers' desire of the pizza is not motivated by any reason other than their desire to taste an unfamiliar food whose visuals they liked, they are not guided by 'autonomy of their will'. Any other person looking at their life circumstances would be surprised they are focusing on pizza, leaving many important basic needs unmet. Their actions do not meet the 'criteria for judgment provided by the public forms of reason'. Since they are not motivated by reason, they are neither rational nor autonomous in their actions.
+
+## Autonomy and Authenticity
+
+However, once the brothers decide they want to taste pizza, they start working harder. They consult other people, and their daily earnings increase significantly.
+
+This shows that the children have started valuing the goal. They have self-endorsed the goal and consequently, their motivation is somewhat internal [@ryan2000]. How can we then say that they are not being autonomous in their actions?
+
+Reexamining the arguments in the previous section, if 'own reason' has to be based upon independent criteria provided by the public forms of reason, what is 'own' about it? The meaning and significance of this idea of “ownership” of one’s beliefs, thoughts, and choices is one of the key points of divergence between advocates of rational autonomy and advocates of authenticity [@bonnett2002].
+
+Frankfurt's analytical care anthropology (Frankfurt, 1988, pp. 189–90, cited in [@bonnett2002]) presents the will as a faculty with its own nature, separate from appetite and reason. The will exhibits 'volitional necessity' which is caring about and loving something. Unthinkability is another mode of necessity that constraints or limits the dynamism of the will.
+
+Accepting this theory of will leads to two different kinds of autonomy - voluntaristic and non-voluntaristic (Cuypers, 2000 cited in [@bonnett2002]). One conception of autonomy depends on the active will. The other conception of autonomy, the non-volutaristic autonomy, arises from the volitional necessity of the will, some of which may not be under the voluntary control of the will. When a person acts from these volitions that derive directly from the essential character of his will, that person is being authentic [@bonnett2002].
+
+Seen this way, the brothers are acting from voluntaristic autonomy when they choose to pursue their desire for pizza and therefore, they are being authentic. Also, unthinkability explains why they do not pursue other goals like improving the standard of their living.
+
+## Justice
+
+At the end of the film, the children got a pizza but what sort of justice is this? It is clear that the social justice paradigm operating here is that of the politics of recognition. Politics of recognition argues that a particular group, in this case slum children, should not be stopped from buying a pizza. Once they are allowed to buy a pizza, or better, they are invited on a red carpet to the pizzeria, social justice is served. Now, even slum children have access to pizza if they have the money and that is the end of it.
+
+Social justice of the politics of redistribution kind would have raised deeper and more fundamental questions of why the children are in the slum, why are they not in school and why they are working. We can see the applicability of Fraser's thesis that "justice today requires both redistribution and recognition, as neither alone is sufficient" [@fraser1999] in this situation.
+
+# Conclusion
+
+It might come as a surprise that such strong philosophical positions can be read into a "chidren's" movie. However, it is important to recognise these positions and debate them, for they tell the audience what is okay and what is not okay. For example, this movie can be said to normalize the lives of the brothers, by only problematising their lack of access to pizza. While the questions a cultural artifact raises are important, the questions that it does not raise are also equally important.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+<br>
+
+*This was written in partial fulfillment of a Philosophy of Education course requirements at Tata Institute of Social Sciences*
