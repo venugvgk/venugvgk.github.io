@@ -15,6 +15,20 @@
     "items": []
   },
   {
+    "listing": "/education/index.html",
+    "items": [
+      "/education/reflections.html",
+      "/education/bernstein-langauge-education-social-reproduction.html",
+      "/education/bruner-chomsky-deb-roy.html",
+      "/education/mirabai-history-perspectives.html",
+      "/education/timeline-indian-education.html",
+      "/education/ambedkar-1916.html",
+      "/education/rethinking-responsibility.html",
+      "/education/kandukuri-phule.html",
+      "/education/kaka-muttai-philosophy.html"
+    ]
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/jasmine-birdnest/index.html",
@@ -165,19 +179,6 @@
       "/blog/book-review-ian-rankin/index.html",
       "/blog/babaspeak-freedom/index.html",
       "/blog/here-we-go/index.html"
-    ]
-  },
-  {
-    "listing": "/education/index.html",
-    "items": [
-      "/education/reflections.html",
-      "/education/bernstein-langauge-education-social-reproduction.html",
-      "/education/bruner-chomsky-deb-roy.html",
-      "/education/mirabai-history-perspectives.html",
-      "/education/timeline-indian-education.html",
-      "/education/ambedkar-1916.html",
-      "/education/rethinking-responsibility.html",
-      "/education/kandukuri-phule.html"
     ]
   },
   {
