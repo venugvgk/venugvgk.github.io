@@ -1,34 +1,5 @@
 [
   {
-    "listing": "/tir/index.html",
-    "items": [
-      "/tir/engineering-economic-exploitation.html",
-      "/tir/ellora-how-history-looks.html",
-      "/tir/philosophy/bachelor-men.html",
-      "/tir/history/indias-prettiest-library.html",
-      "/tir/sociology/ravidas-begumpura.html",
-      "/tir/history/indian-syncretism.html"
-    ]
-  },
-  {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
-    "listing": "/education/index.html",
-    "items": [
-      "/education/reflections.html",
-      "/education/bernstein-langauge-education-social-reproduction.html",
-      "/education/bruner-chomsky-deb-roy.html",
-      "/education/mirabai-history-perspectives.html",
-      "/education/timeline-indian-education.html",
-      "/education/ambedkar-1916.html",
-      "/education/rethinking-responsibility.html",
-      "/education/kandukuri-phule.html",
-      "/education/kaka-muttai-philosophy.html"
-    ]
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/jasmine-birdnest/index.html",
@@ -182,6 +153,21 @@
     ]
   },
   {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
+    "listing": "/tir/index.html",
+    "items": [
+      "/tir/engineering-economic-exploitation.html",
+      "/tir/ellora-how-history-looks.html",
+      "/tir/philosophy/bachelor-men.html",
+      "/tir/history/indias-prettiest-library.html",
+      "/tir/sociology/ravidas-begumpura.html",
+      "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
     "listing": "/til/index.html",
     "items": [
       "/til/Using AI/extract-audio-with-VLC.html",
@@ -220,6 +206,20 @@
       "/books/story-weaver/amma-intiki/index.html",
       "/books/story-weaver/chakrala-kurchi/index.html",
       "/books/story-weaver/battalu-utike/index.html"
+    ]
+  },
+  {
+    "listing": "/education/index.html",
+    "items": [
+      "/education/reflections.html",
+      "/education/bernstein-langauge-education-social-reproduction.html",
+      "/education/bruner-chomsky-deb-roy.html",
+      "/education/mirabai-history-perspectives.html",
+      "/education/timeline-indian-education.html",
+      "/education/ambedkar-1916.html",
+      "/education/rethinking-responsibility.html",
+      "/education/kandukuri-phule.html",
+      "/education/kaka-muttai-philosophy.html"
     ]
   }
 ]
