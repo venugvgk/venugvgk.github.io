@@ -2,6 +2,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/dictators-neruda-translation/index.html",
       "/blog/jasmine-birdnest/index.html",
       "/blog/know-a-koel/index.html",
       "/blog/geometric-art-python-3/index.html",
@@ -153,21 +154,6 @@
     ]
   },
   {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
-    "listing": "/tir/index.html",
-    "items": [
-      "/tir/engineering-economic-exploitation.html",
-      "/tir/ellora-how-history-looks.html",
-      "/tir/philosophy/bachelor-men.html",
-      "/tir/history/indias-prettiest-library.html",
-      "/tir/sociology/ravidas-begumpura.html",
-      "/tir/history/indian-syncretism.html"
-    ]
-  },
-  {
     "listing": "/til/index.html",
     "items": [
       "/til/Using AI/extract-audio-with-VLC.html",
@@ -186,6 +172,21 @@
       "/til/quarto/quarto-modify-listing-page.html",
       "/til/powerpoint/powerpoint-morph-timeline.html"
     ]
+  },
+  {
+    "listing": "/tir/index.html",
+    "items": [
+      "/tir/engineering-economic-exploitation.html",
+      "/tir/ellora-how-history-looks.html",
+      "/tir/philosophy/bachelor-men.html",
+      "/tir/history/indias-prettiest-library.html",
+      "/tir/sociology/ravidas-begumpura.html",
+      "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
   },
   {
     "listing": "/books/index.html",
