@@ -1,6 +1,8 @@
 ---
 categories:
-- poetry, translation, neruda
+- poetry
+- translation
+- neruda
 date: 08/01/2025
 title: నియంతలు The Dictators - Pablo Neruda
 image: neruda-dictators.png
