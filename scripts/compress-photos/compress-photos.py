@@ -1,9 +1,9 @@
 from PIL import Image
 import os
 
-# Folder containing your images
-input_folder = "og-photos"
-output_folder = "photos_compressed"
+script_dir = os.path.dirname(os.path.abspath(__file__))
+input_folder = os.path.join(script_dir, "og-photos")
+output_folder = os.path.join(script_dir, "photos_compressed")
 os.makedirs(output_folder, exist_ok=True)
 
 # Loop through all files in the input folder
