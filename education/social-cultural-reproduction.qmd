@@ -1,7 +1,7 @@
 ---
 title: Social and Cultural Reproduction and Resistance - Marx to Giroux
 author: Venu GVGK
-date: 2024-12-13
+date: 2025-10-08
 image: socio-cultural-reproduction.png
 description: An attempt to outline how the theories of social and cultural reproduction and resistance have evolved from Marx to Giroux
 ---
