@@ -182,6 +182,7 @@
   {
     "listing": "/education/index.html",
     "items": [
+      "/education/social-cultural-reproduction.html",
       "/education/reflections.html",
       "/education/bernstein-langauge-education-social-reproduction.html",
       "/education/bruner-chomsky-deb-roy.html",
@@ -189,7 +190,6 @@
       "/education/timeline-indian-education.html",
       "/education/ambedkar-1916.html",
       "/education/rethinking-responsibility.html",
-      "/education/social-cultural-reproduction.html",
       "/education/kandukuri-phule.html",
       "/education/kaka-muttai-philosophy.html"
     ]
