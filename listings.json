@@ -1,44 +1,5 @@
 [
   {
-    "listing": "/education/index.html",
-    "items": [
-      "/education/social-cultural-reproduction.html",
-      "/education/reflections.html",
-      "/education/bernstein-langauge-education-social-reproduction.html",
-      "/education/bruner-chomsky-deb-roy.html",
-      "/education/mirabai-history-perspectives.html",
-      "/education/timeline-indian-education.html",
-      "/education/ambedkar-1916.html",
-      "/education/rethinking-responsibility.html",
-      "/education/kandukuri-phule.html",
-      "/education/kaka-muttai-philosophy.html"
-    ]
-  },
-  {
-    "listing": "/til/index.html",
-    "items": [
-      "/til/Using AI/extract-audio-with-VLC.html",
-      "/til/quarto/downloadthis.html",
-      "/til/python/function-return-multiple-values.html",
-      "/til/quarto/adding-code.html",
-      "/til/quarto/spacebar-jupyter.html",
-      "/til/quarto/using-jupyter-notebook.html",
-      "/til/python/revealjs-code-with-python.html",
-      "/til/quarto/reading-book-revealjs.html",
-      "/til/python/merge-pdfs-python.html",
-      "/til/quarto/adding-links-to-yml-files.html",
-      "/til/quarto/syntax-highlighting-the-code.html",
-      "/til/quarto/quarto-modify-table-listing.html",
-      "/til/quarto/quarto-add-custom-font.html",
-      "/til/quarto/quarto-modify-listing-page.html",
-      "/til/powerpoint/powerpoint-morph-timeline.html"
-    ]
-  },
-  {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/palnadu-kathalu-sujata-velpuri/index.html",
@@ -73,6 +34,7 @@
       "/blog/as-i-turn-forty-three/index.html",
       "/blog/tamil-poem/index.html",
       "/blog/paalalo-nalakalu-james-herriot/index.html",
+      "/blog/tatayya-fitness/index.html",
       "/blog/love-after-loveby-derek-walcott/index.html",
       "/blog/i-don-t-want-to-be-a-spice-store-translation/index.html",
       "/blog/fear-not/index.html",
@@ -193,6 +155,45 @@
       "/blog/book-review-ian-rankin/index.html",
       "/blog/babaspeak-freedom/index.html",
       "/blog/here-we-go/index.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
+    "listing": "/til/index.html",
+    "items": [
+      "/til/Using AI/extract-audio-with-VLC.html",
+      "/til/quarto/downloadthis.html",
+      "/til/python/function-return-multiple-values.html",
+      "/til/quarto/adding-code.html",
+      "/til/quarto/spacebar-jupyter.html",
+      "/til/quarto/using-jupyter-notebook.html",
+      "/til/python/revealjs-code-with-python.html",
+      "/til/quarto/reading-book-revealjs.html",
+      "/til/python/merge-pdfs-python.html",
+      "/til/quarto/adding-links-to-yml-files.html",
+      "/til/quarto/syntax-highlighting-the-code.html",
+      "/til/quarto/quarto-modify-table-listing.html",
+      "/til/quarto/quarto-add-custom-font.html",
+      "/til/quarto/quarto-modify-listing-page.html",
+      "/til/powerpoint/powerpoint-morph-timeline.html"
+    ]
+  },
+  {
+    "listing": "/education/index.html",
+    "items": [
+      "/education/social-cultural-reproduction.html",
+      "/education/reflections.html",
+      "/education/bernstein-langauge-education-social-reproduction.html",
+      "/education/bruner-chomsky-deb-roy.html",
+      "/education/mirabai-history-perspectives.html",
+      "/education/timeline-indian-education.html",
+      "/education/ambedkar-1916.html",
+      "/education/rethinking-responsibility.html",
+      "/education/kandukuri-phule.html",
+      "/education/kaka-muttai-philosophy.html"
     ]
   },
   {
