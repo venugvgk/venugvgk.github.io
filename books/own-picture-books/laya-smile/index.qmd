@@ -1,0 +1,21 @@
+---
+title: Where is Laya's Smile?
+image: cover-website.png
+date: 01/03/2026
+date-format: "MMM YYYY"
+page-layout: article
+---
+On a quiet morning at Farmhill, something important has gone missing - Laya's beautiful smile! 
+
+Her friends Vivanka, Kivi, Anana and Shourya race off to search in the garden, under the neem tree, by the lotus pond and even with bouncy Thoota the dog, but the smile is nowhere to be found.
+
+Will Venu's gentle question help Laya discover where her smile has been hiding all along? Come read the book to see!! You can also download a pdf of the book below. 
+
+
+<div class="embed-responsive">
+<iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/cfe93860d3.html"></iframe>
+</div>
+
+<br>
+
+{{< downloadthis laya-smile-english.pdf label="Download English pdf" icon="file-earmark-pdf" type="success" >}}
