@@ -19,7 +19,7 @@ Will Venu's gentle question help Laya discover where her smile has been hiding a
 వేణు మామ మెల్లగా అడిగిన ప్రశ్న, లయ నవ్వు ఎక్కడ దాగి ఉందో కనిపెట్టి, ఆ నవ్వుని తిరిగి రప్పించగలుగుతుందా? రండి, ఈ పుస్తకం చదివి తెలుసుకుందాం! పుస్తకం పిడిఎఫ్ కూడా డౌన్లోడ్ చేసుకోవచ్చు. 
 
 <div class="embed-responsive">
-<iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe" style="border: 1px solid lightgray; width: 100%; height: 400px;" src="https://heyzine.com/flip-book/188eabad68.html"></iframe>
+<iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/188eabad68.html"></iframe>
 </div>
 
 <br>
