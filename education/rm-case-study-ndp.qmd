@@ -43,10 +43,10 @@ Having identified a temporal association between NDP implementation and declinin
 
 The article's logic is as follows:
 
-Pre-2010 → Higher ASER averages
-2010 → NDP implemented
-Post-2010 → Lower ASER averages
-∴ NDP caused the decline
+Pre-2010 → Higher ASER averages<br>
+2010 → NDP implemented<br>
+Post-2010 → Lower ASER averages<br>
+∴ NDP caused the decline<br>
 
 Problem: This is a classic post hoc ergo propter hoc fallacy. No controls for concurrent changes. 
 
