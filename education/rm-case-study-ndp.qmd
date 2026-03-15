@@ -1,0 +1,98 @@
+---
+title: Research Methodology - A case of correct data but flawed conclusions on NDP
+author: Venu GVGK
+date: 2026-03-14
+image: rm-case-study-ndp.png
+description: This case study examines a published research article on India's No Detention Policy (NDP) as an example of how correct statistical data can lead to flawed causal conclusions when key methodological principles are overlooked.
+---
+# Policy Background
+
+The education system in India faces challenges due to high dropout rate, particularly among the disadvantaged and marginalised groups. Students from such groups tend to have difficulties with school language, and often come from homes with low literacy levels, which can lead to poor academic performance, especially in the early grades. When such students are "retained" in the same grade due to failure to clear academic examinations, they may become demotivated and eventually drop out of school. 
+
+To address this issue, the Right to Education (RTE) Act 2009 introduced the No Detention Policy (NDP), which prohibits schools from detaining students in primary grades (1–8). The policy aims to reduce dropout rates by allowing automatic promotion regardless of academic performance. However, there has been opposition from many states to NDP and an argument that it has led to a decline in learning levels, as measured by the Annual Status of Education Report (ASER) household survey data. The strength of these arguments has been such that NDP has been rolled back gradually across states, and the RTE act was finally amended in December 2024, to allow detention in classes 5 and 8.
+
+It might also be important to note that the NDP was implemented along with two other related policies - the introduction of Continuous Comprehensive Evaluation (CCE) that aimed to shift the focus from rote learning to holistic development, and the introduction of remedial classes for struggling students. These policies were intended to support students' learning and address the challenges posed by the NDP, but their implementation has been inconsistent across states.
+
+This case study critically examines a research article that claims NDP caused a decline in primary students' learning levels, and recommends abolishing NDP, using correct descriptive statistics but flawed causal inference. The analysis highlights the importance of distinguishing correlation from causation, accounting for selection effects, and considering alternative explanations before making policy recommendations.
+
+# Research Article Overview
+
+Title: No Detention Policy is a Sweet Poison for the Indian Primary Education System (Tyagi et al., 2024, Educational Administration: Theory and Practice). [Article Link](https://kuey.net/index.php/kuey/article/view/7257/5402)
+
+Research Question: Did the NDP (introduced under RTE Act 2009, effective 2010) cause a decline in primary students' learning levels?
+
+Data Source: Annual Status of Education Report (ASER) household survey data (2006–2022, excluding some years), measuring % of enrolled students by grade who can perform basic reading (nothing, words, paragraphs) and arithmetic (nothing, subtraction, division) tasks.
+
+Key Finding: Post-2010 ("after NDP") averages show significantly higher % unable to read/do arithmetic and lower % able to read words/paragraphs or do subtraction/division (confirmed via t-tests, p<0.05 for most indicators).
+
+Policy Conclusion: Abolish NDP and reinstate detention to improve learning levels.
+
+# Analysis
+
+## The Correct Data
+
+The article's descriptive statistics are accurate and transparently reported. The authors correctly group ASER data into pre-NDP (2006–2010) and post-NDP (2011–2022) periods, and conduct appropriate normality tests (Shapiro-Wilk) to justify the use of independent t-tests for comparing means across these two periods. The results show statistically significant differences in learning outcomes, with higher percentages of students unable to read or do arithmetic post-NDP.
+
+Strength: Clear before/after grouping, normality tests (Shapiro-Wilk), and independent t-tests with class-specific interpretation.
+
+## Flawed Causal Inference
+
+Having identified a temporal association between NDP implementation and declining ASER averages, the article leaps to a causal conclusion without addressing key methodological issues.
+
+### Temporal Association Mistaken for Causation
+
+The article's logic is as follows:
+
+Pre-2010 → Higher ASER averages
+2010 → NDP implemented
+Post-2010 → Lower ASER averages
+∴ NDP caused the decline
+
+Problem: This is a classic post hoc ergo propter hoc fallacy. No controls for concurrent changes. 
+
+* RTE infrastructure mandates (e.g., pupil-teacher ratios, classrooms).
+* Enrolment surge from ~96% to near-100% for ages 6–14.
+* Pedagogic shifts (e.g., activity-based learning, reduced rote emphasis).
+
+In other words, NDP did not happen alone. It happened along with introduction of CCE, remedial classes, and a major increase in enrolment. Any of these could affect ASER outcomes.
+
+### Selection Bias: Who Is in the Denominator?
+
+ASER tests currently enrolled children by age/grade. Detention policies change who remains enrolled.
+
+* Pre-NDP: Strict pass-fail → low performers retained → frustrated → dropout. Tested sample = "survivors" (positively selected). Averages appear higher.
+​
+* Post-NDP: Automatic promotion → weaker learners stay enrolled → tested sample more heterogeneous (negatively selected on ability). Averages fall.
+
+Empirical Check: Dropout rates halved post-NDP (Taneja 2018, cited in article itself). States reinstating detention early (e.g., Rajasthan 2013) show no ASER recovery.
+
+### Policy Extrapolation Without Evidence
+
+Article's Logic: Lower averages post-NDP → reinstate detention → averages rise again.
+
+Flaw: Rising averages under detention would reflect exclusion of weak learners, not learning gains. This conflates System-level learning (all children) which is a goal of RTE with Average score inflation via selection which is not a pedagogical win.
+
+## Alternative Causal Story
+
+A more plausible explanation could be as follows. 
+
+NDP → More children stay in school (success) + Poor CCE/remedial implementation (failure)+ Teacher workload, curriculum issues (systemic) → Heterogeneous classrooms, foundational gaps persist → Lower ASER averages (expected, not "caused by NDP")
+
+Policy Implication: Strengthen CCE, remediation, teacher support—not detention.
+
+# Key Takeaways for Research Literacy
+
+* Descriptive ≠ Causal: Even perfect stats need causal identification.
+* Selection Effects Matter: Policies may change who/what is measured.
+* Mechanism Before Policy: Show how X causes Y before recommending reversal.
+* Ethical Statistics: Averages can mask equity tradeoffs. Ask: "For whom, and at what cost?"
+
+# Suggested learning activities
+
+* Verify the analysis: Replicate the t-tests using raw ASER data (publicly available) to confirm the arithmetic is correct.
+
+* Re-analysis: Take ASER 2009 vs. 2014 raw data. Compute averages with/without bottom 20% performers to simulate selection.
+
+* Ethics Debate : "If detention raises ASER averages by excluding weak learners, is that 'success'? Why/why not?"
+
+* Peer Review Simulation: Critique abstract only, then full paper. What changes?
