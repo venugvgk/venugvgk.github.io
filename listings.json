@@ -1,25 +1,5 @@
 [
   {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
-    "listing": "/education/index.html",
-    "items": [
-      "/education/rm-case-study-ndp.html",
-      "/education/social-cultural-reproduction.html",
-      "/education/reflections.html",
-      "/education/bernstein-langauge-education-social-reproduction.html",
-      "/education/bruner-chomsky-deb-roy.html",
-      "/education/mirabai-history-perspectives.html",
-      "/education/timeline-indian-education.html",
-      "/education/ambedkar-1916.html",
-      "/education/rethinking-responsibility.html",
-      "/education/kandukuri-phule.html",
-      "/education/kaka-muttai-philosophy.html"
-    ]
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/palnadu-kathalu-sujata-velpuri/index.html",
@@ -199,6 +179,23 @@
     ]
   },
   {
+    "listing": "/education/index.html",
+    "items": [
+      "/education/language-policy-quick-thoughts.html",
+      "/education/rm-case-study-ndp.html",
+      "/education/social-cultural-reproduction.html",
+      "/education/reflections.html",
+      "/education/bernstein-langauge-education-social-reproduction.html",
+      "/education/bruner-chomsky-deb-roy.html",
+      "/education/mirabai-history-perspectives.html",
+      "/education/timeline-indian-education.html",
+      "/education/ambedkar-1916.html",
+      "/education/rethinking-responsibility.html",
+      "/education/kandukuri-phule.html",
+      "/education/kaka-muttai-philosophy.html"
+    ]
+  },
+  {
     "listing": "/books/index.html",
     "items": [
       "/books/own-picture-books/laya-smile/index.html",
@@ -219,6 +216,10 @@
       "/books/story-weaver/chakrala-kurchi/index.html",
       "/books/story-weaver/battalu-utike/index.html"
     ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
   },
   {
     "listing": "/tir/index.html",
