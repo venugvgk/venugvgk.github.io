@@ -1,0 +1,273 @@
+---
+title: "Coin Weighing Problems for Algorithms"
+format:
+ html:
+ toc: true
+ number-sections: true
+ theme: cosmo
+ pdf:
+ toc: true
+ number-sections: true
+---
+
+# Overview
+
+Coin weighing problems are a compact way to teach decision trees, information-theoretic lower bounds, divide-and-conquer, and adversarial reasoning in an algorithms course. A balance scale is especially useful pedagogically because each weighing has three possible outcomes—left pan heavier, right pan heavier, or balance—which naturally leads to ternary branching in the search tree.
+
+## Learning goals
+
+By the end of this note, students should be able to:
+
+- model a weighing strategy as a decision tree
+- derive upper and lower bounds using outcome counting
+- design optimal strategies for simple counterfeit-coin variants
+- explain why harder variants require more careful case design 
+- connect coin-weighing puzzles to group testing and adaptive algorithms
+
+# The balance scale model
+
+A balance scale produces exactly three outcomes on each query: left heavy, right heavy, or balanced. If a strategy uses \(k\) weighings, then the corresponding decision tree has at most \(3^k\) leaves.
+
+\[
+\text{Maximum distinguishable outcomes after } k \text{ weighings} = 3^k
+\]
+
+This simple counting fact gives an immediate lower bound on the number of weighings needed for any variant of the problem.
+
+## Generic balance-scale tree
+
+```text
+ [weigh a set vs a set]
+ / | \
+ / | \
+ left heavier balanced right heavier
+ / | \
+ continue on continue on continue on
+ candidate set candidate set candidate set
+```
+
+# Problem sequence
+
+The sequence below is ordered for classroom use from the most accessible case to the most conceptually rich case. The first three problems establish the ternary-search idea, and the later ones add hidden state, lower bounds, and research connections.
+
+## Problem 1: 3 coins, fake known heavier
+
+### Statement
+
+There are 3 coins, exactly one counterfeit coin, and the counterfeit is known to be heavier. Find it in 1 weighing.
+
+### Worked solution
+
+Weigh coin 1 against coin 2. If the left side is heavier, coin 1 is fake; if the right side is heavier, coin 2 is fake; if the scale balances, coin 3 is fake.
+
+### Decision tree
+
+```text
+ [1 vs 2]
+ / | \
+ / | \
+ L B R
+ / | \
+ coin 1 heavy coin 3 coin 2 heavy
+```
+
+### Teaching point
+
+This is the smallest example showing that one weighing can distinguish among three possibilities. It is the cleanest entry point to the idea that the branching factor, not just the act of comparison, matters algorithmically.
+
+## Problem 2: 9 coins, fake known heavier
+
+### Statement
+
+There are 9 coins, exactly one counterfeit coin, and the counterfeit is known to be heavier. Find it in 2 weighings.
+
+### Worked solution
+
+Partition the coins into three groups of three: \(A=\{1,2,3\}\), \(B=\{4,5,6\}\), and \(C=\{7,8,9\}\) . Weigh group \(A\) against group \(B\); if one side is heavier, the fake is in that heavier group, and if the scale balances, the fake is in \(C\) .
+
+Now take the suspect group of three coins and weigh one coin against another . If one side is heavier, that coin is fake; otherwise the unweighed third coin is fake .
+
+### Decision tree
+
+```text
+ [A vs B]
+ / | \
+ / | \
+ L B R
+ / | \
+ fake in A fake in C fake in B
+ | | |
+ [1 vs 2] [7 vs 8] [4 vs 5]
+ / | \ / | \ / | \
+ L B R L B R L B R
+```
+
+### Teaching point
+
+This is a direct ternary-search strategy on a decision tree of depth 2 . It also illustrates why equal-sized partitions are algorithmically natural when all three outcomes should be as informative as possible .
+
+## Problem 3: 27 coins in 3 weighings
+
+### Statement
+
+Suppose the counterfeit coin is known to be heavier. How many coins can be handled in 3 weighings, and what strategy achieves it?
+
+### Worked solution
+
+Since each weighing has three outcomes, 3 weighings can distinguish at most \(3^3=27\) possibilities . Because each coin corresponds to exactly one possibility in the known-heavier variant, 27 coins are achievable by repeatedly splitting into three equal groups and recursing on the identified branch .
+
+### Recursive tree
+
+```text
+Level 0: 27 coins
+ |
+ +-- weigh 9 vs 9
+ |
+ +-- one branch contains 9 candidates
+ |
+ +-- weigh 3 vs 3
+ |
+ +-- one branch contains 3 candidates
+ |
+ +-- weigh 1 vs 1
+ |
+ +-- identify the coin
+```
+
+### Teaching point
+
+This is the best place to formalize the expression \(3^k\) and connect it to optimality . Students usually see here that algorithm design and lower-bound reasoning can emerge from the same tree representation .
+
+## Problem 4: 12 coins, fake may be heavier or lighter
+
+### Statement
+
+There are 12 coins, exactly one counterfeit coin, and the counterfeit may be either heavier or lighter. Find it in 3 weighings.
+
+### Why this is harder
+
+Each candidate coin now has two hidden states—heavy or light—so the number of possibilities is \(12 \times 2 = 24\) . Since 3 weighings yield at most \(3^3 = 27\) outcomes, the counting bound says the problem might be solvable, but a valid strategy must identify both the coin and the direction of deviation .
+
+\[
+2n \le 3^k
+\]
+
+### First weighing
+
+Weigh coins \(1,2,3,4\) against coins \(5,6,7,8\) . This creates three major cases: left heavier, balanced, or right heavier .
+
+```text
+ [1,2,3,4 vs 5,6,7,8]
+ / | \
+ / | \
+ left heavier balanced right heavier
+```
+
+### Balanced branch worked out
+
+If the first weighing balances, then all coins 1 through 8 are genuine, so the fake must be among \(9,10,11,12\) . Use coins 1, 2, and 3 as known-good references and weigh \(9,10,11\) against \(1,2,3\) .
+
+- If the left side is heavier, one of 9, 10, or 11 is heavy .
+- If the left side is lighter, one of 9, 10, or 11 is light .
+- If the scale balances, coin 12 is counterfeit .
+
+For the first two subcases, weigh 9 against 10 . If one side behaves consistently with the branch assumption, that coin is identified; if they balance, coin 11 is the counterfeit with the corresponding heavy/light status . If the second weighing balanced, the third weighing can compare coin 12 with a known-good coin to determine whether it is heavy or light .
+
+### Decision tree for the balanced branch
+
+```text
+ first weighing balanced
+ |
+ fake in {9,10,11,12}
+ |
+ [9,10,11 vs 1,2,3]
+ / | \
+ / | \
+ one of 9,10,11 coin 12 one of 9,10,11
+ heavy light
+ | |
+ [9 vs 10] [9 vs 10]
+```
+
+### Unbalanced branches
+
+If the first weighing is unbalanced, the suspect set lies among coins 1 through 8, but with directional constraints: for example, if the left side is heavier, then one of coins 1 through 4 could be heavy or one of coins 5 through 8 could be light . Standard solutions choose a second weighing that mixes coins from both sides plus a known reference pattern so that each outcome narrows the cases to at most three possibilities before the final weighing .
+
+A representative second weighing used in published treatments is to compare a mixed subset such as \(1,2,5\) against \(3,6,9\), where coin 9 serves as a known-good coin in the relevant branch structure . The final weighing then resolves the remaining ambiguity among the small candidate set .
+
+### Teaching point
+
+This problem is ideal for showing that counting bounds are necessary but not sufficient: a strategy must also preserve enough structure to decode every outcome correctly . It is also the first point where students see the difference between a brute-force case table and a carefully designed adaptive algorithm .
+
+## Problem 5: general bound for one unknown counterfeit
+
+### Statement
+
+Suppose there are \(n\) coins and exactly one counterfeit coin that may be either heavier or lighter. What upper bound does the outcome count impose on solvability in \(k\) weighings?
+
+### Worked solution
+
+The counterfeit coin can be any one of \(n\) coins and can be in one of two states, so there are \(2n\) possibilities . Since at most \(3^k\) outcomes can be distinguished with \(k\) weighings, the necessary condition is \(2n \le 3^k\), or equivalently \(n \le 3^k/2\) .
+
+### Values for small \(k\)
+
+| Weighings \(k\) | Outcome bound \(3^k\) | Maximum possible \(n\) from \(2n \le 3^k\) |
+|---|---:|---:|
+| 1 | 3 | 1 |
+| 2 | 9 | 4 |
+| 3 | 27 | 13 by counting, with 12 as the classic achievable case |
+| 4 | 81 | 40 by counting |
+
+### Teaching point
+
+This theorem turns the puzzle into a reusable lower-bound template . It also prepares students to ask the more algorithmic question: when is a counting bound tight, and when does the structure of the problem waste some theoretical outcomes .
+
+## Problem 6: multiple counterfeit coins
+
+### Statement
+
+How does the problem change if there may be multiple counterfeit coins rather than exactly one?
+
+### Discussion
+
+With multiple counterfeit coins, the task shifts from locating one exceptional item to identifying a subset, which makes the problem closer to group testing . Research on spring-scale and generalized counterfeit-coin models studies adaptive algorithms, deterministic bounds, and more efficient recovery of the defective set than naive one-by-one testing .
+
+### Teaching point
+
+This extension is useful near the end of the lecture because it links a familiar puzzle to live algorithmic research questions . It also broadens the conceptual bridge to compressed sensing, testing under uncertainty, and sparse recovery .
+
+# Summary table for teaching
+
+| Order | Problem | Main idea | Why it belongs here |
+|---|---|---|---|
+| 1 | 3 coins, known heavier | One weighing gives three outcomes | Simplest demonstration of ternary branching |
+| 2 | 9 coins, known heavier | Split into three equal groups | First nontrivial recursive strategy |
+| 3 | 27 coins in 3 weighings | \(3^k\) counting bound | Formalizes optimality and recursion |
+| 4 | 12 coins, heavier or lighter | Hidden state doubles possibilities | Introduces adaptive case design |
+| 5 | General \(n\)-coin bound | \(2n \le 3^k\) | Converts puzzle intuition into theorem |
+| 6 | Multiple counterfeit coins | Group testing perspective | Connects puzzles to research algorithms |
+
+# Exercises
+
+1. Show that 15 coins cannot be solved in 3 weighings if the fake may be heavier or lighter by applying the bound \(2n \le 3^k\) .
+2. Design a 2-weighing strategy for 4 coins when one counterfeit may be heavier or lighter, or argue why a proposed strategy fails on some branch .
+3. Prove that if the counterfeit is known to be heavier, then \(3^k\) coins can be handled in \(k\) weighings by induction on \(k\) .
+4. For the 12-coin problem, fully expand one branch of the decision tree and verify that every leaf identifies both the coin and whether it is heavy or light .
+
+# Algorithmic connections
+
+Coin-weighing problems are useful because they sit at the intersection of several core ideas in algorithm design . In one compact setting, they show how to model queries as a tree, derive lower bounds from the branching factor, and design adaptive strategies that use each comparison as efficiently as possible .
+
+| Algorithms concept | Coin-weighing interpretation |
+|---|---|
+| Decision trees | Each weighing is a node with three outgoing branches |
+| Information-theoretic lower bounds | The tree has at most \(3^k\) leaves after \(k\) weighings |
+| Divide-and-conquer | Split candidates into three balanced groups when possible |
+| Adaptive algorithms | Later weighings depend on earlier outcomes |
+| Group testing | Multiple fake coins turn the task into subset identification |
+
+# Teaching notes
+
+A productive lecture arc is to spend the first half on the known-heavier case so that students internalize the ternary-search pattern before confronting hidden-state ambiguity . The 12-coin problem should be presented less as a puzzle stunt and more as an example of how algorithm design must align representation, branching, and decodability at the same time .
+
+For boardwork or slides, the most effective diagrams are small decision trees with branch labels \(L\), \(B\), and \(R\), plus explicit candidate sets at each node . That visual language makes it easier for students to move from puzzle-solving to formal algorithm analysis .

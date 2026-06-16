@@ -1,0 +1,164 @@
+# Purpose and Audience
+This document is intended to provide notes and insights on the course CS 2026, which is aimed at high school students interested in computer science. The notes are meant to be a resource for students taking the course, as well as for educators who may want to use the course materials in their own teaching.
+
+# Session 1
+We started with listing out the different things the students wanted to learn. The list included topics such as:
+- Website building
+- Game development
+
+We spoke about algorithmic thinking and computational thinking. We refered to The power of computational thinking by Paul Curzon and Peter W. McOwan, Chapter 1 for this. 
+
+Then we started on Chapter 2, with the example of Bauby who has locked-in syndrome. We talked about how he was able to communicate using a system of blinking his left eye, and how this is an example of how we can use technology to help people with disabilities.
+
+We discussed various ways Bauby's left-eye blinking could be used to communicate, the various problems that arise from this and tried to come up with solutions to these problems. 
+
+# Session 2
+
+We started session 2 with a pouring problem. We had a 3 litre jug and a 5 litre jug, and we needed to measure out various amounts of water. We started with the simple one - how to measure 2 liters. 
+Then we we went and asked how to measure 4 liters, and 1 liter. 
+
+After this we asked if we can measure any quantity of water using only these two jugs and a larger vessel. 
+
+We followed it up with trying to understand this parlor trick/game. You guess a number and from the table below, if you can tell me which column your number is present, I can tell you what that number is. 
+
+| Column 1 | Column 2 | Column 3 | Column 4 |
+| --- | --- | --- | --- |
+| 8 | 4 | 2 | 1 |
+| 9 | 5 | 3 | 3 |
+| 10 | 6 | 6 | 5 |
+| 11 | 7 | 7 | 7 |
+| 12 | 12 | 10 | 9 |
+| 13 | 13 | 11 | 11 |
+| 14 | 14 | 14 | 13 |
+| 15 | 15 | 15 | 15 |
+
+We then looked at the problem of how to guess a specific letter someone has in mind in the least possible number of guesses. We came up with the strategy of asking if the letter is in the first half of the alphabet, and then narrowing it down based on the answer. Each question we ask halves the number of possibilities, and we can find the letter in at most 5 questions.
+
+We started making the decision tree and completing it was given as homework. 
+
+# Session 3
+
+We started playing tic-tac-toe and started noticing which approaches result in a win and which result in a loss or draw. Soon, students were able to see that there is a method to the madness. 
+We started to think of the choices available at each step and how each choice leads to further choices. We started to identify how many possible choices are there in each step. For example, the first step can be at any of the 9 boxes, the second step can be at any of the remaining 8 boxes, and so on.
+
+Once the first move is made, there are 8 possible moves left, and then 7, and so on. So the total number of positions to analyse would be 9!, which is a very big number. 
+
+We then started to think about how we can reduce the number of positions to analyse by looking at the symmetries in the game. For example, if we rotate the board, we can see that some positions are equivalent to others. This reduces the number of unique positions we need to consider.
+
+Looking at it this way, the first move has only three choices - center, corner, or edge. Once the first move takes the center, there are only 2 possible moves - edge or corner. 
+
+We started drawing up the decision trees for each of the possible moves. Completing the decision trees is left for homework. 
+
+# Session 4
+
+## Big Question: How Many Questions?
+
+- Problem: Guess a letter A–Z using yes/no questions; why is 5 questions the minimum, not 4 or 6? 
+- Generalisation: If the answer is between 1 and 100, 1 and 1000, or 1 and \(n\), how many yes/no questions are needed? 
+
+***
+
+## Linear Search vs Binary Search
+
+- **Linear (simple) search**: Check each option one by one: “Is it A? Is it B? Is it C?” etc. 
+- For 26 letters, worst case is 26 questions; for 100 items, worst case is 100 questions. 
+
+- **Binary search**: Each question halves the remaining possibilities (decision tree: 1–50, then 1–25, 1–12, 1–6, 1–3, 1–2, etc.). 
+- For 100 items, worst case is 7 questions (because \(2^7 = 128\), which is the first power of 2 ≥ 100). 
+
+***
+
+## Powers of Two and “Log Time”
+
+- Pattern: 
+ - 1 question → up to \(2^1 = 2\) items 
+ - 2 questions → up to \(2^2 = 4\) items 
+ - 3 questions → up to \(2^3 = 8\) items 
+ - In general: \(n\) questions → up to \(2^n\) items. 
+- Inverse view: For a given number of items, questions needed ≈ log base 2 of (number of items). 
+
+- Log definition: If \(x^n = m\), then \(\log_x m = n\). 
+ - Example: \(2^3 = 8 \Rightarrow \log_2 8 = 3\); \(10^2 = 100 \Rightarrow \log_{10}100 = 2\). 
+- Binary search runs in **logarithmic time**: number of questions grows slowly even when items grow a lot (e.g. 1000 items need 9 questions, 10,000 need 14). 
+
+***
+
+## When Binary Search Works (and When It Doesn’t)
+
+- Binary search only works on **sorted (ordered) lists** (e.g. numbers in increasing order, names in alphabetical order). 
+- If data is unsorted (like ), you must either: 
+ - Use linear search, or 
+ - First sort the data, then use binary search. 
+
+- Searching is a very common and expensive operation in computing (e.g. Facebook finding your username among millions/billions quickly). 
+- Because of this, **sorting** becomes a key problem in computer science: given items, arrange them into a sorted order. 
+
+***
+
+## Pouring Problem (Jug Problem)
+
+- Setup: One 5‑litre jug and one 3‑litre jug; you must measure specific amounts of water (e.g. 2L, 4L, 1L). 
+- Example solutions:
+ - To get 2L: Fill 5L, pour 3L into the 3L jug, 2L remains in the 5L jug. 
+ - To get 4L efficiently: Use a smarter sequence of pours (e.g. use the 3L jug twice so only two measurements are needed). 
+
+- Key idea: There can be many algorithms (step sequences) to solve the same problem; we care about the one with **fewest operations**. 
+
+***
+
+## Coin Weighing (Ternary Search Idea)
+
+- Setup: 3 coins, one fake coin which is lighter, and a balance scale that only tells which side is heavier or if they’re equal. 
+- This gives **3 outcomes** per weighing: left heavier, right heavier, or equal. 
+
+- With 3 coins and 1 lighter fake coin:
+ - Weigh two coins once; from the result (heavier, lighter, equal), you can identify the fake in just 1 weighing. 
+
+- Extended problem: 9 coins, 1 lighter fake coin:
+ - Naive strategy (pairwise weighing) can take up to 4 weighings. 
+ - Better strategy:
+ - Put 3 coins vs 3 coins, keep 3 aside (ternary split). 
+ - One weighing narrows you to 3 suspect coins; second weighing finds the fake. 
+ - So 9 coins can be solved in 2 weighings. 
+
+- General pattern:
+ - 1 weighing → handle 3 coins 
+ - 2 weighings → handle \(3^2 = 9\) coins 
+ - 3 weighings → handle \(3^3 = 27\) coins, by repeating the same splitting into groups of three. 
+
+- This idea is like a **ternary search** (splitting into 3 parts), while binary search splits into 2. 
+
+***
+
+## What Is an Algorithm?
+
+- An **algorithm** is a precise sequence of steps to solve a problem; it is not tied to any specific computer or programming language. 
+- Each action (question asked, pour done, weighing performed, comparison made) counts as one **operation** and takes time. 
+
+- Typical development flow:
+ - Algorithm (high‑level idea). 
+ - Pseudocode (steps written in simple, computer‑like language). 
+ - Actual program (e.g. C `printf(...)` or Python `print(...)`). 
+
+- Modern AIs can often write code, but you still need the algorithm and reasoning, especially for new or unfamiliar problems. 
+
+***
+
+## Why Math (Logs, Exponents) Matters
+
+- Understanding exponents and logarithms is important because many algorithms, like binary search, are described and analysed using these ideas. 
+- Logs convert exponential growth (like \(2^n\)) into a manageable linear scale (\(n\)), which helps in thinking about efficiency. 
+
+***
+
+# Session 5
+
+Discuss the decision trees for guessing the alphabet. See how the yes/no decisions at each series of nodes leading to each letter can be represented using binary numbers.  
+
+Discuss the decision tree for tic-tac-toe. Also discuss the concept of a winning strategy in tic-tac-toe, and how to identify it.
+
+# Session 6
+
+Introduce the concept of sorting and the problem of sorting using the resources available at https://www.csfieldguide.org.nz/en/chapters/algorithms/sorting/
+
+
