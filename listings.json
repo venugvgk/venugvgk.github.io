@@ -1,5 +1,42 @@
 [
   {
+    "listing": "/books/index.html",
+    "items": [
+      "/books/own-picture-books/laya-smile/index.html",
+      "/books/own-picture-books/treekar-shomus/index.html",
+      "/books/own-picture-books/laddoo/index.html",
+      "/books/own-picture-books/appu/index.html",
+      "/books/translated-story-books/avantika/index.html",
+      "/books/translated-story-books/eddula-jodi/index.html",
+      "/books/translated-story-books/akaasamlo/index.html",
+      "/books/translated-story-books/appu-prapancham/index.html",
+      "/books/story-weaver/bommalu-geese/index.html",
+      "/books/story-weaver/password/index.html",
+      "/books/story-weaver/art-gallery/index.html",
+      "/books/story-weaver/inti-daggara/index.html",
+      "/books/story-weaver/mana-bhoomi/index.html",
+      "/books/story-weaver/ambedkar/index.html",
+      "/books/story-weaver/amma-intiki/index.html",
+      "/books/story-weaver/chakrala-kurchi/index.html",
+      "/books/story-weaver/battalu-utike/index.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
+    "listing": "/tir/index.html",
+    "items": [
+      "/tir/engineering-economic-exploitation.html",
+      "/tir/ellora-how-history-looks.html",
+      "/tir/philosophy/bachelor-men.html",
+      "/tir/history/indias-prettiest-library.html",
+      "/tir/sociology/ravidas-begumpura.html",
+      "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/palnadu-kathalu-sujata-velpuri/index.html",
@@ -159,26 +196,6 @@
     ]
   },
   {
-    "listing": "/til/index.html",
-    "items": [
-      "/til/Using AI/extract-audio-with-VLC.html",
-      "/til/quarto/downloadthis.html",
-      "/til/python/function-return-multiple-values.html",
-      "/til/quarto/adding-code.html",
-      "/til/quarto/spacebar-jupyter.html",
-      "/til/quarto/using-jupyter-notebook.html",
-      "/til/python/revealjs-code-with-python.html",
-      "/til/quarto/reading-book-revealjs.html",
-      "/til/python/merge-pdfs-python.html",
-      "/til/quarto/adding-links-to-yml-files.html",
-      "/til/quarto/syntax-highlighting-the-code.html",
-      "/til/quarto/quarto-modify-table-listing.html",
-      "/til/quarto/quarto-add-custom-font.html",
-      "/til/quarto/quarto-modify-listing-page.html",
-      "/til/powerpoint/powerpoint-morph-timeline.html"
-    ]
-  },
-  {
     "listing": "/education/index.html",
     "items": [
       "/education/language-policy-quick-thoughts.html",
@@ -196,40 +213,36 @@
     ]
   },
   {
-    "listing": "/books/index.html",
+    "listing": "/cs_2026/index.html",
     "items": [
-      "/books/own-picture-books/laya-smile/index.html",
-      "/books/own-picture-books/treekar-shomus/index.html",
-      "/books/own-picture-books/laddoo/index.html",
-      "/books/own-picture-books/appu/index.html",
-      "/books/translated-story-books/avantika/index.html",
-      "/books/translated-story-books/eddula-jodi/index.html",
-      "/books/translated-story-books/akaasamlo/index.html",
-      "/books/translated-story-books/appu-prapancham/index.html",
-      "/books/story-weaver/bommalu-geese/index.html",
-      "/books/story-weaver/password/index.html",
-      "/books/story-weaver/art-gallery/index.html",
-      "/books/story-weaver/inti-daggara/index.html",
-      "/books/story-weaver/mana-bhoomi/index.html",
-      "/books/story-weaver/ambedkar/index.html",
-      "/books/story-weaver/amma-intiki/index.html",
-      "/books/story-weaver/chakrala-kurchi/index.html",
-      "/books/story-weaver/battalu-utike/index.html"
+      "/cs_2026/session6.html",
+      "/cs_2026/session5.html",
+      "/cs_2026/session4.5.html",
+      "/cs_2026/session4.html",
+      "/cs_2026/session3.html",
+      "/cs_2026/session2.html",
+      "/cs_2026/session1.html",
+      "/cs_2026/session0.html"
     ]
   },
   {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
-    "listing": "/tir/index.html",
+    "listing": "/til/index.html",
     "items": [
-      "/tir/engineering-economic-exploitation.html",
-      "/tir/ellora-how-history-looks.html",
-      "/tir/philosophy/bachelor-men.html",
-      "/tir/history/indias-prettiest-library.html",
-      "/tir/sociology/ravidas-begumpura.html",
-      "/tir/history/indian-syncretism.html"
+      "/til/Using AI/extract-audio-with-VLC.html",
+      "/til/quarto/downloadthis.html",
+      "/til/python/function-return-multiple-values.html",
+      "/til/quarto/adding-code.html",
+      "/til/quarto/spacebar-jupyter.html",
+      "/til/quarto/using-jupyter-notebook.html",
+      "/til/python/revealjs-code-with-python.html",
+      "/til/quarto/reading-book-revealjs.html",
+      "/til/python/merge-pdfs-python.html",
+      "/til/quarto/adding-links-to-yml-files.html",
+      "/til/quarto/syntax-highlighting-the-code.html",
+      "/til/quarto/quarto-modify-table-listing.html",
+      "/til/quarto/quarto-add-custom-font.html",
+      "/til/quarto/quarto-modify-listing-page.html",
+      "/til/powerpoint/powerpoint-morph-timeline.html"
     ]
   }
 ]
