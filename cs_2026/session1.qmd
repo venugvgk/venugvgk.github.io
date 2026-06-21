@@ -1,0 +1,18 @@
+---
+title: Session 1 Locked-in Syndrome and Algorithmic thinking
+date: 2026-06-02
+page-layout: article
+---
+
+We started with listing out the different things the students wanted to learn. The list included topics such as:
+
+- Website building
+- Game development
+- Hacking
+- Using AI tools
+
+We spoke about algorithmic thinking and computational thinking. We refered to Chapter 1 of *The power of computational thinking* by Paul Curzon and Peter W. McOwan, for this. 
+
+Then we started on Chapter 2, with the example of Bauby who has locked-in syndrome. We talked about how he was able to communicate using a system of blinking his left eye, and how this is an example of how we can use technology to help people with disabilities.
+
+We discussed various ways Bauby's left-eye blinking could be used to communicate, the various problems that arise from this and tried to come up with solutions to these problems. 

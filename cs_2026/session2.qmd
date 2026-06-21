@@ -1,0 +1,27 @@
+---
+title: Session 2 Pouring; guessing letters and numbers
+date: 2026-06-07
+page-layout: article
+---
+
+We started session 2 with a pouring problem. We had a 3 litre jug and a 5 litre jug, and we needed to measure out various amounts of water. We started with the simple one - how to measure 2 liters. 
+Then we we went and asked how to measure 4 liters, and 1 liter. 
+
+After this we asked if we can measure any quantity of water using only these two jugs and a larger vessel. 
+
+We followed it up with trying to understand this parlor trick/game. You guess a number and from the table below, if you can tell me which column your number is present, I can tell you what that number is. 
+
+| Column 1 | Column 2 | Column 3 | Column 4 |
+| --- | --- | --- | --- |
+| 8 | 4 | 2 | 1 |
+| 9 | 5 | 3 | 3 |
+| 10 | 6 | 6 | 5 |
+| 11 | 7 | 7 | 7 |
+| 12 | 12 | 10 | 9 |
+| 13 | 13 | 11 | 11 |
+| 14 | 14 | 14 | 13 |
+| 15 | 15 | 15 | 15 |
+
+We then looked at the problem of how to guess a specific letter someone has in mind in the least possible number of guesses. We came up with the strategy of asking if the letter is in the first half of the alphabet, and then narrowing it down based on the answer. Each question we ask halves the number of possibilities, and we can find the letter in at most 5 questions.
+
+We started making the decision tree and completing it was given as homework. 

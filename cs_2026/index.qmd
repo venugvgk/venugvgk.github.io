@@ -1,0 +1,10 @@
+---
+title: CS 2026
+subtitle: Class notes and resources
+listing:
+  contents: 
+    - "/*.qmd"
+  sort: "date desc"
+  type: table
+---
+

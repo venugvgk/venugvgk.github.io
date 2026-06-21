@@ -1,16 +1,8 @@
 ---
-title: "Coin Weighing Problems for Algorithms"
-format:
- html:
- toc: true
- number-sections: true
- theme: cosmo
- pdf:
- toc: true
- number-sections: true
+title: Deeper Exploration - Coin weighing
+date: 2026-06-15
+page-layout: article
 ---
-
-# Overview
 
 Coin weighing problems are a compact way to teach decision trees, information-theoretic lower bounds, divide-and-conquer, and adversarial reasoning in an algorithms course. A balance scale is especially useful pedagogically because each weighing has three possible outcomes—left pan heavier, right pan heavier, or balance—which naturally leads to ternary branching in the search tree.
 

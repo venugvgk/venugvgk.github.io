@@ -29,7 +29,7 @@
 //used on TIL page to suppress author column
 
 .quarto-listing-table th:nth-child(3),
-td:nth-child(3) {
+.quarto-listing-table td:nth-child(3) {
     display: none !important;
 }
 

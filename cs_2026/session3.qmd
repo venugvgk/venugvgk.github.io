@@ -1,0 +1,16 @@
+---
+title: Session 3 Tic-tac-toe 1
+date: 2026-06-09
+page-layout: article
+---
+
+We started playing tic-tac-toe and started noticing which approaches result in a win and which result in a loss or draw. Soon, students were able to see that there is a method to the madness. 
+We started to think of the choices available at each step and how each choice leads to further choices. We started to identify how many possible choices are there in each step. For example, the first step can be at any of the 9 boxes, the second step can be at any of the remaining 8 boxes, and so on.
+
+Once the first move is made, there are 8 possible moves left, and then 7, and so on. So the total number of positions to analyse would be 9!, which is a very big number. 
+
+We then started to think about how we can reduce the number of positions to analyse by looking at the symmetries in the game. For example, if we rotate the board, we can see that some positions are equivalent to others. This reduces the number of unique positions we need to consider.
+
+Looking at it this way, the first move has only three choices - center, corner, or edge. Once the first move takes the center, there are only 2 possible moves - edge or corner. 
+
+We started drawing up the decision trees for each of the possible moves. Completing the decision trees is left for homework. 

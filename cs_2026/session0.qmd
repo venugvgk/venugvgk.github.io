@@ -1,0 +1,9 @@
+---
+title: Purpose and Audience
+date: 2026-06-01
+page-layout: article
+---
+
+This document is intended to provide notes and insights on the course CS 2026, which is aimed at senior secondary school students interested in computer science. The specific set of students in this class have studied math for their high school diploma but have not choosen math for senior secondary. That means this course is suitable for the "non-math" population out there. 
+
+The notes are meant to be a resource for students taking the course, as well as for educators who may want to use the course materials in their own teaching.

@@ -1,57 +1,8 @@
-# Purpose and Audience
-This document is intended to provide notes and insights on the course CS 2026, which is aimed at high school students interested in computer science. The notes are meant to be a resource for students taking the course, as well as for educators who may want to use the course materials in their own teaching.
-
-# Session 1
-We started with listing out the different things the students wanted to learn. The list included topics such as:
-- Website building
-- Game development
-
-We spoke about algorithmic thinking and computational thinking. We refered to The power of computational thinking by Paul Curzon and Peter W. McOwan, Chapter 1 for this. 
-
-Then we started on Chapter 2, with the example of Bauby who has locked-in syndrome. We talked about how he was able to communicate using a system of blinking his left eye, and how this is an example of how we can use technology to help people with disabilities.
-
-We discussed various ways Bauby's left-eye blinking could be used to communicate, the various problems that arise from this and tried to come up with solutions to these problems. 
-
-# Session 2
-
-We started session 2 with a pouring problem. We had a 3 litre jug and a 5 litre jug, and we needed to measure out various amounts of water. We started with the simple one - how to measure 2 liters. 
-Then we we went and asked how to measure 4 liters, and 1 liter. 
-
-After this we asked if we can measure any quantity of water using only these two jugs and a larger vessel. 
-
-We followed it up with trying to understand this parlor trick/game. You guess a number and from the table below, if you can tell me which column your number is present, I can tell you what that number is. 
-
-| Column 1 | Column 2 | Column 3 | Column 4 |
-| --- | --- | --- | --- |
-| 8 | 4 | 2 | 1 |
-| 9 | 5 | 3 | 3 |
-| 10 | 6 | 6 | 5 |
-| 11 | 7 | 7 | 7 |
-| 12 | 12 | 10 | 9 |
-| 13 | 13 | 11 | 11 |
-| 14 | 14 | 14 | 13 |
-| 15 | 15 | 15 | 15 |
-
-We then looked at the problem of how to guess a specific letter someone has in mind in the least possible number of guesses. We came up with the strategy of asking if the letter is in the first half of the alphabet, and then narrowing it down based on the answer. Each question we ask halves the number of possibilities, and we can find the letter in at most 5 questions.
-
-We started making the decision tree and completing it was given as homework. 
-
-# Session 3
-
-We started playing tic-tac-toe and started noticing which approaches result in a win and which result in a loss or draw. Soon, students were able to see that there is a method to the madness. 
-We started to think of the choices available at each step and how each choice leads to further choices. We started to identify how many possible choices are there in each step. For example, the first step can be at any of the 9 boxes, the second step can be at any of the remaining 8 boxes, and so on.
-
-Once the first move is made, there are 8 possible moves left, and then 7, and so on. So the total number of positions to analyse would be 9!, which is a very big number. 
-
-We then started to think about how we can reduce the number of positions to analyse by looking at the symmetries in the game. For example, if we rotate the board, we can see that some positions are equivalent to others. This reduces the number of unique positions we need to consider.
-
-Looking at it this way, the first move has only three choices - center, corner, or edge. Once the first move takes the center, there are only 2 possible moves - edge or corner. 
-
-We started drawing up the decision trees for each of the possible moves. Completing the decision trees is left for homework. 
-
-# Session 4
-
-## Big Question: How Many Questions?
+---
+title: Session 4 How many questions? Search Algorithms
+date: 2026-06-14
+page-layout: article
+---
 
 - Problem: Guess a letter A–Z using yes/no questions; why is 5 questions the minimum, not 4 or 6? 
 - Generalisation: If the answer is between 1 and 100, 1 and 1000, or 1 and \(n\), how many yes/no questions are needed? 
@@ -150,15 +101,3 @@ We started drawing up the decision trees for each of the possible moves. Complet
 - Logs convert exponential growth (like \(2^n\)) into a manageable linear scale (\(n\)), which helps in thinking about efficiency. 
 
 ***
-
-# Session 5
-
-Discuss the decision trees for guessing the alphabet. See how the yes/no decisions at each series of nodes leading to each letter can be represented using binary numbers.  
-
-Discuss the decision tree for tic-tac-toe. Also discuss the concept of a winning strategy in tic-tac-toe, and how to identify it.
-
-# Session 6
-
-Introduce the concept of sorting and the problem of sorting using the resources available at https://www.csfieldguide.org.nz/en/chapters/algorithms/sorting/
-
-

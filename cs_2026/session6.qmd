@@ -1,0 +1,11 @@
+---
+title: Session 6 Plan
+date: 2026-06-21
+page-layout: article
+---
+Revise logarithms, different base number systems and insertion sort. 
+Discuss quick sort. 
+
+Discuss the decision tree for tic-tac-toe. Also discuss the concept of a winning strategy in tic-tac-toe, and how to identify it.
+
+

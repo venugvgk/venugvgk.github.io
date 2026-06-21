@@ -38,6 +38,9 @@ website:
          href: tir/index.qmd
        - text: On Education
          href: education/index.qmd
+       - text: CS 2026
+         href: cs_2026/index.qmd
+
 
         
   
