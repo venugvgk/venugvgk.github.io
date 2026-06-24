@@ -13,4 +13,4 @@ We then started to think about how we can reduce the number of positions to anal
 
 Looking at it this way, the first move has only three choices - center, corner, or edge. Once the first move takes the center, there are only 2 possible moves - edge or corner. 
 
-We started drawing up the decision trees for each of the possible moves. Completing the decision trees is left for homework. 
+We started drawing up the decision trees for each of the possible moves. Completing the decision trees is left for homework and further discussion. 
