@@ -1,11 +1,406 @@
 ---
-title: Session 6 Plan
-date: 2026-06-21
+title: Session 6 Pseudocode, sample programs, program elements 
+date: 2026-06-24
 page-layout: article
 ---
-Revise logarithms, different base number systems and insertion sort. 
-Discuss quick sort. 
 
-Discuss the decision tree for tic-tac-toe. Also discuss the concept of a winning strategy in tic-tac-toe, and how to identify it.
+# Overview
 
+- Discussed how a computer program “thinks” using two example programs:
+  - A “What is your name?” greeting program with special responses.
+  - A number-guessing game where the computer chooses a number and the human guesses.
+- Identified three core ideas behind most programs:
+  - Data and data structures  
+  - Loops (repetition)  
+  - Conditionals (decisions)
+- Looked at actual Python-style code for the greeting program and the idea of pseudocode.
+- Revised insertion sort, including best case and worst case (upper and lower bounds).
+- Reviewed homework on base 5, 7, 8 and recalled earlier topics (binary, sum of natural numbers, selection sort).
 
+---
+
+# How programs “think”: two examples
+
+## Greeting program: “What is your name?”
+
+We analysed a program that repeatedly:
+
+1. Asks: `Hello, what is your name?`  
+2. Waits for the user to type a name (input).  
+3. Responds differently depending on the name:
+
+- If the name is `Venu`  
+  - Print: `Good morning, sir. How are you today?`
+- If the name is in a special list (for example: `Abhi`, `Akshay`, `Anusha`, `Sam`) and this is the **first** time that name appears  
+  - Print: `Oh, you are that idiot. Good meeting you.`
+- If the name is in that list and has already appeared before  
+  - Print: `We have already met.`
+- If the name is not in the list at all  
+  - Print a message like:  
+    `I know there are only five of you in this class. Choose from this list: ...`
+
+From this behaviour, we listed what the computer needs:
+
+- The exact question text to display: `"Hello, what is your name?"`
+- A way to store the fixed list of “valid” names.
+- A way to store names that have already been entered (for repeat detection).
+- A way to:
+  - Read user input.
+  - Compare that input against:
+    - The original list of allowed names.
+    - The set of names already seen.
+- A way to decide which response to print based on the comparisons.
+- A loop that keeps asking for names (no explicit “exit” in this version).
+
+We also noticed:
+
+- The program is case sensitive: `Abhi` is not the same as `abhi` unless we explicitly convert or check both forms.
+- The repeating pattern is: **ask → read → compare → decide → repeat**.
+
+### Sketch of Python-like code
+
+Here is a simplified version of this program.
+
+```python
+met_people = set()  # empty set
+
+while True:
+    name = input("Hello, what is your name? ")
+
+    if name == "Venu":
+        print("Good morning, sir. How are you today?")
+
+    elif name in ["Abhi", "Akshay", "Anusha", "Sam"]:
+        if name in met_people:
+            print("We have already met.")
+        else:
+            print("Oh, you are that idiot. Good meeting you.")
+            met_people.add(name)
+
+    else:
+        print("I know there are only five of you in this class.")
+        print("Choose from: Abhi, Akshay, Anusha, Sam")
+```
+
+Key observations:
+
+- `met_people = set()` defines a data structure (a set) to remember names we have already seen.
+- `while True:` creates an infinite loop.
+- `if`, `elif`, `else` are the conditional branches where decisions are made.
+- `name == "Venu"` uses `==` for comparison, whereas `name = "Venu"` would be assignment.
+
+## Number guessing game (computer chooses, you guess)
+
+The second example was a guessing game where:
+
+- The computer chooses a secret number in a given range (for example 1 to 100).
+- The player repeatedly guesses the number.
+- Each time, the computer answers:
+  - “Too high”
+  - “Too low”
+  - “Correct”
+
+The game continues until the player guesses correctly.
+
+The computer must be able to:
+
+1. **Know the range** of allowed numbers (for example 1–100).
+2. **Choose a random number** in that range and store it.
+3. **Prompt the user** to enter guesses, e.g., `"Please guess the number:"`.
+4. **Read each guess** from the user (input).
+5. **Compare** each guess with the secret number.
+6. Based on the comparison:
+   - If guess > secret: print `"Too high"`.
+   - If guess < secret: print `"Too low"`.
+   - If guess == secret: print a success message and **stop the game**.
+7. Keep prompting for a guess while guesses are wrong, and to **stop** when the correct guess is made.
+
+A Python-style code:
+
+```python
+import random
+
+secret = random.randint(1, 100)
+
+while True:
+    guess = int(input("Guess the number between 1 and 100: "))
+
+    if guess > secret:
+        print("Too high")
+    elif guess < secret:
+        print("Too low")
+    else:
+        print("Correct! You won.")
+        break
+```
+
+---
+
+# Three core ideas: data structures, loops, conditionals
+
+From these two programs, we extracted three fundamental ideas.
+
+## Data and data structures
+
+- A **data structure** is a particular way of organizing and storing data so that we can use it efficiently.
+- Examples from class:
+  - The list of allowed names (`["Abhi", "Akshay", ...]`) is a data structure.
+  - The set `met_people` is another data structure, used to store names we have already seen.
+  - In the number guessing game, the secret number is stored in a variable; the range 1–100 is the domain from which it is chosen.
+- Programs must handle different kinds of data:
+  - Text (strings) such as names.
+  - Whole numbers (integers).
+  - Possibly decimal numbers (floating point).
+  - Collections of values (lists, sets, arrays, etc.).
+
+Understanding data structures is a major part of computer science because:
+
+- The “shape” of the data often suggests the most efficient way to process it.
+- Different data structures are better or worse for different operations (searching, insertion, deletion, etc.).
+
+## Loops (repetition)
+
+- A **loop** is a construct that repeats a block of code until some stopping condition is met.
+- In the greeting program:
+  - `while True:` repeats forever, asking for a name and responding.
+- In the guessing game:
+  - `while True:` repeats until `break` is reached when the user guesses correctly.
+- Everyday analogy:
+  - Eating:
+    - “Take a bite” is the repeated action.
+    - You keep doing it until a condition:
+      - You feel full,
+      - Time is up,
+      - Or food runs out.
+
+In code, common loop forms include:
+
+- `while condition:`
+- `for item in collection:`
+
+## Conditionals (decisions)
+
+- A **conditional** is a decision point where the program checks a condition and chooses what to do next.
+- In Python, typical syntax:
+
+```python
+if condition1:
+    # do something
+elif condition2:
+    # do something else
+else:
+    # default choice
+```
+
+- In the greeting program:
+  - If the name is exactly `"Venu"` → special greeting.
+  - Else if the name is in the list of known students:
+    - If also in `met_people` → “We have already met.”
+    - Else → “Oh, you are that idiot. Good meeting you.” and add to `met_people`.
+  - Else → “I know there are only five of you…”.
+- In the guessing game:
+  - If guess > secret → “Too high”.
+  - Else if guess < secret → “Too low”.
+  - Else → “Correct!” and exit the loop.
+
+---
+
+# Code vs pseudocode
+
+We distinguished between:
+
+## Pseudocode
+
+- Human-readable description of the steps involved in solving a problem.
+- Not tied to a particular programming language.
+- Focuses on **logic**, not on exact syntax.
+- Example (greeting program, pseudocode style):
+
+```text
+start with an empty set of met_people
+repeat forever:
+    ask "Hello, what is your name?"
+    read name
+
+    if name is "Venu":
+        say special greeting
+    else if name is in the fixed list of allowed names:
+        if name is already in met_people:
+            say "We have already met"
+        else:
+            say first-time greeting
+            add name to met_people
+    else:
+        say "I know there are only five of you. Choose from this list."
+```
+
+## Actual code (syntax)
+
+- Written in a specific language (e.g., Python, C, Java).
+- Must use the exact syntax that the language understands.
+- You must also know the environment (e.g., how VS Code treats indentation, how to run the program, etc.).
+
+Our learning plan:
+
+- First write clear **pseudocode** to capture the logic.
+- Then translate pseudocode into **real code** slowly, learning syntax along the way.
+- This way we separate:
+  - Conceptual difficulty: “What should the program do?”
+  - Mechanical difficulty: “How do I spell it in this language?”
+
+---
+
+# Revision: Insertion sort and its bounds
+
+We revised **insertion sort** using the box game [here](https://www.csfieldguide.org.nz/en/interactives/sorting-algorithms/)
+
+## How insertion sort works (intuitive)
+
+Think of each box as having a weight:
+
+1. Compare the first two boxes:
+   - Put the lighter one on the left and the heavier one on the right.
+2. Take the third box:
+   - Compare it with the lighter box first.
+   - Depending on the result, compare further and insert it into one of three positions:
+     - Left of both
+     - Between them
+     - Right of both
+3. For each new box:
+   - Compare it with elements of the already sorted part (starting near the “middle” for efficiency).
+   - Keep comparing and shifting until you find the correct position.
+4. At each step, you have a sorted prefix, and you **insert** the next item into its correct position in that prefix.
+
+This is similar to how many people sort playing cards in their hand: the hand remains sorted, and each new card is inserted in the right place.
+
+## Best case (lower bound on comparisons)
+
+Let there be \(n\) items already in correct order:
+
+\[
+1, 2, 3, \dots, n
+\]
+
+Then:
+
+- Compare 1 and 2.
+- Compare 2 and 3.
+- Compare 3 and 4.
+- …
+- Compare \((n - 1)\) and \(n\).
+
+Total comparisons: \(n - 1\).
+
+So in the best case:
+
+- **Number of comparisons** = \(n - 1\).
+
+This happens when the input is already sorted.
+
+## Worst case (upper bound on comparisons)
+
+Worst case: the items are in **reverse** order:
+
+\[
+n, n-1, \dots, 3, 2, 1
+\]
+
+To insert each item in order:
+
+- For the 2nd item: 1 comparison.
+- For the 3rd item: 2 comparisons.
+- For the 4th item: 3 comparisons.
+- …
+- For the \(n\)-th item: \(n - 1\) comparisons.
+
+Total comparisons:
+
+\[
+1 + 2 + 3 + \dots + (n - 1)
+\]
+
+Recall the formula for the sum of first \(k\) natural numbers:
+
+\[
+1 + 2 + \dots + k = \frac{k (k + 1)}{2}
+\]
+
+Here \(k = n - 1\), so:
+
+\[
+1 + 2 + \dots + (n - 1) = \frac{(n - 1)n}{2}
+\]
+
+So in the worst case:
+
+- **Number of comparisons** = \(\dfrac{n(n - 1)}{2}\).
+
+Summary for insertion sort:
+
+- Best case (already sorted): \(n - 1\) comparisons.
+- Worst case (reverse sorted): \(\dfrac{n(n - 1)}{2}\) comparisons.
+
+---
+
+# Number bases and homework
+
+We briefly checked homework on different number bases: base 5, base 7 and base 8.
+
+## Place values in different bases
+
+- **Base 5**: place values are  
+  \(1, 5, 25, 125, \dots\)
+- **Base 7**: place values are  
+  \(1, 7, 49, 343, \dots\)
+- **Base 8** (octal): place values are  
+  \(1, 8, 64, 512, \dots\)
+
+To convert from a base-\(b\) representation like:
+
+\[
+(d_k d_{k-1} \dots d_1 d_0)_b
+\]
+
+to decimal, we compute:
+
+\[
+d_0 \cdot b^0 + d_1 \cdot b^1 + d_2 \cdot b^2 + \dots + d_k \cdot b^k
+\]
+
+Students worked through specific examples such as converting decimal numbers like 32 and 78 into base 5, 7 and 8, and similar exercises with other numbers.
+
+We also revisited:
+
+- Sum of natural numbers and Gauss’s formula.
+- Binary representation and the idea of positional number systems.
+- Selection sort (from earlier classes).
+
+---
+
+# Looking ahead
+
+Planned topics for upcoming CS2026 classes:
+
+- **Quick sort**
+  - Basic idea and motivation.
+  - Comparison with insertion sort and selection sort.
+- **Tic‑tac‑toe (part 2)**
+  - Decision trees.
+  - Exploring whether there is a winning strategy.
+  - Thinking about how to write a program that plays tic‑tac‑toe.
+- Continuing the “program as a tool” approach:
+  - You are encouraged to bring interesting questions, puzzles or games that you think could be solved by writing a program.
+  - We will try to express them in pseudocode and then in actual code.
+
+---
+
+# Short glossary
+
+| Term           | Informal meaning                                                                 |
+|----------------|----------------------------------------------------------------------------------|
+| Data           | Information that a program reads, stores and manipulates (names, numbers, etc.). |
+| Data structure | A particular way of organizing data (lists, sets, arrays, etc.).                 |
+| Loop           | A construct for repeating steps until some condition is met.                     |
+| Conditional    | A decision step that chooses behaviour based on a true/false condition.          |
+| Pseudocode     | Language-agnostic, human-readable description of an algorithm.                   |
+| Insertion sort | Sorting method that inserts each item into its correct position in a sorted list.|
