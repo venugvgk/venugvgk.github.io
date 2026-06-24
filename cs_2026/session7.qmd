@@ -1,0 +1,118 @@
+---
+title: Session 7 Plan Computer Guesses the number 
+date: 2026-06-25
+page-layout: article
+---
+# Session focus
+
+In this session, the player thinks of a number between 1 and 100, and the computer tries to guess it by repeatedly narrowing the possible range. The main programming ideas are storing the current range, repeating the same action in a loop, and using conditionals to update the range based on feedback.
+
+# Main idea
+
+The computer keeps track of two values:
+
+- `low`, the smallest possible number.
+- `high`, the largest possible number.
+
+Each time, it guesses the middle number of the current range:
+
+```python
+mid = (low + high) // 2
+```
+
+If the player says the secret number is higher, the computer moves the lower bound up. If the player says it is lower, the computer moves the upper bound down. If the player says the guess is correct, the program stops.
+
+# Pseudocode
+
+```text
+Set low = 1
+Set high = 100
+
+REPEAT:
+    mid = (low + high) // 2
+
+    Ask player:
+        "Is your number mid, or is it higher or lower?"
+    Read answer ("higher", "lower", or "correct")
+
+    IF answer is "higher":
+        low = mid + 1
+
+    ELSE IF answer is "lower":
+        high = mid - 1
+
+    ELSE IF answer is "correct":
+        say "I guessed your number!"
+        STOP
+```
+
+# Python program
+
+```python
+def play_binary_search():
+    print("Think of a number between 1 and 100.")
+    print("I will try to guess it!")
+
+    low = 1
+    high = 100
+
+    while True:
+        mid = (low + high) // 2
+        print("Is your number", mid, "?")
+        print("Type 'h' if your number is higher,")
+        print("'l' if it is lower, or")
+        print("'c' if it is correct.")
+
+        answer = input("> ")
+
+        if answer == 'h':
+            low = mid + 1
+        elif answer == 'l':
+            high = mid - 1
+        elif answer == 'c':
+            print("Yay! I guessed your number!")
+            break
+        else:
+            print("Please type h, l, or c.")
+
+        if low > high:
+            print("Something went wrong. Maybe the answers were inconsistent.")
+            break
+```
+
+# Teaching notes
+
+## What to point out in the pseudocode
+
+- The data in the algorithm is `low`, `high`, `mid`, and `answer`.
+- The repetition is the `REPEAT` step.
+- The decisions are the `IF / ELSE IF` branches.
+- The computer does not guess randomly; it uses the middle of the remaining range each time.
+
+## What to point out in the Python code
+
+- `def play_binary_search():` defines a function, so the whole game can be referred to by one name.
+- `low = 1` and `high = 100` store the current possible range.
+- `while True:` is the loop that keeps the game going.
+- `mid = (low + high) // 2` computes the middle of the current range.
+- The `if / elif / else` structure updates the range based on the user's answer.
+- `break` stops the loop when the number is found.
+
+# Classroom flow
+
+1. Ask one student to think of a number between 1 and 100.
+2. Run the algorithm manually on the board using `low`, `high`, and `mid`.
+3. After each response, update the range and compute the new middle.
+4. Once the class understands the process, show the pseudocode.
+5. Then show the Python version and match each line of code to the pseudocode.
+
+# Short practice exercise
+
+Ask students to simulate the algorithm for a secret number such as 73. At each step, they should write:
+
+- `low`
+- `high`
+- `mid`
+- the answer: higher, lower, or correct
+
+This helps them see that the range becomes smaller after every guess.
