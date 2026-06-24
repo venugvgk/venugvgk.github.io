@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-06-21">
+<meta name="dcterms.date" content="2026-06-24">
 
-<title>Session 6 Plan – Venu GVGK Raju</title>
+<title>Session 6 Pseudocode, sample programs, program elements – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -71,10 +105,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Session 6 Plan – Venu GVGK Raju">
+<meta property="og:title" content="Session 6 Pseudocode, sample programs, program elements – Venu GVGK Raju">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Session 6 Plan – Venu GVGK Raju">
+<meta name="twitter:title" content="Session 6 Pseudocode, sample programs, program elements – Venu GVGK Raju">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -135,15 +169,52 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#how-programs-think-two-examples" id="toc-how-programs-think-two-examples" class="nav-link" data-scroll-target="#how-programs-think-two-examples">How programs “think”: two examples</a>
+  <ul class="collapse">
+  <li><a href="#greeting-program-what-is-your-name" id="toc-greeting-program-what-is-your-name" class="nav-link" data-scroll-target="#greeting-program-what-is-your-name">Greeting program: “What is your name?”</a>
+  <ul class="collapse">
+  <li><a href="#sketch-of-python-like-code" id="toc-sketch-of-python-like-code" class="nav-link" data-scroll-target="#sketch-of-python-like-code">Sketch of Python-like code</a></li>
+  </ul></li>
+  <li><a href="#number-guessing-game-computer-chooses-you-guess" id="toc-number-guessing-game-computer-chooses-you-guess" class="nav-link" data-scroll-target="#number-guessing-game-computer-chooses-you-guess">Number guessing game (computer chooses, you guess)</a></li>
+  </ul></li>
+  <li><a href="#three-core-ideas-data-structures-loops-conditionals" id="toc-three-core-ideas-data-structures-loops-conditionals" class="nav-link" data-scroll-target="#three-core-ideas-data-structures-loops-conditionals">Three core ideas: data structures, loops, conditionals</a>
+  <ul class="collapse">
+  <li><a href="#data-and-data-structures" id="toc-data-and-data-structures" class="nav-link" data-scroll-target="#data-and-data-structures">Data and data structures</a></li>
+  <li><a href="#loops-repetition" id="toc-loops-repetition" class="nav-link" data-scroll-target="#loops-repetition">Loops (repetition)</a></li>
+  <li><a href="#conditionals-decisions" id="toc-conditionals-decisions" class="nav-link" data-scroll-target="#conditionals-decisions">Conditionals (decisions)</a></li>
+  </ul></li>
+  <li><a href="#code-vs-pseudocode" id="toc-code-vs-pseudocode" class="nav-link" data-scroll-target="#code-vs-pseudocode">Code vs pseudocode</a>
+  <ul class="collapse">
+  <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link" data-scroll-target="#pseudocode">Pseudocode</a></li>
+  <li><a href="#actual-code-syntax" id="toc-actual-code-syntax" class="nav-link" data-scroll-target="#actual-code-syntax">Actual code (syntax)</a></li>
+  </ul></li>
+  <li><a href="#revision-insertion-sort-and-its-bounds" id="toc-revision-insertion-sort-and-its-bounds" class="nav-link" data-scroll-target="#revision-insertion-sort-and-its-bounds">Revision: Insertion sort and its bounds</a>
+  <ul class="collapse">
+  <li><a href="#how-insertion-sort-works-intuitive" id="toc-how-insertion-sort-works-intuitive" class="nav-link" data-scroll-target="#how-insertion-sort-works-intuitive">How insertion sort works (intuitive)</a></li>
+  <li><a href="#best-case-lower-bound-on-comparisons" id="toc-best-case-lower-bound-on-comparisons" class="nav-link" data-scroll-target="#best-case-lower-bound-on-comparisons">Best case (lower bound on comparisons)</a></li>
+  <li><a href="#worst-case-upper-bound-on-comparisons" id="toc-worst-case-upper-bound-on-comparisons" class="nav-link" data-scroll-target="#worst-case-upper-bound-on-comparisons">Worst case (upper bound on comparisons)</a></li>
+  </ul></li>
+  <li><a href="#number-bases-and-homework" id="toc-number-bases-and-homework" class="nav-link" data-scroll-target="#number-bases-and-homework">Number bases and homework</a>
+  <ul class="collapse">
+  <li><a href="#place-values-in-different-bases" id="toc-place-values-in-different-bases" class="nav-link" data-scroll-target="#place-values-in-different-bases">Place values in different bases</a></li>
+  </ul></li>
+  <li><a href="#looking-ahead" id="toc-looking-ahead" class="nav-link" data-scroll-target="#looking-ahead">Looking ahead</a></li>
+  <li><a href="#short-glossary" id="toc-short-glossary" class="nav-link" data-scroll-target="#short-glossary">Short glossary</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Session 6 Plan</h1>
+<h1 class="title">Session 6 Pseudocode, sample programs, program elements</h1>
 </div>
 
 
@@ -154,7 +225,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 21, 2026</p>
+      <p class="date">June 24, 2026</p>
     </div>
   </div>
   
@@ -166,10 +237,469 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Revise logarithms, different base number systems and insertion sort. Discuss quick sort.</p>
-<p>Discuss the decision tree for tic-tac-toe. Also discuss the concept of a winning strategy in tic-tac-toe, and how to identify it.</p>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<ul>
+<li>Discussed how a computer program “thinks” using two example programs:
+<ul>
+<li>A “What is your name?” greeting program with special responses.</li>
+<li>A number-guessing game where the computer chooses a number and the human guesses.</li>
+</ul></li>
+<li>Identified three core ideas behind most programs:
+<ul>
+<li>Data and data structures<br>
+</li>
+<li>Loops (repetition)<br>
+</li>
+<li>Conditionals (decisions)</li>
+</ul></li>
+<li>Looked at actual Python-style code for the greeting program and the idea of pseudocode.</li>
+<li>Revised insertion sort, including best case and worst case (upper and lower bounds).</li>
+<li>Reviewed homework on base 5, 7, 8 and recalled earlier topics (binary, sum of natural numbers, selection sort).</li>
+</ul>
+<hr>
+</section>
+<section id="how-programs-think-two-examples" class="level1">
+<h1>How programs “think”: two examples</h1>
+<section id="greeting-program-what-is-your-name" class="level2">
+<h2 class="anchored" data-anchor-id="greeting-program-what-is-your-name">Greeting program: “What is your name?”</h2>
+<p>We analysed a program that repeatedly:</p>
+<ol type="1">
+<li>Asks: <code>Hello, what is your name?</code><br>
+</li>
+<li>Waits for the user to type a name (input).<br>
+</li>
+<li>Responds differently depending on the name:</li>
+</ol>
+<ul>
+<li>If the name is <code>Venu</code>
+<ul>
+<li>Print: <code>Good morning, sir. How are you today?</code></li>
+</ul></li>
+<li>If the name is in a special list (for example: <code>Abhi</code>, <code>Akshay</code>, <code>Anusha</code>, <code>Sam</code>) and this is the <strong>first</strong> time that name appears
+<ul>
+<li>Print: <code>Oh, you are that idiot. Good meeting you.</code></li>
+</ul></li>
+<li>If the name is in that list and has already appeared before
+<ul>
+<li>Print: <code>We have already met.</code></li>
+</ul></li>
+<li>If the name is not in the list at all
+<ul>
+<li>Print a message like:<br>
+<code>I know there are only five of you in this class. Choose from this list: ...</code></li>
+</ul></li>
+</ul>
+<p>From this behaviour, we listed what the computer needs:</p>
+<ul>
+<li>The exact question text to display: <code>"Hello, what is your name?"</code></li>
+<li>A way to store the fixed list of “valid” names.</li>
+<li>A way to store names that have already been entered (for repeat detection).</li>
+<li>A way to:
+<ul>
+<li>Read user input.</li>
+<li>Compare that input against:
+<ul>
+<li>The original list of allowed names.</li>
+<li>The set of names already seen.</li>
+</ul></li>
+</ul></li>
+<li>A way to decide which response to print based on the comparisons.</li>
+<li>A loop that keeps asking for names (no explicit “exit” in this version).</li>
+</ul>
+<p>We also noticed:</p>
+<ul>
+<li>The program is case sensitive: <code>Abhi</code> is not the same as <code>abhi</code> unless we explicitly convert or check both forms.</li>
+<li>The repeating pattern is: <strong>ask → read → compare → decide → repeat</strong>.</li>
+</ul>
+<section id="sketch-of-python-like-code" class="level3">
+<h3 class="anchored" data-anchor-id="sketch-of-python-like-code">Sketch of Python-like code</h3>
+<p>Here is a simplified version of this program.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>met_people <span class="op">=</span> <span class="bu">set</span>()  <span class="co"># empty set</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    name <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Hello, what is your name? "</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> name <span class="op">==</span> <span class="st">"Venu"</span>:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Good morning, sir. How are you today?"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> name <span class="kw">in</span> [<span class="st">"Abhi"</span>, <span class="st">"Akshay"</span>, <span class="st">"Anusha"</span>, <span class="st">"Sam"</span>]:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> name <span class="kw">in</span> met_people:</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"We have already met."</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"Oh, you are that idiot. Good meeting you."</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            met_people.add(name)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"I know there are only five of you in this class."</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Choose from: Abhi, Akshay, Anusha, Sam"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Key observations:</p>
+<ul>
+<li><code>met_people = set()</code> defines a data structure (a set) to remember names we have already seen.</li>
+<li><code>while True:</code> creates an infinite loop.</li>
+<li><code>if</code>, <code>elif</code>, <code>else</code> are the conditional branches where decisions are made.</li>
+<li><code>name == "Venu"</code> uses <code>==</code> for comparison, whereas <code>name = "Venu"</code> would be assignment.</li>
+</ul>
+</section>
+</section>
+<section id="number-guessing-game-computer-chooses-you-guess" class="level2">
+<h2 class="anchored" data-anchor-id="number-guessing-game-computer-chooses-you-guess">Number guessing game (computer chooses, you guess)</h2>
+<p>The second example was a guessing game where:</p>
+<ul>
+<li>The computer chooses a secret number in a given range (for example 1 to 100).</li>
+<li>The player repeatedly guesses the number.</li>
+<li>Each time, the computer answers:
+<ul>
+<li>“Too high”</li>
+<li>“Too low”</li>
+<li>“Correct”</li>
+</ul></li>
+</ul>
+<p>The game continues until the player guesses correctly.</p>
+<p>The computer must be able to:</p>
+<ol type="1">
+<li><strong>Know the range</strong> of allowed numbers (for example 1–100).</li>
+<li><strong>Choose a random number</strong> in that range and store it.</li>
+<li><strong>Prompt the user</strong> to enter guesses, e.g., <code>"Please guess the number:"</code>.</li>
+<li><strong>Read each guess</strong> from the user (input).</li>
+<li><strong>Compare</strong> each guess with the secret number.</li>
+<li>Based on the comparison:
+<ul>
+<li>If guess &gt; secret: print <code>"Too high"</code>.</li>
+<li>If guess &lt; secret: print <code>"Too low"</code>.</li>
+<li>If guess == secret: print a success message and <strong>stop the game</strong>.</li>
+</ul></li>
+<li>Keep prompting for a guess while guesses are wrong, and to <strong>stop</strong> when the correct guess is made.</li>
+</ol>
+<p>A Python-style code:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>secret <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    guess <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Guess the number between 1 and 100: "</span>))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> guess <span class="op">&gt;</span> secret:</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Too high"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> guess <span class="op">&lt;</span> secret:</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Too low"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Correct! You won."</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="three-core-ideas-data-structures-loops-conditionals" class="level1">
+<h1>Three core ideas: data structures, loops, conditionals</h1>
+<p>From these two programs, we extracted three fundamental ideas.</p>
+<section id="data-and-data-structures" class="level2">
+<h2 class="anchored" data-anchor-id="data-and-data-structures">Data and data structures</h2>
+<ul>
+<li>A <strong>data structure</strong> is a particular way of organizing and storing data so that we can use it efficiently.</li>
+<li>Examples from class:
+<ul>
+<li>The list of allowed names (<code>["Abhi", "Akshay", ...]</code>) is a data structure.</li>
+<li>The set <code>met_people</code> is another data structure, used to store names we have already seen.</li>
+<li>In the number guessing game, the secret number is stored in a variable; the range 1–100 is the domain from which it is chosen.</li>
+</ul></li>
+<li>Programs must handle different kinds of data:
+<ul>
+<li>Text (strings) such as names.</li>
+<li>Whole numbers (integers).</li>
+<li>Possibly decimal numbers (floating point).</li>
+<li>Collections of values (lists, sets, arrays, etc.).</li>
+</ul></li>
+</ul>
+<p>Understanding data structures is a major part of computer science because:</p>
+<ul>
+<li>The “shape” of the data often suggests the most efficient way to process it.</li>
+<li>Different data structures are better or worse for different operations (searching, insertion, deletion, etc.).</li>
+</ul>
+</section>
+<section id="loops-repetition" class="level2">
+<h2 class="anchored" data-anchor-id="loops-repetition">Loops (repetition)</h2>
+<ul>
+<li>A <strong>loop</strong> is a construct that repeats a block of code until some stopping condition is met.</li>
+<li>In the greeting program:
+<ul>
+<li><code>while True:</code> repeats forever, asking for a name and responding.</li>
+</ul></li>
+<li>In the guessing game:
+<ul>
+<li><code>while True:</code> repeats until <code>break</code> is reached when the user guesses correctly.</li>
+</ul></li>
+<li>Everyday analogy:
+<ul>
+<li>Eating:
+<ul>
+<li>“Take a bite” is the repeated action.</li>
+<li>You keep doing it until a condition:
+<ul>
+<li>You feel full,</li>
+<li>Time is up,</li>
+<li>Or food runs out.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>In code, common loop forms include:</p>
+<ul>
+<li><code>while condition:</code></li>
+<li><code>for item in collection:</code></li>
+</ul>
+</section>
+<section id="conditionals-decisions" class="level2">
+<h2 class="anchored" data-anchor-id="conditionals-decisions">Conditionals (decisions)</h2>
+<ul>
+<li>A <strong>conditional</strong> is a decision point where the program checks a condition and chooses what to do next.</li>
+<li>In Python, typical syntax:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> condition1:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do something</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> condition2:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do something else</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># default choice</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>In the greeting program:
+<ul>
+<li>If the name is exactly <code>"Venu"</code> → special greeting.</li>
+<li>Else if the name is in the list of known students:
+<ul>
+<li>If also in <code>met_people</code> → “We have already met.”</li>
+<li>Else → “Oh, you are that idiot. Good meeting you.” and add to <code>met_people</code>.</li>
+</ul></li>
+<li>Else → “I know there are only five of you…”.</li>
+</ul></li>
+<li>In the guessing game:
+<ul>
+<li>If guess &gt; secret → “Too high”.</li>
+<li>Else if guess &lt; secret → “Too low”.</li>
+<li>Else → “Correct!” and exit the loop.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="code-vs-pseudocode" class="level1">
+<h1>Code vs pseudocode</h1>
+<p>We distinguished between:</p>
+<section id="pseudocode" class="level2">
+<h2 class="anchored" data-anchor-id="pseudocode">Pseudocode</h2>
+<ul>
+<li>Human-readable description of the steps involved in solving a problem.</li>
+<li>Not tied to a particular programming language.</li>
+<li>Focuses on <strong>logic</strong>, not on exact syntax.</li>
+<li>Example (greeting program, pseudocode style):</li>
+</ul>
+<pre class="text"><code>start with an empty set of met_people
+repeat forever:
+    ask "Hello, what is your name?"
+    read name
+
+    if name is "Venu":
+        say special greeting
+    else if name is in the fixed list of allowed names:
+        if name is already in met_people:
+            say "We have already met"
+        else:
+            say first-time greeting
+            add name to met_people
+    else:
+        say "I know there are only five of you. Choose from this list."</code></pre>
+</section>
+<section id="actual-code-syntax" class="level2">
+<h2 class="anchored" data-anchor-id="actual-code-syntax">Actual code (syntax)</h2>
+<ul>
+<li>Written in a specific language (e.g., Python, C, Java).</li>
+<li>Must use the exact syntax that the language understands.</li>
+<li>You must also know the environment (e.g., how VS Code treats indentation, how to run the program, etc.).</li>
+</ul>
+<p>Our learning plan:</p>
+<ul>
+<li>First write clear <strong>pseudocode</strong> to capture the logic.</li>
+<li>Then translate pseudocode into <strong>real code</strong> slowly, learning syntax along the way.</li>
+<li>This way we separate:
+<ul>
+<li>Conceptual difficulty: “What should the program do?”</li>
+<li>Mechanical difficulty: “How do I spell it in this language?”</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="revision-insertion-sort-and-its-bounds" class="level1">
+<h1>Revision: Insertion sort and its bounds</h1>
+<p>We revised <strong>insertion sort</strong> using the box game <a href="https://www.csfieldguide.org.nz/en/interactives/sorting-algorithms/">here</a></p>
+<section id="how-insertion-sort-works-intuitive" class="level2">
+<h2 class="anchored" data-anchor-id="how-insertion-sort-works-intuitive">How insertion sort works (intuitive)</h2>
+<p>Think of each box as having a weight:</p>
+<ol type="1">
+<li>Compare the first two boxes:
+<ul>
+<li>Put the lighter one on the left and the heavier one on the right.</li>
+</ul></li>
+<li>Take the third box:
+<ul>
+<li>Compare it with the lighter box first.</li>
+<li>Depending on the result, compare further and insert it into one of three positions:
+<ul>
+<li>Left of both</li>
+<li>Between them</li>
+<li>Right of both</li>
+</ul></li>
+</ul></li>
+<li>For each new box:
+<ul>
+<li>Compare it with elements of the already sorted part (starting near the “middle” for efficiency).</li>
+<li>Keep comparing and shifting until you find the correct position.</li>
+</ul></li>
+<li>At each step, you have a sorted prefix, and you <strong>insert</strong> the next item into its correct position in that prefix.</li>
+</ol>
+<p>This is similar to how many people sort playing cards in their hand: the hand remains sorted, and each new card is inserted in the right place.</p>
+</section>
+<section id="best-case-lower-bound-on-comparisons" class="level2">
+<h2 class="anchored" data-anchor-id="best-case-lower-bound-on-comparisons">Best case (lower bound on comparisons)</h2>
+<p>Let there be (n) items already in correct order:</p>
+<p>[ 1, 2, 3, , n ]</p>
+<p>Then:</p>
+<ul>
+<li>Compare 1 and 2.</li>
+<li>Compare 2 and 3.</li>
+<li>Compare 3 and 4.</li>
+<li>…</li>
+<li>Compare ((n - 1)) and (n).</li>
+</ul>
+<p>Total comparisons: (n - 1).</p>
+<p>So in the best case:</p>
+<ul>
+<li><strong>Number of comparisons</strong> = (n - 1).</li>
+</ul>
+<p>This happens when the input is already sorted.</p>
+</section>
+<section id="worst-case-upper-bound-on-comparisons" class="level2">
+<h2 class="anchored" data-anchor-id="worst-case-upper-bound-on-comparisons">Worst case (upper bound on comparisons)</h2>
+<p>Worst case: the items are in <strong>reverse</strong> order:</p>
+<p>[ n, n-1, , 3, 2, 1 ]</p>
+<p>To insert each item in order:</p>
+<ul>
+<li>For the 2nd item: 1 comparison.</li>
+<li>For the 3rd item: 2 comparisons.</li>
+<li>For the 4th item: 3 comparisons.</li>
+<li>…</li>
+<li>For the (n)-th item: (n - 1) comparisons.</li>
+</ul>
+<p>Total comparisons:</p>
+<p>[ 1 + 2 + 3 + + (n - 1) ]</p>
+<p>Recall the formula for the sum of first (k) natural numbers:</p>
+<p>[ 1 + 2 + + k = ]</p>
+<p>Here (k = n - 1), so:</p>
+<p>[ 1 + 2 + + (n - 1) = ]</p>
+<p>So in the worst case:</p>
+<ul>
+<li><strong>Number of comparisons</strong> = ().</li>
+</ul>
+<p>Summary for insertion sort:</p>
+<ul>
+<li>Best case (already sorted): (n - 1) comparisons.</li>
+<li>Worst case (reverse sorted): () comparisons.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="number-bases-and-homework" class="level1">
+<h1>Number bases and homework</h1>
+<p>We briefly checked homework on different number bases: base 5, base 7 and base 8.</p>
+<section id="place-values-in-different-bases" class="level2">
+<h2 class="anchored" data-anchor-id="place-values-in-different-bases">Place values in different bases</h2>
+<ul>
+<li><strong>Base 5</strong>: place values are<br>
+(1, 5, 25, 125, )</li>
+<li><strong>Base 7</strong>: place values are<br>
+(1, 7, 49, 343, )</li>
+<li><strong>Base 8</strong> (octal): place values are<br>
+(1, 8, 64, 512, )</li>
+</ul>
+<p>To convert from a base-(b) representation like:</p>
+<p>[ (d_k d_{k-1} d_1 d_0)_b ]</p>
+<p>to decimal, we compute:</p>
+<p>[ d_0 b^0 + d_1 b^1 + d_2 b^2 + + d_k b^k ]</p>
+<p>Students worked through specific examples such as converting decimal numbers like 32 and 78 into base 5, 7 and 8, and similar exercises with other numbers.</p>
+<p>We also revisited:</p>
+<ul>
+<li>Sum of natural numbers and Gauss’s formula.</li>
+<li>Binary representation and the idea of positional number systems.</li>
+<li>Selection sort (from earlier classes).</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="looking-ahead" class="level1">
+<h1>Looking ahead</h1>
+<p>Planned topics for upcoming CS2026 classes:</p>
+<ul>
+<li><strong>Quick sort</strong>
+<ul>
+<li>Basic idea and motivation.</li>
+<li>Comparison with insertion sort and selection sort.</li>
+</ul></li>
+<li><strong>Tic‑tac‑toe (part 2)</strong>
+<ul>
+<li>Decision trees.</li>
+<li>Exploring whether there is a winning strategy.</li>
+<li>Thinking about how to write a program that plays tic‑tac‑toe.</li>
+</ul></li>
+<li>Continuing the “program as a tool” approach:
+<ul>
+<li>You are encouraged to bring interesting questions, puzzles or games that you think could be solved by writing a program.</li>
+<li>We will try to express them in pseudocode and then in actual code.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="short-glossary" class="level1">
+<h1>Short glossary</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 83%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Informal meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Data</td>
+<td>Information that a program reads, stores and manipulates (names, numbers, etc.).</td>
+</tr>
+<tr class="even">
+<td>Data structure</td>
+<td>A particular way of organizing data (lists, sets, arrays, etc.).</td>
+</tr>
+<tr class="odd">
+<td>Loop</td>
+<td>A construct for repeating steps until some condition is met.</td>
+</tr>
+<tr class="even">
+<td>Conditional</td>
+<td>A decision step that chooses behaviour based on a true/false condition.</td>
+</tr>
+<tr class="odd">
+<td>Pseudocode</td>
+<td>Language-agnostic, human-readable description of an algorithm.</td>
+</tr>
+<tr class="even">
+<td>Insertion sort</td>
+<td>Sorting method that inserts each item into its correct position in a sorted list.</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

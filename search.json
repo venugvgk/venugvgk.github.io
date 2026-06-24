@@ -1969,9 +1969,86 @@
   {
     "objectID": "cs_2026/session6.html",
     "href": "cs_2026/session6.html",
-    "title": "Session 6 Plan",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
     "section": "",
-    "text": "Revise logarithms, different base number systems and insertion sort. Discuss quick sort.\nDiscuss the decision tree for tic-tac-toe. Also discuss the concept of a winning strategy in tic-tac-toe, and how to identify it."
+    "text": "Discussed how a computer program “thinks” using two example programs:\n\nA “What is your name?” greeting program with special responses.\nA number-guessing game where the computer chooses a number and the human guesses.\n\nIdentified three core ideas behind most programs:\n\nData and data structures\n\nLoops (repetition)\n\nConditionals (decisions)\n\nLooked at actual Python-style code for the greeting program and the idea of pseudocode.\nRevised insertion sort, including best case and worst case (upper and lower bounds).\nReviewed homework on base 5, 7, 8 and recalled earlier topics (binary, sum of natural numbers, selection sort)."
+  },
+  {
+    "objectID": "cs_2026/session6.html#greeting-program-what-is-your-name",
+    "href": "cs_2026/session6.html#greeting-program-what-is-your-name",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Greeting program: “What is your name?”",
+    "text": "Greeting program: “What is your name?”\nWe analysed a program that repeatedly:\n\nAsks: Hello, what is your name?\n\nWaits for the user to type a name (input).\n\nResponds differently depending on the name:\n\n\nIf the name is Venu\n\nPrint: Good morning, sir. How are you today?\n\nIf the name is in a special list (for example: Abhi, Akshay, Anusha, Sam) and this is the first time that name appears\n\nPrint: Oh, you are that idiot. Good meeting you.\n\nIf the name is in that list and has already appeared before\n\nPrint: We have already met.\n\nIf the name is not in the list at all\n\nPrint a message like:\nI know there are only five of you in this class. Choose from this list: ...\n\n\nFrom this behaviour, we listed what the computer needs:\n\nThe exact question text to display: \"Hello, what is your name?\"\nA way to store the fixed list of “valid” names.\nA way to store names that have already been entered (for repeat detection).\nA way to:\n\nRead user input.\nCompare that input against:\n\nThe original list of allowed names.\nThe set of names already seen.\n\n\nA way to decide which response to print based on the comparisons.\nA loop that keeps asking for names (no explicit “exit” in this version).\n\nWe also noticed:\n\nThe program is case sensitive: Abhi is not the same as abhi unless we explicitly convert or check both forms.\nThe repeating pattern is: ask → read → compare → decide → repeat.\n\n\nSketch of Python-like code\nHere is a simplified version of this program.\nmet_people = set()  # empty set\n\nwhile True:\n    name = input(\"Hello, what is your name? \")\n\n    if name == \"Venu\":\n        print(\"Good morning, sir. How are you today?\")\n\n    elif name in [\"Abhi\", \"Akshay\", \"Anusha\", \"Sam\"]:\n        if name in met_people:\n            print(\"We have already met.\")\n        else:\n            print(\"Oh, you are that idiot. Good meeting you.\")\n            met_people.add(name)\n\n    else:\n        print(\"I know there are only five of you in this class.\")\n        print(\"Choose from: Abhi, Akshay, Anusha, Sam\")\nKey observations:\n\nmet_people = set() defines a data structure (a set) to remember names we have already seen.\nwhile True: creates an infinite loop.\nif, elif, else are the conditional branches where decisions are made.\nname == \"Venu\" uses == for comparison, whereas name = \"Venu\" would be assignment."
+  },
+  {
+    "objectID": "cs_2026/session6.html#number-guessing-game-computer-chooses-you-guess",
+    "href": "cs_2026/session6.html#number-guessing-game-computer-chooses-you-guess",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Number guessing game (computer chooses, you guess)",
+    "text": "Number guessing game (computer chooses, you guess)\nThe second example was a guessing game where:\n\nThe computer chooses a secret number in a given range (for example 1 to 100).\nThe player repeatedly guesses the number.\nEach time, the computer answers:\n\n“Too high”\n“Too low”\n“Correct”\n\n\nThe game continues until the player guesses correctly.\nThe computer must be able to:\n\nKnow the range of allowed numbers (for example 1–100).\nChoose a random number in that range and store it.\nPrompt the user to enter guesses, e.g., \"Please guess the number:\".\nRead each guess from the user (input).\nCompare each guess with the secret number.\nBased on the comparison:\n\nIf guess &gt; secret: print \"Too high\".\nIf guess &lt; secret: print \"Too low\".\nIf guess == secret: print a success message and stop the game.\n\nKeep prompting for a guess while guesses are wrong, and to stop when the correct guess is made.\n\nA Python-style code:\nimport random\n\nsecret = random.randint(1, 100)\n\nwhile True:\n    guess = int(input(\"Guess the number between 1 and 100: \"))\n\n    if guess &gt; secret:\n        print(\"Too high\")\n    elif guess &lt; secret:\n        print(\"Too low\")\n    else:\n        print(\"Correct! You won.\")\n        break"
+  },
+  {
+    "objectID": "cs_2026/session6.html#data-and-data-structures",
+    "href": "cs_2026/session6.html#data-and-data-structures",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Data and data structures",
+    "text": "Data and data structures\n\nA data structure is a particular way of organizing and storing data so that we can use it efficiently.\nExamples from class:\n\nThe list of allowed names ([\"Abhi\", \"Akshay\", ...]) is a data structure.\nThe set met_people is another data structure, used to store names we have already seen.\nIn the number guessing game, the secret number is stored in a variable; the range 1–100 is the domain from which it is chosen.\n\nPrograms must handle different kinds of data:\n\nText (strings) such as names.\nWhole numbers (integers).\nPossibly decimal numbers (floating point).\nCollections of values (lists, sets, arrays, etc.).\n\n\nUnderstanding data structures is a major part of computer science because:\n\nThe “shape” of the data often suggests the most efficient way to process it.\nDifferent data structures are better or worse for different operations (searching, insertion, deletion, etc.)."
+  },
+  {
+    "objectID": "cs_2026/session6.html#loops-repetition",
+    "href": "cs_2026/session6.html#loops-repetition",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Loops (repetition)",
+    "text": "Loops (repetition)\n\nA loop is a construct that repeats a block of code until some stopping condition is met.\nIn the greeting program:\n\nwhile True: repeats forever, asking for a name and responding.\n\nIn the guessing game:\n\nwhile True: repeats until break is reached when the user guesses correctly.\n\nEveryday analogy:\n\nEating:\n\n“Take a bite” is the repeated action.\nYou keep doing it until a condition:\n\nYou feel full,\nTime is up,\nOr food runs out.\n\n\n\n\nIn code, common loop forms include:\n\nwhile condition:\nfor item in collection:"
+  },
+  {
+    "objectID": "cs_2026/session6.html#conditionals-decisions",
+    "href": "cs_2026/session6.html#conditionals-decisions",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Conditionals (decisions)",
+    "text": "Conditionals (decisions)\n\nA conditional is a decision point where the program checks a condition and chooses what to do next.\nIn Python, typical syntax:\n\nif condition1:\n    # do something\nelif condition2:\n    # do something else\nelse:\n    # default choice\n\nIn the greeting program:\n\nIf the name is exactly \"Venu\" → special greeting.\nElse if the name is in the list of known students:\n\nIf also in met_people → “We have already met.”\nElse → “Oh, you are that idiot. Good meeting you.” and add to met_people.\n\nElse → “I know there are only five of you…”.\n\nIn the guessing game:\n\nIf guess &gt; secret → “Too high”.\nElse if guess &lt; secret → “Too low”.\nElse → “Correct!” and exit the loop."
+  },
+  {
+    "objectID": "cs_2026/session6.html#pseudocode",
+    "href": "cs_2026/session6.html#pseudocode",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Pseudocode",
+    "text": "Pseudocode\n\nHuman-readable description of the steps involved in solving a problem.\nNot tied to a particular programming language.\nFocuses on logic, not on exact syntax.\nExample (greeting program, pseudocode style):\n\nstart with an empty set of met_people\nrepeat forever:\n    ask \"Hello, what is your name?\"\n    read name\n\n    if name is \"Venu\":\n        say special greeting\n    else if name is in the fixed list of allowed names:\n        if name is already in met_people:\n            say \"We have already met\"\n        else:\n            say first-time greeting\n            add name to met_people\n    else:\n        say \"I know there are only five of you. Choose from this list.\""
+  },
+  {
+    "objectID": "cs_2026/session6.html#actual-code-syntax",
+    "href": "cs_2026/session6.html#actual-code-syntax",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Actual code (syntax)",
+    "text": "Actual code (syntax)\n\nWritten in a specific language (e.g., Python, C, Java).\nMust use the exact syntax that the language understands.\nYou must also know the environment (e.g., how VS Code treats indentation, how to run the program, etc.).\n\nOur learning plan:\n\nFirst write clear pseudocode to capture the logic.\nThen translate pseudocode into real code slowly, learning syntax along the way.\nThis way we separate:\n\nConceptual difficulty: “What should the program do?”\nMechanical difficulty: “How do I spell it in this language?”"
+  },
+  {
+    "objectID": "cs_2026/session6.html#how-insertion-sort-works-intuitive",
+    "href": "cs_2026/session6.html#how-insertion-sort-works-intuitive",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "How insertion sort works (intuitive)",
+    "text": "How insertion sort works (intuitive)\nThink of each box as having a weight:\n\nCompare the first two boxes:\n\nPut the lighter one on the left and the heavier one on the right.\n\nTake the third box:\n\nCompare it with the lighter box first.\nDepending on the result, compare further and insert it into one of three positions:\n\nLeft of both\nBetween them\nRight of both\n\n\nFor each new box:\n\nCompare it with elements of the already sorted part (starting near the “middle” for efficiency).\nKeep comparing and shifting until you find the correct position.\n\nAt each step, you have a sorted prefix, and you insert the next item into its correct position in that prefix.\n\nThis is similar to how many people sort playing cards in their hand: the hand remains sorted, and each new card is inserted in the right place."
+  },
+  {
+    "objectID": "cs_2026/session6.html#best-case-lower-bound-on-comparisons",
+    "href": "cs_2026/session6.html#best-case-lower-bound-on-comparisons",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Best case (lower bound on comparisons)",
+    "text": "Best case (lower bound on comparisons)\nLet there be (n) items already in correct order:\n[ 1, 2, 3, , n ]\nThen:\n\nCompare 1 and 2.\nCompare 2 and 3.\nCompare 3 and 4.\n…\nCompare ((n - 1)) and (n).\n\nTotal comparisons: (n - 1).\nSo in the best case:\n\nNumber of comparisons = (n - 1).\n\nThis happens when the input is already sorted."
+  },
+  {
+    "objectID": "cs_2026/session6.html#worst-case-upper-bound-on-comparisons",
+    "href": "cs_2026/session6.html#worst-case-upper-bound-on-comparisons",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Worst case (upper bound on comparisons)",
+    "text": "Worst case (upper bound on comparisons)\nWorst case: the items are in reverse order:\n[ n, n-1, , 3, 2, 1 ]\nTo insert each item in order:\n\nFor the 2nd item: 1 comparison.\nFor the 3rd item: 2 comparisons.\nFor the 4th item: 3 comparisons.\n…\nFor the (n)-th item: (n - 1) comparisons.\n\nTotal comparisons:\n[ 1 + 2 + 3 + + (n - 1) ]\nRecall the formula for the sum of first (k) natural numbers:\n[ 1 + 2 + + k = ]\nHere (k = n - 1), so:\n[ 1 + 2 + + (n - 1) = ]\nSo in the worst case:\n\nNumber of comparisons = ().\n\nSummary for insertion sort:\n\nBest case (already sorted): (n - 1) comparisons.\nWorst case (reverse sorted): () comparisons."
+  },
+  {
+    "objectID": "cs_2026/session6.html#place-values-in-different-bases",
+    "href": "cs_2026/session6.html#place-values-in-different-bases",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Place values in different bases",
+    "text": "Place values in different bases\n\nBase 5: place values are\n(1, 5, 25, 125, )\nBase 7: place values are\n(1, 7, 49, 343, )\nBase 8 (octal): place values are\n(1, 8, 64, 512, )\n\nTo convert from a base-(b) representation like:\n[ (d_k d_{k-1} d_1 d_0)_b ]\nto decimal, we compute:\n[ d_0 b^0 + d_1 b^1 + d_2 b^2 + + d_k b^k ]\nStudents worked through specific examples such as converting decimal numbers like 32 and 78 into base 5, 7 and 8, and similar exercises with other numbers.\nWe also revisited:\n\nSum of natural numbers and Gauss’s formula.\nBinary representation and the idea of positional number systems.\nSelection sort (from earlier classes)."
   },
   {
     "objectID": "cs_2026/session1.html",
@@ -1999,7 +2076,7 @@
     "href": "cs_2026/index.html",
     "title": "CS 2026",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 21, 2026\n\n\nSession 6 Plan\n\n\n \n\n\n\n\nJun 16, 2026\n\n\nSession 5 Binary and Hex; Sorting - selection and insertion\n\n\n \n\n\n\n\nJun 15, 2026\n\n\nDeeper Exploration - Coin weighing\n\n\n \n\n\n\n\nJun 14, 2026\n\n\nSession 4 How many questions? Search Algorithms\n\n\n \n\n\n\n\nJun 9, 2026\n\n\nSession 3 Tic-tac-toe 1\n\n\n \n\n\n\n\nJun 7, 2026\n\n\nSession 2 Pouring; guessing letters and numbers\n\n\n \n\n\n\n\nJun 2, 2026\n\n\nSession 1 Locked-in Syndrome and Algorithmic thinking\n\n\n \n\n\n\n\nJun 1, 2026\n\n\nPurpose and Audience\n\n\n \n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 24, 2026\n\n\nSession 6 Pseudocode, sample programs, program elements\n\n\n \n\n\n\n\nJun 16, 2026\n\n\nSession 5 Binary and Hex; Sorting - selection and insertion\n\n\n \n\n\n\n\nJun 15, 2026\n\n\nDeeper Exploration - Coin weighing\n\n\n \n\n\n\n\nJun 14, 2026\n\n\nSession 4 How many questions? Search Algorithms\n\n\n \n\n\n\n\nJun 9, 2026\n\n\nSession 3 Tic-tac-toe 1\n\n\n \n\n\n\n\nJun 7, 2026\n\n\nSession 2 Pouring; guessing letters and numbers\n\n\n \n\n\n\n\nJun 2, 2026\n\n\nSession 1 Locked-in Syndrome and Algorithmic thinking\n\n\n \n\n\n\n\nJun 1, 2026\n\n\nPurpose and Audience\n\n\n \n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "books/story-weaver/art-gallery/index.html",
