@@ -227,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Coin weighing problems are a compact way to teach decision trees, information-theoretic lower bounds, divide-and-conquer, and adversarial reasoning in an algorithms course. A balance scale is especially useful pedagogically because each weighing has three possible outcomes—left pan heavier, right pan heavier, or balance—which naturally leads to ternary branching in the search tree.</p>
+<p>Coin weighing problems are a compact way to teach decision trees, information-theoretic lower bounds, divide-and-conquer, and adversarial reasoning in an algorithms course. A balance scale is especially useful pedagogically because each weighing has three possible outcomes—left pan heavier, right pan heavier, or balance - which naturally leads to ternary branching in the search tree.</p>
 <section id="learning-goals" class="level2">
 <h2 class="anchored" data-anchor-id="learning-goals">Learning goals</h2>
 <p>By the end of this note, students should be able to:</p>
@@ -246,13 +246,17 @@ ul.task-list li input[type="checkbox"] {
 <p>This simple counting fact gives an immediate lower bound on the number of weighings needed for any variant of the problem.</p>
 <section id="generic-balance-scale-tree" class="level2">
 <h2 class="anchored" data-anchor-id="generic-balance-scale-tree">Generic balance-scale tree</h2>
-<pre class="text"><code> [weigh a set vs a set]
- / | \
- / | \
- left heavier balanced right heavier
- / | \
- continue on continue on continue on
- candidate set candidate set candidate set</code></pre>
+<p>Divide the items into three equal sets - set 1, set 2, set 3.</p>
+<pre class="text"><code> [weigh set 1 vs set 2]
+        /       |   \
+        /       |   \
+left heavier    |  right heavier
+    |        Balanced   |  
+Fake in set 1    |     Fake in set 2
+                 |
+            Fake in set 3
+
+Repeat recursively on the identified branch</code></pre>
 </section>
 </section>
 <section id="problem-sequence" class="level1">
@@ -270,12 +274,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="decision-tree" class="level3">
 <h3 class="anchored" data-anchor-id="decision-tree">Decision tree</h3>
-<pre class="text"><code> [1 vs 2]
- / | \
- / | \
- L B R
- / | \
- coin 1 heavy coin 3 coin 2 heavy</code></pre>
+<pre class="text"><code>    [Weigh 1 vs 2]
+       / |  \
+       / |  \
+      L  B   R
+     /   |    \
+ coin 1  |   Coin 3 fake
+ Fake    |
+       Coin 2
+       Fake
+</code></pre>
 </section>
 <section id="teaching-point" class="level3">
 <h3 class="anchored" data-anchor-id="teaching-point">Teaching point</h3>
@@ -295,16 +303,21 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="decision-tree-1" class="level3">
 <h3 class="anchored" data-anchor-id="decision-tree-1">Decision tree</h3>
-<pre class="text"><code> [A vs B]
- / | \
- / | \
- L B R
- / | \
- fake in A fake in C fake in B
- | | |
- [1 vs 2] [7 vs 8] [4 vs 5]
- / | \ / | \ / | \
- L B R L B R L B R</code></pre>
+<pre class="text"><code>                     [A vs B]
+                      / | \
+                     /  |  \
+                    /   |   \
+                A heavy |   B heavy  
+                /       |      \
+               /      Balanced  \
+            Fake        |       Fake in B
+            in A      Fake in C     |  
+              |         |           |
+              |         |           |
+            [1 vs 2] [7 vs 8] [4 vs 5]
+           / | \       / | \       / | \
+         1   2  3     7  8  9     4  5  6
+</code></pre>
 </section>
 <section id="teaching-point-1" class="level3">
 <h3 class="anchored" data-anchor-id="teaching-point-1">Teaching point</h3>
@@ -350,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="why-this-is-harder" class="level3">
 <h3 class="anchored" data-anchor-id="why-this-is-harder">Why this is harder</h3>
-<p>Each candidate coin now has two hidden states—heavy or light—so the number of possibilities is (12 = 24) . Since 3 weighings yield at most (3^3 = 27) outcomes, the counting bound says the problem might be solvable, but a valid strategy must identify both the coin and the direction of deviation .</p>
+<p>Each candidate coin now has two hidden states—heavy or light—so the number of possibilities is (12*2 = 24) . Since 3 weighings yield at most (3^3 = 27) outcomes, the counting bound says the problem might be solvable, but a valid strategy must identify both the coin and the direction of deviation .</p>
 <p>[ 2n ^k ]</p>
 </section>
 <section id="first-weighing" class="level3">
