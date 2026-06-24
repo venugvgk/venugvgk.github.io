@@ -26,14 +26,20 @@
     "items": []
   },
   {
-    "listing": "/tir/index.html",
+    "listing": "/education/index.html",
     "items": [
-      "/tir/engineering-economic-exploitation.html",
-      "/tir/ellora-how-history-looks.html",
-      "/tir/philosophy/bachelor-men.html",
-      "/tir/history/indias-prettiest-library.html",
-      "/tir/sociology/ravidas-begumpura.html",
-      "/tir/history/indian-syncretism.html"
+      "/education/language-policy-quick-thoughts.html",
+      "/education/rm-case-study-ndp.html",
+      "/education/social-cultural-reproduction.html",
+      "/education/reflections.html",
+      "/education/bernstein-langauge-education-social-reproduction.html",
+      "/education/bruner-chomsky-deb-roy.html",
+      "/education/mirabai-history-perspectives.html",
+      "/education/timeline-indian-education.html",
+      "/education/ambedkar-1916.html",
+      "/education/rethinking-responsibility.html",
+      "/education/kandukuri-phule.html",
+      "/education/kaka-muttai-philosophy.html"
     ]
   },
   {
@@ -196,25 +202,20 @@
     ]
   },
   {
-    "listing": "/education/index.html",
+    "listing": "/tir/index.html",
     "items": [
-      "/education/language-policy-quick-thoughts.html",
-      "/education/rm-case-study-ndp.html",
-      "/education/social-cultural-reproduction.html",
-      "/education/reflections.html",
-      "/education/bernstein-langauge-education-social-reproduction.html",
-      "/education/bruner-chomsky-deb-roy.html",
-      "/education/mirabai-history-perspectives.html",
-      "/education/timeline-indian-education.html",
-      "/education/ambedkar-1916.html",
-      "/education/rethinking-responsibility.html",
-      "/education/kandukuri-phule.html",
-      "/education/kaka-muttai-philosophy.html"
+      "/tir/engineering-economic-exploitation.html",
+      "/tir/ellora-how-history-looks.html",
+      "/tir/philosophy/bachelor-men.html",
+      "/tir/history/indias-prettiest-library.html",
+      "/tir/sociology/ravidas-begumpura.html",
+      "/tir/history/indian-syncretism.html"
     ]
   },
   {
     "listing": "/cs_2026/index.html",
     "items": [
+      "/cs_2026/session7.html",
       "/cs_2026/session6.html",
       "/cs_2026/session5.html",
       "/cs_2026/session4.5.html",
