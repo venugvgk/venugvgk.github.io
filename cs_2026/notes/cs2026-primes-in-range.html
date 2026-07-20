@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Venu GVGK">
-<meta name="dcterms.date" content="2024-12-28">
 
-<title>Returning multiple values from a function in python – Venu GVGK Raju</title>
+<title>CS2026 – Finding Prime Numbers in a Range – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,10 +104,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Returning multiple values from a function in python – Venu GVGK Raju">
+<meta property="og:title" content="CS2026 – Finding Prime Numbers in a Range – Venu GVGK Raju">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Returning multiple values from a function in python – Venu GVGK Raju">
+<meta name="twitter:title" content="CS2026 – Finding Prime Numbers in a Range – Venu GVGK Raju">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -170,37 +168,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-and-goal" id="toc-problem-and-goal" class="nav-link active" data-scroll-target="#problem-and-goal">Problem and goal</a></li>
+  <li><a href="#math-behind-the-problem" id="toc-math-behind-the-problem" class="nav-link" data-scroll-target="#math-behind-the-problem">Math behind the problem</a></li>
+  <li><a href="#what-the-program-needs-to-do" id="toc-what-the-program-needs-to-do" class="nav-link" data-scroll-target="#what-the-program-needs-to-do">What the program needs to do</a></li>
+  <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link" data-scroll-target="#pseudocode">Pseudocode</a>
+  <ul class="collapse">
+  <li><a href="#helper-function-is_prime" id="toc-helper-function-is_prime" class="nav-link" data-scroll-target="#helper-function-is_prime">Helper function: <code>is_prime</code></a></li>
+  <li><a href="#main-function-primes_in_range" id="toc-main-function-primes_in_range" class="nav-link" data-scroll-target="#main-function-primes_in_range">Main function: <code>primes_in_range</code></a></li>
+  </ul></li>
+  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code">Python code</a>
+  <ul class="collapse">
+  <li><a href="#helper-function-is_prime-1" id="toc-helper-function-is_prime-1" class="nav-link" data-scroll-target="#helper-function-is_prime-1">Helper function: <code>is_prime</code></a></li>
+  <li><a href="#main-function-primes_in_range-1" id="toc-main-function-primes_in_range-1" class="nav-link" data-scroll-target="#main-function-primes_in_range-1">Main function: <code>primes_in_range</code></a></li>
+  <li><a href="#example-usage" id="toc-example-usage" class="nav-link" data-scroll-target="#example-usage">Example usage</a></li>
+  </ul></li>
+  <li><a href="#what-to-note-in-the-pseudocode" id="toc-what-to-note-in-the-pseudocode" class="nav-link" data-scroll-target="#what-to-note-in-the-pseudocode">What to note in the pseudocode</a></li>
+  <li><a href="#what-to-note-in-the-python-code" id="toc-what-to-note-in-the-python-code" class="nav-link" data-scroll-target="#what-to-note-in-the-python-code">What to note in the Python code</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Returning multiple values from a function in python</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">python</div>
-  </div>
-  </div>
+<h1 class="title">CS2026 – Finding Prime Numbers in a Range</h1>
+</div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Venu GVGK </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 28, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -210,26 +214,153 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>A function can return multiple values in a list. Each value can be used at multiple places using the index of the list.</p>
-<p>For example,</p>
-<div id="0db21124" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(x,y,z):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> x<span class="op">+</span>y</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    j <span class="op">=</span> y<span class="op">+</span>z</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> x<span class="op">+</span>z</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [i,j,k]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> add(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)[<span class="dv">0</span>] <span class="co"># this gives us i, 7</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> add(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)[<span class="dv">1</span>] <span class="co"># this gives us j, 9</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> add(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)[<span class="dv">2</span>] <span class="co"># this gives us k, 8</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a,b,c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>7 9 8</code></pre>
-</div>
-</div>
+<section id="problem-and-goal" class="level1">
+<h1>Problem and goal</h1>
+<p>We want a program that takes a start and end of a range, for example 10 to 50, and finds all the prime numbers in that range.</p>
+<p>For example:</p>
+<ul>
+<li>Input: start = 10, end = 20</li>
+<li>Output: 11, 13, 17, 19</li>
+</ul>
+<p>So the problem naturally breaks into two parts:</p>
+<ul>
+<li>How do we check whether one number is prime?</li>
+<li>How do we repeat that check for every number in the range?</li>
+</ul>
+</section>
+<section id="math-behind-the-problem" class="level1">
+<h1>Math behind the problem</h1>
+<p>A number <code>n</code> greater than 1 is prime if its only positive divisors are 1 and <code>n</code> itself.</p>
+<p>This means that if <code>n</code> is not prime, then there must be some number <code>d</code> between 2 and <code>n - 1</code> that divides <code>n</code> exactly.</p>
+<p>A useful mathematical idea makes the work smaller:</p>
+<ul>
+<li>To test whether <code>n</code> is prime, it is enough to check divisors only up to <code>sqrt(n)</code>.</li>
+</ul>
+<p>Why?</p>
+<ul>
+<li>If <code>n = a * b</code>, and both <code>a</code> and <code>b</code> are larger than <code>sqrt(n)</code>, then <code>a * b</code> would be greater than <code>n</code>, which is impossible.</li>
+<li>So if <code>n</code> has a factor, at least one factor must be less than or equal to <code>sqrt(n)</code>.</li>
+</ul>
+<p>Therefore, to test if a number is prime:</p>
+<ol type="1">
+<li>If <code>n &lt;= 1</code>, it is not prime.</li>
+<li>Compute <code>sqrt(n)</code>.</li>
+<li>Try dividing <code>n</code> by every integer from 2 up to <code>sqrt(n)</code>.</li>
+<li>If any divisor works exactly, <code>n</code> is not prime.</li>
+<li>If no divisor works, <code>n</code> is prime.</li>
+</ol>
+</section>
+<section id="what-the-program-needs-to-do" class="level1">
+<h1>What the program needs to do</h1>
+<p>For a range from <code>start</code> to <code>end</code>:</p>
+<ol type="1">
+<li>Start with an empty list of primes.</li>
+<li>For each number <code>n</code> in the range:
+<ul>
+<li>Check whether <code>n</code> is prime.</li>
+<li>If it is prime, add it to the list.</li>
+</ul></li>
+<li>At the end, output the list of primes.</li>
+</ol>
+<p>This suggests two functions:</p>
+<ul>
+<li><code>is_prime(n)</code> to test one number.</li>
+<li><code>primes_in_range(start, end)</code> to collect all the primes in the interval.</li>
+</ul>
+</section>
+<section id="pseudocode" class="level1">
+<h1>Pseudocode</h1>
+<section id="helper-function-is_prime" class="level2">
+<h2 class="anchored" data-anchor-id="helper-function-is_prime">Helper function: <code>is_prime</code></h2>
+<pre class="text"><code>FUNCTION is_prime(n):
+
+    IF n &lt;= 1:
+        RETURN False
+
+    SET limit = floor(sqrt(n))
+
+    FOR d from 2 to limit:
+        IF n mod d == 0:
+            RETURN False
+
+    RETURN True</code></pre>
+</section>
+<section id="main-function-primes_in_range" class="level2">
+<h2 class="anchored" data-anchor-id="main-function-primes_in_range">Main function: <code>primes_in_range</code></h2>
+<pre class="text"><code>FUNCTION primes_in_range(start, end):
+
+    CREATE empty list primes
+
+    FOR n from start to end:
+        IF is_prime(n):
+            append n to primes
+
+    RETURN primes</code></pre>
+</section>
+</section>
+<section id="python-code" class="level1">
+<h1>Python code</h1>
+<section id="helper-function-is_prime-1" class="level2">
+<h2 class="anchored" data-anchor-id="helper-function-is_prime-1">Helper function: <code>is_prime</code></h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_prime(n):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Return True if n is prime, False otherwise."""</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    limit <span class="op">=</span> <span class="bu">int</span>(math.sqrt(n))</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> d <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, limit <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> n <span class="op">%</span> d <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="main-function-primes_in_range-1" class="level2">
+<h2 class="anchored" data-anchor-id="main-function-primes_in_range-1">Main function: <code>primes_in_range</code></h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> primes_in_range(start, end):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Return a list of all prime numbers between start and end (inclusive)."""</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    primes <span class="op">=</span> []</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(start, end <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> is_prime(n):</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>            primes.append(n)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> primes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="example-usage" class="level2">
+<h2 class="anchored" data-anchor-id="example-usage">Example usage</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>end <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>primes <span class="op">=</span> primes_in_range(start, end)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Prime numbers between"</span>, start, <span class="st">"and"</span>, end, <span class="st">"are:"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(primes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="what-to-note-in-the-pseudocode" class="level1">
+<h1>What to note in the pseudocode</h1>
+<ul>
+<li>The problem is split into two functions.</li>
+<li><code>is_prime(n)</code> does only one job: decide whether one number is prime.</li>
+<li><code>primes_in_range(start, end)</code> repeats that test for every number in the interval.</li>
+<li>The mathematical idea of checking only up to <code>sqrt(n)</code> reduces the amount of work.</li>
+<li>The pseudocode uses loops, conditionals, and a list to organize the solution.</li>
+</ul>
+</section>
+<section id="what-to-note-in-the-python-code" class="level1">
+<h1>What to note in the Python code</h1>
+<ul>
+<li><code>import math</code> is needed for <code>math.sqrt(n)</code>.</li>
+<li><code>int(math.sqrt(n))</code> gives the whole-number limit for divisor checking.</li>
+<li><code>range(2, limit + 1)</code> checks all possible divisors from 2 up to the limit.</li>
+<li><code>n % d == 0</code> tests whether <code>d</code> divides <code>n</code> exactly.</li>
+<li><code>primes = []</code> creates an empty list, and <code>primes.append(n)</code> adds a prime number to it.</li>
+<li>The Python code follows the same structure as the pseudocode, which is the main habit to practice.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

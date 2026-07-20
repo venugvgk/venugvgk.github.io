@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Venu GVGK">
-<meta name="dcterms.date" content="2024-12-28">
 
-<title>Returning multiple values from a function in python – Venu GVGK Raju</title>
+<title>CS2026 Class Notes: Dice Sum Game – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,10 +104,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Returning multiple values from a function in python – Venu GVGK Raju">
+<meta property="og:title" content="CS2026 Class Notes: Dice Sum Game – Venu GVGK Raju">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Returning multiple values from a function in python – Venu GVGK Raju">
+<meta name="twitter:title" content="CS2026 Class Notes: Dice Sum Game – Venu GVGK Raju">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -170,37 +168,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning goals</a></li>
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement">Problem statement</a>
+  <ul class="collapse">
+  <li><a href="#input" id="toc-input" class="nav-link" data-scroll-target="#input">Input</a></li>
+  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output">Output</a></li>
+  <li><a href="#example-idea" id="toc-example-idea" class="nav-link" data-scroll-target="#example-idea">Example idea</a></li>
+  </ul></li>
+  <li><a href="#what-is-needed" id="toc-what-is-needed" class="nav-link" data-scroll-target="#what-is-needed">What is needed</a></li>
+  <li><a href="#logic-in-words" id="toc-logic-in-words" class="nav-link" data-scroll-target="#logic-in-words">Logic in words</a></li>
+  <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link" data-scroll-target="#pseudocode">Pseudocode</a></li>
+  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code">Python code</a></li>
+  <li><a href="#sample-run" id="toc-sample-run" class="nav-link" data-scroll-target="#sample-run">Sample run</a></li>
+  <li><a href="#detailed-discussion" id="toc-detailed-discussion" class="nav-link" data-scroll-target="#detailed-discussion">Detailed discussion</a>
+  <ul class="collapse">
+  <li><a href="#why-is-7-the-most-common-sum" id="toc-why-is-7-the-most-common-sum" class="nav-link" data-scroll-target="#why-is-7-the-most-common-sum">Why is 7 the most common sum?</a></li>
+  <li><a href="#combinatorics-table" id="toc-combinatorics-table" class="nav-link" data-scroll-target="#combinatorics-table">Combinatorics table</a></li>
+  <li><a href="#what-does-the-frequency-table-show" id="toc-what-does-the-frequency-table-show" class="nav-link" data-scroll-target="#what-does-the-frequency-table-show">What does the frequency table show?</a></li>
+  <li><a href="#why-do-small-and-large-simulations-look-different" id="toc-why-do-small-and-large-simulations-look-different" class="nav-link" data-scroll-target="#why-do-small-and-large-simulations-look-different">Why do small and large simulations look different?</a></li>
+  </ul></li>
+  <li><a href="#extension-relative-frequencies" id="toc-extension-relative-frequencies" class="nav-link" data-scroll-target="#extension-relative-frequencies">Extension: relative frequencies</a></li>
+  <li><a href="#classroom-activities" id="toc-classroom-activities" class="nav-link" data-scroll-target="#classroom-activities">Classroom activities</a></li>
+  <li><a href="#questions-for-discussion" id="toc-questions-for-discussion" class="nav-link" data-scroll-target="#questions-for-discussion">Questions for discussion</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Returning multiple values from a function in python</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">python</div>
-  </div>
-  </div>
+<h1 class="title">CS2026 Class Notes: Dice Sum Game</h1>
+</div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Venu GVGK </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 28, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -210,26 +222,309 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>A function can return multiple values in a list. Each value can be used at multiple places using the index of the list.</p>
-<p>For example,</p>
-<div id="0db21124" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(x,y,z):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> x<span class="op">+</span>y</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    j <span class="op">=</span> y<span class="op">+</span>z</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> x<span class="op">+</span>z</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [i,j,k]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> add(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)[<span class="dv">0</span>] <span class="co"># this gives us i, 7</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> add(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)[<span class="dv">1</span>] <span class="co"># this gives us j, 9</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> add(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)[<span class="dv">2</span>] <span class="co"># this gives us k, 8</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a,b,c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>7 9 8</code></pre>
-</div>
-</div>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>The dice sum game is a natural next step after the coin toss simulator because it keeps the same simulation structure but produces a richer pattern of outcomes. Instead of only two outcomes, rolling two fair dice produces sums from 2 to 12, and some of those sums occur more often than others.</p>
+<p>This lesson is useful because it connects programming with both probability and combinatorics. By simulating many rolls, students can observe a frequency distribution and compare it with the mathematical idea that some sums can be formed in more ways than others.</p>
+</section>
+<section id="learning-goals" class="level1">
+<h1>Learning goals</h1>
+<p>By the end of this lesson, students should be able to:</p>
+<ul>
+<li>simulate repeated rolls of two fair dice;</li>
+<li>compute the sum of two random outcomes;</li>
+<li>store and update frequencies for sums from 2 to 12;</li>
+<li>identify the most frequent sum from simulation results;</li>
+<li>explain why 7 appears most often using both simulation and counting arguments.</li>
+</ul>
+</section>
+<section id="problem-statement" class="level1">
+<h1>Problem statement</h1>
+<p>Write a program to roll two fair six-sided dice many times. For each roll, calculate the sum of the two dice and record how often each possible sum occurs.</p>
+<p>At the end, print a frequency table showing how many times each sum from 2 to 12 appeared, and identify which sum appeared most often. In large simulations, the sum 7 is expected to appear most often because it can be formed in more distinct ways than any other sum.</p>
+<section id="input" class="level2">
+<h2 class="anchored" data-anchor-id="input">Input</h2>
+<ul>
+<li>A positive integer (N), representing the number of times the pair of dice will be rolled.</li>
+</ul>
+</section>
+<section id="output" class="level2">
+<h2 class="anchored" data-anchor-id="output">Output</h2>
+<ul>
+<li>The frequency of each sum from 2 to 12.</li>
+<li>The sum that appeared most often.</li>
+<li>Optionally, the fraction or percentage for each sum.</li>
+</ul>
+</section>
+<section id="example-idea" class="level2">
+<h2 class="anchored" data-anchor-id="example-idea">Example idea</h2>
+<p>If the dice are rolled 20 times, one possible set of frequencies might show that 7 occurred 4 times, 6 occurred 3 times, 8 occurred 3 times, and some extreme sums such as 2 or 12 occurred only once or not at all. The exact results change from run to run because simulation uses randomness.</p>
+</section>
+</section>
+<section id="what-is-needed" class="level1">
+<h1>What is needed</h1>
+<p>Before writing the program, identify the main items required.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>N</code></td>
+<td>Number of repeated trials.</td>
+</tr>
+<tr class="even">
+<td><code>die1</code></td>
+<td>First random die roll from 1 to 6.</td>
+</tr>
+<tr class="odd">
+<td><code>die2</code></td>
+<td>Second random die roll from 1 to 6.</td>
+</tr>
+<tr class="even">
+<td><code>sum_value</code></td>
+<td>Stores the sum of the two dice.</td>
+</tr>
+<tr class="odd">
+<td>Frequency structure</td>
+<td>Stores counts for sums 2 to 12.</td>
+</tr>
+<tr class="even">
+<td>Loop</td>
+<td>Repeats the experiment exactly (N) times.</td>
+</tr>
+</tbody>
+</table>
+<p>A good classroom question here is: “What must be remembered after each roll?” Students should notice that individual rolls are temporary, but the frequencies must be stored throughout the entire simulation.</p>
+</section>
+<section id="logic-in-words" class="level1">
+<h1>Logic in words</h1>
+<p>The algorithm can be written in simple English first.</p>
+<ol type="1">
+<li>Read the value of (N).</li>
+<li>Create counters for sums 2 through 12 and set them all to 0.</li>
+<li>Repeat the following (N) times:
+<ul>
+<li>generate a random value from 1 to 6 for the first die;</li>
+<li>generate a random value from 1 to 6 for the second die;</li>
+<li>add the two values to get the sum;</li>
+<li>increase the counter for that sum by 1.</li>
+</ul></li>
+<li>After the loop ends, print the frequency table.</li>
+<li>Find the sum with the highest frequency and print it.</li>
+</ol>
+<p>This follows the same simulation pattern used in computational thinking: define one trial clearly, repeat it many times, and summarise the outcomes.</p>
+</section>
+<section id="pseudocode" class="level1">
+<h1>Pseudocode</h1>
+<pre class="text"><code>START
+
+INPUT N
+
+CREATE a list called frequency with 13 values, all set to 0
+
+REPEAT N TIMES
+    GENERATE die1 from 1 to 6
+    GENERATE die2 from 1 to 6
+    SET sum_value = die1 + die2
+    frequency[sum_value] = frequency[sum_value] + 1
+END REPEAT
+
+SET max_count = frequency[2]
+SET most_common_sum = 2
+
+FOR sum_value from 3 to 12
+    IF frequency[sum_value] &gt; max_count THEN
+        max_count = frequency[sum_value]
+        most_common_sum = sum_value
+    END IF
+END FOR
+
+FOR sum_value from 2 to 12
+    PRINT sum_value, frequency[sum_value]
+END FOR
+
+PRINT "Most common sum =", most_common_sum
+
+END</code></pre>
+<p>This pseudocode introduces an indexed frequency structure, which is a useful bridge from simple counters to list-based problem solving.</p>
+</section>
+<section id="python-code" class="level1">
+<h1>Python code</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter number of rolls: "</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>frequency <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">13</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    die1 <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">6</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    die2 <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">6</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    sum_value <span class="op">=</span> die1 <span class="op">+</span> die2</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    frequency[sum_value] <span class="op">=</span> frequency[sum_value] <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>max_count <span class="op">=</span> frequency[<span class="dv">2</span>]</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>most_common_sum <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> sum_value <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>, <span class="dv">13</span>):</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> frequency[sum_value] <span class="op">&gt;</span> max_count:</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        max_count <span class="op">=</span> frequency[sum_value]</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        most_common_sum <span class="op">=</span> sum_value</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sum</span><span class="ch">\t</span><span class="st">Frequency"</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> sum_value <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">13</span>):</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(sum_value, <span class="st">"</span><span class="ch">\t</span><span class="st">"</span>, frequency[sum_value])</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Most common sum ="</span>, most_common_sum)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This program uses random integer generation for each die, a loop for repetition, and a list to store the frequencies of possible sums.</p>
+</section>
+<section id="sample-run" class="level1">
+<h1>Sample run</h1>
+<pre class="text"><code>Enter number of rolls: 30
+Sum     Frequency
+2       1
+3       2
+4       3
+5       4
+6       5
+7       6
+8       4
+9       2
+10      1
+11      1
+12      1
+Most common sum = 7</code></pre>
+<p>The exact numbers can change on another run, but in larger simulations the shape usually rises toward the middle and falls again, with 7 often appearing at or near the top.</p>
+</section>
+<section id="detailed-discussion" class="level1">
+<h1>Detailed discussion</h1>
+<section id="why-is-7-the-most-common-sum" class="level2">
+<h2 class="anchored" data-anchor-id="why-is-7-the-most-common-sum">Why is 7 the most common sum?</h2>
+<p>The simulation suggests that 7 appears most often, but programming is only one part of the explanation. The mathematical reason is that 7 can be formed in 6 distinct ordered ways: ((1,6)), ((2,5)), ((3,4)), ((4,3)), ((5,2)), and ((6,1)).</p>
+<p>Other sums have fewer combinations. For example, 2 can occur only as ((1,1)), and 12 can occur only as ((6,6)), so they are much less frequent in repeated trials.</p>
+</section>
+<section id="combinatorics-table" class="level2">
+<h2 class="anchored" data-anchor-id="combinatorics-table">Combinatorics table</h2>
+<p>The connection between simulation and counting can be shown clearly in a table.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Sum</th>
+<th style="text-align: right;">Number of ways</th>
+<th>Example outcomes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td style="text-align: right;">1</td>
+<td>(1,1)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td>(1,2), (2,1)</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td style="text-align: right;">3</td>
+<td>(1,3), (2,2), (3,1)</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td style="text-align: right;">4</td>
+<td>(1,4), (2,3), (3,2), (4,1)</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td style="text-align: right;">5</td>
+<td>five ordered pairs</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td style="text-align: right;">6</td>
+<td>six ordered pairs</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td style="text-align: right;">5</td>
+<td>five ordered pairs</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td style="text-align: right;">4</td>
+<td>four ordered pairs</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td style="text-align: right;">3</td>
+<td>three ordered pairs</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td style="text-align: right;">2</td>
+<td>two ordered pairs</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td style="text-align: right;">1</td>
+<td>(6,6)</td>
+</tr>
+</tbody>
+</table>
+<p>Because the number of ways rises to 6 and then falls symmetrically, the frequency distribution of sums tends to have a triangular shape with the peak near 7.</p>
+</section>
+<section id="what-does-the-frequency-table-show" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-the-frequency-table-show">What does the frequency table show?</h2>
+<p>A frequency table records how many times each outcome occurred in the simulation. As the number of trials becomes large, the observed frequencies begin to reflect the underlying probability pattern more clearly.</p>
+<p>This helps students move from single outcomes to distributions. Instead of asking “What happened on one roll?”, the better question becomes “What pattern appears after many rolls?”</p>
+</section>
+<section id="why-do-small-and-large-simulations-look-different" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-small-and-large-simulations-look-different">Why do small and large simulations look different?</h2>
+<p>In a small number of rolls, the frequencies can look irregular because chance variation is strong. In a much larger number of rolls, the empirical distribution tends to resemble the theoretical distribution more closely.</p>
+<p>This is one of the important ideas of simulation: randomness affects individual outcomes strongly, but long-run patterns are more stable.</p>
+</section>
+</section>
+<section id="extension-relative-frequencies" class="level1">
+<h1>Extension: relative frequencies</h1>
+<p>The program can be extended so that it also prints the relative frequency for each sum.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sum</span><span class="ch">\t</span><span class="st">Frequency</span><span class="ch">\t</span><span class="st">Relative Frequency"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> sum_value <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">13</span>):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    relative <span class="op">=</span> frequency[sum_value] <span class="op">/</span> n</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(sum_value, <span class="st">"</span><span class="ch">\t</span><span class="st">"</span>, frequency[sum_value], <span class="st">"</span><span class="ch">\t</span><span class="st">"</span>, relative)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Relative frequencies are useful because they allow students to compare simulation results with probability values. For example, the theoretical probability of getting 7 is 6 out of 36, while the probability of getting 2 is 1 out of 36.</p>
+</section>
+<section id="classroom-activities" class="level1">
+<h1>Classroom activities</h1>
+<p>Students can deepen their understanding through small follow-up tasks.</p>
+<ul>
+<li>Run the program with (N = 20), (100), and (1000), and compare the shape of the distribution.</li>
+<li>Modify the program to print the two dice values for each roll before showing the final table.</li>
+<li>Calculate the relative frequency of each sum.</li>
+<li>Find the least common sum as well as the most common sum.</li>
+<li>Draw a simple text-based bar chart using stars for each frequency.</li>
+</ul>
+<p>These activities encourage students to see frequency tables not just as output, but as evidence for an underlying probability structure.</p>
+</section>
+<section id="questions-for-discussion" class="level1">
+<h1>Questions for discussion</h1>
+<ol type="1">
+<li>Why are the sums not equally likely even though each die face is equally likely?</li>
+<li>Why do 2 and 12 occur less often than 6, 7, or 8?</li>
+<li>Why is the shape of the distribution roughly symmetric around 7?</li>
+<li>Why can two students running the same code get slightly different tables?</li>
+<li>Why do larger values of (N) usually make the pattern clearer?</li>
+</ol>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>The dice sum game is a strong classroom example because it combines loops, lists, random number generation, and table-based reasoning in one compact task. It also shows students that code can be used not only to compute answers, but also to discover and explain mathematical patterns through repeated simulation.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

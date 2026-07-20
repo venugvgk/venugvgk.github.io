@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Venu GVGK">
-<meta name="dcterms.date" content="2024-12-28">
 
-<title>Returning multiple values from a function in python – Venu GVGK Raju</title>
+<title>cs2026-coin-toss-simulator – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,10 +104,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Returning multiple values from a function in python – Venu GVGK Raju">
+<meta property="og:title" content="Venu GVGK Raju">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Returning multiple values from a function in python – Venu GVGK Raju">
+<meta name="twitter:title" content="Venu GVGK Raju">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -170,66 +168,261 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning goals</a></li>
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement">Problem statement</a>
+  <ul class="collapse">
+  <li><a href="#input" id="toc-input" class="nav-link" data-scroll-target="#input">Input</a></li>
+  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output">Output</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  </ul></li>
+  <li><a href="#what-is-needed" id="toc-what-is-needed" class="nav-link" data-scroll-target="#what-is-needed">What is needed</a></li>
+  <li><a href="#logic-in-words" id="toc-logic-in-words" class="nav-link" data-scroll-target="#logic-in-words">Logic in words</a></li>
+  <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link" data-scroll-target="#pseudocode">Pseudocode</a></li>
+  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code">Python code</a></li>
+  <li><a href="#sample-run" id="toc-sample-run" class="nav-link" data-scroll-target="#sample-run">Sample run</a></li>
+  <li><a href="#detailed-discussion" id="toc-detailed-discussion" class="nav-link" data-scroll-target="#detailed-discussion">Detailed discussion</a>
+  <ul class="collapse">
+  <li><a href="#why-do-results-change-every-run" id="toc-why-do-results-change-every-run" class="nav-link" data-scroll-target="#why-do-results-change-every-run">Why do results change every run?</a></li>
+  <li><a href="#why-do-the-fractions-move-toward-0.5" id="toc-why-do-the-fractions-move-toward-0.5" class="nav-link" data-scroll-target="#why-do-the-fractions-move-toward-0.5">Why do the fractions move toward 0.5?</a></li>
+  <li><a href="#which-programming-ideas-are-revised-here" id="toc-which-programming-ideas-are-revised-here" class="nav-link" data-scroll-target="#which-programming-ideas-are-revised-here">Which programming ideas are revised here?</a></li>
+  <li><a href="#what-edge-cases-should-be-discussed" id="toc-what-edge-cases-should-be-discussed" class="nav-link" data-scroll-target="#what-edge-cases-should-be-discussed">What edge cases should be discussed?</a></li>
+  </ul></li>
+  <li><a href="#classroom-extensions" id="toc-classroom-extensions" class="nav-link" data-scroll-target="#classroom-extensions">Classroom extensions</a></li>
+  <li><a href="#questions-for-discussion" id="toc-questions-for-discussion" class="nav-link" data-scroll-target="#questions-for-discussion">Questions for discussion</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Returning multiple values from a function in python</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">python</div>
-  </div>
-  </div>
 
 
 
-<div class="quarto-title-meta">
+<p>title: “CS2026 Class Notes: Coin Toss Simulator” publish: false</p>
+<hr>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>A coin toss simulator is a simple way to introduce randomness in programming. In computational thinking, simulation means defining a random process, repeating it many times, and collecting the outcomes to study a pattern.</p>
+<p>This exercise fits well after guessing games and prime number programs because it still uses variables, loops, and conditionals, but it introduces a new idea: the same program can produce different valid results on different runs because chance is involved.</p>
+</section>
+<section id="learning-goals" class="level1">
+<h1>Learning goals</h1>
+<p>By the end of this lesson, students should be able to:</p>
+<ul>
+<li>identify the inputs, outputs, and variables needed for a simulation program;</li>
+<li>write the logic of a repeated random experiment in simple steps;</li>
+<li>convert that logic into pseudocode;</li>
+<li>implement the pseudocode in Python;</li>
+<li>discuss why results vary from run to run and why large numbers of trials often produce stable patterns.</li>
+</ul>
+</section>
+<section id="problem-statement" class="level1">
+<h1>Problem statement</h1>
+<p>Write a program to simulate tossing a fair coin (N) times. The program must count how many times the result is Heads and how many times it is Tails.</p>
+<p>After all tosses are completed, the program should also calculate the fraction of tosses that are Heads and the fraction of tosses that are Tails. These fractions are examples of an empirical distribution, meaning a distribution based on observed outcomes from data or simulation.</p>
+<section id="input" class="level2">
+<h2 class="anchored" data-anchor-id="input">Input</h2>
+<ul>
+<li>A positive integer (N), representing the number of coin tosses.</li>
+</ul>
+</section>
+<section id="output" class="level2">
+<h2 class="anchored" data-anchor-id="output">Output</h2>
+<ul>
+<li>Number of Heads.</li>
+<li>Number of Tails.</li>
+<li>Fraction of Heads.</li>
+<li>Fraction of Tails.</li>
+</ul>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>If (N = 10), one run of the program might produce 6 Heads and 4 Tails, while another run with the same (N) might produce 3 Heads and 7 Tails because the outcomes are random.</p>
+</section>
+</section>
+<section id="what-is-needed" class="level1">
+<h1>What is needed</h1>
+<p>Before writing code, clearly identify what the program needs.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>N</code></td>
+<td>Number of tosses to simulate.</td>
+</tr>
+<tr class="even">
+<td><code>heads_count</code></td>
+<td>Stores how many Heads have occurred.</td>
+</tr>
+<tr class="odd">
+<td><code>tails_count</code></td>
+<td>Stores how many Tails have occurred.</td>
+</tr>
+<tr class="even">
+<td>Random coin toss</td>
+<td>Produces one outcome for each trial, such as 0/1 or H/T.</td>
+</tr>
+<tr class="odd">
+<td>Loop</td>
+<td>Repeats the toss process exactly (N) times.</td>
+</tr>
+</tbody>
+</table>
+<p>This stage is important because students learn that a program becomes easier to write once the data to be tracked is clearly identified.</p>
+</section>
+<section id="logic-in-words" class="level1">
+<h1>Logic in words</h1>
+<p>The logic can be written in simple English before pseudocode.</p>
+<ol type="1">
+<li>Read the value of (N).</li>
+<li>Set the Heads counter to 0.</li>
+<li>Set the Tails counter to 0.</li>
+<li>Repeat the following steps (N) times:
+<ul>
+<li>simulate one coin toss;</li>
+<li>if the toss is Heads, increase the Heads counter by 1;</li>
+<li>otherwise, increase the Tails counter by 1.</li>
+</ul></li>
+<li>After the loop ends, calculate the fraction of Heads and the fraction of Tails.</li>
+<li>Print all results.</li>
+</ol>
+<p>This structure follows the standard simulation pattern of defining one random event, repeating it many times, and collecting summary results.</p>
+</section>
+<section id="pseudocode" class="level1">
+<h1>Pseudocode</h1>
+<pre class="text"><code>START
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Venu GVGK </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 28, 2024</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
+INPUT N
+
+SET heads_count = 0
+SET tails_count = 0
+
+REPEAT N TIMES
+    GENERATE a random result: 0 or 1
+
+    IF result == 1 THEN
+        heads_count = heads_count + 1
+    ELSE
+        tails_count = tails_count + 1
+    END IF
+END REPEAT
+
+SET heads_fraction = heads_count / N
+SET tails_fraction = tails_count / N
+
+PRINT "Heads =", heads_count
+PRINT "Tails =", tails_count
+PRINT "Heads fraction =", heads_fraction
+PRINT "Tails fraction =", tails_fraction
+
+END</code></pre>
+<p>The pseudocode is intentionally close to the final Python program so that students can see how a plan becomes code.</p>
+</section>
+<section id="python-code" class="level1">
+<h1>Python code</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter number of coin tosses: "</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>heads_count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>tails_count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    toss <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="dv">1</span>)   <span class="co"># 0 = Tails, 1 = Heads</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> toss <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        heads_count <span class="op">=</span> heads_count <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        tails_count <span class="op">=</span> tails_count <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>heads_fraction <span class="op">=</span> heads_count <span class="op">/</span> n</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>tails_fraction <span class="op">=</span> tails_count <span class="op">/</span> n</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Heads ="</span>, heads_count)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Tails ="</span>, tails_count)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Heads fraction ="</span>, heads_fraction)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Tails fraction ="</span>, tails_fraction)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This solution uses a <code>for</code> loop for repetition, counters to store totals, and an <code>if</code> statement to update the correct counter after each toss.</p>
+</section>
+<section id="sample-run" class="level1">
+<h1>Sample run</h1>
+<pre class="text"><code>Enter number of coin tosses: 10
+Heads = 6
+Tails = 4
+Heads fraction = 0.6
+Tails fraction = 0.4</code></pre>
+<p>A second run may produce different values even for the same input because the simulation depends on random outcomes.</p>
+</section>
+<section id="detailed-discussion" class="level1">
+<h1>Detailed discussion</h1>
+<section id="why-do-results-change-every-run" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-results-change-every-run">Why do results change every run?</h2>
+<p>A simulation of a fair coin toss uses randomness, so the exact sequence of Heads and Tails is different each time the program is executed. This is what makes simulation useful for studying chance processes.</p>
+</section>
+<section id="why-do-the-fractions-move-toward-0.5" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-the-fractions-move-toward-0.5">Why do the fractions move toward 0.5?</h2>
+<p>For a fair coin, the long-run proportion of Heads is expected to be close to 0.5, and simulations with larger numbers of tosses tend to produce empirical proportions closer to that value. Small samples can vary a lot, but larger samples are usually more stable.</p>
+</section>
+<section id="which-programming-ideas-are-revised-here" class="level2">
+<h2 class="anchored" data-anchor-id="which-programming-ideas-are-revised-here">Which programming ideas are revised here?</h2>
+<p>This program reinforces several core ideas:</p>
+<ul>
+<li>variables and assignment;</li>
+<li>counters;</li>
+<li>loops;</li>
+<li>conditional statements;</li>
+<li>input and output;</li>
+<li>basic numerical calculation.</li>
+</ul>
+</section>
+<section id="what-edge-cases-should-be-discussed" class="level2">
+<h2 class="anchored" data-anchor-id="what-edge-cases-should-be-discussed">What edge cases should be discussed?</h2>
+<p>If the user enters 0, the program attempts to divide by zero while calculating fractions, so the class should either require (N &gt; 0) or add validation before continuing. This is a useful moment to discuss why programs must handle invalid input carefully.</p>
+</section>
+</section>
+<section id="classroom-extensions" class="level1">
+<h1>Classroom extensions</h1>
+<p>Once the basic version works, students can try small modifications.</p>
+<ul>
+<li>Print each toss as <code>H</code> or <code>T</code> before printing the final totals.</li>
+<li>Check whether Heads occurred more often, Tails occurred more often, or both were equal.</li>
+<li>Run the experiment for (N = 10), (100), and (1000), and compare the results.</li>
+<li>Repeat the whole experiment 5 times and compare the fractions from each run.</li>
+<li>Count how many times two Heads occur in a row, which leads naturally to pattern-based simulations.</li>
+</ul>
+</section>
+<section id="questions-for-discussion" class="level1">
+<h1>Questions for discussion</h1>
+<ol type="1">
+<li>Why is it possible for two students to use the same code and input but get different answers?</li>
+<li>Why does the program need two counters?</li>
+<li>What happens if (N) is very small, such as 1 or 2?</li>
+<li>What happens if (N) is 0?</li>
+<li>Why do larger values of (N) usually produce more balanced fractions?</li>
+</ol>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>The coin toss simulator is a compact example of computational thinking. It shows how to describe a process clearly, translate it into logic and pseudocode, implement it in code, and then interpret the output using ideas from randomness and empirical distributions.</p>
 
 
-</header>
-
-
-<p>A function can return multiple values in a list. Each value can be used at multiple places using the index of the list.</p>
-<p>For example,</p>
-<div id="0db21124" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(x,y,z):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> x<span class="op">+</span>y</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    j <span class="op">=</span> y<span class="op">+</span>z</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> x<span class="op">+</span>z</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [i,j,k]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> add(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)[<span class="dv">0</span>] <span class="co"># this gives us i, 7</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> add(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)[<span class="dv">1</span>] <span class="co"># this gives us j, 9</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> add(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)[<span class="dv">2</span>] <span class="co"># this gives us k, 8</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a,b,c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>7 9 8</code></pre>
-</div>
-</div>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
