@@ -1,0 +1,19 @@
+---
+title: Venu's notes
+publish: false
+---
+session 7 - computer guesses the number - binary search in operation
+session 8 - prime numbers in a range - is_prime(n) and primes_in_range(start, end)
+session 9 - coin toss simulator - random.randint(0, 1) and fractions of heads and tails
+session 10 - two-dice-sum game
+
+
+- All factors of a number
+- Perfect numbers and abundant/deficient numbers
+- Prime factors of a number
+- Digit sum and divisibility checks (e.g., check if a number is divisible by 3, 9, or 11 using digit patterns)
+- Base conversions in a constrained way (e.g., convert numbers between base 10 and base 2 for small values)
+- Polygon angle checker: given number of sides n, compute interior angle sum and compare it with a claimed sum.
+- WORDLE??
+- Reverse and palindrome checker
+

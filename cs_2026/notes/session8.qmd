@@ -1,0 +1,28 @@
+
+let us say we have a list
+
+create another empty list 
+
+now take each element of the original list, check it is in the second list, if yes, ignore, if not, add to the list. 
+
+loop through the original list from beginning to end
+
+print the new list
+
+Let us say we have a list of numbers
+
+create a variable
+
+take each element of the list, compare it with the variable, if the element is greater than the variable, replace the variable with the element. 
+
+loop through the list from beginning to end
+
+Print the variable in the end
+
+
+
+
+
+
+
+

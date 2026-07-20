@@ -1,8 +1,10 @@
 ---
-title: Session 7 Plan Computer Guesses the number 
+title: Session 7 Computer Guesses the number 
 date: 2026-06-25
 page-layout: article
 ---
+We installed python and learned how to write and run a program. 
+
 # Session focus
 
 In this session, the player thinks of a number between 1 and 100, and the computer tries to guess it by repeatedly narrowing the possible range. The main programming ideas are storing the current range, repeating the same action in a loop, and using conditionals to update the range based on feedback.

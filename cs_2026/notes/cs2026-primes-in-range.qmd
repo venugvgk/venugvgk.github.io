@@ -1,0 +1,151 @@
+---
+title: "CS2026 – Finding Prime Numbers in a Range"
+publish: false
+---
+
+# Problem and goal
+
+We want a program that takes a start and end of a range, for example 10 to 50, and finds all the prime numbers in that range.
+
+For example:
+
+- Input: start = 10, end = 20
+- Output: 11, 13, 17, 19
+
+So the problem naturally breaks into two parts:
+
+- How do we check whether one number is prime?
+- How do we repeat that check for every number in the range?
+
+# Math behind the problem
+
+A number `n` greater than 1 is prime if its only positive divisors are 1 and `n` itself.
+
+This means that if `n` is not prime, then there must be some number `d` between 2 and `n - 1` that divides `n` exactly.
+
+A useful mathematical idea makes the work smaller:
+
+- To test whether `n` is prime, it is enough to check divisors only up to `sqrt(n)`.
+
+Why?
+
+- If `n = a * b`, and both `a` and `b` are larger than `sqrt(n)`, then `a * b` would be greater than `n`, which is impossible.
+- So if `n` has a factor, at least one factor must be less than or equal to `sqrt(n)`.
+
+Therefore, to test if a number is prime:
+
+1. If `n <= 1`, it is not prime.
+2. Compute `sqrt(n)`.
+3. Try dividing `n` by every integer from 2 up to `sqrt(n)`.
+4. If any divisor works exactly, `n` is not prime.
+5. If no divisor works, `n` is prime.
+
+# What the program needs to do
+
+For a range from `start` to `end`:
+
+1. Start with an empty list of primes.
+2. For each number `n` in the range:
+   - Check whether `n` is prime.
+   - If it is prime, add it to the list.
+3. At the end, output the list of primes.
+
+This suggests two functions:
+
+- `is_prime(n)` to test one number.
+- `primes_in_range(start, end)` to collect all the primes in the interval.
+
+# Pseudocode
+
+## Helper function: `is_prime`
+
+```text
+FUNCTION is_prime(n):
+
+    IF n <= 1:
+        RETURN False
+
+    SET limit = floor(sqrt(n))
+
+    FOR d from 2 to limit:
+        IF n mod d == 0:
+            RETURN False
+
+    RETURN True
+```
+
+## Main function: `primes_in_range`
+
+```text
+FUNCTION primes_in_range(start, end):
+
+    CREATE empty list primes
+
+    FOR n from start to end:
+        IF is_prime(n):
+            append n to primes
+
+    RETURN primes
+```
+
+# Python code
+
+## Helper function: `is_prime`
+
+```python
+import math
+
+def is_prime(n):
+    """Return True if n is prime, False otherwise."""
+    if n <= 1:
+        return False
+
+    limit = int(math.sqrt(n))
+
+    for d in range(2, limit + 1):
+        if n % d == 0:
+            return False
+
+    return True
+```
+
+## Main function: `primes_in_range`
+
+```python
+def primes_in_range(start, end):
+    """Return a list of all prime numbers between start and end (inclusive)."""
+    primes = []
+
+    for n in range(start, end + 1):
+        if is_prime(n):
+            primes.append(n)
+
+    return primes
+```
+
+## Example usage
+
+```python
+start = 10
+end = 50
+primes = primes_in_range(start, end)
+print("Prime numbers between", start, "and", end, "are:")
+print(primes)
+```
+
+# What to note in the pseudocode
+
+- The problem is split into two functions.
+- `is_prime(n)` does only one job: decide whether one number is prime.
+- `primes_in_range(start, end)` repeats that test for every number in the interval.
+- The mathematical idea of checking only up to `sqrt(n)` reduces the amount of work.
+- The pseudocode uses loops, conditionals, and a list to organize the solution.
+
+# What to note in the Python code
+
+- `import math` is needed for `math.sqrt(n)`.
+- `int(math.sqrt(n))` gives the whole-number limit for divisor checking.
+- `range(2, limit + 1)` checks all possible divisors from 2 up to the limit.
+- `n % d == 0` tests whether `d` divides `n` exactly.
+- `primes = []` creates an empty list, and `primes.append(n)` adds a prime number to it.
+- The Python code follows the same structure as the pseudocode, which is the main habit to practice.

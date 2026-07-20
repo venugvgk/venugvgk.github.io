@@ -1,0 +1,238 @@
+---
+title: "CS2026 Class Notes: Dice Sum Game"
+publish: false
+---
+
+# Introduction
+
+The dice sum game is a natural next step after the coin toss simulator because it keeps the same simulation structure but produces a richer pattern of outcomes. Instead of only two outcomes, rolling two fair dice produces sums from 2 to 12, and some of those sums occur more often than others.
+
+This lesson is useful because it connects programming with both probability and combinatorics. By simulating many rolls, students can observe a frequency distribution and compare it with the mathematical idea that some sums can be formed in more ways than others.
+
+# Learning goals
+
+By the end of this lesson, students should be able to:
+
+- simulate repeated rolls of two fair dice;
+- compute the sum of two random outcomes;
+- store and update frequencies for sums from 2 to 12;
+- identify the most frequent sum from simulation results;
+- explain why 7 appears most often using both simulation and counting arguments.
+
+# Problem statement
+
+Write a program to roll two fair six-sided dice many times. For each roll, calculate the sum of the two dice and record how often each possible sum occurs.
+
+At the end, print a frequency table showing how many times each sum from 2 to 12 appeared, and identify which sum appeared most often. In large simulations, the sum 7 is expected to appear most often because it can be formed in more distinct ways than any other sum.
+
+## Input
+
+- A positive integer \(N\), representing the number of times the pair of dice will be rolled.
+
+## Output
+
+- The frequency of each sum from 2 to 12.
+- The sum that appeared most often.
+- Optionally, the fraction or percentage for each sum.
+
+## Example idea
+
+If the dice are rolled 20 times, one possible set of frequencies might show that 7 occurred 4 times, 6 occurred 3 times, 8 occurred 3 times, and some extreme sums such as 2 or 12 occurred only once or not at all. The exact results change from run to run because simulation uses randomness.
+
+# What is needed
+
+Before writing the program, identify the main items required.
+
+| Item | Purpose |
+|---|---|
+| `N` | Number of repeated trials. |
+| `die1` | First random die roll from 1 to 6. |
+| `die2` | Second random die roll from 1 to 6. |
+| `sum_value` | Stores the sum of the two dice. |
+| Frequency structure | Stores counts for sums 2 to 12. |
+| Loop | Repeats the experiment exactly \(N\) times. |
+
+A good classroom question here is: “What must be remembered after each roll?” Students should notice that individual rolls are temporary, but the frequencies must be stored throughout the entire simulation.
+
+# Logic in words
+
+The algorithm can be written in simple English first.
+
+1. Read the value of \(N\).
+2. Create counters for sums 2 through 12 and set them all to 0.
+3. Repeat the following \(N\) times:
+   - generate a random value from 1 to 6 for the first die;
+   - generate a random value from 1 to 6 for the second die;
+   - add the two values to get the sum;
+   - increase the counter for that sum by 1.
+4. After the loop ends, print the frequency table.
+5. Find the sum with the highest frequency and print it.
+
+This follows the same simulation pattern used in computational thinking: define one trial clearly, repeat it many times, and summarise the outcomes.
+
+# Pseudocode
+
+```text
+START
+
+INPUT N
+
+CREATE a list called frequency with 13 values, all set to 0
+
+REPEAT N TIMES
+    GENERATE die1 from 1 to 6
+    GENERATE die2 from 1 to 6
+    SET sum_value = die1 + die2
+    frequency[sum_value] = frequency[sum_value] + 1
+END REPEAT
+
+SET max_count = frequency[2]
+SET most_common_sum = 2
+
+FOR sum_value from 3 to 12
+    IF frequency[sum_value] > max_count THEN
+        max_count = frequency[sum_value]
+        most_common_sum = sum_value
+    END IF
+END FOR
+
+FOR sum_value from 2 to 12
+    PRINT sum_value, frequency[sum_value]
+END FOR
+
+PRINT "Most common sum =", most_common_sum
+
+END
+```
+
+This pseudocode introduces an indexed frequency structure, which is a useful bridge from simple counters to list-based problem solving.
+
+# Python code
+
+```python
+import random
+
+n = int(input("Enter number of rolls: "))
+
+frequency = [0] * 13
+
+for i in range(n):
+    die1 = random.randint(1, 6)
+    die2 = random.randint(1, 6)
+    sum_value = die1 + die2
+    frequency[sum_value] = frequency[sum_value] + 1
+
+max_count = frequency[2]
+most_common_sum = 2
+
+for sum_value in range(3, 13):
+    if frequency[sum_value] > max_count:
+        max_count = frequency[sum_value]
+        most_common_sum = sum_value
+
+print("Sum\tFrequency")
+for sum_value in range(2, 13):
+    print(sum_value, "\t", frequency[sum_value])
+
+print("Most common sum =", most_common_sum)
+```
+
+This program uses random integer generation for each die, a loop for repetition, and a list to store the frequencies of possible sums.
+
+# Sample run
+
+```text
+Enter number of rolls: 30
+Sum     Frequency
+2       1
+3       2
+4       3
+5       4
+6       5
+7       6
+8       4
+9       2
+10      1
+11      1
+12      1
+Most common sum = 7
+```
+
+The exact numbers can change on another run, but in larger simulations the shape usually rises toward the middle and falls again, with 7 often appearing at or near the top.
+
+# Detailed discussion
+
+## Why is 7 the most common sum?
+
+The simulation suggests that 7 appears most often, but programming is only one part of the explanation. The mathematical reason is that 7 can be formed in 6 distinct ordered ways: \((1,6)\), \((2,5)\), \((3,4)\), \((4,3)\), \((5,2)\), and \((6,1)\).
+
+Other sums have fewer combinations. For example, 2 can occur only as \((1,1)\), and 12 can occur only as \((6,6)\), so they are much less frequent in repeated trials.
+
+## Combinatorics table
+
+The connection between simulation and counting can be shown clearly in a table.
+
+| Sum | Number of ways | Example outcomes |
+|---|---:|---|
+| 2 | 1 | (1,1) |
+| 3 | 2 | (1,2), (2,1) |
+| 4 | 3 | (1,3), (2,2), (3,1) |
+| 5 | 4 | (1,4), (2,3), (3,2), (4,1) |
+| 6 | 5 | five ordered pairs |
+| 7 | 6 | six ordered pairs |
+| 8 | 5 | five ordered pairs |
+| 9 | 4 | four ordered pairs |
+| 10 | 3 | three ordered pairs |
+| 11 | 2 | two ordered pairs |
+| 12 | 1 | (6,6) |
+
+Because the number of ways rises to 6 and then falls symmetrically, the frequency distribution of sums tends to have a triangular shape with the peak near 7.
+
+## What does the frequency table show?
+
+A frequency table records how many times each outcome occurred in the simulation. As the number of trials becomes large, the observed frequencies begin to reflect the underlying probability pattern more clearly.
+
+This helps students move from single outcomes to distributions. Instead of asking “What happened on one roll?”, the better question becomes “What pattern appears after many rolls?”
+
+## Why do small and large simulations look different?
+
+In a small number of rolls, the frequencies can look irregular because chance variation is strong. In a much larger number of rolls, the empirical distribution tends to resemble the theoretical distribution more closely.
+
+This is one of the important ideas of simulation: randomness affects individual outcomes strongly, but long-run patterns are more stable.
+
+# Extension: relative frequencies
+
+The program can be extended so that it also prints the relative frequency for each sum.
+
+```python
+print("Sum\tFrequency\tRelative Frequency")
+for sum_value in range(2, 13):
+    relative = frequency[sum_value] / n
+    print(sum_value, "\t", frequency[sum_value], "\t", relative)
+```
+
+Relative frequencies are useful because they allow students to compare simulation results with probability values. For example, the theoretical probability of getting 7 is 6 out of 36, while the probability of getting 2 is 1 out of 36.
+
+# Classroom activities
+
+Students can deepen their understanding through small follow-up tasks.
+
+- Run the program with \(N = 20\), \(100\), and \(1000\), and compare the shape of the distribution.
+- Modify the program to print the two dice values for each roll before showing the final table.
+- Calculate the relative frequency of each sum.
+- Find the least common sum as well as the most common sum.
+- Draw a simple text-based bar chart using stars for each frequency.
+
+These activities encourage students to see frequency tables not just as output, but as evidence for an underlying probability structure.
+
+# Questions for discussion
+
+1. Why are the sums not equally likely even though each die face is equally likely?
+2. Why do 2 and 12 occur less often than 6, 7, or 8?
+3. Why is the shape of the distribution roughly symmetric around 7?
+4. Why can two students running the same code get slightly different tables?
+5. Why do larger values of \(N\) usually make the pattern clearer?
+
+# Summary
+
+The dice sum game is a strong classroom example because it combines loops, lists, random number generation, and table-based reasoning in one compact task. It also shows students that code can be used not only to compute answers, but also to discover and explain mathematical patterns through repeated simulation.

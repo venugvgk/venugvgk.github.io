@@ -1,0 +1,191 @@
+title: "CS2026 Class Notes: Coin Toss Simulator"
+publish: false 
+---
+
+# Introduction
+
+A coin toss simulator is a simple way to introduce randomness in programming. In computational thinking, simulation means defining a random process, repeating it many times, and collecting the outcomes to study a pattern.
+
+This exercise fits well after guessing games and prime number programs because it still uses variables, loops, and conditionals, but it introduces a new idea: the same program can produce different valid results on different runs because chance is involved.
+
+# Learning goals
+
+By the end of this lesson, students should be able to:
+
+- identify the inputs, outputs, and variables needed for a simulation program;
+- write the logic of a repeated random experiment in simple steps;
+- convert that logic into pseudocode;
+- implement the pseudocode in Python;
+- discuss why results vary from run to run and why large numbers of trials often produce stable patterns.
+
+# Problem statement
+
+Write a program to simulate tossing a fair coin \(N\) times. The program must count how many times the result is Heads and how many times it is Tails.
+
+After all tosses are completed, the program should also calculate the fraction of tosses that are Heads and the fraction of tosses that are Tails. These fractions are examples of an empirical distribution, meaning a distribution based on observed outcomes from data or simulation.
+
+## Input
+
+- A positive integer \(N\), representing the number of coin tosses.
+
+## Output
+
+- Number of Heads.
+- Number of Tails.
+- Fraction of Heads.
+- Fraction of Tails.
+
+## Example
+
+If \(N = 10\), one run of the program might produce 6 Heads and 4 Tails, while another run with the same \(N\) might produce 3 Heads and 7 Tails because the outcomes are random.
+
+# What is needed
+
+Before writing code, clearly identify what the program needs.
+
+| Item | Purpose |
+|---|---|
+| `N` | Number of tosses to simulate. |
+| `heads_count` | Stores how many Heads have occurred. |
+| `tails_count` | Stores how many Tails have occurred. |
+| Random coin toss | Produces one outcome for each trial, such as 0/1 or H/T. |
+| Loop | Repeats the toss process exactly \(N\) times. |
+
+This stage is important because students learn that a program becomes easier to write once the data to be tracked is clearly identified.
+
+# Logic in words
+
+The logic can be written in simple English before pseudocode.
+
+1. Read the value of \(N\).
+2. Set the Heads counter to 0.
+3. Set the Tails counter to 0.
+4. Repeat the following steps \(N\) times:
+    - simulate one coin toss;
+    - if the toss is Heads, increase the Heads counter by 1;
+    - otherwise, increase the Tails counter by 1.
+5. After the loop ends, calculate the fraction of Heads and the fraction of Tails.
+6. Print all results.
+
+This structure follows the standard simulation pattern of defining one random event, repeating it many times, and collecting summary results.
+
+# Pseudocode
+
+```text
+START
+
+INPUT N
+
+SET heads_count = 0
+SET tails_count = 0
+
+REPEAT N TIMES
+    GENERATE a random result: 0 or 1
+
+    IF result == 1 THEN
+        heads_count = heads_count + 1
+    ELSE
+        tails_count = tails_count + 1
+    END IF
+END REPEAT
+
+SET heads_fraction = heads_count / N
+SET tails_fraction = tails_count / N
+
+PRINT "Heads =", heads_count
+PRINT "Tails =", tails_count
+PRINT "Heads fraction =", heads_fraction
+PRINT "Tails fraction =", tails_fraction
+
+END
+```
+
+The pseudocode is intentionally close to the final Python program so that students can see how a plan becomes code.
+
+# Python code
+
+```python
+import random
+
+n = int(input("Enter number of coin tosses: "))
+
+heads_count = 0
+tails_count = 0
+
+for i in range(n):
+    toss = random.randint(0, 1)   # 0 = Tails, 1 = Heads
+
+    if toss == 1:
+        heads_count = heads_count + 1
+    else:
+        tails_count = tails_count + 1
+
+heads_fraction = heads_count / n
+tails_fraction = tails_count / n
+
+print("Heads =", heads_count)
+print("Tails =", tails_count)
+print("Heads fraction =", heads_fraction)
+print("Tails fraction =", tails_fraction)
+```
+
+This solution uses a `for` loop for repetition, counters to store totals, and an `if` statement to update the correct counter after each toss.
+
+# Sample run
+
+```text
+Enter number of coin tosses: 10
+Heads = 6
+Tails = 4
+Heads fraction = 0.6
+Tails fraction = 0.4
+```
+
+A second run may produce different values even for the same input because the simulation depends on random outcomes.
+
+# Detailed discussion
+
+## Why do results change every run?
+
+A simulation of a fair coin toss uses randomness, so the exact sequence of Heads and Tails is different each time the program is executed. This is what makes simulation useful for studying chance processes.
+
+## Why do the fractions move toward 0.5?
+
+For a fair coin, the long-run proportion of Heads is expected to be close to 0.5, and simulations with larger numbers of tosses tend to produce empirical proportions closer to that value. Small samples can vary a lot, but larger samples are usually more stable.
+
+## Which programming ideas are revised here?
+
+This program reinforces several core ideas:
+
+- variables and assignment;
+- counters;
+- loops;
+- conditional statements;
+- input and output;
+- basic numerical calculation.
+
+## What edge cases should be discussed?
+
+If the user enters 0, the program attempts to divide by zero while calculating fractions, so the class should either require \(N > 0\) or add validation before continuing. This is a useful moment to discuss why programs must handle invalid input carefully.
+
+# Classroom extensions
+
+Once the basic version works, students can try small modifications.
+
+- Print each toss as `H` or `T` before printing the final totals.
+- Check whether Heads occurred more often, Tails occurred more often, or both were equal.
+- Run the experiment for \(N = 10\), \(100\), and \(1000\), and compare the results.
+- Repeat the whole experiment 5 times and compare the fractions from each run.
+- Count how many times two Heads occur in a row, which leads naturally to pattern-based simulations.
+
+# Questions for discussion
+
+1. Why is it possible for two students to use the same code and input but get different answers?
+2. Why does the program need two counters?
+3. What happens if \(N\) is very small, such as 1 or 2?
+4. What happens if \(N\) is 0?
+5. Why do larger values of \(N\) usually produce more balanced fractions?
+
+# Summary
+
+The coin toss simulator is a compact example of computational thinking. It shows how to describe a process clearly, translate it into logic and pseudocode, implement it in code, and then interpret the output using ideas from randomness and empirical distributions.
