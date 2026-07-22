@@ -1,0 +1,62 @@
+---
+title: Session 9 Python Data Types and Data Structures
+date: 2026-07-15
+page-layout: article
+---
+
+# Introduction to Data Types and Data Structures in Python
+
+## 1. Understanding Data Types
+Programming languages are designed to accommodate real-world data. A language's effectiveness often depends on how many real-world data types it can handle. Python includes several built-in basic data types:
+*   **Strings (str):** Textual data, such as "hello" or usernames. These are always placed in quotes.
+*   **Integers (int):** Whole numbers, both positive and negative (e.g., 5, -15).
+*   **Floating Point (float):** Decimal numbers like 3.14 (pi).
+*   **Complex Numbers:** Numbers with real and imaginary parts. This is an advanced feature that many other languages do not include.
+
+## 2. The "Big Four" Data Structures
+Data structures are used to store and organize collections of data. Python automatically interprets the structure based on the brackets used.
+
+| Structure | Brackets | Characteristics | Best Use Case |
+| :--- | :--- | :--- | :--- |
+| **List** | `[ ]` | **Ordered, changeable**, allows duplicates. | General tasks, items that need frequent modification. |
+| **Tuple** | `( )` | **Ordered, unchangeable**, allows duplicates. | Fixed data that should not change, like coordinates. |
+| **Set** | `{ }` | **Unordered**, changeable, **unique values only**. | Removing duplicates or membership testing. |
+| **Dictionary**| `{ : }` | **Key-Value pairs**, unordered. | Lookups, such as student IDs or passwords. |
+
+## 3. Core List Operations
+Lists are the most commonly used structure for data manipulation. Key operations include:
+
+*   **Indexing:** Accessing an item by its position. **Indexing starts at 0**.
+    *   `list` is the first element.
+    *   `list[-1]` is the last element.
+*   **Appending:** Adding a single item to the end of a list using the `.append()` method.
+*   **Slicing:** Extracting a sublist using the format `[start:stop:step]`.
+    *   Example: `fruits[:2]` prints everything from the start up to, but **excluding**, index 2.
+    *   The "step" allows you to skip items (e.g., taking every second element).
+*   **Membership Testing:** Checking if an item exists in a collection (e.g., `blue in colors`). This is much faster in sets than in lists.
+
+## 4. Algorithmic Thinking & Pseudo-code
+To become a proficient programmer, you must understand the **logic** before writing the code.
+
+### Finding the Largest Number in a List
+Instead of just using the built-in `max()` function, we can use a comparison loop:
+1.  Create a variable (e.g., `max_value`) and assign it the **first element** of the list.
+2.  **Loop** through the rest of the list.
+3.  **Compare** each element to `max_value`.
+4.  If the current element is greater, **replace** `max_value` with that element.
+5.  After the loop finishes, the variable holds the largest number.
+
+### Removing Duplicates
+While converting a list to a set automatically removes duplicates, doing it manually requires a specific logical flow:
+
+1.  Create an **empty list** for the results.
+2.  Create an **empty set** to track "seen" items (sets are faster for checking existence).
+3.  Loop through the original list.
+4.  If an item is **not in** the "seen" set, add it to both the set and the result list.
+5.  If it is already in the set, ignore it and move to the next item.
+
+## 5. Important Programming Concepts
+
+*   **Object-Oriented Syntax:** Python often uses the `object.method()` format. For example, `fruits.append("orange")` tells the computer to take the "fruits" object and apply the "append" command to it.
+*   **Memory and Efficiency:** Different structures have different impacts on memory and speed. For instance, inserting an element at the beginning of a long list is difficult because every other item must be reassigned to a new position.
+*   **Learning via AI:** Tools like AI can help explain code or suggest beginner-friendly versions of programs, but it is vital to type out code manually to truly understand how it works.

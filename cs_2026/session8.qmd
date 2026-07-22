@@ -1,0 +1,636 @@
+---
+title: Session 8 Programming Tic-Tac-Toe
+date: 2026-07-07
+page-layout: article
+---
+
+# Problem and goal
+
+We already know how Tic-Tac-Toe works as a game. We have played it, drawn decision trees, and identified a winning strategy.
+
+Now we ask a programming question:
+
+- How can we write a program so that two human players can play Tic-Tac-Toe using the computer?
+
+The computer is not yet trying to play intelligently. It is only doing the following jobs:
+
+- Showing the board.
+- Accepting moves from Player X and Player O.
+- Updating the board after each move.
+- Checking whether someone has won.
+- Checking whether the board is full.
+- Stopping the game when there is a win or a draw.
+
+So the computer is acting as a referee and scorekeeper.
+
+# Breaking the problem into modules
+
+This is not one big task. It is easier to solve if we break it into small modules.
+
+A good beginner version can be broken into these modules:
+
+1. **Represent the board**
+   - The computer needs a way to remember what is in each square.
+
+2. **Print the board**
+   - The players must be able to see the current state clearly.
+
+3. **Take a move from a player**
+   - Ask the current player for a position.
+   - Check whether that position is valid and empty.
+
+4. **Update the board**
+   - Put `X` or `O` into the chosen position.
+
+5. **Check for a winner**
+   - After every move, check rows, columns, and diagonals.
+
+6. **Check for a draw**
+   - If the board is full and nobody has won, the game is a draw.
+
+7. **Switch players**
+   - After X plays, O should play.
+   - After O plays, X should play.
+
+8. **Main game loop**
+   - Keep doing these steps until the game ends.
+
+This is a very important programming habit: break a large problem into small jobs.
+
+# The board as data
+
+## Why we need a data structure
+
+The computer needs to remember the state of all 9 squares.
+
+A simple beginner-friendly choice is a list of 9 values:
+
+```python
+board = [" ", " ", " ",
+         " ", " ", " ",
+         " ", " ", " "]
+```
+
+Each position stores one of three things:
+
+- a blank space `" "` if the square is empty
+- `"X"` if Player X has played there
+- `"O"` if Player O has played there
+
+So the board is a **list**, and each cell contains a **string**.
+
+## Position numbering
+
+To help players choose moves, we number the squares like this:
+
+```text
+ 1 | 2 | 3
+-----------
+ 4 | 5 | 6
+-----------
+ 7 | 8 | 9
+```
+
+Inside Python lists, indexing starts from 0, not 1.
+
+So the mapping is:
+
+- Player position 1 -> list index 0
+- Player position 2 -> list index 1
+- Player position 3 -> list index 2
+- ...
+- Player position 9 -> list index 8
+
+That means if the player types a number `move`, the program should store it at:
+
+```python
+index = move - 1
+```
+
+This is a small but important mathematical translation between human numbering and computer indexing.
+
+# Math behind win checking
+
+A player wins if there are three of the same mark in a straight line.
+
+There are exactly 8 winning lines:
+
+- 3 rows
+- 3 columns
+- 2 diagonals
+
+Using list indices, these are:
+
+- Rows:
+  - `(0, 1, 2)`
+  - `(3, 4, 5)`
+  - `(6, 7, 8)`
+- Columns:
+  - `(0, 3, 6)`
+  - `(1, 4, 7)`
+  - `(2, 5, 8)`
+- Diagonals:
+  - `(0, 4, 8)`
+  - `(2, 4, 6)`
+
+The program can store these as a list of triples and check them one by one.
+
+This is a nice example of how a game rule becomes a data structure.
+
+# Logic for each module
+
+## 1. Board representation
+
+- Create a list of 9 blank spaces.
+- This is the starting board.
+
+## 2. Print the board
+
+- Read positions 0 to 8 from the list.
+- Print them in 3 rows.
+- Add separating lines so the board is easy to read.
+
+## 3. Take a move
+
+- Ask the current player to enter a number from 1 to 9.
+- Convert it into a list index by subtracting 1.
+- Check whether:
+  - the number is between 1 and 9
+  - the square is still empty
+- If not, ask again.
+
+## 4. Update the board
+
+- Once a valid move is given, place the current player's mark (`X` or `O`) in that square.
+
+## 5. Check for winner
+
+- Look at each winning triple.
+- If all three positions contain the same non-empty mark, return that mark as the winner.
+
+## 6. Check for draw
+
+- If there are no blank spaces left and there is no winner, return draw.
+
+## 7. Switch players
+
+- If current player is `X`, next player becomes `O`.
+- Otherwise, next player becomes `X`.
+
+## 8. Main loop
+
+- Print board.
+- Ask move.
+- Update board.
+- Check winner.
+- Check draw.
+- Switch player.
+- Repeat until game ends.
+
+# Pseudocode
+
+## print_board
+
+```text
+FUNCTION print_board(board):
+    PRINT board[0], board[1], board[2]
+    PRINT separator line
+    PRINT board[3], board[4], board[5]
+    PRINT separator line
+    PRINT board[6], board[7], board[8]
+```
+
+## check_winner
+
+```text
+FUNCTION check_winner(board):
+
+    SET winning_lines to:
+        (0, 1, 2)
+        (3, 4, 5)
+        (6, 7, 8)
+        (0, 3, 6)
+        (1, 4, 7)
+        (2, 5, 8)
+        (0, 4, 8)
+        (2, 4, 6)
+
+    FOR each triple (a, b, c) in winning_lines:
+        IF board[a] is not blank AND
+           board[a] == board[b] AND
+           board[b] == board[c]:
+            RETURN board[a]
+
+    RETURN no winner
+```
+
+## check_draw
+
+```text
+FUNCTION check_draw(board):
+    IF there are no blank spaces in board:
+        RETURN True
+    ELSE:
+        RETURN False
+```
+
+## get_move
+
+```text
+FUNCTION get_move(board, player):
+
+    REPEAT:
+        ASK player to enter a number from 1 to 9
+        READ move
+
+        IF move is not between 1 and 9:
+            PRINT invalid position
+        ELSE:
+            index = move - 1
+
+            IF board[index] is not blank:
+                PRINT square already taken
+            ELSE:
+                RETURN index
+```
+
+## switch_player
+
+```text
+FUNCTION switch_player(player):
+    IF player is X:
+        RETURN O
+    ELSE:
+        RETURN X
+```
+
+## main game
+
+```text
+FUNCTION play_game:
+
+    CREATE board with 9 blank spaces
+    SET player = X
+
+    REPEAT:
+        print_board(board)
+
+        move = get_move(board, player)
+        board[move] = player
+
+        winner = check_winner(board)
+        IF winner exists:
+            print_board(board)
+            PRINT winner has won
+            STOP
+
+        IF check_draw(board):
+            print_board(board)
+            PRINT game is a draw
+            STOP
+
+        player = switch_player(player)
+```
+
+# Python code
+
+## Full beginner version
+
+```python
+def print_board(board):
+    print()
+    print(board[0], "|", board[1], "|", board[2])
+    print("---------")
+    print(board[3], "|", board[4], "|", board[5])
+    print("---------")
+    print(board[6], "|", board[7], "|", board[8])
+    print()
+
+
+def check_winner(board):
+    winning_lines = [
+        (0, 1, 2),
+        (3, 4, 5),
+        (6, 7, 8),
+        (0, 3, 6),
+        (1, 4, 7),
+        (2, 5, 8),
+        (0, 4, 8),
+        (2, 4, 6)
+    ]
+
+    for a, b, c in winning_lines:
+        if board[a] != " " and board[a] == board[b] and board[b] == board[c]:
+            return board[a]
+
+    return None
+
+
+def check_draw(board):
+    return " " not in board
+
+
+def get_move(board, player):
+    while True:
+        move = int(input("Player " + player + ", enter a position (1-9): "))
+
+        if move < 1 or move > 9:
+            print("Please choose a number from 1 to 9.")
+        else:
+            index = move - 1
+
+            if board[index] != " ":
+                print("That square is already taken.")
+            else:
+                return index
+
+
+def switch_player(player):
+    if player == "X":
+        return "O"
+    else:
+        return "X"
+
+
+def play_game():
+    board = [" ", " ", " ",
+             " ", " ", " ",
+             " ", " ", " "]
+
+    player = "X"
+
+    while True:
+        print_board(board)
+
+        move = get_move(board, player)
+        board[move] = player
+
+        winner = check_winner(board)
+        if winner is not None:
+            print_board(board)
+            print("Player", winner, "wins!")
+            break
+
+        if check_draw(board):
+            print_board(board)
+            print("The game is a draw.")
+            break
+
+        player = switch_player(player)
+
+
+play_game()
+```
+
+# Explaining the data structures used
+
+## 1. The board list
+
+```python
+board = [" ", " ", " ",
+         " ", " ", " ",
+         " ", " ", " "]
+```
+
+This is a **list** with 9 elements.
+
+Why a list?
+
+- Because the board has a fixed number of positions.
+- We want to access a square by its position.
+- We want to change a square when a move is made.
+
+So a list is a natural choice.
+
+## 2. The winning lines list
+
+```python
+winning_lines = [
+    (0, 1, 2),
+    (3, 4, 5),
+    (6, 7, 8),
+    (0, 3, 6),
+    (1, 4, 7),
+    (2, 5, 8),
+    (0, 4, 8),
+    (2, 4, 6)
+]
+```
+
+This is a **list of tuples**.
+
+Why?
+
+- The outer list stores all possible winning patterns.
+- Each tuple stores one fixed triple of board positions.
+- These triples do not change, so tuples are a good fit.
+
+This is an important idea: even game rules can be represented as data.
+
+## 3. Player mark
+
+```python
+player = "X"
+```
+
+This is a **string**.
+
+It stores whose turn it is.
+
+# Explaining the functions
+
+## print_board(board)
+
+- Input: the board list
+- Job: display the current state of the game
+- It does not return anything.
+
+## check_winner(board)
+
+- Input: the board list
+- Job: check whether someone has won
+- Output:
+  - `"X"` if X has won
+  - `"O"` if O has won
+  - `None` if nobody has won yet
+
+## check_draw(board)
+
+- Input: the board list
+- Job: check whether the board is full
+- Output:
+  - `True` if full
+  - `False` otherwise
+
+## get_move(board, player)
+
+- Input: the board and current player
+- Job: repeatedly ask for a legal move until one is given
+- Output: the valid board index
+
+## switch_player(player)
+
+- Input: current player
+- Job: decide who plays next
+- Output: the other player
+
+## play_game()
+
+- This is the main controlling function.
+- It brings all the smaller parts together.
+
+# Explaining the loops
+
+## 1. The main game loop
+
+```python
+while True:
+```
+
+This loop keeps the game running until something causes it to stop.
+
+What stops it?
+
+- A player wins -> `break`
+- The board is full -> `break`
+
+## 2. The input-validation loop
+
+Inside `get_move`, we also use:
+
+```python
+while True:
+```
+
+This means:
+
+- Keep asking the player for a move
+- Until the move is valid
+
+This is a very common programming pattern.
+
+## 3. The winner-checking loop
+
+```python
+for a, b, c in winning_lines:
+```
+
+This loop checks every possible winning triple.
+
+This is an example of looping over structured data.
+
+# Explaining the conditionals
+
+Conditionals are used throughout the program.
+
+Examples:
+
+## 1. Checking for a winning line
+
+```python
+if board[a] != " " and board[a] == board[b] and board[b] == board[c]:
+```
+
+This means:
+
+- the square must not be empty
+- all three squares must contain the same mark
+
+If these are true, there is a winner.
+
+## 2. Checking whether a move is inside the allowed range
+
+```python
+if move < 1 or move > 9:
+```
+
+This prevents players from entering illegal positions.
+
+## 3. Checking whether a square is already filled
+
+```python
+if board[index] != " ":
+```
+
+This prevents overwriting an existing move.
+
+## 4. Switching player
+
+```python
+if player == "X":
+    return "O"
+else:
+    return "X"
+```
+
+A simple conditional can capture a turn-taking rule.
+
+# Key things to notice
+
+## 1. Big problems become manageable when broken into modules
+
+The full game looks complicated at first, but each module is small and understandable.
+
+## 2. Data structures are central
+
+- A list stores the board.
+- A list of tuples stores the winning lines.
+- Strings store the player marks.
+
+Without a good representation of data, the program becomes difficult.
+
+## 3. Functions make the program readable
+
+Instead of putting everything in one place, each function has one job.
+
+This makes the program easier to:
+
+- understand
+- test
+- improve later
+
+## 4. The same ideas keep returning
+
+This program uses the same core ideas we have already seen:
+
+- data storage
+- loops
+- conditionals
+- functions
+- input and output
+
+## 5. The game logic and the board display are separate
+
+This is important.
+
+- `print_board` only displays.
+- `check_winner` only checks rules.
+- `get_move` only handles input.
+
+Keeping these separate makes the program clean.
+
+# Good follow-up sessions
+
+This program is enough for one or more full sessions. After students understand it, the next steps could be:
+
+1. Improve input handling so non-numeric input does not crash the program.
+2. Show available positions while printing the board.
+3. Add a replay option.
+4. Keep score across many games.
+5. Replace one human player with a simple computer player.
+6. Eventually connect the earlier decision-tree work to writing a strong computer strategy.
+
+# Final thought
+
+This is a very good first example of a complete program.
+
+It is not just solving one small puzzle. It combines:
+
+- representation
+- rules
+- input
+- output
+- repetition
+- decision making
+
+That is why Tic-Tac-Toe is such a useful programming exercise.
