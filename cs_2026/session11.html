@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-07-23">
 
-<title>Venu’s notes – Venu GVGK Raju</title>
+<title>Session 11 Dice Roll Simulator – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../venu-flute-logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../venu-flute-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,11 +70,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Venu’s notes – Venu GVGK Raju">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Session 11 Dice Roll Simulator – Venu GVGK Raju">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Venu’s notes – Venu GVGK Raju">
+<meta name="twitter:title" content="Session 11 Dice Roll Simulator – Venu GVGK Raju">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -85,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Venu GVGK Raju</span>
     </a>
   </div>
@@ -96,31 +97,31 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">Curriculum Vitae</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../books/index.html"> 
+    <a class="nav-link" href="../books/index.html"> 
 <span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../til/index.html"> 
+    <a class="nav-link" href="../til/index.html"> 
 <span class="menu-text">TIL</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../tir/index.html"> 
+    <a class="nav-link" href="../tir/index.html"> 
 <span class="menu-text">TIR</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../education/index.html"> 
+    <a class="nav-link" href="../education/index.html"> 
 <span class="menu-text">On Education</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../cs_2026/index.html"> 
+    <a class="nav-link" href="../cs_2026/index.html"> 
 <span class="menu-text">CS 2026</span></a>
   </li>  
 </ul>
@@ -134,15 +135,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#two-dice-roll-expectations" id="toc-two-dice-roll-expectations" class="nav-link active" data-scroll-target="#two-dice-roll-expectations">Two dice roll expectations</a></li>
+  <li><a href="#home-work" id="toc-home-work" class="nav-link" data-scroll-target="#home-work">Home work</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Venu’s notes</h1>
+<h1 class="title">Session 11 Dice Roll Simulator</h1>
 </div>
 
 
@@ -150,6 +158,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 23, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -159,28 +173,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>session 7 - computer guesses the number - binary search in operation session 8 - prime numbers in a range - is_prime(n) and primes_in_range(start, end) session 9 - coin toss simulator - random.randint(0, 1) and fractions of heads and tails session 10 - two-dice-sum game</p>
-<ul>
-<li>All factors of a number</li>
-<li>Perfect numbers and abundant/deficient numbers</li>
-<li>Prime factors of a number</li>
-<li>Digit sum and divisibility checks (e.g., check if a number is divisible by 3, 9, or 11 using digit patterns)</li>
-<li>Base conversions in a constrained way (e.g., convert numbers between base 10 and base 2 for small values)</li>
-<li>Polygon angle checker: given number of sides n, compute interior angle sum and compare it with a claimed sum.</li>
-<li>WORDLE??</li>
-<li>Reverse and palindrome checker</li>
-</ul>
-<p>With coin toss expectation is that we will reach 50:50 over a large number of tosses.</p>
+<p>Simulating a dice roll and keeping track of the number of times each face appears was assigned to home work in session 10. We reviewed the logic, the pseudocode and the python implementation that each of the students came up with.</p>
+<p>We then discussed the case of rolling two dice and counting the sums of the two dice. The sums can be 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 or 12. We discussed how many ways each sum can occur and what the relative frequencies of each sum are.</p>
+<section id="two-dice-roll-expectations" class="level2">
+<h2 class="anchored" data-anchor-id="two-dice-roll-expectations">Two dice roll expectations</h2>
+<p>With coin toss, the expectation is that we will reach 50:50 over a large number of tosses.</p>
 <p>With dice toss, the expectation is - each number (1-6) should appear with equal frequency over a large number of rolls.</p>
 <p>When you toss two dice, what happens?</p>
-<p>2,3,4,5,6,7,8,9,10,11,12</p>
+<p>The possible sums are - 2,3,4,5,6,7,8,9,10,11,12 The different ways these sums can occur are:</p>
 <p>2 - 1 way (1,1) 3 - 2 ways (1,2), (2,1) 4 - 3 ways (1,3), (2,2), (3,1) 5 - 4 ways (1,4), (2,3), (3,2), (4,1) 6 - 5 ways (1,5), (2,4), (3,3), (4,2), (5,1) 7 - 6 ways (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) 8 - 5 ways (2,6), (3,5), (4,4 ), (5,3), (6,2) 9 - 4 ways (3,6), (4,5), (5,4), (6,3) 10 - 3 ways (4,6), (5,5), (6,4) 11 - 2 ways (5,6), (6,5)<br>
 12 - 1 way (6,6)</p>
 <p>Relative frequencies of sums of two dice: - 2 - 1/36<br>
 - 3 - 2/36 - 4 - 3/36 - 5 - 4/36 - 6 - 5/36<br>
 - 7 - 6/36 - 8 - 5/36 - 9 - 4/36 - 10 - 3/36 - 11 - 2/36 - 12 - 1/36</p>
+</section>
+<section id="home-work" class="level1">
+<h1>Home work</h1>
+<ul>
+<li><p>Write a program to simulate rolling two dice (N) times. The program must count how many times each sum (2-12) occurs. After all rolls are completed, the program should also calculate the fraction of rolls that resulted in each sum. These fractions are examples of an empirical distribution, meaning a distribution based on observed outcomes from data or simulation.</p></li>
+<li><p>Write a program to identify and print all the primes in a given range</p></li>
+<li><p>Modify the two dice roll program to keep track of the number of times each sum occurs with different number of total dice rolls. Can this be printed as a table for easy comparison?</p></li>
+</ul>
+<p>For each program write the logic, pseudocode and python implementation. If there are lines in the program you do not understand, ask AI and try to understand, otherwise, bring them to class.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
