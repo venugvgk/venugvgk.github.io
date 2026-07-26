@@ -1,0 +1,154 @@
+You can use Pig as a 1‑hour lesson that connects your existing dice simulator to strategy, loops, conditionals, and fairness, while staying at an accessible math level.
+
+## 1. Lesson snapshot
+
+- **Title:** Pig dice game with Python  
+- **Duration:** 60 minutes  
+- **Prerequisites:** Students know basic Python, `random.randint`, loops, and `if`/`else`, and have already seen your dice roll simulator in Session 11.  
+- **Core ideas:**  
+  - Turn repeated dice rolls into a strategic game.  
+  - Use loops, conditionals, and variables to manage turns and scores.  
+  - Informally discuss risk and fairness using simple averages and totals.
+
+## 2. Game rules (student‑friendly)
+
+Explain the classic Pig rules in simple terms:
+
+- Two players race to **100 points**.  
+- On your turn, you may **roll** or **hold**.  
+- If you **roll**:  
+  - If the die shows 2–6, add that to your **turn total** and decide again.  
+  - If the die shows 1, your **turn total becomes 0** and your turn ends.  
+- If you **hold**, you add your **turn total** to your **overall score**, and your turn ends.  
+- First player to reach 100 or more wins.
+
+You can start with a smaller target (e.g. 30) if 100 feels long in class.
+
+## 3. Learning objectives
+
+By the end of the class, students should be able to:
+
+- Represent scores and turn totals with variables.  
+- Use a loop to alternate turns between player and computer.  
+- Use `if`/`elif`/`else` to implement the Pig rules.  
+- Reflect on how risk (rolling again) compares to safety (holding).
+
+## 4. Class flow (with timings)
+
+### A. Warm‑up: manual Pig (10 minutes)
+
+- Play a **quick manual version** on the board with one volunteer as the player and you as the die.  
+- Keep track of:  
+  - Turn total.  
+  - Overall score.  
+- After a few turns, ask:  
+  - “When should you stop rolling?”  
+  - “What happens if you are greedy and keep rolling?”  
+- This sets up the idea of risk vs reward without formal probability.
+
+### B. Representing a single turn in Python (15 minutes)
+
+Goal: code just **one player turn**.
+
+1. Start from your existing dice simulator idea:  
+   ```python
+   import random
+   roll = random.randint(1, 6)
+   print("You rolled:", roll)
+   ```
+
+2. Introduce a **turn total**:
+
+   ```python
+   import random
+
+   turn_total = 0
+
+   while True:
+       roll = random.randint(1, 6)
+       print("You rolled:", roll)
+
+       if roll == 1:
+           print("You lose the turn. Turn total is 0.")
+           turn_total = 0
+           break
+       else:
+           turn_total = turn_total + roll
+           print("Turn total:", turn_total)
+
+           choice = input("Roll again or hold? (r/h): ").strip().lower()
+           if choice == "h":
+               print("You hold with", turn_total, "points.")
+               break
+   ```
+
+3. Explain:
+
+- `turn_total` starts at 0 and only increases on safe rolls.  
+- Rolling a 1 resets the turn total and ends the loop.  
+- “Hold” ends the loop but keeps the turn total for later.
+
+This segment focuses heavily on loops, conditionals, and input, just as your earlier game sessions did.
+
+### C. Adding overall scores and alternating turns (20 minutes)
+
+Goal: full game with player vs computer.
+
+1. Introduce **overall scores**:
+
+   ```python
+   player_score = 0
+   computer_score = 0
+   target = 30  # or 100 later
+   ```
+
+2. Wrap the turn logic in a higher‑level loop that alternates turns:
+
+   - Player’s turn: use the turn logic above with input.  
+   - After holding, add `turn_total` to `player_score`.  
+   - If `player_score >= target`, player wins.  
+   - Computer’s turn: use a simple strategy (for example, roll until turn_total reaches 10, then hold).
+
+3. Outline the structure on the board:
+
+   ```python
+   while player_score < target and computer_score < target:
+       # Player's turn
+       # Computer's turn
+   ```
+
+4. Let students see how the same pattern repeats: each turn uses a `while True` loop embedded inside a larger game loop.
+
+You can keep the code partially written on the board and fill gaps with student suggestions.
+
+### D. Strategy and fairness discussion (10 minutes)
+
+Ask questions that connect to your fairness and simulation theme:
+
+- “Is the computer’s strategy smart or silly?”  
+- “What happens if the computer always holds after the first safe roll?”  
+- “Could we use simulation later to test different Pig strategies?”  
+
+Relate this back to your dice roll simulator sessions: you used randomness to see typical outcomes; here you’re using randomness plus **decisions** to see how strategies matter.
+
+## 5. Suggested questions and prompts
+
+During the lesson, you can use prompts like:
+
+- “What variables do we need in this game?” (turn total, player score, computer score, target).  
+- “Which conditions end the player’s turn?” (rolling 1, choosing hold).  
+- “Which conditions end the whole game?” (score reaching or passing target).  
+- “What simple strategy can we give the computer?” (e.g., roll until turn total ≥ 10).
+
+These encourage students to think computationally about game rules and states, reinforcing skills from your earlier tic‑tac‑toe and guessing game sessions.
+
+## 6. Optional extension / homework
+
+If you want a small follow‑up task:
+
+- Ask each student to **write down a strategy** for the computer in plain language, such as:  
+  - “Roll until turn total reaches 12 then hold.”  
+  - “Stop rolling if computer’s score is already ahead by more than 15 points.”  
+- Next class, they implement their strategy in code and compare which strategy seems better over many games.
+
+

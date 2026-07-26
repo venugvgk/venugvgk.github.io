@@ -1,0 +1,162 @@
+Here is a 1‑hour Rock Paper Scissors lesson that fits well after your current sequence on guessing games, tic‑tac‑toe, data structures, and simulation work. I’ve also included a working Python program you can use directly in class.
+
+## Lesson overview
+
+- **Title:** Rock Paper Scissors with Python  
+- **Duration:** 60 minutes  
+- **Prerequisites:** Students have already seen basic Python, `if` statements, loops, and simple game logic in earlier CS 2026 sessions.  
+- **Focus skills:** input, conditionals, loops, variables, and simple scorekeeping.
+
+## Learning goals
+
+By the end of the lesson, students should be able to:
+
+- Represent a small set of game choices in Python.  
+- Use `if` and `elif` to decide who wins a round.  
+- Use a loop to play many rounds.  
+- Track scores with variables and update them correctly after each round.  
+
+## Class plan
+
+### 1. Starter discussion — 10 min
+
+Begin by asking students to explain the rules of Rock Paper Scissors in plain language. Then ask how a computer could “know” who wins, which leads naturally to rule‑based thinking and conditionals, a direction already present in your earlier game sessions.
+
+Board prompt:
+- Rock beats scissors.
+- Scissors beats paper.
+- Paper beats rock.
+- Same choice means tie.
+
+### 2. Representing choices — 10 min
+
+Start with the idea that the computer needs a list of allowed moves. Show students a list like `["rock", "paper", "scissors"]` and explain that this is a simple data structure storing the valid options, building on Session 9’s focus on Python data types and data structures.
+
+Then introduce random computer choice:
+```python
+import random
+choices = ["rock", "paper", "scissors"]
+computer_choice = random.choice(choices)
+print(computer_choice)
+```
+This also connects nicely to your recent simulation lessons using randomness.
+
+### 3. Deciding the winner — 15 min
+
+Ask students to first solve one round without a loop. Let them imagine:
+- user chooses `"rock"`
+- computer chooses `"scissors"`
+
+Then build the logic step by step:
+```python
+if user_choice == computer_choice:
+    print("It's a tie.")
+elif (
+    (user_choice == "rock" and computer_choice == "scissors")
+    or (user_choice == "paper" and computer_choice == "rock")
+    or (user_choice == "scissors" and computer_choice == "paper")
+):
+    print("You win this round.")
+else:
+    print("Computer wins this round.")
+```
+This is a strong lesson in combining conditions clearly and carefully.
+
+### 4. Playing many rounds — 15 min
+
+Next, show how a game becomes more interesting when repeated. Introduce score variables and a loop so the game continues until the user types `"quit"`.
+
+Key ideas to emphasise:
+- `while True:` keeps the game running.
+- Invalid input should be handled with a condition before continuing.
+- Scores change only when someone wins the round.
+
+### 5. Pair activity — 5 min
+
+Have students work in pairs and modify one part of the game:
+
+- Add “best of 5” instead of unlimited rounds.
+- Print “Round 1”, “Round 2”, and so on.
+- Change the final message depending on who has the higher score.
+
+This gives quick success and encourages code reading as well as code writing.
+
+### 6. Wrap‑up — 5 min
+
+Close with two questions:
+- Which part of the game was easiest for Python?
+- Which part needed the most careful thinking?
+
+Point out that the important computer science idea is not the game itself, but translating everyday rules into exact logic, which is the same skill used in your earlier tic‑tac‑toe and simulation lessons.
+
+## Suggested classroom code
+
+This version is ready to run and includes:
+- valid choices stored in a list,
+- computer choice using randomness,
+- repeated rounds with a loop,
+- input checking,
+- scorekeeping and final result.
+
+```python
+import random
+
+choices = ["rock", "paper", "scissors"]
+user_score = 0
+computer_score = 0
+round_number = 1
+
+print("Rock Paper Scissors")
+print("Type rock, paper, or scissors. Type quit to stop.")
+
+while True:
+    print()
+    print(f"Round {round_number}")
+    user_choice = input("Your choice: ").strip().lower()
+
+    if user_choice == "quit":
+        break
+
+    if user_choice not in choices:
+        print("Invalid choice. Please type rock, paper, or scissors.")
+        continue
+
+    computer_choice = random.choice(choices)
+    print("Computer chose:", computer_choice)
+
+    if user_choice == computer_choice:
+        print("It's a tie.")
+    elif (
+        (user_choice == "rock" and computer_choice == "scissors")
+        or (user_choice == "paper" and computer_choice == "rock")
+        or (user_choice == "scissors" and computer_choice == "paper")
+    ):
+        print("You win this round.")
+        user_score += 1
+    else:
+        print("Computer wins this round.")
+        computer_score += 1
+
+    print("Score:", user_score, "-", computer_score)
+    round_number += 1
+
+print()
+print("Final score:", user_score, "-", computer_score)
+if user_score > computer_score:
+    print("You won the game.")
+elif computer_score > user_score:
+    print("Computer won the game.")
+else:
+    print("The game ended in a tie.")
+```
+
+## Easy extensions
+
+For the next class, students could try one of these:
+
+- Keep a list of all user moves and count how many times each move was played.  
+- Make the game stop automatically after 5 rounds.  
+- Add a rule where the computer prints a comment such as “Good move” or “Try again.”  
+- Turn the result of many rounds into a small bar chart later, which would connect well to your planned visualisation unit.
+
+Would you like a second version of the code that is shorter and simpler for beginners, or a slightly more advanced version that uses functions?
