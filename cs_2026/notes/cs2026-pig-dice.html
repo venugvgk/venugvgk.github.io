@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tatayya and Fitness – Venu GVGK Raju</title>
+<title>cs2026-pig-dice – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -40,9 +74,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,14 +104,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Tatayya and Fitness – Venu GVGK Raju">
+<meta property="og:title" content="Venu GVGK Raju">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://gvgk.in/blog/tatayya-fitness/tatayya-fitness.jpg">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Tatayya and Fitness – Venu GVGK Raju">
+<meta name="twitter:title" content="Venu GVGK Raju">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://gvgk.in/blog/tatayya-fitness/tatayya-fitness.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -139,48 +168,219 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lesson-snapshot" id="toc-lesson-snapshot" class="nav-link active" data-scroll-target="#lesson-snapshot">1. Lesson snapshot</a></li>
+  <li><a href="#game-rules-studentfriendly" id="toc-game-rules-studentfriendly" class="nav-link" data-scroll-target="#game-rules-studentfriendly">2. Game rules (student‑friendly)</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">3. Learning objectives</a></li>
+  <li><a href="#class-flow-with-timings" id="toc-class-flow-with-timings" class="nav-link" data-scroll-target="#class-flow-with-timings">4. Class flow (with timings)</a>
+  <ul class="collapse">
+  <li><a href="#a.-warmup-manual-pig-10-minutes" id="toc-a.-warmup-manual-pig-10-minutes" class="nav-link" data-scroll-target="#a.-warmup-manual-pig-10-minutes">A. Warm‑up: manual Pig (10 minutes)</a></li>
+  <li><a href="#b.-representing-a-single-turn-in-python-15-minutes" id="toc-b.-representing-a-single-turn-in-python-15-minutes" class="nav-link" data-scroll-target="#b.-representing-a-single-turn-in-python-15-minutes">B. Representing a single turn in Python (15 minutes)</a></li>
+  <li><a href="#c.-adding-overall-scores-and-alternating-turns-20-minutes" id="toc-c.-adding-overall-scores-and-alternating-turns-20-minutes" class="nav-link" data-scroll-target="#c.-adding-overall-scores-and-alternating-turns-20-minutes">C. Adding overall scores and alternating turns (20 minutes)</a></li>
+  <li><a href="#d.-strategy-and-fairness-discussion-10-minutes" id="toc-d.-strategy-and-fairness-discussion-10-minutes" class="nav-link" data-scroll-target="#d.-strategy-and-fairness-discussion-10-minutes">D. Strategy and fairness discussion (10 minutes)</a></li>
+  </ul></li>
+  <li><a href="#suggested-questions-and-prompts" id="toc-suggested-questions-and-prompts" class="nav-link" data-scroll-target="#suggested-questions-and-prompts">5. Suggested questions and prompts</a></li>
+  <li><a href="#optional-extension-homework" id="toc-optional-extension-homework" class="nav-link" data-scroll-target="#optional-extension-homework">6. Optional extension / homework</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Tatayya and Fitness</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">musings</div>
-  </div>
-  </div>
 
 
 
-<div class="quarto-title-meta">
+<p>You can use Pig as a 1‑hour lesson that connects your existing dice simulator to strategy, loops, conditionals, and fairness, while staying at an accessible math level.</p>
+<section id="lesson-snapshot" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-snapshot">1. Lesson snapshot</h2>
+<ul>
+<li><strong>Title:</strong> Pig dice game with Python<br>
+</li>
+<li><strong>Duration:</strong> 60 minutes<br>
+</li>
+<li><strong>Prerequisites:</strong> Students know basic Python, <code>random.randint</code>, loops, and <code>if</code>/<code>else</code>, and have already seen your dice roll simulator in Session 11.<br>
+</li>
+<li><strong>Core ideas:</strong>
+<ul>
+<li>Turn repeated dice rolls into a strategic game.<br>
+</li>
+<li>Use loops, conditionals, and variables to manage turns and scores.<br>
+</li>
+<li>Informally discuss risk and fairness using simple averages and totals.</li>
+</ul></li>
+</ul>
+</section>
+<section id="game-rules-studentfriendly" class="level2">
+<h2 class="anchored" data-anchor-id="game-rules-studentfriendly">2. Game rules (student‑friendly)</h2>
+<p>Explain the classic Pig rules in simple terms:</p>
+<ul>
+<li>Two players race to <strong>100 points</strong>.<br>
+</li>
+<li>On your turn, you may <strong>roll</strong> or <strong>hold</strong>.<br>
+</li>
+<li>If you <strong>roll</strong>:
+<ul>
+<li>If the die shows 2–6, add that to your <strong>turn total</strong> and decide again.<br>
+</li>
+<li>If the die shows 1, your <strong>turn total becomes 0</strong> and your turn ends.<br>
+</li>
+</ul></li>
+<li>If you <strong>hold</strong>, you add your <strong>turn total</strong> to your <strong>overall score</strong>, and your turn ends.<br>
+</li>
+<li>First player to reach 100 or more wins.</li>
+</ul>
+<p>You can start with a smaller target (e.g.&nbsp;30) if 100 feels long in class.</p>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">3. Learning objectives</h2>
+<p>By the end of the class, students should be able to:</p>
+<ul>
+<li>Represent scores and turn totals with variables.<br>
+</li>
+<li>Use a loop to alternate turns between player and computer.<br>
+</li>
+<li>Use <code>if</code>/<code>elif</code>/<code>else</code> to implement the Pig rules.<br>
+</li>
+<li>Reflect on how risk (rolling again) compares to safety (holding).</li>
+</ul>
+</section>
+<section id="class-flow-with-timings" class="level2">
+<h2 class="anchored" data-anchor-id="class-flow-with-timings">4. Class flow (with timings)</h2>
+<section id="a.-warmup-manual-pig-10-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="a.-warmup-manual-pig-10-minutes">A. Warm‑up: manual Pig (10 minutes)</h3>
+<ul>
+<li>Play a <strong>quick manual version</strong> on the board with one volunteer as the player and you as the die.<br>
+</li>
+<li>Keep track of:
+<ul>
+<li>Turn total.<br>
+</li>
+<li>Overall score.<br>
+</li>
+</ul></li>
+<li>After a few turns, ask:
+<ul>
+<li>“When should you stop rolling?”<br>
+</li>
+<li>“What happens if you are greedy and keep rolling?”<br>
+</li>
+</ul></li>
+<li>This sets up the idea of risk vs reward without formal probability.</li>
+</ul>
+</section>
+<section id="b.-representing-a-single-turn-in-python-15-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="b.-representing-a-single-turn-in-python-15-minutes">B. Representing a single turn in Python (15 minutes)</h3>
+<p>Goal: code just <strong>one player turn</strong>.</p>
+<ol type="1">
+<li><p>Start from your existing dice simulator idea:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>roll <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">6</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"You rolled:"</span>, roll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Introduce a <strong>turn total</strong>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>turn_total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    roll <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">6</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"You rolled:"</span>, roll)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> roll <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"You lose the turn. Turn total is 0."</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        turn_total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        turn_total <span class="op">=</span> turn_total <span class="op">+</span> roll</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Turn total:"</span>, turn_total)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        choice <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Roll again or hold? (r/h): "</span>).strip().lower()</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> choice <span class="op">==</span> <span class="st">"h"</span>:</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"You hold with"</span>, turn_total, <span class="st">"points."</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Explain:</p></li>
+</ol>
+<ul>
+<li><code>turn_total</code> starts at 0 and only increases on safe rolls.<br>
+</li>
+<li>Rolling a 1 resets the turn total and ends the loop.<br>
+</li>
+<li>“Hold” ends the loop but keeps the turn total for later.</li>
+</ul>
+<p>This segment focuses heavily on loops, conditionals, and input, just as your earlier game sessions did.</p>
+</section>
+<section id="c.-adding-overall-scores-and-alternating-turns-20-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="c.-adding-overall-scores-and-alternating-turns-20-minutes">C. Adding overall scores and alternating turns (20 minutes)</h3>
+<p>Goal: full game with player vs computer.</p>
+<ol type="1">
+<li><p>Introduce <strong>overall scores</strong>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>player_score <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>computer_score <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>target <span class="op">=</span> <span class="dv">30</span>  <span class="co"># or 100 later</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Wrap the turn logic in a higher‑level loop that alternates turns:</p>
+<ul>
+<li>Player’s turn: use the turn logic above with input.<br>
+</li>
+<li>After holding, add <code>turn_total</code> to <code>player_score</code>.<br>
+</li>
+<li>If <code>player_score &gt;= target</code>, player wins.<br>
+</li>
+<li>Computer’s turn: use a simple strategy (for example, roll until turn_total reaches 10, then hold).</li>
+</ul></li>
+<li><p>Outline the structure on the board:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> player_score <span class="op">&lt;</span> target <span class="kw">and</span> computer_score <span class="op">&lt;</span> target:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Player's turn</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Computer's turn</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Let students see how the same pattern repeats: each turn uses a <code>while True</code> loop embedded inside a larger game loop.</p></li>
+</ol>
+<p>You can keep the code partially written on the board and fill gaps with student suggestions.</p>
+</section>
+<section id="d.-strategy-and-fairness-discussion-10-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="d.-strategy-and-fairness-discussion-10-minutes">D. Strategy and fairness discussion (10 minutes)</h3>
+<p>Ask questions that connect to your fairness and simulation theme:</p>
+<ul>
+<li>“Is the computer’s strategy smart or silly?”<br>
+</li>
+<li>“What happens if the computer always holds after the first safe roll?”<br>
+</li>
+<li>“Could we use simulation later to test different Pig strategies?”</li>
+</ul>
+<p>Relate this back to your dice roll simulator sessions: you used randomness to see typical outcomes; here you’re using randomness plus <strong>decisions</strong> to see how strategies matter.</p>
+</section>
+</section>
+<section id="suggested-questions-and-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-questions-and-prompts">5. Suggested questions and prompts</h2>
+<p>During the lesson, you can use prompts like:</p>
+<ul>
+<li>“What variables do we need in this game?” (turn total, player score, computer score, target).<br>
+</li>
+<li>“Which conditions end the player’s turn?” (rolling 1, choosing hold).<br>
+</li>
+<li>“Which conditions end the whole game?” (score reaching or passing target).<br>
+</li>
+<li>“What simple strategy can we give the computer?” (e.g., roll until turn total ≥ 10).</li>
+</ul>
+<p>These encourage students to think computationally about game rules and states, reinforcing skills from your earlier tic‑tac‑toe and guessing game sessions.</p>
+</section>
+<section id="optional-extension-homework" class="level2">
+<h2 class="anchored" data-anchor-id="optional-extension-homework">6. Optional extension / homework</h2>
+<p>If you want a small follow‑up task:</p>
+<ul>
+<li>Ask each student to <strong>write down a strategy</strong> for the computer in plain language, such as:
+<ul>
+<li>“Roll until turn total reaches 12 then hold.”<br>
+</li>
+<li>“Stop rolling if computer’s score is already ahead by more than 15 points.”<br>
+</li>
+</ul></li>
+<li>Next class, they implement their strategy in code and compare which strategy seems better over many games.</li>
+</ul>
 
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Oct 2021</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
 
-
-</header>
-
-
-<p>When I was young, my father used to say, “Study well, otherwise you will end up working in the fields”, pointing to some of my cousins who were doing it.</p>
-<p>He grew up in a family of marginal/subsistence farmers, and was the first one to go to school in a community of about 40 families of friends and relatives. Due to the strained circumstances at home, he had to stop studying at different times, work in the fields, and then restart later, with the help of others.</p>
-<p>As he ended up a government school teacher, we children had the luxury of an assured schooling. He was keen to help us take good advantage of it.</p>
-<p>He did not stop with that, he was also instrumental in ensuring access to education to a large percentage of children in my generation in the extended family and beyond. But that’s a different story.</p>
-<p><a href="tatayya-fitness.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="tatayya-fitness.jpg" class="img-fluid"></a></p>
-<p>Today, at 70, he is hale and hearty and generally healthier than we would ever be. So, as we work in the garden, I get my revenge telling my son, “bend your back and work hard. Look at Tatayya, he did that and he is so healthy today. Otherwise, you will end up like me”!</p>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -642,38 +842,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
