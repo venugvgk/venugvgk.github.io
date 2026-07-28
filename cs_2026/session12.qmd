@@ -1,3 +1,13 @@
+---
+title: Session 12 Two Dice Roll and Plot 
+date: 2026-07-28
+page-layout: article
+---
+In this session, we discussed student generated programs to simulate rolling two dice and counting the sums of the two dice. The beginner friendly approach taken by the students involved starting twelve counters for each possible sum (2-12) and incrementing the appropriate counter based on the sum of the two dice.
+
+We also thought about how to visualise the results of the simulation. We discussed the following program that uses lists and dictionaries to store the sums and their frequencies. The program also uses matplotlib to plot the results.
+
+```python
 import random
 import matplotlib.pyplot as plt
 
@@ -16,8 +26,6 @@ sum_counts = {total: 0 for total in range(2, 13)}
 for total in sums:
     sum_counts[total] += 1
 
-print(sum_counts)
-
 # Prepare data for plotting.
 values = list(sum_counts.keys())
 frequencies = [sum_counts[total] for total in values]
@@ -33,3 +41,5 @@ plt.tight_layout()
 
 # Optionally show the plot and save it.
 plt.show()
+```
+
