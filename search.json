@@ -931,480 +931,284 @@
     "text": "భారత రాజ్యాంగ నిర్మాత బి. ఆర్. అంబేద్కర్ కథ ఇది. అందరూ ప్రేమతో బాబాసాహెబ్ అని పిలుచుకునే అంబేద్కర్ గొప్ప దార్శనికుడు, ఆర్థిక శాస్త్రవేత్త, విప్లవకారుడు మాత్రమే కాక జీవిత కాలపు చదువరి. చదవటంలో ఆయనకి ఉన్న ఆసక్తి ఆయన జీవన పయనాన్ని ఎలా నడిపించిందో తెలియచేసే కథ ఇది.\nఈ పుస్తకాన్ని ఇక్కడ చదవండి"
   },
   {
-    "objectID": "cs_2026/session6.html",
-    "href": "cs_2026/session6.html",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "objectID": "cs_2026/session13.html",
+    "href": "cs_2026/session13.html",
+    "title": "Session 13 Primes in Range",
     "section": "",
-    "text": "Discussed how a computer program “thinks” using two example programs:\n\nA “What is your name?” greeting program with special responses.\nA number-guessing game where the computer chooses a number and the human guesses.\n\nIdentified three core ideas behind most programs:\n\nData and data structures\n\nLoops (repetition)\n\nConditionals (decisions)\n\nLooked at actual Python-style code for the greeting program and the idea of pseudocode.\nRevised insertion sort, including best case and worst case (upper and lower bounds).\nReviewed homework on base 5, 7, 8 and recalled earlier topics (binary, sum of natural numbers, selection sort)."
+    "text": "We reviewed the single dice roll and two dice roll simulation programs and saw how the values can be plotted using matplotlib. We then discussed the problem of finding prime numbers in a range and how to break it down into smaller parts."
   },
   {
-    "objectID": "cs_2026/session6.html#greeting-program-what-is-your-name",
-    "href": "cs_2026/session6.html#greeting-program-what-is-your-name",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
-    "section": "Greeting program: “What is your name?”",
-    "text": "Greeting program: “What is your name?”\nWe analysed a program that repeatedly:\n\nAsks: Hello, what is your name?\n\nWaits for the user to type a name (input).\n\nResponds differently depending on the name:\n\n\nIf the name is Venu\n\nPrint: Good morning, sir. How are you today?\n\nIf the name is in a special list (for example: Abhi, Akshay, Anusha, Sam) and this is the first time that name appears\n\nPrint: Oh, you are that idiot. Good meeting you.\n\nIf the name is in that list and has already appeared before\n\nPrint: We have already met.\n\nIf the name is not in the list at all\n\nPrint a message like:\nI know there are only five of you in this class. Choose from this list: ...\n\n\nFrom this behaviour, we listed what the computer needs:\n\nThe exact question text to display: \"Hello, what is your name?\"\nA way to store the fixed list of “valid” names.\nA way to store names that have already been entered (for repeat detection).\nA way to:\n\nRead user input.\nCompare that input against:\n\nThe original list of allowed names.\nThe set of names already seen.\n\n\nA way to decide which response to print based on the comparisons.\nA loop that keeps asking for names (no explicit “exit” in this version).\n\nWe also noticed:\n\nThe program is case sensitive: Abhi is not the same as abhi unless we explicitly convert or check both forms.\nThe repeating pattern is: ask → read → compare → decide → repeat.\n\n\nSketch of Python-like code\nHere is a simplified version of this program.\nmet_people = set()  # empty set\n\nwhile True:\n    name = input(\"Hello, what is your name? \")\n\n    if name == \"Venu\":\n        print(\"Good morning, sir. How are you today?\")\n\n    elif name in [\"Abhi\", \"Akshay\", \"Anusha\", \"Sam\"]:\n        if name in met_people:\n            print(\"We have already met.\")\n        else:\n            print(\"Oh, you are that idiot. Good meeting you.\")\n            met_people.add(name)\n\n    else:\n        print(\"I know there are only five of you in this class.\")\n        print(\"Choose from: Abhi, Akshay, Anusha, Sam\")\nKey observations:\n\nmet_people = set() defines a data structure (a set) to remember names we have already seen.\nwhile True: creates an infinite loop.\nif, elif, else are the conditional branches where decisions are made.\nname == \"Venu\" uses == for comparison, whereas name = \"Venu\" would be assignment."
+    "objectID": "cs_2026/session13.html#helper-function-is_prime",
+    "href": "cs_2026/session13.html#helper-function-is_prime",
+    "title": "Session 13 Primes in Range",
+    "section": "Helper function: is_prime",
+    "text": "Helper function: is_prime\nFUNCTION is_prime(n):\n\n    IF n &lt;= 1:\n        RETURN False\n\n    SET limit = floor(sqrt(n))\n\n    FOR d from 2 to limit:\n        IF n mod d == 0:\n            RETURN False\n\n    RETURN True"
   },
   {
-    "objectID": "cs_2026/session6.html#number-guessing-game-computer-chooses-you-guess",
-    "href": "cs_2026/session6.html#number-guessing-game-computer-chooses-you-guess",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
-    "section": "Number guessing game (computer chooses, you guess)",
-    "text": "Number guessing game (computer chooses, you guess)\nThe second example was a guessing game where:\n\nThe computer chooses a secret number in a given range (for example 1 to 100).\nThe player repeatedly guesses the number.\nEach time, the computer answers:\n\n“Too high”\n“Too low”\n“Correct”\n\n\nThe game continues until the player guesses correctly.\nThe computer must be able to:\n\nKnow the range of allowed numbers (for example 1–100).\nChoose a random number in that range and store it.\nPrompt the user to enter guesses, e.g., \"Please guess the number:\".\nRead each guess from the user (input).\nCompare each guess with the secret number.\nBased on the comparison:\n\nIf guess &gt; secret: print \"Too high\".\nIf guess &lt; secret: print \"Too low\".\nIf guess == secret: print a success message and stop the game.\n\nKeep prompting for a guess while guesses are wrong, and to stop when the correct guess is made.\n\nA Python-style code:\nimport random\n\nsecret = random.randint(1, 100)\n\nwhile True:\n    guess = int(input(\"Guess the number between 1 and 100: \"))\n\n    if guess &gt; secret:\n        print(\"Too high\")\n    elif guess &lt; secret:\n        print(\"Too low\")\n    else:\n        print(\"Correct! You won.\")\n        break"
+    "objectID": "cs_2026/session13.html#main-function-primes_in_range",
+    "href": "cs_2026/session13.html#main-function-primes_in_range",
+    "title": "Session 13 Primes in Range",
+    "section": "Main function: primes_in_range",
+    "text": "Main function: primes_in_range\nFUNCTION primes_in_range(start, end):\n\n    CREATE empty list primes\n\n    FOR n from start to end:\n        IF is_prime(n):\n            append n to primes\n\n    RETURN primes"
   },
   {
-    "objectID": "cs_2026/session6.html#data-and-data-structures",
-    "href": "cs_2026/session6.html#data-and-data-structures",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
-    "section": "Data and data structures",
-    "text": "Data and data structures\n\nA data structure is a particular way of organizing and storing data so that we can use it efficiently.\nExamples from class:\n\nThe list of allowed names ([\"Abhi\", \"Akshay\", ...]) is a data structure.\nThe set met_people is another data structure, used to store names we have already seen.\nIn the number guessing game, the secret number is stored in a variable; the range 1–100 is the domain from which it is chosen.\n\nPrograms must handle different kinds of data:\n\nText (strings) such as names.\nWhole numbers (integers).\nPossibly decimal numbers (floating point).\nCollections of values (lists, sets, arrays, etc.).\n\n\nUnderstanding data structures is a major part of computer science because:\n\nThe “shape” of the data often suggests the most efficient way to process it.\nDifferent data structures are better or worse for different operations (searching, insertion, deletion, etc.)."
+    "objectID": "cs_2026/session13.html#helper-function-is_prime-1",
+    "href": "cs_2026/session13.html#helper-function-is_prime-1",
+    "title": "Session 13 Primes in Range",
+    "section": "Helper function: is_prime",
+    "text": "Helper function: is_prime\nimport math\n\ndef is_prime(n):\n    \"\"\"Return True if n is prime, False otherwise.\"\"\"\n    if n &lt;= 1:\n        return False\n\n    limit = int(math.sqrt(n))\n\n    for d in range(2, limit + 1):\n        if n % d == 0:\n            return False\n\n    return True"
   },
   {
-    "objectID": "cs_2026/session6.html#loops-repetition",
-    "href": "cs_2026/session6.html#loops-repetition",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
-    "section": "Loops (repetition)",
-    "text": "Loops (repetition)\n\nA loop is a construct that repeats a block of code until some stopping condition is met.\nIn the greeting program:\n\nwhile True: repeats forever, asking for a name and responding.\n\nIn the guessing game:\n\nwhile True: repeats until break is reached when the user guesses correctly.\n\nEveryday analogy:\n\nEating:\n\n“Take a bite” is the repeated action.\nYou keep doing it until a condition:\n\nYou feel full,\nTime is up,\nOr food runs out.\n\n\n\n\nIn code, common loop forms include:\n\nwhile condition:\nfor item in collection:"
+    "objectID": "cs_2026/session13.html#main-function-primes_in_range-1",
+    "href": "cs_2026/session13.html#main-function-primes_in_range-1",
+    "title": "Session 13 Primes in Range",
+    "section": "Main function: primes_in_range",
+    "text": "Main function: primes_in_range\ndef primes_in_range(start, end):\n    \"\"\"Return a list of all prime numbers between start and end (inclusive).\"\"\"\n    primes = []\n\n    for n in range(start, end + 1):\n        if is_prime(n):\n            primes.append(n)\n\n    return primes"
   },
   {
-    "objectID": "cs_2026/session6.html#conditionals-decisions",
-    "href": "cs_2026/session6.html#conditionals-decisions",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
-    "section": "Conditionals (decisions)",
-    "text": "Conditionals (decisions)\n\nA conditional is a decision point where the program checks a condition and chooses what to do next.\nIn Python, typical syntax:\n\nif condition1:\n    # do something\nelif condition2:\n    # do something else\nelse:\n    # default choice\n\nIn the greeting program:\n\nIf the name is exactly \"Venu\" → special greeting.\nElse if the name is in the list of known students:\n\nIf also in met_people → “We have already met.”\nElse → “Oh, you are that idiot. Good meeting you.” and add to met_people.\n\nElse → “I know there are only five of you…”.\n\nIn the guessing game:\n\nIf guess &gt; secret → “Too high”.\nElse if guess &lt; secret → “Too low”.\nElse → “Correct!” and exit the loop."
+    "objectID": "cs_2026/session13.html#example-usage",
+    "href": "cs_2026/session13.html#example-usage",
+    "title": "Session 13 Primes in Range",
+    "section": "Example usage",
+    "text": "Example usage\nstart = 10\nend = 50\nprimes = primes_in_range(start, end)\nprint(\"Prime numbers between\", start, \"and\", end, \"are:\")\nprint(primes)"
   },
   {
-    "objectID": "cs_2026/session6.html#pseudocode",
-    "href": "cs_2026/session6.html#pseudocode",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
-    "section": "Pseudocode",
-    "text": "Pseudocode\n\nHuman-readable description of the steps involved in solving a problem.\nNot tied to a particular programming language.\nFocuses on logic, not on exact syntax.\nExample (greeting program, pseudocode style):\n\nstart with an empty set of met_people\nrepeat forever:\n    ask \"Hello, what is your name?\"\n    read name\n\n    if name is \"Venu\":\n        say special greeting\n    else if name is in the fixed list of allowed names:\n        if name is already in met_people:\n            say \"We have already met\"\n        else:\n            say first-time greeting\n            add name to met_people\n    else:\n        say \"I know there are only five of you. Choose from this list.\""
-  },
-  {
-    "objectID": "cs_2026/session6.html#actual-code-syntax",
-    "href": "cs_2026/session6.html#actual-code-syntax",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
-    "section": "Actual code (syntax)",
-    "text": "Actual code (syntax)\n\nWritten in a specific language (e.g., Python, C, Java).\nMust use the exact syntax that the language understands.\nYou must also know the environment (e.g., how VS Code treats indentation, how to run the program, etc.).\n\nOur learning plan:\n\nFirst write clear pseudocode to capture the logic.\nThen translate pseudocode into real code slowly, learning syntax along the way.\nThis way we separate:\n\nConceptual difficulty: “What should the program do?”\nMechanical difficulty: “How do I spell it in this language?”"
-  },
-  {
-    "objectID": "cs_2026/session6.html#how-insertion-sort-works-intuitive",
-    "href": "cs_2026/session6.html#how-insertion-sort-works-intuitive",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
-    "section": "How insertion sort works (intuitive)",
-    "text": "How insertion sort works (intuitive)\nThink of each box as having a weight:\n\nCompare the first two boxes:\n\nPut the lighter one on the left and the heavier one on the right.\n\nTake the third box:\n\nCompare it with the lighter box first.\nDepending on the result, compare further and insert it into one of three positions:\n\nLeft of both\nBetween them\nRight of both\n\n\nFor each new box:\n\nCompare it with elements of the already sorted part (starting near the “middle” for efficiency).\nKeep comparing and shifting until you find the correct position.\n\nAt each step, you have a sorted prefix, and you insert the next item into its correct position in that prefix.\n\nThis is similar to how many people sort playing cards in their hand: the hand remains sorted, and each new card is inserted in the right place."
-  },
-  {
-    "objectID": "cs_2026/session6.html#best-case-lower-bound-on-comparisons",
-    "href": "cs_2026/session6.html#best-case-lower-bound-on-comparisons",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
-    "section": "Best case (lower bound on comparisons)",
-    "text": "Best case (lower bound on comparisons)\nLet there be (n) items already in correct order:\n[ 1, 2, 3, , n ]\nThen:\n\nCompare 1 and 2.\nCompare 2 and 3.\nCompare 3 and 4.\n…\nCompare ((n - 1)) and (n).\n\nTotal comparisons: (n - 1).\nSo in the best case:\n\nNumber of comparisons = (n - 1).\n\nThis happens when the input is already sorted."
-  },
-  {
-    "objectID": "cs_2026/session6.html#worst-case-upper-bound-on-comparisons",
-    "href": "cs_2026/session6.html#worst-case-upper-bound-on-comparisons",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
-    "section": "Worst case (upper bound on comparisons)",
-    "text": "Worst case (upper bound on comparisons)\nWorst case: the items are in reverse order:\n[ n, n-1, , 3, 2, 1 ]\nTo insert each item in order:\n\nFor the 2nd item: 1 comparison.\nFor the 3rd item: 2 comparisons.\nFor the 4th item: 3 comparisons.\n…\nFor the (n)-th item: (n - 1) comparisons.\n\nTotal comparisons:\n[ 1 + 2 + 3 + + (n - 1) ]\nRecall the formula for the sum of first (k) natural numbers:\n[ 1 + 2 + + k = ]\nHere (k = n - 1), so:\n[ 1 + 2 + + (n - 1) = ]\nSo in the worst case:\n\nNumber of comparisons = ().\n\nSummary for insertion sort:\n\nBest case (already sorted): (n - 1) comparisons.\nWorst case (reverse sorted): () comparisons."
-  },
-  {
-    "objectID": "cs_2026/session6.html#place-values-in-different-bases",
-    "href": "cs_2026/session6.html#place-values-in-different-bases",
-    "title": "Session 6 Pseudocode, sample programs, program elements",
-    "section": "Place values in different bases",
-    "text": "Place values in different bases\n\nBase 5: place values are\n(1, 5, 25, 125, )\nBase 7: place values are\n(1, 7, 49, 343, )\nBase 8 (octal): place values are\n(1, 8, 64, 512, )\n\nTo convert from a base-(b) representation like:\n[ (d_k d_{k-1} d_1 d_0)_b ]\nto decimal, we compute:\n[ d_0 b^0 + d_1 b^1 + d_2 b^2 + + d_k b^k ]\nStudents worked through specific examples such as converting decimal numbers like 32 and 78 into base 5, 7 and 8, and similar exercises with other numbers.\nWe also revisited:\n\nSum of natural numbers and Gauss’s formula.\nBinary representation and the idea of positional number systems.\nSelection sort (from earlier classes)."
-  },
-  {
-    "objectID": "cs_2026/session12.html",
-    "href": "cs_2026/session12.html",
-    "title": "Session 12 Two Dice Roll and Plot",
+    "objectID": "cs_2026/session2.html",
+    "href": "cs_2026/session2.html",
+    "title": "Session 2 Pouring; guessing letters and numbers",
     "section": "",
-    "text": "In this session, we discussed student generated programs to simulate rolling two dice and counting the sums of the two dice. The beginner friendly approach taken by the students involved starting twelve counters for each possible sum (2-12) and incrementing the appropriate counter based on the sum of the two dice.\nWe also thought about how to visualise the results of the simulation. We discussed the following program that uses lists and dictionaries to store the sums and their frequencies. The program also uses matplotlib to plot the results.\nimport random\nimport matplotlib.pyplot as plt\n\nNUM_TRIALS = 216\n\n# Simulate 216 tosses of two dice and record the sum for each toss.\nsums = []\nfor _ in range(NUM_TRIALS):\n    die1 = random.randint(1, 6)\n    die2 = random.randint(1, 6)\n    sums.append(die1 + die2)\n\n\n# Count the frequency of each possible sum from 2 to 12.\nsum_counts = {total: 0 for total in range(2, 13)}\nfor total in sums:\n    sum_counts[total] += 1\n\n# Prepare data for plotting.\nvalues = list(sum_counts.keys())\nfrequencies = [sum_counts[total] for total in values]\n\nplt.figure(figsize=(8, 5))\nplt.plot(values, frequencies, marker=\"o\", color=\"skyblue\", linewidth=2)\nplt.title(f\"Frequency of Two-Dice Sums over {NUM_TRIALS} Tosses\")\nplt.xlabel(\"Sum of two dice\")\nplt.ylabel(\"Frequency\")\nplt.xticks(values)\nplt.grid(axis=\"y\", linestyle=\"--\", alpha=0.5)\nplt.tight_layout()\n\n# Optionally show the plot and save it.\nplt.show()"
+    "text": "We started session 2 with a pouring problem. We had a 3 litre jug and a 5 litre jug, and we needed to measure out various amounts of water. We started with the simple one - how to measure 2 liters. Then we we went and asked how to measure 4 liters, and 1 liter.\nAfter this we asked if we can measure any quantity of water using only these two jugs and a larger vessel.\nWe followed it up with trying to understand this parlor trick/game. You guess a number and from the table below, if you can tell me which column your number is present, I can tell you what that number is.\n\n\n\nColumn 1\nColumn 2\nColumn 3\nColumn 4\n\n\n\n\n8\n4\n2\n1\n\n\n9\n5\n3\n3\n\n\n10\n6\n6\n5\n\n\n11\n7\n7\n7\n\n\n12\n12\n10\n9\n\n\n13\n13\n11\n11\n\n\n14\n14\n14\n13\n\n\n15\n15\n15\n15\n\n\n\nWe then looked at the problem of how to guess a specific letter someone has in mind in the least possible number of guesses. We came up with the strategy of asking if the letter is in the first half of the alphabet, and then narrowing it down based on the answer. Each question we ask halves the number of possibilities, and we can find the letter in at most 5 questions.\nWe started making the decision tree and completing it was given as homework."
   },
   {
-    "objectID": "cs_2026/session4.html",
-    "href": "cs_2026/session4.html",
-    "title": "Session 4 How many questions? Search Algorithms",
+    "objectID": "cs_2026/session4.5.html",
+    "href": "cs_2026/session4.5.html",
+    "title": "Deeper Exploration - Coin weighing",
     "section": "",
-    "text": "Problem: Guess a letter A–Z using yes/no questions; why is 5 questions the minimum, not 4 or 6?\nGeneralisation: If the answer is between 1 and 100, 1 and 1000, or 1 and (n), how many yes/no questions are needed?"
+    "text": "Coin weighing problems are a compact way to teach decision trees, information-theoretic lower bounds, divide-and-conquer, and adversarial reasoning in an algorithms course. A balance scale is especially useful pedagogically because each weighing has three possible outcomes—left pan heavier, right pan heavier, or balance - which naturally leads to ternary branching in the search tree."
   },
   {
-    "objectID": "cs_2026/session4.html#linear-search-vs-binary-search",
-    "href": "cs_2026/session4.html#linear-search-vs-binary-search",
-    "title": "Session 4 How many questions? Search Algorithms",
-    "section": "Linear Search vs Binary Search",
-    "text": "Linear Search vs Binary Search\n\nLinear (simple) search: Check each option one by one: “Is it A? Is it B? Is it C?” etc.\nFor 26 letters, worst case is 26 questions; for 100 items, worst case is 100 questions.\nBinary search: Each question halves the remaining possibilities (decision tree: 1–50, then 1–25, 1–12, 1–6, 1–3, 1–2, etc.).\nFor 100 items, worst case is 7 questions (because (2^7 = 128), which is the first power of 2 ≥ 100)."
-  },
-  {
-    "objectID": "cs_2026/session4.html#powers-of-two-and-log-time",
-    "href": "cs_2026/session4.html#powers-of-two-and-log-time",
-    "title": "Session 4 How many questions? Search Algorithms",
-    "section": "Powers of Two and “Log Time”",
-    "text": "Powers of Two and “Log Time”\n\nPattern:\n1 question → up to (2^1 = 2) items\n2 questions → up to (2^2 = 4) items\n3 questions → up to (2^3 = 8) items\nIn general: (n) questions → up to (2^n) items.\nInverse view: For a given number of items, questions needed ≈ log base 2 of (number of items).\nLog definition: If (x^n = m), then (_x m = n).\nExample: (2^3 = 8 2 8 = 3); (10^2 = 100 {10}100 = 2).\nBinary search runs in logarithmic time: number of questions grows slowly even when items grow a lot (e.g. 1000 items need 9 questions, 10,000 need 14)."
-  },
-  {
-    "objectID": "cs_2026/session4.html#when-binary-search-works-and-when-it-doesnt",
-    "href": "cs_2026/session4.html#when-binary-search-works-and-when-it-doesnt",
-    "title": "Session 4 How many questions? Search Algorithms",
-    "section": "When Binary Search Works (and When It Doesn’t)",
-    "text": "When Binary Search Works (and When It Doesn’t)\n\nBinary search only works on sorted (ordered) lists (e.g. numbers in increasing order, names in alphabetical order).\nIf data is unsorted (like ), you must either:\nUse linear search, or\nFirst sort the data, then use binary search.\nSearching is a very common and expensive operation in computing (e.g. Facebook finding your username among millions/billions quickly).\nBecause of this, sorting becomes a key problem in computer science: given items, arrange them into a sorted order."
-  },
-  {
-    "objectID": "cs_2026/session4.html#pouring-problem-jug-problem",
-    "href": "cs_2026/session4.html#pouring-problem-jug-problem",
-    "title": "Session 4 How many questions? Search Algorithms",
-    "section": "Pouring Problem (Jug Problem)",
-    "text": "Pouring Problem (Jug Problem)\n\nSetup: One 5‑litre jug and one 3‑litre jug; you must measure specific amounts of water (e.g. 2L, 4L, 1L).\nExample solutions:\nTo get 2L: Fill 5L, pour 3L into the 3L jug, 2L remains in the 5L jug.\nTo get 4L efficiently: Use a smarter sequence of pours (e.g. use the 3L jug twice so only two measurements are needed).\nKey idea: There can be many algorithms (step sequences) to solve the same problem; we care about the one with fewest operations."
-  },
-  {
-    "objectID": "cs_2026/session4.html#coin-weighing-ternary-search-idea",
-    "href": "cs_2026/session4.html#coin-weighing-ternary-search-idea",
-    "title": "Session 4 How many questions? Search Algorithms",
-    "section": "Coin Weighing (Ternary Search Idea)",
-    "text": "Coin Weighing (Ternary Search Idea)\n\nSetup: 3 coins, one fake coin which is lighter, and a balance scale that only tells which side is heavier or if they’re equal.\nThis gives 3 outcomes per weighing: left heavier, right heavier, or equal.\nWith 3 coins and 1 lighter fake coin:\nWeigh two coins once; from the result (heavier, lighter, equal), you can identify the fake in just 1 weighing.\nExtended problem: 9 coins, 1 lighter fake coin:\nNaive strategy (pairwise weighing) can take up to 4 weighings.\nBetter strategy:\nPut 3 coins vs 3 coins, keep 3 aside (ternary split).\nOne weighing narrows you to 3 suspect coins; second weighing finds the fake.\nSo 9 coins can be solved in 2 weighings.\nGeneral pattern:\n1 weighing → handle 3 coins\n2 weighings → handle (3^2 = 9) coins\n3 weighings → handle (3^3 = 27) coins, by repeating the same splitting into groups of three.\nThis idea is like a ternary search (splitting into 3 parts), while binary search splits into 2."
-  },
-  {
-    "objectID": "cs_2026/session4.html#what-is-an-algorithm",
-    "href": "cs_2026/session4.html#what-is-an-algorithm",
-    "title": "Session 4 How many questions? Search Algorithms",
-    "section": "What Is an Algorithm?",
-    "text": "What Is an Algorithm?\n\nAn algorithm is a precise sequence of steps to solve a problem; it is not tied to any specific computer or programming language.\nEach action (question asked, pour done, weighing performed, comparison made) counts as one operation and takes time.\nTypical development flow:\nAlgorithm (high‑level idea).\nPseudocode (steps written in simple, computer‑like language).\nActual program (e.g. C printf(...) or Python print(...)).\nModern AIs can often write code, but you still need the algorithm and reasoning, especially for new or unfamiliar problems."
-  },
-  {
-    "objectID": "cs_2026/session4.html#why-math-logs-exponents-matters",
-    "href": "cs_2026/session4.html#why-math-logs-exponents-matters",
-    "title": "Session 4 How many questions? Search Algorithms",
-    "section": "Why Math (Logs, Exponents) Matters",
-    "text": "Why Math (Logs, Exponents) Matters\n\nUnderstanding exponents and logarithms is important because many algorithms, like binary search, are described and analysed using these ideas.\nLogs convert exponential growth (like (2^n)) into a manageable linear scale ((n)), which helps in thinking about efficiency."
-  },
-  {
-    "objectID": "cs_2026/notes/notes.html",
-    "href": "cs_2026/notes/notes.html",
-    "title": "Venu’s notes",
-    "section": "",
-    "text": "session 7 - computer guesses the number - binary search in operation session 8 - prime numbers in a range - is_prime(n) and primes_in_range(start, end) session 9 - coin toss simulator - random.randint(0, 1) and fractions of heads and tails session 10 - two-dice-sum game\n\nAll factors of a number\nPerfect numbers and abundant/deficient numbers\nPrime factors of a number\nDigit sum and divisibility checks (e.g., check if a number is divisible by 3, 9, or 11 using digit patterns)\nBase conversions in a constrained way (e.g., convert numbers between base 10 and base 2 for small values)\nPolygon angle checker: given number of sides n, compute interior angle sum and compare it with a claimed sum.\nWORDLE??\nReverse and palindrome checker\n\nWith coin toss expectation is that we will reach 50:50 over a large number of tosses.\nWith dice toss, the expectation is - each number (1-6) should appear with equal frequency over a large number of rolls.\nWhen you toss two dice, what happens?\n2,3,4,5,6,7,8,9,10,11,12\n2 - 1 way (1,1) 3 - 2 ways (1,2), (2,1) 4 - 3 ways (1,3), (2,2), (3,1) 5 - 4 ways (1,4), (2,3), (3,2), (4,1) 6 - 5 ways (1,5), (2,4), (3,3), (4,2), (5,1) 7 - 6 ways (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) 8 - 5 ways (2,6), (3,5), (4,4 ), (5,3), (6,2) 9 - 4 ways (3,6), (4,5), (5,4), (6,3) 10 - 3 ways (4,6), (5,5), (6,4) 11 - 2 ways (5,6), (6,5)\n12 - 1 way (6,6)\nRelative frequencies of sums of two dice: - 2 - 1/36\n- 3 - 2/36 - 4 - 3/36 - 5 - 4/36 - 6 - 5/36\n- 7 - 6/36 - 8 - 5/36 - 9 - 4/36 - 10 - 3/36 - 11 - 2/36 - 12 - 1/36"
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html",
-    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html",
-    "title": "Venu GVGK Raju",
-    "section": "",
-    "text": "Here is a 1‑hour Rock Paper Scissors lesson that fits well after your current sequence on guessing games, tic‑tac‑toe, data structures, and simulation work. I’ve also included a working Python program you can use directly in class."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html#lesson-overview",
-    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html#lesson-overview",
-    "title": "Venu GVGK Raju",
-    "section": "Lesson overview",
-    "text": "Lesson overview\n\nTitle: Rock Paper Scissors with Python\n\nDuration: 60 minutes\n\nPrerequisites: Students have already seen basic Python, if statements, loops, and simple game logic in earlier CS 2026 sessions.\n\nFocus skills: input, conditionals, loops, variables, and simple scorekeeping."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html#learning-goals",
-    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html#learning-goals",
-    "title": "Venu GVGK Raju",
+    "objectID": "cs_2026/session4.5.html#learning-goals",
+    "href": "cs_2026/session4.5.html#learning-goals",
+    "title": "Deeper Exploration - Coin weighing",
     "section": "Learning goals",
-    "text": "Learning goals\nBy the end of the lesson, students should be able to:\n\nRepresent a small set of game choices in Python.\n\nUse if and elif to decide who wins a round.\n\nUse a loop to play many rounds.\n\nTrack scores with variables and update them correctly after each round."
+    "text": "Learning goals\nBy the end of this note, students should be able to:\n\nmodel a weighing strategy as a decision tree\nderive upper and lower bounds using outcome counting\ndesign optimal strategies for simple counterfeit-coin variants\nexplain why harder variants require more careful case design\nconnect coin-weighing puzzles to group testing and adaptive algorithms"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html#class-plan",
-    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html#class-plan",
+    "objectID": "cs_2026/session4.5.html#generic-balance-scale-tree",
+    "href": "cs_2026/session4.5.html#generic-balance-scale-tree",
+    "title": "Deeper Exploration - Coin weighing",
+    "section": "Generic balance-scale tree",
+    "text": "Generic balance-scale tree\nDivide the items into three equal sets - set 1, set 2, set 3.\n [weigh set 1 vs set 2]\n        /       |   \\\n        /       |   \\\nleft heavier    |  right heavier\n    |        Balanced   |  \nFake in set 1    |     Fake in set 2\n                 |\n            Fake in set 3\n\nRepeat recursively on the identified branch"
+  },
+  {
+    "objectID": "cs_2026/session4.5.html#problem-1-3-coins-fake-known-heavier",
+    "href": "cs_2026/session4.5.html#problem-1-3-coins-fake-known-heavier",
+    "title": "Deeper Exploration - Coin weighing",
+    "section": "Problem 1: 3 coins, fake known heavier",
+    "text": "Problem 1: 3 coins, fake known heavier\n\nStatement\nThere are 3 coins, exactly one counterfeit coin, and the counterfeit is known to be heavier. Find it in 1 weighing.\n\n\nWorked solution\nWeigh coin 1 against coin 2. If the left side is heavier, coin 1 is fake; if the right side is heavier, coin 2 is fake; if the scale balances, coin 3 is fake.\n\n\nDecision tree\n    [Weigh 1 vs 2]\n       / |  \\\n       / |  \\\n      L  B   R\n     /   |    \\\n coin 1  |   Coin 3 fake\n Fake    |\n       Coin 2\n       Fake\n\n\n\nTeaching point\nThis is the smallest example showing that one weighing can distinguish among three possibilities. It is the cleanest entry point to the idea that the branching factor, not just the act of comparison, matters algorithmically."
+  },
+  {
+    "objectID": "cs_2026/session4.5.html#problem-2-9-coins-fake-known-heavier",
+    "href": "cs_2026/session4.5.html#problem-2-9-coins-fake-known-heavier",
+    "title": "Deeper Exploration - Coin weighing",
+    "section": "Problem 2: 9 coins, fake known heavier",
+    "text": "Problem 2: 9 coins, fake known heavier\n\nStatement\nThere are 9 coins, exactly one counterfeit coin, and the counterfeit is known to be heavier. Find it in 2 weighings.\n\n\nWorked solution\nPartition the coins into three groups of three: (A={1,2,3}), (B={4,5,6}), and (C={7,8,9}) . Weigh group (A) against group (B); if one side is heavier, the fake is in that heavier group, and if the scale balances, the fake is in (C) .\nNow take the suspect group of three coins and weigh one coin against another . If one side is heavier, that coin is fake; otherwise the unweighed third coin is fake .\n\n\nDecision tree\n                     [A vs B]\n                      / | \\\n                     /  |  \\\n                    /   |   \\\n                A heavy |   B heavy  \n                /       |      \\\n               /      Balanced  \\\n            Fake        |       Fake in B\n            in A      Fake in C     |  \n              |         |           |\n              |         |           |\n            [1 vs 2] [7 vs 8] [4 vs 5]\n           / | \\       / | \\       / | \\\n         1   2  3     7  8  9     4  5  6\n\n\n\nTeaching point\nThis is a direct ternary-search strategy on a decision tree of depth 2 . It also illustrates why equal-sized partitions are algorithmically natural when all three outcomes should be as informative as possible ."
+  },
+  {
+    "objectID": "cs_2026/session4.5.html#problem-3-27-coins-in-3-weighings",
+    "href": "cs_2026/session4.5.html#problem-3-27-coins-in-3-weighings",
+    "title": "Deeper Exploration - Coin weighing",
+    "section": "Problem 3: 27 coins in 3 weighings",
+    "text": "Problem 3: 27 coins in 3 weighings\n\nStatement\nSuppose the counterfeit coin is known to be heavier. How many coins can be handled in 3 weighings, and what strategy achieves it?\n\n\nWorked solution\nSince each weighing has three outcomes, 3 weighings can distinguish at most (3^3=27) possibilities . Because each coin corresponds to exactly one possibility in the known-heavier variant, 27 coins are achievable by repeatedly splitting into three equal groups and recursing on the identified branch .\n\n\nRecursive tree\nLevel 0: 27 coins\n |\n +-- weigh 9 vs 9\n |\n +-- one branch contains 9 candidates\n |\n +-- weigh 3 vs 3\n |\n +-- one branch contains 3 candidates\n |\n +-- weigh 1 vs 1\n |\n +-- identify the coin\n\n\nTeaching point\nThis is the best place to formalize the expression (3^k) and connect it to optimality . Students usually see here that algorithm design and lower-bound reasoning can emerge from the same tree representation ."
+  },
+  {
+    "objectID": "cs_2026/session4.5.html#problem-4-12-coins-fake-may-be-heavier-or-lighter",
+    "href": "cs_2026/session4.5.html#problem-4-12-coins-fake-may-be-heavier-or-lighter",
+    "title": "Deeper Exploration - Coin weighing",
+    "section": "Problem 4: 12 coins, fake may be heavier or lighter",
+    "text": "Problem 4: 12 coins, fake may be heavier or lighter\n\nStatement\nThere are 12 coins, exactly one counterfeit coin, and the counterfeit may be either heavier or lighter. Find it in 3 weighings.\n\n\nWhy this is harder\nEach candidate coin now has two hidden states—heavy or light—so the number of possibilities is (12*2 = 24) . Since 3 weighings yield at most (3^3 = 27) outcomes, the counting bound says the problem might be solvable, but a valid strategy must identify both the coin and the direction of deviation .\n[ 2n ^k ]\n\n\nFirst weighing\nWeigh coins (1,2,3,4) against coins (5,6,7,8) . This creates three major cases: left heavier, balanced, or right heavier .\n [1,2,3,4 vs 5,6,7,8]\n / | \\\n / | \\\n left heavier balanced right heavier\n\n\nBalanced branch worked out\nIf the first weighing balances, then all coins 1 through 8 are genuine, so the fake must be among (9,10,11,12) . Use coins 1, 2, and 3 as known-good references and weigh (9,10,11) against (1,2,3) .\n\nIf the left side is heavier, one of 9, 10, or 11 is heavy .\nIf the left side is lighter, one of 9, 10, or 11 is light .\nIf the scale balances, coin 12 is counterfeit .\n\nFor the first two subcases, weigh 9 against 10 . If one side behaves consistently with the branch assumption, that coin is identified; if they balance, coin 11 is the counterfeit with the corresponding heavy/light status . If the second weighing balanced, the third weighing can compare coin 12 with a known-good coin to determine whether it is heavy or light .\n\n\nDecision tree for the balanced branch\n first weighing balanced\n |\n fake in {9,10,11,12}\n |\n [9,10,11 vs 1,2,3]\n / | \\\n / | \\\n one of 9,10,11 coin 12 one of 9,10,11\n heavy light\n | |\n [9 vs 10] [9 vs 10]\n\n\nUnbalanced branches\nIf the first weighing is unbalanced, the suspect set lies among coins 1 through 8, but with directional constraints: for example, if the left side is heavier, then one of coins 1 through 4 could be heavy or one of coins 5 through 8 could be light . Standard solutions choose a second weighing that mixes coins from both sides plus a known reference pattern so that each outcome narrows the cases to at most three possibilities before the final weighing .\nA representative second weighing used in published treatments is to compare a mixed subset such as (1,2,5) against (3,6,9), where coin 9 serves as a known-good coin in the relevant branch structure . The final weighing then resolves the remaining ambiguity among the small candidate set .\n\n\nTeaching point\nThis problem is ideal for showing that counting bounds are necessary but not sufficient: a strategy must also preserve enough structure to decode every outcome correctly . It is also the first point where students see the difference between a brute-force case table and a carefully designed adaptive algorithm ."
+  },
+  {
+    "objectID": "cs_2026/session4.5.html#problem-5-general-bound-for-one-unknown-counterfeit",
+    "href": "cs_2026/session4.5.html#problem-5-general-bound-for-one-unknown-counterfeit",
+    "title": "Deeper Exploration - Coin weighing",
+    "section": "Problem 5: general bound for one unknown counterfeit",
+    "text": "Problem 5: general bound for one unknown counterfeit\n\nStatement\nSuppose there are (n) coins and exactly one counterfeit coin that may be either heavier or lighter. What upper bound does the outcome count impose on solvability in (k) weighings?\n\n\nWorked solution\nThe counterfeit coin can be any one of (n) coins and can be in one of two states, so there are (2n) possibilities . Since at most (3^k) outcomes can be distinguished with (k) weighings, the necessary condition is (2n ^k), or equivalently (n ^k/2) .\n\n\nValues for small (k)\n\n\n\n\n\n\n\n\nWeighings (k)\nOutcome bound (3^k)\nMaximum possible (n) from (2n ^k)\n\n\n\n\n1\n3\n1\n\n\n2\n9\n4\n\n\n3\n27\n13 by counting, with 12 as the classic achievable case\n\n\n4\n81\n40 by counting\n\n\n\n\n\nTeaching point\nThis theorem turns the puzzle into a reusable lower-bound template . It also prepares students to ask the more algorithmic question: when is a counting bound tight, and when does the structure of the problem waste some theoretical outcomes ."
+  },
+  {
+    "objectID": "cs_2026/session4.5.html#problem-6-multiple-counterfeit-coins",
+    "href": "cs_2026/session4.5.html#problem-6-multiple-counterfeit-coins",
+    "title": "Deeper Exploration - Coin weighing",
+    "section": "Problem 6: multiple counterfeit coins",
+    "text": "Problem 6: multiple counterfeit coins\n\nStatement\nHow does the problem change if there may be multiple counterfeit coins rather than exactly one?\n\n\nDiscussion\nWith multiple counterfeit coins, the task shifts from locating one exceptional item to identifying a subset, which makes the problem closer to group testing . Research on spring-scale and generalized counterfeit-coin models studies adaptive algorithms, deterministic bounds, and more efficient recovery of the defective set than naive one-by-one testing .\n\n\nTeaching point\nThis extension is useful near the end of the lecture because it links a familiar puzzle to live algorithmic research questions . It also broadens the conceptual bridge to compressed sensing, testing under uncertainty, and sparse recovery ."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-pig-dice.html",
+    "href": "cs_2026/notes/cs2026-pig-dice.html",
     "title": "Venu GVGK Raju",
-    "section": "Class plan",
-    "text": "Class plan\n\n1. Starter discussion — 10 min\nBegin by asking students to explain the rules of Rock Paper Scissors in plain language. Then ask how a computer could “know” who wins, which leads naturally to rule‑based thinking and conditionals, a direction already present in your earlier game sessions.\nBoard prompt: - Rock beats scissors. - Scissors beats paper. - Paper beats rock. - Same choice means tie.\n\n\n2. Representing choices — 10 min\nStart with the idea that the computer needs a list of allowed moves. Show students a list like [\"rock\", \"paper\", \"scissors\"] and explain that this is a simple data structure storing the valid options, building on Session 9’s focus on Python data types and data structures.\nThen introduce random computer choice:\nimport random\nchoices = [\"rock\", \"paper\", \"scissors\"]\ncomputer_choice = random.choice(choices)\nprint(computer_choice)\nThis also connects nicely to your recent simulation lessons using randomness.\n\n\n3. Deciding the winner — 15 min\nAsk students to first solve one round without a loop. Let them imagine: - user chooses \"rock\" - computer chooses \"scissors\"\nThen build the logic step by step:\nif user_choice == computer_choice:\n    print(\"It's a tie.\")\nelif (\n    (user_choice == \"rock\" and computer_choice == \"scissors\")\n    or (user_choice == \"paper\" and computer_choice == \"rock\")\n    or (user_choice == \"scissors\" and computer_choice == \"paper\")\n):\n    print(\"You win this round.\")\nelse:\n    print(\"Computer wins this round.\")\nThis is a strong lesson in combining conditions clearly and carefully.\n\n\n4. Playing many rounds — 15 min\nNext, show how a game becomes more interesting when repeated. Introduce score variables and a loop so the game continues until the user types \"quit\".\nKey ideas to emphasise: - while True: keeps the game running. - Invalid input should be handled with a condition before continuing. - Scores change only when someone wins the round.\n\n\n5. Pair activity — 5 min\nHave students work in pairs and modify one part of the game:\n\nAdd “best of 5” instead of unlimited rounds.\nPrint “Round 1”, “Round 2”, and so on.\nChange the final message depending on who has the higher score.\n\nThis gives quick success and encourages code reading as well as code writing.\n\n\n6. Wrap‑up — 5 min\nClose with two questions: - Which part of the game was easiest for Python? - Which part needed the most careful thinking?\nPoint out that the important computer science idea is not the game itself, but translating everyday rules into exact logic, which is the same skill used in your earlier tic‑tac‑toe and simulation lessons."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html#suggested-classroom-code",
-    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html#suggested-classroom-code",
-    "title": "Venu GVGK Raju",
-    "section": "Suggested classroom code",
-    "text": "Suggested classroom code\nThis version is ready to run and includes: - valid choices stored in a list, - computer choice using randomness, - repeated rounds with a loop, - input checking, - scorekeeping and final result.\nimport random\n\nchoices = [\"rock\", \"paper\", \"scissors\"]\nuser_score = 0\ncomputer_score = 0\nround_number = 1\n\nprint(\"Rock Paper Scissors\")\nprint(\"Type rock, paper, or scissors. Type quit to stop.\")\n\nwhile True:\n    print()\n    print(f\"Round {round_number}\")\n    user_choice = input(\"Your choice: \").strip().lower()\n\n    if user_choice == \"quit\":\n        break\n\n    if user_choice not in choices:\n        print(\"Invalid choice. Please type rock, paper, or scissors.\")\n        continue\n\n    computer_choice = random.choice(choices)\n    print(\"Computer chose:\", computer_choice)\n\n    if user_choice == computer_choice:\n        print(\"It's a tie.\")\n    elif (\n        (user_choice == \"rock\" and computer_choice == \"scissors\")\n        or (user_choice == \"paper\" and computer_choice == \"rock\")\n        or (user_choice == \"scissors\" and computer_choice == \"paper\")\n    ):\n        print(\"You win this round.\")\n        user_score += 1\n    else:\n        print(\"Computer wins this round.\")\n        computer_score += 1\n\n    print(\"Score:\", user_score, \"-\", computer_score)\n    round_number += 1\n\nprint()\nprint(\"Final score:\", user_score, \"-\", computer_score)\nif user_score &gt; computer_score:\n    print(\"You won the game.\")\nelif computer_score &gt; user_score:\n    print(\"Computer won the game.\")\nelse:\n    print(\"The game ended in a tie.\")"
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html#easy-extensions",
-    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html#easy-extensions",
-    "title": "Venu GVGK Raju",
-    "section": "Easy extensions",
-    "text": "Easy extensions\nFor the next class, students could try one of these:\n\nKeep a list of all user moves and count how many times each move was played.\n\nMake the game stop automatically after 5 rounds.\n\nAdd a rule where the computer prints a comment such as “Good move” or “Try again.”\n\nTurn the result of many rounds into a small bar chart later, which would connect well to your planned visualisation unit.\n\nWould you like a second version of the code that is shorter and simpler for beginners, or a slightly more advanced version that uses functions?"
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
     "section": "",
-    "text": "We already know how Tic-Tac-Toe works as a game. We have played it, drawn decision trees, and identified a winning strategy.\nNow we ask a programming question:\n\nHow can we write a program so that two human players can play Tic-Tac-Toe using the computer?\n\nThe computer is not yet trying to play intelligently. It is only doing the following jobs:\n\nShowing the board.\nAccepting moves from Player X and Player O.\nUpdating the board after each move.\nChecking whether someone has won.\nChecking whether the board is full.\nStopping the game when there is a win or a draw.\n\nSo the computer is acting as a referee and scorekeeper."
+    "text": "You can use Pig as a 1‑hour lesson that connects your existing dice simulator to strategy, loops, conditionals, and fairness, while staying at an accessible math level."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#why-we-need-a-data-structure",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#why-we-need-a-data-structure",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "Why we need a data structure",
-    "text": "Why we need a data structure\nThe computer needs to remember the state of all 9 squares.\nA simple beginner-friendly choice is a list of 9 values:\nboard = [\" \", \" \", \" \",\n         \" \", \" \", \" \",\n         \" \", \" \", \" \"]\nEach position stores one of three things:\n\na blank space \" \" if the square is empty\n\"X\" if Player X has played there\n\"O\" if Player O has played there\n\nSo the board is a list, and each cell contains a string."
+    "objectID": "cs_2026/notes/cs2026-pig-dice.html#lesson-snapshot",
+    "href": "cs_2026/notes/cs2026-pig-dice.html#lesson-snapshot",
+    "title": "Venu GVGK Raju",
+    "section": "1. Lesson snapshot",
+    "text": "1. Lesson snapshot\n\nTitle: Pig dice game with Python\n\nDuration: 60 minutes\n\nPrerequisites: Students know basic Python, random.randint, loops, and if/else, and have already seen your dice roll simulator in Session 11.\n\nCore ideas:\n\nTurn repeated dice rolls into a strategic game.\n\nUse loops, conditionals, and variables to manage turns and scores.\n\nInformally discuss risk and fairness using simple averages and totals."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#position-numbering",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#position-numbering",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "Position numbering",
-    "text": "Position numbering\nTo help players choose moves, we number the squares like this:\n 1 | 2 | 3\n-----------\n 4 | 5 | 6\n-----------\n 7 | 8 | 9\nInside Python lists, indexing starts from 0, not 1.\nSo the mapping is:\n\nPlayer position 1 -&gt; list index 0\nPlayer position 2 -&gt; list index 1\nPlayer position 3 -&gt; list index 2\n…\nPlayer position 9 -&gt; list index 8\n\nThat means if the player types a number move, the program should store it at:\nindex = move - 1\nThis is a small but important mathematical translation between human numbering and computer indexing."
+    "objectID": "cs_2026/notes/cs2026-pig-dice.html#game-rules-studentfriendly",
+    "href": "cs_2026/notes/cs2026-pig-dice.html#game-rules-studentfriendly",
+    "title": "Venu GVGK Raju",
+    "section": "2. Game rules (student‑friendly)",
+    "text": "2. Game rules (student‑friendly)\nExplain the classic Pig rules in simple terms:\n\nTwo players race to 100 points.\n\nOn your turn, you may roll or hold.\n\nIf you roll:\n\nIf the die shows 2–6, add that to your turn total and decide again.\n\nIf the die shows 1, your turn total becomes 0 and your turn ends.\n\n\nIf you hold, you add your turn total to your overall score, and your turn ends.\n\nFirst player to reach 100 or more wins.\n\nYou can start with a smaller target (e.g. 30) if 100 feels long in class."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#board-representation",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#board-representation",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "1. Board representation",
-    "text": "1. Board representation\n\nCreate a list of 9 blank spaces.\nThis is the starting board."
+    "objectID": "cs_2026/notes/cs2026-pig-dice.html#learning-objectives",
+    "href": "cs_2026/notes/cs2026-pig-dice.html#learning-objectives",
+    "title": "Venu GVGK Raju",
+    "section": "3. Learning objectives",
+    "text": "3. Learning objectives\nBy the end of the class, students should be able to:\n\nRepresent scores and turn totals with variables.\n\nUse a loop to alternate turns between player and computer.\n\nUse if/elif/else to implement the Pig rules.\n\nReflect on how risk (rolling again) compares to safety (holding)."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#print-the-board",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#print-the-board",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "2. Print the board",
-    "text": "2. Print the board\n\nRead positions 0 to 8 from the list.\nPrint them in 3 rows.\nAdd separating lines so the board is easy to read."
+    "objectID": "cs_2026/notes/cs2026-pig-dice.html#class-flow-with-timings",
+    "href": "cs_2026/notes/cs2026-pig-dice.html#class-flow-with-timings",
+    "title": "Venu GVGK Raju",
+    "section": "4. Class flow (with timings)",
+    "text": "4. Class flow (with timings)\n\nA. Warm‑up: manual Pig (10 minutes)\n\nPlay a quick manual version on the board with one volunteer as the player and you as the die.\n\nKeep track of:\n\nTurn total.\n\nOverall score.\n\n\nAfter a few turns, ask:\n\n“When should you stop rolling?”\n\n“What happens if you are greedy and keep rolling?”\n\n\nThis sets up the idea of risk vs reward without formal probability.\n\n\n\nB. Representing a single turn in Python (15 minutes)\nGoal: code just one player turn.\n\nStart from your existing dice simulator idea:\nimport random\nroll = random.randint(1, 6)\nprint(\"You rolled:\", roll)\nIntroduce a turn total:\nimport random\n\nturn_total = 0\n\nwhile True:\n    roll = random.randint(1, 6)\n    print(\"You rolled:\", roll)\n\n    if roll == 1:\n        print(\"You lose the turn. Turn total is 0.\")\n        turn_total = 0\n        break\n    else:\n        turn_total = turn_total + roll\n        print(\"Turn total:\", turn_total)\n\n        choice = input(\"Roll again or hold? (r/h): \").strip().lower()\n        if choice == \"h\":\n            print(\"You hold with\", turn_total, \"points.\")\n            break\nExplain:\n\n\nturn_total starts at 0 and only increases on safe rolls.\n\nRolling a 1 resets the turn total and ends the loop.\n\n“Hold” ends the loop but keeps the turn total for later.\n\nThis segment focuses heavily on loops, conditionals, and input, just as your earlier game sessions did.\n\n\nC. Adding overall scores and alternating turns (20 minutes)\nGoal: full game with player vs computer.\n\nIntroduce overall scores:\nplayer_score = 0\ncomputer_score = 0\ntarget = 30  # or 100 later\nWrap the turn logic in a higher‑level loop that alternates turns:\n\nPlayer’s turn: use the turn logic above with input.\n\nAfter holding, add turn_total to player_score.\n\nIf player_score &gt;= target, player wins.\n\nComputer’s turn: use a simple strategy (for example, roll until turn_total reaches 10, then hold).\n\nOutline the structure on the board:\nwhile player_score &lt; target and computer_score &lt; target:\n    # Player's turn\n    # Computer's turn\nLet students see how the same pattern repeats: each turn uses a while True loop embedded inside a larger game loop.\n\nYou can keep the code partially written on the board and fill gaps with student suggestions.\n\n\nD. Strategy and fairness discussion (10 minutes)\nAsk questions that connect to your fairness and simulation theme:\n\n“Is the computer’s strategy smart or silly?”\n\n“What happens if the computer always holds after the first safe roll?”\n\n“Could we use simulation later to test different Pig strategies?”\n\nRelate this back to your dice roll simulator sessions: you used randomness to see typical outcomes; here you’re using randomness plus decisions to see how strategies matter."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#take-a-move",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#take-a-move",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "3. Take a move",
-    "text": "3. Take a move\n\nAsk the current player to enter a number from 1 to 9.\nConvert it into a list index by subtracting 1.\nCheck whether:\n\nthe number is between 1 and 9\nthe square is still empty\n\nIf not, ask again."
+    "objectID": "cs_2026/notes/cs2026-pig-dice.html#suggested-questions-and-prompts",
+    "href": "cs_2026/notes/cs2026-pig-dice.html#suggested-questions-and-prompts",
+    "title": "Venu GVGK Raju",
+    "section": "5. Suggested questions and prompts",
+    "text": "5. Suggested questions and prompts\nDuring the lesson, you can use prompts like:\n\n“What variables do we need in this game?” (turn total, player score, computer score, target).\n\n“Which conditions end the player’s turn?” (rolling 1, choosing hold).\n\n“Which conditions end the whole game?” (score reaching or passing target).\n\n“What simple strategy can we give the computer?” (e.g., roll until turn total ≥ 10).\n\nThese encourage students to think computationally about game rules and states, reinforcing skills from your earlier tic‑tac‑toe and guessing game sessions."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#update-the-board",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#update-the-board",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "4. Update the board",
-    "text": "4. Update the board\n\nOnce a valid move is given, place the current player’s mark (X or O) in that square."
+    "objectID": "cs_2026/notes/cs2026-pig-dice.html#optional-extension-homework",
+    "href": "cs_2026/notes/cs2026-pig-dice.html#optional-extension-homework",
+    "title": "Venu GVGK Raju",
+    "section": "6. Optional extension / homework",
+    "text": "6. Optional extension / homework\nIf you want a small follow‑up task:\n\nAsk each student to write down a strategy for the computer in plain language, such as:\n\n“Roll until turn total reaches 12 then hold.”\n\n“Stop rolling if computer’s score is already ahead by more than 15 points.”\n\n\nNext class, they implement their strategy in code and compare which strategy seems better over many games."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check-for-winner",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check-for-winner",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "5. Check for winner",
-    "text": "5. Check for winner\n\nLook at each winning triple.\nIf all three positions contain the same non-empty mark, return that mark as the winner."
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "",
+    "text": "The dice sum game is a natural next step after the coin toss simulator because it keeps the same simulation structure but produces a richer pattern of outcomes. Instead of only two outcomes, rolling two fair dice produces sums from 2 to 12, and some of those sums occur more often than others.\nThis lesson is useful because it connects programming with both probability and combinatorics. By simulating many rolls, students can observe a frequency distribution and compare it with the mathematical idea that some sums can be formed in more ways than others."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check-for-draw",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check-for-draw",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "6. Check for draw",
-    "text": "6. Check for draw\n\nIf there are no blank spaces left and there is no winner, return draw."
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#input",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#input",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Input",
+    "text": "Input\n\nA positive integer (N), representing the number of times the pair of dice will be rolled."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#switch-players",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#switch-players",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "7. Switch players",
-    "text": "7. Switch players\n\nIf current player is X, next player becomes O.\nOtherwise, next player becomes X."
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#output",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#output",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Output",
+    "text": "Output\n\nThe frequency of each sum from 2 to 12.\nThe sum that appeared most often.\nOptionally, the fraction or percentage for each sum."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#main-loop",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#main-loop",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "8. Main loop",
-    "text": "8. Main loop\n\nPrint board.\nAsk move.\nUpdate board.\nCheck winner.\nCheck draw.\nSwitch player.\nRepeat until game ends."
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#example-idea",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#example-idea",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Example idea",
+    "text": "Example idea\nIf the dice are rolled 20 times, one possible set of frequencies might show that 7 occurred 4 times, 6 occurred 3 times, 8 occurred 3 times, and some extreme sums such as 2 or 12 occurred only once or not at all. The exact results change from run to run because simulation uses randomness."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#print_board",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#print_board",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "print_board",
-    "text": "print_board\nFUNCTION print_board(board):\n    PRINT board[0], board[1], board[2]\n    PRINT separator line\n    PRINT board[3], board[4], board[5]\n    PRINT separator line\n    PRINT board[6], board[7], board[8]"
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-is-7-the-most-common-sum",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-is-7-the-most-common-sum",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Why is 7 the most common sum?",
+    "text": "Why is 7 the most common sum?\nThe simulation suggests that 7 appears most often, but programming is only one part of the explanation. The mathematical reason is that 7 can be formed in 6 distinct ordered ways: ((1,6)), ((2,5)), ((3,4)), ((4,3)), ((5,2)), and ((6,1)).\nOther sums have fewer combinations. For example, 2 can occur only as ((1,1)), and 12 can occur only as ((6,6)), so they are much less frequent in repeated trials."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check_winner",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check_winner",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "check_winner",
-    "text": "check_winner\nFUNCTION check_winner(board):\n\n    SET winning_lines to:\n        (0, 1, 2)\n        (3, 4, 5)\n        (6, 7, 8)\n        (0, 3, 6)\n        (1, 4, 7)\n        (2, 5, 8)\n        (0, 4, 8)\n        (2, 4, 6)\n\n    FOR each triple (a, b, c) in winning_lines:\n        IF board[a] is not blank AND\n           board[a] == board[b] AND\n           board[b] == board[c]:\n            RETURN board[a]\n\n    RETURN no winner"
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#combinatorics-table",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#combinatorics-table",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Combinatorics table",
+    "text": "Combinatorics table\nThe connection between simulation and counting can be shown clearly in a table.\n\n\n\nSum\nNumber of ways\nExample outcomes\n\n\n\n\n2\n1\n(1,1)\n\n\n3\n2\n(1,2), (2,1)\n\n\n4\n3\n(1,3), (2,2), (3,1)\n\n\n5\n4\n(1,4), (2,3), (3,2), (4,1)\n\n\n6\n5\nfive ordered pairs\n\n\n7\n6\nsix ordered pairs\n\n\n8\n5\nfive ordered pairs\n\n\n9\n4\nfour ordered pairs\n\n\n10\n3\nthree ordered pairs\n\n\n11\n2\ntwo ordered pairs\n\n\n12\n1\n(6,6)\n\n\n\nBecause the number of ways rises to 6 and then falls symmetrically, the frequency distribution of sums tends to have a triangular shape with the peak near 7."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check_draw",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check_draw",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "check_draw",
-    "text": "check_draw\nFUNCTION check_draw(board):\n    IF there are no blank spaces in board:\n        RETURN True\n    ELSE:\n        RETURN False"
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#what-does-the-frequency-table-show",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#what-does-the-frequency-table-show",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "What does the frequency table show?",
+    "text": "What does the frequency table show?\nA frequency table records how many times each outcome occurred in the simulation. As the number of trials becomes large, the observed frequencies begin to reflect the underlying probability pattern more clearly.\nThis helps students move from single outcomes to distributions. Instead of asking “What happened on one roll?”, the better question becomes “What pattern appears after many rolls?”"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#get_move",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#get_move",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "get_move",
-    "text": "get_move\nFUNCTION get_move(board, player):\n\n    REPEAT:\n        ASK player to enter a number from 1 to 9\n        READ move\n\n        IF move is not between 1 and 9:\n            PRINT invalid position\n        ELSE:\n            index = move - 1\n\n            IF board[index] is not blank:\n                PRINT square already taken\n            ELSE:\n                RETURN index"
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-do-small-and-large-simulations-look-different",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-do-small-and-large-simulations-look-different",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Why do small and large simulations look different?",
+    "text": "Why do small and large simulations look different?\nIn a small number of rolls, the frequencies can look irregular because chance variation is strong. In a much larger number of rolls, the empirical distribution tends to resemble the theoretical distribution more closely.\nThis is one of the important ideas of simulation: randomness affects individual outcomes strongly, but long-run patterns are more stable."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#switch_player",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#switch_player",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "switch_player",
-    "text": "switch_player\nFUNCTION switch_player(player):\n    IF player is X:\n        RETURN O\n    ELSE:\n        RETURN X"
+    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html",
+    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "title: “CS2026 Class Notes: Coin Toss Simulator” publish: false"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#main-game",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#main-game",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "main game",
-    "text": "main game\nFUNCTION play_game:\n\n    CREATE board with 9 blank spaces\n    SET player = X\n\n    REPEAT:\n        print_board(board)\n\n        move = get_move(board, player)\n        board[move] = player\n\n        winner = check_winner(board)\n        IF winner exists:\n            print_board(board)\n            PRINT winner has won\n            STOP\n\n        IF check_draw(board):\n            print_board(board)\n            PRINT game is a draw\n            STOP\n\n        player = switch_player(player)"
+    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#input",
+    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#input",
+    "title": "Introduction",
+    "section": "Input",
+    "text": "Input\n\nA positive integer (N), representing the number of coin tosses."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#full-beginner-version",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#full-beginner-version",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "Full beginner version",
-    "text": "Full beginner version\ndef print_board(board):\n    print()\n    print(board[0], \"|\", board[1], \"|\", board[2])\n    print(\"---------\")\n    print(board[3], \"|\", board[4], \"|\", board[5])\n    print(\"---------\")\n    print(board[6], \"|\", board[7], \"|\", board[8])\n    print()\n\n\ndef check_winner(board):\n    winning_lines = [\n        (0, 1, 2),\n        (3, 4, 5),\n        (6, 7, 8),\n        (0, 3, 6),\n        (1, 4, 7),\n        (2, 5, 8),\n        (0, 4, 8),\n        (2, 4, 6)\n    ]\n\n    for a, b, c in winning_lines:\n        if board[a] != \" \" and board[a] == board[b] and board[b] == board[c]:\n            return board[a]\n\n    return None\n\n\ndef check_draw(board):\n    return \" \" not in board\n\n\ndef get_move(board, player):\n    while True:\n        move = int(input(\"Player \" + player + \", enter a position (1-9): \"))\n\n        if move &lt; 1 or move &gt; 9:\n            print(\"Please choose a number from 1 to 9.\")\n        else:\n            index = move - 1\n\n            if board[index] != \" \":\n                print(\"That square is already taken.\")\n            else:\n                return index\n\n\ndef switch_player(player):\n    if player == \"X\":\n        return \"O\"\n    else:\n        return \"X\"\n\n\ndef play_game():\n    board = [\" \", \" \", \" \",\n             \" \", \" \", \" \",\n             \" \", \" \", \" \"]\n\n    player = \"X\"\n\n    while True:\n        print_board(board)\n\n        move = get_move(board, player)\n        board[move] = player\n\n        winner = check_winner(board)\n        if winner is not None:\n            print_board(board)\n            print(\"Player\", winner, \"wins!\")\n            break\n\n        if check_draw(board):\n            print_board(board)\n            print(\"The game is a draw.\")\n            break\n\n        player = switch_player(player)\n\n\nplay_game()"
+    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#output",
+    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#output",
+    "title": "Introduction",
+    "section": "Output",
+    "text": "Output\n\nNumber of Heads.\nNumber of Tails.\nFraction of Heads.\nFraction of Tails."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-board-list",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-board-list",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "1. The board list",
-    "text": "1. The board list\nboard = [\" \", \" \", \" \",\n         \" \", \" \", \" \",\n         \" \", \" \", \" \"]\nThis is a list with 9 elements.\nWhy a list?\n\nBecause the board has a fixed number of positions.\nWe want to access a square by its position.\nWe want to change a square when a move is made.\n\nSo a list is a natural choice."
+    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#example",
+    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#example",
+    "title": "Introduction",
+    "section": "Example",
+    "text": "Example\nIf (N = 10), one run of the program might produce 6 Heads and 4 Tails, while another run with the same (N) might produce 3 Heads and 7 Tails because the outcomes are random."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-winning-lines-list",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-winning-lines-list",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "2. The winning lines list",
-    "text": "2. The winning lines list\nwinning_lines = [\n    (0, 1, 2),\n    (3, 4, 5),\n    (6, 7, 8),\n    (0, 3, 6),\n    (1, 4, 7),\n    (2, 5, 8),\n    (0, 4, 8),\n    (2, 4, 6)\n]\nThis is a list of tuples.\nWhy?\n\nThe outer list stores all possible winning patterns.\nEach tuple stores one fixed triple of board positions.\nThese triples do not change, so tuples are a good fit.\n\nThis is an important idea: even game rules can be represented as data."
+    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#why-do-results-change-every-run",
+    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#why-do-results-change-every-run",
+    "title": "Introduction",
+    "section": "Why do results change every run?",
+    "text": "Why do results change every run?\nA simulation of a fair coin toss uses randomness, so the exact sequence of Heads and Tails is different each time the program is executed. This is what makes simulation useful for studying chance processes."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#player-mark",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#player-mark",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "3. Player mark",
-    "text": "3. Player mark\nplayer = \"X\"\nThis is a string.\nIt stores whose turn it is."
+    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#why-do-the-fractions-move-toward-0.5",
+    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#why-do-the-fractions-move-toward-0.5",
+    "title": "Introduction",
+    "section": "Why do the fractions move toward 0.5?",
+    "text": "Why do the fractions move toward 0.5?\nFor a fair coin, the long-run proportion of Heads is expected to be close to 0.5, and simulations with larger numbers of tosses tend to produce empirical proportions closer to that value. Small samples can vary a lot, but larger samples are usually more stable."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#print_boardboard",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#print_boardboard",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "print_board(board)",
-    "text": "print_board(board)\n\nInput: the board list\nJob: display the current state of the game\nIt does not return anything."
+    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#which-programming-ideas-are-revised-here",
+    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#which-programming-ideas-are-revised-here",
+    "title": "Introduction",
+    "section": "Which programming ideas are revised here?",
+    "text": "Which programming ideas are revised here?\nThis program reinforces several core ideas:\n\nvariables and assignment;\ncounters;\nloops;\nconditional statements;\ninput and output;\nbasic numerical calculation."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check_winnerboard",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check_winnerboard",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "check_winner(board)",
-    "text": "check_winner(board)\n\nInput: the board list\nJob: check whether someone has won\nOutput:\n\n\"X\" if X has won\n\"O\" if O has won\nNone if nobody has won yet"
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check_drawboard",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check_drawboard",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "check_draw(board)",
-    "text": "check_draw(board)\n\nInput: the board list\nJob: check whether the board is full\nOutput:\n\nTrue if full\nFalse otherwise"
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#get_moveboard-player",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#get_moveboard-player",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "get_move(board, player)",
-    "text": "get_move(board, player)\n\nInput: the board and current player\nJob: repeatedly ask for a legal move until one is given\nOutput: the valid board index"
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#switch_playerplayer",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#switch_playerplayer",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "switch_player(player)",
-    "text": "switch_player(player)\n\nInput: current player\nJob: decide who plays next\nOutput: the other player"
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#play_game",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#play_game",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "play_game()",
-    "text": "play_game()\n\nThis is the main controlling function.\nIt brings all the smaller parts together."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-main-game-loop",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-main-game-loop",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "1. The main game loop",
-    "text": "1. The main game loop\nwhile True:\nThis loop keeps the game running until something causes it to stop.\nWhat stops it?\n\nA player wins -&gt; break\nThe board is full -&gt; break"
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-input-validation-loop",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-input-validation-loop",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "2. The input-validation loop",
-    "text": "2. The input-validation loop\nInside get_move, we also use:\nwhile True:\nThis means:\n\nKeep asking the player for a move\nUntil the move is valid\n\nThis is a very common programming pattern."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-winner-checking-loop",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-winner-checking-loop",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "3. The winner-checking loop",
-    "text": "3. The winner-checking loop\nfor a, b, c in winning_lines:\nThis loop checks every possible winning triple.\nThis is an example of looping over structured data."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#checking-for-a-winning-line",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#checking-for-a-winning-line",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "1. Checking for a winning line",
-    "text": "1. Checking for a winning line\nif board[a] != \" \" and board[a] == board[b] and board[b] == board[c]:\nThis means:\n\nthe square must not be empty\nall three squares must contain the same mark\n\nIf these are true, there is a winner."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#checking-whether-a-move-is-inside-the-allowed-range",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#checking-whether-a-move-is-inside-the-allowed-range",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "2. Checking whether a move is inside the allowed range",
-    "text": "2. Checking whether a move is inside the allowed range\nif move &lt; 1 or move &gt; 9:\nThis prevents players from entering illegal positions."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#checking-whether-a-square-is-already-filled",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#checking-whether-a-square-is-already-filled",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "3. Checking whether a square is already filled",
-    "text": "3. Checking whether a square is already filled\nif board[index] != \" \":\nThis prevents overwriting an existing move."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#switching-player",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#switching-player",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "4. Switching player",
-    "text": "4. Switching player\nif player == \"X\":\n    return \"O\"\nelse:\n    return \"X\"\nA simple conditional can capture a turn-taking rule."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#big-problems-become-manageable-when-broken-into-modules",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#big-problems-become-manageable-when-broken-into-modules",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "1. Big problems become manageable when broken into modules",
-    "text": "1. Big problems become manageable when broken into modules\nThe full game looks complicated at first, but each module is small and understandable."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#data-structures-are-central",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#data-structures-are-central",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "2. Data structures are central",
-    "text": "2. Data structures are central\n\nA list stores the board.\nA list of tuples stores the winning lines.\nStrings store the player marks.\n\nWithout a good representation of data, the program becomes difficult."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#functions-make-the-program-readable",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#functions-make-the-program-readable",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "3. Functions make the program readable",
-    "text": "3. Functions make the program readable\nInstead of putting everything in one place, each function has one job.\nThis makes the program easier to:\n\nunderstand\ntest\nimprove later"
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-same-ideas-keep-returning",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-same-ideas-keep-returning",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "4. The same ideas keep returning",
-    "text": "4. The same ideas keep returning\nThis program uses the same core ideas we have already seen:\n\ndata storage\nloops\nconditionals\nfunctions\ninput and output"
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-game-logic-and-the-board-display-are-separate",
-    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-game-logic-and-the-board-display-are-separate",
-    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
-    "section": "5. The game logic and the board display are separate",
-    "text": "5. The game logic and the board display are separate\nThis is important.\n\nprint_board only displays.\ncheck_winner only checks rules.\nget_move only handles input.\n\nKeeping these separate makes the program clean."
+    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#what-edge-cases-should-be-discussed",
+    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#what-edge-cases-should-be-discussed",
+    "title": "Introduction",
+    "section": "What edge cases should be discussed?",
+    "text": "What edge cases should be discussed?\nIf the user enters 0, the program attempts to divide by zero while calculating fractions, so the class should either require (N &gt; 0) or add validation before continuing. This is a useful moment to discuss why programs must handle invalid input carefully."
   },
   {
     "objectID": "cs_2026/index.html",
     "href": "cs_2026/index.html",
     "title": "CS 2026",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJul 28, 2026\n\n\nSession 12 Two Dice Roll and Plot\n\n\n \n\n\n\n\nJul 23, 2026\n\n\nSession 11 Dice Roll Simulator\n\n\n \n\n\n\n\nJul 21, 2026\n\n\nSession 10 Coin Toss Simulator\n\n\n \n\n\n\n\nJul 15, 2026\n\n\nSession 9 Python Data Types and Data Structures\n\n\n \n\n\n\n\nJul 7, 2026\n\n\nSession 8 Programming Tic-Tac-Toe\n\n\n \n\n\n\n\nJun 25, 2026\n\n\nSession 7 Computer Guesses the number\n\n\n \n\n\n\n\nJun 24, 2026\n\n\nSession 6 Pseudocode, sample programs, program elements\n\n\n \n\n\n\n\nJun 16, 2026\n\n\nSession 5 Binary and Hex; Sorting - selection and insertion\n\n\n \n\n\n\n\nJun 15, 2026\n\n\nDeeper Exploration - Coin weighing\n\n\n \n\n\n\n\nJun 14, 2026\n\n\nSession 4 How many questions? Search Algorithms\n\n\n \n\n\n\n\nJun 9, 2026\n\n\nSession 3 Tic-tac-toe 1\n\n\n \n\n\n\n\nJun 7, 2026\n\n\nSession 2 Pouring; guessing letters and numbers\n\n\n \n\n\n\n\nJun 2, 2026\n\n\nSession 1 Locked-in Syndrome and Algorithmic thinking\n\n\n \n\n\n\n\nJun 1, 2026\n\n\nPurpose and Audience\n\n\n \n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAug 4, 2026\n\n\nSession 13 Primes in Range\n\n\n \n\n\n\n\nJul 28, 2026\n\n\nSession 12 Two Dice Roll and Plot\n\n\n \n\n\n\n\nJul 23, 2026\n\n\nSession 11 Dice Roll Simulator\n\n\n \n\n\n\n\nJul 21, 2026\n\n\nSession 10 Coin Toss Simulator\n\n\n \n\n\n\n\nJul 15, 2026\n\n\nSession 9 Python Data Types and Data Structures\n\n\n \n\n\n\n\nJul 7, 2026\n\n\nSession 8 Programming Tic-Tac-Toe\n\n\n \n\n\n\n\nJun 25, 2026\n\n\nSession 7 Computer Guesses the number\n\n\n \n\n\n\n\nJun 24, 2026\n\n\nSession 6 Pseudocode, sample programs, program elements\n\n\n \n\n\n\n\nJun 16, 2026\n\n\nSession 5 Binary and Hex; Sorting - selection and insertion\n\n\n \n\n\n\n\nJun 15, 2026\n\n\nDeeper Exploration - Coin weighing\n\n\n \n\n\n\n\nJun 14, 2026\n\n\nSession 4 How many questions? Search Algorithms\n\n\n \n\n\n\n\nJun 9, 2026\n\n\nSession 3 Tic-tac-toe 1\n\n\n \n\n\n\n\nJun 7, 2026\n\n\nSession 2 Pouring; guessing letters and numbers\n\n\n \n\n\n\n\nJun 2, 2026\n\n\nSession 1 Locked-in Syndrome and Algorithmic thinking\n\n\n \n\n\n\n\nJun 1, 2026\n\n\nPurpose and Audience\n\n\n \n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "cs_2026/session8.html",
@@ -1855,277 +1659,473 @@
     "text": "This document is intended to provide notes and insights on the course CS 2026, which is aimed at senior secondary school students interested in computer science. The specific set of students in this class have studied math for their high school diploma but have not choosen math for senior secondary. That means this course is suitable for the “non-math” population out there.\nThe notes are meant to be a resource for students taking the course, as well as for educators who may want to use the course materials in their own teaching."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-primes-in-range.html",
-    "href": "cs_2026/notes/cs2026-primes-in-range.html",
-    "title": "CS2026 – Finding Prime Numbers in a Range",
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
     "section": "",
-    "text": "We want a program that takes a start and end of a range, for example 10 to 50, and finds all the prime numbers in that range.\nFor example:\n\nInput: start = 10, end = 20\nOutput: 11, 13, 17, 19\n\nSo the problem naturally breaks into two parts:\n\nHow do we check whether one number is prime?\nHow do we repeat that check for every number in the range?"
+    "text": "We already know how Tic-Tac-Toe works as a game. We have played it, drawn decision trees, and identified a winning strategy.\nNow we ask a programming question:\n\nHow can we write a program so that two human players can play Tic-Tac-Toe using the computer?\n\nThe computer is not yet trying to play intelligently. It is only doing the following jobs:\n\nShowing the board.\nAccepting moves from Player X and Player O.\nUpdating the board after each move.\nChecking whether someone has won.\nChecking whether the board is full.\nStopping the game when there is a win or a draw.\n\nSo the computer is acting as a referee and scorekeeper."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-primes-in-range.html#helper-function-is_prime",
-    "href": "cs_2026/notes/cs2026-primes-in-range.html#helper-function-is_prime",
-    "title": "CS2026 – Finding Prime Numbers in a Range",
-    "section": "Helper function: is_prime",
-    "text": "Helper function: is_prime\nFUNCTION is_prime(n):\n\n    IF n &lt;= 1:\n        RETURN False\n\n    SET limit = floor(sqrt(n))\n\n    FOR d from 2 to limit:\n        IF n mod d == 0:\n            RETURN False\n\n    RETURN True"
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#why-we-need-a-data-structure",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#why-we-need-a-data-structure",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "Why we need a data structure",
+    "text": "Why we need a data structure\nThe computer needs to remember the state of all 9 squares.\nA simple beginner-friendly choice is a list of 9 values:\nboard = [\" \", \" \", \" \",\n         \" \", \" \", \" \",\n         \" \", \" \", \" \"]\nEach position stores one of three things:\n\na blank space \" \" if the square is empty\n\"X\" if Player X has played there\n\"O\" if Player O has played there\n\nSo the board is a list, and each cell contains a string."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-primes-in-range.html#main-function-primes_in_range",
-    "href": "cs_2026/notes/cs2026-primes-in-range.html#main-function-primes_in_range",
-    "title": "CS2026 – Finding Prime Numbers in a Range",
-    "section": "Main function: primes_in_range",
-    "text": "Main function: primes_in_range\nFUNCTION primes_in_range(start, end):\n\n    CREATE empty list primes\n\n    FOR n from start to end:\n        IF is_prime(n):\n            append n to primes\n\n    RETURN primes"
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#position-numbering",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#position-numbering",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "Position numbering",
+    "text": "Position numbering\nTo help players choose moves, we number the squares like this:\n 1 | 2 | 3\n-----------\n 4 | 5 | 6\n-----------\n 7 | 8 | 9\nInside Python lists, indexing starts from 0, not 1.\nSo the mapping is:\n\nPlayer position 1 -&gt; list index 0\nPlayer position 2 -&gt; list index 1\nPlayer position 3 -&gt; list index 2\n…\nPlayer position 9 -&gt; list index 8\n\nThat means if the player types a number move, the program should store it at:\nindex = move - 1\nThis is a small but important mathematical translation between human numbering and computer indexing."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-primes-in-range.html#helper-function-is_prime-1",
-    "href": "cs_2026/notes/cs2026-primes-in-range.html#helper-function-is_prime-1",
-    "title": "CS2026 – Finding Prime Numbers in a Range",
-    "section": "Helper function: is_prime",
-    "text": "Helper function: is_prime\nimport math\n\ndef is_prime(n):\n    \"\"\"Return True if n is prime, False otherwise.\"\"\"\n    if n &lt;= 1:\n        return False\n\n    limit = int(math.sqrt(n))\n\n    for d in range(2, limit + 1):\n        if n % d == 0:\n            return False\n\n    return True"
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#board-representation",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#board-representation",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "1. Board representation",
+    "text": "1. Board representation\n\nCreate a list of 9 blank spaces.\nThis is the starting board."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-primes-in-range.html#main-function-primes_in_range-1",
-    "href": "cs_2026/notes/cs2026-primes-in-range.html#main-function-primes_in_range-1",
-    "title": "CS2026 – Finding Prime Numbers in a Range",
-    "section": "Main function: primes_in_range",
-    "text": "Main function: primes_in_range\ndef primes_in_range(start, end):\n    \"\"\"Return a list of all prime numbers between start and end (inclusive).\"\"\"\n    primes = []\n\n    for n in range(start, end + 1):\n        if is_prime(n):\n            primes.append(n)\n\n    return primes"
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#print-the-board",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#print-the-board",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "2. Print the board",
+    "text": "2. Print the board\n\nRead positions 0 to 8 from the list.\nPrint them in 3 rows.\nAdd separating lines so the board is easy to read."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-primes-in-range.html#example-usage",
-    "href": "cs_2026/notes/cs2026-primes-in-range.html#example-usage",
-    "title": "CS2026 – Finding Prime Numbers in a Range",
-    "section": "Example usage",
-    "text": "Example usage\nstart = 10\nend = 50\nprimes = primes_in_range(start, end)\nprint(\"Prime numbers between\", start, \"and\", end, \"are:\")\nprint(primes)"
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#take-a-move",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#take-a-move",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "3. Take a move",
+    "text": "3. Take a move\n\nAsk the current player to enter a number from 1 to 9.\nConvert it into a list index by subtracting 1.\nCheck whether:\n\nthe number is between 1 and 9\nthe square is still empty\n\nIf not, ask again."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html",
-    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "title: “CS2026 Class Notes: Coin Toss Simulator” publish: false"
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#update-the-board",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#update-the-board",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "4. Update the board",
+    "text": "4. Update the board\n\nOnce a valid move is given, place the current player’s mark (X or O) in that square."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#input",
-    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#input",
-    "title": "Introduction",
-    "section": "Input",
-    "text": "Input\n\nA positive integer (N), representing the number of coin tosses."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check-for-winner",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check-for-winner",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "5. Check for winner",
+    "text": "5. Check for winner\n\nLook at each winning triple.\nIf all three positions contain the same non-empty mark, return that mark as the winner."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#output",
-    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#output",
-    "title": "Introduction",
-    "section": "Output",
-    "text": "Output\n\nNumber of Heads.\nNumber of Tails.\nFraction of Heads.\nFraction of Tails."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check-for-draw",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check-for-draw",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "6. Check for draw",
+    "text": "6. Check for draw\n\nIf there are no blank spaces left and there is no winner, return draw."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#example",
-    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#example",
-    "title": "Introduction",
-    "section": "Example",
-    "text": "Example\nIf (N = 10), one run of the program might produce 6 Heads and 4 Tails, while another run with the same (N) might produce 3 Heads and 7 Tails because the outcomes are random."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#switch-players",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#switch-players",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "7. Switch players",
+    "text": "7. Switch players\n\nIf current player is X, next player becomes O.\nOtherwise, next player becomes X."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#why-do-results-change-every-run",
-    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#why-do-results-change-every-run",
-    "title": "Introduction",
-    "section": "Why do results change every run?",
-    "text": "Why do results change every run?\nA simulation of a fair coin toss uses randomness, so the exact sequence of Heads and Tails is different each time the program is executed. This is what makes simulation useful for studying chance processes."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#main-loop",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#main-loop",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "8. Main loop",
+    "text": "8. Main loop\n\nPrint board.\nAsk move.\nUpdate board.\nCheck winner.\nCheck draw.\nSwitch player.\nRepeat until game ends."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#why-do-the-fractions-move-toward-0.5",
-    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#why-do-the-fractions-move-toward-0.5",
-    "title": "Introduction",
-    "section": "Why do the fractions move toward 0.5?",
-    "text": "Why do the fractions move toward 0.5?\nFor a fair coin, the long-run proportion of Heads is expected to be close to 0.5, and simulations with larger numbers of tosses tend to produce empirical proportions closer to that value. Small samples can vary a lot, but larger samples are usually more stable."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#print_board",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#print_board",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "print_board",
+    "text": "print_board\nFUNCTION print_board(board):\n    PRINT board[0], board[1], board[2]\n    PRINT separator line\n    PRINT board[3], board[4], board[5]\n    PRINT separator line\n    PRINT board[6], board[7], board[8]"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#which-programming-ideas-are-revised-here",
-    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#which-programming-ideas-are-revised-here",
-    "title": "Introduction",
-    "section": "Which programming ideas are revised here?",
-    "text": "Which programming ideas are revised here?\nThis program reinforces several core ideas:\n\nvariables and assignment;\ncounters;\nloops;\nconditional statements;\ninput and output;\nbasic numerical calculation."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check_winner",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check_winner",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "check_winner",
+    "text": "check_winner\nFUNCTION check_winner(board):\n\n    SET winning_lines to:\n        (0, 1, 2)\n        (3, 4, 5)\n        (6, 7, 8)\n        (0, 3, 6)\n        (1, 4, 7)\n        (2, 5, 8)\n        (0, 4, 8)\n        (2, 4, 6)\n\n    FOR each triple (a, b, c) in winning_lines:\n        IF board[a] is not blank AND\n           board[a] == board[b] AND\n           board[b] == board[c]:\n            RETURN board[a]\n\n    RETURN no winner"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-coin-toss-simulator.html#what-edge-cases-should-be-discussed",
-    "href": "cs_2026/notes/cs2026-coin-toss-simulator.html#what-edge-cases-should-be-discussed",
-    "title": "Introduction",
-    "section": "What edge cases should be discussed?",
-    "text": "What edge cases should be discussed?\nIf the user enters 0, the program attempts to divide by zero while calculating fractions, so the class should either require (N &gt; 0) or add validation before continuing. This is a useful moment to discuss why programs must handle invalid input carefully."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check_draw",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check_draw",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "check_draw",
+    "text": "check_draw\nFUNCTION check_draw(board):\n    IF there are no blank spaces in board:\n        RETURN True\n    ELSE:\n        RETURN False"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "",
-    "text": "The dice sum game is a natural next step after the coin toss simulator because it keeps the same simulation structure but produces a richer pattern of outcomes. Instead of only two outcomes, rolling two fair dice produces sums from 2 to 12, and some of those sums occur more often than others.\nThis lesson is useful because it connects programming with both probability and combinatorics. By simulating many rolls, students can observe a frequency distribution and compare it with the mathematical idea that some sums can be formed in more ways than others."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#get_move",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#get_move",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "get_move",
+    "text": "get_move\nFUNCTION get_move(board, player):\n\n    REPEAT:\n        ASK player to enter a number from 1 to 9\n        READ move\n\n        IF move is not between 1 and 9:\n            PRINT invalid position\n        ELSE:\n            index = move - 1\n\n            IF board[index] is not blank:\n                PRINT square already taken\n            ELSE:\n                RETURN index"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#input",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#input",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Input",
-    "text": "Input\n\nA positive integer (N), representing the number of times the pair of dice will be rolled."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#switch_player",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#switch_player",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "switch_player",
+    "text": "switch_player\nFUNCTION switch_player(player):\n    IF player is X:\n        RETURN O\n    ELSE:\n        RETURN X"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#output",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#output",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Output",
-    "text": "Output\n\nThe frequency of each sum from 2 to 12.\nThe sum that appeared most often.\nOptionally, the fraction or percentage for each sum."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#main-game",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#main-game",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "main game",
+    "text": "main game\nFUNCTION play_game:\n\n    CREATE board with 9 blank spaces\n    SET player = X\n\n    REPEAT:\n        print_board(board)\n\n        move = get_move(board, player)\n        board[move] = player\n\n        winner = check_winner(board)\n        IF winner exists:\n            print_board(board)\n            PRINT winner has won\n            STOP\n\n        IF check_draw(board):\n            print_board(board)\n            PRINT game is a draw\n            STOP\n\n        player = switch_player(player)"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#example-idea",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#example-idea",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Example idea",
-    "text": "Example idea\nIf the dice are rolled 20 times, one possible set of frequencies might show that 7 occurred 4 times, 6 occurred 3 times, 8 occurred 3 times, and some extreme sums such as 2 or 12 occurred only once or not at all. The exact results change from run to run because simulation uses randomness."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#full-beginner-version",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#full-beginner-version",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "Full beginner version",
+    "text": "Full beginner version\ndef print_board(board):\n    print()\n    print(board[0], \"|\", board[1], \"|\", board[2])\n    print(\"---------\")\n    print(board[3], \"|\", board[4], \"|\", board[5])\n    print(\"---------\")\n    print(board[6], \"|\", board[7], \"|\", board[8])\n    print()\n\n\ndef check_winner(board):\n    winning_lines = [\n        (0, 1, 2),\n        (3, 4, 5),\n        (6, 7, 8),\n        (0, 3, 6),\n        (1, 4, 7),\n        (2, 5, 8),\n        (0, 4, 8),\n        (2, 4, 6)\n    ]\n\n    for a, b, c in winning_lines:\n        if board[a] != \" \" and board[a] == board[b] and board[b] == board[c]:\n            return board[a]\n\n    return None\n\n\ndef check_draw(board):\n    return \" \" not in board\n\n\ndef get_move(board, player):\n    while True:\n        move = int(input(\"Player \" + player + \", enter a position (1-9): \"))\n\n        if move &lt; 1 or move &gt; 9:\n            print(\"Please choose a number from 1 to 9.\")\n        else:\n            index = move - 1\n\n            if board[index] != \" \":\n                print(\"That square is already taken.\")\n            else:\n                return index\n\n\ndef switch_player(player):\n    if player == \"X\":\n        return \"O\"\n    else:\n        return \"X\"\n\n\ndef play_game():\n    board = [\" \", \" \", \" \",\n             \" \", \" \", \" \",\n             \" \", \" \", \" \"]\n\n    player = \"X\"\n\n    while True:\n        print_board(board)\n\n        move = get_move(board, player)\n        board[move] = player\n\n        winner = check_winner(board)\n        if winner is not None:\n            print_board(board)\n            print(\"Player\", winner, \"wins!\")\n            break\n\n        if check_draw(board):\n            print_board(board)\n            print(\"The game is a draw.\")\n            break\n\n        player = switch_player(player)\n\n\nplay_game()"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-is-7-the-most-common-sum",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-is-7-the-most-common-sum",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Why is 7 the most common sum?",
-    "text": "Why is 7 the most common sum?\nThe simulation suggests that 7 appears most often, but programming is only one part of the explanation. The mathematical reason is that 7 can be formed in 6 distinct ordered ways: ((1,6)), ((2,5)), ((3,4)), ((4,3)), ((5,2)), and ((6,1)).\nOther sums have fewer combinations. For example, 2 can occur only as ((1,1)), and 12 can occur only as ((6,6)), so they are much less frequent in repeated trials."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-board-list",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-board-list",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "1. The board list",
+    "text": "1. The board list\nboard = [\" \", \" \", \" \",\n         \" \", \" \", \" \",\n         \" \", \" \", \" \"]\nThis is a list with 9 elements.\nWhy a list?\n\nBecause the board has a fixed number of positions.\nWe want to access a square by its position.\nWe want to change a square when a move is made.\n\nSo a list is a natural choice."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#combinatorics-table",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#combinatorics-table",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Combinatorics table",
-    "text": "Combinatorics table\nThe connection between simulation and counting can be shown clearly in a table.\n\n\n\nSum\nNumber of ways\nExample outcomes\n\n\n\n\n2\n1\n(1,1)\n\n\n3\n2\n(1,2), (2,1)\n\n\n4\n3\n(1,3), (2,2), (3,1)\n\n\n5\n4\n(1,4), (2,3), (3,2), (4,1)\n\n\n6\n5\nfive ordered pairs\n\n\n7\n6\nsix ordered pairs\n\n\n8\n5\nfive ordered pairs\n\n\n9\n4\nfour ordered pairs\n\n\n10\n3\nthree ordered pairs\n\n\n11\n2\ntwo ordered pairs\n\n\n12\n1\n(6,6)\n\n\n\nBecause the number of ways rises to 6 and then falls symmetrically, the frequency distribution of sums tends to have a triangular shape with the peak near 7."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-winning-lines-list",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-winning-lines-list",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "2. The winning lines list",
+    "text": "2. The winning lines list\nwinning_lines = [\n    (0, 1, 2),\n    (3, 4, 5),\n    (6, 7, 8),\n    (0, 3, 6),\n    (1, 4, 7),\n    (2, 5, 8),\n    (0, 4, 8),\n    (2, 4, 6)\n]\nThis is a list of tuples.\nWhy?\n\nThe outer list stores all possible winning patterns.\nEach tuple stores one fixed triple of board positions.\nThese triples do not change, so tuples are a good fit.\n\nThis is an important idea: even game rules can be represented as data."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#what-does-the-frequency-table-show",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#what-does-the-frequency-table-show",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "What does the frequency table show?",
-    "text": "What does the frequency table show?\nA frequency table records how many times each outcome occurred in the simulation. As the number of trials becomes large, the observed frequencies begin to reflect the underlying probability pattern more clearly.\nThis helps students move from single outcomes to distributions. Instead of asking “What happened on one roll?”, the better question becomes “What pattern appears after many rolls?”"
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#player-mark",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#player-mark",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "3. Player mark",
+    "text": "3. Player mark\nplayer = \"X\"\nThis is a string.\nIt stores whose turn it is."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-do-small-and-large-simulations-look-different",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-do-small-and-large-simulations-look-different",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Why do small and large simulations look different?",
-    "text": "Why do small and large simulations look different?\nIn a small number of rolls, the frequencies can look irregular because chance variation is strong. In a much larger number of rolls, the empirical distribution tends to resemble the theoretical distribution more closely.\nThis is one of the important ideas of simulation: randomness affects individual outcomes strongly, but long-run patterns are more stable."
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#print_boardboard",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#print_boardboard",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "print_board(board)",
+    "text": "print_board(board)\n\nInput: the board list\nJob: display the current state of the game\nIt does not return anything."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-pig-dice.html",
-    "href": "cs_2026/notes/cs2026-pig-dice.html",
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check_winnerboard",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check_winnerboard",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "check_winner(board)",
+    "text": "check_winner(board)\n\nInput: the board list\nJob: check whether someone has won\nOutput:\n\n\"X\" if X has won\n\"O\" if O has won\nNone if nobody has won yet"
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#check_drawboard",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#check_drawboard",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "check_draw(board)",
+    "text": "check_draw(board)\n\nInput: the board list\nJob: check whether the board is full\nOutput:\n\nTrue if full\nFalse otherwise"
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#get_moveboard-player",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#get_moveboard-player",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "get_move(board, player)",
+    "text": "get_move(board, player)\n\nInput: the board and current player\nJob: repeatedly ask for a legal move until one is given\nOutput: the valid board index"
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#switch_playerplayer",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#switch_playerplayer",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "switch_player(player)",
+    "text": "switch_player(player)\n\nInput: current player\nJob: decide who plays next\nOutput: the other player"
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#play_game",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#play_game",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "play_game()",
+    "text": "play_game()\n\nThis is the main controlling function.\nIt brings all the smaller parts together."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-main-game-loop",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-main-game-loop",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "1. The main game loop",
+    "text": "1. The main game loop\nwhile True:\nThis loop keeps the game running until something causes it to stop.\nWhat stops it?\n\nA player wins -&gt; break\nThe board is full -&gt; break"
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-input-validation-loop",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-input-validation-loop",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "2. The input-validation loop",
+    "text": "2. The input-validation loop\nInside get_move, we also use:\nwhile True:\nThis means:\n\nKeep asking the player for a move\nUntil the move is valid\n\nThis is a very common programming pattern."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-winner-checking-loop",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-winner-checking-loop",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "3. The winner-checking loop",
+    "text": "3. The winner-checking loop\nfor a, b, c in winning_lines:\nThis loop checks every possible winning triple.\nThis is an example of looping over structured data."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#checking-for-a-winning-line",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#checking-for-a-winning-line",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "1. Checking for a winning line",
+    "text": "1. Checking for a winning line\nif board[a] != \" \" and board[a] == board[b] and board[b] == board[c]:\nThis means:\n\nthe square must not be empty\nall three squares must contain the same mark\n\nIf these are true, there is a winner."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#checking-whether-a-move-is-inside-the-allowed-range",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#checking-whether-a-move-is-inside-the-allowed-range",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "2. Checking whether a move is inside the allowed range",
+    "text": "2. Checking whether a move is inside the allowed range\nif move &lt; 1 or move &gt; 9:\nThis prevents players from entering illegal positions."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#checking-whether-a-square-is-already-filled",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#checking-whether-a-square-is-already-filled",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "3. Checking whether a square is already filled",
+    "text": "3. Checking whether a square is already filled\nif board[index] != \" \":\nThis prevents overwriting an existing move."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#switching-player",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#switching-player",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "4. Switching player",
+    "text": "4. Switching player\nif player == \"X\":\n    return \"O\"\nelse:\n    return \"X\"\nA simple conditional can capture a turn-taking rule."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#big-problems-become-manageable-when-broken-into-modules",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#big-problems-become-manageable-when-broken-into-modules",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "1. Big problems become manageable when broken into modules",
+    "text": "1. Big problems become manageable when broken into modules\nThe full game looks complicated at first, but each module is small and understandable."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#data-structures-are-central",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#data-structures-are-central",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "2. Data structures are central",
+    "text": "2. Data structures are central\n\nA list stores the board.\nA list of tuples stores the winning lines.\nStrings store the player marks.\n\nWithout a good representation of data, the program becomes difficult."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#functions-make-the-program-readable",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#functions-make-the-program-readable",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "3. Functions make the program readable",
+    "text": "3. Functions make the program readable\nInstead of putting everything in one place, each function has one job.\nThis makes the program easier to:\n\nunderstand\ntest\nimprove later"
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-same-ideas-keep-returning",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-same-ideas-keep-returning",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "4. The same ideas keep returning",
+    "text": "4. The same ideas keep returning\nThis program uses the same core ideas we have already seen:\n\ndata storage\nloops\nconditionals\nfunctions\ninput and output"
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-tictactoe-program.html#the-game-logic-and-the-board-display-are-separate",
+    "href": "cs_2026/notes/cs2026-tictactoe-program.html#the-game-logic-and-the-board-display-are-separate",
+    "title": "CS2026 – Writing a Two-Player Tic-Tac-Toe Program",
+    "section": "5. The game logic and the board display are separate",
+    "text": "5. The game logic and the board display are separate\nThis is important.\n\nprint_board only displays.\ncheck_winner only checks rules.\nget_move only handles input.\n\nKeeping these separate makes the program clean."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html",
+    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html",
     "title": "Venu GVGK Raju",
     "section": "",
-    "text": "You can use Pig as a 1‑hour lesson that connects your existing dice simulator to strategy, loops, conditionals, and fairness, while staying at an accessible math level."
+    "text": "Here is a 1‑hour Rock Paper Scissors lesson that fits well after your current sequence on guessing games, tic‑tac‑toe, data structures, and simulation work. I’ve also included a working Python program you can use directly in class."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-pig-dice.html#lesson-snapshot",
-    "href": "cs_2026/notes/cs2026-pig-dice.html#lesson-snapshot",
+    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html#lesson-overview",
+    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html#lesson-overview",
     "title": "Venu GVGK Raju",
-    "section": "1. Lesson snapshot",
-    "text": "1. Lesson snapshot\n\nTitle: Pig dice game with Python\n\nDuration: 60 minutes\n\nPrerequisites: Students know basic Python, random.randint, loops, and if/else, and have already seen your dice roll simulator in Session 11.\n\nCore ideas:\n\nTurn repeated dice rolls into a strategic game.\n\nUse loops, conditionals, and variables to manage turns and scores.\n\nInformally discuss risk and fairness using simple averages and totals."
+    "section": "Lesson overview",
+    "text": "Lesson overview\n\nTitle: Rock Paper Scissors with Python\n\nDuration: 60 minutes\n\nPrerequisites: Students have already seen basic Python, if statements, loops, and simple game logic in earlier CS 2026 sessions.\n\nFocus skills: input, conditionals, loops, variables, and simple scorekeeping."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-pig-dice.html#game-rules-studentfriendly",
-    "href": "cs_2026/notes/cs2026-pig-dice.html#game-rules-studentfriendly",
+    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html#learning-goals",
+    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html#learning-goals",
     "title": "Venu GVGK Raju",
-    "section": "2. Game rules (student‑friendly)",
-    "text": "2. Game rules (student‑friendly)\nExplain the classic Pig rules in simple terms:\n\nTwo players race to 100 points.\n\nOn your turn, you may roll or hold.\n\nIf you roll:\n\nIf the die shows 2–6, add that to your turn total and decide again.\n\nIf the die shows 1, your turn total becomes 0 and your turn ends.\n\n\nIf you hold, you add your turn total to your overall score, and your turn ends.\n\nFirst player to reach 100 or more wins.\n\nYou can start with a smaller target (e.g. 30) if 100 feels long in class."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-pig-dice.html#learning-objectives",
-    "href": "cs_2026/notes/cs2026-pig-dice.html#learning-objectives",
-    "title": "Venu GVGK Raju",
-    "section": "3. Learning objectives",
-    "text": "3. Learning objectives\nBy the end of the class, students should be able to:\n\nRepresent scores and turn totals with variables.\n\nUse a loop to alternate turns between player and computer.\n\nUse if/elif/else to implement the Pig rules.\n\nReflect on how risk (rolling again) compares to safety (holding)."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-pig-dice.html#class-flow-with-timings",
-    "href": "cs_2026/notes/cs2026-pig-dice.html#class-flow-with-timings",
-    "title": "Venu GVGK Raju",
-    "section": "4. Class flow (with timings)",
-    "text": "4. Class flow (with timings)\n\nA. Warm‑up: manual Pig (10 minutes)\n\nPlay a quick manual version on the board with one volunteer as the player and you as the die.\n\nKeep track of:\n\nTurn total.\n\nOverall score.\n\n\nAfter a few turns, ask:\n\n“When should you stop rolling?”\n\n“What happens if you are greedy and keep rolling?”\n\n\nThis sets up the idea of risk vs reward without formal probability.\n\n\n\nB. Representing a single turn in Python (15 minutes)\nGoal: code just one player turn.\n\nStart from your existing dice simulator idea:\nimport random\nroll = random.randint(1, 6)\nprint(\"You rolled:\", roll)\nIntroduce a turn total:\nimport random\n\nturn_total = 0\n\nwhile True:\n    roll = random.randint(1, 6)\n    print(\"You rolled:\", roll)\n\n    if roll == 1:\n        print(\"You lose the turn. Turn total is 0.\")\n        turn_total = 0\n        break\n    else:\n        turn_total = turn_total + roll\n        print(\"Turn total:\", turn_total)\n\n        choice = input(\"Roll again or hold? (r/h): \").strip().lower()\n        if choice == \"h\":\n            print(\"You hold with\", turn_total, \"points.\")\n            break\nExplain:\n\n\nturn_total starts at 0 and only increases on safe rolls.\n\nRolling a 1 resets the turn total and ends the loop.\n\n“Hold” ends the loop but keeps the turn total for later.\n\nThis segment focuses heavily on loops, conditionals, and input, just as your earlier game sessions did.\n\n\nC. Adding overall scores and alternating turns (20 minutes)\nGoal: full game with player vs computer.\n\nIntroduce overall scores:\nplayer_score = 0\ncomputer_score = 0\ntarget = 30  # or 100 later\nWrap the turn logic in a higher‑level loop that alternates turns:\n\nPlayer’s turn: use the turn logic above with input.\n\nAfter holding, add turn_total to player_score.\n\nIf player_score &gt;= target, player wins.\n\nComputer’s turn: use a simple strategy (for example, roll until turn_total reaches 10, then hold).\n\nOutline the structure on the board:\nwhile player_score &lt; target and computer_score &lt; target:\n    # Player's turn\n    # Computer's turn\nLet students see how the same pattern repeats: each turn uses a while True loop embedded inside a larger game loop.\n\nYou can keep the code partially written on the board and fill gaps with student suggestions.\n\n\nD. Strategy and fairness discussion (10 minutes)\nAsk questions that connect to your fairness and simulation theme:\n\n“Is the computer’s strategy smart or silly?”\n\n“What happens if the computer always holds after the first safe roll?”\n\n“Could we use simulation later to test different Pig strategies?”\n\nRelate this back to your dice roll simulator sessions: you used randomness to see typical outcomes; here you’re using randomness plus decisions to see how strategies matter."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-pig-dice.html#suggested-questions-and-prompts",
-    "href": "cs_2026/notes/cs2026-pig-dice.html#suggested-questions-and-prompts",
-    "title": "Venu GVGK Raju",
-    "section": "5. Suggested questions and prompts",
-    "text": "5. Suggested questions and prompts\nDuring the lesson, you can use prompts like:\n\n“What variables do we need in this game?” (turn total, player score, computer score, target).\n\n“Which conditions end the player’s turn?” (rolling 1, choosing hold).\n\n“Which conditions end the whole game?” (score reaching or passing target).\n\n“What simple strategy can we give the computer?” (e.g., roll until turn total ≥ 10).\n\nThese encourage students to think computationally about game rules and states, reinforcing skills from your earlier tic‑tac‑toe and guessing game sessions."
-  },
-  {
-    "objectID": "cs_2026/notes/cs2026-pig-dice.html#optional-extension-homework",
-    "href": "cs_2026/notes/cs2026-pig-dice.html#optional-extension-homework",
-    "title": "Venu GVGK Raju",
-    "section": "6. Optional extension / homework",
-    "text": "6. Optional extension / homework\nIf you want a small follow‑up task:\n\nAsk each student to write down a strategy for the computer in plain language, such as:\n\n“Roll until turn total reaches 12 then hold.”\n\n“Stop rolling if computer’s score is already ahead by more than 15 points.”\n\n\nNext class, they implement their strategy in code and compare which strategy seems better over many games."
-  },
-  {
-    "objectID": "cs_2026/session4.5.html",
-    "href": "cs_2026/session4.5.html",
-    "title": "Deeper Exploration - Coin weighing",
-    "section": "",
-    "text": "Coin weighing problems are a compact way to teach decision trees, information-theoretic lower bounds, divide-and-conquer, and adversarial reasoning in an algorithms course. A balance scale is especially useful pedagogically because each weighing has three possible outcomes—left pan heavier, right pan heavier, or balance - which naturally leads to ternary branching in the search tree."
-  },
-  {
-    "objectID": "cs_2026/session4.5.html#learning-goals",
-    "href": "cs_2026/session4.5.html#learning-goals",
-    "title": "Deeper Exploration - Coin weighing",
     "section": "Learning goals",
-    "text": "Learning goals\nBy the end of this note, students should be able to:\n\nmodel a weighing strategy as a decision tree\nderive upper and lower bounds using outcome counting\ndesign optimal strategies for simple counterfeit-coin variants\nexplain why harder variants require more careful case design\nconnect coin-weighing puzzles to group testing and adaptive algorithms"
+    "text": "Learning goals\nBy the end of the lesson, students should be able to:\n\nRepresent a small set of game choices in Python.\n\nUse if and elif to decide who wins a round.\n\nUse a loop to play many rounds.\n\nTrack scores with variables and update them correctly after each round."
   },
   {
-    "objectID": "cs_2026/session4.5.html#generic-balance-scale-tree",
-    "href": "cs_2026/session4.5.html#generic-balance-scale-tree",
-    "title": "Deeper Exploration - Coin weighing",
-    "section": "Generic balance-scale tree",
-    "text": "Generic balance-scale tree\nDivide the items into three equal sets - set 1, set 2, set 3.\n [weigh set 1 vs set 2]\n        /       |   \\\n        /       |   \\\nleft heavier    |  right heavier\n    |        Balanced   |  \nFake in set 1    |     Fake in set 2\n                 |\n            Fake in set 3\n\nRepeat recursively on the identified branch"
+    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html#class-plan",
+    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html#class-plan",
+    "title": "Venu GVGK Raju",
+    "section": "Class plan",
+    "text": "Class plan\n\n1. Starter discussion — 10 min\nBegin by asking students to explain the rules of Rock Paper Scissors in plain language. Then ask how a computer could “know” who wins, which leads naturally to rule‑based thinking and conditionals, a direction already present in your earlier game sessions.\nBoard prompt: - Rock beats scissors. - Scissors beats paper. - Paper beats rock. - Same choice means tie.\n\n\n2. Representing choices — 10 min\nStart with the idea that the computer needs a list of allowed moves. Show students a list like [\"rock\", \"paper\", \"scissors\"] and explain that this is a simple data structure storing the valid options, building on Session 9’s focus on Python data types and data structures.\nThen introduce random computer choice:\nimport random\nchoices = [\"rock\", \"paper\", \"scissors\"]\ncomputer_choice = random.choice(choices)\nprint(computer_choice)\nThis also connects nicely to your recent simulation lessons using randomness.\n\n\n3. Deciding the winner — 15 min\nAsk students to first solve one round without a loop. Let them imagine: - user chooses \"rock\" - computer chooses \"scissors\"\nThen build the logic step by step:\nif user_choice == computer_choice:\n    print(\"It's a tie.\")\nelif (\n    (user_choice == \"rock\" and computer_choice == \"scissors\")\n    or (user_choice == \"paper\" and computer_choice == \"rock\")\n    or (user_choice == \"scissors\" and computer_choice == \"paper\")\n):\n    print(\"You win this round.\")\nelse:\n    print(\"Computer wins this round.\")\nThis is a strong lesson in combining conditions clearly and carefully.\n\n\n4. Playing many rounds — 15 min\nNext, show how a game becomes more interesting when repeated. Introduce score variables and a loop so the game continues until the user types \"quit\".\nKey ideas to emphasise: - while True: keeps the game running. - Invalid input should be handled with a condition before continuing. - Scores change only when someone wins the round.\n\n\n5. Pair activity — 5 min\nHave students work in pairs and modify one part of the game:\n\nAdd “best of 5” instead of unlimited rounds.\nPrint “Round 1”, “Round 2”, and so on.\nChange the final message depending on who has the higher score.\n\nThis gives quick success and encourages code reading as well as code writing.\n\n\n6. Wrap‑up — 5 min\nClose with two questions: - Which part of the game was easiest for Python? - Which part needed the most careful thinking?\nPoint out that the important computer science idea is not the game itself, but translating everyday rules into exact logic, which is the same skill used in your earlier tic‑tac‑toe and simulation lessons."
   },
   {
-    "objectID": "cs_2026/session4.5.html#problem-1-3-coins-fake-known-heavier",
-    "href": "cs_2026/session4.5.html#problem-1-3-coins-fake-known-heavier",
-    "title": "Deeper Exploration - Coin weighing",
-    "section": "Problem 1: 3 coins, fake known heavier",
-    "text": "Problem 1: 3 coins, fake known heavier\n\nStatement\nThere are 3 coins, exactly one counterfeit coin, and the counterfeit is known to be heavier. Find it in 1 weighing.\n\n\nWorked solution\nWeigh coin 1 against coin 2. If the left side is heavier, coin 1 is fake; if the right side is heavier, coin 2 is fake; if the scale balances, coin 3 is fake.\n\n\nDecision tree\n    [Weigh 1 vs 2]\n       / |  \\\n       / |  \\\n      L  B   R\n     /   |    \\\n coin 1  |   Coin 3 fake\n Fake    |\n       Coin 2\n       Fake\n\n\n\nTeaching point\nThis is the smallest example showing that one weighing can distinguish among three possibilities. It is the cleanest entry point to the idea that the branching factor, not just the act of comparison, matters algorithmically."
+    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html#suggested-classroom-code",
+    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html#suggested-classroom-code",
+    "title": "Venu GVGK Raju",
+    "section": "Suggested classroom code",
+    "text": "Suggested classroom code\nThis version is ready to run and includes: - valid choices stored in a list, - computer choice using randomness, - repeated rounds with a loop, - input checking, - scorekeeping and final result.\nimport random\n\nchoices = [\"rock\", \"paper\", \"scissors\"]\nuser_score = 0\ncomputer_score = 0\nround_number = 1\n\nprint(\"Rock Paper Scissors\")\nprint(\"Type rock, paper, or scissors. Type quit to stop.\")\n\nwhile True:\n    print()\n    print(f\"Round {round_number}\")\n    user_choice = input(\"Your choice: \").strip().lower()\n\n    if user_choice == \"quit\":\n        break\n\n    if user_choice not in choices:\n        print(\"Invalid choice. Please type rock, paper, or scissors.\")\n        continue\n\n    computer_choice = random.choice(choices)\n    print(\"Computer chose:\", computer_choice)\n\n    if user_choice == computer_choice:\n        print(\"It's a tie.\")\n    elif (\n        (user_choice == \"rock\" and computer_choice == \"scissors\")\n        or (user_choice == \"paper\" and computer_choice == \"rock\")\n        or (user_choice == \"scissors\" and computer_choice == \"paper\")\n    ):\n        print(\"You win this round.\")\n        user_score += 1\n    else:\n        print(\"Computer wins this round.\")\n        computer_score += 1\n\n    print(\"Score:\", user_score, \"-\", computer_score)\n    round_number += 1\n\nprint()\nprint(\"Final score:\", user_score, \"-\", computer_score)\nif user_score &gt; computer_score:\n    print(\"You won the game.\")\nelif computer_score &gt; user_score:\n    print(\"Computer won the game.\")\nelse:\n    print(\"The game ended in a tie.\")"
   },
   {
-    "objectID": "cs_2026/session4.5.html#problem-2-9-coins-fake-known-heavier",
-    "href": "cs_2026/session4.5.html#problem-2-9-coins-fake-known-heavier",
-    "title": "Deeper Exploration - Coin weighing",
-    "section": "Problem 2: 9 coins, fake known heavier",
-    "text": "Problem 2: 9 coins, fake known heavier\n\nStatement\nThere are 9 coins, exactly one counterfeit coin, and the counterfeit is known to be heavier. Find it in 2 weighings.\n\n\nWorked solution\nPartition the coins into three groups of three: (A={1,2,3}), (B={4,5,6}), and (C={7,8,9}) . Weigh group (A) against group (B); if one side is heavier, the fake is in that heavier group, and if the scale balances, the fake is in (C) .\nNow take the suspect group of three coins and weigh one coin against another . If one side is heavier, that coin is fake; otherwise the unweighed third coin is fake .\n\n\nDecision tree\n                     [A vs B]\n                      / | \\\n                     /  |  \\\n                    /   |   \\\n                A heavy |   B heavy  \n                /       |      \\\n               /      Balanced  \\\n            Fake        |       Fake in B\n            in A      Fake in C     |  \n              |         |           |\n              |         |           |\n            [1 vs 2] [7 vs 8] [4 vs 5]\n           / | \\       / | \\       / | \\\n         1   2  3     7  8  9     4  5  6\n\n\n\nTeaching point\nThis is a direct ternary-search strategy on a decision tree of depth 2 . It also illustrates why equal-sized partitions are algorithmically natural when all three outcomes should be as informative as possible ."
+    "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html#easy-extensions",
+    "href": "cs_2026/notes/cs2026-rock-paper-scissors.html#easy-extensions",
+    "title": "Venu GVGK Raju",
+    "section": "Easy extensions",
+    "text": "Easy extensions\nFor the next class, students could try one of these:\n\nKeep a list of all user moves and count how many times each move was played.\n\nMake the game stop automatically after 5 rounds.\n\nAdd a rule where the computer prints a comment such as “Good move” or “Try again.”\n\nTurn the result of many rounds into a small bar chart later, which would connect well to your planned visualisation unit.\n\nWould you like a second version of the code that is shorter and simpler for beginners, or a slightly more advanced version that uses functions?"
   },
   {
-    "objectID": "cs_2026/session4.5.html#problem-3-27-coins-in-3-weighings",
-    "href": "cs_2026/session4.5.html#problem-3-27-coins-in-3-weighings",
-    "title": "Deeper Exploration - Coin weighing",
-    "section": "Problem 3: 27 coins in 3 weighings",
-    "text": "Problem 3: 27 coins in 3 weighings\n\nStatement\nSuppose the counterfeit coin is known to be heavier. How many coins can be handled in 3 weighings, and what strategy achieves it?\n\n\nWorked solution\nSince each weighing has three outcomes, 3 weighings can distinguish at most (3^3=27) possibilities . Because each coin corresponds to exactly one possibility in the known-heavier variant, 27 coins are achievable by repeatedly splitting into three equal groups and recursing on the identified branch .\n\n\nRecursive tree\nLevel 0: 27 coins\n |\n +-- weigh 9 vs 9\n |\n +-- one branch contains 9 candidates\n |\n +-- weigh 3 vs 3\n |\n +-- one branch contains 3 candidates\n |\n +-- weigh 1 vs 1\n |\n +-- identify the coin\n\n\nTeaching point\nThis is the best place to formalize the expression (3^k) and connect it to optimality . Students usually see here that algorithm design and lower-bound reasoning can emerge from the same tree representation ."
-  },
-  {
-    "objectID": "cs_2026/session4.5.html#problem-4-12-coins-fake-may-be-heavier-or-lighter",
-    "href": "cs_2026/session4.5.html#problem-4-12-coins-fake-may-be-heavier-or-lighter",
-    "title": "Deeper Exploration - Coin weighing",
-    "section": "Problem 4: 12 coins, fake may be heavier or lighter",
-    "text": "Problem 4: 12 coins, fake may be heavier or lighter\n\nStatement\nThere are 12 coins, exactly one counterfeit coin, and the counterfeit may be either heavier or lighter. Find it in 3 weighings.\n\n\nWhy this is harder\nEach candidate coin now has two hidden states—heavy or light—so the number of possibilities is (12*2 = 24) . Since 3 weighings yield at most (3^3 = 27) outcomes, the counting bound says the problem might be solvable, but a valid strategy must identify both the coin and the direction of deviation .\n[ 2n ^k ]\n\n\nFirst weighing\nWeigh coins (1,2,3,4) against coins (5,6,7,8) . This creates three major cases: left heavier, balanced, or right heavier .\n [1,2,3,4 vs 5,6,7,8]\n / | \\\n / | \\\n left heavier balanced right heavier\n\n\nBalanced branch worked out\nIf the first weighing balances, then all coins 1 through 8 are genuine, so the fake must be among (9,10,11,12) . Use coins 1, 2, and 3 as known-good references and weigh (9,10,11) against (1,2,3) .\n\nIf the left side is heavier, one of 9, 10, or 11 is heavy .\nIf the left side is lighter, one of 9, 10, or 11 is light .\nIf the scale balances, coin 12 is counterfeit .\n\nFor the first two subcases, weigh 9 against 10 . If one side behaves consistently with the branch assumption, that coin is identified; if they balance, coin 11 is the counterfeit with the corresponding heavy/light status . If the second weighing balanced, the third weighing can compare coin 12 with a known-good coin to determine whether it is heavy or light .\n\n\nDecision tree for the balanced branch\n first weighing balanced\n |\n fake in {9,10,11,12}\n |\n [9,10,11 vs 1,2,3]\n / | \\\n / | \\\n one of 9,10,11 coin 12 one of 9,10,11\n heavy light\n | |\n [9 vs 10] [9 vs 10]\n\n\nUnbalanced branches\nIf the first weighing is unbalanced, the suspect set lies among coins 1 through 8, but with directional constraints: for example, if the left side is heavier, then one of coins 1 through 4 could be heavy or one of coins 5 through 8 could be light . Standard solutions choose a second weighing that mixes coins from both sides plus a known reference pattern so that each outcome narrows the cases to at most three possibilities before the final weighing .\nA representative second weighing used in published treatments is to compare a mixed subset such as (1,2,5) against (3,6,9), where coin 9 serves as a known-good coin in the relevant branch structure . The final weighing then resolves the remaining ambiguity among the small candidate set .\n\n\nTeaching point\nThis problem is ideal for showing that counting bounds are necessary but not sufficient: a strategy must also preserve enough structure to decode every outcome correctly . It is also the first point where students see the difference between a brute-force case table and a carefully designed adaptive algorithm ."
-  },
-  {
-    "objectID": "cs_2026/session4.5.html#problem-5-general-bound-for-one-unknown-counterfeit",
-    "href": "cs_2026/session4.5.html#problem-5-general-bound-for-one-unknown-counterfeit",
-    "title": "Deeper Exploration - Coin weighing",
-    "section": "Problem 5: general bound for one unknown counterfeit",
-    "text": "Problem 5: general bound for one unknown counterfeit\n\nStatement\nSuppose there are (n) coins and exactly one counterfeit coin that may be either heavier or lighter. What upper bound does the outcome count impose on solvability in (k) weighings?\n\n\nWorked solution\nThe counterfeit coin can be any one of (n) coins and can be in one of two states, so there are (2n) possibilities . Since at most (3^k) outcomes can be distinguished with (k) weighings, the necessary condition is (2n ^k), or equivalently (n ^k/2) .\n\n\nValues for small (k)\n\n\n\n\n\n\n\n\nWeighings (k)\nOutcome bound (3^k)\nMaximum possible (n) from (2n ^k)\n\n\n\n\n1\n3\n1\n\n\n2\n9\n4\n\n\n3\n27\n13 by counting, with 12 as the classic achievable case\n\n\n4\n81\n40 by counting\n\n\n\n\n\nTeaching point\nThis theorem turns the puzzle into a reusable lower-bound template . It also prepares students to ask the more algorithmic question: when is a counting bound tight, and when does the structure of the problem waste some theoretical outcomes ."
-  },
-  {
-    "objectID": "cs_2026/session4.5.html#problem-6-multiple-counterfeit-coins",
-    "href": "cs_2026/session4.5.html#problem-6-multiple-counterfeit-coins",
-    "title": "Deeper Exploration - Coin weighing",
-    "section": "Problem 6: multiple counterfeit coins",
-    "text": "Problem 6: multiple counterfeit coins\n\nStatement\nHow does the problem change if there may be multiple counterfeit coins rather than exactly one?\n\n\nDiscussion\nWith multiple counterfeit coins, the task shifts from locating one exceptional item to identifying a subset, which makes the problem closer to group testing . Research on spring-scale and generalized counterfeit-coin models studies adaptive algorithms, deterministic bounds, and more efficient recovery of the defective set than naive one-by-one testing .\n\n\nTeaching point\nThis extension is useful near the end of the lecture because it links a familiar puzzle to live algorithmic research questions . It also broadens the conceptual bridge to compressed sensing, testing under uncertainty, and sparse recovery ."
-  },
-  {
-    "objectID": "cs_2026/session2.html",
-    "href": "cs_2026/session2.html",
-    "title": "Session 2 Pouring; guessing letters and numbers",
+    "objectID": "cs_2026/notes/notes.html",
+    "href": "cs_2026/notes/notes.html",
+    "title": "Venu’s notes",
     "section": "",
-    "text": "We started session 2 with a pouring problem. We had a 3 litre jug and a 5 litre jug, and we needed to measure out various amounts of water. We started with the simple one - how to measure 2 liters. Then we we went and asked how to measure 4 liters, and 1 liter.\nAfter this we asked if we can measure any quantity of water using only these two jugs and a larger vessel.\nWe followed it up with trying to understand this parlor trick/game. You guess a number and from the table below, if you can tell me which column your number is present, I can tell you what that number is.\n\n\n\nColumn 1\nColumn 2\nColumn 3\nColumn 4\n\n\n\n\n8\n4\n2\n1\n\n\n9\n5\n3\n3\n\n\n10\n6\n6\n5\n\n\n11\n7\n7\n7\n\n\n12\n12\n10\n9\n\n\n13\n13\n11\n11\n\n\n14\n14\n14\n13\n\n\n15\n15\n15\n15\n\n\n\nWe then looked at the problem of how to guess a specific letter someone has in mind in the least possible number of guesses. We came up with the strategy of asking if the letter is in the first half of the alphabet, and then narrowing it down based on the answer. Each question we ask halves the number of possibilities, and we can find the letter in at most 5 questions.\nWe started making the decision tree and completing it was given as homework."
+    "text": "session 7 - computer guesses the number - binary search in operation session 8 - prime numbers in a range - is_prime(n) and primes_in_range(start, end) session 9 - coin toss simulator - random.randint(0, 1) and fractions of heads and tails session 10 - two-dice-sum game\n\nAll factors of a number\nPerfect numbers and abundant/deficient numbers\nPrime factors of a number\nDigit sum and divisibility checks (e.g., check if a number is divisible by 3, 9, or 11 using digit patterns)\nBase conversions in a constrained way (e.g., convert numbers between base 10 and base 2 for small values)\nPolygon angle checker: given number of sides n, compute interior angle sum and compare it with a claimed sum.\nWORDLE??\nReverse and palindrome checker\n\nWith coin toss expectation is that we will reach 50:50 over a large number of tosses.\nWith dice toss, the expectation is - each number (1-6) should appear with equal frequency over a large number of rolls.\nWhen you toss two dice, what happens?\n2,3,4,5,6,7,8,9,10,11,12\n2 - 1 way (1,1) 3 - 2 ways (1,2), (2,1) 4 - 3 ways (1,3), (2,2), (3,1) 5 - 4 ways (1,4), (2,3), (3,2), (4,1) 6 - 5 ways (1,5), (2,4), (3,3), (4,2), (5,1) 7 - 6 ways (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) 8 - 5 ways (2,6), (3,5), (4,4 ), (5,3), (6,2) 9 - 4 ways (3,6), (4,5), (5,4), (6,3) 10 - 3 ways (4,6), (5,5), (6,4) 11 - 2 ways (5,6), (6,5)\n12 - 1 way (6,6)\nRelative frequencies of sums of two dice: - 2 - 1/36\n- 3 - 2/36 - 4 - 3/36 - 5 - 4/36 - 6 - 5/36\n- 7 - 6/36 - 8 - 5/36 - 9 - 4/36 - 10 - 3/36 - 11 - 2/36 - 12 - 1/36"
+  },
+  {
+    "objectID": "cs_2026/session4.html",
+    "href": "cs_2026/session4.html",
+    "title": "Session 4 How many questions? Search Algorithms",
+    "section": "",
+    "text": "Problem: Guess a letter A–Z using yes/no questions; why is 5 questions the minimum, not 4 or 6?\nGeneralisation: If the answer is between 1 and 100, 1 and 1000, or 1 and (n), how many yes/no questions are needed?"
+  },
+  {
+    "objectID": "cs_2026/session4.html#linear-search-vs-binary-search",
+    "href": "cs_2026/session4.html#linear-search-vs-binary-search",
+    "title": "Session 4 How many questions? Search Algorithms",
+    "section": "Linear Search vs Binary Search",
+    "text": "Linear Search vs Binary Search\n\nLinear (simple) search: Check each option one by one: “Is it A? Is it B? Is it C?” etc.\nFor 26 letters, worst case is 26 questions; for 100 items, worst case is 100 questions.\nBinary search: Each question halves the remaining possibilities (decision tree: 1–50, then 1–25, 1–12, 1–6, 1–3, 1–2, etc.).\nFor 100 items, worst case is 7 questions (because (2^7 = 128), which is the first power of 2 ≥ 100)."
+  },
+  {
+    "objectID": "cs_2026/session4.html#powers-of-two-and-log-time",
+    "href": "cs_2026/session4.html#powers-of-two-and-log-time",
+    "title": "Session 4 How many questions? Search Algorithms",
+    "section": "Powers of Two and “Log Time”",
+    "text": "Powers of Two and “Log Time”\n\nPattern:\n1 question → up to (2^1 = 2) items\n2 questions → up to (2^2 = 4) items\n3 questions → up to (2^3 = 8) items\nIn general: (n) questions → up to (2^n) items.\nInverse view: For a given number of items, questions needed ≈ log base 2 of (number of items).\nLog definition: If (x^n = m), then (_x m = n).\nExample: (2^3 = 8 2 8 = 3); (10^2 = 100 {10}100 = 2).\nBinary search runs in logarithmic time: number of questions grows slowly even when items grow a lot (e.g. 1000 items need 9 questions, 10,000 need 14)."
+  },
+  {
+    "objectID": "cs_2026/session4.html#when-binary-search-works-and-when-it-doesnt",
+    "href": "cs_2026/session4.html#when-binary-search-works-and-when-it-doesnt",
+    "title": "Session 4 How many questions? Search Algorithms",
+    "section": "When Binary Search Works (and When It Doesn’t)",
+    "text": "When Binary Search Works (and When It Doesn’t)\n\nBinary search only works on sorted (ordered) lists (e.g. numbers in increasing order, names in alphabetical order).\nIf data is unsorted (like ), you must either:\nUse linear search, or\nFirst sort the data, then use binary search.\nSearching is a very common and expensive operation in computing (e.g. Facebook finding your username among millions/billions quickly).\nBecause of this, sorting becomes a key problem in computer science: given items, arrange them into a sorted order."
+  },
+  {
+    "objectID": "cs_2026/session4.html#pouring-problem-jug-problem",
+    "href": "cs_2026/session4.html#pouring-problem-jug-problem",
+    "title": "Session 4 How many questions? Search Algorithms",
+    "section": "Pouring Problem (Jug Problem)",
+    "text": "Pouring Problem (Jug Problem)\n\nSetup: One 5‑litre jug and one 3‑litre jug; you must measure specific amounts of water (e.g. 2L, 4L, 1L).\nExample solutions:\nTo get 2L: Fill 5L, pour 3L into the 3L jug, 2L remains in the 5L jug.\nTo get 4L efficiently: Use a smarter sequence of pours (e.g. use the 3L jug twice so only two measurements are needed).\nKey idea: There can be many algorithms (step sequences) to solve the same problem; we care about the one with fewest operations."
+  },
+  {
+    "objectID": "cs_2026/session4.html#coin-weighing-ternary-search-idea",
+    "href": "cs_2026/session4.html#coin-weighing-ternary-search-idea",
+    "title": "Session 4 How many questions? Search Algorithms",
+    "section": "Coin Weighing (Ternary Search Idea)",
+    "text": "Coin Weighing (Ternary Search Idea)\n\nSetup: 3 coins, one fake coin which is lighter, and a balance scale that only tells which side is heavier or if they’re equal.\nThis gives 3 outcomes per weighing: left heavier, right heavier, or equal.\nWith 3 coins and 1 lighter fake coin:\nWeigh two coins once; from the result (heavier, lighter, equal), you can identify the fake in just 1 weighing.\nExtended problem: 9 coins, 1 lighter fake coin:\nNaive strategy (pairwise weighing) can take up to 4 weighings.\nBetter strategy:\nPut 3 coins vs 3 coins, keep 3 aside (ternary split).\nOne weighing narrows you to 3 suspect coins; second weighing finds the fake.\nSo 9 coins can be solved in 2 weighings.\nGeneral pattern:\n1 weighing → handle 3 coins\n2 weighings → handle (3^2 = 9) coins\n3 weighings → handle (3^3 = 27) coins, by repeating the same splitting into groups of three.\nThis idea is like a ternary search (splitting into 3 parts), while binary search splits into 2."
+  },
+  {
+    "objectID": "cs_2026/session4.html#what-is-an-algorithm",
+    "href": "cs_2026/session4.html#what-is-an-algorithm",
+    "title": "Session 4 How many questions? Search Algorithms",
+    "section": "What Is an Algorithm?",
+    "text": "What Is an Algorithm?\n\nAn algorithm is a precise sequence of steps to solve a problem; it is not tied to any specific computer or programming language.\nEach action (question asked, pour done, weighing performed, comparison made) counts as one operation and takes time.\nTypical development flow:\nAlgorithm (high‑level idea).\nPseudocode (steps written in simple, computer‑like language).\nActual program (e.g. C printf(...) or Python print(...)).\nModern AIs can often write code, but you still need the algorithm and reasoning, especially for new or unfamiliar problems."
+  },
+  {
+    "objectID": "cs_2026/session4.html#why-math-logs-exponents-matters",
+    "href": "cs_2026/session4.html#why-math-logs-exponents-matters",
+    "title": "Session 4 How many questions? Search Algorithms",
+    "section": "Why Math (Logs, Exponents) Matters",
+    "text": "Why Math (Logs, Exponents) Matters\n\nUnderstanding exponents and logarithms is important because many algorithms, like binary search, are described and analysed using these ideas.\nLogs convert exponential growth (like (2^n)) into a manageable linear scale ((n)), which helps in thinking about efficiency."
+  },
+  {
+    "objectID": "cs_2026/session12.html",
+    "href": "cs_2026/session12.html",
+    "title": "Session 12 Two Dice Roll and Plot",
+    "section": "",
+    "text": "In this session, we discussed student generated programs to simulate rolling two dice and counting the sums of the two dice. The beginner friendly approach taken by the students involved starting twelve counters for each possible sum (2-12) and incrementing the appropriate counter based on the sum of the two dice.\nWe also thought about how to visualise the results of the simulation. We discussed the following program that uses lists and dictionaries to store the sums and their frequencies. The program also uses matplotlib to plot the results.\nimport random\nimport matplotlib.pyplot as plt\n\nNUM_TRIALS = 216\n\n# Simulate 216 tosses of two dice and record the sum for each toss.\nsums = []\nfor _ in range(NUM_TRIALS):\n    die1 = random.randint(1, 6)\n    die2 = random.randint(1, 6)\n    sums.append(die1 + die2)\n\n\n# Count the frequency of each possible sum from 2 to 12.\nsum_counts = {total: 0 for total in range(2, 13)}\nfor total in sums:\n    sum_counts[total] += 1\n\n# Prepare data for plotting.\nvalues = list(sum_counts.keys())\nfrequencies = [sum_counts[total] for total in values]\n\nplt.figure(figsize=(8, 5))\nplt.plot(values, frequencies, marker=\"o\", color=\"skyblue\", linewidth=2)\nplt.title(f\"Frequency of Two-Dice Sums over {NUM_TRIALS} Tosses\")\nplt.xlabel(\"Sum of two dice\")\nplt.ylabel(\"Frequency\")\nplt.xticks(values)\nplt.grid(axis=\"y\", linestyle=\"--\", alpha=0.5)\nplt.tight_layout()\n\n# Optionally show the plot and save it.\nplt.show()"
+  },
+  {
+    "objectID": "cs_2026/session6.html",
+    "href": "cs_2026/session6.html",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "",
+    "text": "Discussed how a computer program “thinks” using two example programs:\n\nA “What is your name?” greeting program with special responses.\nA number-guessing game where the computer chooses a number and the human guesses.\n\nIdentified three core ideas behind most programs:\n\nData and data structures\n\nLoops (repetition)\n\nConditionals (decisions)\n\nLooked at actual Python-style code for the greeting program and the idea of pseudocode.\nRevised insertion sort, including best case and worst case (upper and lower bounds).\nReviewed homework on base 5, 7, 8 and recalled earlier topics (binary, sum of natural numbers, selection sort)."
+  },
+  {
+    "objectID": "cs_2026/session6.html#greeting-program-what-is-your-name",
+    "href": "cs_2026/session6.html#greeting-program-what-is-your-name",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Greeting program: “What is your name?”",
+    "text": "Greeting program: “What is your name?”\nWe analysed a program that repeatedly:\n\nAsks: Hello, what is your name?\n\nWaits for the user to type a name (input).\n\nResponds differently depending on the name:\n\n\nIf the name is Venu\n\nPrint: Good morning, sir. How are you today?\n\nIf the name is in a special list (for example: Abhi, Akshay, Anusha, Sam) and this is the first time that name appears\n\nPrint: Oh, you are that idiot. Good meeting you.\n\nIf the name is in that list and has already appeared before\n\nPrint: We have already met.\n\nIf the name is not in the list at all\n\nPrint a message like:\nI know there are only five of you in this class. Choose from this list: ...\n\n\nFrom this behaviour, we listed what the computer needs:\n\nThe exact question text to display: \"Hello, what is your name?\"\nA way to store the fixed list of “valid” names.\nA way to store names that have already been entered (for repeat detection).\nA way to:\n\nRead user input.\nCompare that input against:\n\nThe original list of allowed names.\nThe set of names already seen.\n\n\nA way to decide which response to print based on the comparisons.\nA loop that keeps asking for names (no explicit “exit” in this version).\n\nWe also noticed:\n\nThe program is case sensitive: Abhi is not the same as abhi unless we explicitly convert or check both forms.\nThe repeating pattern is: ask → read → compare → decide → repeat.\n\n\nSketch of Python-like code\nHere is a simplified version of this program.\nmet_people = set()  # empty set\n\nwhile True:\n    name = input(\"Hello, what is your name? \")\n\n    if name == \"Venu\":\n        print(\"Good morning, sir. How are you today?\")\n\n    elif name in [\"Abhi\", \"Akshay\", \"Anusha\", \"Sam\"]:\n        if name in met_people:\n            print(\"We have already met.\")\n        else:\n            print(\"Oh, you are that idiot. Good meeting you.\")\n            met_people.add(name)\n\n    else:\n        print(\"I know there are only five of you in this class.\")\n        print(\"Choose from: Abhi, Akshay, Anusha, Sam\")\nKey observations:\n\nmet_people = set() defines a data structure (a set) to remember names we have already seen.\nwhile True: creates an infinite loop.\nif, elif, else are the conditional branches where decisions are made.\nname == \"Venu\" uses == for comparison, whereas name = \"Venu\" would be assignment."
+  },
+  {
+    "objectID": "cs_2026/session6.html#number-guessing-game-computer-chooses-you-guess",
+    "href": "cs_2026/session6.html#number-guessing-game-computer-chooses-you-guess",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Number guessing game (computer chooses, you guess)",
+    "text": "Number guessing game (computer chooses, you guess)\nThe second example was a guessing game where:\n\nThe computer chooses a secret number in a given range (for example 1 to 100).\nThe player repeatedly guesses the number.\nEach time, the computer answers:\n\n“Too high”\n“Too low”\n“Correct”\n\n\nThe game continues until the player guesses correctly.\nThe computer must be able to:\n\nKnow the range of allowed numbers (for example 1–100).\nChoose a random number in that range and store it.\nPrompt the user to enter guesses, e.g., \"Please guess the number:\".\nRead each guess from the user (input).\nCompare each guess with the secret number.\nBased on the comparison:\n\nIf guess &gt; secret: print \"Too high\".\nIf guess &lt; secret: print \"Too low\".\nIf guess == secret: print a success message and stop the game.\n\nKeep prompting for a guess while guesses are wrong, and to stop when the correct guess is made.\n\nA Python-style code:\nimport random\n\nsecret = random.randint(1, 100)\n\nwhile True:\n    guess = int(input(\"Guess the number between 1 and 100: \"))\n\n    if guess &gt; secret:\n        print(\"Too high\")\n    elif guess &lt; secret:\n        print(\"Too low\")\n    else:\n        print(\"Correct! You won.\")\n        break"
+  },
+  {
+    "objectID": "cs_2026/session6.html#data-and-data-structures",
+    "href": "cs_2026/session6.html#data-and-data-structures",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Data and data structures",
+    "text": "Data and data structures\n\nA data structure is a particular way of organizing and storing data so that we can use it efficiently.\nExamples from class:\n\nThe list of allowed names ([\"Abhi\", \"Akshay\", ...]) is a data structure.\nThe set met_people is another data structure, used to store names we have already seen.\nIn the number guessing game, the secret number is stored in a variable; the range 1–100 is the domain from which it is chosen.\n\nPrograms must handle different kinds of data:\n\nText (strings) such as names.\nWhole numbers (integers).\nPossibly decimal numbers (floating point).\nCollections of values (lists, sets, arrays, etc.).\n\n\nUnderstanding data structures is a major part of computer science because:\n\nThe “shape” of the data often suggests the most efficient way to process it.\nDifferent data structures are better or worse for different operations (searching, insertion, deletion, etc.)."
+  },
+  {
+    "objectID": "cs_2026/session6.html#loops-repetition",
+    "href": "cs_2026/session6.html#loops-repetition",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Loops (repetition)",
+    "text": "Loops (repetition)\n\nA loop is a construct that repeats a block of code until some stopping condition is met.\nIn the greeting program:\n\nwhile True: repeats forever, asking for a name and responding.\n\nIn the guessing game:\n\nwhile True: repeats until break is reached when the user guesses correctly.\n\nEveryday analogy:\n\nEating:\n\n“Take a bite” is the repeated action.\nYou keep doing it until a condition:\n\nYou feel full,\nTime is up,\nOr food runs out.\n\n\n\n\nIn code, common loop forms include:\n\nwhile condition:\nfor item in collection:"
+  },
+  {
+    "objectID": "cs_2026/session6.html#conditionals-decisions",
+    "href": "cs_2026/session6.html#conditionals-decisions",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Conditionals (decisions)",
+    "text": "Conditionals (decisions)\n\nA conditional is a decision point where the program checks a condition and chooses what to do next.\nIn Python, typical syntax:\n\nif condition1:\n    # do something\nelif condition2:\n    # do something else\nelse:\n    # default choice\n\nIn the greeting program:\n\nIf the name is exactly \"Venu\" → special greeting.\nElse if the name is in the list of known students:\n\nIf also in met_people → “We have already met.”\nElse → “Oh, you are that idiot. Good meeting you.” and add to met_people.\n\nElse → “I know there are only five of you…”.\n\nIn the guessing game:\n\nIf guess &gt; secret → “Too high”.\nElse if guess &lt; secret → “Too low”.\nElse → “Correct!” and exit the loop."
+  },
+  {
+    "objectID": "cs_2026/session6.html#pseudocode",
+    "href": "cs_2026/session6.html#pseudocode",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Pseudocode",
+    "text": "Pseudocode\n\nHuman-readable description of the steps involved in solving a problem.\nNot tied to a particular programming language.\nFocuses on logic, not on exact syntax.\nExample (greeting program, pseudocode style):\n\nstart with an empty set of met_people\nrepeat forever:\n    ask \"Hello, what is your name?\"\n    read name\n\n    if name is \"Venu\":\n        say special greeting\n    else if name is in the fixed list of allowed names:\n        if name is already in met_people:\n            say \"We have already met\"\n        else:\n            say first-time greeting\n            add name to met_people\n    else:\n        say \"I know there are only five of you. Choose from this list.\""
+  },
+  {
+    "objectID": "cs_2026/session6.html#actual-code-syntax",
+    "href": "cs_2026/session6.html#actual-code-syntax",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Actual code (syntax)",
+    "text": "Actual code (syntax)\n\nWritten in a specific language (e.g., Python, C, Java).\nMust use the exact syntax that the language understands.\nYou must also know the environment (e.g., how VS Code treats indentation, how to run the program, etc.).\n\nOur learning plan:\n\nFirst write clear pseudocode to capture the logic.\nThen translate pseudocode into real code slowly, learning syntax along the way.\nThis way we separate:\n\nConceptual difficulty: “What should the program do?”\nMechanical difficulty: “How do I spell it in this language?”"
+  },
+  {
+    "objectID": "cs_2026/session6.html#how-insertion-sort-works-intuitive",
+    "href": "cs_2026/session6.html#how-insertion-sort-works-intuitive",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "How insertion sort works (intuitive)",
+    "text": "How insertion sort works (intuitive)\nThink of each box as having a weight:\n\nCompare the first two boxes:\n\nPut the lighter one on the left and the heavier one on the right.\n\nTake the third box:\n\nCompare it with the lighter box first.\nDepending on the result, compare further and insert it into one of three positions:\n\nLeft of both\nBetween them\nRight of both\n\n\nFor each new box:\n\nCompare it with elements of the already sorted part (starting near the “middle” for efficiency).\nKeep comparing and shifting until you find the correct position.\n\nAt each step, you have a sorted prefix, and you insert the next item into its correct position in that prefix.\n\nThis is similar to how many people sort playing cards in their hand: the hand remains sorted, and each new card is inserted in the right place."
+  },
+  {
+    "objectID": "cs_2026/session6.html#best-case-lower-bound-on-comparisons",
+    "href": "cs_2026/session6.html#best-case-lower-bound-on-comparisons",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Best case (lower bound on comparisons)",
+    "text": "Best case (lower bound on comparisons)\nLet there be (n) items already in correct order:\n[ 1, 2, 3, , n ]\nThen:\n\nCompare 1 and 2.\nCompare 2 and 3.\nCompare 3 and 4.\n…\nCompare ((n - 1)) and (n).\n\nTotal comparisons: (n - 1).\nSo in the best case:\n\nNumber of comparisons = (n - 1).\n\nThis happens when the input is already sorted."
+  },
+  {
+    "objectID": "cs_2026/session6.html#worst-case-upper-bound-on-comparisons",
+    "href": "cs_2026/session6.html#worst-case-upper-bound-on-comparisons",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Worst case (upper bound on comparisons)",
+    "text": "Worst case (upper bound on comparisons)\nWorst case: the items are in reverse order:\n[ n, n-1, , 3, 2, 1 ]\nTo insert each item in order:\n\nFor the 2nd item: 1 comparison.\nFor the 3rd item: 2 comparisons.\nFor the 4th item: 3 comparisons.\n…\nFor the (n)-th item: (n - 1) comparisons.\n\nTotal comparisons:\n[ 1 + 2 + 3 + + (n - 1) ]\nRecall the formula for the sum of first (k) natural numbers:\n[ 1 + 2 + + k = ]\nHere (k = n - 1), so:\n[ 1 + 2 + + (n - 1) = ]\nSo in the worst case:\n\nNumber of comparisons = ().\n\nSummary for insertion sort:\n\nBest case (already sorted): (n - 1) comparisons.\nWorst case (reverse sorted): () comparisons."
+  },
+  {
+    "objectID": "cs_2026/session6.html#place-values-in-different-bases",
+    "href": "cs_2026/session6.html#place-values-in-different-bases",
+    "title": "Session 6 Pseudocode, sample programs, program elements",
+    "section": "Place values in different bases",
+    "text": "Place values in different bases\n\nBase 5: place values are\n(1, 5, 25, 125, )\nBase 7: place values are\n(1, 7, 49, 343, )\nBase 8 (octal): place values are\n(1, 8, 64, 512, )\n\nTo convert from a base-(b) representation like:\n[ (d_k d_{k-1} d_1 d_0)_b ]\nto decimal, we compute:\n[ d_0 b^0 + d_1 b^1 + d_2 b^2 + + d_k b^k ]\nStudents worked through specific examples such as converting decimal numbers like 32 and 78 into base 5, 7 and 8, and similar exercises with other numbers.\nWe also revisited:\n\nSum of natural numbers and Gauss’s formula.\nBinary representation and the idea of positional number systems.\nSelection sort (from earlier classes)."
   },
   {
     "objectID": "cs_2026/session9.html",
