@@ -1,7 +1,9 @@
 ---
-title: "CS2026 – Finding Prime Numbers in a Range"
-publish: false
+title: Session 13 Primes in Range 
+date: 2026-08-04
+page-layout: article
 ---
+We reviewed the single dice roll and two dice roll simulation programs and saw how the values can be plotted using matplotlib. We then discussed the problem of finding prime numbers in a range and how to break it down into smaller parts. 
 
 # Problem and goal
 
