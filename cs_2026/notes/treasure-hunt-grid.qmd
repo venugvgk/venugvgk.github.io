@@ -1,0 +1,180 @@
+## Treasure Hunt on a Grid
+
+**Duration:** 60 minutes  
+**Level:** Beginner Python  
+**Main skills:** lists/sets, tuples, `random`, input, loops, conditionals, functions, and coordinate reasoning.
+
+The game uses `random.randint(1, 5)` to choose the treasure’s row and column. Python’s `randint(a, b)` includes both endpoints, so every row and column from 1 through 5 can be selected. [docs.python](https://docs.python.org/3/library/random.html)
+
+## Learning objectives
+
+By the end of the lesson, students should be able to:
+
+- Represent a location using a row–column coordinate.
+- Generate a random location.
+- Use a loop to allow repeated guesses.
+- Use conditionals to check whether a guess is correct.
+- Store previous guesses in a set.
+- Break a larger problem into smaller functions.
+
+## Game rules
+
+- The treasure is hidden in a $$5 \times 5$$ grid.
+- Rows and columns are numbered 1 to 5.
+- The player has eight attempts.
+- The player enters a row and a column.
+- The program says whether the treasure was found.
+- If the guess is wrong, the program gives a directional hint.
+- The player cannot receive the treasure’s exact location unless the game ends.
+
+## Class flow
+
+### 1. Unplugged grid activity — 10 minutes
+
+Draw a $$5 \times 5$$ grid on the board and secretly mark one square as the treasure.
+
+Ask students to make guesses such as:
+
+> “Row 2, column 4.”
+
+Record the guesses on the board. Ask:
+
+- How can we describe one square precisely?
+- What two numbers are needed?
+- How can we check whether two locations are the same?
+
+Introduce the idea that a coordinate can be represented as:
+
+```python
+(row, column)
+```
+
+For example:
+
+```python
+(2, 4)
+```
+
+### 2. Generate the hidden treasure — 10 minutes
+
+Begin with:
+
+```python
+import random
+
+treasure_row = random.randint(1, 5)
+treasure_column = random.randint(1, 5)
+
+print(treasure_row, treasure_column)
+```
+
+Let students run it several times and observe that the location changes.
+
+Then ask them to predict what should happen if the program checks:
+
+```python
+if guess_row == treasure_row and guess_column == treasure_column:
+    print("You found the treasure!")
+```
+
+Explain that `and` is needed because both the row and column must be correct.
+
+### 3. One guess — 10 minutes
+
+Build a small version that accepts one guess:
+
+```python
+guess_row = int(input("Choose a row: "))
+guess_column = int(input("Choose a column: "))
+
+if guess_row == treasure_row and guess_column == treasure_column:
+    print("You found the treasure!")
+else:
+    print("Not there.")
+```
+
+Discuss why `int()` is needed: `input()` gives text, but the program needs numbers for comparison.
+
+### 4. Repeated guesses — 15 minutes
+
+Ask:
+
+> “How can we allow eight guesses without writing the same code eight times?”
+
+Introduce a `for` loop:
+
+```python
+for attempt in range(1, 9):
+    print("Attempt", attempt)
+```
+
+Then explain that a loop is useful when the number of attempts is known. A `while` loop is also useful for repeated input when the stopping condition is not known in advance. [realpython](https://realpython.com/python-while-loop/)
+
+The complete script uses both:
+
+- a `for` loop for the maximum number of attempts.
+- `while` loops to validate row and column input.
+
+### 5. Pair extension — 10 minutes
+
+Students work in pairs and modify the program in one of these ways:
+
+- Change the grid from $$5 \times 5$$ to $$10 \times 10$$.
+- Change the number of attempts.
+- Add a message saying whether the guess is above or below the treasure.
+- Keep a score: 100 points for the first attempt, 80 for the second, and so on.
+- Add a “near treasure” message if the row and column are each within 1 of the correct location.
+- Allow the player to play a second round.
+
+### 6. Reflection — 5 minutes
+
+Ask students:
+
+- What information describes a square in the grid?
+- Why does the game need two numbers?
+- Why do we use a loop?
+- Why is the treasure stored as a pair such as `(3, 5)`?
+- Which part of the program prevents invalid input?
+
+Emphasise that the game combines several ideas they have already encountered: randomness, input, conditionals, loops, and data structures.
+
+## Complete Python script
+
+The complete script is available as the **treasure_hunt_grid.py** file. It includes input validation, a $$5 \times 5$$ grid, eight attempts, previous-guess tracking, directional hints, and separate functions for each major task.
+
+The central data representation is:
+
+```python
+treasure = (treasure_row, treasure_column)
+guess = (guess_row, guess_column)
+```
+
+Previous guesses are stored in a set, so the program can detect when a student tries the same square again.
+
+A simplified version of the central game logic looks like this:
+
+```python
+for attempt in range(1, MAX_ATTEMPTS + 1):
+    guess_row = get_coordinate("Choose a row: ")
+    guess_column = get_coordinate("Choose a column: ")
+
+    guess = (guess_row, guess_column)
+
+    if guess == (treasure_row, treasure_column):
+        print("You found the treasure!")
+        return
+    else:
+        print("No treasure there.")
+```
+
+## Suggested homework
+
+Students can design their own version with a different setting:
+
+- Find a lost phone in a house.
+- Find a hidden animal in a forest.
+- Find a secret agent on a city map.
+- Find a water source on a farm.
+- Find a goal square in a maze.
+
+They should change at least three things: the grid size, the number of attempts, and the messages or hints.

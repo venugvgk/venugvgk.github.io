@@ -159,4 +159,3 @@ For the next class, students could try one of these:
 - Add a rule where the computer prints a comment such as “Good move” or “Try again.”  
 - Turn the result of many rounds into a small bar chart later, which would connect well to your planned visualisation unit.
 
-Would you like a second version of the code that is shorter and simpler for beginners, or a slightly more advanced version that uses functions?

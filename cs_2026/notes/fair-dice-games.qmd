@@ -1,0 +1,168 @@
+
+## 1. Lesson snapshot
+
+- **Title:** Designing a fair dice game  
+- **Duration:** 60 minutes  
+- **Prerequisites:** Students have seen basic Python, `random.randint`, loops, and `if` (from earlier sessions).   
+- **Core ideas:**  
+  - Use Python to simulate a money game based on dice.  
+  - Understand fairness as “average gain per game ≈ 0.”  
+  - Practice loops and conditionals while experimenting with different game rules.
+
+## 2. Learning objectives
+
+By the end of the class, students should be able to:
+
+- Write Python code to simulate a dice‑based money game many times.  
+- Compute total and average gain/loss over many games.  
+- Judge whether a game is favourable, unfavourable, or roughly fair from simulation output.  
+- Modify game rules (payoffs and conditions) and test their effect.
+
+## 3. Class flow (with timings)
+
+### A. Hook and intuition (10 minutes)
+
+- On the board, present a simple game:
+
+  - “You roll one die.  
+     If you get 6, you win ₹10.  
+     Otherwise you lose ₹2.”
+
+- Ask students:
+
+  - “Do you think you will make money or lose money if you play this game 100 times?”  
+  - Collect a few quick guesses; note that opinions differ.
+
+- Explain:  
+  - “Today we’ll use Python to test such games and try to design a game that is *fair* — neither clearly good nor clearly bad for the player.”
+
+### B. Recall: rolling a die in Python (5 minutes)
+
+- Briefly recall code from Session 11:  
+
+  ```python
+  import random
+
+  roll = random.randint(1, 6)
+  print("You rolled:", roll)
+  ```
+
+- Ask a student to explain what `random.randint(1, 6)` does in plain language.  
+- Confirm: one random integer from 1 to 6, each equally likely (for our purposes).
+
+### C. Simulate one play of the money game (10 minutes)
+
+- As a whole‑class live‑coding segment, write:
+
+  ```python
+  import random
+
+  roll = random.randint(1, 6)
+  if roll == 6:
+      change = 10   # rupees gained
+  else:
+      change = -2   # rupees lost
+
+  print("Roll:", roll)
+  print("Change in money:", change)
+  ```
+
+- Discuss:
+
+  - If roll is 6 → player gains ₹10.  
+  - Otherwise → player loses ₹2.  
+  - `change` is positive or negative depending on the outcome.
+
+- Let them run this program a few times and observe different outcomes.
+
+### D. Simulate many plays with a loop (15 minutes)
+
+- Now move from “one play” to “many plays”:
+
+  - Ask: “If we want to play 100 times, how can we make Python repeat this logic?”  
+  - Guide them to the idea of a `for` loop.
+
+- Live‑code and explain line by line:
+
+  ```python
+  import random
+
+  total_money = 0
+  num_games = 100
+
+  for i in range(num_games):
+      roll = random.randint(1, 6)
+      if roll == 6:
+          change = 10
+      else:
+          change = -2
+      total_money = total_money + change
+
+  print("After", num_games, "games, total money change:", total_money)
+
+  average_gain = total_money / num_games
+  print("Average gain per game:", average_gain)
+  ```
+
+- Key points to emphasise:
+
+  - `total_money` starts at 0 and collects all gains/losses.  
+  - The loop repeats the same game logic `num_games` times.  
+  - `average_gain` is a simple average, no advanced maths needed.
+
+- Have students run the program and note the final `total_money` and `average_gain`.  
+  - Ask: “Does the game look good or bad for the player from these numbers?”
+
+### E. Pair activity: tweak and test different games (15 minutes)
+
+- Divide students into pairs.  
+- Each pair’s task:
+
+  1. **Invent a new dice game rule**, for example:  
+     - Game 1: Win ₹5 if roll ≥ 5, lose ₹3 otherwise.  
+     - Game 2: Win ₹12 if roll is even, lose ₹6 otherwise.  
+  2. **Modify the `if` block** in the code to match their rule.  
+  3. Run the simulation with `num_games = 100`, then with `num_games = 1000`.  
+  4. Record:  
+     - Total money change.  
+     - Average gain per game.  
+     - Their conclusion: “good for player,” “bad for player,” or “roughly fair.”
+
+- Circulate and prompt thinking:
+
+  - “What happens if winning amount is very high but the chance is rare?”  
+  - “What happens if losing amount is small but happens often?”
+
+- Encourage them to try to make a **fair** game by adjusting win and loss amounts and conditions until the average gain is close to zero.
+
+### F. Sharing and reflection (5 minutes)
+
+- Ask 2–3 pairs to present their game:
+
+  - State the rule clearly.  
+  - Show one run’s average gain per game.  
+  - Say whether they think it is fair.
+
+- From their examples, highlight:
+
+  - Games where average gain is strongly negative (bad for player).  
+  - Games where average is strongly positive (bad for the house).  
+  - Any game that looks roughly fair (average near 0).
+
+- Connect explicitly:
+
+  - Fairness in this informal sense = “on average, you don’t gain or lose much over many plays.”  
+  - We used **randomness**, **loops**, and **conditionals** to explore this.
+
+## 4. Exit task / homework (optional, 5 minutes if done in class)
+
+- Quick exit question (on paper or verbally):
+
+  - “Write a simple dice game rule in one sentence and predict whether it is good or bad for the player. Next class, we will test your game using Python.”
+
+- Optional homework:
+
+  - Students bring one game idea they have not tested yet.  
+  - Next session, they write code to simulate it and check fairness.
+
+Would you like a follow‑up 1‑hour lesson that pushes this into visualisation (plotting the distribution of gains/losses or face frequencies) while keeping the math at this same level?  

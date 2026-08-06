@@ -5,7 +5,6 @@ To run: python simple-plots.py
 """
 import matplotlib.pyplot as plt
 
-
 def main():
 	# Simple dictionary mapping x -> y
 	data = {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
