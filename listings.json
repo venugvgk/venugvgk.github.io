@@ -178,6 +178,7 @@
   {
     "listing": "/cs_2026/index.html",
     "items": [
+      "/cs_2026/session14.html",
       "/cs_2026/session13.html",
       "/cs_2026/session12.html",
       "/cs_2026/session11.html",
@@ -196,10 +197,6 @@
     ]
   },
   {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
     "listing": "/tir/index.html",
     "items": [
       "/tir/engineering-economic-exploitation.html",
@@ -209,6 +206,10 @@
       "/tir/sociology/ravidas-begumpura.html",
       "/tir/history/indian-syncretism.html"
     ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
   },
   {
     "listing": "/books/index.html",

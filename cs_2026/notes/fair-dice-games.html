@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>cs2026-rock-paper-scissors – Venu GVGK Raju</title>
+<title>fair-dice-games – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -173,19 +173,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lesson-overview" id="toc-lesson-overview" class="nav-link active" data-scroll-target="#lesson-overview">Lesson overview</a></li>
-  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning goals</a></li>
-  <li><a href="#class-plan" id="toc-class-plan" class="nav-link" data-scroll-target="#class-plan">Class plan</a>
+  <li><a href="#lesson-snapshot" id="toc-lesson-snapshot" class="nav-link active" data-scroll-target="#lesson-snapshot">1. Lesson snapshot</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">2. Learning objectives</a></li>
+  <li><a href="#class-flow-with-timings" id="toc-class-flow-with-timings" class="nav-link" data-scroll-target="#class-flow-with-timings">3. Class flow (with timings)</a>
   <ul class="collapse">
-  <li><a href="#starter-discussion-10-min" id="toc-starter-discussion-10-min" class="nav-link" data-scroll-target="#starter-discussion-10-min">1. Starter discussion — 10 min</a></li>
-  <li><a href="#representing-choices-10-min" id="toc-representing-choices-10-min" class="nav-link" data-scroll-target="#representing-choices-10-min">2. Representing choices — 10 min</a></li>
-  <li><a href="#deciding-the-winner-15-min" id="toc-deciding-the-winner-15-min" class="nav-link" data-scroll-target="#deciding-the-winner-15-min">3. Deciding the winner — 15 min</a></li>
-  <li><a href="#playing-many-rounds-15-min" id="toc-playing-many-rounds-15-min" class="nav-link" data-scroll-target="#playing-many-rounds-15-min">4. Playing many rounds — 15 min</a></li>
-  <li><a href="#pair-activity-5-min" id="toc-pair-activity-5-min" class="nav-link" data-scroll-target="#pair-activity-5-min">5. Pair activity — 5 min</a></li>
-  <li><a href="#wrapup-5-min" id="toc-wrapup-5-min" class="nav-link" data-scroll-target="#wrapup-5-min">6. Wrap‑up — 5 min</a></li>
+  <li><a href="#a.-hook-and-intuition-10-minutes" id="toc-a.-hook-and-intuition-10-minutes" class="nav-link" data-scroll-target="#a.-hook-and-intuition-10-minutes">A. Hook and intuition (10 minutes)</a></li>
+  <li><a href="#b.-recall-rolling-a-die-in-python-5-minutes" id="toc-b.-recall-rolling-a-die-in-python-5-minutes" class="nav-link" data-scroll-target="#b.-recall-rolling-a-die-in-python-5-minutes">B. Recall: rolling a die in Python (5 minutes)</a></li>
+  <li><a href="#c.-simulate-one-play-of-the-money-game-10-minutes" id="toc-c.-simulate-one-play-of-the-money-game-10-minutes" class="nav-link" data-scroll-target="#c.-simulate-one-play-of-the-money-game-10-minutes">C. Simulate one play of the money game (10 minutes)</a></li>
+  <li><a href="#d.-simulate-many-plays-with-a-loop-15-minutes" id="toc-d.-simulate-many-plays-with-a-loop-15-minutes" class="nav-link" data-scroll-target="#d.-simulate-many-plays-with-a-loop-15-minutes">D. Simulate many plays with a loop (15 minutes)</a></li>
+  <li><a href="#e.-pair-activity-tweak-and-test-different-games-15-minutes" id="toc-e.-pair-activity-tweak-and-test-different-games-15-minutes" class="nav-link" data-scroll-target="#e.-pair-activity-tweak-and-test-different-games-15-minutes">E. Pair activity: tweak and test different games (15 minutes)</a></li>
+  <li><a href="#f.-sharing-and-reflection-5-minutes" id="toc-f.-sharing-and-reflection-5-minutes" class="nav-link" data-scroll-target="#f.-sharing-and-reflection-5-minutes">F. Sharing and reflection (5 minutes)</a></li>
   </ul></li>
-  <li><a href="#suggested-classroom-code" id="toc-suggested-classroom-code" class="nav-link" data-scroll-target="#suggested-classroom-code">Suggested classroom code</a></li>
-  <li><a href="#easy-extensions" id="toc-easy-extensions" class="nav-link" data-scroll-target="#easy-extensions">Easy extensions</a></li>
+  <li><a href="#exit-task-homework-optional-5-minutes-if-done-in-class" id="toc-exit-task-homework-optional-5-minutes-if-done-in-class" class="nav-link" data-scroll-target="#exit-task-homework-optional-5-minutes-if-done-in-class">4. Exit task / homework (optional, 5 minutes if done in class)</a></li>
   </ul>
 </nav>
     </div>
@@ -195,151 +194,219 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>Here is a 1‑hour Rock Paper Scissors lesson that fits well after your current sequence on guessing games, tic‑tac‑toe, data structures, and simulation work. I’ve also included a working Python program you can use directly in class.</p>
-<section id="lesson-overview" class="level2">
-<h2 class="anchored" data-anchor-id="lesson-overview">Lesson overview</h2>
+<section id="lesson-snapshot" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-snapshot">1. Lesson snapshot</h2>
 <ul>
-<li><strong>Title:</strong> Rock Paper Scissors with Python<br>
+<li><strong>Title:</strong> Designing a fair dice game<br>
 </li>
 <li><strong>Duration:</strong> 60 minutes<br>
 </li>
-<li><strong>Prerequisites:</strong> Students have already seen basic Python, <code>if</code> statements, loops, and simple game logic in earlier CS 2026 sessions.<br>
+<li><strong>Prerequisites:</strong> Students have seen basic Python, <code>random.randint</code>, loops, and <code>if</code> (from earlier sessions).<br>
 </li>
-<li><strong>Focus skills:</strong> input, conditionals, loops, variables, and simple scorekeeping.</li>
-</ul>
-</section>
-<section id="learning-goals" class="level2">
-<h2 class="anchored" data-anchor-id="learning-goals">Learning goals</h2>
-<p>By the end of the lesson, students should be able to:</p>
+<li><strong>Core ideas:</strong>
 <ul>
-<li>Represent a small set of game choices in Python.<br>
+<li>Use Python to simulate a money game based on dice.<br>
 </li>
-<li>Use <code>if</code> and <code>elif</code> to decide who wins a round.<br>
+<li>Understand fairness as “average gain per game ≈ 0.”<br>
 </li>
-<li>Use a loop to play many rounds.<br>
-</li>
-<li>Track scores with variables and update them correctly after each round.</li>
+<li>Practice loops and conditionals while experimenting with different game rules.</li>
+</ul></li>
 </ul>
 </section>
-<section id="class-plan" class="level2">
-<h2 class="anchored" data-anchor-id="class-plan">Class plan</h2>
-<section id="starter-discussion-10-min" class="level3">
-<h3 class="anchored" data-anchor-id="starter-discussion-10-min">1. Starter discussion — 10 min</h3>
-<p>Begin by asking students to explain the rules of Rock Paper Scissors in plain language. Then ask how a computer could “know” who wins, which leads naturally to rule‑based thinking and conditionals, a direction already present in your earlier game sessions.</p>
-<p>Board prompt: - Rock beats scissors. - Scissors beats paper. - Paper beats rock. - Same choice means tie.</p>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">2. Learning objectives</h2>
+<p>By the end of the class, students should be able to:</p>
+<ul>
+<li>Write Python code to simulate a dice‑based money game many times.<br>
+</li>
+<li>Compute total and average gain/loss over many games.<br>
+</li>
+<li>Judge whether a game is favourable, unfavourable, or roughly fair from simulation output.<br>
+</li>
+<li>Modify game rules (payoffs and conditions) and test their effect.</li>
+</ul>
 </section>
-<section id="representing-choices-10-min" class="level3">
-<h3 class="anchored" data-anchor-id="representing-choices-10-min">2. Representing choices — 10 min</h3>
-<p>Start with the idea that the computer needs a list of allowed moves. Show students a list like <code>["rock", "paper", "scissors"]</code> and explain that this is a simple data structure storing the valid options, building on Session 9’s focus on Python data types and data structures.</p>
-<p>Then introduce random computer choice:</p>
+<section id="class-flow-with-timings" class="level2">
+<h2 class="anchored" data-anchor-id="class-flow-with-timings">3. Class flow (with timings)</h2>
+<section id="a.-hook-and-intuition-10-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="a.-hook-and-intuition-10-minutes">A. Hook and intuition (10 minutes)</h3>
+<ul>
+<li><p>On the board, present a simple game:</p>
+<ul>
+<li>“You roll one die.<br>
+If you get 6, you win ₹10.<br>
+Otherwise you lose ₹2.”</li>
+</ul></li>
+<li><p>Ask students:</p>
+<ul>
+<li>“Do you think you will make money or lose money if you play this game 100 times?”<br>
+</li>
+<li>Collect a few quick guesses; note that opinions differ.</li>
+</ul></li>
+<li><p>Explain:</p>
+<ul>
+<li>“Today we’ll use Python to test such games and try to design a game that is <em>fair</em> — neither clearly good nor clearly bad for the player.”</li>
+</ul></li>
+</ul>
+</section>
+<section id="b.-recall-rolling-a-die-in-python-5-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="b.-recall-rolling-a-die-in-python-5-minutes">B. Recall: rolling a die in Python (5 minutes)</h3>
+<ul>
+<li><p>Briefly recall code from Session 11:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>choices <span class="op">=</span> [<span class="st">"rock"</span>, <span class="st">"paper"</span>, <span class="st">"scissors"</span>]</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>computer_choice <span class="op">=</span> random.choice(choices)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(computer_choice)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This also connects nicely to your recent simulation lessons using randomness.</p>
-</section>
-<section id="deciding-the-winner-15-min" class="level3">
-<h3 class="anchored" data-anchor-id="deciding-the-winner-15-min">3. Deciding the winner — 15 min</h3>
-<p>Ask students to first solve one round without a loop. Let them imagine: - user chooses <code>"rock"</code> - computer chooses <code>"scissors"</code></p>
-<p>Then build the logic step by step:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> user_choice <span class="op">==</span> computer_choice:</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"It's a tie."</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> (</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    (user_choice <span class="op">==</span> <span class="st">"rock"</span> <span class="kw">and</span> computer_choice <span class="op">==</span> <span class="st">"scissors"</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">or</span> (user_choice <span class="op">==</span> <span class="st">"paper"</span> <span class="kw">and</span> computer_choice <span class="op">==</span> <span class="st">"rock"</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">or</span> (user_choice <span class="op">==</span> <span class="st">"scissors"</span> <span class="kw">and</span> computer_choice <span class="op">==</span> <span class="st">"paper"</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>):</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"You win this round."</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Computer wins this round."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This is a strong lesson in combining conditions clearly and carefully.</p>
-</section>
-<section id="playing-many-rounds-15-min" class="level3">
-<h3 class="anchored" data-anchor-id="playing-many-rounds-15-min">4. Playing many rounds — 15 min</h3>
-<p>Next, show how a game becomes more interesting when repeated. Introduce score variables and a loop so the game continues until the user types <code>"quit"</code>.</p>
-<p>Key ideas to emphasise: - <code>while True:</code> keeps the game running. - Invalid input should be handled with a condition before continuing. - Scores change only when someone wins the round.</p>
-</section>
-<section id="pair-activity-5-min" class="level3">
-<h3 class="anchored" data-anchor-id="pair-activity-5-min">5. Pair activity — 5 min</h3>
-<p>Have students work in pairs and modify one part of the game:</p>
-<ul>
-<li>Add “best of 5” instead of unlimited rounds.</li>
-<li>Print “Round 1”, “Round 2”, and so on.</li>
-<li>Change the final message depending on who has the higher score.</li>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>roll <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">6</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"You rolled:"</span>, roll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Ask a student to explain what <code>random.randint(1, 6)</code> does in plain language.<br>
+</p></li>
+<li><p>Confirm: one random integer from 1 to 6, each equally likely (for our purposes).</p></li>
 </ul>
-<p>This gives quick success and encourages code reading as well as code writing.</p>
 </section>
-<section id="wrapup-5-min" class="level3">
-<h3 class="anchored" data-anchor-id="wrapup-5-min">6. Wrap‑up — 5 min</h3>
-<p>Close with two questions: - Which part of the game was easiest for Python? - Which part needed the most careful thinking?</p>
-<p>Point out that the important computer science idea is not the game itself, but translating everyday rules into exact logic, which is the same skill used in your earlier tic‑tac‑toe and simulation lessons.</p>
+<section id="c.-simulate-one-play-of-the-money-game-10-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="c.-simulate-one-play-of-the-money-game-10-minutes">C. Simulate one play of the money game (10 minutes)</h3>
+<ul>
+<li><p>As a whole‑class live‑coding segment, write:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>roll <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">6</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> roll <span class="op">==</span> <span class="dv">6</span>:</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    change <span class="op">=</span> <span class="dv">10</span>   <span class="co"># rupees gained</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    change <span class="op">=</span> <span class="op">-</span><span class="dv">2</span>   <span class="co"># rupees lost</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Roll:"</span>, roll)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Change in money:"</span>, change)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Discuss:</p>
+<ul>
+<li>If roll is 6 → player gains ₹10.<br>
+</li>
+<li>Otherwise → player loses ₹2.<br>
+</li>
+<li><code>change</code> is positive or negative depending on the outcome.</li>
+</ul></li>
+<li><p>Let them run this program a few times and observe different outcomes.</p></li>
+</ul>
 </section>
-</section>
-<section id="suggested-classroom-code" class="level2">
-<h2 class="anchored" data-anchor-id="suggested-classroom-code">Suggested classroom code</h2>
-<p>This version is ready to run and includes: - valid choices stored in a list, - computer choice using randomness, - repeated rounds with a loop, - input checking, - scorekeeping and final result.</p>
+<section id="d.-simulate-many-plays-with-a-loop-15-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="d.-simulate-many-plays-with-a-loop-15-minutes">D. Simulate many plays with a loop (15 minutes)</h3>
+<ul>
+<li><p>Now move from “one play” to “many plays”:</p>
+<ul>
+<li>Ask: “If we want to play 100 times, how can we make Python repeat this logic?”<br>
+</li>
+<li>Guide them to the idea of a <code>for</code> loop.</li>
+</ul></li>
+<li><p>Live‑code and explain line by line:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>choices <span class="op">=</span> [<span class="st">"rock"</span>, <span class="st">"paper"</span>, <span class="st">"scissors"</span>]</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>user_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>computer_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>round_number <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Rock Paper Scissors"</span>)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Type rock, paper, or scissors. Type quit to stop."</span>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Round </span><span class="sc">{</span>round_number<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    user_choice <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Your choice: "</span>).strip().lower()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>total_money <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>num_games <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(num_games):</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    roll <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">6</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> roll <span class="op">==</span> <span class="dv">6</span>:</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        change <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        change <span class="op">=</span> <span class="op">-</span><span class="dv">2</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    total_money <span class="op">=</span> total_money <span class="op">+</span> change</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"After"</span>, num_games, <span class="st">"games, total money change:"</span>, total_money)</span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> user_choice <span class="op">==</span> <span class="st">"quit"</span>:</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> user_choice <span class="kw">not</span> <span class="kw">in</span> choices:</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Invalid choice. Please type rock, paper, or scissors."</span>)</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    computer_choice <span class="op">=</span> random.choice(choices)</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Computer chose:"</span>, computer_choice)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> user_choice <span class="op">==</span> computer_choice:</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"It's a tie."</span>)</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> (</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>        (user_choice <span class="op">==</span> <span class="st">"rock"</span> <span class="kw">and</span> computer_choice <span class="op">==</span> <span class="st">"scissors"</span>)</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>        <span class="kw">or</span> (user_choice <span class="op">==</span> <span class="st">"paper"</span> <span class="kw">and</span> computer_choice <span class="op">==</span> <span class="st">"rock"</span>)</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>        <span class="kw">or</span> (user_choice <span class="op">==</span> <span class="st">"scissors"</span> <span class="kw">and</span> computer_choice <span class="op">==</span> <span class="st">"paper"</span>)</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    ):</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"You win this round."</span>)</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>        user_score <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Computer wins this round."</span>)</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        computer_score <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Score:"</span>, user_score, <span class="st">"-"</span>, computer_score)</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    round_number <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Final score:"</span>, user_score, <span class="st">"-"</span>, computer_score)</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> user_score <span class="op">&gt;</span> computer_score:</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"You won the game."</span>)</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> computer_score <span class="op">&gt;</span> user_score:</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Computer won the game."</span>)</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The game ended in a tie."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="easy-extensions" class="level2">
-<h2 class="anchored" data-anchor-id="easy-extensions">Easy extensions</h2>
-<p>For the next class, students could try one of these:</p>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>average_gain <span class="op">=</span> total_money <span class="op">/</span> num_games</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Average gain per game:"</span>, average_gain)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Key points to emphasise:</p>
 <ul>
-<li>Keep a list of all user moves and count how many times each move was played.<br>
+<li><code>total_money</code> starts at 0 and collects all gains/losses.<br>
 </li>
-<li>Make the game stop automatically after 5 rounds.<br>
+<li>The loop repeats the same game logic <code>num_games</code> times.<br>
 </li>
-<li>Add a rule where the computer prints a comment such as “Good move” or “Try again.”<br>
-</li>
-<li>Turn the result of many rounds into a small bar chart later, which would connect well to your planned visualisation unit.</li>
+<li><code>average_gain</code> is a simple average, no advanced maths needed.</li>
+</ul></li>
+<li><p>Have students run the program and note the final <code>total_money</code> and <code>average_gain</code>.</p>
+<ul>
+<li>Ask: “Does the game look good or bad for the player from these numbers?”</li>
+</ul></li>
 </ul>
+</section>
+<section id="e.-pair-activity-tweak-and-test-different-games-15-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="e.-pair-activity-tweak-and-test-different-games-15-minutes">E. Pair activity: tweak and test different games (15 minutes)</h3>
+<ul>
+<li><p>Divide students into pairs.<br>
+</p></li>
+<li><p>Each pair’s task:</p>
+<ol type="1">
+<li><strong>Invent a new dice game rule</strong>, for example:
+<ul>
+<li>Game 1: Win ₹5 if roll ≥ 5, lose ₹3 otherwise.<br>
+</li>
+<li>Game 2: Win ₹12 if roll is even, lose ₹6 otherwise.<br>
+</li>
+</ul></li>
+<li><strong>Modify the <code>if</code> block</strong> in the code to match their rule.<br>
+</li>
+<li>Run the simulation with <code>num_games = 100</code>, then with <code>num_games = 1000</code>.<br>
+</li>
+<li>Record:
+<ul>
+<li>Total money change.<br>
+</li>
+<li>Average gain per game.<br>
+</li>
+<li>Their conclusion: “good for player,” “bad for player,” or “roughly fair.”</li>
+</ul></li>
+</ol></li>
+<li><p>Circulate and prompt thinking:</p>
+<ul>
+<li>“What happens if winning amount is very high but the chance is rare?”<br>
+</li>
+<li>“What happens if losing amount is small but happens often?”</li>
+</ul></li>
+<li><p>Encourage them to try to make a <strong>fair</strong> game by adjusting win and loss amounts and conditions until the average gain is close to zero.</p></li>
+</ul>
+</section>
+<section id="f.-sharing-and-reflection-5-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="f.-sharing-and-reflection-5-minutes">F. Sharing and reflection (5 minutes)</h3>
+<ul>
+<li><p>Ask 2–3 pairs to present their game:</p>
+<ul>
+<li>State the rule clearly.<br>
+</li>
+<li>Show one run’s average gain per game.<br>
+</li>
+<li>Say whether they think it is fair.</li>
+</ul></li>
+<li><p>From their examples, highlight:</p>
+<ul>
+<li>Games where average gain is strongly negative (bad for player).<br>
+</li>
+<li>Games where average is strongly positive (bad for the house).<br>
+</li>
+<li>Any game that looks roughly fair (average near 0).</li>
+</ul></li>
+<li><p>Connect explicitly:</p>
+<ul>
+<li>Fairness in this informal sense = “on average, you don’t gain or lose much over many plays.”<br>
+</li>
+<li>We used <strong>randomness</strong>, <strong>loops</strong>, and <strong>conditionals</strong> to explore this.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="exit-task-homework-optional-5-minutes-if-done-in-class" class="level2">
+<h2 class="anchored" data-anchor-id="exit-task-homework-optional-5-minutes-if-done-in-class">4. Exit task / homework (optional, 5 minutes if done in class)</h2>
+<ul>
+<li><p>Quick exit question (on paper or verbally):</p>
+<ul>
+<li>“Write a simple dice game rule in one sentence and predict whether it is good or bad for the player. Next class, we will test your game using Python.”</li>
+</ul></li>
+<li><p>Optional homework:</p>
+<ul>
+<li>Students bring one game idea they have not tested yet.<br>
+</li>
+<li>Next session, they write code to simulate it and check fairness.</li>
+</ul></li>
+</ul>
+<p>Would you like a follow‑up 1‑hour lesson that pushes this into visualisation (plotting the distribution of gains/losses or face frequencies) while keeping the math at this same level?</p>
 
 
 </section>
