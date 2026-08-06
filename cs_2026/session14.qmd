@@ -8,7 +8,7 @@ We revised the math behind the prime number problem and the pseudocode for the p
 
 Here is an example program that uses a dictionary to plot a line and bars on the same graph. 
 
-```python
+```{python}
 
 import matplotlib.pyplot as plt
 
