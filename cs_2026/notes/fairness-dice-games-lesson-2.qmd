@@ -1,0 +1,357 @@
+---
+title: "Fairness, Odds, and House Edge in Dice Games"
+description: "A probability and Python lesson on mathematically fair games, casino house edges, and simulation."
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: false
+    code-copy: true
+execute:
+  echo: true
+---
+
+## Learning goals
+
+By the end of this lesson, learners should be able to:
+
+- Distinguish mathematical fairness from commercial “fair play.”
+- Calculate expected value, RTP, and house edge.
+- Design fair and house-edge versions of single- and double-dice games.
+- Implement and simulate these games in Python.
+- Interpret results from 10,000 simulated rounds.
+
+> This lesson uses fictional money for probability and programming education—not real-money betting.
+
+## What is a fair game of chance?
+
+A game of chance is **mathematically fair** if neither player has an expected long-run advantage.
+
+If a player repeatedly makes the same bet, their average net gain should approach zero over a very large number of plays:
+
+$$
+\text{Expected value for player} = 0
+$$
+
+For a game with possible outcomes $i$:
+
+$$
+EV = \sum_i P(i) \times \text{net payoff}(i)
+$$
+
+A fair game has:
+
+$$
+EV = 0
+$$
+
+This does not mean that every player breaks even in a single session. A player may win ₹500 in one round and lose ₹500 in the next. Fairness concerns the average outcome over many repetitions.
+
+## Mathematical fairness and casino fairness
+
+A casino may describe a game as “fair” when it is honestly run: the rules are clear, outcomes are random, and payouts match the published schedule. But the game is usually **not mathematically fair** for the player.
+
+| Type of fairness | Meaning | Expected player result |
+|---|---|---:|
+| Mathematical fairness | Payout exactly matches the probability of winning | ₹0 in the long run |
+| Casino or operational fairness | Random, transparent, and follows advertised rules | Usually a long-run loss |
+| House-edge game | Payout is slightly below fair value | Negative expected value |
+
+The casino’s advantage is called the **house edge**:
+
+$$
+\text{House edge} = -\frac{\text{Player expected value}}{\text{Stake}}
+$$
+
+If the house edge is 5%, then on average the player loses ₹5 per ₹100 wagered over a very large number of plays.
+
+The related measure is **Return to Player (RTP)**:
+
+$$
+\text{RTP} = 1 - \text{House edge}
+$$
+
+So, a 5% house edge means:
+
+$$
+\text{RTP} = 95\%
+$$
+
+## Implementing fair odds
+
+Suppose:
+
+- $b$ is the stake.
+- $p$ is the probability that the player wins.
+- $h$ is the house edge.
+- $G$ is the **gross payout**, including the returned stake.
+
+Then:
+
+$$
+G = \frac{b(1-h)}{p}
+$$
+
+For a mathematically fair game, set $h=0$:
+
+$$
+G = \frac{b}{p}
+$$
+
+For a casino version, choose a positive value of $h$:
+
+$$
+G = \frac{b(1-h)}{p}
+$$
+
+The player’s net profit after a winning round is:
+
+$$
+\text{Net win} = G-b
+$$
+
+## Single-die game
+
+### Game rule
+
+A player stakes ₹100 and chooses one number from 1 to 6. One die is rolled.
+
+- If the selected number appears, the player wins.
+- Otherwise, the player loses their ₹100 stake.
+
+The probability of winning is:
+
+$$
+p = \frac{1}{6}
+$$
+
+### Fair version
+
+$$
+G = \frac{100}{1/6} = \text{₹600}
+$$
+
+The ₹600 is the gross payout, including the original stake. Therefore:
+
+$$
+\text{Net win} = \text{₹600} - \text{₹100} = \text{₹500}
+$$
+
+| Result | Probability | Player net result |
+|---|---:|---:|
+| Selected face appears | $1/6$ | +₹500 |
+| Any other face appears | $5/6$ | -₹100 |
+
+$$
+EV = \left(\frac{1}{6}\times500\right) + \left(\frac{5}{6}\times-100\right) = \text{₹0}
+$$
+
+So this is mathematically fair.
+
+### Casino version: 5% house edge
+
+Set $h=0.05$:
+
+$$
+G = \frac{100(1-0.05)}{1/6} = \text{₹570}
+$$
+
+The player earns a net ₹470 after a win, rather than ₹500.
+
+| Result | Probability | Player net result |
+|---|---:|---:|
+| Selected face appears | $1/6$ | +₹470 |
+| Any other face appears | $5/6$ | -₹100 |
+
+$$
+EV = \left(\frac{1}{6}\times470\right) + \left(\frac{5}{6}\times-100\right) = -\text{₹5}
+$$
+
+The expected player loss is ₹5 per ₹100 bet, which is a 5% house edge.
+
+## Double-dice game
+
+When two dice are rolled, their sums do **not** have equal probabilities.
+
+There are 36 equally likely ordered outcomes:
+
+$$
+6 \times 6 = 36
+$$
+
+For example, a total of 7 can occur in six ways:
+
+$$
+(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)
+$$
+
+Therefore:
+
+$$
+P(\text{sum is 7}) = \frac{6}{36} = \frac{1}{6}
+$$
+
+A total of 2 can occur only in one way, $(1,1)$:
+
+$$
+P(\text{sum is 2}) = \frac{1}{36}
+$$
+
+| Target sum | Ways to obtain it | Probability |
+|---:|---:|---:|
+| 2 or 12 | 1 | $1/36$ |
+| 3 or 11 | 2 | $2/36$ |
+| 4 or 10 | 3 | $3/36$ |
+| 5 or 9 | 4 | $4/36$ |
+| 6 or 8 | 5 | $5/36$ |
+| 7 | 6 | $6/36$ |
+
+### Fair double-dice example
+
+A player stakes ₹100 that the total will be 2.
+
+$$
+p = \frac{1}{36}
+$$
+
+Fair gross payout:
+
+$$
+G = \frac{100}{1/36} = \text{₹3,600}
+$$
+
+The player receives a net profit of ₹3,500 if the total is 2.
+
+### Casino double-dice example: 5% edge
+
+$$
+G = \frac{100(0.95)}{1/36} = \text{₹3,420}
+$$
+
+The player earns ₹3,320 net on a successful prediction of total 2, rather than ₹3,500.
+
+## Python: mathematically fair die game
+
+```{python}
+from secrets import randbelow
+
+STAKE = 100
+CHOSEN_FACE = 4
+
+win_probability = 1 / 6
+gross_payout = STAKE / win_probability  # ₹600 in a fair game
+
+roll = randbelow(6) + 1
+
+if roll == CHOSEN_FACE:
+    player_net = gross_payout - STAKE
+    print(f"Rolled: {roll}")
+    print(f"You won ₹{player_net:.2f}")
+else:
+    player_net = -STAKE
+    print(f"Rolled: {roll}")
+    print(f"You lost ₹{-player_net:.2f}")
+```
+
+The program uses `secrets.randbelow(6) + 1` to generate a uniformly distributed die result from 1 to 6.
+
+## Python: casino die game
+
+This version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.
+
+```{python}
+from secrets import randbelow
+
+STAKE = 100
+HOUSE_EDGE = 0.05
+CHOSEN_FACE = 4
+
+win_probability = 1 / 6
+gross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability
+net_win = gross_payout - STAKE
+
+roll = randbelow(6) + 1
+
+if roll == CHOSEN_FACE:
+    print(f"Rolled: {roll}")
+    print(f"You won ₹{net_win:.2f}")
+else:
+    print(f"Rolled: {roll}")
+    print(f"You lost ₹{STAKE:.2f}")
+```
+
+The die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result.
+
+## Simulating 10,000 rolls
+
+```{python}
+from secrets import randbelow
+
+NUM_ROLLS = 10_000
+STAKE = 100
+HOUSE_EDGE = 0.05
+CHOSEN_FACE = 4
+
+win_probability = 1 / 6
+gross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability
+net_win = gross_payout - STAKE
+
+player_profit = 0.0
+casino_profit = 0.0
+wins = 0
+
+for _ in range(NUM_ROLLS):
+    roll = randbelow(6) + 1
+
+    if roll == CHOSEN_FACE:
+        wins += 1
+        player_profit += net_win
+        casino_profit -= net_win
+    else:
+        player_profit -= STAKE
+        casino_profit += STAKE
+
+total_wagered = NUM_ROLLS * STAKE
+observed_win_rate = wins / NUM_ROLLS
+observed_house_edge = casino_profit / total_wagered
+theoretical_casino_profit = total_wagered * HOUSE_EDGE
+
+print("DICE CASINO SIMULATION")
+print("-" * 35)
+print(f"Number of rolls:            {NUM_ROLLS:,}")
+print(f"Stake per roll:             ₹{STAKE:.2f}")
+print(f"House edge:                 {HOUSE_EDGE:.2%}")
+print(f"Gross payout on a win:      ₹{gross_payout:.2f}")
+print(f"Number of player wins:      {wins:,}")
+print(f"Observed win rate:          {observed_win_rate:.2%}")
+print()
+print(f"Total amount wagered:       ₹{total_wagered:,.2f}")
+print(f"Player net result:          ₹{player_profit:,.2f}")
+print(f"Casino profit:              ₹{casino_profit:,.2f}")
+print(f"Observed house edge:        {observed_house_edge:.2%}")
+print(f"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}")
+```
+
+The theoretical casino profit is:
+
+$$
+10,000 \times \text{₹100} \times 0.05 = \text{₹50,000}
+$$
+
+The simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%.
+
+## Conclusion
+
+A fair chance game has an expected player gain of zero; its payout exactly matches the probability of a win. A casino-style game can still be procedurally fair—random outcomes, visible rules, and consistent payouts—while giving the operator an advantage through a lower-than-fair payout.
+
+The key design principle is:
+
+$$
+\text{Fair payout} = \frac{\text{Stake}}{\text{Probability of winning}}
+$$
+
+$$
+\text{Casino payout} = \frac{\text{Stake} \times (1 - \text{House edge})}{\text{Probability of winning}}
+$$
+
+In a transparent simulation, randomness determines each outcome, while the published payout schedule determines whether the game is mathematically fair or has a house edge.

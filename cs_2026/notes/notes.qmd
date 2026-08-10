@@ -7,7 +7,15 @@ session 8 - prime numbers in a range - is_prime(n) and primes_in_range(start, en
 session 9 - coin toss simulator - random.randint(0, 1) and fractions of heads and tails
 session 10 - two-dice-sum game
 
+next few classes
 
+rock-paper-scissors 
+keeping track of scores and plotting in rock-paper-scissors
+treasure hunt grids
+fair dice games
+read file and plot
+
+calculator with FLET library?
 - All factors of a number
 - Perfect numbers and abundant/deficient numbers
 - Prime factors of a number
