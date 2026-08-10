@@ -1092,60 +1092,81 @@
     "text": "6. Optional extension / homework\nIf you want a small follow‑up task:\n\nAsk each student to write down a strategy for the computer in plain language, such as:\n\n“Roll until turn total reaches 12 then hold.”\n\n“Stop rolling if computer’s score is already ahead by more than 15 points.”\n\n\nNext class, they implement their strategy in code and compare which strategy seems better over many games."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html",
-    "title": "CS2026 Class Notes: Dice Sum Game",
+    "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html",
+    "href": "cs_2026/notes/fairness-dice-games-lesson-2.html",
+    "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "",
-    "text": "The dice sum game is a natural next step after the coin toss simulator because it keeps the same simulation structure but produces a richer pattern of outcomes. Instead of only two outcomes, rolling two fair dice produces sums from 2 to 12, and some of those sums occur more often than others.\nThis lesson is useful because it connects programming with both probability and combinatorics. By simulating many rolls, students can observe a frequency distribution and compare it with the mathematical idea that some sums can be formed in more ways than others."
+    "text": "By the end of this lesson, learners should be able to:\n\nDistinguish mathematical fairness from commercial “fair play.”\nCalculate expected value, RTP, and house edge.\nDesign fair and house-edge versions of single- and double-dice games.\nImplement and simulate these games in Python.\nInterpret results from 10,000 simulated rounds.\n\n\nThis lesson uses fictional money for probability and programming education—not real-money betting."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#input",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#input",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Input",
-    "text": "Input\n\nA positive integer (N), representing the number of times the pair of dice will be rolled."
+    "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#learning-goals",
+    "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#learning-goals",
+    "title": "Fairness, Odds, and House Edge in Dice Games",
+    "section": "",
+    "text": "By the end of this lesson, learners should be able to:\n\nDistinguish mathematical fairness from commercial “fair play.”\nCalculate expected value, RTP, and house edge.\nDesign fair and house-edge versions of single- and double-dice games.\nImplement and simulate these games in Python.\nInterpret results from 10,000 simulated rounds.\n\n\nThis lesson uses fictional money for probability and programming education—not real-money betting."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#output",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#output",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Output",
-    "text": "Output\n\nThe frequency of each sum from 2 to 12.\nThe sum that appeared most often.\nOptionally, the fraction or percentage for each sum."
+    "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#what-is-a-fair-game-of-chance",
+    "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#what-is-a-fair-game-of-chance",
+    "title": "Fairness, Odds, and House Edge in Dice Games",
+    "section": "What is a fair game of chance?",
+    "text": "What is a fair game of chance?\nA game of chance is mathematically fair if neither player has an expected long-run advantage.\nIf a player repeatedly makes the same bet, their average net gain should approach zero over a very large number of plays:\n\\[\n\\text{Expected value for player} = 0\n\\]\nFor a game with possible outcomes \\(i\\):\n\\[\nEV = \\sum_i P(i) \\times \\text{net payoff}(i)\n\\]\nA fair game has:\n\\[\nEV = 0\n\\]\nThis does not mean that every player breaks even in a single session. A player may win ₹500 in one round and lose ₹500 in the next. Fairness concerns the average outcome over many repetitions."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#example-idea",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#example-idea",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Example idea",
-    "text": "Example idea\nIf the dice are rolled 20 times, one possible set of frequencies might show that 7 occurred 4 times, 6 occurred 3 times, 8 occurred 3 times, and some extreme sums such as 2 or 12 occurred only once or not at all. The exact results change from run to run because simulation uses randomness."
+    "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#mathematical-fairness-and-casino-fairness",
+    "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#mathematical-fairness-and-casino-fairness",
+    "title": "Fairness, Odds, and House Edge in Dice Games",
+    "section": "Mathematical fairness and casino fairness",
+    "text": "Mathematical fairness and casino fairness\nA casino may describe a game as “fair” when it is honestly run: the rules are clear, outcomes are random, and payouts match the published schedule. But the game is usually not mathematically fair for the player.\n\n\n\n\n\n\n\n\nType of fairness\nMeaning\nExpected player result\n\n\n\n\nMathematical fairness\nPayout exactly matches the probability of winning\n₹0 in the long run\n\n\nCasino or operational fairness\nRandom, transparent, and follows advertised rules\nUsually a long-run loss\n\n\nHouse-edge game\nPayout is slightly below fair value\nNegative expected value\n\n\n\nThe casino’s advantage is called the house edge:\n\\[\n\\text{House edge} = -\\frac{\\text{Player expected value}}{\\text{Stake}}\n\\]\nIf the house edge is 5%, then on average the player loses ₹5 per ₹100 wagered over a very large number of plays.\nThe related measure is Return to Player (RTP):\n\\[\n\\text{RTP} = 1 - \\text{House edge}\n\\]\nSo, a 5% house edge means:\n\\[\n\\text{RTP} = 95\\%\n\\]"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-is-7-the-most-common-sum",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-is-7-the-most-common-sum",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Why is 7 the most common sum?",
-    "text": "Why is 7 the most common sum?\nThe simulation suggests that 7 appears most often, but programming is only one part of the explanation. The mathematical reason is that 7 can be formed in 6 distinct ordered ways: ((1,6)), ((2,5)), ((3,4)), ((4,3)), ((5,2)), and ((6,1)).\nOther sums have fewer combinations. For example, 2 can occur only as ((1,1)), and 12 can occur only as ((6,6)), so they are much less frequent in repeated trials."
+    "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#implementing-fair-odds",
+    "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#implementing-fair-odds",
+    "title": "Fairness, Odds, and House Edge in Dice Games",
+    "section": "Implementing fair odds",
+    "text": "Implementing fair odds\nSuppose:\n\n\\(b\\) is the stake.\n\\(p\\) is the probability that the player wins.\n\\(h\\) is the house edge.\n\\(G\\) is the gross payout, including the returned stake.\n\nThen:\n\\[\nG = \\frac{b(1-h)}{p}\n\\]\nFor a mathematically fair game, set \\(h=0\\):\n\\[\nG = \\frac{b}{p}\n\\]\nFor a casino version, choose a positive value of \\(h\\):\n\\[\nG = \\frac{b(1-h)}{p}\n\\]\nThe player’s net profit after a winning round is:\n\\[\n\\text{Net win} = G-b\n\\]"
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#combinatorics-table",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#combinatorics-table",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Combinatorics table",
-    "text": "Combinatorics table\nThe connection between simulation and counting can be shown clearly in a table.\n\n\n\nSum\nNumber of ways\nExample outcomes\n\n\n\n\n2\n1\n(1,1)\n\n\n3\n2\n(1,2), (2,1)\n\n\n4\n3\n(1,3), (2,2), (3,1)\n\n\n5\n4\n(1,4), (2,3), (3,2), (4,1)\n\n\n6\n5\nfive ordered pairs\n\n\n7\n6\nsix ordered pairs\n\n\n8\n5\nfive ordered pairs\n\n\n9\n4\nfour ordered pairs\n\n\n10\n3\nthree ordered pairs\n\n\n11\n2\ntwo ordered pairs\n\n\n12\n1\n(6,6)\n\n\n\nBecause the number of ways rises to 6 and then falls symmetrically, the frequency distribution of sums tends to have a triangular shape with the peak near 7."
+    "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#single-die-game",
+    "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#single-die-game",
+    "title": "Fairness, Odds, and House Edge in Dice Games",
+    "section": "Single-die game",
+    "text": "Single-die game\n\nGame rule\nA player stakes ₹100 and chooses one number from 1 to 6. One die is rolled.\n\nIf the selected number appears, the player wins.\nOtherwise, the player loses their ₹100 stake.\n\nThe probability of winning is:\n\\[\np = \\frac{1}{6}\n\\]\n\n\nFair version\n\\[\nG = \\frac{100}{1/6} = \\text{₹600}\n\\]\nThe ₹600 is the gross payout, including the original stake. Therefore:\n\\[\n\\text{Net win} = \\text{₹600} - \\text{₹100} = \\text{₹500}\n\\]\n\n\n\nResult\nProbability\nPlayer net result\n\n\n\n\nSelected face appears\n\\(1/6\\)\n+₹500\n\n\nAny other face appears\n\\(5/6\\)\n-₹100\n\n\n\n\\[\nEV = \\left(\\frac{1}{6}\\times500\\right) + \\left(\\frac{5}{6}\\times-100\\right) = \\text{₹0}\n\\]\nSo this is mathematically fair.\n\n\nCasino version: 5% house edge\nSet \\(h=0.05\\):\n\\[\nG = \\frac{100(1-0.05)}{1/6} = \\text{₹570}\n\\]\nThe player earns a net ₹470 after a win, rather than ₹500.\n\n\n\nResult\nProbability\nPlayer net result\n\n\n\n\nSelected face appears\n\\(1/6\\)\n+₹470\n\n\nAny other face appears\n\\(5/6\\)\n-₹100\n\n\n\n\\[\nEV = \\left(\\frac{1}{6}\\times470\\right) + \\left(\\frac{5}{6}\\times-100\\right) = -\\text{₹5}\n\\]\nThe expected player loss is ₹5 per ₹100 bet, which is a 5% house edge."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#what-does-the-frequency-table-show",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#what-does-the-frequency-table-show",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "What does the frequency table show?",
-    "text": "What does the frequency table show?\nA frequency table records how many times each outcome occurred in the simulation. As the number of trials becomes large, the observed frequencies begin to reflect the underlying probability pattern more clearly.\nThis helps students move from single outcomes to distributions. Instead of asking “What happened on one roll?”, the better question becomes “What pattern appears after many rolls?”"
+    "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#double-dice-game",
+    "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#double-dice-game",
+    "title": "Fairness, Odds, and House Edge in Dice Games",
+    "section": "Double-dice game",
+    "text": "Double-dice game\nWhen two dice are rolled, their sums do not have equal probabilities.\nThere are 36 equally likely ordered outcomes:\n\\[\n6 \\times 6 = 36\n\\]\nFor example, a total of 7 can occur in six ways:\n\\[\n(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\n\\]\nTherefore:\n\\[\nP(\\text{sum is 7}) = \\frac{6}{36} = \\frac{1}{6}\n\\]\nA total of 2 can occur only in one way, \\((1,1)\\):\n\\[\nP(\\text{sum is 2}) = \\frac{1}{36}\n\\]\n\n\n\nTarget sum\nWays to obtain it\nProbability\n\n\n\n\n2 or 12\n1\n\\(1/36\\)\n\n\n3 or 11\n2\n\\(2/36\\)\n\n\n4 or 10\n3\n\\(3/36\\)\n\n\n5 or 9\n4\n\\(4/36\\)\n\n\n6 or 8\n5\n\\(5/36\\)\n\n\n7\n6\n\\(6/36\\)\n\n\n\n\nFair double-dice example\nA player stakes ₹100 that the total will be 2.\n\\[\np = \\frac{1}{36}\n\\]\nFair gross payout:\n\\[\nG = \\frac{100}{1/36} = \\text{₹3,600}\n\\]\nThe player receives a net profit of ₹3,500 if the total is 2.\n\n\nCasino double-dice example: 5% edge\n\\[\nG = \\frac{100(0.95)}{1/36} = \\text{₹3,420}\n\\]\nThe player earns ₹3,320 net on a successful prediction of total 2, rather than ₹3,500."
   },
   {
-    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-do-small-and-large-simulations-look-different",
-    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-do-small-and-large-simulations-look-different",
-    "title": "CS2026 Class Notes: Dice Sum Game",
-    "section": "Why do small and large simulations look different?",
-    "text": "Why do small and large simulations look different?\nIn a small number of rolls, the frequencies can look irregular because chance variation is strong. In a much larger number of rolls, the empirical distribution tends to resemble the theoretical distribution more closely.\nThis is one of the important ideas of simulation: randomness affects individual outcomes strongly, but long-run patterns are more stable."
+    "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-mathematically-fair-die-game",
+    "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-mathematically-fair-die-game",
+    "title": "Fairness, Odds, and House Edge in Dice Games",
+    "section": "Python: mathematically fair die game",
+    "text": "Python: mathematically fair die game\n\nfrom secrets import randbelow\n\nSTAKE = 100\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE / win_probability  # ₹600 in a fair game\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    player_net = gross_payout - STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{player_net:.2f}\")\nelse:\n    player_net = -STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{-player_net:.2f}\")\n\nRolled: 2\nYou lost ₹100.00\n\n\nThe program uses secrets.randbelow(6) + 1 to generate a uniformly distributed die result from 1 to 6."
+  },
+  {
+    "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
+    "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
+    "title": "Fairness, Odds, and House Edge in Dice Games",
+    "section": "Python: casino die game",
+    "text": "Python: casino die game\nThis version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.\n\nfrom secrets import randbelow\n\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{net_win:.2f}\")\nelse:\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{STAKE:.2f}\")\n\nRolled: 5\nYou lost ₹100.00\n\n\nThe die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result."
+  },
+  {
+    "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
+    "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
+    "title": "Fairness, Odds, and House Edge in Dice Games",
+    "section": "Simulating 10,000 rolls",
+    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,670\nObserved win rate:          16.70%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-48,100.00\nCasino profit:              ₹48,100.00\nObserved house edge:        4.81%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
+  },
+  {
+    "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#conclusion",
+    "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#conclusion",
+    "title": "Fairness, Odds, and House Edge in Dice Games",
+    "section": "Conclusion",
+    "text": "Conclusion\nA fair chance game has an expected player gain of zero; its payout exactly matches the probability of a win. A casino-style game can still be procedurally fair—random outcomes, visible rules, and consistent payouts—while giving the operator an advantage through a lower-than-fair payout.\nThe key design principle is:\n\\[\n\\text{Fair payout} = \\frac{\\text{Stake}}{\\text{Probability of winning}}\n\\]\n\\[\n\\text{Casino payout} = \\frac{\\text{Stake} \\times (1 - \\text{House edge})}{\\text{Probability of winning}}\n\\]\nIn a transparent simulation, randomness determines each outcome, while the published payout schedule determines whether the game is mathematically fair or has a house edge."
   },
   {
     "objectID": "cs_2026/notes/cs2026-rock-paper-scissors.html",
@@ -1463,11 +1484,221 @@
     "text": "5. The game logic and the board display are separate\nThis is important.\n\nprint_board only displays.\ncheck_winner only checks rules.\nget_move only handles input.\n\nKeeping these separate makes the program clean."
   },
   {
-    "objectID": "cs_2026/index.html",
-    "href": "cs_2026/index.html",
-    "title": "CS 2026",
+    "objectID": "cs_2026/notes/fair-dice-games-1.html",
+    "href": "cs_2026/notes/fair-dice-games-1.html",
+    "title": "Venu GVGK Raju",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAug 6, 2026\n\n\nSession 14 Revision of plots and primes\n\n\n \n\n\n\n\nAug 4, 2026\n\n\nSession 13 Primes in Range\n\n\n \n\n\n\n\nJul 28, 2026\n\n\nSession 12 Two Dice Roll and Plot\n\n\n \n\n\n\n\nJul 23, 2026\n\n\nSession 11 Dice Roll Simulator\n\n\n \n\n\n\n\nJul 21, 2026\n\n\nSession 10 Coin Toss Simulator\n\n\n \n\n\n\n\nJul 15, 2026\n\n\nSession 9 Python Data Types and Data Structures\n\n\n \n\n\n\n\nJul 7, 2026\n\n\nSession 8 Programming Tic-Tac-Toe\n\n\n \n\n\n\n\nJun 25, 2026\n\n\nSession 7 Computer Guesses the number\n\n\n \n\n\n\n\nJun 24, 2026\n\n\nSession 6 Pseudocode, sample programs, program elements\n\n\n \n\n\n\n\nJun 16, 2026\n\n\nSession 5 Binary and Hex; Sorting - selection and insertion\n\n\n \n\n\n\n\nJun 15, 2026\n\n\nDeeper Exploration - Coin weighing\n\n\n \n\n\n\n\nJun 14, 2026\n\n\nSession 4 How many questions? Search Algorithms\n\n\n \n\n\n\n\nJun 9, 2026\n\n\nSession 3 Tic-tac-toe 1\n\n\n \n\n\n\n\nJun 7, 2026\n\n\nSession 2 Pouring; guessing letters and numbers\n\n\n \n\n\n\n\nJun 2, 2026\n\n\nSession 1 Locked-in Syndrome and Algorithmic thinking\n\n\n \n\n\n\n\nJun 1, 2026\n\n\nPurpose and Audience\n\n\n \n\n\n\n\n\nNo matching items"
+    "text": "Title: Designing a fair dice game\n\nDuration: 60 minutes\n\nPrerequisites: Students have seen basic Python, random.randint, loops, and if (from earlier sessions).\n\nCore ideas:\n\nUse Python to simulate a money game based on dice.\n\nUnderstand fairness as “average gain per game ≈ 0.”\n\nPractice loops and conditionals while experimenting with different game rules."
+  },
+  {
+    "objectID": "cs_2026/notes/fair-dice-games-1.html#lesson-snapshot",
+    "href": "cs_2026/notes/fair-dice-games-1.html#lesson-snapshot",
+    "title": "Venu GVGK Raju",
+    "section": "",
+    "text": "Title: Designing a fair dice game\n\nDuration: 60 minutes\n\nPrerequisites: Students have seen basic Python, random.randint, loops, and if (from earlier sessions).\n\nCore ideas:\n\nUse Python to simulate a money game based on dice.\n\nUnderstand fairness as “average gain per game ≈ 0.”\n\nPractice loops and conditionals while experimenting with different game rules."
+  },
+  {
+    "objectID": "cs_2026/notes/fair-dice-games-1.html#learning-objectives",
+    "href": "cs_2026/notes/fair-dice-games-1.html#learning-objectives",
+    "title": "Venu GVGK Raju",
+    "section": "2. Learning objectives",
+    "text": "2. Learning objectives\nBy the end of the class, students should be able to:\n\nWrite Python code to simulate a dice‑based money game many times.\n\nCompute total and average gain/loss over many games.\n\nJudge whether a game is favourable, unfavourable, or roughly fair from simulation output.\n\nModify game rules (payoffs and conditions) and test their effect."
+  },
+  {
+    "objectID": "cs_2026/notes/fair-dice-games-1.html#class-flow-with-timings",
+    "href": "cs_2026/notes/fair-dice-games-1.html#class-flow-with-timings",
+    "title": "Venu GVGK Raju",
+    "section": "3. Class flow (with timings)",
+    "text": "3. Class flow (with timings)\n\nA. Hook and intuition (10 minutes)\n\nOn the board, present a simple game:\n\n“You roll one die.\nIf you get 6, you win ₹10.\nOtherwise you lose ₹2.”\n\nAsk students:\n\n“Do you think you will make money or lose money if you play this game 100 times?”\n\nCollect a few quick guesses; note that opinions differ.\n\nExplain:\n\n“Today we’ll use Python to test such games and try to design a game that is fair — neither clearly good nor clearly bad for the player.”\n\n\n\n\nB. Recall: rolling a die in Python (5 minutes)\n\nBriefly recall code from Session 11:\nimport random\n\nroll = random.randint(1, 6)\nprint(\"You rolled:\", roll)\nAsk a student to explain what random.randint(1, 6) does in plain language.\n\nConfirm: one random integer from 1 to 6, each equally likely (for our purposes).\n\n\n\nC. Simulate one play of the money game (10 minutes)\n\nAs a whole‑class live‑coding segment, write:\nimport random\n\nroll = random.randint(1, 6)\nif roll == 6:\n    change = 10   # rupees gained\nelse:\n    change = -2   # rupees lost\n\nprint(\"Roll:\", roll)\nprint(\"Change in money:\", change)\nDiscuss:\n\nIf roll is 6 → player gains ₹10.\n\nOtherwise → player loses ₹2.\n\nchange is positive or negative depending on the outcome.\n\nLet them run this program a few times and observe different outcomes.\n\n\n\nD. Simulate many plays with a loop (15 minutes)\n\nNow move from “one play” to “many plays”:\n\nAsk: “If we want to play 100 times, how can we make Python repeat this logic?”\n\nGuide them to the idea of a for loop.\n\nLive‑code and explain line by line:\nimport random\n\ntotal_money = 0\nnum_games = 100\n\nfor i in range(num_games):\n    roll = random.randint(1, 6)\n    if roll == 6:\n        change = 10\n    else:\n        change = -2\n    total_money = total_money + change\n\nprint(\"After\", num_games, \"games, total money change:\", total_money)\n\naverage_gain = total_money / num_games\nprint(\"Average gain per game:\", average_gain)\nKey points to emphasise:\n\ntotal_money starts at 0 and collects all gains/losses.\n\nThe loop repeats the same game logic num_games times.\n\naverage_gain is a simple average, no advanced maths needed.\n\nHave students run the program and note the final total_money and average_gain.\n\nAsk: “Does the game look good or bad for the player from these numbers?”\n\n\n\n\nE. Pair activity: tweak and test different games (15 minutes)\n\nDivide students into pairs.\n\nEach pair’s task:\n\nInvent a new dice game rule, for example:\n\nGame 1: Win ₹5 if roll ≥ 5, lose ₹3 otherwise.\n\nGame 2: Win ₹12 if roll is even, lose ₹6 otherwise.\n\n\nModify the if block in the code to match their rule.\n\nRun the simulation with num_games = 100, then with num_games = 1000.\n\nRecord:\n\nTotal money change.\n\nAverage gain per game.\n\nTheir conclusion: “good for player,” “bad for player,” or “roughly fair.”\n\n\nCirculate and prompt thinking:\n\n“What happens if winning amount is very high but the chance is rare?”\n\n“What happens if losing amount is small but happens often?”\n\nEncourage them to try to make a fair game by adjusting win and loss amounts and conditions until the average gain is close to zero.\n\n\n\nF. Sharing and reflection (5 minutes)\n\nAsk 2–3 pairs to present their game:\n\nState the rule clearly.\n\nShow one run’s average gain per game.\n\nSay whether they think it is fair.\n\nFrom their examples, highlight:\n\nGames where average gain is strongly negative (bad for player).\n\nGames where average is strongly positive (bad for the house).\n\nAny game that looks roughly fair (average near 0).\n\nConnect explicitly:\n\nFairness in this informal sense = “on average, you don’t gain or lose much over many plays.”\n\nWe used randomness, loops, and conditionals to explore this."
+  },
+  {
+    "objectID": "cs_2026/notes/fair-dice-games-1.html#exit-task-homework-optional-5-minutes-if-done-in-class",
+    "href": "cs_2026/notes/fair-dice-games-1.html#exit-task-homework-optional-5-minutes-if-done-in-class",
+    "title": "Venu GVGK Raju",
+    "section": "4. Exit task / homework (optional, 5 minutes if done in class)",
+    "text": "4. Exit task / homework (optional, 5 minutes if done in class)\n\nQuick exit question (on paper or verbally):\n\n“Write a simple dice game rule in one sentence and predict whether it is good or bad for the player. Next class, we will test your game using Python.”\n\nOptional homework:\n\nStudents bring one game idea they have not tested yet.\n\nNext session, they write code to simulate it and check fairness.\n\n\nWould you like a follow‑up 1‑hour lesson that pushes this into visualisation (plotting the distribution of gains/losses or face frequencies) while keeping the math at this same level?"
+  },
+  {
+    "objectID": "cs_2026/session0.html",
+    "href": "cs_2026/session0.html",
+    "title": "Purpose and Audience",
+    "section": "",
+    "text": "This document is intended to provide notes and insights on the course CS 2026, which is aimed at senior secondary school students interested in computer science. The specific set of students in this class have studied math for their high school diploma but have not choosen math for senior secondary. That means this course is suitable for the “non-math” population out there.\nThe notes are meant to be a resource for students taking the course, as well as for educators who may want to use the course materials in their own teaching."
+  },
+  {
+    "objectID": "cs_2026/session1.html",
+    "href": "cs_2026/session1.html",
+    "title": "Session 1 Locked-in Syndrome and Algorithmic thinking",
+    "section": "",
+    "text": "We started with listing out the different things the students wanted to learn. The list included topics such as:\n\nWebsite building\nGame development\nHacking\nUsing AI tools\n\nWe spoke about algorithmic thinking and computational thinking. We refered to Chapter 1 of The power of computational thinking by Paul Curzon and Peter W. McOwan, for this.\nThen we started on Chapter 2, with the example of Bauby who has locked-in syndrome. We talked about how he was able to communicate using a system of blinking his left eye, and how this is an example of how we can use technology to help people with disabilities.\nWe discussed various ways Bauby’s left-eye blinking could be used to communicate, the various problems that arise from this and tried to come up with solutions to these problems."
+  },
+  {
+    "objectID": "cs_2026/session11.html",
+    "href": "cs_2026/session11.html",
+    "title": "Session 11 Dice Roll Simulator",
+    "section": "",
+    "text": "Simulating a dice roll and keeping track of the number of times each face appears was assigned to home work in session 10. We reviewed the logic, the pseudocode and the python implementation that each of the students came up with.\nWe then discussed the case of rolling two dice and counting the sums of the two dice. The sums can be 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 or 12. We discussed how many ways each sum can occur and what the relative frequencies of each sum are."
+  },
+  {
+    "objectID": "cs_2026/session11.html#two-dice-roll-expectations",
+    "href": "cs_2026/session11.html#two-dice-roll-expectations",
+    "title": "Session 11 Dice Roll Simulator",
+    "section": "Two dice roll expectations",
+    "text": "Two dice roll expectations\nWith coin toss, the expectation is that we will reach 50:50 over a large number of tosses.\nWith dice toss, the expectation is - each number (1-6) should appear with equal frequency over a large number of rolls.\nWhen you toss two dice, what happens?\nThe possible sums are - 2,3,4,5,6,7,8,9,10,11,12 The different ways these sums can occur are:\n2 - 1 way (1,1) 3 - 2 ways (1,2), (2,1) 4 - 3 ways (1,3), (2,2), (3,1) 5 - 4 ways (1,4), (2,3), (3,2), (4,1) 6 - 5 ways (1,5), (2,4), (3,3), (4,2), (5,1) 7 - 6 ways (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) 8 - 5 ways (2,6), (3,5), (4,4 ), (5,3), (6,2) 9 - 4 ways (3,6), (4,5), (5,4), (6,3) 10 - 3 ways (4,6), (5,5), (6,4) 11 - 2 ways (5,6), (6,5)\n12 - 1 way (6,6)\nRelative frequencies of sums of two dice: - 2 - 1/36\n- 3 - 2/36 - 4 - 3/36 - 5 - 4/36 - 6 - 5/36\n- 7 - 6/36 - 8 - 5/36 - 9 - 4/36 - 10 - 3/36 - 11 - 2/36 - 12 - 1/36"
+  },
+  {
+    "objectID": "cs_2026/session10.html",
+    "href": "cs_2026/session10.html",
+    "title": "Session 10 Coin Toss Simulator",
+    "section": "",
+    "text": "A coin toss simulator is a simple way to introduce randomness in programming. In computational thinking, simulation means defining a random process, repeating it many times, and collecting the outcomes to study a pattern.\nThis exercise fits well after guessing games and prime number programs because it still uses variables, loops, and conditionals, but it introduces a new idea: the same program can produce different valid results on different runs because chance is involved."
+  },
+  {
+    "objectID": "cs_2026/session10.html#input",
+    "href": "cs_2026/session10.html#input",
+    "title": "Session 10 Coin Toss Simulator",
+    "section": "Input",
+    "text": "Input\n\nA positive integer (N), representing the number of coin tosses."
+  },
+  {
+    "objectID": "cs_2026/session10.html#output",
+    "href": "cs_2026/session10.html#output",
+    "title": "Session 10 Coin Toss Simulator",
+    "section": "Output",
+    "text": "Output\n\nNumber of Heads.\nNumber of Tails.\nFraction of Heads.\nFraction of Tails."
+  },
+  {
+    "objectID": "cs_2026/session10.html#example",
+    "href": "cs_2026/session10.html#example",
+    "title": "Session 10 Coin Toss Simulator",
+    "section": "Example",
+    "text": "Example\nIf (N = 10), one run of the program might produce 6 Heads and 4 Tails, while another run with the same (N) might produce 3 Heads and 7 Tails because the outcomes are random."
+  },
+  {
+    "objectID": "cs_2026/session10.html#why-do-results-change-every-run",
+    "href": "cs_2026/session10.html#why-do-results-change-every-run",
+    "title": "Session 10 Coin Toss Simulator",
+    "section": "Why do results change every run?",
+    "text": "Why do results change every run?\nA simulation of a fair coin toss uses randomness, so the exact sequence of Heads and Tails is different each time the program is executed. This is what makes simulation useful for studying chance processes."
+  },
+  {
+    "objectID": "cs_2026/session10.html#why-do-the-fractions-move-toward-0.5",
+    "href": "cs_2026/session10.html#why-do-the-fractions-move-toward-0.5",
+    "title": "Session 10 Coin Toss Simulator",
+    "section": "Why do the fractions move toward 0.5?",
+    "text": "Why do the fractions move toward 0.5?\nFor a fair coin, the long-run proportion of Heads is expected to be close to 0.5, and simulations with larger numbers of tosses tend to produce empirical proportions closer to that value. Small samples can vary a lot, but larger samples are usually more stable."
+  },
+  {
+    "objectID": "cs_2026/session10.html#which-programming-ideas-are-revised-here",
+    "href": "cs_2026/session10.html#which-programming-ideas-are-revised-here",
+    "title": "Session 10 Coin Toss Simulator",
+    "section": "Which programming ideas are revised here?",
+    "text": "Which programming ideas are revised here?\nThis program reinforces several core ideas:\n\nvariables and assignment;\ncounters;\nloops;\nconditional statements;\ninput and output;\nbasic numerical calculation."
+  },
+  {
+    "objectID": "cs_2026/session10.html#what-edge-cases-should-be-discussed",
+    "href": "cs_2026/session10.html#what-edge-cases-should-be-discussed",
+    "title": "Session 10 Coin Toss Simulator",
+    "section": "What edge cases should be discussed?",
+    "text": "What edge cases should be discussed?\nIf the user enters 0, the program attempts to divide by zero while calculating fractions, so the class should either require (N &gt; 0) or add validation before continuing. This is a useful moment to discuss why programs must handle invalid input carefully."
+  },
+  {
+    "objectID": "cs_2026/session3.html",
+    "href": "cs_2026/session3.html",
+    "title": "Session 3 Tic-tac-toe 1",
+    "section": "",
+    "text": "We started playing tic-tac-toe and started noticing which approaches result in a win and which result in a loss or draw. Soon, students were able to see that there is a method to the madness. We started to think of the choices available at each step and how each choice leads to further choices. We started to identify how many possible choices are there in each step. For example, the first step can be at any of the 9 boxes, the second step can be at any of the remaining 8 boxes, and so on.\nOnce the first move is made, there are 8 possible moves left, and then 7, and so on. So the total number of positions to analyse would be 9!, which is a very big number.\nWe then started to think about how we can reduce the number of positions to analyse by looking at the symmetries in the game. For example, if we rotate the board, we can see that some positions are equivalent to others. This reduces the number of unique positions we need to consider.\nLooking at it this way, the first move has only three choices - center, corner, or edge. Once the first move takes the center, there are only 2 possible moves - edge or corner.\nWe started drawing up the decision trees for each of the possible moves. Completing the decision trees is left for homework and further discussion."
+  },
+  {
+    "objectID": "tir/ellora-how-history-looks.html",
+    "href": "tir/ellora-how-history-looks.html",
+    "title": "Ellora - and how history looks like",
+    "section": "",
+    "text": "That’s what history looks like. Real history invites you to examine your own assumptions and recognise that there are surprises everywhere.\nPeople, and therefore events, do not unfold the way we expect them to. Real stories are seldom as linear as fictional ones.\nhttps://open.substack.com/pub/travelsofsamwise/p/the-absolute-insanity-of-ellora?utm_source=share&utm_medium=android&r=led3q"
+  },
+  {
+    "objectID": "tir/history/indias-prettiest-library.html",
+    "href": "tir/history/indias-prettiest-library.html",
+    "title": "India’s Prettiest Library - Rampur",
+    "section": "",
+    "text": "It is in Rampur. It was built by an Afghan Rohilla chief. Also beautiful tombs.\nhttps://open.substack.com/pub/travelsofsamwise/p/the-rise-of-rampur?utm_source=share&utm_medium=android&r=led3q"
+  },
+  {
+    "objectID": "tir/philosophy/bachelor-men.html",
+    "href": "tir/philosophy/bachelor-men.html",
+    "title": "Most philosophers were bachelor men",
+    "section": "",
+    "text": "Mary Midgley\nNone of these [great] philosophers … had any experience of living with women or children, which is, after all, quite an important aspect of human life. I wrote [‘Rings and Books’] drawing attention to this statistic and asking whether it might not account for a certain over-abstractness, a certain remoteness from life, in the European philosophical tradition.\nDescartes concludes that the only thing I can know with certainty is that I am thinking (and therefore that I exist) – or, as philosophers know it, Cogito, ergo sum. Summarised by Midgley: ‘Here I am, said Descartes, a soul, an isolated thinker.’ But, despite its prominence in canonical histories of Western thought, Midgley was not overly impressed by this argument. In fact, she thinks this Cartesian move is born from the philosophical ‘adolescence’ that Descartes never grew up from. As she puts it:\nPeople leading a normal domestic life would not, I believe, have fallen into this sort of mistake. They would have taken alarm at the attitude to other people which follows from Descartes’s position. For Descartes, other people’s existence has to be inferred, and the inference is a most insecure one … Now I rather think that nobody who was playing a normal active part among other human beings could regard them like this. But what I am quite sure of is that for anybody living intimately with them as a genuine member of a family … their consciousness would be every bit as certain as his own. Midgley’s use of ‘normal’ here is no doubt reminiscent of a dated view about the nuclear family hailing from a time when many women carried out most of the domestic duties. But even aside from this, Midgley’s claim is important. As knowers, Midgley sees many of us (if not all) as already entangled in our close relations with others. From here, we can learn about the world, including the certain existence of other people. And Midgley thought that the experiences of those caring for children, in particular, could help illuminate the extent to which we really are entangled with one another’s existences.\nhttps://aeon.co/essays/for-mary-midgley-philosophy-must-be-entangled-in-daily-life?fbclid=IwY2xjawIc6vpleHRuA2FlbQIxMQABHQKeYu8vC1lBZ1mZkMlw8B10faQOdrE-n0uQeCgqs_LSUsIubWmTHPH9CA_aem_LOgQHiS_cT1zueyire6fDg"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Profile Summary",
+    "section": "",
+    "text": "Profile Summary\nI am an educator, teaching coach, writer and a nonprofit leader, dedicated to transforming education through inclusion, empathy, and learner-centered practices. Drawing from diverse background in engineering, management, and education, as well as personal experience as a parent of a child with autism, I champion the rights of neurodivergent learners and promote holistic, context-sensitive approaches to education for everyone.\nI am a strong advocate for neurodiversity, inclusive education, and non-standardized learning. I believe we need to create and promote accessible alternatives to test-driven systems, emphasizing emotional development, autonomy, and real-world engagement.\nCurrently, I lead Farm Hill Education Trust (FHT), a non-profit working in the areas of education, neurodiversity and community. Through FHT, we run Subodha Learning Community, a homeschool support center and Sambhavam Center for Autism, an early intervention center, in Bangalore. We also run Farm Hill Learning, a neurodiverse, close to nature learning community, near Hosur.\nI write and translate children’s literature in Telugu and English. I also write educational content promoting empathy, inclusion, and educational reform.\nI envision a world where education systems celebrate diversity and uphold the dignity of every learner. My work aims to create safe, affirming spaces for children often underserved by mainstream models, paving the way for more compassionate and effective approaches to learning.\nFormerly, I was lecturer in electrical engineering, a management consultant and an ed-tech product manager. I have an MBA from IIM Bangalore and I am currently (2024-26) pursuing an M.A. in Education at Tata Institute of Social Sciences (TISS) with a focus on philosophy and sociology of education.\n\n\nExperience\n\n\n\n\n        \n            Farm Hill Education Trust\n            Oct 2018 - Present\n            Founder Trustee\n           \n         \n    Farm Hill Education Trust is a non-profit working in the areas of education, neurodiversity and community.  Through FHT, we run Subodha Learning Community, a homeschool support center and  Sambhavam Center for Autism, an early intervention center, in Bangalore. We also run Farm Hill Learning, a neurodiverse, close to nature learning community, near Hosur.\nFarm Hill Learning is an inclusive, neuro-diverse community of teachers, parents and  students learning together in a close to nature setting. Since 2018,  we have acquired a farm and built the infrastructure and the organization  needed to run a learning community. As of 2025, we work with a neurodiverse  population of about 15 families. At Farm Hill Learning, I teach Mathematics, Economics, Physics and History across grade levels.  I also recruit teachers and coach teachers and parents. \nSubodha Learning Community is a support center for learners on the autism spectrum, based in Bangalore.  At Subodha, we support neurodiverse learners and their families through education, employment and life. \nSambhavam is an early intervention center for autism, based in Bangalore. At Sambhavam, we work with families living with autism, delivering early intervention, counselling, and consulting.\nAt Farm Hill, I raise funds, recruit, train and manage the academic as well as support  teams, and run the overall operations of the organization.\n\n \n\n\n        \n            Sambhavam Center for Autism\n            June 2016 - March 2025\n            Director\n           \n         \n    At Sambhavam, we work with about 30 families living with autism every year,  delivering early intervention, counselling, and consulting.  I have been responsible for recruiting, training, team management,  performance monitoring, customer experience management, parent counselling and consulting.  As a founder, I play an active part in other operational and financial aspects as well.  As of April 2025, Sambhavam is run as a project of Farm Hill Education Trust,\n and I continue to be a director of Sambhavam. \n\n \n\n\n        \n            Azim Premji Foundation\n            May 2023 - March 2025\n            Consultant\n           \n         \n    Worked with APF, initiating a project to develop a comprehensive, in-depth guide as well as usable resources addressing the needs of various stakeholders living and working with autism - people on the spectrum, parents, therapists, teachers, civil society organizations etc. As of April 2025, the project is awarded to Farm Hill Education Trust under a grant and I continue to work on it. \n\n \n\n\n        \n            RiVER\n            Sept 2019 - Jan 2020\n            Consultant (Project based)\n           \n         \n    Rishi Valley Institute for Educational Resources (RiVER) partnered with  the Government of Andhra Pradesh (GoAP) to help them implement the Multi-Grade Multi-Level (MGML) program in select government schools, under Ananda Lahari  Abhyasana (ALA) program. As consultant – evaluation and monitoring, I visited  government schools across the state, interacted with various project  teams and delivered periodic reports on project status  and provided implementation feedback for the various project agencies. \n\n \n\n\n        \n            TIDE Learning Pvt. Ltd.\n            Jan 2017 – Jan 2019\n            Consultant (Freelance)\n           \n         \n    TIDE Learning is focused on creating new learning experiences in primary education. TIDE works with large scale systems like the government schools in India.   At TIDE, I worked across areas like strategy, product design and operations, bringing together my experience as a consultant, manager, and educator.\n\n \n\n\n        \n            New Rubric Solutions\n            Dec 2011 - April 2016\n            Head - Product Management\n           \n         \n    I joined as a core team member at this start-up. My focus for the first year was on building the product, especially extending the firm's IP based on some of the best thinking in learning, pedagogy, and assessments, and creating the content needed to bring this IP to work in real life settings like schools. By the end of the first year, we took the product to the market.  Over the next four years, I sold the product, interfaced with the customers, ran an operations team, recruited, trained, and managed people in the operations team and sales team and so on. I left in 2016 to start my own venture.\n\n \n\n\n        \n            Feedback INFRA\n            April 2011 - Nov 2011\n            Consultant\n           \n         \n    I joined back as an Engagement Manager, managing a team of consultants,  responsible for business development, project execution, delivery,  and client interfacing. My work during this period was focused on Education sector,  in addition to urban water sector and logistics.  Towards the end of 2011, I left to join a start up in education space.\n\n \n\n\n        \n            IMS Learning Resources\n            May 2010 - March 2011\n            Center Manager\n           \n         \n    Initially, I worked as a part time faculty member, teaching verbal ability classes over the weekends to CAT and GRE aspirants. I also guided CAT selected candidates in their interview preparation.  Towards the end of the year, I joined as a Center Manager  at the IMS Koramangala center. In 2011, I went back to consulting.\n\n \n\n\n        \n            Feedback Ventures\n            June 2007 - April 2010\n            Consultant\n           \n         \n    I joined as a frontline consultant and over the next two years,  I did the staple work of consultants – entry strategies, project feasibility,  bid advisory etc. I became the go-to person for urban infrastructure space,  as most of my work was in projects related to urban water supply, sanitation  and solid waste management. I also worked on PPP projects and Swiss challenges.   In 2010, I left consulting to be an Autism Dad.\n\n \n\n\n        \n            Vardhaman Engineering College\n            July 2004 – April 2005\n            Assistant Professor\n           \n         \n    I taught theory and practical courses in Control Systems, Instrumentation and Electrical Machines. I was also a member of the examination branch. While working at Vardhaman, I completed half (3 semesters) of the M.Tech. In 2005, I took CAT and secured an admission to the IIM Bangalore.\n\n \n\n\n        \n            HRD Engineering College\n            July 2002 - June 2004\n            Assistant Professor\n           \n         \n    As the first person to join the Department of EEE at HRD Engineering College, I had the opportunity to set up the department and plan the course work. I set up an Electrical Machines lab starting from scratch. I taught theory and practical courses in Network Theory and Electrical Machines.\n\n \n\n    \n\n\nNo matching items\n\n\n\n\nEducation\n\n\n\n\n        \n            Tata Institute of Social Sciences\n            2024 -\n            M.A. (El.Ed)\n           \n         \n    \n \n\n\n        \n            IIM Bangalore\n            2005-07\n            PGDM\n           \n         \n    \n \n\n\n        \n            Osmania University\n            1998 - 2002\n            B.E.\n           \n         \n    \n \n\n\n        \n            Jawahar Navodaya Vidyalaya\n            1990 - 95\n            Schooling\n           \n         \n    \n \n\n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "tir/engineering-economic-exploitation.html",
+    "href": "tir/engineering-economic-exploitation.html",
+    "title": "How Engineering Graduates are being exploited",
+    "section": "",
+    "text": "The following is written and shared by Peri Maheswar, who runs careers360. This goes beyond our usual complaints about the education and employment system and highlights real economic exploitation in the neo-liberal education system.\nThis is the sordid saga of India’s fresh engineering graduates being underpaid. This was an active collusion between the big tech companies like Infosys, TCS, Accenture, Cognizant etc and the engineering colleges. The negotiation was always about the placement % than the salary package. Read this explosive story and the thread.\n\nBetween 2010 and 2025, India’s major IT companies — TCS, Infosys, Accenture, Cognizant, and Wipro — have seen a huge rise in employee numbers, rising between 116% to 291% in these top 5 companies in the IT Services segment.\nHowever, the salary offered in campus placements across engineering colleges was constant in 15 years. The salary of TCS grew from 3.15 lacs in 2007 to Rs.3.36 lacs in 2024. The salary at Infosys grew from Rs. 3.25 lacs in 2010 to Rs.3.6 lacs in 2024.\nIndexed to inflation, the real income in the hands of fresh engineering graduates fell by 60% in TCS and 49% in Infosys. Factoring in the inflation, it should have been 7.89 lacs in TCS and 6.40 lacs in Infosys.\nWith drop in salaries in real terms, the companies increased recruitment and had more manpower for new contracts, thus increasing revenues with no increase in cost. The profits soared. The profits from 2010 to 2025 for these companies were as follows:\nInfosys went up from ₹5,755 crore to ₹26,750 crore TCS profits shot up from ₹7,001 crore to ₹48,553 crore Wipro profits went up from ₹4,003 crore to ₹13,500 crore Cognizant shot up from $734 million to $2.5 billion Accenture grew from $1.78 billion to $7.68 billion\nWhile all this was happening, the companies also started cutting employee recruitment so that scarcity would create fear. The employee count across all the top 5 companies fell in 2024. Infosys count fell from 3,43,234 to 3,17,240, a drop of 25,994. TCS headcount fell from 6,14,795 to 6,01,546, a fall of 13,249 Wipro fell from 2,48,813 to 2,34,054, a fall of 14,759 Cognizant headcount fell from 3,47,700 to 3,36,800, a fall of 10,900\nThe educational institution also had to have its cut. Showcasing increasing placements ( in numbers and not in median salary), they started charging higher fees. The fees charged went up by about 327% in these 15 years across top 10 private institutions. The fees at government colleges (IITs) went up by 400%.\nAll this increased the payback period for the student. An B.Tech costing about 4 lacs in 2007 costs Rs.20 lacs in 2025. With salary remaining constant and a bank loan with interest becoming the only way, the payback for a student which was an year in 2007-10 is today 7 to 8 years.\nEvery one makes money. The big tech companies revenues multiples. Profits soared. The educational institutions increased capacity and now charges 4 times more than 15 years back. The student is burdened with a loan and an EMIT with interest to pay.\n\nThis is the sordid saga of India and its demographic dividend. Where the government abdicated its responsibility, the big companies exploited the middle class vulnerability and the educational institutions joined the party by increasing intakes while keeping the salary constant.\nThe students and parents now will have a loan on themselves with a payback period of 6 to 8 years. That too, if they are lucky to have a job after the increased intakes."
+  },
+  {
+    "objectID": "tir/sociology/ravidas-begumpura.html",
+    "href": "tir/sociology/ravidas-begumpura.html",
+    "title": "Begumpura by Sant Ravidas",
+    "section": "",
+    "text": "Born as a chamar, Ravidas saw himself as a “tanner now set free”. Preaching social equality and the assertion of identity, his two pronged approach of mystic realisation and political revolution became a powerful movement with several followers.\n“aat-paat ke pher mah urjhai rahe sabh log Mannukhta ku khat hai Ravidas jat ka rog\nEveryone is trapped in the caste-system Ravidas, humanity is being eaten up by the disease called caste”\nThe regal realm with the sorrowless name: they call it Begumpura, a place with no pain, No taxes or cares, none owns property there, no wrongdoing, worry, terror, or torture. Oh, my brother, I’ve come to take it as my own, my distant home where everything is right. That imperial kingdom is rich and secure, where none are third or second – all are one; They do this or that, they walk where they wish, they stroll through fabled palaces unchallenged. Oh, says Ravidas, a tanner now set free, those who walk beside me are my friends.\nGail Omvedt in her book, Seeking Begumpura, writes\n“It (begumpura poem) was an expression, in the early modern age, of a utopia, perhaps the first one in Indian literature. In some ways it seems to stand alone, yet it was a harbinger of the kind of social vision that would underlie all the later struggles and theorizing of anticaste inetllectuals. Begumpura was, for Ravidas, an imagined city, without geographical location, without a history: it was to be a later task to build it in space and time.”\nhttps://poetly.substack.com/p/begumpura"
+  },
+  {
+    "objectID": "tir/history/indian-syncretism.html",
+    "href": "tir/history/indian-syncretism.html",
+    "title": "A Sanskrit Bible story was written in Ayodhya",
+    "section": "",
+    "text": "The point of all this is not to eulogise the bonhomie of premodern elites – Hindu, Christian, Muslim, Persianate or Sanskritic. What I want to argue is that syncretism and tolerance are not an inbuilt feature of Indian civilisation, which we can take for granted, pay lip service to, or chip away at for political profit. Despite many efforts at persecution and conversion, syncretism developed again and again through serious political and intellectual commitment. Invariably in Indian history, this has proved worth the effort, because it allowed for the influx, development, and spread of invigorating new ideas and possibilities — ideas uniquely Indian.\nthe print article link\nanirudh kanisetti\nAfter Timur Left: Culture and Circulation in Fifteenth-Century North India, by historian Aparna Kapadia"
+  },
+  {
+    "objectID": "tir/index.html",
+    "href": "tir/index.html",
+    "title": "Today I Read",
+    "section": "",
+    "text": "Jun 8, 2025\n            \n                \n                    Education\n                \n            \n        \n        How Engineering Graduates are being exploited\n    \n\n    \n        \n            Feb 27, 2025\n            \n                \n                    History\n                \n            \n        \n        Ellora - and how history looks like\n    \n\n    \n        \n            Feb 15, 2025\n            \n                \n                    philosophy\n                \n            \n        \n        Most philosophers were bachelor men\n    \n\n    \n        \n            Feb 5, 2025\n            \n                \n                    history\n                \n            \n        \n        India's Prettiest Library - Rampur\n    \n\n    \n        \n            Feb 5, 2025\n            \n                \n                    sociology\n                \n            \n        \n        Begumpura by Sant Ravidas\n    \n\n    \n        \n            Dec 27, 2024\n            \n                \n                    history\n                \n            \n        \n        A Sanskrit Bible story was written in Ayodhya\n    \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "cs_2026/session7.html",
+    "href": "cs_2026/session7.html",
+    "title": "Session 7 Computer Guesses the number",
+    "section": "",
+    "text": "We installed python and learned how to write and run a program."
+  },
+  {
+    "objectID": "cs_2026/session7.html#what-to-point-out-in-the-pseudocode",
+    "href": "cs_2026/session7.html#what-to-point-out-in-the-pseudocode",
+    "title": "Session 7 Computer Guesses the number",
+    "section": "What to point out in the pseudocode",
+    "text": "What to point out in the pseudocode\n\nThe data in the algorithm is low, high, mid, and answer.\nThe repetition is the REPEAT step.\nThe decisions are the IF / ELSE IF branches.\nThe computer does not guess randomly; it uses the middle of the remaining range each time."
+  },
+  {
+    "objectID": "cs_2026/session7.html#what-to-point-out-in-the-python-code",
+    "href": "cs_2026/session7.html#what-to-point-out-in-the-python-code",
+    "title": "Session 7 Computer Guesses the number",
+    "section": "What to point out in the Python code",
+    "text": "What to point out in the Python code\n\ndef play_binary_search(): defines a function, so the whole game can be referred to by one name.\nlow = 1 and high = 100 store the current possible range.\nwhile True: is the loop that keeps the game going.\nmid = (low + high) // 2 computes the middle of the current range.\nThe if / elif / else structure updates the range based on the user’s answer.\nbreak stops the loop when the number is found."
+  },
+  {
+    "objectID": "cs_2026/session14.html",
+    "href": "cs_2026/session14.html",
+    "title": "Session 14 Revision of plots and primes",
+    "section": "",
+    "text": "We revised the math behind the prime number problem and the pseudocode for the program. We also discussed how to plot the results of a simulation using matplotlib. Specifically, we looked at how to plot a bar graph, a line graph, both on the same graph, and how to draw subplots.\nHere is an example program that uses a dictionary to plot a line and bars on the same graph.\n\nimport matplotlib.pyplot as plt\n\n# Create a simple dictionary with categories and values\ndata = {\n    \"Apples\": 10,\n    \"Bananas\": 15,\n    \"Cherries\": 7,\n    \"Dates\": 12,\n    \"Elderberries\": 5,\n}\n\n# Extract keys and values for plotting\ncategories = list(data.keys())\nvalues = list(data.values())\n\n# Create the bar chart\nplt.figure(figsize=(8, 5))\nplt.bar(categories, values, color='skyblue', label='Value (bar)')\n\n# Add a line plot for the same data\nplt.plot(categories, values, color='darkorange', marker='o', linestyle='-', label='Value (line)')\n\n# Add labels and title\nplt.xlabel('Category')\nplt.ylabel('Value')\nplt.title('Dictionary Values: Bar and Line Plot')\nplt.legend()\nplt.grid(axis='y', linestyle='--', alpha=0.5)\n\n# Show the plot\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nHomework for the next session is to generate a program for rock paper scissors."
+  },
+  {
+    "objectID": "cs_2026/session5.html",
+    "href": "cs_2026/session5.html",
+    "title": "Session 5 Binary and Hex; Sorting - selection and insertion",
+    "section": "",
+    "text": "Discuss the decision trees for guessing the alphabet. See how the yes/no decisions at each series of nodes leading to each letter can be represented using binary numbers.\nIntroduce the concept of sorting and the problem of sorting using the resources available at https://www.csfieldguide.org.nz/en/chapters/algorithms/sorting/\n\nSumming Natural Numbers and the Gaussian Formula\nThe session begins with a method for summing numbers from 1 to 100, noting it is an arithmetic progression. The technique involves writing the numbers in forward order (1, 2, 3… 100) and then in reverse order (100, 99… 1) beneath them. Adding each pair results in 101. Since there are 100 such pairs, the total sum for both rows is \\(101 \\times 100\\), and dividing by two gives the sum for a single sequence. This leads to the general formula for the sum of the first \\(n\\) natural numbers: \\(n(n + 1) / 2\\). This method was famously devised by the mathematician Gauss when he was in the fourth grade.\n\n\nBinary Representation and Computer Science\nThe discussion then transitions to decision trees for guessing an alphabet, where each decision (yes or no) can be represented by 1 or 0. This binary search allows every letter or decision to have a unique representation in ones and zeros. This is fundamentally why binary is critical in computer science; everything from pixels on a screen to lines in space can be boiled down to these two states. Systems like ASCII use specific binary codes for every letter.\n\n\nBase Systems (Number Bases)\nThe session explores different numerical bases:\n\nBase 2 (Binary): Uses only 0 and 1.\nBase 8 (Octal): Uses digits 0 to 7; the number 8 is represented as “10”.\nBase 5: Uses digits 0 to 4; for example, the number 25 is written as “100”. To represent 72 in base 5, it is calculated as “242” (\\(2 \\times 25 + 4 \\times 5 + 2 \\times 1\\)).\nBase 16 (Hexadecimal): Uses digits 0 to 9 and letters A to F to represent 10 to 15. Place values increase from right to left (1, 16, 256…). For instance, “02F” in hexadecimal is 47 (\\(2 \\times 16 + 15\\)).\nBase 12: Historically used for time (24 hours, 60 minutes) and circles (360 degrees). This system was used by the Sumerians and Acadians roughly 4,000 years ago.\n\n\n\nAlgorithmic Sorting and Comparisons\nThe lecture concludes with an interactive sorting problem using boxes of different weights. Because computers typically perform one operation at a time, the goal is to sort the items using the least number of comparisons.\n\nSelection Sort (Simple Search): This involves comparing every item against every other item, which is less efficient.\nInsertion Sort: This involves taking a new item and inserting it into its correct relative position among already sorted items.\n\nBest Case: If the items are already in order, it takes \\(n - 1\\) comparisons.\nWorst Case: If items are in perfect reverse order, it follows the sum of natural numbers sequence, resulting in \\(n(n - 1) / 2\\) comparisons.\nFor eight boxes, the lowest bound is 7 comparisons and the highest is 28."
   },
   {
     "objectID": "cs_2026/session8.html",
@@ -1743,186 +1974,11 @@
     "text": "5. The game logic and the board display are separate\nThis is important.\n\nprint_board only displays.\ncheck_winner only checks rules.\nget_move only handles input.\n\nKeeping these separate makes the program clean."
   },
   {
-    "objectID": "cs_2026/session5.html",
-    "href": "cs_2026/session5.html",
-    "title": "Session 5 Binary and Hex; Sorting - selection and insertion",
+    "objectID": "cs_2026/index.html",
+    "href": "cs_2026/index.html",
+    "title": "CS 2026",
     "section": "",
-    "text": "Discuss the decision trees for guessing the alphabet. See how the yes/no decisions at each series of nodes leading to each letter can be represented using binary numbers.\nIntroduce the concept of sorting and the problem of sorting using the resources available at https://www.csfieldguide.org.nz/en/chapters/algorithms/sorting/\n\nSumming Natural Numbers and the Gaussian Formula\nThe session begins with a method for summing numbers from 1 to 100, noting it is an arithmetic progression. The technique involves writing the numbers in forward order (1, 2, 3… 100) and then in reverse order (100, 99… 1) beneath them. Adding each pair results in 101. Since there are 100 such pairs, the total sum for both rows is \\(101 \\times 100\\), and dividing by two gives the sum for a single sequence. This leads to the general formula for the sum of the first \\(n\\) natural numbers: \\(n(n + 1) / 2\\). This method was famously devised by the mathematician Gauss when he was in the fourth grade.\n\n\nBinary Representation and Computer Science\nThe discussion then transitions to decision trees for guessing an alphabet, where each decision (yes or no) can be represented by 1 or 0. This binary search allows every letter or decision to have a unique representation in ones and zeros. This is fundamentally why binary is critical in computer science; everything from pixels on a screen to lines in space can be boiled down to these two states. Systems like ASCII use specific binary codes for every letter.\n\n\nBase Systems (Number Bases)\nThe session explores different numerical bases:\n\nBase 2 (Binary): Uses only 0 and 1.\nBase 8 (Octal): Uses digits 0 to 7; the number 8 is represented as “10”.\nBase 5: Uses digits 0 to 4; for example, the number 25 is written as “100”. To represent 72 in base 5, it is calculated as “242” (\\(2 \\times 25 + 4 \\times 5 + 2 \\times 1\\)).\nBase 16 (Hexadecimal): Uses digits 0 to 9 and letters A to F to represent 10 to 15. Place values increase from right to left (1, 16, 256…). For instance, “02F” in hexadecimal is 47 (\\(2 \\times 16 + 15\\)).\nBase 12: Historically used for time (24 hours, 60 minutes) and circles (360 degrees). This system was used by the Sumerians and Acadians roughly 4,000 years ago.\n\n\n\nAlgorithmic Sorting and Comparisons\nThe lecture concludes with an interactive sorting problem using boxes of different weights. Because computers typically perform one operation at a time, the goal is to sort the items using the least number of comparisons.\n\nSelection Sort (Simple Search): This involves comparing every item against every other item, which is less efficient.\nInsertion Sort: This involves taking a new item and inserting it into its correct relative position among already sorted items.\n\nBest Case: If the items are already in order, it takes \\(n - 1\\) comparisons.\nWorst Case: If items are in perfect reverse order, it follows the sum of natural numbers sequence, resulting in \\(n(n - 1) / 2\\) comparisons.\nFor eight boxes, the lowest bound is 7 comparisons and the highest is 28."
-  },
-  {
-    "objectID": "cs_2026/session14.html",
-    "href": "cs_2026/session14.html",
-    "title": "Session 14 Revision of plots and primes",
-    "section": "",
-    "text": "We revised the math behind the prime number problem and the pseudocode for the program. We also discussed how to plot the results of a simulation using matplotlib. Specifically, we looked at how to plot a bar graph, a line graph, both on the same graph, and how to draw subplots.\nHere is an example program that uses a dictionary to plot a line and bars on the same graph.\n\nimport matplotlib.pyplot as plt\n\n# Create a simple dictionary with categories and values\ndata = {\n    \"Apples\": 10,\n    \"Bananas\": 15,\n    \"Cherries\": 7,\n    \"Dates\": 12,\n    \"Elderberries\": 5,\n}\n\n# Extract keys and values for plotting\ncategories = list(data.keys())\nvalues = list(data.values())\n\n# Create the bar chart\nplt.figure(figsize=(8, 5))\nplt.bar(categories, values, color='skyblue', label='Value (bar)')\n\n# Add a line plot for the same data\nplt.plot(categories, values, color='darkorange', marker='o', linestyle='-', label='Value (line)')\n\n# Add labels and title\nplt.xlabel('Category')\nplt.ylabel('Value')\nplt.title('Dictionary Values: Bar and Line Plot')\nplt.legend()\nplt.grid(axis='y', linestyle='--', alpha=0.5)\n\n# Show the plot\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nHomework for the next session is to generate a program for rock paper scissors."
-  },
-  {
-    "objectID": "cs_2026/session7.html",
-    "href": "cs_2026/session7.html",
-    "title": "Session 7 Computer Guesses the number",
-    "section": "",
-    "text": "We installed python and learned how to write and run a program."
-  },
-  {
-    "objectID": "cs_2026/session7.html#what-to-point-out-in-the-pseudocode",
-    "href": "cs_2026/session7.html#what-to-point-out-in-the-pseudocode",
-    "title": "Session 7 Computer Guesses the number",
-    "section": "What to point out in the pseudocode",
-    "text": "What to point out in the pseudocode\n\nThe data in the algorithm is low, high, mid, and answer.\nThe repetition is the REPEAT step.\nThe decisions are the IF / ELSE IF branches.\nThe computer does not guess randomly; it uses the middle of the remaining range each time."
-  },
-  {
-    "objectID": "cs_2026/session7.html#what-to-point-out-in-the-python-code",
-    "href": "cs_2026/session7.html#what-to-point-out-in-the-python-code",
-    "title": "Session 7 Computer Guesses the number",
-    "section": "What to point out in the Python code",
-    "text": "What to point out in the Python code\n\ndef play_binary_search(): defines a function, so the whole game can be referred to by one name.\nlow = 1 and high = 100 store the current possible range.\nwhile True: is the loop that keeps the game going.\nmid = (low + high) // 2 computes the middle of the current range.\nThe if / elif / else structure updates the range based on the user’s answer.\nbreak stops the loop when the number is found."
-  },
-  {
-    "objectID": "tir/index.html",
-    "href": "tir/index.html",
-    "title": "Today I Read",
-    "section": "",
-    "text": "Jun 8, 2025\n            \n                \n                    Education\n                \n            \n        \n        How Engineering Graduates are being exploited\n    \n\n    \n        \n            Feb 27, 2025\n            \n                \n                    History\n                \n            \n        \n        Ellora - and how history looks like\n    \n\n    \n        \n            Feb 15, 2025\n            \n                \n                    philosophy\n                \n            \n        \n        Most philosophers were bachelor men\n    \n\n    \n        \n            Feb 5, 2025\n            \n                \n                    history\n                \n            \n        \n        India's Prettiest Library - Rampur\n    \n\n    \n        \n            Feb 5, 2025\n            \n                \n                    sociology\n                \n            \n        \n        Begumpura by Sant Ravidas\n    \n\n    \n        \n            Dec 27, 2024\n            \n                \n                    history\n                \n            \n        \n        A Sanskrit Bible story was written in Ayodhya\n    \n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "tir/history/indian-syncretism.html",
-    "href": "tir/history/indian-syncretism.html",
-    "title": "A Sanskrit Bible story was written in Ayodhya",
-    "section": "",
-    "text": "The point of all this is not to eulogise the bonhomie of premodern elites – Hindu, Christian, Muslim, Persianate or Sanskritic. What I want to argue is that syncretism and tolerance are not an inbuilt feature of Indian civilisation, which we can take for granted, pay lip service to, or chip away at for political profit. Despite many efforts at persecution and conversion, syncretism developed again and again through serious political and intellectual commitment. Invariably in Indian history, this has proved worth the effort, because it allowed for the influx, development, and spread of invigorating new ideas and possibilities — ideas uniquely Indian.\nthe print article link\nanirudh kanisetti\nAfter Timur Left: Culture and Circulation in Fifteenth-Century North India, by historian Aparna Kapadia"
-  },
-  {
-    "objectID": "tir/sociology/ravidas-begumpura.html",
-    "href": "tir/sociology/ravidas-begumpura.html",
-    "title": "Begumpura by Sant Ravidas",
-    "section": "",
-    "text": "Born as a chamar, Ravidas saw himself as a “tanner now set free”. Preaching social equality and the assertion of identity, his two pronged approach of mystic realisation and political revolution became a powerful movement with several followers.\n“aat-paat ke pher mah urjhai rahe sabh log Mannukhta ku khat hai Ravidas jat ka rog\nEveryone is trapped in the caste-system Ravidas, humanity is being eaten up by the disease called caste”\nThe regal realm with the sorrowless name: they call it Begumpura, a place with no pain, No taxes or cares, none owns property there, no wrongdoing, worry, terror, or torture. Oh, my brother, I’ve come to take it as my own, my distant home where everything is right. That imperial kingdom is rich and secure, where none are third or second – all are one; They do this or that, they walk where they wish, they stroll through fabled palaces unchallenged. Oh, says Ravidas, a tanner now set free, those who walk beside me are my friends.\nGail Omvedt in her book, Seeking Begumpura, writes\n“It (begumpura poem) was an expression, in the early modern age, of a utopia, perhaps the first one in Indian literature. In some ways it seems to stand alone, yet it was a harbinger of the kind of social vision that would underlie all the later struggles and theorizing of anticaste inetllectuals. Begumpura was, for Ravidas, an imagined city, without geographical location, without a history: it was to be a later task to build it in space and time.”\nhttps://poetly.substack.com/p/begumpura"
-  },
-  {
-    "objectID": "tir/engineering-economic-exploitation.html",
-    "href": "tir/engineering-economic-exploitation.html",
-    "title": "How Engineering Graduates are being exploited",
-    "section": "",
-    "text": "The following is written and shared by Peri Maheswar, who runs careers360. This goes beyond our usual complaints about the education and employment system and highlights real economic exploitation in the neo-liberal education system.\nThis is the sordid saga of India’s fresh engineering graduates being underpaid. This was an active collusion between the big tech companies like Infosys, TCS, Accenture, Cognizant etc and the engineering colleges. The negotiation was always about the placement % than the salary package. Read this explosive story and the thread.\n\nBetween 2010 and 2025, India’s major IT companies — TCS, Infosys, Accenture, Cognizant, and Wipro — have seen a huge rise in employee numbers, rising between 116% to 291% in these top 5 companies in the IT Services segment.\nHowever, the salary offered in campus placements across engineering colleges was constant in 15 years. The salary of TCS grew from 3.15 lacs in 2007 to Rs.3.36 lacs in 2024. The salary at Infosys grew from Rs. 3.25 lacs in 2010 to Rs.3.6 lacs in 2024.\nIndexed to inflation, the real income in the hands of fresh engineering graduates fell by 60% in TCS and 49% in Infosys. Factoring in the inflation, it should have been 7.89 lacs in TCS and 6.40 lacs in Infosys.\nWith drop in salaries in real terms, the companies increased recruitment and had more manpower for new contracts, thus increasing revenues with no increase in cost. The profits soared. The profits from 2010 to 2025 for these companies were as follows:\nInfosys went up from ₹5,755 crore to ₹26,750 crore TCS profits shot up from ₹7,001 crore to ₹48,553 crore Wipro profits went up from ₹4,003 crore to ₹13,500 crore Cognizant shot up from $734 million to $2.5 billion Accenture grew from $1.78 billion to $7.68 billion\nWhile all this was happening, the companies also started cutting employee recruitment so that scarcity would create fear. The employee count across all the top 5 companies fell in 2024. Infosys count fell from 3,43,234 to 3,17,240, a drop of 25,994. TCS headcount fell from 6,14,795 to 6,01,546, a fall of 13,249 Wipro fell from 2,48,813 to 2,34,054, a fall of 14,759 Cognizant headcount fell from 3,47,700 to 3,36,800, a fall of 10,900\nThe educational institution also had to have its cut. Showcasing increasing placements ( in numbers and not in median salary), they started charging higher fees. The fees charged went up by about 327% in these 15 years across top 10 private institutions. The fees at government colleges (IITs) went up by 400%.\nAll this increased the payback period for the student. An B.Tech costing about 4 lacs in 2007 costs Rs.20 lacs in 2025. With salary remaining constant and a bank loan with interest becoming the only way, the payback for a student which was an year in 2007-10 is today 7 to 8 years.\nEvery one makes money. The big tech companies revenues multiples. Profits soared. The educational institutions increased capacity and now charges 4 times more than 15 years back. The student is burdened with a loan and an EMIT with interest to pay.\n\nThis is the sordid saga of India and its demographic dividend. Where the government abdicated its responsibility, the big companies exploited the middle class vulnerability and the educational institutions joined the party by increasing intakes while keeping the salary constant.\nThe students and parents now will have a loan on themselves with a payback period of 6 to 8 years. That too, if they are lucky to have a job after the increased intakes."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Profile Summary",
-    "section": "",
-    "text": "Profile Summary\nI am an educator, teaching coach, writer and a nonprofit leader, dedicated to transforming education through inclusion, empathy, and learner-centered practices. Drawing from diverse background in engineering, management, and education, as well as personal experience as a parent of a child with autism, I champion the rights of neurodivergent learners and promote holistic, context-sensitive approaches to education for everyone.\nI am a strong advocate for neurodiversity, inclusive education, and non-standardized learning. I believe we need to create and promote accessible alternatives to test-driven systems, emphasizing emotional development, autonomy, and real-world engagement.\nCurrently, I lead Farm Hill Education Trust (FHT), a non-profit working in the areas of education, neurodiversity and community. Through FHT, we run Subodha Learning Community, a homeschool support center and Sambhavam Center for Autism, an early intervention center, in Bangalore. We also run Farm Hill Learning, a neurodiverse, close to nature learning community, near Hosur.\nI write and translate children’s literature in Telugu and English. I also write educational content promoting empathy, inclusion, and educational reform.\nI envision a world where education systems celebrate diversity and uphold the dignity of every learner. My work aims to create safe, affirming spaces for children often underserved by mainstream models, paving the way for more compassionate and effective approaches to learning.\nFormerly, I was lecturer in electrical engineering, a management consultant and an ed-tech product manager. I have an MBA from IIM Bangalore and I am currently (2024-26) pursuing an M.A. in Education at Tata Institute of Social Sciences (TISS) with a focus on philosophy and sociology of education.\n\n\nExperience\n\n\n\n\n        \n            Farm Hill Education Trust\n            Oct 2018 - Present\n            Founder Trustee\n           \n         \n    Farm Hill Education Trust is a non-profit working in the areas of education, neurodiversity and community.  Through FHT, we run Subodha Learning Community, a homeschool support center and  Sambhavam Center for Autism, an early intervention center, in Bangalore. We also run Farm Hill Learning, a neurodiverse, close to nature learning community, near Hosur.\nFarm Hill Learning is an inclusive, neuro-diverse community of teachers, parents and  students learning together in a close to nature setting. Since 2018,  we have acquired a farm and built the infrastructure and the organization  needed to run a learning community. As of 2025, we work with a neurodiverse  population of about 15 families. At Farm Hill Learning, I teach Mathematics, Economics, Physics and History across grade levels.  I also recruit teachers and coach teachers and parents. \nSubodha Learning Community is a support center for learners on the autism spectrum, based in Bangalore.  At Subodha, we support neurodiverse learners and their families through education, employment and life. \nSambhavam is an early intervention center for autism, based in Bangalore. At Sambhavam, we work with families living with autism, delivering early intervention, counselling, and consulting.\nAt Farm Hill, I raise funds, recruit, train and manage the academic as well as support  teams, and run the overall operations of the organization.\n\n \n\n\n        \n            Sambhavam Center for Autism\n            June 2016 - March 2025\n            Director\n           \n         \n    At Sambhavam, we work with about 30 families living with autism every year,  delivering early intervention, counselling, and consulting.  I have been responsible for recruiting, training, team management,  performance monitoring, customer experience management, parent counselling and consulting.  As a founder, I play an active part in other operational and financial aspects as well.  As of April 2025, Sambhavam is run as a project of Farm Hill Education Trust,\n and I continue to be a director of Sambhavam. \n\n \n\n\n        \n            Azim Premji Foundation\n            May 2023 - March 2025\n            Consultant\n           \n         \n    Worked with APF, initiating a project to develop a comprehensive, in-depth guide as well as usable resources addressing the needs of various stakeholders living and working with autism - people on the spectrum, parents, therapists, teachers, civil society organizations etc. As of April 2025, the project is awarded to Farm Hill Education Trust under a grant and I continue to work on it. \n\n \n\n\n        \n            RiVER\n            Sept 2019 - Jan 2020\n            Consultant (Project based)\n           \n         \n    Rishi Valley Institute for Educational Resources (RiVER) partnered with  the Government of Andhra Pradesh (GoAP) to help them implement the Multi-Grade Multi-Level (MGML) program in select government schools, under Ananda Lahari  Abhyasana (ALA) program. As consultant – evaluation and monitoring, I visited  government schools across the state, interacted with various project  teams and delivered periodic reports on project status  and provided implementation feedback for the various project agencies. \n\n \n\n\n        \n            TIDE Learning Pvt. Ltd.\n            Jan 2017 – Jan 2019\n            Consultant (Freelance)\n           \n         \n    TIDE Learning is focused on creating new learning experiences in primary education. TIDE works with large scale systems like the government schools in India.   At TIDE, I worked across areas like strategy, product design and operations, bringing together my experience as a consultant, manager, and educator.\n\n \n\n\n        \n            New Rubric Solutions\n            Dec 2011 - April 2016\n            Head - Product Management\n           \n         \n    I joined as a core team member at this start-up. My focus for the first year was on building the product, especially extending the firm's IP based on some of the best thinking in learning, pedagogy, and assessments, and creating the content needed to bring this IP to work in real life settings like schools. By the end of the first year, we took the product to the market.  Over the next four years, I sold the product, interfaced with the customers, ran an operations team, recruited, trained, and managed people in the operations team and sales team and so on. I left in 2016 to start my own venture.\n\n \n\n\n        \n            Feedback INFRA\n            April 2011 - Nov 2011\n            Consultant\n           \n         \n    I joined back as an Engagement Manager, managing a team of consultants,  responsible for business development, project execution, delivery,  and client interfacing. My work during this period was focused on Education sector,  in addition to urban water sector and logistics.  Towards the end of 2011, I left to join a start up in education space.\n\n \n\n\n        \n            IMS Learning Resources\n            May 2010 - March 2011\n            Center Manager\n           \n         \n    Initially, I worked as a part time faculty member, teaching verbal ability classes over the weekends to CAT and GRE aspirants. I also guided CAT selected candidates in their interview preparation.  Towards the end of the year, I joined as a Center Manager  at the IMS Koramangala center. In 2011, I went back to consulting.\n\n \n\n\n        \n            Feedback Ventures\n            June 2007 - April 2010\n            Consultant\n           \n         \n    I joined as a frontline consultant and over the next two years,  I did the staple work of consultants – entry strategies, project feasibility,  bid advisory etc. I became the go-to person for urban infrastructure space,  as most of my work was in projects related to urban water supply, sanitation  and solid waste management. I also worked on PPP projects and Swiss challenges.   In 2010, I left consulting to be an Autism Dad.\n\n \n\n\n        \n            Vardhaman Engineering College\n            July 2004 – April 2005\n            Assistant Professor\n           \n         \n    I taught theory and practical courses in Control Systems, Instrumentation and Electrical Machines. I was also a member of the examination branch. While working at Vardhaman, I completed half (3 semesters) of the M.Tech. In 2005, I took CAT and secured an admission to the IIM Bangalore.\n\n \n\n\n        \n            HRD Engineering College\n            July 2002 - June 2004\n            Assistant Professor\n           \n         \n    As the first person to join the Department of EEE at HRD Engineering College, I had the opportunity to set up the department and plan the course work. I set up an Electrical Machines lab starting from scratch. I taught theory and practical courses in Network Theory and Electrical Machines.\n\n \n\n    \n\n\nNo matching items\n\n\n\n\nEducation\n\n\n\n\n        \n            Tata Institute of Social Sciences\n            2024 -\n            M.A. (El.Ed)\n           \n         \n    \n \n\n\n        \n            IIM Bangalore\n            2005-07\n            PGDM\n           \n         \n    \n \n\n\n        \n            Osmania University\n            1998 - 2002\n            B.E.\n           \n         \n    \n \n\n\n        \n            Jawahar Navodaya Vidyalaya\n            1990 - 95\n            Schooling\n           \n         \n    \n \n\n    \n\n\nNo matching items"
-  },
-  {
-    "objectID": "tir/philosophy/bachelor-men.html",
-    "href": "tir/philosophy/bachelor-men.html",
-    "title": "Most philosophers were bachelor men",
-    "section": "",
-    "text": "Mary Midgley\nNone of these [great] philosophers … had any experience of living with women or children, which is, after all, quite an important aspect of human life. I wrote [‘Rings and Books’] drawing attention to this statistic and asking whether it might not account for a certain over-abstractness, a certain remoteness from life, in the European philosophical tradition.\nDescartes concludes that the only thing I can know with certainty is that I am thinking (and therefore that I exist) – or, as philosophers know it, Cogito, ergo sum. Summarised by Midgley: ‘Here I am, said Descartes, a soul, an isolated thinker.’ But, despite its prominence in canonical histories of Western thought, Midgley was not overly impressed by this argument. In fact, she thinks this Cartesian move is born from the philosophical ‘adolescence’ that Descartes never grew up from. As she puts it:\nPeople leading a normal domestic life would not, I believe, have fallen into this sort of mistake. They would have taken alarm at the attitude to other people which follows from Descartes’s position. For Descartes, other people’s existence has to be inferred, and the inference is a most insecure one … Now I rather think that nobody who was playing a normal active part among other human beings could regard them like this. But what I am quite sure of is that for anybody living intimately with them as a genuine member of a family … their consciousness would be every bit as certain as his own. Midgley’s use of ‘normal’ here is no doubt reminiscent of a dated view about the nuclear family hailing from a time when many women carried out most of the domestic duties. But even aside from this, Midgley’s claim is important. As knowers, Midgley sees many of us (if not all) as already entangled in our close relations with others. From here, we can learn about the world, including the certain existence of other people. And Midgley thought that the experiences of those caring for children, in particular, could help illuminate the extent to which we really are entangled with one another’s existences.\nhttps://aeon.co/essays/for-mary-midgley-philosophy-must-be-entangled-in-daily-life?fbclid=IwY2xjawIc6vpleHRuA2FlbQIxMQABHQKeYu8vC1lBZ1mZkMlw8B10faQOdrE-n0uQeCgqs_LSUsIubWmTHPH9CA_aem_LOgQHiS_cT1zueyire6fDg"
-  },
-  {
-    "objectID": "tir/history/indias-prettiest-library.html",
-    "href": "tir/history/indias-prettiest-library.html",
-    "title": "India’s Prettiest Library - Rampur",
-    "section": "",
-    "text": "It is in Rampur. It was built by an Afghan Rohilla chief. Also beautiful tombs.\nhttps://open.substack.com/pub/travelsofsamwise/p/the-rise-of-rampur?utm_source=share&utm_medium=android&r=led3q"
-  },
-  {
-    "objectID": "tir/ellora-how-history-looks.html",
-    "href": "tir/ellora-how-history-looks.html",
-    "title": "Ellora - and how history looks like",
-    "section": "",
-    "text": "That’s what history looks like. Real history invites you to examine your own assumptions and recognise that there are surprises everywhere.\nPeople, and therefore events, do not unfold the way we expect them to. Real stories are seldom as linear as fictional ones.\nhttps://open.substack.com/pub/travelsofsamwise/p/the-absolute-insanity-of-ellora?utm_source=share&utm_medium=android&r=led3q"
-  },
-  {
-    "objectID": "cs_2026/session3.html",
-    "href": "cs_2026/session3.html",
-    "title": "Session 3 Tic-tac-toe 1",
-    "section": "",
-    "text": "We started playing tic-tac-toe and started noticing which approaches result in a win and which result in a loss or draw. Soon, students were able to see that there is a method to the madness. We started to think of the choices available at each step and how each choice leads to further choices. We started to identify how many possible choices are there in each step. For example, the first step can be at any of the 9 boxes, the second step can be at any of the remaining 8 boxes, and so on.\nOnce the first move is made, there are 8 possible moves left, and then 7, and so on. So the total number of positions to analyse would be 9!, which is a very big number.\nWe then started to think about how we can reduce the number of positions to analyse by looking at the symmetries in the game. For example, if we rotate the board, we can see that some positions are equivalent to others. This reduces the number of unique positions we need to consider.\nLooking at it this way, the first move has only three choices - center, corner, or edge. Once the first move takes the center, there are only 2 possible moves - edge or corner.\nWe started drawing up the decision trees for each of the possible moves. Completing the decision trees is left for homework and further discussion."
-  },
-  {
-    "objectID": "cs_2026/session10.html",
-    "href": "cs_2026/session10.html",
-    "title": "Session 10 Coin Toss Simulator",
-    "section": "",
-    "text": "A coin toss simulator is a simple way to introduce randomness in programming. In computational thinking, simulation means defining a random process, repeating it many times, and collecting the outcomes to study a pattern.\nThis exercise fits well after guessing games and prime number programs because it still uses variables, loops, and conditionals, but it introduces a new idea: the same program can produce different valid results on different runs because chance is involved."
-  },
-  {
-    "objectID": "cs_2026/session10.html#input",
-    "href": "cs_2026/session10.html#input",
-    "title": "Session 10 Coin Toss Simulator",
-    "section": "Input",
-    "text": "Input\n\nA positive integer (N), representing the number of coin tosses."
-  },
-  {
-    "objectID": "cs_2026/session10.html#output",
-    "href": "cs_2026/session10.html#output",
-    "title": "Session 10 Coin Toss Simulator",
-    "section": "Output",
-    "text": "Output\n\nNumber of Heads.\nNumber of Tails.\nFraction of Heads.\nFraction of Tails."
-  },
-  {
-    "objectID": "cs_2026/session10.html#example",
-    "href": "cs_2026/session10.html#example",
-    "title": "Session 10 Coin Toss Simulator",
-    "section": "Example",
-    "text": "Example\nIf (N = 10), one run of the program might produce 6 Heads and 4 Tails, while another run with the same (N) might produce 3 Heads and 7 Tails because the outcomes are random."
-  },
-  {
-    "objectID": "cs_2026/session10.html#why-do-results-change-every-run",
-    "href": "cs_2026/session10.html#why-do-results-change-every-run",
-    "title": "Session 10 Coin Toss Simulator",
-    "section": "Why do results change every run?",
-    "text": "Why do results change every run?\nA simulation of a fair coin toss uses randomness, so the exact sequence of Heads and Tails is different each time the program is executed. This is what makes simulation useful for studying chance processes."
-  },
-  {
-    "objectID": "cs_2026/session10.html#why-do-the-fractions-move-toward-0.5",
-    "href": "cs_2026/session10.html#why-do-the-fractions-move-toward-0.5",
-    "title": "Session 10 Coin Toss Simulator",
-    "section": "Why do the fractions move toward 0.5?",
-    "text": "Why do the fractions move toward 0.5?\nFor a fair coin, the long-run proportion of Heads is expected to be close to 0.5, and simulations with larger numbers of tosses tend to produce empirical proportions closer to that value. Small samples can vary a lot, but larger samples are usually more stable."
-  },
-  {
-    "objectID": "cs_2026/session10.html#which-programming-ideas-are-revised-here",
-    "href": "cs_2026/session10.html#which-programming-ideas-are-revised-here",
-    "title": "Session 10 Coin Toss Simulator",
-    "section": "Which programming ideas are revised here?",
-    "text": "Which programming ideas are revised here?\nThis program reinforces several core ideas:\n\nvariables and assignment;\ncounters;\nloops;\nconditional statements;\ninput and output;\nbasic numerical calculation."
-  },
-  {
-    "objectID": "cs_2026/session10.html#what-edge-cases-should-be-discussed",
-    "href": "cs_2026/session10.html#what-edge-cases-should-be-discussed",
-    "title": "Session 10 Coin Toss Simulator",
-    "section": "What edge cases should be discussed?",
-    "text": "What edge cases should be discussed?\nIf the user enters 0, the program attempts to divide by zero while calculating fractions, so the class should either require (N &gt; 0) or add validation before continuing. This is a useful moment to discuss why programs must handle invalid input carefully."
-  },
-  {
-    "objectID": "cs_2026/session11.html",
-    "href": "cs_2026/session11.html",
-    "title": "Session 11 Dice Roll Simulator",
-    "section": "",
-    "text": "Simulating a dice roll and keeping track of the number of times each face appears was assigned to home work in session 10. We reviewed the logic, the pseudocode and the python implementation that each of the students came up with.\nWe then discussed the case of rolling two dice and counting the sums of the two dice. The sums can be 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 or 12. We discussed how many ways each sum can occur and what the relative frequencies of each sum are."
-  },
-  {
-    "objectID": "cs_2026/session11.html#two-dice-roll-expectations",
-    "href": "cs_2026/session11.html#two-dice-roll-expectations",
-    "title": "Session 11 Dice Roll Simulator",
-    "section": "Two dice roll expectations",
-    "text": "Two dice roll expectations\nWith coin toss, the expectation is that we will reach 50:50 over a large number of tosses.\nWith dice toss, the expectation is - each number (1-6) should appear with equal frequency over a large number of rolls.\nWhen you toss two dice, what happens?\nThe possible sums are - 2,3,4,5,6,7,8,9,10,11,12 The different ways these sums can occur are:\n2 - 1 way (1,1) 3 - 2 ways (1,2), (2,1) 4 - 3 ways (1,3), (2,2), (3,1) 5 - 4 ways (1,4), (2,3), (3,2), (4,1) 6 - 5 ways (1,5), (2,4), (3,3), (4,2), (5,1) 7 - 6 ways (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) 8 - 5 ways (2,6), (3,5), (4,4 ), (5,3), (6,2) 9 - 4 ways (3,6), (4,5), (5,4), (6,3) 10 - 3 ways (4,6), (5,5), (6,4) 11 - 2 ways (5,6), (6,5)\n12 - 1 way (6,6)\nRelative frequencies of sums of two dice: - 2 - 1/36\n- 3 - 2/36 - 4 - 3/36 - 5 - 4/36 - 6 - 5/36\n- 7 - 6/36 - 8 - 5/36 - 9 - 4/36 - 10 - 3/36 - 11 - 2/36 - 12 - 1/36"
-  },
-  {
-    "objectID": "cs_2026/session1.html",
-    "href": "cs_2026/session1.html",
-    "title": "Session 1 Locked-in Syndrome and Algorithmic thinking",
-    "section": "",
-    "text": "We started with listing out the different things the students wanted to learn. The list included topics such as:\n\nWebsite building\nGame development\nHacking\nUsing AI tools\n\nWe spoke about algorithmic thinking and computational thinking. We refered to Chapter 1 of The power of computational thinking by Paul Curzon and Peter W. McOwan, for this.\nThen we started on Chapter 2, with the example of Bauby who has locked-in syndrome. We talked about how he was able to communicate using a system of blinking his left eye, and how this is an example of how we can use technology to help people with disabilities.\nWe discussed various ways Bauby’s left-eye blinking could be used to communicate, the various problems that arise from this and tried to come up with solutions to these problems."
-  },
-  {
-    "objectID": "cs_2026/session0.html",
-    "href": "cs_2026/session0.html",
-    "title": "Purpose and Audience",
-    "section": "",
-    "text": "This document is intended to provide notes and insights on the course CS 2026, which is aimed at senior secondary school students interested in computer science. The specific set of students in this class have studied math for their high school diploma but have not choosen math for senior secondary. That means this course is suitable for the “non-math” population out there.\nThe notes are meant to be a resource for students taking the course, as well as for educators who may want to use the course materials in their own teaching."
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAug 6, 2026\n\n\nSession 14 Revision of plots and primes\n\n\n \n\n\n\n\nAug 4, 2026\n\n\nSession 13 Primes in Range\n\n\n \n\n\n\n\nJul 28, 2026\n\n\nSession 12 Two Dice Roll and Plot\n\n\n \n\n\n\n\nJul 23, 2026\n\n\nSession 11 Dice Roll Simulator\n\n\n \n\n\n\n\nJul 21, 2026\n\n\nSession 10 Coin Toss Simulator\n\n\n \n\n\n\n\nJul 15, 2026\n\n\nSession 9 Python Data Types and Data Structures\n\n\n \n\n\n\n\nJul 7, 2026\n\n\nSession 8 Programming Tic-Tac-Toe\n\n\n \n\n\n\n\nJun 25, 2026\n\n\nSession 7 Computer Guesses the number\n\n\n \n\n\n\n\nJun 24, 2026\n\n\nSession 6 Pseudocode, sample programs, program elements\n\n\n \n\n\n\n\nJun 16, 2026\n\n\nSession 5 Binary and Hex; Sorting - selection and insertion\n\n\n \n\n\n\n\nJun 15, 2026\n\n\nDeeper Exploration - Coin weighing\n\n\n \n\n\n\n\nJun 14, 2026\n\n\nSession 4 How many questions? Search Algorithms\n\n\n \n\n\n\n\nJun 9, 2026\n\n\nSession 3 Tic-tac-toe 1\n\n\n \n\n\n\n\nJun 7, 2026\n\n\nSession 2 Pouring; guessing letters and numbers\n\n\n \n\n\n\n\nJun 2, 2026\n\n\nSession 1 Locked-in Syndrome and Algorithmic thinking\n\n\n \n\n\n\n\nJun 1, 2026\n\n\nPurpose and Audience\n\n\n \n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "cs_2026/notes/treasure-hunt-grid.html",
@@ -2030,46 +2086,67 @@
     "text": "What edge cases should be discussed?\nIf the user enters 0, the program attempts to divide by zero while calculating fractions, so the class should either require (N &gt; 0) or add validation before continuing. This is a useful moment to discuss why programs must handle invalid input carefully."
   },
   {
-    "objectID": "cs_2026/notes/fair-dice-games.html",
-    "href": "cs_2026/notes/fair-dice-games.html",
-    "title": "Venu GVGK Raju",
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html",
+    "title": "CS2026 Class Notes: Dice Sum Game",
     "section": "",
-    "text": "Title: Designing a fair dice game\n\nDuration: 60 minutes\n\nPrerequisites: Students have seen basic Python, random.randint, loops, and if (from earlier sessions).\n\nCore ideas:\n\nUse Python to simulate a money game based on dice.\n\nUnderstand fairness as “average gain per game ≈ 0.”\n\nPractice loops and conditionals while experimenting with different game rules."
+    "text": "The dice sum game is a natural next step after the coin toss simulator because it keeps the same simulation structure but produces a richer pattern of outcomes. Instead of only two outcomes, rolling two fair dice produces sums from 2 to 12, and some of those sums occur more often than others.\nThis lesson is useful because it connects programming with both probability and combinatorics. By simulating many rolls, students can observe a frequency distribution and compare it with the mathematical idea that some sums can be formed in more ways than others."
   },
   {
-    "objectID": "cs_2026/notes/fair-dice-games.html#lesson-snapshot",
-    "href": "cs_2026/notes/fair-dice-games.html#lesson-snapshot",
-    "title": "Venu GVGK Raju",
-    "section": "",
-    "text": "Title: Designing a fair dice game\n\nDuration: 60 minutes\n\nPrerequisites: Students have seen basic Python, random.randint, loops, and if (from earlier sessions).\n\nCore ideas:\n\nUse Python to simulate a money game based on dice.\n\nUnderstand fairness as “average gain per game ≈ 0.”\n\nPractice loops and conditionals while experimenting with different game rules."
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#input",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#input",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Input",
+    "text": "Input\n\nA positive integer (N), representing the number of times the pair of dice will be rolled."
   },
   {
-    "objectID": "cs_2026/notes/fair-dice-games.html#learning-objectives",
-    "href": "cs_2026/notes/fair-dice-games.html#learning-objectives",
-    "title": "Venu GVGK Raju",
-    "section": "2. Learning objectives",
-    "text": "2. Learning objectives\nBy the end of the class, students should be able to:\n\nWrite Python code to simulate a dice‑based money game many times.\n\nCompute total and average gain/loss over many games.\n\nJudge whether a game is favourable, unfavourable, or roughly fair from simulation output.\n\nModify game rules (payoffs and conditions) and test their effect."
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#output",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#output",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Output",
+    "text": "Output\n\nThe frequency of each sum from 2 to 12.\nThe sum that appeared most often.\nOptionally, the fraction or percentage for each sum."
   },
   {
-    "objectID": "cs_2026/notes/fair-dice-games.html#class-flow-with-timings",
-    "href": "cs_2026/notes/fair-dice-games.html#class-flow-with-timings",
-    "title": "Venu GVGK Raju",
-    "section": "3. Class flow (with timings)",
-    "text": "3. Class flow (with timings)\n\nA. Hook and intuition (10 minutes)\n\nOn the board, present a simple game:\n\n“You roll one die.\nIf you get 6, you win ₹10.\nOtherwise you lose ₹2.”\n\nAsk students:\n\n“Do you think you will make money or lose money if you play this game 100 times?”\n\nCollect a few quick guesses; note that opinions differ.\n\nExplain:\n\n“Today we’ll use Python to test such games and try to design a game that is fair — neither clearly good nor clearly bad for the player.”\n\n\n\n\nB. Recall: rolling a die in Python (5 minutes)\n\nBriefly recall code from Session 11:\nimport random\n\nroll = random.randint(1, 6)\nprint(\"You rolled:\", roll)\nAsk a student to explain what random.randint(1, 6) does in plain language.\n\nConfirm: one random integer from 1 to 6, each equally likely (for our purposes).\n\n\n\nC. Simulate one play of the money game (10 minutes)\n\nAs a whole‑class live‑coding segment, write:\nimport random\n\nroll = random.randint(1, 6)\nif roll == 6:\n    change = 10   # rupees gained\nelse:\n    change = -2   # rupees lost\n\nprint(\"Roll:\", roll)\nprint(\"Change in money:\", change)\nDiscuss:\n\nIf roll is 6 → player gains ₹10.\n\nOtherwise → player loses ₹2.\n\nchange is positive or negative depending on the outcome.\n\nLet them run this program a few times and observe different outcomes.\n\n\n\nD. Simulate many plays with a loop (15 minutes)\n\nNow move from “one play” to “many plays”:\n\nAsk: “If we want to play 100 times, how can we make Python repeat this logic?”\n\nGuide them to the idea of a for loop.\n\nLive‑code and explain line by line:\nimport random\n\ntotal_money = 0\nnum_games = 100\n\nfor i in range(num_games):\n    roll = random.randint(1, 6)\n    if roll == 6:\n        change = 10\n    else:\n        change = -2\n    total_money = total_money + change\n\nprint(\"After\", num_games, \"games, total money change:\", total_money)\n\naverage_gain = total_money / num_games\nprint(\"Average gain per game:\", average_gain)\nKey points to emphasise:\n\ntotal_money starts at 0 and collects all gains/losses.\n\nThe loop repeats the same game logic num_games times.\n\naverage_gain is a simple average, no advanced maths needed.\n\nHave students run the program and note the final total_money and average_gain.\n\nAsk: “Does the game look good or bad for the player from these numbers?”\n\n\n\n\nE. Pair activity: tweak and test different games (15 minutes)\n\nDivide students into pairs.\n\nEach pair’s task:\n\nInvent a new dice game rule, for example:\n\nGame 1: Win ₹5 if roll ≥ 5, lose ₹3 otherwise.\n\nGame 2: Win ₹12 if roll is even, lose ₹6 otherwise.\n\n\nModify the if block in the code to match their rule.\n\nRun the simulation with num_games = 100, then with num_games = 1000.\n\nRecord:\n\nTotal money change.\n\nAverage gain per game.\n\nTheir conclusion: “good for player,” “bad for player,” or “roughly fair.”\n\n\nCirculate and prompt thinking:\n\n“What happens if winning amount is very high but the chance is rare?”\n\n“What happens if losing amount is small but happens often?”\n\nEncourage them to try to make a fair game by adjusting win and loss amounts and conditions until the average gain is close to zero.\n\n\n\nF. Sharing and reflection (5 minutes)\n\nAsk 2–3 pairs to present their game:\n\nState the rule clearly.\n\nShow one run’s average gain per game.\n\nSay whether they think it is fair.\n\nFrom their examples, highlight:\n\nGames where average gain is strongly negative (bad for player).\n\nGames where average is strongly positive (bad for the house).\n\nAny game that looks roughly fair (average near 0).\n\nConnect explicitly:\n\nFairness in this informal sense = “on average, you don’t gain or lose much over many plays.”\n\nWe used randomness, loops, and conditionals to explore this."
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#example-idea",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#example-idea",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Example idea",
+    "text": "Example idea\nIf the dice are rolled 20 times, one possible set of frequencies might show that 7 occurred 4 times, 6 occurred 3 times, 8 occurred 3 times, and some extreme sums such as 2 or 12 occurred only once or not at all. The exact results change from run to run because simulation uses randomness."
   },
   {
-    "objectID": "cs_2026/notes/fair-dice-games.html#exit-task-homework-optional-5-minutes-if-done-in-class",
-    "href": "cs_2026/notes/fair-dice-games.html#exit-task-homework-optional-5-minutes-if-done-in-class",
-    "title": "Venu GVGK Raju",
-    "section": "4. Exit task / homework (optional, 5 minutes if done in class)",
-    "text": "4. Exit task / homework (optional, 5 minutes if done in class)\n\nQuick exit question (on paper or verbally):\n\n“Write a simple dice game rule in one sentence and predict whether it is good or bad for the player. Next class, we will test your game using Python.”\n\nOptional homework:\n\nStudents bring one game idea they have not tested yet.\n\nNext session, they write code to simulate it and check fairness.\n\n\nWould you like a follow‑up 1‑hour lesson that pushes this into visualisation (plotting the distribution of gains/losses or face frequencies) while keeping the math at this same level?"
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-is-7-the-most-common-sum",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-is-7-the-most-common-sum",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Why is 7 the most common sum?",
+    "text": "Why is 7 the most common sum?\nThe simulation suggests that 7 appears most often, but programming is only one part of the explanation. The mathematical reason is that 7 can be formed in 6 distinct ordered ways: ((1,6)), ((2,5)), ((3,4)), ((4,3)), ((5,2)), and ((6,1)).\nOther sums have fewer combinations. For example, 2 can occur only as ((1,1)), and 12 can occur only as ((6,6)), so they are much less frequent in repeated trials."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#combinatorics-table",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#combinatorics-table",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Combinatorics table",
+    "text": "Combinatorics table\nThe connection between simulation and counting can be shown clearly in a table.\n\n\n\nSum\nNumber of ways\nExample outcomes\n\n\n\n\n2\n1\n(1,1)\n\n\n3\n2\n(1,2), (2,1)\n\n\n4\n3\n(1,3), (2,2), (3,1)\n\n\n5\n4\n(1,4), (2,3), (3,2), (4,1)\n\n\n6\n5\nfive ordered pairs\n\n\n7\n6\nsix ordered pairs\n\n\n8\n5\nfive ordered pairs\n\n\n9\n4\nfour ordered pairs\n\n\n10\n3\nthree ordered pairs\n\n\n11\n2\ntwo ordered pairs\n\n\n12\n1\n(6,6)\n\n\n\nBecause the number of ways rises to 6 and then falls symmetrically, the frequency distribution of sums tends to have a triangular shape with the peak near 7."
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#what-does-the-frequency-table-show",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#what-does-the-frequency-table-show",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "What does the frequency table show?",
+    "text": "What does the frequency table show?\nA frequency table records how many times each outcome occurred in the simulation. As the number of trials becomes large, the observed frequencies begin to reflect the underlying probability pattern more clearly.\nThis helps students move from single outcomes to distributions. Instead of asking “What happened on one roll?”, the better question becomes “What pattern appears after many rolls?”"
+  },
+  {
+    "objectID": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-do-small-and-large-simulations-look-different",
+    "href": "cs_2026/notes/cs2026-two-dice-sum-game.html#why-do-small-and-large-simulations-look-different",
+    "title": "CS2026 Class Notes: Dice Sum Game",
+    "section": "Why do small and large simulations look different?",
+    "text": "Why do small and large simulations look different?\nIn a small number of rolls, the frequencies can look irregular because chance variation is strong. In a much larger number of rolls, the empirical distribution tends to resemble the theoretical distribution more closely.\nThis is one of the important ideas of simulation: randomness affects individual outcomes strongly, but long-run patterns are more stable."
   },
   {
     "objectID": "cs_2026/notes/notes.html",
     "href": "cs_2026/notes/notes.html",
     "title": "Venu’s notes",
     "section": "",
-    "text": "session 7 - computer guesses the number - binary search in operation session 8 - prime numbers in a range - is_prime(n) and primes_in_range(start, end) session 9 - coin toss simulator - random.randint(0, 1) and fractions of heads and tails session 10 - two-dice-sum game\n\nAll factors of a number\nPerfect numbers and abundant/deficient numbers\nPrime factors of a number\nDigit sum and divisibility checks (e.g., check if a number is divisible by 3, 9, or 11 using digit patterns)\nBase conversions in a constrained way (e.g., convert numbers between base 10 and base 2 for small values)\nPolygon angle checker: given number of sides n, compute interior angle sum and compare it with a claimed sum.\nWORDLE??\nReverse and palindrome checker\n\nWith coin toss expectation is that we will reach 50:50 over a large number of tosses.\nWith dice toss, the expectation is - each number (1-6) should appear with equal frequency over a large number of rolls.\nWhen you toss two dice, what happens?\n2,3,4,5,6,7,8,9,10,11,12\n2 - 1 way (1,1) 3 - 2 ways (1,2), (2,1) 4 - 3 ways (1,3), (2,2), (3,1) 5 - 4 ways (1,4), (2,3), (3,2), (4,1) 6 - 5 ways (1,5), (2,4), (3,3), (4,2), (5,1) 7 - 6 ways (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) 8 - 5 ways (2,6), (3,5), (4,4 ), (5,3), (6,2) 9 - 4 ways (3,6), (4,5), (5,4), (6,3) 10 - 3 ways (4,6), (5,5), (6,4) 11 - 2 ways (5,6), (6,5)\n12 - 1 way (6,6)\nRelative frequencies of sums of two dice: - 2 - 1/36\n- 3 - 2/36 - 4 - 3/36 - 5 - 4/36 - 6 - 5/36\n- 7 - 6/36 - 8 - 5/36 - 9 - 4/36 - 10 - 3/36 - 11 - 2/36 - 12 - 1/36"
+    "text": "session 7 - computer guesses the number - binary search in operation session 8 - prime numbers in a range - is_prime(n) and primes_in_range(start, end) session 9 - coin toss simulator - random.randint(0, 1) and fractions of heads and tails session 10 - two-dice-sum game\nnext few classes\nrock-paper-scissors keeping track of scores and plotting in rock-paper-scissors treasure hunt grids fair dice games read file and plot\ncalculator with FLET library? - All factors of a number - Perfect numbers and abundant/deficient numbers - Prime factors of a number - Digit sum and divisibility checks (e.g., check if a number is divisible by 3, 9, or 11 using digit patterns) - Base conversions in a constrained way (e.g., convert numbers between base 10 and base 2 for small values) - Polygon angle checker: given number of sides n, compute interior angle sum and compare it with a claimed sum. - WORDLE?? - Reverse and palindrome checker\nWith coin toss expectation is that we will reach 50:50 over a large number of tosses.\nWith dice toss, the expectation is - each number (1-6) should appear with equal frequency over a large number of rolls.\nWhen you toss two dice, what happens?\n2,3,4,5,6,7,8,9,10,11,12\n2 - 1 way (1,1) 3 - 2 ways (1,2), (2,1) 4 - 3 ways (1,3), (2,2), (3,1) 5 - 4 ways (1,4), (2,3), (3,2), (4,1) 6 - 5 ways (1,5), (2,4), (3,3), (4,2), (5,1) 7 - 6 ways (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) 8 - 5 ways (2,6), (3,5), (4,4 ), (5,3), (6,2) 9 - 4 ways (3,6), (4,5), (5,4), (6,3) 10 - 3 ways (4,6), (5,5), (6,4) 11 - 2 ways (5,6), (6,5)\n12 - 1 way (6,6)\nRelative frequencies of sums of two dice: - 2 - 1/36\n- 3 - 2/36 - 4 - 3/36 - 5 - 4/36 - 6 - 5/36\n- 7 - 6/36 - 8 - 5/36 - 9 - 4/36 - 10 - 3/36 - 11 - 2/36 - 12 - 1/36"
   },
   {
     "objectID": "cs_2026/session4.html",

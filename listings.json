@@ -176,6 +176,21 @@
     ]
   },
   {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
+    "listing": "/tir/index.html",
+    "items": [
+      "/tir/engineering-economic-exploitation.html",
+      "/tir/ellora-how-history-looks.html",
+      "/tir/philosophy/bachelor-men.html",
+      "/tir/history/indias-prettiest-library.html",
+      "/tir/sociology/ravidas-begumpura.html",
+      "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
     "listing": "/cs_2026/index.html",
     "items": [
       "/cs_2026/session14.html",
@@ -195,21 +210,6 @@
       "/cs_2026/session1.html",
       "/cs_2026/session0.html"
     ]
-  },
-  {
-    "listing": "/tir/index.html",
-    "items": [
-      "/tir/engineering-economic-exploitation.html",
-      "/tir/ellora-how-history-looks.html",
-      "/tir/philosophy/bachelor-men.html",
-      "/tir/history/indias-prettiest-library.html",
-      "/tir/sociology/ravidas-begumpura.html",
-      "/tir/history/indian-syncretism.html"
-    ]
-  },
-  {
-    "listing": "/about.html",
-    "items": []
   },
   {
     "listing": "/books/index.html",
