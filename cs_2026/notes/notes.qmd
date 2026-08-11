@@ -9,6 +9,22 @@ session 10 - two-dice-sum game
 
 next few classes
 
+5 more sessions
+
+one live coding class with homework assignment - 1 class
+dice games and fairness - 2 classes
+One live data visualization class
+One more data visualization class with a homework assignment
+
+Next term
+
+File handling and data visualization 
+data analysis and visualization with matplotlib
+coordinate geometry and plotting - draw mandala 
+
+Build your own website 
+
+
 rock-paper-scissors 
 keeping track of scores and plotting in rock-paper-scissors
 treasure hunt grids
