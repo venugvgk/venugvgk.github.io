@@ -176,10 +176,6 @@
     ]
   },
   {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
     "listing": "/tir/index.html",
     "items": [
       "/tir/engineering-economic-exploitation.html",
@@ -191,8 +187,13 @@
     ]
   },
   {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
     "listing": "/cs_2026/index.html",
     "items": [
+      "/cs_2026/session15.html",
       "/cs_2026/session14.html",
       "/cs_2026/session13.html",
       "/cs_2026/session12.html",
