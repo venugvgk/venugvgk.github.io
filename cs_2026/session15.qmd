@@ -1,3 +1,8 @@
+---
+title: Session 15 rock paper scissors 
+date: 2026-08-11
+page-layout: article
+---
 
 ## Lesson overview
 
