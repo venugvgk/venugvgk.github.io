@@ -1,0 +1,54 @@
+---
+title: Treasure hunt and Turtle graphics -1
+date: 2026-08-13
+page-layout: article
+---
+
+We reviwed rock paper scissors programs and their modifications, asssigned as homework in the last class. We noticed how the students need to pay attention to how and why each program is working and be able to modify programs as needed. 
+
+## Treasure Hunt Grid
+
+Then we discussed treasure hunt grid problem. The specifics of the problem are as follows:
+
+1. What should be size of the grid?
+2. How many treasures should be hidden in the grid?
+3. How many guesses should be allowed?
+4. With each guess, how should the program respond to the user? What kinds of hints can be given so that subsequent guesses become more accurate? One option is hot and cold depending on the distance of the treasure from the guess. Another option is to give hints based on the direction of the treasure from the guess. one more is to clear out columns or rows. For these to work, the grid has to be at least 5x5.
+5. How do you let the user know the state of the game? How do we cross out wrong guesses? How do we show the user the grid and the guesses available? One option is to use a 2D list to represent the grid and print it after each guess. 
+
+Taking these as the starting point, work on creating the game. 
+
+## Turtle graphics
+
+We also notice that the students can do with hands on practice of using loops and conditionals. We introduce turtle graphics as a way to practice loops. We start with a simple example of drawing a square and then move on to more complex shapes. Homework is to generate a mandala. 
+
+an example program:
+
+```python
+
+import turtle
+
+screen = turtle.Screen()
+screen.setup(600, 600)
+screen.bgcolor("black")
+screen.title("basic Mandala")
+
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+t.width(2)
+t.color("white")
+
+t.goto(0, 0)
+
+for l in range(0,200,25):
+
+    for _ in range(6):
+        t.left(60)
+
+        for _ in range(3):
+            t.left(120)
+            t.forward(l)
+
+screen.mainloop()
+```
