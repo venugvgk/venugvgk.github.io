@@ -1,0 +1,314 @@
+---
+title: Turtle Graphics - Practice with Loops and Nested Loops
+date: 2026-08-14
+page-layout: article
+---
+
+## Introduction
+
+This workbook contains five turtle graphics programs designed to help you practice using loops and nested loops. Each program builds on the previous one, gradually increasing in complexity. Study the code, run it, observe the patterns, and then experiment with the suggested modifications.
+
+---
+
+## Program 1: Simple Square Spiral
+
+### What This Program Does
+
+This program uses a single `for` loop to create a growing square spiral. The turtle moves forward an increasing distance each iteration and turns 90 degrees, creating a spiral pattern that expands outward.
+
+### The Code
+
+```python
+import turtle
+
+# Create a turtle object
+t = turtle.Turtle()
+t.speed(10)  # Set drawing speed (1-10, where 10 is fastest)
+
+# Draw a square spiral using a single loop
+for i in range(50):
+    # Move forward by distance that increases with each iteration
+    t.forward(i * 5)  # i starts at 0, so first move is 0, then 5, 10, 15...
+    
+    # Turn right 90 degrees to create square corners
+    t.right(90)
+
+# Hide the turtle and display the window
+t.hideturtle()
+turtle.done()
+```
+
+### Things to Think About and Modify
+
+- **Change the turn angle**: What happens if you change `t.right(90)` to `t.right(89)` or `t.right(91)`?
+- **Modify the growth rate**: Try changing `i * 5` to `i * 3` or `i * 10`. How does this affect the spiral?
+- **Add color**: Can you add `t.pencolor('blue')` before the loop to change the line color?
+- **Change the number of iterations**: What happens with `range(100)` instead of `range(50)`?
+
+---
+
+## Program 2: Colorful Rotating Squares
+
+### What This Program Does
+
+This program introduces nested loops: an outer loop that repeats 36 times, and an inner loop that draws a square. After each square is drawn, the turtle rotates slightly, creating a beautiful radial pattern of overlapping squares.
+
+### The Code
+
+```python
+import turtle
+
+# Set up the screen
+screen = turtle.Screen()
+screen.bgcolor('black')  # Set background to black for contrast
+
+# Create a turtle object
+t = turtle.Turtle()
+t.speed(0)  # Maximum speed for faster drawing
+t.pensize(2)  # Set pen thickness
+
+# Define a list of colors to cycle through
+colors = ['red', 'yellow', 'green', 'cyan', 'blue', 'magenta']
+
+# Outer loop: repeat 36 times to create radial pattern
+for i in range(36):
+    # Set color by cycling through the colors list
+    t.pencolor(colors[i % 6])  # % 6 ensures we stay within 0-5 index range
+    
+    # Inner loop: draw a square (4 sides)
+    for side in range(4):
+        t.forward(100)  # Move forward 100 units
+        t.right(90)     # Turn right 90 degrees
+    
+    # After completing the square, rotate turtle by 10 degrees
+    t.right(10)  # 36 * 10 = 360 degrees (full circle)
+
+# Hide turtle and keep window open
+t.hideturtle()
+turtle.done()
+```
+
+
+### Things to Think About and Modify
+
+- **Change the inner shape**: Replace the square with a triangle (3 sides, 120° turns) or hexagon (6 sides, 60° turns).
+- **Modify rotation angle**: What happens if you change `t.right(10)` to `t.right(15)` or `t.right(5)`?
+- **Vary square size**: Can you make the squares grow larger by using `t.forward(100 + i * 2)` in the inner loop?
+- **Add more colors**: Try adding 'white', 'orange', 'purple' to the colors list.
+
+---
+
+## Program 3: Concentric Circle Pattern
+
+### What This Program Does
+
+This program uses a single loop to draw 20 concentric circles, each slightly larger than the previous one. The turtle repositions itself after each circle to maintain a common center point, creating a target-like pattern.
+
+### The Code
+
+```python
+import turtle
+
+# Set up screen
+screen = turtle.Screen()
+screen.bgcolor('white')
+
+# Create turtle
+t = turtle.Turtle()
+t.speed(0)
+t.pensize(3)
+
+# Number of circles to draw
+num_circles = 20
+
+# Starting radius for the smallest circle
+radius = 10
+
+# Loop to draw concentric circles
+for i in range(num_circles):
+    # Set pen color based on iteration (creates gradient effect)
+    # i/num_circles gives a value from 0 to 1
+    t.pencolor('blue')
+    
+    # Lift pen to reposition without drawing
+    t.penup()
+    
+    # Move to starting position for circle (below center)
+    # Circle is drawn from bottom, so we offset by radius
+    t.goto(0, -radius)
+    
+    # Put pen down to start drawing
+    t.pendown()
+    
+    # Draw the circle with current radius
+    t.circle(radius)
+    
+    # Increase radius for next circle
+    radius = radius + 15  # Each circle is 15 units larger
+
+# Hide turtle
+t.hideturtle()
+turtle.done()
+```
+
+
+### Things to Think About and Modify
+
+- **Change circle spacing**: Modify `radius = radius + 15` to use different increments. What happens with 5 or 30?
+- **Add color variation**: Can you use `t.pencolor(colors[i % len(colors)])` to cycle through colors?
+- **Draw from center**: Research how to make circles share the exact same center point.
+- **Create a spiral of circles**: Instead of concentric circles, can you arrange them in a spiral pattern?
+
+---
+
+## Program 4: Grid of Stars (Nested Loops with Positioning)
+
+### What This Program Does
+
+This program demonstrates powerful nested loop usage: the outer loops create a 5×5 grid of positions, and for each position, an inner loop draws a 5-pointed star. This creates a tessellated star pattern.
+
+### The Code
+
+```python
+import turtle
+
+# Set up screen
+screen = turtle.Screen()
+screen.bgcolor('navy')
+screen.setup(600, 600)  # Set window size
+
+# Create turtle
+t = turtle.Turtle()
+t.speed(0)
+t.pensize(2)
+t.color('yellow')
+
+# Function to draw a 5-pointed star at current position
+def draw_star(size):
+    """Draw a 5-pointed star with given size"""
+    for point in range(5):
+        t.forward(size)      # Move forward
+        t.right(144)         # Turn 144 degrees (creates star points)
+
+# Grid settings
+rows = 5
+cols = 5
+star_size = 40
+spacing = 80  # Distance between star centers
+
+# Calculate starting position to center the grid
+start_x = -((cols * spacing) / 2) + 40
+start_y = ((rows * spacing) / 2) - 40
+
+# Nested loops: outer loop for rows, inner loop for columns
+for row in range(rows):
+    for col in range(cols):
+        # Calculate position for this star
+        x = start_x + col * spacing
+        y = start_y - row * spacing
+        
+        # Move to position without drawing
+        t.penup()
+        t.goto(x, y)
+        t.pendown()
+        
+        # Draw star at this position
+        draw_star(star_size)
+
+# Hide turtle
+t.hideturtle()
+turtle.done()
+```
+
+
+### Things to Think About and Modify
+
+- **Change grid size**: Try 6×6 or 4×8 grids. How do you need to adjust positioning?
+- **Vary star size**: Can you make stars in different rows have different sizes using `row` variable?
+- **Add color by position**: Try `t.color(colors[(row + col) % len(colors)])` to create a checkerboard color pattern.
+- **Create offset rows**: Can you shift alternate rows by half a spacing to create a honeycomb pattern?
+
+---
+
+## Program 5: Complex Spiral Web with Nested Color Patterns
+
+### What This Program Does
+
+This advanced program combines multiple concepts: a single loop that draws 200 lines, with each line increasing in length and rotating by a fixed angle. The pen color cycles through a rainbow pattern, and pen width increases gradually, creating a mesmerizing spiral web.
+
+### The Code
+
+```python
+import turtle
+
+# Set up screen with dark background for contrast
+screen = turtle.Screen()
+screen.bgcolor('black')
+screen.setup(800, 800)
+screen.title('Spiral Web Pattern')
+
+# Create turtle
+t = turtle.Turtle()
+t.speed(0)  # Fastest drawing speed
+
+# Define rainbow colors
+colors = ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'purple', 'pink']
+
+# Draw spiral web pattern
+for i in range(200):
+    # Cycle through colors using modulo operator
+    # i % 8 gives values 0-7, matching our 8 colors
+    t.pencolor(colors[i % 8])
+    
+    # Gradually increase pen width (from 1 to about 3)
+    t.pensize(i / 100 + 1)
+    
+    # Move forward by distance that increases with iteration
+    # Creates the expanding spiral effect
+    t.forward(i * 2)
+    
+    # Turn left by 59 degrees (not a divisor of 360, creates interesting pattern)
+    # Try 60, 90, or 120 to see different patterns
+    t.left(59)
+
+# Hide turtle and display
+t.hideturtle()
+turtle.done()
+```
+
+### Things to Think About and Modify
+
+- **Change the turn angle**: Try `t.left(60)`, `t.left(90)`, or `t.left(120)`. How does this change the pattern?
+- **Modify color pattern**: Can you create a gradient by using only 2-3 colors that alternate?
+- **Vary the growth rate**: Change `i * 2` to `i * 1.5` or `i * 3`. How does this affect the spiral density?
+- **Add background color change**: Can you use `screen.bgcolor()` inside the loop to gradually change background?
+- **Create multiple spirals**: Can you draw 3-4 spirals starting from different positions?
+
+---
+
+## Practice Challenges
+
+After completing all five programs, try these challenges:
+
+1. **Combine patterns**: Modify Program 2 to draw circles instead of squares in the rotating pattern.
+
+2. **Create a flower**: Use nested loops to draw petals arranged in a circle (hint: each petal could be an ellipse or arc).
+
+3. **Animated pattern**: Research `turtle.ontimer()` to create an animated drawing that shows the pattern being drawn in real-time.
+
+4. **Random elements**: Import the `random` module and add randomness to colors, sizes, or angles for unique patterns each run.
+
+5. **User interaction**: Use `turtle.textinput()` to let users choose parameters like number of iterations, colors, or angles.
+
+---
+
+## Key Concepts Review
+
+- **Single loops**: Repeat a block of code a specific number of times (`for i in range(n)`)
+- **Nested loops**: Place one loop inside another to create 2D patterns or repeat complex operations
+- **Modulo operator (%)**: Cycle through a list or create repeating patterns
+- **Turtle positioning**: Use `penup()`, `goto()`, and `pendown()` to move without drawing
+- **Variables in loops**: Use the loop variable (`i`) to create changing patterns (size, color, position)
+- **Functions**: Encapsulate repeated drawing operations (like `draw_star()`)
+
+Remember: The best way to learn is to experiment! Change values, break things, and see what happens.
