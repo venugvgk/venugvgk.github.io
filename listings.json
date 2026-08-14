@@ -1,19 +1,22 @@
 [
   {
-    "listing": "/education/index.html",
+    "listing": "/til/index.html",
     "items": [
-      "/education/language-policy-quick-thoughts.html",
-      "/education/rm-case-study-ndp.html",
-      "/education/social-cultural-reproduction.html",
-      "/education/reflections.html",
-      "/education/bernstein-langauge-education-social-reproduction.html",
-      "/education/bruner-chomsky-deb-roy.html",
-      "/education/mirabai-history-perspectives.html",
-      "/education/timeline-indian-education.html",
-      "/education/ambedkar-1916.html",
-      "/education/rethinking-responsibility.html",
-      "/education/kandukuri-phule.html",
-      "/education/kaka-muttai-philosophy.html"
+      "/til/Using AI/extract-audio-with-VLC.html",
+      "/til/quarto/downloadthis.html",
+      "/til/python/function-return-multiple-values.html",
+      "/til/quarto/adding-code.html",
+      "/til/quarto/spacebar-jupyter.html",
+      "/til/quarto/using-jupyter-notebook.html",
+      "/til/python/revealjs-code-with-python.html",
+      "/til/quarto/reading-book-revealjs.html",
+      "/til/python/merge-pdfs-python.html",
+      "/til/quarto/adding-links-to-yml-files.html",
+      "/til/quarto/syntax-highlighting-the-code.html",
+      "/til/quarto/quarto-modify-table-listing.html",
+      "/til/quarto/quarto-add-custom-font.html",
+      "/til/quarto/quarto-modify-listing-page.html",
+      "/til/powerpoint/powerpoint-morph-timeline.html"
     ]
   },
   {
@@ -199,21 +202,6 @@
     ]
   },
   {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
-    "listing": "/tir/index.html",
-    "items": [
-      "/tir/engineering-economic-exploitation.html",
-      "/tir/ellora-how-history-looks.html",
-      "/tir/philosophy/bachelor-men.html",
-      "/tir/history/indias-prettiest-library.html",
-      "/tir/sociology/ravidas-begumpura.html",
-      "/tir/history/indian-syncretism.html"
-    ]
-  },
-  {
     "listing": "/books/index.html",
     "items": [
       "/books/own-picture-books/laya-smile/index.html",
@@ -236,23 +224,35 @@
     ]
   },
   {
-    "listing": "/til/index.html",
+    "listing": "/tir/index.html",
     "items": [
-      "/til/Using AI/extract-audio-with-VLC.html",
-      "/til/quarto/downloadthis.html",
-      "/til/python/function-return-multiple-values.html",
-      "/til/quarto/adding-code.html",
-      "/til/quarto/spacebar-jupyter.html",
-      "/til/quarto/using-jupyter-notebook.html",
-      "/til/python/revealjs-code-with-python.html",
-      "/til/quarto/reading-book-revealjs.html",
-      "/til/python/merge-pdfs-python.html",
-      "/til/quarto/adding-links-to-yml-files.html",
-      "/til/quarto/syntax-highlighting-the-code.html",
-      "/til/quarto/quarto-modify-table-listing.html",
-      "/til/quarto/quarto-add-custom-font.html",
-      "/til/quarto/quarto-modify-listing-page.html",
-      "/til/powerpoint/powerpoint-morph-timeline.html"
+      "/tir/engineering-economic-exploitation.html",
+      "/tir/ellora-how-history-looks.html",
+      "/tir/philosophy/bachelor-men.html",
+      "/tir/history/indias-prettiest-library.html",
+      "/tir/sociology/ravidas-begumpura.html",
+      "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
+    "listing": "/education/index.html",
+    "items": [
+      "/education/language-policy-quick-thoughts.html",
+      "/education/rm-case-study-ndp.html",
+      "/education/social-cultural-reproduction.html",
+      "/education/reflections.html",
+      "/education/bernstein-langauge-education-social-reproduction.html",
+      "/education/bruner-chomsky-deb-roy.html",
+      "/education/mirabai-history-perspectives.html",
+      "/education/timeline-indian-education.html",
+      "/education/ambedkar-1916.html",
+      "/education/rethinking-responsibility.html",
+      "/education/kandukuri-phule.html",
+      "/education/kaka-muttai-philosophy.html"
     ]
   }
 ]
