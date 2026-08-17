@@ -2,13 +2,7 @@
 title: Venu's notes
 publish: false
 ---
-session 7 - computer guesses the number - binary search in operation
-session 8 - prime numbers in a range - is_prime(n) and primes_in_range(start, end)
-session 9 - coin toss simulator - random.randint(0, 1) and fractions of heads and tails
-session 10 - two-dice-sum game
-
 next few classes
-
 5 more sessions
 
 one live coding class with homework assignment - 1 class
@@ -18,9 +12,14 @@ One more data visualization class with a homework assignment
 
 Next term
 
+mandalas with matplotlib - coordinate geometry, trigonometry and plotting 
+Factors Multiples and Divisibility with Python 
+number systems, bases and logarithms 
+Trignometric functions 
+Building/modelling probability distributions
+
 File handling and data visualization 
 data analysis and visualization with matplotlib
-coordinate geometry and plotting - draw mandala 
 
 Build your own website 
 
@@ -32,6 +31,7 @@ fair dice games
 read file and plot
 
 calculator with FLET library?
+
 - All factors of a number
 - Perfect numbers and abundant/deficient numbers
 - Prime factors of a number
