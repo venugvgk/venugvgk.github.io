@@ -3,3 +3,4 @@ nbformat
 numpy
 matplotlib
 pandas
+pygame-ce
