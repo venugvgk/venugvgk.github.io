@@ -8,16 +8,14 @@ radius = 10
 theta = 2 * np.pi/sides
 r = radius
 
-while r > 0:
+for r in range(radius):
     vertices = []
-    for i in range(sides+1):
+    for i in range(sides):
         angle = i * theta
         vertices.append((r * np.cos(angle), r * np.sin(angle)))
 
-    polygon = Polygon(vertices, edgecolor='black')
+    polygon = Polygon(vertices, facecolor='none', edgecolor='black')
     axes.add_patch(polygon)
-
-    r = r-2
    
 # Set the figure area square
 axes.set_aspect(1)
@@ -34,6 +32,5 @@ axes.set_yticks([])
 for spine in axes.spines.values():
     spine.set_visible(False)
 
-figure.savefig('mandala.png', dpi=300, bbox_inches='tight')
 plt.show()
 
