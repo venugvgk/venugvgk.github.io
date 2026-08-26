@@ -2,34 +2,40 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
 
-figure, axes = plt.subplots()
-sides = 5
-radius = 10
-theta = 2 * np.pi/sides
-r = radius
+fig, ax = plt.subplots()
 
-for r in range(radius):
+sides = 6
+outer_radius = 20
+layers = 6
+
+# Create 5 nested polygons with decreasing radius
+for i in range(layers):
+    r = outer_radius * (layers - i) / layers
+    theta = 2 * np.pi / sides
     vertices = []
-    for i in range(sides):
-        angle = i * theta
-        vertices.append((r * np.cos(angle), r * np.sin(angle)))
 
-    polygon = Polygon(vertices, facecolor='none', edgecolor='black')
-    axes.add_patch(polygon)
-   
+    for j in range(sides):
+        angle = j * theta
+        x = r * np.cos(angle)
+        y = r * np.sin(angle)
+        vertices.append((x, y))
+
+    polygon = Polygon(vertices, closed=True, facecolor='none', edgecolor='black', linewidth=1.5)
+    ax.add_patch(polygon)
+
 # Set the figure area square
-axes.set_aspect(1)
+ax.set_aspect(1)
 
 # Set axes limits
-axes.set_xlim(-2*radius, 2*radius)
-axes.set_ylim(-2*radius, 2*radius)
+ax.set_xlim(-outer_radius, outer_radius)
+ax.set_ylim(-outer_radius, outer_radius)
 
 # Hide axes labels
-axes.set_xticks([])
-axes.set_yticks([])
+ax.set_xticks([])
+ax.set_yticks([])
 
 # Remove the border
-for spine in axes.spines.values():
+for spine in ax.spines.values():
     spine.set_visible(False)
 
 plt.show()
