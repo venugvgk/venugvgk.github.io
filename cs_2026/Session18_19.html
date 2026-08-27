@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-08-25">
+
+<title>Session 18 and 19 Mandalas in Matplotlib – Venu GVGK Raju</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../venu-flute-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Session 18 and 19 Mandalas in Matplotlib – Venu GVGK Raju">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Venu GVGK Raju">
+<meta name="twitter:title" content="Session 18 and 19 Mandalas in Matplotlib – Venu GVGK Raju">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Venu GVGK Raju</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">Curriculum Vitae</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../books/index.html"> 
+<span class="menu-text">Books</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../til/index.html"> 
+<span class="menu-text">TIL</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../tir/index.html"> 
+<span class="menu-text">TIR</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../education/index.html"> 
+<span class="menu-text">On Education</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cs_2026/index.html"> 
+<span class="menu-text">CS 2026</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-why-matplotlib-is-not-a-pen-matplotlib-vs.-turtle" id="toc-introduction-why-matplotlib-is-not-a-pen-matplotlib-vs.-turtle" class="nav-link active" data-scroll-target="#introduction-why-matplotlib-is-not-a-pen-matplotlib-vs.-turtle">1. Introduction: Why Matplotlib is Not a Pen (Matplotlib vs.&nbsp;Turtle)</a></li>
+  <li><a href="#the-coordinate-challenge-drawing-a-polygon-from-scratch" id="toc-the-coordinate-challenge-drawing-a-polygon-from-scratch" class="nav-link" data-scroll-target="#the-coordinate-challenge-drawing-a-polygon-from-scratch">2. The Coordinate Challenge: Drawing a Polygon from Scratch</a></li>
+  <li><a href="#bringing-in-trigonometry-the-circular-coordinate-system" id="toc-bringing-in-trigonometry-the-circular-coordinate-system" class="nav-link" data-scroll-target="#bringing-in-trigonometry-the-circular-coordinate-system">3. Bringing in Trigonometry: The Circular Coordinate System</a>
+  <ul class="collapse">
+  <li><a href="#the-3-4-5-triangle-case" id="toc-the-3-4-5-triangle-case" class="nav-link" data-scroll-target="#the-3-4-5-triangle-case">The 3-4-5 Triangle Case</a></li>
+  <li><a href="#going-in-reverse-cartesian-to-polar" id="toc-going-in-reverse-cartesian-to-polar" class="nav-link" data-scroll-target="#going-in-reverse-cartesian-to-polar">Going in Reverse: Cartesian to Polar</a></li>
+  <li><a href="#why-do-we-need-polar-coordinates" id="toc-why-do-we-need-polar-coordinates" class="nav-link" data-scroll-target="#why-do-we-need-polar-coordinates">Why do we need Polar Coordinates?</a></li>
+  </ul></li>
+  <li><a href="#radians-measuring-angles-naturally" id="toc-radians-measuring-angles-naturally" class="nav-link" data-scroll-target="#radians-measuring-angles-naturally">4. Radians: Measuring Angles Naturally</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-radian" id="toc-what-is-a-radian" class="nav-link" data-scroll-target="#what-is-a-radian">What is a Radian?</a></li>
+  </ul></li>
+  <li><a href="#looping-geometry-from-hardcoded-points-to-parametric-loops" id="toc-looping-geometry-from-hardcoded-points-to-parametric-loops" class="nav-link" data-scroll-target="#looping-geometry-from-hardcoded-points-to-parametric-loops">5. Looping Geometry: From Hardcoded Points to Parametric Loops</a>
+  <ul class="collapse">
+  <li><a href="#step-1-the-hardcoded-coordinate-progression" id="toc-step-1-the-hardcoded-coordinate-progression" class="nav-link" data-scroll-target="#step-1-the-hardcoded-coordinate-progression">Step 1: The Hardcoded Coordinate Progression</a></li>
+  <li><a href="#step-2-the-parametric-loop-for-a-regular-polygon" id="toc-step-2-the-parametric-loop-for-a-regular-polygon" class="nav-link" data-scroll-target="#step-2-the-parametric-loop-for-a-regular-polygon">Step 2: The Parametric Loop for a Regular Polygon</a></li>
+  </ul></li>
+  <li><a href="#the-next-step-nesting-polygons-nested-loops" id="toc-the-next-step-nesting-polygons-nested-loops" class="nav-link" data-scroll-target="#the-next-step-nesting-polygons-nested-loops">6. The Next Step: Nesting Polygons (Nested Loops)</a>
+  <ul class="collapse">
+  <li><a href="#the-default-fill-color-trap" id="toc-the-default-fill-color-trap" class="nav-link" data-scroll-target="#the-default-fill-color-trap">The “Default Fill Color” Trap</a></li>
+  </ul></li>
+  <li><a href="#the-ultimate-challenge-arranging-touching-circles-around-a-circumference" id="toc-the-ultimate-challenge-arranging-touching-circles-around-a-circumference" class="nav-link" data-scroll-target="#the-ultimate-challenge-arranging-touching-circles-around-a-circumference">7. The Ultimate Challenge: Arranging Touching Circles Around a Circumference</a>
+  <ul class="collapse">
+  <li><a href="#two-competing-approaches" id="toc-two-competing-approaches" class="nav-link" data-scroll-target="#two-competing-approaches">Two Competing Approaches</a></li>
+  <li><a href="#why-the-curved-arc-method-causes-overlap" id="toc-why-the-curved-arc-method-causes-overlap" class="nav-link" data-scroll-target="#why-the-curved-arc-method-causes-overlap">Why the Curved Arc Method Causes Overlap</a></li>
+  <li><a href="#implementing-perfectly-touching-circles-n-18" id="toc-implementing-perfectly-touching-circles-n-18" class="nav-link" data-scroll-target="#implementing-perfectly-touching-circles-n-18">Implementing Perfectly Touching Circles (N = 18)</a></li>
+  </ul></li>
+  <li><a href="#conclusion-and-homework" id="toc-conclusion-and-homework" class="nav-link" data-scroll-target="#conclusion-and-homework">8. Conclusion and Homework</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Session 18 and 19 Mandalas in Matplotlib</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 25, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction-why-matplotlib-is-not-a-pen-matplotlib-vs.-turtle" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-why-matplotlib-is-not-a-pen-matplotlib-vs.-turtle">1. Introduction: Why Matplotlib is Not a Pen (Matplotlib vs.&nbsp;Turtle)</h2>
+<p>Let’s begin by looking at a fundamental geometric shape: a regular pentagon. If I asked you to draw a pentagon, how would you go about it? If you have done logo design or used <strong>Turtle graphics</strong> before, your first instinct is probably to tell the pen: <em>“Go forward 120 steps, turn left by 72 degrees, go forward 120, turn left by 72…”</em> and repeat that five times.</p>
+<p>That works beautifully in Turtle because Turtle is essentially a pen with a heading—it is vector drawing based on relative moves. But let me drop the first major reality check: <strong>that relative turning business does not exist in Matplotlib</strong>.</p>
+<p>Matplotlib is not a pen; it doesn’t understand “go forward” or “turn left”. Instead, Matplotlib requires a <strong>coordinate grid</strong>. If you want to draw a line, you must specify its exact starting and ending coordinate points. If you want to draw a polygon, you must provide a list of all its vertices.</p>
+<p>Matplotlib has a function called <code>Polygon</code> under its <code>patches</code> library. If you give it the coordinate points of the vertices, it will draw the polygon in one go. You don’t need five lines of command; you just need the vertices.</p>
+<p>But how do you find those vertices? Where do they lie on this two-dimensional plane?</p>
+<hr>
+</section>
+<section id="the-coordinate-challenge-drawing-a-polygon-from-scratch" class="level2">
+<h2 class="anchored" data-anchor-id="the-coordinate-challenge-drawing-a-polygon-from-scratch">2. The Coordinate Challenge: Drawing a Polygon from Scratch</h2>
+<p>Let’s try to figure out the vertices manually without any advanced tools. Let’s assume we place our regular pentagon straight on the x-axis, not tilted, and we decide that the bottom-left corner starts at the origin <span class="math inline">\((0, 0)\)</span>.</p>
+<pre><code>           C (top vertex)
+          / \
+         /   \
+        /     \
+   D (left)  E (right)
+      |         |
+      |         |
+      +---------+
+    A(0,0)     B(20,0)</code></pre>
+<p>If the base length is <span class="math inline">\(20\)</span>, then the second vertex on the x-axis is easy: it’s at <span class="math inline">\((20, 0)\)</span>. But now where is the next vertex? If we go up and slightly to the right, how do we find its exact coordinates?</p>
+<p>One of you might guess: <em>“Well, maybe we go 5 points more along x, so it is at (25, y)?”</em> But what is <span class="math inline">\(y\)</span>? And if the side lengths must all be exactly <span class="math inline">\(20\)</span>, does that coordinate satisfy it?</p>
+<p>If we try to hand-calculate the coordinates of every vertex of a regular pentagon using only simple linear measurements, we run into immediate mathematical friction. Finding the coordinates of the slanted corners becomes incredibly difficult.</p>
+<p>This is why mathematics is a cumulative subject. To solve this, we must reach back into our toolkit and combine two seemingly separate ideas: <strong>trigonometry</strong> and <strong>coordinate geometry</strong>.</p>
+<hr>
+</section>
+<section id="bringing-in-trigonometry-the-circular-coordinate-system" class="level2">
+<h2 class="anchored" data-anchor-id="bringing-in-trigonometry-the-circular-coordinate-system">3. Bringing in Trigonometry: The Circular Coordinate System</h2>
+<p>Let’s remind ourselves of how we define <span class="math inline">\(\sin\theta\)</span> and <span class="math inline">\(\cos\theta\)</span> using the unit circle.</p>
+<p>If we draw a circle with its center at the origin <span class="math inline">\((0, 0)\)</span> and a radius of <span class="math inline">\(r\)</span>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figures/cartesian-polar-coords.png" class="img-fluid figure-img"></p>
+<figcaption>Connecting Cartesian and Polar Coordinate Systems</figcaption>
+</figure>
+</div>
+<p>Any point <span class="math inline">\(C\)</span> on the circumference of this circle can be connected back to the origin, forming a right-angled triangle <span class="math inline">\(ABC\)</span> with the x-axis. * Let the angle with the positive x-axis be <span class="math inline">\(\theta\)</span>. * The hypotenuse is the radius <span class="math inline">\(r\)</span>. * The adjacent side along the x-axis is <span class="math inline">\(AB\)</span>. * The opposite side along the y-axis is <span class="math inline">\(BC\)</span>.</p>
+<p>By definition: <span class="math display">\[\cos\theta = \frac{\text{Adjacent}}{\text{Hypotenuse}} = \frac{AB}{r} \implies AB = r \cos\theta\]</span> <span class="math display">\[\sin\theta = \frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{BC}{r} \implies BC = r \sin\theta\]</span></p>
+<p>Because <span class="math inline">\(AB\)</span> represents the horizontal displacement (the x-coordinate) and <span class="math inline">\(BC\)</span> represents the vertical displacement (the y-coordinate), the coordinates of our point <span class="math inline">\(C\)</span> are simply: <span class="math display">\[(x, y) = (r \cos\theta, r \sin\theta)\]</span></p>
+<p>This is the bridge between the <strong>Cartesian coordinate system</strong> <span class="math inline">\((x, y)\)</span>—which specifies perpendicular distances from the axes—and the <strong>circular (or polar) coordinate system</strong> <span class="math inline">\((r, \theta)\)</span>—which specifies a point by its straight-line distance from the origin (<span class="math inline">\(r\)</span>) and its angle from the positive x-axis (<span class="math inline">\(\theta\)</span>).</p>
+<section id="the-3-4-5-triangle-case" class="level3">
+<h3 class="anchored" data-anchor-id="the-3-4-5-triangle-case">The 3-4-5 Triangle Case</h3>
+<p>Let’s see if this matches what we know. Suppose we have a circle of radius <span class="math inline">\(r = 5\)</span>, and a point with an adjacent side of <span class="math inline">\(3\)</span> and an opposite side of <span class="math inline">\(4\)</span>. Using the Pythagorean theorem: <span class="math display">\[x^2 + y^2 = 3^2 + 4^2 = 9 + 16 = 25 = r^2\]</span> This is a perfect fit. Here: <span class="math display">\[\cos\theta = \frac{3}{5} \implies x = 5 \cos\theta = 3\]</span> <span class="math display">\[\sin\theta = \frac{4}{5} \implies y = 5 \sin\theta = 4\]</span></p>
+</section>
+<section id="going-in-reverse-cartesian-to-polar" class="level3">
+<h3 class="anchored" data-anchor-id="going-in-reverse-cartesian-to-polar">Going in Reverse: Cartesian to Polar</h3>
+<p>If you are given a point in <span class="math inline">\((x, y)\)</span> and need to find its polar equivalents <span class="math inline">\((r, \theta)\)</span>: 1. <strong>Find the radius (<span class="math inline">\(r\)</span>):</strong> By Pythagoras, the distance from the center is: <span class="math display">\[r = \sqrt{x^2 + y^2}\]</span> 2. <strong>Find the angle (<span class="math inline">\(\theta\)</span>):</strong> The tangent ratio is opposite over adjacent: <span class="math display">\[\tan\theta = \frac{y}{x} \implies \theta = \tan^{-1}\left(\frac{y}{x}\right)\]</span></p>
+</section>
+<section id="why-do-we-need-polar-coordinates" class="level3">
+<h3 class="anchored" data-anchor-id="why-do-we-need-polar-coordinates">Why do we need Polar Coordinates?</h3>
+<p>When we think in circles, Polar coordinates <span class="math inline">\((r, \theta)\)</span> make intuitive sense. If you want to trace points along a circle, <span class="math inline">\(r\)</span> remains constant, and you only need to vary <span class="math inline">\(\theta\)</span>. Trying to do this directly in Cartesian <span class="math inline">\((x, y)\)</span> coordinates would require calculating complex quadratic boundaries (<span class="math inline">\(x^2 + y^2 = r^2\)</span>) for every single point.</p>
+<p>For regular polygons, whose vertices all lie perfectly on a circle, the circular coordinate system is a massive mathematical superpower!</p>
+<hr>
+</section>
+</section>
+<section id="radians-measuring-angles-naturally" class="level2">
+<h2 class="anchored" data-anchor-id="radians-measuring-angles-naturally">4. Radians: Measuring Angles Naturally</h2>
+<p>When we think of dividing a circle, we normally think in degrees (<span class="math inline">\(360^\circ\)</span> for a full circle, <span class="math inline">\(72^\circ\)</span> for a pentagon, <span class="math inline">\(60^\circ\)</span> for a hexagon). But let me ask you: is dividing a circle into 360 parts a <em>natural</em> way of doing things?</p>
+<p>No, it’s completely arbitrary. We could have divided it into 100 parts, or 240 parts. In mathematics and computers, we use a much more organic, natural unit of angle measurement: the <strong>radian</strong>.</p>
+<section id="what-is-a-radian" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-a-radian">What is a Radian?</h3>
+<p>Imagine taking the radius (<span class="math inline">\(r\)</span>) of a circle and bending it along the curved circumference of that same circle. The angle subtended at the center of the circle by an arc of this length is exactly <strong>1 radian</strong>.</p>
+<pre><code>                _---_
+              /   r   \  &lt;- Length of arc = r
+             /    |    \
+            |     |     |
+            |     +-----|  &lt;- Center (0, 0)
+             \  theta  /
+              \   |   /  &lt;- Angle theta = 1 Radian
+                -___-</code></pre>
+<p>Because the entire circumference of a circle of radius <span class="math inline">\(r\)</span> is <span class="math inline">\(2\pi r\)</span>, we can ask: how many radius lengths fit along the circumference? <span class="math display">\[\text{Number of Radians in a Circle} = \frac{\text{Circumference}}{\text{Radius}} = \frac{2\pi r}{r} = 2\pi\text{ radians}\]</span></p>
+<p>Thus, a full circle of <span class="math inline">\(360^\circ\)</span> is exactly equal to <span class="math inline">\(2\pi\)</span> radians: * <span class="math inline">\(360^\circ = 2\pi\text{ rad}\)</span> * <span class="math inline">\(180^\circ = \pi\text{ rad}\)</span> * <span class="math inline">\(90^\circ = \frac{\pi}{2}\text{ rad}\)</span></p>
+<p>Matplotlib and NumPy operate <strong>exclusively</strong> in radians. When writing code, we must specify angles using multiples of <code>np.pi</code>.</p>
+<hr>
+</section>
+</section>
+<section id="looping-geometry-from-hardcoded-points-to-parametric-loops" class="level2">
+<h2 class="anchored" data-anchor-id="looping-geometry-from-hardcoded-points-to-parametric-loops">5. Looping Geometry: From Hardcoded Points to Parametric Loops</h2>
+<p>Now that we have the mathematical foundation, let’s write some code to draw a pentagon. A regular pentagon has 5 vertices, meaning the circle is split into 5 equal slices. The angle between each vertex is: <span class="math display">\[\theta = \frac{2\pi}{5} = 72^\circ\]</span></p>
+<p>Let’s begin by setting up our canvas and hardcoding the coordinates for the vertices to see the pattern.</p>
+<section id="step-1-the-hardcoded-coordinate-progression" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-the-hardcoded-coordinate-progression">Step 1: The Hardcoded Coordinate Progression</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Circle</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup a square coordinate grid</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="dv">1</span>)  <span class="co"># Keeps x and y scales 1:1 so circles don't look like ovals!</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">/</span> <span class="dv">5</span>  <span class="co"># 72 degrees in radians</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># First point is on the positive x-axis (0 degrees)</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> R <span class="op">*</span> np.cos(<span class="dv">0</span> <span class="op">*</span> theta)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> R <span class="op">*</span> np.sin(<span class="dv">0</span> <span class="op">*</span> theta)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Second point is turned by 1 step of theta</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> R <span class="op">*</span> np.cos(<span class="dv">1</span> <span class="op">*</span> theta)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> R <span class="op">*</span> np.sin(<span class="dv">1</span> <span class="op">*</span> theta)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Third point is turned by 2 steps of theta</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> R <span class="op">*</span> np.cos(<span class="dv">2</span> <span class="op">*</span> theta)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> R <span class="op">*</span> np.sin(<span class="dv">2</span> <span class="op">*</span> theta)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Fourth point is turned by 3 steps of theta</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>x3 <span class="op">=</span> R <span class="op">*</span> np.cos(<span class="dv">3</span> <span class="op">*</span> theta)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>y3 <span class="op">=</span> R <span class="op">*</span> np.sin(<span class="dv">3</span> <span class="op">*</span> theta)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Fifth point is turned by 4 steps of theta</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>x4 <span class="op">=</span> R <span class="op">*</span> np.cos(<span class="dv">4</span> <span class="op">*</span> theta)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>y4 <span class="op">=</span> R <span class="op">*</span> np.sin(<span class="dv">4</span> <span class="op">*</span> theta)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw small marker circles at each vertex to verify they are correct</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>ax.add_patch(Circle((x0, y0), <span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'red'</span>))</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>ax.add_patch(Circle((x1, y1), <span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'blue'</span>))</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>ax.add_patch(Circle((x2, y2), <span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'green'</span>))</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>ax.add_patch(Circle((x3, y3), <span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'purple'</span>))</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>ax.add_patch(Circle((x4, y4), <span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'orange'</span>))</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Look at the progression of the indices in those coordinate definitions: <span class="math inline">\(0 \cdot \theta\)</span>, <span class="math inline">\(1 \cdot \theta\)</span>, <span class="math inline">\(2 \cdot \theta\)</span>, <span class="math inline">\(3 \cdot \theta\)</span>, <span class="math inline">\(4 \cdot \theta\)</span>. This mathematical consistency is a clear signal that we can compress this entire block into a single loop!</p>
+</section>
+<section id="step-2-the-parametric-loop-for-a-regular-polygon" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-the-parametric-loop-for-a-regular-polygon">Step 2: The Parametric Loop for a Regular Polygon</h3>
+<p>Instead of generating vertices by hand, let’s write a loop where <span class="math inline">\(i\)</span> runs from <span class="math inline">\(0\)</span> to <span class="math inline">\(\text{sides} - 1\)</span>. This code will dynamically construct any regular polygon we want, whether it is a pentagon (5 sides), a hexagon (6 sides), or a dodecagon (12 sides)!</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Polygon</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="dv">1</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>sides <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">/</span> sides  <span class="co"># Calculate the step angle</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>vertices <span class="op">=</span> []</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(sides):</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate coordinate of vertex 'i'</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    angle <span class="op">=</span> i <span class="op">*</span> theta</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> R <span class="op">*</span> np.cos(angle)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> R <span class="op">*</span> np.sin(angle)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    vertices.append((x, y))</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the Polygon patch</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>polygon <span class="op">=</span> Polygon(vertices, closed<span class="op">=</span><span class="va">True</span>, facecolor<span class="op">=</span><span class="st">'none'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>ax.add_patch(polygon)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="the-next-step-nesting-polygons-nested-loops" class="level2">
+<h2 class="anchored" data-anchor-id="the-next-step-nesting-polygons-nested-loops">6. The Next Step: Nesting Polygons (Nested Loops)</h2>
+<p>Now let’s try something more complex: drawing concentric regular polygons nested inside one another, which is a key structural building block for circular <strong>mandalas</strong>.</p>
+<p>To do this, we want to decrease our radius <span class="math inline">\(r\)</span> layer by layer. Let’s say we want <span class="math inline">\(5\)</span> layers.</p>
+<section id="the-default-fill-color-trap" class="level3">
+<h3 class="anchored" data-anchor-id="the-default-fill-color-trap">The “Default Fill Color” Trap</h3>
+<p>When we first ran nested loops to draw multiple polygons, we encountered an odd issue: we could only see one giant blue polygon. Why? Because by default, Matplotlib fills polygons with a solid color. The larger outer polygons were drawn first (or last), and they ended up completely overlapping and hiding the smaller inner polygons.</p>
+<p>To fix this, we must set <code>facecolor='none'</code> (or specify a transparent fill) so that only the edges are drawn.</p>
+<p>Here is the nested loop structure to draw concentric 12-sided polygons (dodecagons):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figures/nested-polygons.png" class="img-fluid figure-img"></p>
+<figcaption>Concentric Regular Polygons</figcaption>
+</figure>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Polygon</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="dv">1</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">22</span>, <span class="dv">22</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">22</span>, <span class="dv">22</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>sides <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>outer_radius <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>layers <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Outer loop: Iterates over the layers, changing the radius r</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(layers):</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Evenly space the radii from outer_radius down to 4</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> outer_radius <span class="op">*</span> (layers <span class="op">-</span> i) <span class="op">/</span> layers</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">/</span> sides</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    vertices <span class="op">=</span> []</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Inner loop: Calculates the vertices for a single polygon at radius 'r'</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(sides):</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">=</span> j <span class="op">*</span> theta</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> r <span class="op">*</span> np.cos(angle)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>        y <span class="op">=</span> r <span class="op">*</span> np.sin(angle)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>        vertices.append((x, y))</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Draw the polygon with transparent fill to prevent blocking inner layers</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    polygon <span class="op">=</span> Polygon(vertices, closed<span class="op">=</span><span class="va">True</span>, facecolor<span class="op">=</span><span class="st">'none'</span>, edgecolor<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    ax.add_patch(polygon)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="the-ultimate-challenge-arranging-touching-circles-around-a-circumference" class="level2">
+<h2 class="anchored" data-anchor-id="the-ultimate-challenge-arranging-touching-circles-around-a-circumference">7. The Ultimate Challenge: Arranging Touching Circles Around a Circumference</h2>
+<p>Let’s move to a much harder geometry problem. Imagine we want to draw <span class="math inline">\(n\)</span> small circles arranged in a circular ring around a larger central circle of radius <span class="math inline">\(R\)</span>. We want these smaller circles to be perfectly spaced so that they <strong>touch each other exactly</strong>, without overlapping and without any gaps.</p>
+<pre><code>                   O (Small Circle)
+                 /   \
+                /     \
+               O       O
+              /         \
+             |     +     |  &lt;- Central Circle of Radius R
+              \         /
+               O       O
+                 \   /
+                   O</code></pre>
+<p>To achieve this, we can easily locate the centers of the small circles: they lie along the circumference of the main circle at angles spaced by <span class="math inline">\(\theta = 2\pi / n\)</span>. But how do we determine the exact radius (<span class="math inline">\(r_{\text{small}}\)</span>) of the small circles?</p>
+<section id="two-competing-approaches" class="level3">
+<h3 class="anchored" data-anchor-id="two-competing-approaches">Two Competing Approaches</h3>
+<p>There are two ways to think about this problem:</p>
+<ol type="1">
+<li><p><strong>The Curved Arc Distance Approach:</strong><br>
+We know the circumference of the central circle is <span class="math inline">\(2\pi R\)</span>. If we divide this circumference into <span class="math inline">\(n\)</span> parts, that should give us the diameter of each small circle. Therefore, the radius is: <span class="math display">\[r_{\text{small}} = \frac{\text{Circumference}}{2 \cdot n} = \frac{2\pi R}{2n} = \frac{\pi R}{n}\]</span></p></li>
+<li><p><strong>The Straight-line Distance Approach:</strong><br>
+Instead of using the curved circumference, we calculate the coordinates of two adjacent circle centers, find the straight-line distance <span class="math inline">\(d\)</span> (chord length) between them, and divide that by 2.</p>
+<ul>
+<li>Adjacent Center 1: <span class="math inline">\(P_1 = (R \cos(0), R \sin(0)) = (R, 0)\)</span></li>
+<li>Adjacent Center 2: <span class="math inline">\(P_2 = (R \cos\theta, R \sin\theta)\)</span> where <span class="math inline">\(\theta = 2\pi / n\)</span></li>
+</ul>
+<p>Using the distance formula: <span class="math display">\[d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\]</span> <span class="math display">\[r_{\text{small}} = \frac{d}{2}\]</span></p></li>
+</ol>
+</section>
+<section id="why-the-curved-arc-method-causes-overlap" class="level3">
+<h3 class="anchored" data-anchor-id="why-the-curved-arc-method-causes-overlap">Why the Curved Arc Method Causes Overlap</h3>
+<p>At first glance, this method seems logical. But there is a subtle geometric catch: <strong>the curved arc distance is always greater than the straight-line distance</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figures/touching-circles-geometry.png" class="img-fluid figure-img"></p>
+<figcaption>The Touching Circles Challenge</figcaption>
+</figure>
+</div>
+<p>When you measure a curved path along a circle’s edge and then “straighten” it out to use as a radius, that radius will be slightly longer than the straight line connecting the two centers. If you use this radius, the small circles will be too large and will overlap. The radius of each circle is a straight-line vector, so we <em>must</em> calculate the straight-line distance between centers.</p>
+</section>
+<section id="implementing-perfectly-touching-circles-n-18" class="level3">
+<h3 class="anchored" data-anchor-id="implementing-perfectly-touching-circles-n-18">Implementing Perfectly Touching Circles (N = 18)</h3>
+<p>Here is how we implement this geometry in Python using the straight-line distance formula to calculate <span class="math inline">\(r_{\text{small}}\)</span>:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Circle</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="dv">1</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>n_circles <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">/</span> n_circles</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Calculate the coordinates of two adjacent center points</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>x1, y1 <span class="op">=</span> R <span class="op">*</span> np.cos(<span class="dv">0</span>), R <span class="op">*</span> np.sin(<span class="dv">0</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>x2, y2 <span class="op">=</span> R <span class="op">*</span> np.cos(theta), R <span class="op">*</span> np.sin(theta)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Use the distance formula to find the straight-line distance (d)</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> np.sqrt((x2 <span class="op">-</span> x1)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (y2 <span class="op">-</span> y1)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. The radius of our touching circles is half of that distance</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>r_small <span class="op">=</span> d <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw the background central path circle</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>central_path <span class="op">=</span> Circle((<span class="dv">0</span>, <span class="dv">0</span>), R, fill<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span><span class="st">'gray'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>ax.add_patch(central_path)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Loop around and place the 18 small circles</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_circles):</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    angle <span class="op">=</span> i <span class="op">*</span> theta</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    cx <span class="op">=</span> R <span class="op">*</span> np.cos(angle)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    cy <span class="op">=</span> R <span class="op">*</span> np.sin(angle)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create and add the small circle patch</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    small_circle <span class="op">=</span> Circle((cx, cy), r_small, facecolor<span class="op">=</span><span class="st">'cyan'</span>, edgecolor<span class="op">=</span><span class="st">'blue'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>    ax.add_patch(small_circle)</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"18 Perfectly Touching Circles (Radius = </span><span class="sc">{</span>r_small<span class="sc">:.3f}</span><span class="ss">)"</span>)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="conclusion-and-homework" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-and-homework">8. Conclusion and Homework</h2>
+<p>In computational design, mathematics and code are inextricably linked. A beautiful mandala or clean scientific visualization is simply the physical expression of precise coordinate geometry and loops.</p>
+<p>Before our next class on Thursday, please make sure you review and practice the following homework tasks:</p>
+<ol type="1">
+<li><strong>The Verbal Rebuild:</strong> Be prepared to stand up and explain the Cartesian coordinate system <span class="math inline">\((x, y)\)</span>, the Polar coordinate system <span class="math inline">\((r, \theta)\)</span>, and how they relate using trigonometry (<span class="math inline">\(x = r\cos\theta, y = r\sin\theta\)</span>).</li>
+<li><strong>Loop Construction:</strong> Write a Python script from scratch that allows a user to input any variable <code>sides</code> and dynamically draws that regular polygon on a square Matplotlib grid.</li>
+<li><strong>Circle Path:</strong> Complete the pseudocode implementation for drawing 12 and 18 perfectly touching circles around a central circular track. Pay close attention to how your nested loops are structured!</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/gvgk\.in\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Currently associated with <a href="https://farmhill.in"><em>Farm Hill Education Trust</em></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:venu.gvgk@gmail.com">
+      <i class="bi bi-envelope-at" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/venugvgk">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/venu.gvgk">
+      <i class="bi bi-facebook" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/venu.gvgk">
+      <i class="bi bi-instagram" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

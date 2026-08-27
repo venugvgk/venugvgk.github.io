@@ -179,45 +179,6 @@
     ]
   },
   {
-    "listing": "/cs_2026/index.html",
-    "items": [
-      "/cs_2026/session16.5.html",
-      "/cs_2026/session16.html",
-      "/cs_2026/session15.html",
-      "/cs_2026/session14.html",
-      "/cs_2026/session13.html",
-      "/cs_2026/session12.html",
-      "/cs_2026/session11.html",
-      "/cs_2026/session10.html",
-      "/cs_2026/session9.html",
-      "/cs_2026/session8.html",
-      "/cs_2026/session7.html",
-      "/cs_2026/session6.html",
-      "/cs_2026/session5.html",
-      "/cs_2026/session4.5.html",
-      "/cs_2026/session4.html",
-      "/cs_2026/session3.html",
-      "/cs_2026/session2.html",
-      "/cs_2026/session1.html",
-      "/cs_2026/session0.html"
-    ]
-  },
-  {
-    "listing": "/about.html",
-    "items": []
-  },
-  {
-    "listing": "/tir/index.html",
-    "items": [
-      "/tir/engineering-economic-exploitation.html",
-      "/tir/ellora-how-history-looks.html",
-      "/tir/philosophy/bachelor-men.html",
-      "/tir/history/indias-prettiest-library.html",
-      "/tir/sociology/ravidas-begumpura.html",
-      "/tir/history/indian-syncretism.html"
-    ]
-  },
-  {
     "listing": "/books/index.html",
     "items": [
       "/books/own-picture-books/laya-smile/index.html",
@@ -237,6 +198,47 @@
       "/books/story-weaver/amma-intiki/index.html",
       "/books/story-weaver/chakrala-kurchi/index.html",
       "/books/story-weaver/battalu-utike/index.html"
+    ]
+  },
+  {
+    "listing": "/tir/index.html",
+    "items": [
+      "/tir/engineering-economic-exploitation.html",
+      "/tir/ellora-how-history-looks.html",
+      "/tir/philosophy/bachelor-men.html",
+      "/tir/history/indias-prettiest-library.html",
+      "/tir/sociology/ravidas-begumpura.html",
+      "/tir/history/indian-syncretism.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": []
+  },
+  {
+    "listing": "/cs_2026/index.html",
+    "items": [
+      "/cs_2026/Session18_19.html",
+      "/cs_2026/session17.html",
+      "/cs_2026/session16.5.html",
+      "/cs_2026/session16.html",
+      "/cs_2026/session15.html",
+      "/cs_2026/session14.html",
+      "/cs_2026/session13.html",
+      "/cs_2026/session12.html",
+      "/cs_2026/session11.html",
+      "/cs_2026/session10.html",
+      "/cs_2026/session9.html",
+      "/cs_2026/session8.html",
+      "/cs_2026/session7.html",
+      "/cs_2026/session6.html",
+      "/cs_2026/session5.html",
+      "/cs_2026/session4.5.html",
+      "/cs_2026/session4.html",
+      "/cs_2026/session3.html",
+      "/cs_2026/session2.html",
+      "/cs_2026/session1.html",
+      "/cs_2026/session0.html"
     ]
   },
   {
