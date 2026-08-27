@@ -518,7 +518,7 @@ G = \frac{100(0.95)}{1/36} = \text{₹3,420}
 </section>
 <section id="python-mathematically-fair-die-game" class="level2">
 <h2 class="anchored" data-anchor-id="python-mathematically-fair-die-game">Python: mathematically fair die game</h2>
-<div id="6413a34a" class="cell" data-execution_count="1">
+<div id="c9f1abd0" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> secrets <span class="im">import</span> randbelow</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>STAKE <span class="op">=</span> <span class="dv">100</span></span>
@@ -538,7 +538,7 @@ G = \frac{100(0.95)}{1/36} = \text{₹3,420}
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Rolled: </span><span class="sc">{</span>roll<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"You lost ₹</span><span class="sc">{</span><span class="op">-</span>player_net<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Rolled: 2
+<pre><code>Rolled: 3
 You lost ₹100.00</code></pre>
 </div>
 </div>
@@ -547,7 +547,7 @@ You lost ₹100.00</code></pre>
 <section id="python-casino-die-game" class="level2">
 <h2 class="anchored" data-anchor-id="python-casino-die-game">Python: casino die game</h2>
 <p>This version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.</p>
-<div id="010810f8" class="cell" data-execution_count="2">
+<div id="96ead6dc" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> secrets <span class="im">import</span> randbelow</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>STAKE <span class="op">=</span> <span class="dv">100</span></span>
@@ -575,7 +575,7 @@ You lost ₹100.00</code></pre>
 </section>
 <section id="simulating-10000-rolls" class="level2">
 <h2 class="anchored" data-anchor-id="simulating-10000-rolls">Simulating 10,000 rolls</h2>
-<div id="52ab51aa" class="cell" data-execution_count="3">
+<div id="8707aafe" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> secrets <span class="im">import</span> randbelow</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>NUM_ROLLS <span class="op">=</span> <span class="dv">10_000</span></span>
@@ -628,13 +628,13 @@ Number of rolls:            10,000
 Stake per roll:             ₹100.00
 House edge:                 5.00%
 Gross payout on a win:      ₹570.00
-Number of player wins:      1,623
-Observed win rate:          16.23%
+Number of player wins:      1,593
+Observed win rate:          15.93%
 
 Total amount wagered:       ₹1,000,000.00
-Player net result:          ₹-74,890.00
-Casino profit:              ₹74,890.00
-Observed house edge:        7.49%
+Player net result:          ₹-91,990.00
+Casino profit:              ₹91,990.00
+Observed house edge:        9.20%
 Expected casino profit:     ₹50,000.00</code></pre>
 </div>
 </div>
