@@ -1,0 +1,14 @@
+---
+title: Session 20 - Term End Revision Homework
+date: 2026-08-27
+page-layout: article
+---
+As you are trying to revise and commit things to memory, revise and recall. To test your recall, try reproducing what you have learnt, from memory. 
+
+1. Read up on Python Data Types and Data Structures. 
+2. Revise how to use For and While loops as well as If-else if conditionals. 
+3. Write the treasure hunt program from scratch. Start from a simple program that builds a grid, places treasure at any point using random.randint, takes two coordinates and responds with whether treasure is there or not. Go on to build complexity by including screen display of grid, grid box number instead of coordinates, stars at already guessed places, progressing to clues based on guesses. 
+4. Choose any 4 graphics and generate them using Turtle - you can draw the graphics from your imagination on paper first and then try and see how you can use Turtle to generate the same. 
+5. If you have more time, look up matplotlib documentation, useful libraries etc. online. 
+
+
