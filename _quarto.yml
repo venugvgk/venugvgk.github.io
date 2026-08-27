@@ -32,14 +32,12 @@ website:
          href: blog/index.qmd
        - text: Books
          href: books/index.qmd
-       - text: TIL
-         href: til/index.qmd
-       - text: TIR
-         href: tir/index.qmd
        - text: On Education
          href: education/index.qmd
        - text: CS 2026
          href: cs_2026/index.qmd
+       - text: A Level Math
+         href: a_math_2028/index.qmd
 
 
         

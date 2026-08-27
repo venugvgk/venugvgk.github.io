@@ -1,0 +1,29 @@
+---
+title: Preparation for A Level Math
+date: 2026-08-27
+page-layout: article
+---
+Revise the following.
+
+## Quadratics
+
+1. Solve quadratic equations by factorising
+2. Solve linear equalities and inequalities
+3. Solve simultaneous linear equations
+4. Carry out simple manipulation of surds
+
+## Coordinate Geometry
+
+1. Find the midpoint and length of a line segment
+2. Find the gradient (slope) of a line and state the gradient of a ine that is perpendicular to the line
+3. Interpret and use equations of lines of the form y = mx + c
+
+## Circular Measure
+
+1. Find the perimeter and area of sectors
+2. Use Pythagoras’ theorem and trigonometry on right-angled triangles.
+
+## Series
+
+1. Arithmetic and Geometric progressions
+2. Calculating the nth term
