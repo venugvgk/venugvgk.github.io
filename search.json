@@ -1061,21 +1061,21 @@
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-mathematically-fair-die-game",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Python: mathematically fair die game",
-    "text": "Python: mathematically fair die game\n\nfrom secrets import randbelow\n\nSTAKE = 100\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE / win_probability  # ₹600 in a fair game\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    player_net = gross_payout - STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{player_net:.2f}\")\nelse:\n    player_net = -STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{-player_net:.2f}\")\n\nRolled: 5\nYou lost ₹100.00\n\n\nThe program uses secrets.randbelow(6) + 1 to generate a uniformly distributed die result from 1 to 6."
+    "text": "Python: mathematically fair die game\n\nfrom secrets import randbelow\n\nSTAKE = 100\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE / win_probability  # ₹600 in a fair game\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    player_net = gross_payout - STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{player_net:.2f}\")\nelse:\n    player_net = -STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{-player_net:.2f}\")\n\nRolled: 2\nYou lost ₹100.00\n\n\nThe program uses secrets.randbelow(6) + 1 to generate a uniformly distributed die result from 1 to 6."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Python: casino die game",
-    "text": "Python: casino die game\nThis version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.\n\nfrom secrets import randbelow\n\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{net_win:.2f}\")\nelse:\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{STAKE:.2f}\")\n\nRolled: 2\nYou lost ₹100.00\n\n\nThe die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result."
+    "text": "Python: casino die game\nThis version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.\n\nfrom secrets import randbelow\n\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{net_win:.2f}\")\nelse:\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{STAKE:.2f}\")\n\nRolled: 6\nYou lost ₹100.00\n\n\nThe die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Simulating 10,000 rolls",
-    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,669\nObserved win rate:          16.69%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-48,670.00\nCasino profit:              ₹48,670.00\nObserved house edge:        4.87%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
+    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,623\nObserved win rate:          16.23%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-74,890.00\nCasino profit:              ₹74,890.00\nObserved house edge:        7.49%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#conclusion",
@@ -1622,6 +1622,48 @@
     "title": "Today I Read",
     "section": "",
     "text": "Jun 8, 2025\n            \n                \n                    Education\n                \n            \n        \n        How Engineering Graduates are being exploited\n    \n\n    \n        \n            Feb 27, 2025\n            \n                \n                    History\n                \n            \n        \n        Ellora - and how history looks like\n    \n\n    \n        \n            Feb 15, 2025\n            \n                \n                    philosophy\n                \n            \n        \n        Most philosophers were bachelor men\n    \n\n    \n        \n            Feb 5, 2025\n            \n                \n                    history\n                \n            \n        \n        India's Prettiest Library - Rampur\n    \n\n    \n        \n            Feb 5, 2025\n            \n                \n                    sociology\n                \n            \n        \n        Begumpura by Sant Ravidas\n    \n\n    \n        \n            Dec 27, 2024\n            \n                \n                    history\n                \n            \n        \n        A Sanskrit Bible story was written in Ayodhya\n    \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "a_math_2028/index.html",
+    "href": "a_math_2028/index.html",
+    "title": "A Level Math 2028",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAug 27, 2026\n\n\nPreparation for A Level Math\n\n\n \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "a_math_2028/0_intro/prep.html",
+    "href": "a_math_2028/0_intro/prep.html",
+    "title": "Preparation for A Level Math",
+    "section": "",
+    "text": "Revise the following."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/prep.html#quadratics",
+    "href": "a_math_2028/0_intro/prep.html#quadratics",
+    "title": "Preparation for A Level Math",
+    "section": "Quadratics",
+    "text": "Quadratics\n\nSolve quadratic equations by factorising\nSolve linear equalities and inequalities\nSolve simultaneous linear equations\nCarry out simple manipulation of surds"
+  },
+  {
+    "objectID": "a_math_2028/0_intro/prep.html#coordinate-geometry",
+    "href": "a_math_2028/0_intro/prep.html#coordinate-geometry",
+    "title": "Preparation for A Level Math",
+    "section": "Coordinate Geometry",
+    "text": "Coordinate Geometry\n\nFind the midpoint and length of a line segment\nFind the gradient (slope) of a line and state the gradient of a ine that is perpendicular to the line\nInterpret and use equations of lines of the form y = mx + c"
+  },
+  {
+    "objectID": "a_math_2028/0_intro/prep.html#circular-measure",
+    "href": "a_math_2028/0_intro/prep.html#circular-measure",
+    "title": "Preparation for A Level Math",
+    "section": "Circular Measure",
+    "text": "Circular Measure\n\nFind the perimeter and area of sectors\nUse Pythagoras’ theorem and trigonometry on right-angled triangles."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/prep.html#series",
+    "href": "a_math_2028/0_intro/prep.html#series",
+    "title": "Preparation for A Level Math",
+    "section": "Series",
+    "text": "Series\n\nArithmetic and Geometric progressions\nCalculating the nth term"
   },
   {
     "objectID": "tir/history/indian-syncretism.html",
