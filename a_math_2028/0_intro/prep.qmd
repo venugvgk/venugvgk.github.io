@@ -12,10 +12,32 @@ Revise the following.
 3. Solve simultaneous linear equations
 4. Carry out simple manipulation of surds
 
+### Linear Equations - A few exercises to do and questions to think about
+
+1. On a graph sheet, plot the relationship y = x. This is a straight line through the origin. Now plot y = 5x and y = x/5. What do you notice about the steepness of the lines? What is the gradient (slope) of each line? What happens when you plot y = -x, y = -5x and y = -x/5? 
+
+2. On a graph sheet, plot y = 2x. Now plot y = 2x + 3 and y = 2x - 3. What is changing? What do you notice about the steepness of the lines? What is the gradient (slope) of each line? 
+
+3. Using the above two graphs, interpret the general equation of a straight line y = mx + c. What does m represent? What does c represent?
+
+4. The other way of writing a linear relationship between x and y is in the form ax + by + c = 0. How would you plot 2x + 3y - 6 = 0 on a graph sheet? Can you see how to convert this into y = mx + c form? (Hint: Rearranging gives y = (-a/b)x - (c/b)). What is the gradient (slope) of the line in this form? What is the y-intercept of the line in this form?
+
+5. Consider the linear equation 2x + 3y = 6. What is a solution to this equation? How many solutions does this equation have? Also, what does it mean when we say that (0,2) is a solution to this equation? What is the algebraic meaning of a solution to a linear equation? What is the geometric meaning of a solution to a linear equation?
+
+6. Now consider two linear equations: 2x + 3y = 6 and 3x + 2y = 4. What does it mean when we say that the point (0,2) is a solution to both equations? What is the algebraic meaning of a solution to two linear equations? What is the geometric meaning of a solution to two linear equations?
+
+7. Check if you know how to solve two simultaneous linear equations using substitution method. In this method, you rearrange one equation to get y in terms of x (or x in terms of y) and then substitute this into the other equation. This will give you a single equation in one variable which you can solve. Once you have found the value of one variable, substitute it back into one of the original equations to find the value of the other variable. 
+
+8. Do you know how to solve two simultaneous linear equations using elimination method? In this method, you multiply one or both equations by a suitable number so that when you add or subtract the two equations, one of the variables is eliminated. This will give you a single equation in one variable which you can solve. Once you have found the value of one variable, substitute it back into one of the original equations to find the value of the other variable.
+
+9. Is it always necessary for two simultaneous linear equations to have a unique solution? What are the other possibilities? Can you think of examples of two simultaneous linear equations that have no solution or infinitely many solutions? How do two simultaneous linear equations with no solution look like on a graph? How do two simultaneous linear equations with infinitely many solutions look like on a graph? How can you identify such equations algebraically?
+
+10. Suppose I tell you there is a linear equation with two solutions - (1,2) and (3,4). Can you find that linear equation? (hint: think geometrically)
+
 ## Coordinate Geometry
 
 1. Find the midpoint and length of a line segment
-2. Find the gradient (slope) of a line and state the gradient of a ine that is perpendicular to the line
+2. Find the gradient (slope) of a line and state the gradient of a line that is perpendicular to the line
 3. Interpret and use equations of lines of the form y = mx + c
 
 ## Circular Measure
