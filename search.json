@@ -1061,7 +1061,7 @@
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-mathematically-fair-die-game",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Python: mathematically fair die game",
-    "text": "Python: mathematically fair die game\n\nfrom secrets import randbelow\n\nSTAKE = 100\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE / win_probability  # ₹600 in a fair game\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    player_net = gross_payout - STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{player_net:.2f}\")\nelse:\n    player_net = -STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{-player_net:.2f}\")\n\nRolled: 4\nYou won ₹500.00\n\n\nThe program uses secrets.randbelow(6) + 1 to generate a uniformly distributed die result from 1 to 6."
+    "text": "Python: mathematically fair die game\n\nfrom secrets import randbelow\n\nSTAKE = 100\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE / win_probability  # ₹600 in a fair game\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    player_net = gross_payout - STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{player_net:.2f}\")\nelse:\n    player_net = -STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{-player_net:.2f}\")\n\nRolled: 2\nYou lost ₹100.00\n\n\nThe program uses secrets.randbelow(6) + 1 to generate a uniformly distributed die result from 1 to 6."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
@@ -1075,7 +1075,7 @@
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Simulating 10,000 rolls",
-    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,657\nObserved win rate:          16.57%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-55,510.00\nCasino profit:              ₹55,510.00\nObserved house edge:        5.55%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
+    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,664\nObserved win rate:          16.64%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-51,520.00\nCasino profit:              ₹51,520.00\nObserved house edge:        5.15%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#conclusion",
@@ -2016,46 +2016,88 @@
     "text": "The point of all this is not to eulogise the bonhomie of premodern elites – Hindu, Christian, Muslim, Persianate or Sanskritic. What I want to argue is that syncretism and tolerance are not an inbuilt feature of Indian civilisation, which we can take for granted, pay lip service to, or chip away at for political profit. Despite many efforts at persecution and conversion, syncretism developed again and again through serious political and intellectual commitment. Invariably in Indian history, this has proved worth the effort, because it allowed for the influx, development, and spread of invigorating new ideas and possibilities — ideas uniquely Indian.\nthe print article link\nanirudh kanisetti\nAfter Timur Left: Culture and Circulation in Fifteenth-Century North India, by historian Aparna Kapadia"
   },
   {
-    "objectID": "a_math_2028/0_intro/prep.html",
-    "href": "a_math_2028/0_intro/prep.html",
-    "title": "Preparation for A Level Math",
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
     "section": "",
-    "text": "Revise the following."
+    "text": "A quadratic relationship has the form\n\ny=ax^2+bx+c,\\qquad a\\ne0.\n\nThe graph of a quadratic relationship is a parabola. In this activity, we will build the equation in stages. First we study y=ax^2, then examine the effect of adding bx, and finally investigate the effect of adding c.\nThe symbols a, b, and c play different roles. Understanding those roles is more useful than memorising a collection of graph shapes."
   },
   {
-    "objectID": "a_math_2028/0_intro/prep.html#quadratics",
-    "href": "a_math_2028/0_intro/prep.html#quadratics",
-    "title": "Preparation for A Level Math",
-    "section": "Quadratics",
-    "text": "Quadratics\n\nSolve quadratic equations by factorising\nSolve linear equalities and inequalities\nSolve simultaneous linear equations\nCarry out simple manipulation of surds\n\n\nLinear Equations - A few exercises to do and questions to think about\n\nOn a graph sheet, plot the relationship \\(y = x\\). This is a straight line through the origin. Now plot \\(y = 5x\\) and \\(y = x/5\\). What do you notice about the steepness of the lines? What is the gradient (slope) of each line? What happens when you plot \\(y = -x\\), \\(y = -5x\\) and \\(y = -x/5\\)?\nOn a graph sheet, plot \\(y = 2x\\). Now plot \\(y = 2x + 3\\) and \\(y = 2x - 3\\). What is changing? What do you notice about the steepness of the lines? What is the gradient (slope) of each line?\nUsing the above two graphs, interpret the general equation of a straight line \\(y = mx + c\\). What does \\(m\\) represent? What does \\(c\\) represent?\nThe other way of writing a linear relationship between \\(x\\) and \\(y\\) is in the form \\(ax + by + c = 0\\). How would you plot \\(2x + 3y - 6 = 0\\) on a graph sheet? Can you see how to convert this into \\(y = mx + c\\) form? (Hint: Rearranging gives \\(y = \\frac{-a}{b}x - \\frac{c}{b}\\)). What is the gradient (slope) of the line in this form? What is the \\(y\\)-intercept of the line in this form?\nConsider the linear equation \\(2x + 3y = 6\\). What is a solution to this equation? How many solutions does this equation have? Also, what does it mean when we say that \\((0,2)\\) is a solution to this equation? What is the algebraic meaning of a solution to a linear equation? What is the geometric meaning of a solution to a linear equation?\nNow consider two linear equations: \\(2x + 3y = 6\\) and \\(3x + 2y = 4\\). What does it mean when we say that the point \\((0,2)\\) is a solution to both equations? What is the algebraic meaning of a solution to two linear equations? What is the geometric meaning of a solution to two linear equations?\nCheck if you know how to solve two simultaneous linear equations using substitution method. In this method, you rearrange one equation to get y in terms of x (or x in terms of y) and then substitute this into the other equation. This will give you a single equation in one variable which you can solve. Once you have found the value of one variable, substitute it back into one of the original equations to find the value of the other variable.\nDo you know how to solve two simultaneous linear equations using elimination method? In this method, you multiply one or both equations by a suitable number so that when you add or subtract the two equations, one of the variables is eliminated. This will give you a single equation in one variable which you can solve. Once you have found the value of one variable, substitute it back into one of the original equations to find the value of the other variable.\nIs it always necessary for two simultaneous linear equations to have a unique solution? What are the other possibilities? Can you think of examples of two simultaneous linear equations that have no solution or infinitely many solutions? How do two simultaneous linear equations with no solution look like on a graph? How do two simultaneous linear equations with infinitely many solutions look like on a graph? How can you identify such equations algebraically?\nSuppose I tell you there is a linear equation with two solutions - \\((1,2)\\) and \\((3,4)\\). Can you find that linear equation? (hint: think geometrically)"
-  },
-  {
-    "objectID": "a_math_2028/0_intro/prep.html#coordinate-geometry",
-    "href": "a_math_2028/0_intro/prep.html#coordinate-geometry",
-    "title": "Preparation for A Level Math",
-    "section": "Coordinate Geometry",
-    "text": "Coordinate Geometry\n\nFind the midpoint and length of a line segment\nFind the gradient (slope) of a line and state the gradient of a line that is perpendicular to the line\nInterpret and use equations of lines of the form \\(y = mx + c\\)"
-  },
-  {
-    "objectID": "a_math_2028/0_intro/prep.html#circular-measure",
-    "href": "a_math_2028/0_intro/prep.html#circular-measure",
-    "title": "Preparation for A Level Math",
-    "section": "Circular Measure",
-    "text": "Circular Measure\n\nFind the perimeter and area of sectors\nUse Pythagoras’ theorem and trigonometry on right-angled triangles."
-  },
-  {
-    "objectID": "a_math_2028/0_intro/prep.html#series",
-    "href": "a_math_2028/0_intro/prep.html#series",
-    "title": "Preparation for A Level Math",
-    "section": "Series",
-    "text": "Series\n\nArithmetic and Geometric progressions\nCalculating the nth term"
-  },
-  {
-    "objectID": "a_math_2028/index.html",
-    "href": "a_math_2028/index.html",
-    "title": "A Level Math 2028",
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html#introduction",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html#introduction",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAug 27, 2026\n\n\nPreparation for A Level Math\n\n\n \n\n\n\n\n\nNo matching items"
+    "text": "A quadratic relationship has the form\n\ny=ax^2+bx+c,\\qquad a\\ne0.\n\nThe graph of a quadratic relationship is a parabola. In this activity, we will build the equation in stages. First we study y=ax^2, then examine the effect of adding bx, and finally investigate the effect of adding c.\nThe symbols a, b, and c play different roles. Understanding those roles is more useful than memorising a collection of graph shapes."
+  },
+  {
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html#what-does-yax2bxc-represent",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html#what-does-yax2bxc-represent",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
+    "section": "1. What does y=ax^2+bx+c represent?",
+    "text": "1. What does y=ax^2+bx+c represent?\n\nQuestion\nWhat does the equation\n\ny=ax^2+bx+c\n\nrepresent? What type of graph should we expect?\n\n\nAnswer\nIt represents a quadratic relationship between x and y. For each value of x, the equation gives one corresponding value of y. Because the highest power of x is 2, the relationship is quadratic rather than linear.\nThe graph is a parabola. Unlike a straight line, a parabola generally has a changing gradient. If we move equal distances along the x-axis, the changes in y are not usually equal.\nThe coefficient a must not be zero. If a=0, the equation becomes y=bx+c, which is linear.\nSome important features are:\n\nThe coefficient a determines whether the parabola opens upwards or downwards and how narrow or wide it is.\nThe coefficient b affects the horizontal position of the axis of symmetry and therefore the position of the vertex.\nThe constant c is the y-intercept because setting x=0 gives y=c.\n\nThe axis of symmetry is\n\nx=-\\frac{b}{2a},\n\nand the vertex occurs at\n\n\\left(-\\frac{b}{2a},\\; f\\left(-\\frac{b}{2a}\\right)\\right).\n\nWe will see these effects gradually rather than treating the formula as a rule to memorise."
+  },
+  {
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html#begin-with-yx2",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html#begin-with-yx2",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
+    "section": "2. Begin with y=x^2",
+    "text": "2. Begin with y=x^2\n\nQuestion\nMake a table of values for y=x^2, using positive, negative, and zero values of x. What do you notice?\n\n\nAnswer\nA suitable table is:\n\n\n\nx\n-3\n-2\n-1\n0\n1\n2\n3\n\n\n\n\ny=x^2\n9\n4\n1\n0\n1\n4\n9\n\n\n\nThe values for opposite inputs are equal:\n\n(-x)^2=x^2.\n\nFor example,\n\n(-2)^2=2^2=4.\n\nTherefore the graph is symmetric about the y-axis. The lowest point is (0,0), called the vertex. The graph opens upwards because squares are never negative.\n\n\n\n\n\n\n\n\nFigure 1: The basic parabola y=x^2."
+  },
+  {
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html#what-happens-for-positive-and-negative-x",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html#what-happens-for-positive-and-negative-x",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
+    "section": "3. What happens for positive and negative x?",
+    "text": "3. What happens for positive and negative x?\n\nQuestion\nHow do the graphs of y=ax^2 behave when x is positive or negative? Does the sign of x affect the sign of y?\n\n\nAnswer\nThe square x^2 is non-negative for both positive and negative values of x:\n\nx^2\\ge0.\n\nThus, when a&gt;0,\n\ny=ax^2\\ge0.\n\nThe graph lies on or above the x-axis. The left and right sides are mirror images because\n\na(-x)^2=ax^2.\n\nWhen a&lt;0, multiplication by a negative number reverses the sign:\n\ny=ax^2\\le0.\n\nThe graph lies on or below the x-axis. It is still symmetric about the y-axis, but it opens downwards.\nFor example, y=2x^2 opens upwards and y=-2x^2 opens downwards.\n\n\n\n\n\n\n\n\nFigure 2: Changing the sign of a changes the direction in which the parabola opens."
+  },
+  {
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html#how-does-the-value-of-a-affect-the-graph",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html#how-does-the-value-of-a-affect-the-graph",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
+    "section": "4. How does the value of a affect the graph?",
+    "text": "4. How does the value of a affect the graph?\n\nQuestion\nCompare the graphs of\n\ny=x^2,\\qquad y=2x^2,\\qquad y=\\frac12x^2,\n\nand then compare them with\n\ny=-x^2,\\qquad y=-2x^2,\\qquad y=-\\frac12x^2.\n\nWhat does the magnitude and sign of a do?\n\n\nAnswer\nThe magnitude |a| controls the vertical stretch or compression.\n\nIf |a|&gt;1, the parabola is narrower and steeper than y=x^2.\nIf 0&lt;|a|&lt;1, the parabola is wider and flatter than y=x^2.\nIf a&gt;0, it opens upwards.\nIf a&lt;0, it opens downwards.\n\nAll graphs of y=ax^2 have vertex (0,0) and axis of symmetry the y-axis.\n\n\n\n\n\n\n\n\nFigure 3: The magnitude and sign of a control the width and direction of y=ax^2."
+  },
+  {
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html#what-happens-when-we-add-bx",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html#what-happens-when-we-add-bx",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
+    "section": "5. What happens when we add bx?",
+    "text": "5. What happens when we add bx?\n\nQuestion\nStarting with y=ax^2, compare it with\n\ny=ax^2+bx.\n\nWhat changes when a linear term is added? Compare, for example,\n\ny=x^2,\\qquad y=x^2+2x,\\qquad y=x^2-2x.\n\n\n\nAnswer\nAdding bx changes the position of the parabola. It can move the vertex away from the origin and changes the axis of symmetry. It does not, by itself, change the fact that the graph is a parabola.\nFor the examples,\n\ny=x^2+2x=(x+1)^2-1,\n\nso the vertex is (-1,-1) and the axis of symmetry is x=-1.\nSimilarly,\n\ny=x^2-2x=(x-1)^2-1,\n\nso the vertex is (1,-1) and the axis of symmetry is x=1.\nThe term bx also changes the value at negative and positive inputs differently. This is why the original symmetry about the y-axis is generally lost. The new symmetry is about the vertical line\n\nx=-\\frac{b}{2a}.\n\n\n\n\n\n\n\n\n\nFigure 4: Adding bx moves the vertex and changes the axis of symmetry."
+  },
+  {
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html#can-we-rewrite-the-quadratic-to-see-the-movement",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html#can-we-rewrite-the-quadratic-to-see-the-movement",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
+    "section": "6. Can we rewrite the quadratic to see the movement?",
+    "text": "6. Can we rewrite the quadratic to see the movement?\n\nQuestion\nHow can completing the square help us understand the effect of the term bx? Rewrite ax^2+bx in vertex form.\n\n\nAnswer\nFactor out a:\n\nax^2+bx=a\\left(x^2+\\frac{b}{a}x\\right).\n\nComplete the square inside the brackets:\n\nx^2+\\frac{b}{a}x\n=\\left(x+\\frac{b}{2a}\\right)^2-\\frac{b^2}{4a^2}.\n\nTherefore,\n\nax^2+bx\n=a\\left(x+\\frac{b}{2a}\\right)^2-\\frac{b^2}{4a}.\n\nThis shows that the vertex has moved horizontally to\n\nx=-\\frac{b}{2a},\n\nand vertically to\n\ny=-\\frac{b^2}{4a}\n\nwhen c=0.\nFor the complete quadratic,\n\nax^2+bx+c\n=a\\left(x+\\frac{b}{2a}\\right)^2+c-\\frac{b^2}{4a}.\n\nThis is the vertex form of the quadratic."
+  },
+  {
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html#what-happens-when-we-add-c",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html#what-happens-when-we-add-c",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
+    "section": "7. What happens when we add c?",
+    "text": "7. What happens when we add c?\n\nQuestion\nStarting with y=ax^2+bx, compare it with\n\ny=ax^2+bx+c.\n\nWhat does adding c do to the graph? Compare\n\ny=x^2+2x,\n\\qquad y=x^2+2x+3,\n\\qquad y=x^2+2x-3.\n\n\n\nAnswer\nAdding c shifts the graph vertically without changing its shape, width, direction, or axis of symmetry.\nIf\n\nf(x)=ax^2+bx,\n\nthen\n\nf(x)+c=ax^2+bx+c.\n\nEvery y-value increases by c. Therefore:\n\nIf c&gt;0, the graph moves upwards by c units.\nIf c&lt;0, the graph moves downwards by |c| units.\nThe y-intercept is (0,c), since f(0)=c.\n\nFor the example,\n\nx^2+2x=(x+1)^2-1,\n\nso\n\nx^2+2x+3=(x+1)^2+2,\n\nand\n\nx^2+2x-3=(x+1)^2-4.\n\nAll three have axis of symmetry x=-1, but their vertices are (-1,-1), (-1,2), and (-1,-4).\n\n\n\n\n\n\n\n\nFigure 5: Adding c shifts a parabola vertically."
+  },
+  {
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html#can-we-identify-the-main-features-of-yax2bxc",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html#can-we-identify-the-main-features-of-yax2bxc",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
+    "section": "8. Can we identify the main features of y=ax^2+bx+c?",
+    "text": "8. Can we identify the main features of y=ax^2+bx+c?\n\nQuestion\nFor a general quadratic\n\ny=ax^2+bx+c,\n\nwhat can we determine directly from the coefficients?\n\n\nAnswer\nThe main features are as follows.\n\n\nDirection of opening\n\na&gt;0: the parabola opens upwards and has a minimum point.\na&lt;0: the parabola opens downwards and has a maximum point.\n\n\n\nWidth\nThe size of |a| controls width:\n\nLarger |a|: narrower parabola.\nSmaller positive |a|: wider parabola.\n\n\n\nAxis of symmetry\nThe axis is\n\nx=-\\frac{b}{2a}.\n\n\n\nVertex\nSubstitute the axis value into the equation:\n\n\\left(-\\frac{b}{2a},\n\\;c-\\frac{b^2}{4a}\\right).\n\n\n\ny-intercept\nSet x=0:\n\ny=c.\n\nThus the graph crosses the y-axis at (0,c).\n\n\nx-intercepts\nSet y=0:\n\nax^2+bx+c=0.\n\nThe number of real x-intercepts depends on the discriminant\n\n\\Delta=b^2-4ac.\n\n\n\\Delta&gt;0: two distinct real x-intercepts.\n\\Delta=0: one repeated real x-intercept.\n\\Delta&lt;0: no real x-intercepts."
+  },
+  {
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html#a-complete-worked-example",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html#a-complete-worked-example",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
+    "section": "9. A complete worked example",
+    "text": "9. A complete worked example\n\nQuestion\nAnalyse and sketch the graph of\n\ny=2x^2-4x-6.\n\nFind its direction of opening, axis of symmetry, vertex, intercepts, and a few points for plotting.\n\n\nAnswer\nHere\n\na=2,\n\\qquad b=-4,\n\\qquad c=-6.\n\nSince a=2&gt;0, the parabola opens upwards. Since |a|=2&gt;1, it is narrower than y=x^2.\nThe axis of symmetry is\n\nx=-\\frac{b}{2a}=-\\frac{-4}{2(2)}=1.\n\nComplete the square:\n\ny=2x^2-4x-6\n=2(x^2-2x)-6\n=2(x-1)^2-8.\n\nTherefore the vertex is\n\n(1,-8).\n\nFor the y-intercept, set x=0:\n\ny=-6,\n\nso the point is (0,-6).\nFor the x-intercepts, set y=0:\n\n2x^2-4x-6=0.\n\nDivide by 2:\n\nx^2-2x-3=0.\n\nFactorise:\n\n(x-3)(x+1)=0.\n\nHence\n\nx=3\\quad\\text{or}\\quad x=-1.\n\nThe x-intercepts are (3,0) and (-1,0). A useful table is:\n\n\n\nx\n-1\n0\n1\n2\n3\n\n\n\n\ny\n0\n-6\n-8\n-6\n0\n\n\n\nThe equal values at x=0 and x=2 illustrate symmetry about x=1.\n\n\n\n\n\n\n\n\nFigure 6: The graph of y=2x^2-4x-6."
+  },
+  {
+    "objectID": "a_math_2028/quadratic_relationship_questions_answers.html#connecting-the-algebra-and-geometry",
+    "href": "a_math_2028/quadratic_relationship_questions_answers.html#connecting-the-algebra-and-geometry",
+    "title": "Quadratic Relationships: Exercises and Questions to Think About",
+    "section": "10. Connecting the algebra and geometry",
+    "text": "10. Connecting the algebra and geometry\n\nQuestion\nHow do the coefficients and the graph tell the same story in different languages?\n\n\nAnswer\nThe equation and the graph are two representations of the same relationship.\n\nThe coefficient a determines the direction of opening and the width of the parabola.\nThe coefficient b, together with a, determines the axis of symmetry x=-b/(2a).\nThe constant c gives the point where the graph crosses the y-axis.\nSolving ax^2+bx+c=0 finds the points where the parabola crosses the x-axis.\nThe discriminant tells us how many such crossings are possible.\n\nThe most useful progression is therefore:\n\ny=ax^2\n\\quad\\longrightarrow\\quad\ny=ax^2+bx\n\\quad\\longrightarrow\\quad\ny=ax^2+bx+c.\n\nFirst, a determines the basic shape. Next, bx moves the vertex horizontally and changes the axis of symmetry. Finally, c shifts the entire graph vertically and determines the y-intercept."
   },
   {
     "objectID": "a_math_2028/session1-a-math.html",
@@ -2147,6 +2189,48 @@
     "title": "Revision of Linear Equations",
     "section": "Concluding note",
     "text": "Concluding note\nThe linear relationship between two variables can be described algebraically and geometrically. Algebraically, it is an equation that describes the relationship between the two variables. Geometrically, it is a straight line on the two dimensional cartesian graph.\nThe solution set of a single linear equation is the set of all ordered pairs that make the equation true, which is also the set of all points on the line.\nThe solution set of two simultaneous linear equations is the set of points common to both lines. Depending on the relationship between the two lines, there may be one solution, no solution, or infinitely many solutions.\nSince the relationship is between two variables, we can find the relationship, given any two solutions. This can also be thought of as finding the equation of the line through the two points."
+  },
+  {
+    "objectID": "a_math_2028/index.html",
+    "href": "a_math_2028/index.html",
+    "title": "A Level Math 2028",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAug 27, 2026\n\n\nPreparation for A Level Math\n\n\n \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "a_math_2028/0_intro/prep.html",
+    "href": "a_math_2028/0_intro/prep.html",
+    "title": "Preparation for A Level Math",
+    "section": "",
+    "text": "Revise the following."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/prep.html#quadratics",
+    "href": "a_math_2028/0_intro/prep.html#quadratics",
+    "title": "Preparation for A Level Math",
+    "section": "Quadratics",
+    "text": "Quadratics\n\nSolve quadratic equations by factorising\nSolve linear equalities and inequalities\nSolve simultaneous linear equations\nCarry out simple manipulation of surds\n\n\nLinear Equations - A few exercises to do and questions to think about\n\nOn a graph sheet, plot the relationship \\(y = x\\). This is a straight line through the origin. Now plot \\(y = 5x\\) and \\(y = x/5\\). What do you notice about the steepness of the lines? What is the gradient (slope) of each line? What happens when you plot \\(y = -x\\), \\(y = -5x\\) and \\(y = -x/5\\)?\nOn a graph sheet, plot \\(y = 2x\\). Now plot \\(y = 2x + 3\\) and \\(y = 2x - 3\\). What is changing? What do you notice about the steepness of the lines? What is the gradient (slope) of each line?\nUsing the above two graphs, interpret the general equation of a straight line \\(y = mx + c\\). What does \\(m\\) represent? What does \\(c\\) represent?\nThe other way of writing a linear relationship between \\(x\\) and \\(y\\) is in the form \\(ax + by + c = 0\\). How would you plot \\(2x + 3y - 6 = 0\\) on a graph sheet? Can you see how to convert this into \\(y = mx + c\\) form? (Hint: Rearranging gives \\(y = \\frac{-a}{b}x - \\frac{c}{b}\\)). What is the gradient (slope) of the line in this form? What is the \\(y\\)-intercept of the line in this form?\nConsider the linear equation \\(2x + 3y = 6\\). What is a solution to this equation? How many solutions does this equation have? Also, what does it mean when we say that \\((0,2)\\) is a solution to this equation? What is the algebraic meaning of a solution to a linear equation? What is the geometric meaning of a solution to a linear equation?\nNow consider two linear equations: \\(2x + 3y = 6\\) and \\(3x + 2y = 4\\). What does it mean when we say that the point \\((0,2)\\) is a solution to both equations? What is the algebraic meaning of a solution to two linear equations? What is the geometric meaning of a solution to two linear equations?\nCheck if you know how to solve two simultaneous linear equations using substitution method. In this method, you rearrange one equation to get y in terms of x (or x in terms of y) and then substitute this into the other equation. This will give you a single equation in one variable which you can solve. Once you have found the value of one variable, substitute it back into one of the original equations to find the value of the other variable.\nDo you know how to solve two simultaneous linear equations using elimination method? In this method, you multiply one or both equations by a suitable number so that when you add or subtract the two equations, one of the variables is eliminated. This will give you a single equation in one variable which you can solve. Once you have found the value of one variable, substitute it back into one of the original equations to find the value of the other variable.\nIs it always necessary for two simultaneous linear equations to have a unique solution? What are the other possibilities? Can you think of examples of two simultaneous linear equations that have no solution or infinitely many solutions? How do two simultaneous linear equations with no solution look like on a graph? How do two simultaneous linear equations with infinitely many solutions look like on a graph? How can you identify such equations algebraically?\nSuppose I tell you there is a linear equation with two solutions - \\((1,2)\\) and \\((3,4)\\). Can you find that linear equation? (hint: think geometrically)"
+  },
+  {
+    "objectID": "a_math_2028/0_intro/prep.html#coordinate-geometry",
+    "href": "a_math_2028/0_intro/prep.html#coordinate-geometry",
+    "title": "Preparation for A Level Math",
+    "section": "Coordinate Geometry",
+    "text": "Coordinate Geometry\n\nFind the midpoint and length of a line segment\nFind the gradient (slope) of a line and state the gradient of a line that is perpendicular to the line\nInterpret and use equations of lines of the form \\(y = mx + c\\)"
+  },
+  {
+    "objectID": "a_math_2028/0_intro/prep.html#circular-measure",
+    "href": "a_math_2028/0_intro/prep.html#circular-measure",
+    "title": "Preparation for A Level Math",
+    "section": "Circular Measure",
+    "text": "Circular Measure\n\nFind the perimeter and area of sectors\nUse Pythagoras’ theorem and trigonometry on right-angled triangles."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/prep.html#series",
+    "href": "a_math_2028/0_intro/prep.html#series",
+    "title": "Preparation for A Level Math",
+    "section": "Series",
+    "text": "Series\n\nArithmetic and Geometric progressions\nCalculating the nth term"
   },
   {
     "objectID": "tir/index.html",
