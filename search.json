@@ -1061,7 +1061,7 @@
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-mathematically-fair-die-game",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Python: mathematically fair die game",
-    "text": "Python: mathematically fair die game\n\nfrom secrets import randbelow\n\nSTAKE = 100\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE / win_probability  # ₹600 in a fair game\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    player_net = gross_payout - STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{player_net:.2f}\")\nelse:\n    player_net = -STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{-player_net:.2f}\")\n\nRolled: 5\nYou lost ₹100.00\n\n\nThe program uses secrets.randbelow(6) + 1 to generate a uniformly distributed die result from 1 to 6."
+    "text": "Python: mathematically fair die game\n\nfrom secrets import randbelow\n\nSTAKE = 100\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE / win_probability  # ₹600 in a fair game\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    player_net = gross_payout - STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{player_net:.2f}\")\nelse:\n    player_net = -STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{-player_net:.2f}\")\n\nRolled: 4\nYou won ₹500.00\n\n\nThe program uses secrets.randbelow(6) + 1 to generate a uniformly distributed die result from 1 to 6."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
@@ -1075,7 +1075,7 @@
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Simulating 10,000 rolls",
-    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,673\nObserved win rate:          16.73%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-46,390.00\nCasino profit:              ₹46,390.00\nObserved house edge:        4.64%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
+    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,682\nObserved win rate:          16.82%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-41,260.00\nCasino profit:              ₹41,260.00\nObserved house edge:        4.13%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#conclusion",
@@ -2016,6 +2016,104 @@
     "text": "The point of all this is not to eulogise the bonhomie of premodern elites – Hindu, Christian, Muslim, Persianate or Sanskritic. What I want to argue is that syncretism and tolerance are not an inbuilt feature of Indian civilisation, which we can take for granted, pay lip service to, or chip away at for political profit. Despite many efforts at persecution and conversion, syncretism developed again and again through serious political and intellectual commitment. Invariably in Indian history, this has proved worth the effort, because it allowed for the influx, development, and spread of invigorating new ideas and possibilities — ideas uniquely Indian.\nthe print article link\nanirudh kanisetti\nAfter Timur Left: Culture and Circulation in Fifteenth-Century North India, by historian Aparna Kapadia"
   },
   {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html",
+    "href": "a_math_2028/0_intro/session1-a-math.html",
+    "title": "Revision of Linear Equations",
+    "section": "",
+    "text": "These questions are aimed at developing one central idea: a linear equation can be understood algebraically and geometrically. Algebraically, it describes numbers that make an equation true. Geometrically, it describes points on a straight line.\nWe are considering linear equations in two variables. In general, such a linear equation describes the relationship between two variable, typically x and y. One of the simplest such relationships can be described by the equation y=mx, where m is a constant. The other simple relationship can be y = x + c, where c is a constant. When you combine these two, you get the general equation of a linear relationship between x and y, which is y=mx+c (sidenote: Do you notice and understand that no other linear relationship between x and y can exist? or that all linear relationships between x and y can be expressed in this form?).\nWhat does the equation y=mx+c mean? What do m and c represent? How can we interpret this equation geometrically? How can we interpret this equation algebraically? We can proceed to understand these by considering some specific examples of linear equations, the kind of numbers that satisfy them, and the geometric representation of these numbers.\nWe will also consider the general equation of a straight line in the form ax + by + c = 0. How can we interpret this equation geometrically? How can we interpret this equation algebraically?"
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#introduction",
+    "href": "a_math_2028/0_intro/session1-a-math.html#introduction",
+    "title": "Revision of Linear Equations",
+    "section": "",
+    "text": "These questions are aimed at developing one central idea: a linear equation can be understood algebraically and geometrically. Algebraically, it describes numbers that make an equation true. Geometrically, it describes points on a straight line.\nWe are considering linear equations in two variables. In general, such a linear equation describes the relationship between two variable, typically x and y. One of the simplest such relationships can be described by the equation y=mx, where m is a constant. The other simple relationship can be y = x + c, where c is a constant. When you combine these two, you get the general equation of a linear relationship between x and y, which is y=mx+c (sidenote: Do you notice and understand that no other linear relationship between x and y can exist? or that all linear relationships between x and y can be expressed in this form?).\nWhat does the equation y=mx+c mean? What do m and c represent? How can we interpret this equation geometrically? How can we interpret this equation algebraically? We can proceed to understand these by considering some specific examples of linear equations, the kind of numbers that satisfy them, and the geometric representation of these numbers.\nWe will also consider the general equation of a straight line in the form ax + by + c = 0. How can we interpret this equation geometrically? How can we interpret this equation algebraically?"
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#equations-of-the-type-ymx",
+    "href": "a_math_2028/0_intro/session1-a-math.html#equations-of-the-type-ymx",
+    "title": "Revision of Linear Equations",
+    "section": "1. Equations of the type y=mx",
+    "text": "1. Equations of the type y=mx\nConsider the equations y=x, y=5x, and y=x/5. We can plot each equation by taking any value of x and calculating the corresponding value of y. For example, for y=x, if x=-2, then y=-2; if x=0, then y=0; and if x=2, then y=2. This gives us the points (-2,-2), (0,0), and (2,2) to plot. Remember that the x values for the other equations are also chosen arbitrarily. The points to plot for each equation are shown in the table below.\n\n\n\nEquation\nPoints to plot\n\n\n\n\ny=x\n(-2,-2),(0,0),(2,2)\n\n\ny=5x\n(-1,-5),(0,0),(1,5)\n\n\ny=x/5\n(-5,-1),(0,0),(5,1)\n\n\n\nAll three lines pass through the origin. They rise from left to right. The line y=5x is steepest, while y=x/5 is least steep.\n\n\n\n\n\n\n\n\n\nNow let’s do the same with y=-x, y=-5x, and y=-x/5. All these lines slope downwards from left to right.\n\n\n\n\n\n\n\n\n\nYou can see that changing the value of m changes the steepness of the line. The absolute value of m measures steepness, while the sign of m indicates whether the line slopes upwards or downwards. The value of m is called the gradient (or slope) of the line.\nYou can also see that the gradient is the ratio of the change in y to the change in x between any two points on the line. For example, for y=5x, the change in y between the points (0,0) and (1,5) is 5-0=5, while the change in x is 1-0=1. Hence the gradient is \\frac{5}{1}=5. For y=x/5, the change in y between the points (0,0) and (5,1) is 1-0=1, while the change in x is 5-0=5. Hence the gradient is \\frac{1}{5}.\nSo if points (x_1,y_1) and (x_2,y_2) are on the same line, the gradient can be calculated from the formula\nGradient =\\frac{y_2-y_1}{x_2-x_1}\nThe graph below shows the rise and run used to calculate the gradients of y=5x and y=x/5.\n\n\n\n\n\n\n\n\nFigure 1: Rise and run for calculating the gradient of two lines."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#equations-of-the-type-ymxc",
+    "href": "a_math_2028/0_intro/session1-a-math.html#equations-of-the-type-ymxc",
+    "title": "Revision of Linear Equations",
+    "section": "2. Equations of the type y=mx+c",
+    "text": "2. Equations of the type y=mx+c\nConsider the equations y=2x, y=2x+3, and y=2x-3.\nWhen you plot these three lines, you will see that they are parallel. From the equations themselves, you can see that all three lines have the same gradient, 2.\nWhat does adding or not adding a constant term do to the line? The constant term shifts the line vertically: y=2x+3 is 3 units above y=2x, and y=2x-3 is 3 units below it.\nIf you substitute x=0 into each equation, you will get the point where each line crosses the y-axis. This point is the y-intercept of each line. The y-intercepts of the three lines are 3, 0, and -3, respectively. Notice that these are the values of the constant term c in each equation."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#interpreting-ymxc",
+    "href": "a_math_2028/0_intro/session1-a-math.html#interpreting-ymxc",
+    "title": "Revision of Linear Equations",
+    "section": "3. Interpreting y=mx+c",
+    "text": "3. Interpreting y=mx+c\nIn y=mx+c, m is the gradient. It determines the steepness of the line and whether it slopes upwards or downwards. A positive gradient gives an upward-sloping line; a negative gradient gives a downward-sloping line. The gradient can be calculated from any two points on the line using the formula:\n\nm=\\frac{y_2-y_1}{x_2-x_1}\n\nThe value c is the y-intercept because setting x=0 gives y=c."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#equations-in-the-form-axbyc0",
+    "href": "a_math_2028/0_intro/session1-a-math.html#equations-in-the-form-axbyc0",
+    "title": "Revision of Linear Equations",
+    "section": "4. Equations in the form ax+by+c=0",
+    "text": "4. Equations in the form ax+by+c=0\nRearrange:\n\n2x+3y-6=0\\qquad 3y=-2x+6,\n \ny=-\\frac{2}{3}x+2.\n\nWe can read the gradient and y-intercept, directly from this form:\n\nm=-\\frac23,\n\\qquad c=2.\n\nNow let us try plotting this line. At x=0, we have y=2, so the line crosses the y-axis at (0,2). Setting y=0 gives x=3, so it also passes through (3,0). Plot these two points and join them. Sidenote: Remember that setting x=0 to calculate y (the y-intercept) and setting y=0 to calculate x (the x-intercept) is a standard approach. You can plug any value of x into the equation to get the corresponding value of y, and vice versa.\nWe can see directly from the graph that the y-intercept is 2. We can calculate the gradient from the two points (0,2) and (3,0) - as -2/3.\n\n\n\n\n\n\n\n\nFigure 2: The line 2x+3y-6=0.\n\n\n\n\n\nIn general, for an equation of the form ax+by+c=0, where b\\ne0, we can rearrange to get \ny=-\\frac{a}{b}x-\\frac{c}{b}.\n\nThus the gradient is -a/b, and the y-intercept is -c/b."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#solutions-of-a-single-linear-equation",
+    "href": "a_math_2028/0_intro/session1-a-math.html#solutions-of-a-single-linear-equation",
+    "title": "Revision of Linear Equations",
+    "section": "5. Solutions of a single linear equation",
+    "text": "5. Solutions of a single linear equation\nA solution is an ordered pair that makes the equation true. For example, (0,2) is a solution to the equation 2x+3y=6 because\n\n2(0)+3(2)=6.\n\nWhen you rearrange the equation to solve for y,\n\ny=2-\\frac23x.\n\nYou can see that for any value of x, there is a corresponding value of y that satisfies the equation. Examples include (3,0), (-3,4), and (6,-2). There are an infinite number of points that satisfy (make it true when substituted into) the equation.\nAlgebraically, a solution makes the equation true after substitution. Geometrically, it is a point on the line. The complete set of solutions is the entire line.\n\n\n\n\n\n\n\n\nFigure 3: The solution set of 2x+3y=6."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#solutions-of-two-simultaneous-linear-equations",
+    "href": "a_math_2028/0_intro/session1-a-math.html#solutions-of-two-simultaneous-linear-equations",
+    "title": "Revision of Linear Equations",
+    "section": "6. Solutions of two simultaneous linear equations",
+    "text": "6. Solutions of two simultaneous linear equations\nConsider\n\n2x+3y=6,\n\\qquad 3x+2y=4.\n\nThe point (0,2) is a solution to both equations because\n\n2(0)+3(2)=6\n\nand\n\n3(0)+2(2)=4.\n\nAlgebraically, a solution to two simultaneous equations is an ordered pair that satisfies both equations at the same time. Geometrically, it is a point common to both graphs. Here the lines meet at (0,2), so the simultaneous solution is unique.\n\n\n\n\n\n\n\n\nFigure 4: The common solution of 2x+3y=6 and 3x+2y=4."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#substitution-method-of-solving-two-simultaneous-linear-equations",
+    "href": "a_math_2028/0_intro/session1-a-math.html#substitution-method-of-solving-two-simultaneous-linear-equations",
+    "title": "Revision of Linear Equations",
+    "section": "7. Substitution method of solving two simultaneous linear equations",
+    "text": "7. Substitution method of solving two simultaneous linear equations\nFrom 2x+3y=6,\n\nx=3-\\frac32y.\n\nSubstitute into 3x+2y=4:\n\n3\\left(3-\\frac32y\\right)+2y=4,\n \n9-\\frac52y=4,\n\\qquad y=2.\n\nThen\n\n2x+3(2)=6\\implies x=0.\n\nTherefore\n\n\\boxed{(x,y)=(0,2)}."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#elimination-method-of-solving-two-simultaneous-linear-equations",
+    "href": "a_math_2028/0_intro/session1-a-math.html#elimination-method-of-solving-two-simultaneous-linear-equations",
+    "title": "Revision of Linear Equations",
+    "section": "8. Elimination method of solving two simultaneous linear equations",
+    "text": "8. Elimination method of solving two simultaneous linear equations\nMultiply the first equation by 2 and the second by 3:\n\n4x+6y=12,\n\\qquad 9x+6y=12.\n\nSubtracting gives\n\n5x=0\\implies x=0.\n\nSubstitution gives 3y=6, so y=2. Hence\n\n\\boxed{(x,y)=(0,2)}."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#possible-numbers-of-solutions-to-two-simultaneous-linear-equations",
+    "href": "a_math_2028/0_intro/session1-a-math.html#possible-numbers-of-solutions-to-two-simultaneous-linear-equations",
+    "title": "Revision of Linear Equations",
+    "section": "9. Possible numbers of solutions to two simultaneous linear equations",
+    "text": "9. Possible numbers of solutions to two simultaneous linear equations\nConsidering each linear equation can be represented as a line, there are three possible cases: the lines interesect at a single point, the lines are parallel and distinct, or the lines are coincident. These three cases correspond to one solution, no solution, and infinitely many solutions, respectively.\nHow do we identify these cases algebraically?\nIf the linear equations are in the form y = mx + c, then the gradients of the two lines are equal for parallel lines, but the y-intercepts are different. For coincident lines, both the gradients and y-intercepts are equal.\nif the two linear equations are in the form ax+by+c=0, the coefficients of x and y are proportional for parallel lines, but the constant terms are not. For coincident lines, all three coefficients are proportional.\nFor parallel lines, the following condition holds: \n\\frac{a_1}{a_2}=\\frac{b_1}{b_2}!=\\frac{c_1}{c_2}.\n\nFor coincident lines, the following condition holds: \n\\frac{a_1}{a_2}=\\frac{b_1}{b_2}=\\frac{c_1}{c_2}.\n\n\n\n\nRelationship\nGraph\nNumber of solutions\n\n\n\n\nDifferent gradients\nLines intersect once\nOne\n\n\nSame gradient, different intercepts\nDistinct parallel lines\nNone\n\n\nSame line\nCoincident lines\nInfinitely many\n\n\n\nConsider these equations: \ny=2x+1,\n\\qquad y=2x-3.\n\nThe lines are parallel (m values are same but c values are different).\nWhen written in the standard form, the equations become 2x-y+1=0 and 2x-y-3=0. The x- and y-coefficients are proportional, but the constants are not.\nNow consider these equations:\n\ny=2x+1,\n\\qquad 2y=4x+2.\n\nThe second equation is the first multiplied by 2, so both describe the same line.\nWhen written in the standard form, the equations become 2x-y+1=0 and 4x-2y+2=0. All three coefficients are proportional.\nNote: During elimination, 0=5 indicates no solution, while 0=0 indicates infinitely many solutions."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#finding-a-line-through-two-points",
+    "href": "a_math_2028/0_intro/session1-a-math.html#finding-a-line-through-two-points",
+    "title": "Revision of Linear Equations",
+    "section": "10. Finding a line through two points",
+    "text": "10. Finding a line through two points\nA straight line is determined by two distinct points. Consider the points (1,2) and (3,4). The gradient of the line through these two points is:\n\nm=\\frac{4-2}{3-1}=1.\n\nSince the general equation of a straight line is y=mx+c, we have y=x+c. To find c, we can substitute one of the points into the equation. Using (1,2):\n\n2=1+c\\implies c=1.\n\nTherefore\n\n\\boxed{y=x+1}.\n\nWe can check this is correct as both points satisfy the equation: 2=1+1 and 4=3+1."
+  },
+  {
+    "objectID": "a_math_2028/0_intro/session1-a-math.html#concluding-note",
+    "href": "a_math_2028/0_intro/session1-a-math.html#concluding-note",
+    "title": "Revision of Linear Equations",
+    "section": "Concluding note",
+    "text": "Concluding note\nThe linear relationship between two variables can be described algebraically and geometrically. Algebraically, it is an equation that describes the relationship between the two variables. Geometrically, it is a straight line on the two dimensional cartesian graph.\nThe solution set of a single linear equation is the set of all ordered pairs that make the equation true, which is also the set of all points on the line.\nThe solution set of two simultaneous linear equations is the set of points common to both lines. Depending on the relationship between the two lines, there may be one solution, no solution, or infinitely many solutions.\nSince the relationship is between two variables, we can find the relationship, given any two solutions. This can also be thought of as finding the equation of the line through the two points."
+  },
+  {
+    "objectID": "a_math_2028/index.html",
+    "href": "a_math_2028/index.html",
+    "title": "A Level Math 2028",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 7, 2026\n\n\nRevision of Linear Equations\n\n\n \n\n\n\n\nAug 27, 2026\n\n\nPreparation for A Level Math\n\n\n \n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "a_math_2028/0_intro/prep.html",
     "href": "a_math_2028/0_intro/prep.html",
     "title": "Preparation for A Level Math",
@@ -2049,13 +2147,6 @@
     "title": "Preparation for A Level Math",
     "section": "Series",
     "text": "Series\n\nArithmetic and Geometric progressions\nCalculating the nth term"
-  },
-  {
-    "objectID": "a_math_2028/index.html",
-    "href": "a_math_2028/index.html",
-    "title": "A Level Math 2028",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nAug 27, 2026\n\n\nPreparation for A Level Math\n\n\n \n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "tir/index.html",

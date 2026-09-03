@@ -518,7 +518,7 @@ G = \frac{100(0.95)}{1/36} = \text{₹3,420}
 </section>
 <section id="python-mathematically-fair-die-game" class="level2">
 <h2 class="anchored" data-anchor-id="python-mathematically-fair-die-game">Python: mathematically fair die game</h2>
-<div id="f38c7e9b" class="cell" data-execution_count="1">
+<div id="749e8b0e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> secrets <span class="im">import</span> randbelow</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>STAKE <span class="op">=</span> <span class="dv">100</span></span>
@@ -538,8 +538,8 @@ G = \frac{100(0.95)}{1/36} = \text{₹3,420}
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Rolled: </span><span class="sc">{</span>roll<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"You lost ₹</span><span class="sc">{</span><span class="op">-</span>player_net<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Rolled: 5
-You lost ₹100.00</code></pre>
+<pre><code>Rolled: 4
+You won ₹500.00</code></pre>
 </div>
 </div>
 <p>The program uses <code>secrets.randbelow(6) + 1</code> to generate a uniformly distributed die result from 1 to 6.</p>
@@ -547,7 +547,7 @@ You lost ₹100.00</code></pre>
 <section id="python-casino-die-game" class="level2">
 <h2 class="anchored" data-anchor-id="python-casino-die-game">Python: casino die game</h2>
 <p>This version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.</p>
-<div id="02549ebe" class="cell" data-execution_count="2">
+<div id="db5b79db" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> secrets <span class="im">import</span> randbelow</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>STAKE <span class="op">=</span> <span class="dv">100</span></span>
@@ -575,7 +575,7 @@ You lost ₹100.00</code></pre>
 </section>
 <section id="simulating-10000-rolls" class="level2">
 <h2 class="anchored" data-anchor-id="simulating-10000-rolls">Simulating 10,000 rolls</h2>
-<div id="af9ec701" class="cell" data-execution_count="3">
+<div id="3aba080d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> secrets <span class="im">import</span> randbelow</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>NUM_ROLLS <span class="op">=</span> <span class="dv">10_000</span></span>
@@ -628,13 +628,13 @@ Number of rolls:            10,000
 Stake per roll:             ₹100.00
 House edge:                 5.00%
 Gross payout on a win:      ₹570.00
-Number of player wins:      1,673
-Observed win rate:          16.73%
+Number of player wins:      1,682
+Observed win rate:          16.82%
 
 Total amount wagered:       ₹1,000,000.00
-Player net result:          ₹-46,390.00
-Casino profit:              ₹46,390.00
-Observed house edge:        4.64%
+Player net result:          ₹-41,260.00
+Casino profit:              ₹41,260.00
+Observed house edge:        4.13%
 Expected casino profit:     ₹50,000.00</code></pre>
 </div>
 </div>
