@@ -1,0 +1,586 @@
+---
+title: "Quadratic Relationships: Exercises and Questions to Think About"
+author: ""
+format:
+  html:
+    toc: true
+    code-fold: true
+    html-math-method: katex
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+jupyter: python3
+execute:
+  warning: false
+---
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
+## Introduction
+
+A quadratic relationship has the form
+
+$$
+y=ax^2+bx+c,\qquad a\ne0.
+$$
+
+The graph of a quadratic relationship is a **parabola**. In this activity, we will build the equation in stages. First we study $y=ax^2$, then examine the effect of adding $bx$, and finally investigate the effect of adding $c$.
+
+The symbols $a$, $b$, and $c$ play different roles. Understanding those roles is more useful than memorising a collection of graph shapes.
+
+## 1. What does $y=ax^2+bx+c$ represent?
+
+### Question
+
+What does the equation
+
+$$
+y=ax^2+bx+c
+$$
+
+represent? What type of graph should we expect?
+
+### Answer
+
+It represents a quadratic relationship between $x$ and $y$. For each value of $x$, the equation gives one corresponding value of $y$. Because the highest power of $x$ is 2, the relationship is quadratic rather than linear.
+
+The graph is a parabola. Unlike a straight line, a parabola generally has a changing gradient. If we move equal distances along the $x$-axis, the changes in $y$ are not usually equal.
+
+The coefficient $a$ must not be zero. If $a=0$, the equation becomes $y=bx+c$, which is linear.
+
+Some important features are:
+
+- The coefficient $a$ determines whether the parabola opens upwards or downwards and how narrow or wide it is.
+- The coefficient $b$ affects the horizontal position of the axis of symmetry and therefore the position of the vertex.
+- The constant $c$ is the $y$-intercept because setting $x=0$ gives $y=c$.
+
+The axis of symmetry is
+
+$$
+x=-\frac{b}{2a},
+$$
+
+and the vertex occurs at
+
+$$
+\left(-\frac{b}{2a},\; f\left(-\frac{b}{2a}\right)\right).
+$$
+
+We will see these effects gradually rather than treating the formula as a rule to memorise.
+
+## 2. Begin with $y=x^2$
+
+### Question
+
+Make a table of values for $y=x^2$, using positive, negative, and zero values of $x$. What do you notice?
+
+### Answer
+
+A suitable table is:
+
+| $x$ | $-3$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$ |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| $y=x^2$ | 9 | 4 | 1 | 0 | 1 | 4 | 9 |
+
+The values for opposite inputs are equal:
+
+$$
+(-x)^2=x^2.
+$$
+
+For example,
+
+$$
+(-2)^2=2^2=4.
+$$
+
+Therefore the graph is symmetric about the $y$-axis. The lowest point is $(0,0)$, called the vertex. The graph opens upwards because squares are never negative.
+
+```{python}
+#| label: fig-basic-square
+#| fig-cap: "The basic parabola $y=x^2$."
+#| echo: false
+x=np.linspace(-4,4,500)
+fig,ax=plt.subplots()
+ax.plot(x,x**2,color='navy',label=r'$y=x^2$')
+ax.scatter([-3,-2,-1,0,1,2,3],[9,4,1,0,1,4,9],color='red',zorder=3)
+ax.axhline(0,color='black',lw=.7); ax.axvline(0,color='black',lw=.7)
+ax.set(xlim=(-4,4),ylim=(-1,17),xlabel=r'$x$',ylabel=r'$y$')
+ax.grid(True,alpha=.3); ax.legend(); plt.show()
+```
+
+## 3. What happens for positive and negative $x$?
+
+### Question
+
+How do the graphs of $y=ax^2$ behave when $x$ is positive or negative? Does the sign of $x$ affect the sign of $y$?
+
+### Answer
+
+The square $x^2$ is non-negative for both positive and negative values of $x$:
+
+$$
+x^2\ge0.
+$$
+
+Thus, when $a>0$,
+
+$$
+y=ax^2\ge0.
+$$
+
+The graph lies on or above the $x$-axis. The left and right sides are mirror images because
+
+$$
+a(-x)^2=ax^2.
+$$
+
+When $a<0$, multiplication by a negative number reverses the sign:
+
+$$
+y=ax^2\le0.
+$$
+
+The graph lies on or below the $x$-axis. It is still symmetric about the $y$-axis, but it opens downwards.
+
+For example, $y=2x^2$ opens upwards and $y=-2x^2$ opens downwards.
+
+```{python}
+#| label: fig-sign-a
+#| fig-cap: "Changing the sign of $a$ changes the direction in which the parabola opens."
+#| echo: false
+x=np.linspace(-3,3,400)
+fig,ax=plt.subplots()
+ax.plot(x,2*x**2,label=r'$y=2x^2$')
+ax.plot(x,-2*x**2,label=r'$y=-2x^2$')
+ax.axhline(0,color='black',lw=.7); ax.axvline(0,color='black',lw=.7)
+ax.set(xlim=(-3,3),ylim=(-19,19),xlabel=r'$x$',ylabel=r'$y$')
+ax.grid(True,alpha=.3); ax.legend(); plt.show()
+```
+
+## 4. How does the value of $a$ affect the graph?
+
+### Question
+
+Compare the graphs of
+
+$$
+y=x^2,\qquad y=2x^2,\qquad y=\frac12x^2,
+$$
+
+and then compare them with
+
+$$
+y=-x^2,\qquad y=-2x^2,\qquad y=-\frac12x^2.
+$$
+
+What does the magnitude and sign of $a$ do?
+
+### Answer
+
+The magnitude $|a|$ controls the vertical stretch or compression.
+
+- If $|a|>1$, the parabola is narrower and steeper than $y=x^2$.
+- If $0<|a|<1$, the parabola is wider and flatter than $y=x^2$.
+- If $a>0$, it opens upwards.
+- If $a<0$, it opens downwards.
+
+All graphs of $y=ax^2$ have vertex $(0,0)$ and axis of symmetry the $y$-axis.
+
+```{python}
+#| label: fig-values-a
+#| fig-cap: "The magnitude and sign of $a$ control the width and direction of $y=ax^2$."
+#| echo: false
+x=np.linspace(-3,3,500)
+fig,axs=plt.subplots(1,2,figsize=(11,4))
+for a in [1,2,.5]: axs[0].plot(x,a*x**2,label=fr'$y={a}x^2$')
+for a in [-1,-2,-.5]: axs[1].plot(x,a*x**2,label=fr'$y={a}x^2$')
+for ax,title,ylim in [(axs[0],'Positive $a$',(-1,19)),(axs[1],'Negative $a$',(-19,1))]:
+    ax.axhline(0,color='black',lw=.7); ax.axvline(0,color='black',lw=.7)
+    ax.set(xlim=(-3,3),ylim=ylim,xlabel=r'$x$',ylabel=r'$y$',title=title)
+    ax.grid(True,alpha=.3); ax.legend()
+plt.tight_layout(); plt.show()
+```
+
+## 5. What happens when we add $bx$?
+
+### Question
+
+Starting with $y=ax^2$, compare it with
+
+$$
+y=ax^2+bx.
+$$
+
+What changes when a linear term is added? Compare, for example,
+
+$$
+y=x^2,\qquad y=x^2+2x,\qquad y=x^2-2x.
+$$
+
+### Answer
+
+Adding $bx$ changes the position of the parabola. It can move the vertex away from the origin and changes the axis of symmetry. It does not, by itself, change the fact that the graph is a parabola.
+
+For the examples,
+
+$$
+y=x^2+2x=(x+1)^2-1,
+$$
+
+so the vertex is $(-1,-1)$ and the axis of symmetry is $x=-1$.
+
+Similarly,
+
+$$
+y=x^2-2x=(x-1)^2-1,
+$$
+
+so the vertex is $(1,-1)$ and the axis of symmetry is $x=1$.
+
+The term $bx$ also changes the value at negative and positive inputs differently. This is why the original symmetry about the $y$-axis is generally lost. The new symmetry is about the vertical line
+
+$$
+x=-\frac{b}{2a}.
+$$
+
+```{python}
+#| label: fig-linear-term
+#| fig-cap: "Adding $bx$ moves the vertex and changes the axis of symmetry."
+#| echo: false
+x=np.linspace(-4,4,500)
+fig,ax=plt.subplots()
+for b,label in [(0,r'$y=x^2$'),(2,r'$y=x^2+2x$'),(-2,r'$y=x^2-2x$')]:
+  ax.plot(x,x**2+b*x,label=label)
+ax.axhline(0,color='black',lw=.7); ax.axvline(0,color='black',lw=.7)
+ax.set(xlim=(-4,4),ylim=(-2,18),xlabel=r'$x$',ylabel=r'$y$')
+ax.grid(True,alpha=.3); ax.legend(); plt.show()
+```
+
+## 6. Can we rewrite the quadratic to see the movement?
+
+### Question
+
+How can completing the square help us understand the effect of the term $bx$? Rewrite $ax^2+bx$ in vertex form.
+
+### Answer
+
+Factor out $a$:
+
+$$
+ax^2+bx=a\left(x^2+\frac{b}{a}x\right).
+$$
+
+Complete the square inside the brackets:
+
+$$
+x^2+\frac{b}{a}x
+=\left(x+\frac{b}{2a}\right)^2-\frac{b^2}{4a^2}.
+$$
+
+Therefore,
+
+$$
+ax^2+bx
+=a\left(x+\frac{b}{2a}\right)^2-\frac{b^2}{4a}.
+$$
+
+This shows that the vertex has moved horizontally to
+
+$$
+x=-\frac{b}{2a},
+$$
+
+and vertically to
+
+$$
+y=-\frac{b^2}{4a}
+$$
+
+when $c=0$.
+
+For the complete quadratic,
+
+$$
+ax^2+bx+c
+=a\left(x+\frac{b}{2a}\right)^2+c-\frac{b^2}{4a}.
+$$
+
+This is the vertex form of the quadratic.
+
+## 7. What happens when we add $c$?
+
+### Question
+
+Starting with $y=ax^2+bx$, compare it with
+
+$$
+y=ax^2+bx+c.
+$$
+
+What does adding $c$ do to the graph? Compare
+
+$$
+y=x^2+2x,
+\qquad y=x^2+2x+3,
+\qquad y=x^2+2x-3.
+$$
+
+### Answer
+
+Adding $c$ shifts the graph vertically without changing its shape, width, direction, or axis of symmetry.
+
+If
+
+$$
+f(x)=ax^2+bx,
+$$
+
+then
+
+$$
+f(x)+c=ax^2+bx+c.
+$$
+
+Every $y$-value increases by $c$. Therefore:
+
+- If $c>0$, the graph moves upwards by $c$ units.
+- If $c<0$, the graph moves downwards by $|c|$ units.
+- The $y$-intercept is $(0,c)$, since $f(0)=c$.
+
+For the example,
+
+$$
+x^2+2x=(x+1)^2-1,
+$$
+
+so
+
+$$
+x^2+2x+3=(x+1)^2+2,
+$$
+
+and
+
+$$
+x^2+2x-3=(x+1)^2-4.
+$$
+
+All three have axis of symmetry $x=-1$, but their vertices are $(-1,-1)$, $(-1,2)$, and $(-1,-4)$.
+
+```{python}
+#| label: fig-constant-term
+#| fig-cap: "Adding $c$ shifts a parabola vertically."
+#| echo: false
+x=np.linspace(-4,3,500)
+fig,ax=plt.subplots()
+for c,label in [(0,r'$y=x^2+2x$'),(3,r'$y=x^2+2x+3$'),(-3,r'$y=x^2+2x-3$')]:
+  ax.plot(x,x**2+2*x+c,label=label)
+ax.axhline(0,color='black',lw=.7); ax.axvline(0,color='black',lw=.7)
+ax.set(xlim=(-4,3),ylim=(-6,18),xlabel=r'$x$',ylabel=r'$y$')
+ax.grid(True,alpha=.3); ax.legend(); plt.show()
+```
+
+## 8. Can we identify the main features of $y=ax^2+bx+c$?
+
+### Question
+
+For a general quadratic
+
+$$
+y=ax^2+bx+c,
+$$
+
+what can we determine directly from the coefficients?
+
+### Answer
+
+The main features are as follows.
+
+### Direction of opening
+
+- $a>0$: the parabola opens upwards and has a minimum point.
+- $a<0$: the parabola opens downwards and has a maximum point.
+
+### Width
+
+The size of $|a|$ controls width:
+
+- Larger $|a|$: narrower parabola.
+- Smaller positive $|a|$: wider parabola.
+
+### Axis of symmetry
+
+The axis is
+
+$$
+x=-\frac{b}{2a}.
+$$
+
+### Vertex
+
+Substitute the axis value into the equation:
+
+$$
+\left(-\frac{b}{2a},
+\;c-\frac{b^2}{4a}\right).
+$$
+
+### $y$-intercept
+
+Set $x=0$:
+
+$$
+y=c.
+$$
+
+Thus the graph crosses the $y$-axis at $(0,c)$.
+
+### $x$-intercepts
+
+Set $y=0$:
+
+$$
+ax^2+bx+c=0.
+$$
+
+The number of real $x$-intercepts depends on the discriminant
+
+$$
+\Delta=b^2-4ac.
+$$
+
+- $\Delta>0$: two distinct real $x$-intercepts.
+- $\Delta=0$: one repeated real $x$-intercept.
+- $\Delta<0$: no real $x$-intercepts.
+
+## 9. A complete worked example
+
+### Question
+
+Analyse and sketch the graph of
+
+$$
+y=2x^2-4x-6.
+$$
+
+Find its direction of opening, axis of symmetry, vertex, intercepts, and a few points for plotting.
+
+### Answer
+
+Here
+
+$$
+a=2,
+\qquad b=-4,
+\qquad c=-6.
+$$
+
+Since $a=2>0$, the parabola opens upwards. Since $|a|=2>1$, it is narrower than $y=x^2$.
+
+The axis of symmetry is
+
+$$
+x=-\frac{b}{2a}=-\frac{-4}{2(2)}=1.
+$$
+
+Complete the square:
+
+$$
+y=2x^2-4x-6
+=2(x^2-2x)-6
+=2(x-1)^2-8.
+$$
+
+Therefore the vertex is
+
+$$
+(1,-8).
+$$
+
+For the $y$-intercept, set $x=0$:
+
+$$
+y=-6,
+$$
+
+so the point is $(0,-6)$.
+
+For the $x$-intercepts, set $y=0$:
+
+$$
+2x^2-4x-6=0.
+$$
+
+Divide by 2:
+
+$$
+x^2-2x-3=0.
+$$
+
+Factorise:
+
+$$
+(x-3)(x+1)=0.
+$$
+
+Hence
+
+$$
+x=3\quad\text{or}\quad x=-1.
+$$
+
+The $x$-intercepts are $(3,0)$ and $(-1,0)$. A useful table is:
+
+| $x$ | $-1$ | $0$ | $1$ | $2$ | $3$ |
+|---:|---:|---:|---:|---:|---:|
+| $y$ | 0 | $-6$ | $-8$ | $-6$ | 0 |
+
+The equal values at $x=0$ and $x=2$ illustrate symmetry about $x=1$.
+
+```{python}
+#| label: fig-worked-quadratic
+#| fig-cap: "The graph of $y=2x^2-4x-6$."
+#| echo: false
+x=np.linspace(-2,4,500)
+y=2*x**2-4*x-6
+fig,ax=plt.subplots()
+ax.plot(x,y,color='navy',label=r'$y=2x^2-4x-6$')
+ax.scatter([-1,0,1,2,3],[0,-6,-8,-6,0],color='red',zorder=3)
+ax.axvline(1,color='darkorange',ls='--',label=r'axis $x=1$')
+ax.axhline(0,color='black',lw=.7); ax.axvline(0,color='black',lw=.7)
+ax.set(xlim=(-2,4),ylim=(-10,6),xlabel=r'$x$',ylabel=r'$y$')
+ax.grid(True,alpha=.3); ax.legend(); plt.show()
+```
+
+## 10. Connecting the algebra and geometry
+
+### Question
+
+How do the coefficients and the graph tell the same story in different languages?
+
+### Answer
+
+The equation and the graph are two representations of the same relationship.
+
+- The coefficient $a$ determines the direction of opening and the width of the parabola.
+- The coefficient $b$, together with $a$, determines the axis of symmetry $x=-b/(2a)$.
+- The constant $c$ gives the point where the graph crosses the $y$-axis.
+- Solving $ax^2+bx+c=0$ finds the points where the parabola crosses the $x$-axis.
+- The discriminant tells us how many such crossings are possible.
+
+The most useful progression is therefore:
+
+$$
+y=ax^2
+\quad\longrightarrow\quad
+ y=ax^2+bx
+\quad\longrightarrow\quad
+ y=ax^2+bx+c.
+$$
+
+First, $a$ determines the basic shape. Next, $bx$ moves the vertex horizontally and changes the axis of symmetry. Finally, $c$ shifts the entire graph vertically and determines the $y$-intercept.
