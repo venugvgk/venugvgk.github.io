@@ -1,0 +1,169 @@
+---
+title: "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve"
+author: "A Level Economics Notes"
+format: html
+---
+
+## Definition of Price Elasticity of Demand (PED)
+
+**Price elasticity of demand (PED)** measures the responsiveness of the quantity demanded of a good to a change in its price.
+
+Formally:
+
+$$
+\text{PED} = \frac{\%\ \text{change in quantity demanded}}{\%\ \text{change in price}}
+$$
+
+or, using calculus for a demand function $Q = f(P)$:
+
+$$
+\text{PED} = \frac{dQ}{dP} \times \frac{P}{Q}
+$$
+
+Key points:
+
+- PED is usually **negative** for normal goods (because of the law of demand), but we often refer to its **absolute value** $|\text{PED}|$.
+- Interpretation:
+  - $|\text{PED}| > 1$: **Elastic** demand (quantity responds strongly to price changes).
+  - $|\text{PED}| = 1$: **Unitary elastic** demand.
+  - $|\text{PED}| < 1$: **Inelastic** demand (quantity responds weakly to price changes).
+
+---
+
+## How PED Changes Along a Straight-Line Demand Curve
+
+On a typical downward-sloping **straight-line (linear) demand curve**, PED is **not constant**:
+
+- **High prices / low quantities (upper part of the curve)**: demand is **more elastic**.
+- **Midpoint of the curve**: demand is **unitary elastic** ($|\text{PED}| = 1$).
+- **Low prices / high quantities (lower part of the curve)**: demand is **more inelastic**.
+
+### Why PED changes even though the slope is constant
+
+For a linear demand curve, the slope $\frac{dP}{dQ}$ (or $\frac{dQ}{dP}$) is constant, but PED depends on **both** the slope and the **ratio** $\frac{P}{Q}$:
+
+$$
+\text{PED} = \frac{dQ}{dP} \times \frac{P}{Q}
+$$
+
+- $\frac{dQ}{dP}$ is constant for a straight line.
+- But $\frac{P}{Q}$ changes as you move along the curve.
+
+So even with a constant slope, the **percentage** responsiveness changes because the base levels of $P$ and $Q$ change.
+
+Intuitively:
+
+- At the **top-left** (high $P$, low $Q$): a given absolute change in price is a **small percentage** change, but the same absolute change in quantity is a **large percentage** change → high elasticity.
+- At the **bottom-right** (low $P$, high $Q$): the same absolute price change is a **large percentage** change, but the quantity change is a **small percentage** change → low elasticity.
+
+---
+
+## Numerical Example
+
+Consider a simple linear demand function:
+
+$$
+P = 100 - 2Q \quad \text{or} \quad Q = 50 - 0.5P
+$$
+
+Here, $\frac{dQ}{dP} = -0.5$ (constant).
+
+PED at any point:
+
+$$
+\text{PED} = \frac{dQ}{dP} \times \frac{P}{Q} = -0.5 \times \frac{P}{Q}
+$$
+
+### Point A: High price, low quantity (elastic region)
+
+Let $Q = 10$:
+
+- $P = 100 - 2(10) = 80$
+- $\text{PED} = -0.5 \times \frac{80}{10} = -0.5 \times 8 = -4$
+
+$|\text{PED}| = 4 > 1$ → **elastic** demand.
+
+### Point B: Midpoint (unitary elasticity)
+
+Midpoint in quantity terms: $Q = 25$
+
+- $P = 100 - 2(25) = 50$
+- $\text{PED} = -0.5 \times \frac{50}{25} = -0.5 \times 2 = -1$
+
+$|\text{PED}| = 1$ → **unitary elastic**.
+
+### Point C: Low price, high quantity (inelastic region)
+
+Let $Q = 40$:
+
+- $P = 100 - 2(40) = 20$
+- $\text{PED} = -0.5 \times \frac{20}{40} = -0.5 \times 0.5 = -0.25$
+
+$|\text{PED}| = 0.25 < 1$ → **inelastic** demand.
+
+So along the same straight line:
+
+- **Top segment**: $|\text{PED}| > 1$ (elastic)
+- **Midpoint**: $|\text{PED}| = 1$ (unitary)
+- **Bottom segment**: $|\text{PED}| < 1$ (inelastic)
+
+---
+
+## Using the Percentage-Change (Midpoint) Formula Between Two Points
+
+You can also see this by computing PED between pairs of points using the midpoint formula:
+
+$$
+\text{PED} = \frac{\%\ \Delta Q}{\%\ \Delta P}
+= \frac{\frac{Q_2 - Q_1}{(Q_1 + Q_2)/2}}{\frac{P_2 - P_1}{(P_1 + P_2)/2}}
+$$
+
+Using the same curve $P = 100 - 2Q$:
+
+### Between upper points (elastic region)
+
+Between $(P_1, Q_1) = (80, 10)$ and $(P_2, Q_2) = (60, 20)$:
+
+$$
+\%\ \Delta Q = \frac{20 - 10}{(10 + 20)/2} = \frac{10}{15} \approx 0.667
+$$
+$$
+\%\ \Delta P = \frac{60 - 80}{(80 + 60)/2} = \frac{-20}{70} \approx -0.286
+$$
+$$
+\text{PED} \approx \frac{0.667}{-0.286} \approx -2.33 \quad (\text{elastic})
+$$
+
+### Between lower points (inelastic region)
+
+Between $(P_1, Q_1) = (40, 30)$ and $(P_2, Q_2) = (20, 40)$:
+
+$$
+\%\ \Delta Q = \frac{40 - 30}{(30 + 40)/2} = \frac{10}{35} \approx 0.286
+$$
+$$
+\%\ \Delta P = \frac{20 - 40}{(40 + 20)/2} = \frac{-20}{30} \approx -0.667
+$$
+$$
+\text{PED} \approx \frac{0.286}{-0.667} \approx -0.43 \quad (\text{inelastic})
+$$
+
+Same straight line, but elasticity falls as you move down and to the right.
+
+---
+
+## Key Pattern to Remember (for Exams)
+
+On a typical downward-sloping straight-line demand curve:
+
+- **Upper half**: $|\text{PED}| > 1$ → elastic  
+- **Midpoint**: $|\text{PED}| = 1$ → unitary  
+- **Lower half**: $|\text{PED}| < 1$ → inelastic  
+- At the **price-axis intercept** (where $Q = 0$): $|\text{PED}| \to \infty$ (perfectly elastic in the limit)  
+- At the **quantity-axis intercept** (where $P = 0$): $\text{PED} = 0$ (perfectly inelastic in the limit)
+
+This is why **total revenue** behaves differently along the curve:
+
+- In the **elastic region**, a price **decrease** raises total revenue.
+- In the **inelastic region**, a price **increase** raises total revenue.
+- **Maximum total revenue** occurs at the **unitary-elastic midpoint**.

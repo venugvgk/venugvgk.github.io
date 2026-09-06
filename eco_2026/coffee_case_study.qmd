@@ -1,0 +1,113 @@
+---
+title: "Coffee Prices, Mechanisation, and Supply–Demand"
+subtitle: "A-level Economics: Case Study Analysis"
+author: "Your Name"
+date: "2026-09-05"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+## Case Study: Coffee Prices and Mechanisation in Brazil
+
+The global price of coffee is at its lowest level in 13 years. The fall in price is having a major impact on growers in Brazil, the world's largest producer, where an increasing number of growers are unable to make any money let alone a living from a crop they have grown for generations. 
+
+The way forward, as any economist knows, is to become more efficient. This requires an increase in productivity coupled with a decrease in costs. It can now be achieved through the use of machines that harvest coffee. Such machines have recently become available, but typically cost $150,000. They can cut harvest costs by 40 to 60% as far fewer workers need to be hired (even if they were available). To help farmers mechanise, some suppliers of the machines are willing to take part payment in coffee beans spread over a number of years. For them, it looks like a case of 'technology to the rescue'.
+
+
+**Questions**
+
+Consider the case for using machinery to improve the efficiency of harvesting coffee beans.
+
+1. Why might this not be an ethical solution?
+2. Given that the global demand for coffee is increasing, why is the price of coffee at its lowest level in 13 years? (Surely, the price of coffee should be increasing.)
+
+---
+
+## Answer
+
+### 1. Why mechanisation might not be an ethical solution
+
+Using harvesting machines can raise several ethical concerns, even if it improves "efficiency" in a narrow cost sense:
+
+- **Displacement of rural workers and loss of livelihoods**  
+  Mechanisation sharply reduces the number of pickers needed at harvest time. In Brazil, rural unions and researchers have reported that mechanisation is already decreasing employment opportunities and shortening the work period for seasonal labourers. For many households, coffee picking is a crucial source of income; losing this work without alternative jobs or social protection can push families into poverty.
+
+- **Exploitative labour practices around machines**  
+  There are documented cases where workers effectively pay to use harvesting machines through large wage deductions, sometimes breaching Brazilian labour law which requires employers to provide tools free of charge. This can trap workers in debt-like arrangements and worsen power imbalances between farm owners and labourers.
+
+- **Worsening inequality and community impacts**  
+  Large farms with access to capital (or suppliers willing to take beans as part-payment) can afford machines; smallholders often cannot. This can accelerate consolidation of land and market power, pushing smaller growers out and weakening rural communities that depend on coffee. Ethically, a "solution" that helps some producers but systematically harms vulnerable workers and smallholders is problematic.
+
+- **Human-rights and "slave labour" concerns in parts of the sector**  
+  Investigations have highlighted forced-labour-like conditions on some Brazilian coffee farms, including in major producing regions. Mechanisation introduced into such a context, without strong labour standards and enforcement, risks entrenching abusive systems rather than fixing them.
+
+So, while machines may lower costs per kilo of coffee, an ethical evaluation must consider **distributional effects**: who gains (often larger farms, machine suppliers, roasters) and who loses (seasonal workers, smallholders, local communities).
+
+---
+
+### 2. Why can price fall when global demand is rising?
+
+Your intuition—"if demand is rising, price should rise"—is correct **only if supply does not rise even more**. In competitive markets, price is determined by the interaction of **both** supply and demand.
+
+#### Key idea: supply can outpace demand
+
+Even if the global demand curve for coffee shifts right (more demanded at each price), the **supply curve can shift right by more**, leading to:
+
+- Higher equilibrium quantity
+- **Lower** equilibrium price
+
+This is exactly what has been happening with coffee:
+
+- Brazil, the world's largest producer, is heading for **record or near-record crops**, with forecasts of very large increases in output (e.g. around 70–75 million bags in recent projections).
+- A Reuters poll cited in 2026 expected a **surplus** in the coffee market, widening from about 1.7 million bags in 2025/26 to 8.2 million bags in 2026/27, largely due to a projected 17% jump in Brazilian output.
+- When markets anticipate or experience such a supply surge, traders and exporters lower prices to clear the extra stock, even though demand is still growing.
+
+In simple supply–demand terms:
+
+- Demand ↑ → tends to push price up.
+- Supply ↑↑ (by more than demand) → pushes price down more strongly.
+- Net effect: **price falls**, quantity traded rises.
+
+#### Other reinforcing factors
+
+Several additional elements can keep prices low despite rising demand:
+
+- **Expectations and futures markets**: If traders expect big Brazilian harvests and global surpluses, futures prices fall now, influencing spot prices.
+- **Low but not critical stock levels**: Even with relatively low certified stocks, the expectation of large new supply can dominate price formation.
+- **Currency and cost effects**: Exchange-rate movements and changes in production costs can affect how much growers are willing to supply at given world prices, further shifting the effective supply curve.
+
+So the apparent paradox dissolves once you treat **both curves as moving**: demand for coffee is indeed increasing, but supply—especially from Brazil—has been increasing faster, creating a surplus narrative and driving prices down to their lowest levels in many years.
+
+---
+
+### Supply–Demand Diagram: Larger Rightward Shift in Supply than Demand
+
+The diagram below shows a simple linear model where:
+
+- Demand shifts right from \(D_1\) to \(D_2\) (increase in demand).
+- Supply shifts right *more* from \(S_1\) to \(S_2\) (larger increase in supply).
+
+![Coffee market: larger rightward shift in supply than demand](coffee_supply_demand_shift.png)
+
+- **Initial equilibrium \(E_1\)**: \(P_1 = 6\), \(Q_1 = 8\)
+- **New equilibrium \(E_2\)**: \(P_2 = 5\), \(Q_2 = 14\)
+
+Despite higher demand, the **larger increase in supply** leads to:
+
+- **Lower equilibrium price** (6 → 5)
+- **Higher equilibrium quantity** (8 → 14)
+
+This matches the coffee market story: global demand is rising, but expected and actual supply—especially from Brazil—is rising faster, so the world price falls even as more coffee is bought and sold.
+
+---
+
+## References
+
+- Daily Telegraph, 26 August 2019 (adapted case study).
+- DataMar News, "Colombian coffee boom fades as Brazil heads for record crop", 28 August 2026.
+- Perfect Daily Grind, "Coffee News Recap, 28 Aug: ICE-certified arabica stocks fall...", 28 August 2026.
+- Studies on labour conditions in Brazilian coffee production (SciELO, 2024).
+- Mongabay, "Labor rights violations at Brazil coffee farm linked to Starbucks...", 2021.
+- Reporter Brasil, "Starbucks supplier farm ignores law and fails to provide coffee harvesting machine...", 2024.

@@ -30,7 +30,7 @@ $$
 
 The graph of a quadratic relationship is a **parabola**. In this activity, we will build the equation in stages. First we study $y=ax^2$, then examine the effect of adding $bx$, and finally investigate the effect of adding $c$.
 
-The symbols $a$, $b$, and $c$ play different roles. Understanding those roles is more useful than memorising a collection of graph shapes.
+The coefficients $a$, $b$, and $c$ play different roles. Understanding those roles is more useful than memorising a collection of graph shapes.
 
 ## 1. What does $y=ax^2+bx+c$ represent?
 
@@ -48,13 +48,13 @@ represent? What type of graph should we expect?
 
 It represents a quadratic relationship between $x$ and $y$. For each value of $x$, the equation gives one corresponding value of $y$. Because the highest power of $x$ is 2, the relationship is quadratic rather than linear.
 
-The graph is a parabola. Unlike a straight line, a parabola generally has a changing gradient. If we move equal distances along the $x$-axis, the changes in $y$ are not usually equal.
-
 The coefficient $a$ must not be zero. If $a=0$, the equation becomes $y=bx+c$, which is linear.
 
 Some important features are:
 
-- The coefficient $a$ determines whether the parabola opens upwards or downwards and how narrow or wide it is.
+- The graph is a parabola, which is symmetric about a vertical line called the **axis of symmetry**. The axis of symmetry is parallel to the $y$-axis. 
+- The lowest or highest point of the parabola is called the **vertex**. The axis of symmetry passes through the vertex. The vertex is a minimum point if the parabola opens upwards and a maximum point if it opens downwards.
+The coefficient $a$ determines whether the parabola opens upwards or downwards and how narrow or wide it is.
 - The coefficient $b$ affects the horizontal position of the axis of symmetry and therefore the position of the vertex.
 - The constant $c$ is the $y$-intercept because setting $x=0$ gives $y=c$.
 
@@ -86,7 +86,7 @@ A suitable table is:
 |---:|---:|---:|---:|---:|---:|---:|---:|
 | $y=x^2$ | 9 | 4 | 1 | 0 | 1 | 4 | 9 |
 
-The values for opposite inputs are equal:
+The values for $-x$ and $x$ are equal:
 
 $$
 (-x)^2=x^2.
@@ -113,21 +113,9 @@ ax.set(xlim=(-4,4),ylim=(-1,17),xlabel=r'$x$',ylabel=r'$y$')
 ax.grid(True,alpha=.3); ax.legend(); plt.show()
 ```
 
-## 3. What happens for positive and negative $x$?
+## 3. What happens for positive and negative values of $a$?
 
-### Question
-
-How do the graphs of $y=ax^2$ behave when $x$ is positive or negative? Does the sign of $x$ affect the sign of $y$?
-
-### Answer
-
-The square $x^2$ is non-negative for both positive and negative values of $x$:
-
-$$
-x^2\ge0.
-$$
-
-Thus, when $a>0$,
+When $a>0$,
 
 $$
 y=ax^2\ge0.
@@ -232,7 +220,9 @@ $$
 y=x^2+2x=(x+1)^2-1,
 $$
 
-so the vertex is $(-1,-1)$ and the axis of symmetry is $x=-1$.
+The value of $y$ is minimum when $x=-1$, and that value is $y=-1$,so the vertex is $(-1,-1)$ 
+
+The axis of symmetry is a line passing through $x=-1$.
 
 Similarly,
 
@@ -240,7 +230,7 @@ $$
 y=x^2-2x=(x-1)^2-1,
 $$
 
-so the vertex is $(1,-1)$ and the axis of symmetry is $x=1$.
+The value of $y$ is minimum when $x=1$, and that value is $y=-1$,so the vertex is $(1,-1)$ and the axis of symmetry is $x=1$.
 
 The term $bx$ also changes the value at negative and positive inputs differently. This is why the original symmetry about the $y$-axis is generally lost. The new symmetry is about the vertical line
 
@@ -448,7 +438,7 @@ $$
 ax^2+bx+c=0.
 $$
 
-The number of real $x$-intercepts depends on the discriminant
+The number of real $x$-intercepts depends on the solutions of this equation, which in turn depends on the discriminant.
 
 $$
 \Delta=b^2-4ac.
@@ -584,3 +574,13 @@ y=ax^2
 $$
 
 First, $a$ determines the basic shape. Next, $bx$ moves the vertex horizontally and changes the axis of symmetry. Finally, $c$ shifts the entire graph vertically and determines the $y$-intercept.
+
+## Other resources
+
+[GeoGebra Calculator](https://www.geogebra.org/calculator) - Use the graphing suite to plot various linear and quardratic relationships.
+
+[Graph of Quadratic Equations](https://www.geogebra.org/m/vb2qb9eq) - A GeoGebra activity to explore the effect of changing $a$, $b$, and $c$ on the graph of a quadratic equation.
+
+[parabolic patterns](https://nrich.maths.org/problems/parabolic-patterns?tab=overview) - Identify the graphs corresponding to different quadratic equations.
+
+
