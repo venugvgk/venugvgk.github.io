@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-08-06">
+<meta name="author" content="Your Name">
+<meta name="dcterms.date" content="2026-09-05">
 
-<title>Session 14 Revision of plots and primes – Venu GVGK Raju</title>
+<title>Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams? – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -103,13 +70,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Session 14 Revision of plots and primes – Venu GVGK Raju">
-<meta property="og:description" content="">
+<meta property="og:title" content="Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams? – Venu GVGK Raju">
+<meta property="og:description" content="A Note for Teachers and Advanced Students">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Session 14 Revision of plots and primes – Venu GVGK Raju">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams? – Venu GVGK Raju">
+<meta name="twitter:description" content="A Note for Teachers and Advanced Students">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -165,26 +161,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#question" id="toc-question" class="nav-link active" data-scroll-target="#question"><span class="header-section-number">1</span> Question</a></li>
+  <li><a href="#teacher-explanation" id="toc-teacher-explanation" class="nav-link" data-scroll-target="#teacher-explanation"><span class="header-section-number">2</span> Teacher Explanation</a>
+  <ul class="collapse">
+  <li><a href="#it-is-mainly-a-historical-convention" id="toc-it-is-mainly-a-historical-convention" class="nav-link" data-scroll-target="#it-is-mainly-a-historical-convention"><span class="header-section-number">2.1</span> 1. It is mainly a historical convention</a></li>
+  <li><a href="#economists-are-plotting-inverse-demand-and-supply" id="toc-economists-are-plotting-inverse-demand-and-supply" class="nav-link" data-scroll-target="#economists-are-plotting-inverse-demand-and-supply"><span class="header-section-number">2.2</span> 2. Economists are plotting <em>inverse</em> demand and supply</a></li>
+  <li><a href="#two-ways-to-draw-the-same-curves" id="toc-two-ways-to-draw-the-same-curves" class="nav-link" data-scroll-target="#two-ways-to-draw-the-same-curves"><span class="header-section-number">2.3</span> 3. Two ways to draw the same curves</a></li>
+  <li><a href="#why-dont-we-switch-to-the-maths-convention" id="toc-why-dont-we-switch-to-the-maths-convention" class="nav-link" data-scroll-target="#why-dont-we-switch-to-the-maths-convention"><span class="header-section-number">2.4</span> 4. Why don’t we switch to the “maths” convention?</a></li>
+  </ul></li>
+  <li><a href="#how-to-explain-this-to-students" id="toc-how-to-explain-this-to-students" class="nav-link" data-scroll-target="#how-to-explain-this-to-students"><span class="header-section-number">3</span> How to explain this to students</a></li>
+  <li><a href="#optional-extension-for-advanced-students" id="toc-optional-extension-for-advanced-students" class="nav-link" data-scroll-target="#optional-extension-for-advanced-students"><span class="header-section-number">4</span> Optional extension for advanced students</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Session 14 Revision of plots and primes</h1>
+<h1 class="title">Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams?</h1>
+<p class="subtitle lead">A Note for Teachers and Advanced Students</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 6, 2026</p>
+      <p class="date">September 5, 2026</p>
     </div>
   </div>
   
@@ -196,52 +214,135 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>We revised the math behind the prime number problem and the pseudocode for the program. We also discussed how to plot the results of a simulation using matplotlib. Specifically, we looked at how to plot a bar graph, a line graph, both on the same graph, and how to draw subplots.</p>
-<p>Here is an example program that uses a dictionary to plot a line and bars on the same graph.</p>
-<div id="25a3ee8c" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a simple dictionary with categories and values</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Apples"</span>: <span class="dv">10</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bananas"</span>: <span class="dv">15</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cherries"</span>: <span class="dv">7</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Dates"</span>: <span class="dv">12</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Elderberries"</span>: <span class="dv">5</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract keys and values for plotting</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> <span class="bu">list</span>(data.keys())</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> <span class="bu">list</span>(data.values())</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the bar chart</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.bar(categories, values, color<span class="op">=</span><span class="st">'skyblue'</span>, label<span class="op">=</span><span class="st">'Value (bar)'</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a line plot for the same data</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.plot(categories, values, color<span class="op">=</span><span class="st">'darkorange'</span>, marker<span class="op">=</span><span class="st">'o'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, label<span class="op">=</span><span class="st">'Value (line)'</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Add labels and title</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Category'</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Value'</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Dictionary Values: Bar and Line Plot'</span>)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
+<section id="question" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="question"><span class="header-section-number">1</span> Question</h2>
+<p>In mathematics and most sciences, we are taught to put the <strong>independent variable on the x‑axis</strong> and the <strong>dependent variable on the y‑axis</strong>.</p>
+<p>Yet in introductory economics, supply and demand diagrams have:</p>
+<ul>
+<li><strong>Price (P)</strong> on the <strong>vertical (y) axis</strong></li>
+<li><strong>Quantity (Q)</strong> on the <strong>horizontal (x) axis</strong></li>
+</ul>
+<p>But we often say things like “quantity demanded depends on price” or “quantity supplied depends on price”.</p>
+<p><strong>Why, then, is quantity on the x‑axis and price on the y‑axis in standard supply–demand diagrams?</strong></p>
+<hr>
+</section>
+<section id="teacher-explanation" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="teacher-explanation"><span class="header-section-number">2</span> Teacher Explanation</h2>
+<section id="it-is-mainly-a-historical-convention" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="it-is-mainly-a-historical-convention"><span class="header-section-number">2.1</span> 1. It is mainly a historical convention</h3>
+<p>The standard diagram comes from <strong>Alfred Marshall’s</strong> <em>Principles of Economics</em> (1890). Marshall chose to draw:</p>
+<ul>
+<li><strong>Quantity</strong> on the horizontal axis<br>
+</li>
+<li><strong>Price</strong> on the vertical axis</li>
+</ul>
+<p>even though he understood that, mathematically, one can think of quantity demanded or supplied as a function of price.</p>
+<p>Because Marshall’s textbook became so influential, this convention became standard in the Anglo‑American economics tradition. Later authors kept it for <strong>consistency and comparability</strong>, even though it goes against the usual maths convention.</p>
+<p>So a large part of the answer is simply: <strong>this is how Marshall drew it, and everyone followed</strong>.</p>
+<hr>
+</section>
+<section id="economists-are-plotting-inverse-demand-and-supply" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="economists-are-plotting-inverse-demand-and-supply"><span class="header-section-number">2.2</span> 2. Economists are plotting <em>inverse</em> demand and supply</h3>
+<p>In many models we write:</p>
+<ul>
+<li>Demand: <span class="math inline">\(Q_d = D(P)\)</span> – quantity demanded as a function of price<br>
+</li>
+<li>Supply: <span class="math inline">\(Q_s = S(P)\)</span> – quantity supplied as a function of price</li>
+</ul>
+<p>But the diagram you see in class is actually drawing the <strong>inverse functions</strong>:</p>
+<ul>
+<li>Inverse demand: <span class="math inline">\(P = D^{-1}(Q)\)</span> – the price consumers are willing to pay for each quantity<br>
+</li>
+<li>Inverse supply: <span class="math inline">\(P = S^{-1}(Q)\)</span> – the price producers need to supply each quantity</li>
+</ul>
+<p>In Marshall’s way of thinking:</p>
+<ul>
+<li>For any given quantity <span class="math inline">\(Q\)</span>, the <strong>demand curve</strong> shows the <strong>maximum price</strong> consumers are willing to pay for that extra (marginal) unit.</li>
+<li>For any given <span class="math inline">\(Q\)</span>, the <strong>supply curve</strong> shows the <strong>minimum price</strong> producers need to be willing to supply that extra unit (their marginal cost).</li>
+</ul>
+<p>So in that view:</p>
+<ul>
+<li><strong>Quantity is treated as the “driver”</strong>: “If the market sells this much, what price does that imply on the demand side? On the supply side?”</li>
+<li><strong>Price is the outcome variable</strong> that adjusts to equate quantity demanded and quantity supplied.</li>
+</ul>
+<p>Thus, the diagram is consistent if you think of it as plotting <strong>price as a function of quantity</strong>, i.e.&nbsp;the inverse demand and inverse supply curves.</p>
+<hr>
+</section>
+<section id="two-ways-to-draw-the-same-curves" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="two-ways-to-draw-the-same-curves"><span class="header-section-number">2.3</span> 3. Two ways to draw the same curves</h3>
+<p>The same underlying relationships can be drawn in two orientations.</p>
+<section id="a-marshallian-economics-convention" class="level4" data-number="2.3.1">
+<h4 data-number="2.3.1" class="anchored" data-anchor-id="a-marshallian-economics-convention"><span class="header-section-number">2.3.1</span> (A) Marshallian (economics) convention</h4>
+<p><strong>Quantity on x‑axis, Price on y‑axis</strong></p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="session14_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="marshallian_orientation.png" class="img-fluid figure-img"></p>
+<figcaption>Marshallian orientation</figcaption>
 </figure>
 </div>
+<p>This is the standard diagram used in almost all introductory economics textbooks and exams.</p>
+<ul>
+<li>Demand slopes downward: as <span class="math inline">\(Q\)</span> increases, the marginal willingness to pay falls.</li>
+<li>Supply slopes upward: as <span class="math inline">\(Q\)</span> increases, the marginal cost of production rises.</li>
+<li>Equilibrium <span class="math inline">\(E\)</span> is where the two curves cross.</li>
+</ul>
+</section>
+<section id="b-mathematics-convention" class="level4" data-number="2.3.2">
+<h4 data-number="2.3.2" class="anchored" data-anchor-id="b-mathematics-convention"><span class="header-section-number">2.3.2</span> (B) Mathematics convention</h4>
+<p><strong>Price as independent (x), Quantity as dependent (y)</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="maths_orientation.png" class="img-fluid figure-img"></p>
+<figcaption>Mathematics orientation</figcaption>
+</figure>
 </div>
-</div>
-<p>Homework for the next session is to generate a program for rock paper scissors.</p>
+<p>Here we treat:</p>
+<ul>
+<li><span class="math inline">\(Q_d = D(P)\)</span> and <span class="math inline">\(Q_s = S(P)\)</span> explicitly, with <strong>price on the horizontal axis</strong> and <strong>quantity on the vertical axis</strong>.</li>
+</ul>
+<p>The curves represent the same relationships; they are just <strong>re‑expressed</strong> and <strong>re‑oriented</strong>.</p>
+<hr>
+</section>
+</section>
+<section id="why-dont-we-switch-to-the-maths-convention" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="why-dont-we-switch-to-the-maths-convention"><span class="header-section-number">2.4</span> 4. Why don’t we switch to the “maths” convention?</h3>
+<p>You <em>could</em> teach supply and demand with price on the x‑axis and quantity on the y‑axis. Some advanced texts do this when it is convenient. But introductory economics keeps Marshall’s convention because:</p>
+<ul>
+<li><strong>Standardisation</strong>: All textbooks, exam boards, and policy graphs use the same orientation, so everyone can read each other’s diagrams.</li>
+<li><strong>Intuition about shifts</strong>: It is very visual to think of “demand shifts right” or “supply shifts right” and immediately see the new equilibrium price and quantity in the same layout.</li>
+<li><strong>Surplus and elasticity</strong>: Concepts like consumer surplus, producer surplus, and elasticity are taught using this standard picture; changing axes would confuse learners more than it helps.</li>
+</ul>
+<p>So the diagram is not wrong; it is just using a <strong>different but consistent convention</strong> that the whole discipline has adopted.</p>
+<hr>
+</section>
+</section>
+<section id="how-to-explain-this-to-students" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="how-to-explain-this-to-students"><span class="header-section-number">3</span> How to explain this to students</h2>
+<p>You might say:</p>
+<ul>
+<li>“In maths, we usually put the independent variable on the x‑axis. In economics, the supply–demand diagram is a <strong>historical convention from Marshall</strong>.”</li>
+<li>“The curves you see are really <strong>inverse functions</strong>: price as a function of quantity.”</li>
+<li>“Quantity is treated as the ‘given’, and price is the ‘resulting market price’ that clears the market.”</li>
+<li>“Everyone in economics uses this convention, so we stick with it to match textbooks, exams, and other economists’ graphs.”</li>
+</ul>
+<p>If students ask, “So which is correct?” you can answer:</p>
+<ul>
+<li>“Both are mathematically fine. Economists have just agreed to use Marshall’s orientation for all the standard diagrams.”</li>
+</ul>
+<hr>
+</section>
+<section id="optional-extension-for-advanced-students" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="optional-extension-for-advanced-students"><span class="header-section-number">4</span> Optional extension for advanced students</h2>
+<p>For more advanced classes, you can:</p>
+<ul>
+<li>Write demand as <span class="math inline">\(Q_d = a - bP\)</span> and then derive the inverse demand <span class="math inline">\(P = \frac{a}{b} - \frac{1}{b}Q\)</span>.</li>
+<li>Show explicitly how the same line looks in both orientations.</li>
+<li>Discuss how some research papers and advanced texts switch axes depending on what is most convenient for the analysis.</li>
+</ul>
+<p>This helps students see that the choice of axes is a <strong>modelling and presentation choice</strong>, not a deep truth about the relationship.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

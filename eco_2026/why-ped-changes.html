@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-08-06">
+<meta name="author" content="A Level Economics Notes">
 
-<title>Session 14 Revision of plots and primes – Venu GVGK Raju</title>
+<title>Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -103,12 +69,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Session 14 Revision of plots and primes – Venu GVGK Raju">
+<meta property="og:title" content="Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve – Venu GVGK Raju">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Session 14 Revision of plots and primes – Venu GVGK Raju">
+<meta name="twitter:title" content="Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve – Venu GVGK Raju">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -165,28 +160,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#definition-of-price-elasticity-of-demand-ped" id="toc-definition-of-price-elasticity-of-demand-ped" class="nav-link active" data-scroll-target="#definition-of-price-elasticity-of-demand-ped">Definition of Price Elasticity of Demand (PED)</a></li>
+  <li><a href="#how-ped-changes-along-a-straight-line-demand-curve" id="toc-how-ped-changes-along-a-straight-line-demand-curve" class="nav-link" data-scroll-target="#how-ped-changes-along-a-straight-line-demand-curve">How PED Changes Along a Straight-Line Demand Curve</a>
+  <ul class="collapse">
+  <li><a href="#why-ped-changes-even-though-the-slope-is-constant" id="toc-why-ped-changes-even-though-the-slope-is-constant" class="nav-link" data-scroll-target="#why-ped-changes-even-though-the-slope-is-constant">Why PED changes even though the slope is constant</a></li>
+  </ul></li>
+  <li><a href="#numerical-example" id="toc-numerical-example" class="nav-link" data-scroll-target="#numerical-example">Numerical Example</a>
+  <ul class="collapse">
+  <li><a href="#point-a-high-price-low-quantity-elastic-region" id="toc-point-a-high-price-low-quantity-elastic-region" class="nav-link" data-scroll-target="#point-a-high-price-low-quantity-elastic-region">Point A: High price, low quantity (elastic region)</a></li>
+  <li><a href="#point-b-midpoint-unitary-elasticity" id="toc-point-b-midpoint-unitary-elasticity" class="nav-link" data-scroll-target="#point-b-midpoint-unitary-elasticity">Point B: Midpoint (unitary elasticity)</a></li>
+  <li><a href="#point-c-low-price-high-quantity-inelastic-region" id="toc-point-c-low-price-high-quantity-inelastic-region" class="nav-link" data-scroll-target="#point-c-low-price-high-quantity-inelastic-region">Point C: Low price, high quantity (inelastic region)</a></li>
+  </ul></li>
+  <li><a href="#using-the-percentage-change-midpoint-formula-between-two-points" id="toc-using-the-percentage-change-midpoint-formula-between-two-points" class="nav-link" data-scroll-target="#using-the-percentage-change-midpoint-formula-between-two-points">Using the Percentage-Change (Midpoint) Formula Between Two Points</a>
+  <ul class="collapse">
+  <li><a href="#between-upper-points-elastic-region" id="toc-between-upper-points-elastic-region" class="nav-link" data-scroll-target="#between-upper-points-elastic-region">Between upper points (elastic region)</a></li>
+  <li><a href="#between-lower-points-inelastic-region" id="toc-between-lower-points-inelastic-region" class="nav-link" data-scroll-target="#between-lower-points-inelastic-region">Between lower points (inelastic region)</a></li>
+  </ul></li>
+  <li><a href="#key-pattern-to-remember-for-exams" id="toc-key-pattern-to-remember-for-exams" class="nav-link" data-scroll-target="#key-pattern-to-remember-for-exams">Key Pattern to Remember (for Exams)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Session 14 Revision of plots and primes</h1>
+<h1 class="title">Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 6, 2026</p>
-    </div>
+             <p>A Level Economics Notes </p>
+          </div>
   </div>
+    
   
     
   </div>
@@ -196,52 +213,158 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>We revised the math behind the prime number problem and the pseudocode for the program. We also discussed how to plot the results of a simulation using matplotlib. Specifically, we looked at how to plot a bar graph, a line graph, both on the same graph, and how to draw subplots.</p>
-<p>Here is an example program that uses a dictionary to plot a line and bars on the same graph.</p>
-<div id="25a3ee8c" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a simple dictionary with categories and values</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Apples"</span>: <span class="dv">10</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bananas"</span>: <span class="dv">15</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cherries"</span>: <span class="dv">7</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Dates"</span>: <span class="dv">12</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Elderberries"</span>: <span class="dv">5</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract keys and values for plotting</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> <span class="bu">list</span>(data.keys())</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> <span class="bu">list</span>(data.values())</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the bar chart</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.bar(categories, values, color<span class="op">=</span><span class="st">'skyblue'</span>, label<span class="op">=</span><span class="st">'Value (bar)'</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a line plot for the same data</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.plot(categories, values, color<span class="op">=</span><span class="st">'darkorange'</span>, marker<span class="op">=</span><span class="st">'o'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, label<span class="op">=</span><span class="st">'Value (line)'</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Add labels and title</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Category'</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Value'</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Dictionary Values: Bar and Line Plot'</span>)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="session14_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Homework for the next session is to generate a program for rock paper scissors.</p>
+<section id="definition-of-price-elasticity-of-demand-ped" class="level2">
+<h2 class="anchored" data-anchor-id="definition-of-price-elasticity-of-demand-ped">Definition of Price Elasticity of Demand (PED)</h2>
+<p><strong>Price elasticity of demand (PED)</strong> measures the responsiveness of the quantity demanded of a good to a change in its price.</p>
+<p>Formally:</p>
+<p><span class="math display">\[
+\text{PED} = \frac{\%\ \text{change in quantity demanded}}{\%\ \text{change in price}}
+\]</span></p>
+<p>or, using calculus for a demand function <span class="math inline">\(Q = f(P)\)</span>:</p>
+<p><span class="math display">\[
+\text{PED} = \frac{dQ}{dP} \times \frac{P}{Q}
+\]</span></p>
+<p>Key points:</p>
+<ul>
+<li>PED is usually <strong>negative</strong> for normal goods (because of the law of demand), but we often refer to its <strong>absolute value</strong> <span class="math inline">\(|\text{PED}|\)</span>.</li>
+<li>Interpretation:
+<ul>
+<li><span class="math inline">\(|\text{PED}| &gt; 1\)</span>: <strong>Elastic</strong> demand (quantity responds strongly to price changes).</li>
+<li><span class="math inline">\(|\text{PED}| = 1\)</span>: <strong>Unitary elastic</strong> demand.</li>
+<li><span class="math inline">\(|\text{PED}| &lt; 1\)</span>: <strong>Inelastic</strong> demand (quantity responds weakly to price changes).</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="how-ped-changes-along-a-straight-line-demand-curve" class="level2">
+<h2 class="anchored" data-anchor-id="how-ped-changes-along-a-straight-line-demand-curve">How PED Changes Along a Straight-Line Demand Curve</h2>
+<p>On a typical downward-sloping <strong>straight-line (linear) demand curve</strong>, PED is <strong>not constant</strong>:</p>
+<ul>
+<li><strong>High prices / low quantities (upper part of the curve)</strong>: demand is <strong>more elastic</strong>.</li>
+<li><strong>Midpoint of the curve</strong>: demand is <strong>unitary elastic</strong> (<span class="math inline">\(|\text{PED}| = 1\)</span>).</li>
+<li><strong>Low prices / high quantities (lower part of the curve)</strong>: demand is <strong>more inelastic</strong>.</li>
+</ul>
+<section id="why-ped-changes-even-though-the-slope-is-constant" class="level3">
+<h3 class="anchored" data-anchor-id="why-ped-changes-even-though-the-slope-is-constant">Why PED changes even though the slope is constant</h3>
+<p>For a linear demand curve, the slope <span class="math inline">\(\frac{dP}{dQ}\)</span> (or <span class="math inline">\(\frac{dQ}{dP}\)</span>) is constant, but PED depends on <strong>both</strong> the slope and the <strong>ratio</strong> <span class="math inline">\(\frac{P}{Q}\)</span>:</p>
+<p><span class="math display">\[
+\text{PED} = \frac{dQ}{dP} \times \frac{P}{Q}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\frac{dQ}{dP}\)</span> is constant for a straight line.</li>
+<li>But <span class="math inline">\(\frac{P}{Q}\)</span> changes as you move along the curve.</li>
+</ul>
+<p>So even with a constant slope, the <strong>percentage</strong> responsiveness changes because the base levels of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> change.</p>
+<p>Intuitively:</p>
+<ul>
+<li>At the <strong>top-left</strong> (high <span class="math inline">\(P\)</span>, low <span class="math inline">\(Q\)</span>): a given absolute change in price is a <strong>small percentage</strong> change, but the same absolute change in quantity is a <strong>large percentage</strong> change → high elasticity.</li>
+<li>At the <strong>bottom-right</strong> (low <span class="math inline">\(P\)</span>, high <span class="math inline">\(Q\)</span>): the same absolute price change is a <strong>large percentage</strong> change, but the quantity change is a <strong>small percentage</strong> change → low elasticity.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="numerical-example" class="level2">
+<h2 class="anchored" data-anchor-id="numerical-example">Numerical Example</h2>
+<p>Consider a simple linear demand function:</p>
+<p><span class="math display">\[
+P = 100 - 2Q \quad \text{or} \quad Q = 50 - 0.5P
+\]</span></p>
+<p>Here, <span class="math inline">\(\frac{dQ}{dP} = -0.5\)</span> (constant).</p>
+<p>PED at any point:</p>
+<p><span class="math display">\[
+\text{PED} = \frac{dQ}{dP} \times \frac{P}{Q} = -0.5 \times \frac{P}{Q}
+\]</span></p>
+<section id="point-a-high-price-low-quantity-elastic-region" class="level3">
+<h3 class="anchored" data-anchor-id="point-a-high-price-low-quantity-elastic-region">Point A: High price, low quantity (elastic region)</h3>
+<p>Let <span class="math inline">\(Q = 10\)</span>:</p>
+<ul>
+<li><span class="math inline">\(P = 100 - 2(10) = 80\)</span></li>
+<li><span class="math inline">\(\text{PED} = -0.5 \times \frac{80}{10} = -0.5 \times 8 = -4\)</span></li>
+</ul>
+<p><span class="math inline">\(|\text{PED}| = 4 &gt; 1\)</span> → <strong>elastic</strong> demand.</p>
+</section>
+<section id="point-b-midpoint-unitary-elasticity" class="level3">
+<h3 class="anchored" data-anchor-id="point-b-midpoint-unitary-elasticity">Point B: Midpoint (unitary elasticity)</h3>
+<p>Midpoint in quantity terms: <span class="math inline">\(Q = 25\)</span></p>
+<ul>
+<li><span class="math inline">\(P = 100 - 2(25) = 50\)</span></li>
+<li><span class="math inline">\(\text{PED} = -0.5 \times \frac{50}{25} = -0.5 \times 2 = -1\)</span></li>
+</ul>
+<p><span class="math inline">\(|\text{PED}| = 1\)</span> → <strong>unitary elastic</strong>.</p>
+</section>
+<section id="point-c-low-price-high-quantity-inelastic-region" class="level3">
+<h3 class="anchored" data-anchor-id="point-c-low-price-high-quantity-inelastic-region">Point C: Low price, high quantity (inelastic region)</h3>
+<p>Let <span class="math inline">\(Q = 40\)</span>:</p>
+<ul>
+<li><span class="math inline">\(P = 100 - 2(40) = 20\)</span></li>
+<li><span class="math inline">\(\text{PED} = -0.5 \times \frac{20}{40} = -0.5 \times 0.5 = -0.25\)</span></li>
+</ul>
+<p><span class="math inline">\(|\text{PED}| = 0.25 &lt; 1\)</span> → <strong>inelastic</strong> demand.</p>
+<p>So along the same straight line:</p>
+<ul>
+<li><strong>Top segment</strong>: <span class="math inline">\(|\text{PED}| &gt; 1\)</span> (elastic)</li>
+<li><strong>Midpoint</strong>: <span class="math inline">\(|\text{PED}| = 1\)</span> (unitary)</li>
+<li><strong>Bottom segment</strong>: <span class="math inline">\(|\text{PED}| &lt; 1\)</span> (inelastic)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="using-the-percentage-change-midpoint-formula-between-two-points" class="level2">
+<h2 class="anchored" data-anchor-id="using-the-percentage-change-midpoint-formula-between-two-points">Using the Percentage-Change (Midpoint) Formula Between Two Points</h2>
+<p>You can also see this by computing PED between pairs of points using the midpoint formula:</p>
+<p><span class="math display">\[
+\text{PED} = \frac{\%\ \Delta Q}{\%\ \Delta P}
+= \frac{\frac{Q_2 - Q_1}{(Q_1 + Q_2)/2}}{\frac{P_2 - P_1}{(P_1 + P_2)/2}}
+\]</span></p>
+<p>Using the same curve <span class="math inline">\(P = 100 - 2Q\)</span>:</p>
+<section id="between-upper-points-elastic-region" class="level3">
+<h3 class="anchored" data-anchor-id="between-upper-points-elastic-region">Between upper points (elastic region)</h3>
+<p>Between <span class="math inline">\((P_1, Q_1) = (80, 10)\)</span> and <span class="math inline">\((P_2, Q_2) = (60, 20)\)</span>:</p>
+<p><span class="math display">\[
+\%\ \Delta Q = \frac{20 - 10}{(10 + 20)/2} = \frac{10}{15} \approx 0.667
+\]</span> <span class="math display">\[
+\%\ \Delta P = \frac{60 - 80}{(80 + 60)/2} = \frac{-20}{70} \approx -0.286
+\]</span> <span class="math display">\[
+\text{PED} \approx \frac{0.667}{-0.286} \approx -2.33 \quad (\text{elastic})
+\]</span></p>
+</section>
+<section id="between-lower-points-inelastic-region" class="level3">
+<h3 class="anchored" data-anchor-id="between-lower-points-inelastic-region">Between lower points (inelastic region)</h3>
+<p>Between <span class="math inline">\((P_1, Q_1) = (40, 30)\)</span> and <span class="math inline">\((P_2, Q_2) = (20, 40)\)</span>:</p>
+<p><span class="math display">\[
+\%\ \Delta Q = \frac{40 - 30}{(30 + 40)/2} = \frac{10}{35} \approx 0.286
+\]</span> <span class="math display">\[
+\%\ \Delta P = \frac{20 - 40}{(40 + 20)/2} = \frac{-20}{30} \approx -0.667
+\]</span> <span class="math display">\[
+\text{PED} \approx \frac{0.286}{-0.667} \approx -0.43 \quad (\text{inelastic})
+\]</span></p>
+<p>Same straight line, but elasticity falls as you move down and to the right.</p>
+<hr>
+</section>
+</section>
+<section id="key-pattern-to-remember-for-exams" class="level2">
+<h2 class="anchored" data-anchor-id="key-pattern-to-remember-for-exams">Key Pattern to Remember (for Exams)</h2>
+<p>On a typical downward-sloping straight-line demand curve:</p>
+<ul>
+<li><strong>Upper half</strong>: <span class="math inline">\(|\text{PED}| &gt; 1\)</span> → elastic<br>
+</li>
+<li><strong>Midpoint</strong>: <span class="math inline">\(|\text{PED}| = 1\)</span> → unitary<br>
+</li>
+<li><strong>Lower half</strong>: <span class="math inline">\(|\text{PED}| &lt; 1\)</span> → inelastic<br>
+</li>
+<li>At the <strong>price-axis intercept</strong> (where <span class="math inline">\(Q = 0\)</span>): <span class="math inline">\(|\text{PED}| \to \infty\)</span> (perfectly elastic in the limit)<br>
+</li>
+<li>At the <strong>quantity-axis intercept</strong> (where <span class="math inline">\(P = 0\)</span>): <span class="math inline">\(\text{PED} = 0\)</span> (perfectly inelastic in the limit)</li>
+</ul>
+<p>This is why <strong>total revenue</strong> behaves differently along the curve:</p>
+<ul>
+<li>In the <strong>elastic region</strong>, a price <strong>decrease</strong> raises total revenue.</li>
+<li>In the <strong>inelastic region</strong>, a price <strong>increase</strong> raises total revenue.</li>
+<li><strong>Maximum total revenue</strong> occurs at the <strong>unitary-elastic midpoint</strong>.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
