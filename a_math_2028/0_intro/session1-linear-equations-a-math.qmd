@@ -401,3 +401,8 @@ The solution set of a single linear equation is the set of all ordered pairs tha
 The solution set of two simultaneous linear equations is the set of points common to both lines. Depending on the relationship between the two lines, there may be one solution, no solution, or infinitely many solutions.
 
 Since the relationship is between two variables, we can find the relationship, given any two solutions. This can also be thought of as finding the equation of the line through the two points. 
+
+## Further Work
+
+1. Revise the concepts of linear equations and their geometric interpretations. Solve the 10 questions again.
+2. Look up the questions given for quadratic equations and their geometric interpretations. Try to solve them. We will discuss these in the next session.
