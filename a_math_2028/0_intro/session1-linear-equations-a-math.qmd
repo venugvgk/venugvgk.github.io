@@ -1,7 +1,7 @@
 ---
-title: Revision of Linear Equations
+title: Session 1:Revision of Linear Equations
 Subtitle: Algebraic and Geometric Interpretations  
-date: 2026-09-07
+date: 2026-09-08
 page-layout: article
 publish: false
 format:
@@ -19,7 +19,7 @@ execute:
 
 ## Introduction
 
-These questions are aimed at developing one central idea: a linear equation can be understood algebraically and geometrically. Algebraically, it describes numbers that make an equation true. Geometrically, it describes points on a straight line.
+The questions given for [preparation](https://gvgk.in/a_math_2028/0_intro/prep.html) are aimed at developing one central idea: a linear equation can be understood algebraically and geometrically. Algebraically, it describes numbers that make an equation true. Geometrically, it describes points on a straight line.
 
 We are considering linear equations in two variables. In general, such a linear equation describes the relationship between two variable, typically $x$ and $y$. One of the simplest such relationships can be described by the equation $y=mx$, where $m$ is a constant. The other simple relationship can be $y = x + c$, where $c$ is a constant. When you combine these two, you get the general equation of a linear relationship between $x$ and $y$, which is $y=mx+c$ (sidenote: Do you notice and understand that no other **linear** relationship between $x$ and $y$ can exist? or that **all linear relationships** between $x$ and $y$ can be expressed in this form?). 
 
