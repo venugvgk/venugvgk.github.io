@@ -82,6 +82,7 @@
   {
     "listing": "/education/index.html",
     "items": [
+      "/education/shepherd-age-math.html",
       "/education/language-policy-quick-thoughts.html",
       "/education/rm-case-study-ndp.html",
       "/education/social-cultural-reproduction.html",
@@ -99,8 +100,8 @@
   {
     "listing": "/a_math_2028/index.html",
     "items": [
-      "/a_math_2028/0_intro/session1-linear-equations-a-math.html",
       "/a_math_2028/0_intro/session2-quadratic-explorations.html",
+      "/a_math_2028/0_intro/session1-linear-equations-a-math.html",
       "/a_math_2028/0_intro/prep.html"
     ]
   },
