@@ -1,0 +1,23 @@
+---
+title: Session 4 - Solving Quadratic Equations
+date: 2026-09-08
+page-layout: article
+publish: false
+format:
+  html:
+    toc: true
+    code-fold: true
+    html-math-method: katex
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+jupyter: python3
+execute:
+  warning: false
+---
+
+Factorization, completing the square, and the quadratic formula are three methods for solving quadratic equations. Quadratic formula can be derived from the method of completing the square. 
+
+The solutions to a quadratic equation correspond to the x-coordinates of the points where the graph of the corresponding quadratic function intersects the x-axis. 
+
+Considering that a quadratic function may or may not intersect the x-axis, we can have 0, 1, or 2 solutions to a quadratic equation. The discriminant of a quadratic equation helps us determine the number of solutions without actually solving the equation.

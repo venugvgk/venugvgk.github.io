@@ -402,7 +402,82 @@ The solution set of two simultaneous linear equations is the set of points commo
 
 Since the relationship is between two variables, we can find the relationship, given any two solutions. This can also be thought of as finding the equation of the line through the two points. 
 
-## Further Work
+## Check your understanding
 
-1. Revise the concepts of linear equations and their geometric interpretations. Solve the 10 questions again.
-2. Look up the questions given for quadratic equations and their geometric interpretations. Try to solve them. We will discuss these in the next session.
+Try these questions to see whether you have understood the main ideas of this session.
+
+### Short-answer questions
+
+1. For each equation, state the gradient and the $y$-intercept:
+   - $y=3x-4$
+   - $y=-\frac{1}{2}x+5$
+   - $2x+5y-10=0$
+
+2. Explain what the gradient tells you about a straight line. In your answer, mention both the sign and the size of the gradient.
+
+3. A line has equation $y=mx+3$. What is the effect of changing $m$ while keeping the $y$-intercept fixed? Describe the graph in words.
+
+4. The equation $y=2x-5$ is given. Find:
+   - the $y$-intercept,
+   - the $x$-intercept,
+   - another point on the line.
+
+5. Solve the equation $3x+2y=12$ for $y$. Then identify the gradient and $y$-intercept of the line.
+
+6. For each pair of equations, decide whether the lines are parallel, coincident, or intersecting:
+   - $y=2x+1$ and $y=2x-3$
+   - $y=3x+2$ and $2y=6x+4$
+   - $y=x+2$ and $y=-x+2$
+
+7. A line passes through the points $(1,4)$ and $(3,10)$. Find:
+   - the gradient,
+   - the equation of the line,
+   - whether it passes through $(5,16)$.
+
+8. Solve the simultaneous equations using substitution:
+   $$
+   y=2x+1,
+   \qquad
+   3x+y=11.
+   $$
+
+9. Solve the simultaneous equations using elimination:
+   $$
+   2x+3y=13,
+   \qquad
+   4x+3y=17.
+   $$
+
+10. Explain the difference between the algebraic and geometric interpretation of a solution to a single linear equation.
+
+11. Two lines have equations $2x+y=5$ and $x-y=1$. Find the point where they intersect and explain why this point is a solution to both equations.
+
+12. A student says: “If two linear equations have the same gradient, then they must have infinitely many solutions.” Is this statement true or false? Explain your answer.
+
+### Challenge questions
+
+13. The line through $(2,5)$ and $(6,13)$ is written in the form $y=mx+c$. Find $m$ and $c$.
+
+14. A line has equation $3x-2y+12=0$. Find the $x$-intercept and $y$-intercept, and describe the line in words.
+
+15. The equations of two lines are
+   $$
+   y=4x-7
+   \quad \text{and} \quad
+   4x-y+3=0.
+   $$
+   Determine whether the lines are parallel, coincident, or intersecting, and justify your answer.
+
+16. Explain why the complete set of solutions to a single linear equation is represented by a straight line on a graph.
+
+### Quick reflection
+
+- I can identify the gradient and y-intercept from an equation.
+- I can describe the meaning of a linear equation algebraically and geometrically.
+- I can solve simultaneous equations and explain what the solution means graphically.
+- I can decide whether two linear equations have one solution, no solution, or infinitely many solutions.
+
+## Homework
+
+1. Revise the concepts of linear equations and their interpretations. Solve the 10 questions again.
+2. Look up the questions given for quadratic curves and try to answer them. We will discuss these in the next session.

@@ -1,0 +1,24 @@
+---
+title: Session 5 - Quadratic Curve and Line
+date: 2026-09-08
+page-layout: article
+publish: false
+format:
+  html:
+    toc: true
+    code-fold: true
+    html-math-method: katex
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+jupyter: python3
+execute:
+  warning: false
+---
+
+When we consider a quadratic function and a linear function together, we can have 0, 1, or 2 points of intersection. each point of intersection satisfies both the quadratic function and the linear function. 
+
+Therefore, each point of intersection corresponds to a solution of the quadratic equation formed by *equating the quadratic function in the $y=f(x)$ form to the linear function in the $y=mx+c$ form*. This corresponds to how two linear equations of the form $y = m_1x + c_1$ and $y = m_2x + c_2$ can have 0, 1, or infinitely many points of intersection and can be solved by equating the two linear functions to form a linear equation.
+
+The number of points of intersection between a quadratic curve and a line can be determined by the discriminant of the corresponding quadratic equation.
+
