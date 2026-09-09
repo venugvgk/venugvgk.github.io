@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-08-06">
+<meta name="author" content="">
 
-<title>Session 14 Revision of plots and primes – Venu GVGK Raju</title>
+<title>Linear to quadratic and back - the entire flow – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -103,12 +69,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Session 14 Revision of plots and primes – Venu GVGK Raju">
+<meta property="og:title" content="Linear to quadratic and back - the entire flow – Venu GVGK Raju">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Session 14 Revision of plots and primes – Venu GVGK Raju">
+<meta name="twitter:title" content="Linear to quadratic and back - the entire flow – Venu GVGK Raju">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -165,15 +174,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#linear-relationships-and-equations" id="toc-linear-relationships-and-equations" class="nav-link active" data-scroll-target="#linear-relationships-and-equations">Linear relationships and equations</a>
+  <ul class="collapse">
+  <li><a href="#general-equation-and-graph" id="toc-general-equation-and-graph" class="nav-link" data-scroll-target="#general-equation-and-graph">General Equation and Graph</a></li>
+  <li><a href="#plotting-a-linear-graph" id="toc-plotting-a-linear-graph" class="nav-link" data-scroll-target="#plotting-a-linear-graph">Plotting a Linear Graph</a></li>
+  <li><a href="#finding-the-slope" id="toc-finding-the-slope" class="nav-link" data-scroll-target="#finding-the-slope">Finding the Slope</a>
+  <ul class="collapse">
+  <li><a href="#from-a-graph" id="toc-from-a-graph" class="nav-link" data-scroll-target="#from-a-graph">From a Graph</a></li>
+  <li><a href="#from-an-equation" id="toc-from-an-equation" class="nav-link" data-scroll-target="#from-an-equation">From an Equation</a></li>
+  <li><a href="#from-two-points" id="toc-from-two-points" class="nav-link" data-scroll-target="#from-two-points">From Two Points</a></li>
+  </ul></li>
+  <li><a href="#finding-the-equation-from-two-points" id="toc-finding-the-equation-from-two-points" class="nav-link" data-scroll-target="#finding-the-equation-from-two-points">Finding the Equation from Two Points</a></li>
+  <li><a href="#solving-two-simultaneous-linear-equations" id="toc-solving-two-simultaneous-linear-equations" class="nav-link" data-scroll-target="#solving-two-simultaneous-linear-equations">Solving Two Simultaneous Linear Equations</a></li>
+  <li><a href="#cases-for-the-number-of-solutions" id="toc-cases-for-the-number-of-solutions" class="nav-link" data-scroll-target="#cases-for-the-number-of-solutions">Cases for the Number of Solutions</a></li>
+  </ul></li>
+  <li><a href="#quadratic-relationships-and-equations" id="toc-quadratic-relationships-and-equations" class="nav-link" data-scroll-target="#quadratic-relationships-and-equations">Quadratic Relationships and Equations</a>
+  <ul class="collapse">
+  <li><a href="#general-equation-and-graph-1" id="toc-general-equation-and-graph-1" class="nav-link" data-scroll-target="#general-equation-and-graph-1">General Equation and Graph</a></li>
+  <li><a href="#solving-a-quadratic-equation-by-completing-the-square" id="toc-solving-a-quadratic-equation-by-completing-the-square" class="nav-link" data-scroll-target="#solving-a-quadratic-equation-by-completing-the-square">Solving a Quadratic Equation by Completing the Square</a></li>
+  <li><a href="#nature-of-the-solutions-to-the-quadratic-equation" id="toc-nature-of-the-solutions-to-the-quadratic-equation" class="nav-link" data-scroll-target="#nature-of-the-solutions-to-the-quadratic-equation">Nature of the solutions to the quadratic equation</a></li>
+  </ul></li>
+  <li><a href="#solving-a-quadratic-curve-and-a-line" id="toc-solving-a-quadratic-curve-and-a-line" class="nav-link" data-scroll-target="#solving-a-quadratic-curve-and-a-line">Solving a Quadratic Curve and a Line</a>
+  <ul class="collapse">
+  <li><a href="#nature-of-solutions-to-quadratic-curve-and-line-together" id="toc-nature-of-solutions-to-quadratic-curve-and-line-together" class="nav-link" data-scroll-target="#nature-of-solutions-to-quadratic-curve-and-line-together">Nature of solutions to quadratic curve and line together</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Session 14 Revision of plots and primes</h1>
+<h1 class="title">Linear to quadratic and back - the entire flow</h1>
 </div>
 
 
@@ -181,12 +219,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 6, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -196,52 +228,238 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>We revised the math behind the prime number problem and the pseudocode for the program. We also discussed how to plot the results of a simulation using matplotlib. Specifically, we looked at how to plot a bar graph, a line graph, both on the same graph, and how to draw subplots.</p>
-<p>Here is an example program that uses a dictionary to plot a line and bars on the same graph.</p>
-<div id="425a34b1" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a simple dictionary with categories and values</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Apples"</span>: <span class="dv">10</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bananas"</span>: <span class="dv">15</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cherries"</span>: <span class="dv">7</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Dates"</span>: <span class="dv">12</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Elderberries"</span>: <span class="dv">5</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract keys and values for plotting</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> <span class="bu">list</span>(data.keys())</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> <span class="bu">list</span>(data.values())</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the bar chart</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.bar(categories, values, color<span class="op">=</span><span class="st">'skyblue'</span>, label<span class="op">=</span><span class="st">'Value (bar)'</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a line plot for the same data</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.plot(categories, values, color<span class="op">=</span><span class="st">'darkorange'</span>, marker<span class="op">=</span><span class="st">'o'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, label<span class="op">=</span><span class="st">'Value (line)'</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Add labels and title</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Category'</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Value'</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Dictionary Values: Bar and Line Plot'</span>)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Also introduce the terms - roots and zeroes</strong></p>
+<section id="linear-relationships-and-equations" class="level1">
+<h1>Linear relationships and equations</h1>
+<p>General equation and the shape of the graph</p>
+<p>A linear relationship between two quantities can be expressed in the form y = mx + b, where m is the slope and b is the y-intercept; or in the form Ax + By + C = 0, where A, B, and C are constants.</p>
+<p>The graph of a linear relationship is a straight line</p>
+<section id="general-equation-and-graph" class="level2">
+<h2 class="anchored" data-anchor-id="general-equation-and-graph">General Equation and Graph</h2>
+<p>A linear relationship between two quantities can be written as</p>
+<p><span class="math display">
+y = mx + c,
+</span></p>
+<p>where <span class="math inline">m</span> is the slope and <span class="math inline">c</span> is the <span class="math inline">y</span>-intercept. It can also be written in standard form as</p>
+<p><span class="math display">
+Ax + By + C = 0,
+</span></p>
+<p>where <span class="math inline">A</span>, <span class="math inline">B</span>, and <span class="math inline">C</span> are constants. The graph of a linear relationship is a straight line.</p>
+</section>
+<section id="plotting-a-linear-graph" class="level2">
+<h2 class="anchored" data-anchor-id="plotting-a-linear-graph">Plotting a Linear Graph</h2>
+<p>To plot the graph of a linear relationship:</p>
+<ol type="1">
+<li>Substitute several values of <span class="math inline">x</span> into the equation to calculate the corresponding values of <span class="math inline">y</span>.</li>
+<li>Plot the resulting points <span class="math inline">(x, y)</span> on a coordinate plane.</li>
+<li>Join the points with a straight line.</li>
+</ol>
+<p>The intercepts are also useful:</p>
+<ul>
+<li>The <span class="math inline">x</span>-intercept occurs when <span class="math inline">y = 0</span>. For <span class="math inline">y = mx + c</span>, solve <span class="math display">
+mx + c = 0.
+</span></li>
+<li>The <span class="math inline">y</span>-intercept occurs when <span class="math inline">x = 0</span>. Substituting <span class="math inline">x = 0</span> into <span class="math inline">y = mx + c</span> gives <span class="math inline">y = c</span>, so the point is <span class="math inline">(0, c)</span>.</li>
+</ul>
+<p>Thus, the graph of the relationship <span class="math inline">y = mx + c</span> crosses the <span class="math inline">x</span>-axis at the solution of the equation <span class="math inline">mx + c = 0</span> and crosses the <span class="math inline">y</span>-axis at <span class="math inline">(0, c)</span>.</p>
+</section>
+<section id="finding-the-slope" class="level2">
+<h2 class="anchored" data-anchor-id="finding-the-slope">Finding the Slope</h2>
+<p>The slope indicates the steepness and direction of a line:</p>
+<ul>
+<li><span class="math inline">m &gt; 0</span>: the line rises from left to right.</li>
+<li><span class="math inline">m &lt; 0</span>: the line falls from left to right.</li>
+<li><span class="math inline">m = 0</span>: the line is horizontal.</li>
+<li>A vertical line has an undefined slope.</li>
+</ul>
+<section id="from-a-graph" class="level3">
+<h3 class="anchored" data-anchor-id="from-a-graph">From a Graph</h3>
+<p>Choose two points on the line and calculate rise over run, including the signs of both changes.</p>
+</section>
+<section id="from-an-equation" class="level3">
+<h3 class="anchored" data-anchor-id="from-an-equation">From an Equation</h3>
+<p>Rearrange <span class="math inline">Ax + By + C = 0</span> into the form <span class="math inline">y = mx + c</span>:</p>
+<p><span class="math display">
+y = -\frac{A}{B}x - \frac{C}{B}.
+</span></p>
+<p>Therefore, the slope is</p>
+<p><span class="math display">
+m = -\frac{A}{B}.
+</span></p>
+</section>
+<section id="from-two-points" class="level3">
+<h3 class="anchored" data-anchor-id="from-two-points">From Two Points</h3>
+<p>For the points <span class="math inline">(x_1, y_1)</span> and <span class="math inline">(x_2, y_2)</span>, the slope is</p>
+<p><span class="math display">
+m = \frac{y_2 - y_1}{x_2 - x_1}, \qquad x_1 \ne x_2.
+</span></p>
+</section>
+</section>
+<section id="finding-the-equation-from-two-points" class="level2">
+<h2 class="anchored" data-anchor-id="finding-the-equation-from-two-points">Finding the Equation from Two Points</h2>
+<p>Given two points:</p>
+<ol type="1">
+<li>Calculate the slope using <span class="math display">
+m = \frac{y_2 - y_1}{x_2 - x_1}.
+</span></li>
+<li>Substitute either point into <span class="math inline">y = mx + c</span> and solve for <span class="math inline">c</span>.</li>
+<li>Write the equation of the line as <span class="math inline">y = mx + c</span>.</li>
+</ol>
+<p>Alternatively, substitute both points into <span class="math inline">y = mx + c</span> to form</p>
+<p><span class="math display">
+y_1 = mx_1 + c, \qquad y_2 = mx_2 + c,
+</span></p>
+<p>and solve the simultaneous equations for <span class="math inline">m</span> and <span class="math inline">c</span>.</p>
+</section>
+<section id="solving-two-simultaneous-linear-equations" class="level2">
+<h2 class="anchored" data-anchor-id="solving-two-simultaneous-linear-equations">Solving Two Simultaneous Linear Equations</h2>
+<p>For equations in the form <span class="math inline">Ax + By + C = 0</span>, use substitution or elimination.</p>
+<p>If one equation is already in the form <span class="math inline">y = mx + c</span>, substitute this expression for <span class="math inline">y</span> into the other equation.</p>
+<p>For two equations in slope-intercept form,</p>
+<p><span class="math display">
+y = m_1x + c_1, \qquad y = m_2x + c_2,
+</span></p>
+<p>the point of intersection satisfies both equations. Therefore,</p>
+<p><span class="math display">
+m_1x + c_1 = m_2x + c_2.
+</span></p>
+<p>If <span class="math inline">m_1 \ne m_2</span>, the <span class="math inline">x</span>-coordinate of the intersection is</p>
+<p><span class="math display">
+x = \frac{c_2 - c_1}{m_1 - m_2}.
+</span></p>
+</section>
+<section id="cases-for-the-number-of-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="cases-for-the-number-of-solutions">Cases for the Number of Solutions</h2>
+<ul>
+<li>If <span class="math inline">m_1 \ne m_2</span>, the lines meet at exactly one point.</li>
+<li>If <span class="math inline">m_1 = m_2</span> and <span class="math inline">c_1 \ne c_2</span>, the lines are parallel and there is no solution.</li>
+<li>If <span class="math inline">m_1 = m_2</span> and <span class="math inline">c_1 = c_2</span>, the lines are identical and there are infinitely many solutions.</li>
+<li>If <span class="math inline">c_1 = c_2</span> and <span class="math inline">m_1 \ne m_2</span>, the intersection is on the <span class="math inline">y</span>-axis at <span class="math inline">(0, c_1)</span>.</li>
+</ul>
+</section>
+</section>
+<section id="quadratic-relationships-and-equations" class="level1">
+<h1>Quadratic Relationships and Equations</h1>
+<section id="general-equation-and-graph-1" class="level2">
+<h2 class="anchored" data-anchor-id="general-equation-and-graph-1">General Equation and Graph</h2>
+<p>The general form of a quadratic relationship is</p>
+<p><span class="math display">
+y = ax^2 + bx + c, \qquad a \ne 0.
+</span></p>
+<p>Its graph is a parabola:</p>
+<ul>
+<li>If <span class="math inline">a &gt; 0</span>, the parabola opens upwards and has a minimum point.</li>
+<li>If <span class="math inline">a &lt; 0</span>, the parabola opens downwards and has a maximum point.</li>
+<li>The parabola is symmetric about a vertical line through its vertex.</li>
+<li>When <span class="math inline">x = 0</span>, <span class="math inline">y = c</span>, so the <span class="math inline">y</span>-intercept is <span class="math inline">(0, c)</span>.</li>
+</ul>
+<div id="cell-fig-quadratic-relationship" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="session14_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-quadratic-relationship" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quadratic-relationship-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="quadratic-equations-flow_files/figure-html/fig-quadratic-relationship-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quadratic-relationship-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The graph of <span class="math inline">y=4x^2+3x-5</span>, showing its y-intercept and vertical axis of symmetry.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Homework for the next session is to generate a program for rock paper scissors.</p>
+<p>To find another point with the same <span class="math inline">y</span>-coordinate as the <span class="math inline">y</span>-intercept, set <span class="math inline">y = c</span>:</p>
+<p><span class="math display">
+ax^2 + bx + c = c
+\quad\Longrightarrow\quad
+x(ax + b) = 0.
+</span></p>
+<p>Thus, <span class="math inline">x = 0</span> or <span class="math inline">x = -\frac{b}{a}</span>. These points are symmetric about the axis of symmetry, so the axis has equation</p>
+<p><span class="math display">
+x = -\frac{b}{2a}.
+</span></p>
+<p>This is also the <span class="math inline">x</span>-coordinate of the vertex. Substituting it into the quadratic gives the vertex</p>
+<p><span class="math display">
+\left(-\frac{b}{2a},\, \frac{4ac - b^2}{4a}\right).
+</span></p>
+<p>The <span class="math inline">x</span>-intercepts are found by setting <span class="math inline">y = 0</span>:</p>
+<p><span class="math display">
+ax^2 + bx + c = 0.
+</span></p>
+<p>The solutions of this quadratic equation are the <span class="math inline">x</span>-coordinates where the parabola crosses the <span class="math inline">x</span>-axis. Once these solutions, the vertex, and the <span class="math inline">y</span>-intercept are known, the graph can be sketched.</p>
+<div id="cell-fig-quadratic-derived-points" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div id="fig-quadratic-derived-points" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quadratic-derived-points-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="quadratic-equations-flow_files/figure-html/fig-quadratic-derived-points-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quadratic-derived-points-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The quadratic graph with all the points and the axis of symmetry identified.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="solving-a-quadratic-equation-by-completing-the-square" class="level2">
+<h2 class="anchored" data-anchor-id="solving-a-quadratic-equation-by-completing-the-square">Solving a Quadratic Equation by Completing the Square</h2>
+<p>Start with</p>
+<p><span class="math display">
+ax^2 + bx + c = 0, \qquad a \ne 0.
+</span></p>
+<ol type="1">
+<li>Divide by <span class="math inline">a</span>: <span class="math display">
+x^2 + \frac{b}{a}x + \frac{c}{a} = 0.
+</span></li>
+<li>Rearrange the constant term: <span class="math display">
+x^2 + \frac{b}{a}x = -\frac{c}{a}.
+</span></li>
+<li>Add <span class="math inline">\left(\frac{b}{2a}\right)^2</span> to both sides: <span class="math display">
+x^2 + \frac{b}{a}x + \left(\frac{b}{2a}\right)^2
+= \left(\frac{b}{2a}\right)^2 - \frac{c}{a}.
+</span></li>
+<li>Write the left-hand side as a square and simplify the right-hand side: <span class="math display">
+\left(x + \frac{b}{2a}\right)^2
+= \frac{b^2 - 4ac}{4a^2}.
+</span></li>
+<li>Take the square root of both sides: <span class="math display">
+x + \frac{b}{2a} = \pm\frac{\sqrt{b^2 - 4ac}}{2a}.
+</span></li>
+<li>Solve for <span class="math inline">x</span>: <span class="math display">
+\boxed{x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}}.
+</span></li>
+</ol>
+</section>
+<section id="nature-of-the-solutions-to-the-quadratic-equation" class="level2">
+<h2 class="anchored" data-anchor-id="nature-of-the-solutions-to-the-quadratic-equation">Nature of the solutions to the quadratic equation</h2>
+<p>The above value of x is the x-coordinate of the points where the graph crosses the x-axis. What are the possible values this can take and what does it mean for the graph or the equation?</p>
+</section>
+</section>
+<section id="solving-a-quadratic-curve-and-a-line" class="level1">
+<h1>Solving a Quadratic Curve and a Line</h1>
+<p>Consider the quadratic curve</p>
+<p><span class="math display">
+y = ax^2 + bx + c_1
+</span></p>
+<p>and the line</p>
+<p><span class="math display">
+y = mx + c_2.
+</span></p>
+<p>At a point of intersection, both equations have the same <span class="math inline">y</span>-value. Equating them gives</p>
+<p><span class="math display">
+ax^2 + bx + c_1 = mx + c_2.
+</span></p>
+<p>Rearranging gives the quadratic equation</p>
+<p><span class="math display">
+ax^2 + (b - m)x + (c_1 - c_2) = 0.
+</span></p>
+<p>The solutions of this equation are the <span class="math inline">x</span>-coordinates of the intersection points. The corresponding <span class="math inline">y</span>-coordinates can then be found by substituting each <span class="math inline">x</span>-value into either original equation.</p>
+<section id="nature-of-solutions-to-quadratic-curve-and-line-together" class="level2">
+<h2 class="anchored" data-anchor-id="nature-of-solutions-to-quadratic-curve-and-line-together">Nature of solutions to quadratic curve and line together</h2>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
