@@ -1,0 +1,26 @@
+---
+title: Session 3 - Understanding the quadratic relationship
+date: 2026-09-08
+page-layout: article
+publish: false
+format:
+  html:
+    toc: true
+    code-fold: true
+    html-math-method: katex
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+jupyter: python3
+execute:
+  warning: false
+---
+
+Understanding $ax^2+bx+c$
+
+Sketching the graph
+
+Finding the points where the graph crosses the x-axis 
+
+
+
