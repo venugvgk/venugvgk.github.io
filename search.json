@@ -326,14 +326,14 @@
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Python: casino die game",
-    "text": "Python: casino die game\nThis version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.\n\nfrom secrets import randbelow\n\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{net_win:.2f}\")\nelse:\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{STAKE:.2f}\")\n\nRolled: 3\nYou lost ₹100.00\n\n\nThe die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result."
+    "text": "Python: casino die game\nThis version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.\n\nfrom secrets import randbelow\n\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{net_win:.2f}\")\nelse:\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{STAKE:.2f}\")\n\nRolled: 1\nYou lost ₹100.00\n\n\nThe die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Simulating 10,000 rolls",
-    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,646\nObserved win rate:          16.46%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-61,780.00\nCasino profit:              ₹61,780.00\nObserved house edge:        6.18%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
+    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,635\nObserved win rate:          16.35%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-68,050.00\nCasino profit:              ₹68,050.00\nObserved house edge:        6.80%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#conclusion",
@@ -2037,18 +2037,109 @@
     "text": "When we consider a quadratic function and a linear function together, we can have 0, 1, or 2 points of intersection. each point of intersection satisfies both the quadratic function and the linear function.\nTherefore, each point of intersection corresponds to a solution of the quadratic equation formed by equating the quadratic function in the y=f(x) form to the linear function in the y=mx+c form. This corresponds to how two linear equations of the form y = m_1x + c_1 and y = m_2x + c_2 can have 0, 1, or infinitely many points of intersection and can be solved by equating the two linear functions to form a linear equation.\nThe number of points of intersection between a quadratic curve and a line can be determined by the discriminant of the corresponding quadratic equation."
   },
   {
-    "objectID": "a_math_2028/session3-curves-equations.html",
-    "href": "a_math_2028/session3-curves-equations.html",
-    "title": "Session 3 - Curves, Equations and solutions",
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
     "section": "",
-    "text": "The difference between a linear/quadratic curve y = f(x) and a linear/quadratic equation f(x) = 0 is that the curve is a set of points (x, y) in the coordinate plane, while the equation is a statement that equates the given function to zero.\nThe solution to an equation is the set of x-values for which the function evaluates to zero. Graphically, these solutions correspond to the x-coordinates of the points where the curve intersects the x-axis.\nSolving a linear equation and solving a quadratic equation"
+    "text": "These are worked responses to the questions in the exploration task. The aim is to help you see how the coefficients in a quadratic expression affect the graph."
   },
   {
-    "objectID": "a_math_2028/session4-quadratic-equations.html",
-    "href": "a_math_2028/session4-quadratic-equations.html",
-    "title": "Session 4 - Solving Quadratic Equations",
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#introduction",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#introduction",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
     "section": "",
-    "text": "Factorization, completing the square, and the quadratic formula are three methods for solving quadratic equations. Quadratic formula can be derived from the method of completing the square.\nThe solutions to a quadratic equation correspond to the x-coordinates of the points where the graph of the corresponding quadratic function intersects the x-axis.\nConsidering that a quadratic function may or may not intersect the x-axis, we can have 0, 1, or 2 solutions to a quadratic equation. The discriminant of a quadratic equation helps us determine the number of solutions without actually solving the equation."
+    "text": "These are worked responses to the questions in the exploration task. The aim is to help you see how the coefficients in a quadratic expression affect the graph."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "1. Exploring y=ax^2",
+    "text": "1. Exploring y=ax^2\nTake values such as x=-3,-2,-1,0,1,2,3.\nFor y=x^2:\n\n\n\nx\ny=x^2\n\n\n\n\n-3\n9\n\n\n-2\n4\n\n\n-1\n1\n\n\n0\n0\n\n\n1\n1\n\n\n2\n4\n\n\n3\n9\n\n\n\nThe graph is symmetric about the y-axis, because (-x)^2=x^2. It is a U-shaped curve called a parabola. The lowest point is the vertex at (0,0)."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#comparing-y2x2-and-y0.5x2",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#comparing-y2x2-and-y0.5x2",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "2. Comparing y=2x^2 and y=0.5x^2",
+    "text": "2. Comparing y=2x^2 and y=0.5x^2\nBoth graphs are parabolas with vertex at (0,0), and both are symmetric about the y-axis.\n\ny=2x^2 rises more quickly as |x| increases, so it is narrower.\ny=0.5x^2 rises more slowly, so it is wider.\nThe lowest point of each graph is still (0,0)."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#comparing-y-x2-and-y-2x2",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#comparing-y-x2-and-y-2x2",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "3. Comparing y=-x^2 and y=-2x^2",
+    "text": "3. Comparing y=-x^2 and y=-2x^2\nThese curves open downward because the coefficient of x^2 is negative.\n\ny=-x^2 is a downward parabola with highest point (0,0).\ny=-2x^2 is also downward, but it falls more steeply, so it is narrower.\nThe highest point of each graph is the vertex at (0,0)."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x2",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x2",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "4. Effect of the coefficient of x^2",
+    "text": "4. Effect of the coefficient of x^2\nFrom the graphs we see:\n\nIf a&gt;0, the graph opens upward and has a minimum point.\nIf a&lt;0, the graph opens downward and has a maximum point.\nThe larger |a| is, the narrower the parabola.\nThe smaller |a| is, the wider the parabola.\n\nSo the coefficient of x^2 controls both the direction and the width of the parabola."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2c",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2c",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "5. Exploring y=ax^2+c",
+    "text": "5. Exploring y=ax^2+c\nConsider y=x^2+2 and y=x^2-3.\nThe shape remains the same as y=x^2, because the coefficient of x^2 is still 1. But the whole graph shifts upward or downward:\n\ny=x^2+2 is shifted upward by 2 units.\ny=x^2-3 is shifted downward by 3 units.\n\nThe vertex moves from (0,0) to (0,2) and (0,-3) respectively.\n\n\n\n\n\n\n\n\n\nThe graphs intersect the y-axis at the points (0,2) and (0,-3) respectively. In general, adding a positive constant shifts the graph upward; subtracting a constant shifts it downward."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-y2x2-y2x24-y2x2-4-y-2x24-and-y-2x2-4",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-y2x2-y2x24-y2x2-4-y-2x24-and-y-2x2-4",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "6. Exploring y=2x^2, y=2x^2+4, y=2x^2-4, y=-2x^2+4, and y=-2x^2-4",
+    "text": "6. Exploring y=2x^2, y=2x^2+4, y=2x^2-4, y=-2x^2+4, and y=-2x^2-4\nThese graphs all have the same general shape as a parabola, but different vertical positions and openings.\n\ny=2x^2 has vertex at (0,0) and opens upward.\ny=2x^2+4 has vertex at (0,4) and opens upward.\ny=2x^2-4 has vertex at (0,-4) and opens upward.\ny=-2x^2+4 has vertex at (0,4) and opens downward.\ny=-2x^2-4 has vertex at (0,-4) and opens downward.\n\n\n\n\n\n\n\n\n\n\nThe x-intercepts depend on the equation. For example, y=2x^2-4=0 gives x^2=2, so the graph cuts the x-axis at approximately x=\\pm 1.41. The y-intercept is the value of c when x=0."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-a-and-c",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-a-and-c",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "7. Effect of a and c",
+    "text": "7. Effect of a and c\nFrom the observations:\n\nThe coefficient a controls the width and direction of the parabola.\nIf a&gt;0, the parabola opens upward.\nIf a&lt;0, the parabola opens downward.\nThe constant term c shifts the graph vertically upward or downward without changing its shape.\n\nSo the graph of y=ax^2+c is a parabola whose vertex is at (0,c)."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2bx",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2bx",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "8. Exploring y=ax^2+bx",
+    "text": "8. Exploring y=ax^2+bx\nConsider:\n\ny=x^2+2x\ny=x^2-2x\n\nThese curves are still parabolas, but the linear term changes the position of the vertex. The graph is not centered on the y-axis anymore.\nFor y=x^2+2x, the vertex is at x=-1. For y=x^2-2x, the vertex is at x=1.\n\n\n\n\n\n\n\n\n\nThe shape is still the same as a parabola, but the vertex shifts left or right as well as down or up. The x-term changes the horizontal position of the graph and moves the vertex, while the coefficient of x^2 still controls whether it opens upward or downward."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "9. Effect of the coefficient of x",
+    "text": "9. Effect of the coefficient of x\nThe coefficient of x moves the vertex horizontally as well as vertically. The vertex of a parabola given by y=ax^2+bx is at x=-\\frac{b}{2a}.\n\nIn y=x^2+2x, the vertex is shifted to the left and down.\nIn y=x^2-2x, the vertex is shifted to the right and down.\nin y=-x^2+2x, the vertex is shifted to the left and up.\nin y=-x^2-2x, the vertex is shifted to the right and up.\n\nThe sign of the coefficient tells us the direction of the shift:\n\na positive coefficient moves the vertex left,\na negative coefficient moves the vertex right.\nThe up and down movement is dependent on the sign of the coefficient of x^2.\n\nThe overall shape remains a parabola, and the coefficient of x^2 still determines whether it opens upward or downward."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2bxc",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2bxc",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "10. Exploring y=ax^2+bx+c",
+    "text": "10. Exploring y=ax^2+bx+c\nNow consider:\n\ny=x^2+2x+2\ny=x^2+2x-2\n\nThese are the same parabola as y=x^2+2x, but shifted vertically upward or downward by 2 units.\n\ny=x^2+2x+2 has vertex at (-1,1).\ny=x^2+2x-2 has vertex at (-1,-3).\n\n\n\n\n\n\n\n\n\n\nThe shape does not change; only the vertical position changes. The constant term c moves the whole graph up or down."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#summarising-the-observations",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#summarising-the-observations",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "11. Summarising the observations",
+    "text": "11. Summarising the observations\nFrom all the examples, we can conclude:\n\nThe coefficient of x^2 controls the shape of the parabola.\n\nIf a&gt;0, it opens upward.\nIf a&lt;0, it opens downward.\nA larger value of |a| makes it narrower; a smaller value makes it wider.\n\nThe coefficient of x shifts the graph horizontally and vertically by changing the position of the vertex.\n\nA positive coefficient of x moves the vertex to the left.\nA negative coefficient of x moves the vertex to the right.\n\nThe constant term c shifts the graph vertically upward or downward without changing its basic shape.\n\nSo the general quadratic function\n\ny=ax^2+bx+c\n\nhas a parabolic graph whose direction, width, position, and vertical shift are all determined by the values of a, b, and c."
+  },
+  {
+    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#final-note",
+    "href": "a_math_2028/session2-quadratic-explorations-answers.html#final-note",
+    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "section": "Final note",
+    "text": "Final note\nThe key idea is that changing the coefficients changes the graph in a predictable way:\n\na changes the opening and width,\nb changes the position of the vertex,\nc changes the vertical position. This is why a quadratic equation can be understood both algebraically and geometrically as a curve with a particular shape and location."
+  },
+  {
+    "objectID": "a_math_2028/session3-understanding-quadratic-relationship.html",
+    "href": "a_math_2028/session3-understanding-quadratic-relationship.html",
+    "title": "Session 3 - Understanding the quadratic relationship",
+    "section": "",
+    "text": "Understanding ax^2+bx+c\nSketching the graph\nFinding the points where the graph crosses the x-axis"
   },
   {
     "objectID": "a_math_2028/index.html",
@@ -2793,102 +2884,11 @@
     "text": "Other resources\nGeoGebra Calculator - Use the graphing suite to plot various linear and quardratic relationships.\nGraph of Quadratic Equations - A GeoGebra activity to explore the effect of changing a, b, and c on the graph of a quadratic equation.\nparabolic patterns - Identify the graphs corresponding to different quadratic equations."
   },
   {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "objectID": "a_math_2028/session4-solving-quadratic-equations.html",
+    "href": "a_math_2028/session4-solving-quadratic-equations.html",
+    "title": "Session 4 - Solving Quadratic Equations",
     "section": "",
-    "text": "These are worked responses to the questions in the exploration task. The aim is to help you see how the coefficients in a quadratic expression affect the graph."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#introduction",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#introduction",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "",
-    "text": "These are worked responses to the questions in the exploration task. The aim is to help you see how the coefficients in a quadratic expression affect the graph."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "1. Exploring y=ax^2",
-    "text": "1. Exploring y=ax^2\nTake values such as x=-3,-2,-1,0,1,2,3.\nFor y=x^2:\n\n\n\nx\ny=x^2\n\n\n\n\n-3\n9\n\n\n-2\n4\n\n\n-1\n1\n\n\n0\n0\n\n\n1\n1\n\n\n2\n4\n\n\n3\n9\n\n\n\nThe graph is symmetric about the y-axis, because (-x)^2=x^2. It is a U-shaped curve called a parabola. The lowest point is the vertex at (0,0)."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#comparing-y2x2-and-y0.5x2",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#comparing-y2x2-and-y0.5x2",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "2. Comparing y=2x^2 and y=0.5x^2",
-    "text": "2. Comparing y=2x^2 and y=0.5x^2\nBoth graphs are parabolas with vertex at (0,0), and both are symmetric about the y-axis.\n\ny=2x^2 rises more quickly as |x| increases, so it is narrower.\ny=0.5x^2 rises more slowly, so it is wider.\nThe lowest point of each graph is still (0,0)."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#comparing-y-x2-and-y-2x2",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#comparing-y-x2-and-y-2x2",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "3. Comparing y=-x^2 and y=-2x^2",
-    "text": "3. Comparing y=-x^2 and y=-2x^2\nThese curves open downward because the coefficient of x^2 is negative.\n\ny=-x^2 is a downward parabola with highest point (0,0).\ny=-2x^2 is also downward, but it falls more steeply, so it is narrower.\nThe highest point of each graph is the vertex at (0,0)."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x2",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x2",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "4. Effect of the coefficient of x^2",
-    "text": "4. Effect of the coefficient of x^2\nFrom the graphs we see:\n\nIf a&gt;0, the graph opens upward and has a minimum point.\nIf a&lt;0, the graph opens downward and has a maximum point.\nThe larger |a| is, the narrower the parabola.\nThe smaller |a| is, the wider the parabola.\n\nSo the coefficient of x^2 controls both the direction and the width of the parabola."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2c",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2c",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "5. Exploring y=ax^2+c",
-    "text": "5. Exploring y=ax^2+c\nConsider y=x^2+2 and y=x^2-3.\nThe shape remains the same as y=x^2, because the coefficient of x^2 is still 1. But the whole graph shifts upward or downward:\n\ny=x^2+2 is shifted upward by 2 units.\ny=x^2-3 is shifted downward by 3 units.\n\nThe vertex moves from (0,0) to (0,2) and (0,-3) respectively.\n\n\n\n\n\n\n\n\n\nThe graphs intersect the y-axis at the points (0,2) and (0,-3) respectively. In general, adding a positive constant shifts the graph upward; subtracting a constant shifts it downward."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-y2x2-y2x24-y2x2-4-y-2x24-and-y-2x2-4",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-y2x2-y2x24-y2x2-4-y-2x24-and-y-2x2-4",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "6. Exploring y=2x^2, y=2x^2+4, y=2x^2-4, y=-2x^2+4, and y=-2x^2-4",
-    "text": "6. Exploring y=2x^2, y=2x^2+4, y=2x^2-4, y=-2x^2+4, and y=-2x^2-4\nThese graphs all have the same general shape as a parabola, but different vertical positions and openings.\n\ny=2x^2 has vertex at (0,0) and opens upward.\ny=2x^2+4 has vertex at (0,4) and opens upward.\ny=2x^2-4 has vertex at (0,-4) and opens upward.\ny=-2x^2+4 has vertex at (0,4) and opens downward.\ny=-2x^2-4 has vertex at (0,-4) and opens downward.\n\n\n\n\n\n\n\n\n\n\nThe x-intercepts depend on the equation. For example, y=2x^2-4=0 gives x^2=2, so the graph cuts the x-axis at approximately x=\\pm 1.41. The y-intercept is the value of c when x=0."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-a-and-c",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-a-and-c",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "7. Effect of a and c",
-    "text": "7. Effect of a and c\nFrom the observations:\n\nThe coefficient a controls the width and direction of the parabola.\nIf a&gt;0, the parabola opens upward.\nIf a&lt;0, the parabola opens downward.\nThe constant term c shifts the graph vertically upward or downward without changing its shape.\n\nSo the graph of y=ax^2+c is a parabola whose vertex is at (0,c)."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2bx",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2bx",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "8. Exploring y=ax^2+bx",
-    "text": "8. Exploring y=ax^2+bx\nConsider:\n\ny=x^2+2x\ny=x^2-2x\n\nThese curves are still parabolas, but the linear term changes the position of the vertex. The graph is not centered on the y-axis anymore.\nFor y=x^2+2x, the vertex is at x=-1. For y=x^2-2x, the vertex is at x=1.\n\n\n\n\n\n\n\n\n\nThe shape is still the same as a parabola, but the vertex shifts left or right as well as down or up. The x-term changes the horizontal position of the graph and moves the vertex, while the coefficient of x^2 still controls whether it opens upward or downward."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "9. Effect of the coefficient of x",
-    "text": "9. Effect of the coefficient of x\nThe coefficient of x moves the vertex horizontally as well as vertically. The vertex of a parabola given by y=ax^2+bx is at x=-\\frac{b}{2a}.\n\nIn y=x^2+2x, the vertex is shifted to the left and down.\nIn y=x^2-2x, the vertex is shifted to the right and down.\nin y=-x^2+2x, the vertex is shifted to the left and up.\nin y=-x^2-2x, the vertex is shifted to the right and up.\n\nThe sign of the coefficient tells us the direction of the shift:\n\na positive coefficient moves the vertex left,\na negative coefficient moves the vertex right.\nThe up and down movement is dependent on the sign of the coefficient of x^2.\n\nThe overall shape remains a parabola, and the coefficient of x^2 still determines whether it opens upward or downward."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2bxc",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#exploring-yax2bxc",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "10. Exploring y=ax^2+bx+c",
-    "text": "10. Exploring y=ax^2+bx+c\nNow consider:\n\ny=x^2+2x+2\ny=x^2+2x-2\n\nThese are the same parabola as y=x^2+2x, but shifted vertically upward or downward by 2 units.\n\ny=x^2+2x+2 has vertex at (-1,1).\ny=x^2+2x-2 has vertex at (-1,-3).\n\n\n\n\n\n\n\n\n\n\nThe shape does not change; only the vertical position changes. The constant term c moves the whole graph up or down."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#summarising-the-observations",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#summarising-the-observations",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "11. Summarising the observations",
-    "text": "11. Summarising the observations\nFrom all the examples, we can conclude:\n\nThe coefficient of x^2 controls the shape of the parabola.\n\nIf a&gt;0, it opens upward.\nIf a&lt;0, it opens downward.\nA larger value of |a| makes it narrower; a smaller value makes it wider.\n\nThe coefficient of x shifts the graph horizontally and vertically by changing the position of the vertex.\n\nA positive coefficient of x moves the vertex to the left.\nA negative coefficient of x moves the vertex to the right.\n\nThe constant term c shifts the graph vertically upward or downward without changing its basic shape.\n\nSo the general quadratic function\n\ny=ax^2+bx+c\n\nhas a parabolic graph whose direction, width, position, and vertical shift are all determined by the values of a, b, and c."
-  },
-  {
-    "objectID": "a_math_2028/session2-quadratic-explorations-answers.html#final-note",
-    "href": "a_math_2028/session2-quadratic-explorations-answers.html#final-note",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
-    "section": "Final note",
-    "text": "Final note\nThe key idea is that changing the coefficients changes the graph in a predictable way:\n\na changes the opening and width,\nb changes the position of the vertex,\nc changes the vertical position. This is why a quadratic equation can be understood both algebraically and geometrically as a curve with a particular shape and location."
+    "text": "Factorization, completing the square, and the quadratic formula are three methods for solving quadratic equations. Quadratic formula can be derived from the method of completing the square.\nThe solutions to a quadratic equation correspond to the x-coordinates of the points where the graph of the corresponding quadratic function intersects the x-axis.\nConsidering that a quadratic function may or may not intersect the x-axis, we can have 0, 1, or 2 solutions to a quadratic equation. The discriminant of a quadratic equation helps us determine the number of solutions without actually solving the equation."
   },
   {
     "objectID": "a_math_2028/0_intro/session2-quadratic-explorations.html",
