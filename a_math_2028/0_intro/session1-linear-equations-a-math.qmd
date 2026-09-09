@@ -1,5 +1,5 @@
 ---
-title: Session 1:Revision of Linear Equations
+title: Session 1 - Revision of Linear Equations
 Subtitle: Algebraic and Geometric Interpretations  
 date: 2026-09-08
 page-layout: article
