@@ -1,0 +1,55 @@
+/* css styles */
+.exp-section { 
+    padding-bottom: 20px;
+    }
+
+.exp-header {
+    padding-bottom: 10px;
+    }
+
+.exp-org { 
+    text-align: left;
+}
+
+.exp-period {
+    text-align:center;
+}
+
+.exp-title {
+    text-align:right;
+}
+
+@media (max-width: 768px) {
+    .exp-org, .exp-period, .exp-title {
+        text-align: left;
+    }
+
+    .exp-header {
+        gap: 0;
+    }
+
+    .books-page .quarto-post {
+        flex-direction: column-reverse !important;
+    }
+}
+
+/* Responsive embed for iframes (flipbooks) */
+.embed-responsive {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+}
+.fp-iframe {
+    border: 1px solid lightgray;
+}

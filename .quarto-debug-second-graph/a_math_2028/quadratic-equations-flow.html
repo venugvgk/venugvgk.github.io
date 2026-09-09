@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+
+<title>Linear to quadratic and back - the entire flow – Venu GVGK Raju</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../venu-flute-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-72a316c6c29cce4b1bb1294f4903c99f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Linear to quadratic and back - the entire flow – Venu GVGK Raju">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://gvgk.in/a_math_2028/quadratic-equations-flow_files/figure-html/fig-quadratic-relationship-output-1.png">
+<meta property="og:site_name" content="Venu GVGK Raju">
+<meta property="og:image:height" content="479">
+<meta property="og:image:width" content="597">
+<meta name="twitter:title" content="Linear to quadratic and back - the entire flow – Venu GVGK Raju">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://gvgk.in/a_math_2028/quadratic-equations-flow_files/figure-html/fig-quadratic-relationship-output-1.png">
+<meta name="twitter:image-height" content="479">
+<meta name="twitter:image-width" content="597">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Venu GVGK Raju</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">Curriculum Vitae</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../books/index.html"> 
+<span class="menu-text">Books</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../education/index.html"> 
+<span class="menu-text">On Education</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cs_2026/index.html"> 
+<span class="menu-text">CS 2026</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../a_math_2028/index.html"> 
+<span class="menu-text">A Level Math</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#linear-relationships-and-equations" id="toc-linear-relationships-and-equations" class="nav-link active" data-scroll-target="#linear-relationships-and-equations">Linear relationships and equations</a>
+  <ul class="collapse">
+  <li><a href="#general-equation-and-graph" id="toc-general-equation-and-graph" class="nav-link" data-scroll-target="#general-equation-and-graph">General Equation and Graph</a></li>
+  <li><a href="#plotting-a-linear-graph" id="toc-plotting-a-linear-graph" class="nav-link" data-scroll-target="#plotting-a-linear-graph">Plotting a Linear Graph</a></li>
+  <li><a href="#finding-the-slope" id="toc-finding-the-slope" class="nav-link" data-scroll-target="#finding-the-slope">Finding the Slope</a>
+  <ul class="collapse">
+  <li><a href="#from-a-graph" id="toc-from-a-graph" class="nav-link" data-scroll-target="#from-a-graph">From a Graph</a></li>
+  <li><a href="#from-an-equation" id="toc-from-an-equation" class="nav-link" data-scroll-target="#from-an-equation">From an Equation</a></li>
+  <li><a href="#from-two-points" id="toc-from-two-points" class="nav-link" data-scroll-target="#from-two-points">From Two Points</a></li>
+  </ul></li>
+  <li><a href="#finding-the-equation-from-two-points" id="toc-finding-the-equation-from-two-points" class="nav-link" data-scroll-target="#finding-the-equation-from-two-points">Finding the Equation from Two Points</a></li>
+  <li><a href="#solving-two-simultaneous-linear-equations" id="toc-solving-two-simultaneous-linear-equations" class="nav-link" data-scroll-target="#solving-two-simultaneous-linear-equations">Solving Two Simultaneous Linear Equations</a></li>
+  <li><a href="#cases-for-the-number-of-solutions" id="toc-cases-for-the-number-of-solutions" class="nav-link" data-scroll-target="#cases-for-the-number-of-solutions">Cases for the Number of Solutions</a></li>
+  </ul></li>
+  <li><a href="#quadratic-relationships-and-equations" id="toc-quadratic-relationships-and-equations" class="nav-link" data-scroll-target="#quadratic-relationships-and-equations">Quadratic Relationships and Equations</a>
+  <ul class="collapse">
+  <li><a href="#general-equation-and-graph-1" id="toc-general-equation-and-graph-1" class="nav-link" data-scroll-target="#general-equation-and-graph-1">General Equation and Graph</a></li>
+  <li><a href="#solving-a-quadratic-equation-by-completing-the-square" id="toc-solving-a-quadratic-equation-by-completing-the-square" class="nav-link" data-scroll-target="#solving-a-quadratic-equation-by-completing-the-square">Solving a Quadratic Equation by Completing the Square</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
+  <li><a href="#solving-a-quadratic-curve-and-a-line" id="toc-solving-a-quadratic-curve-and-a-line" class="nav-link" data-scroll-target="#solving-a-quadratic-curve-and-a-line">Solving a Quadratic Curve and a Line</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Linear to quadratic and back - the entire flow</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="linear-relationships-and-equations" class="level1">
+<h1>Linear relationships and equations</h1>
+<p>General equation and the shape of the graph</p>
+<p>A linear relationship between two quantities can be expressed in the form y = mx + b, where m is the slope and b is the y-intercept; or in the form Ax + By + C = 0, where A, B, and C are constants.</p>
+<p>The graph of a linear relationship is a straight line</p>
+<section id="general-equation-and-graph" class="level2">
+<h2 class="anchored" data-anchor-id="general-equation-and-graph">General Equation and Graph</h2>
+<p>A linear relationship between two quantities can be written as</p>
+<p><span class="math display">
+y = mx + c,
+</span></p>
+<p>where <span class="math inline">m</span> is the slope and <span class="math inline">c</span> is the <span class="math inline">y</span>-intercept. It can also be written in standard form as</p>
+<p><span class="math display">
+Ax + By + C = 0,
+</span></p>
+<p>where <span class="math inline">A</span>, <span class="math inline">B</span>, and <span class="math inline">C</span> are constants. The graph of a linear relationship is a straight line.</p>
+</section>
+<section id="plotting-a-linear-graph" class="level2">
+<h2 class="anchored" data-anchor-id="plotting-a-linear-graph">Plotting a Linear Graph</h2>
+<p>To plot the graph of a linear relationship:</p>
+<ol type="1">
+<li>Substitute several values of <span class="math inline">x</span> into the equation to calculate the corresponding values of <span class="math inline">y</span>.</li>
+<li>Plot the resulting points <span class="math inline">(x, y)</span> on a coordinate plane.</li>
+<li>Join the points with a straight line.</li>
+</ol>
+<p>The intercepts are also useful:</p>
+<ul>
+<li>The <span class="math inline">x</span>-intercept occurs when <span class="math inline">y = 0</span>. For <span class="math inline">y = mx + c</span>, solve <span class="math display">
+mx + c = 0.
+</span></li>
+<li>The <span class="math inline">y</span>-intercept occurs when <span class="math inline">x = 0</span>. Substituting <span class="math inline">x = 0</span> into <span class="math inline">y = mx + c</span> gives <span class="math inline">y = c</span>, so the point is <span class="math inline">(0, c)</span>.</li>
+</ul>
+<p>Thus, the graph of the relationship <span class="math inline">y = mx + c</span> crosses the <span class="math inline">x</span>-axis at the solution of the equation <span class="math inline">mx + c = 0</span> and crosses the <span class="math inline">y</span>-axis at <span class="math inline">(0, c)</span>.</p>
+</section>
+<section id="finding-the-slope" class="level2">
+<h2 class="anchored" data-anchor-id="finding-the-slope">Finding the Slope</h2>
+<p>The slope indicates the steepness and direction of a line:</p>
+<ul>
+<li><span class="math inline">m &gt; 0</span>: the line rises from left to right.</li>
+<li><span class="math inline">m &lt; 0</span>: the line falls from left to right.</li>
+<li><span class="math inline">m = 0</span>: the line is horizontal.</li>
+<li>A vertical line has an undefined slope.</li>
+</ul>
+<section id="from-a-graph" class="level3">
+<h3 class="anchored" data-anchor-id="from-a-graph">From a Graph</h3>
+<p>Choose two points on the line and calculate rise over run, including the signs of both changes.</p>
+</section>
+<section id="from-an-equation" class="level3">
+<h3 class="anchored" data-anchor-id="from-an-equation">From an Equation</h3>
+<p>Rearrange <span class="math inline">Ax + By + C = 0</span> into the form <span class="math inline">y = mx + c</span>:</p>
+<p><span class="math display">
+y = -\frac{A}{B}x - \frac{C}{B}.
+</span></p>
+<p>Therefore, the slope is</p>
+<p><span class="math display">
+m = -\frac{A}{B}.
+</span></p>
+</section>
+<section id="from-two-points" class="level3">
+<h3 class="anchored" data-anchor-id="from-two-points">From Two Points</h3>
+<p>For the points <span class="math inline">(x_1, y_1)</span> and <span class="math inline">(x_2, y_2)</span>, the slope is</p>
+<p><span class="math display">
+m = \frac{y_2 - y_1}{x_2 - x_1}, \qquad x_1 \ne x_2.
+</span></p>
+</section>
+</section>
+<section id="finding-the-equation-from-two-points" class="level2">
+<h2 class="anchored" data-anchor-id="finding-the-equation-from-two-points">Finding the Equation from Two Points</h2>
+<p>Given two points:</p>
+<ol type="1">
+<li>Calculate the slope using <span class="math display">
+m = \frac{y_2 - y_1}{x_2 - x_1}.
+</span></li>
+<li>Substitute either point into <span class="math inline">y = mx + c</span> and solve for <span class="math inline">c</span>.</li>
+<li>Write the equation of the line as <span class="math inline">y = mx + c</span>.</li>
+</ol>
+<p>Alternatively, substitute both points into <span class="math inline">y = mx + c</span> to form</p>
+<p><span class="math display">
+y_1 = mx_1 + c, \qquad y_2 = mx_2 + c,
+</span></p>
+<p>and solve the simultaneous equations for <span class="math inline">m</span> and <span class="math inline">c</span>.</p>
+</section>
+<section id="solving-two-simultaneous-linear-equations" class="level2">
+<h2 class="anchored" data-anchor-id="solving-two-simultaneous-linear-equations">Solving Two Simultaneous Linear Equations</h2>
+<p>For equations in the form <span class="math inline">Ax + By + C = 0</span>, use substitution or elimination.</p>
+<p>If one equation is already in the form <span class="math inline">y = mx + c</span>, substitute this expression for <span class="math inline">y</span> into the other equation.</p>
+<p>For two equations in slope-intercept form,</p>
+<p><span class="math display">
+y = m_1x + c_1, \qquad y = m_2x + c_2,
+</span></p>
+<p>the point of intersection satisfies both equations. Therefore,</p>
+<p><span class="math display">
+m_1x + c_1 = m_2x + c_2.
+</span></p>
+<p>If <span class="math inline">m_1 \ne m_2</span>, the <span class="math inline">x</span>-coordinate of the intersection is</p>
+<p><span class="math display">
+x = \frac{c_2 - c_1}{m_1 - m_2}.
+</span></p>
+</section>
+<section id="cases-for-the-number-of-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="cases-for-the-number-of-solutions">Cases for the Number of Solutions</h2>
+<ul>
+<li>If <span class="math inline">m_1 \ne m_2</span>, the lines meet at exactly one point.</li>
+<li>If <span class="math inline">m_1 = m_2</span> and <span class="math inline">c_1 \ne c_2</span>, the lines are parallel and there is no solution.</li>
+<li>If <span class="math inline">m_1 = m_2</span> and <span class="math inline">c_1 = c_2</span>, the lines are identical and there are infinitely many solutions.</li>
+<li>If <span class="math inline">c_1 = c_2</span> and <span class="math inline">m_1 \ne m_2</span>, the intersection is on the <span class="math inline">y</span>-axis at <span class="math inline">(0, c_1)</span>.</li>
+</ul>
+</section>
+</section>
+<section id="quadratic-relationships-and-equations" class="level1">
+<h1>Quadratic Relationships and Equations</h1>
+<section id="general-equation-and-graph-1" class="level2">
+<h2 class="anchored" data-anchor-id="general-equation-and-graph-1">General Equation and Graph</h2>
+<p>The general form of a quadratic relationship is</p>
+<p><span class="math display">
+y = ax^2 + bx + c, \qquad a \ne 0.
+</span></p>
+<p>Its graph is a parabola:</p>
+<ul>
+<li>If <span class="math inline">a &gt; 0</span>, the parabola opens upwards and has a minimum point.</li>
+<li>If <span class="math inline">a &lt; 0</span>, the parabola opens downwards and has a maximum point.</li>
+<li>The parabola is symmetric about a vertical line through its vertex.</li>
+<li>When <span class="math inline">x = 0</span>, <span class="math inline">y = c</span>, so the <span class="math inline">y</span>-intercept is <span class="math inline">(0, c)</span>.</li>
+</ul>
+<div id="cell-fig-quadratic-relationship" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div id="fig-quadratic-relationship" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quadratic-relationship-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="quadratic-equations-flow_files/figure-html/fig-quadratic-relationship-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quadratic-relationship-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The graph of <span class="math inline">y=4x^2+3x-5</span>, showing its y-intercept and vertical axis of symmetry.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>To find another point with the same <span class="math inline">y</span>-coordinate as the <span class="math inline">y</span>-intercept, set <span class="math inline">y = c</span>:</p>
+<p><span class="math display">
+ax^2 + bx + c = c
+\quad\Longrightarrow\quad
+x(ax + b) = 0.
+</span></p>
+<p>Thus, <span class="math inline">x = 0</span> or <span class="math inline">x = -\frac{b}{a}</span>. These points are symmetric about the axis of symmetry, so the axis has equation</p>
+<p><span class="math display">
+x = -\frac{b}{2a}.
+</span></p>
+<p>This is also the <span class="math inline">x</span>-coordinate of the vertex. Substituting it into the quadratic gives the vertex</p>
+<p><span class="math display">
+\left(-\frac{b}{2a},\, \frac{4ac - b^2}{4a}\right).
+</span></p>
+<p>The <span class="math inline">x</span>-intercepts are found by setting <span class="math inline">y = 0</span>:</p>
+<p><span class="math display">
+ax^2 + bx + c = 0.
+</span></p>
+<p>The solutions of this quadratic equation are the <span class="math inline">x</span>-coordinates where the parabola crosses the <span class="math inline">x</span>-axis. Once these solutions, the vertex, and the <span class="math inline">y</span>-intercept are known, the graph can be sketched.</p>
+<div id="cell-fig-quadratic-derived-points" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\backend_bases.py:2257</span>, in <span class="ansi-cyan-fg">FigureCanvasBase.print_figure</span><span class="ansi-blue-fg">(self, filename, dpi, facecolor, edgecolor, orientation, format, bbox_inches, pad_inches, bbox_extra_artists, backend, **kwargs)</span>
+<span class="ansi-green-fg">   2254</span>     <span style="font-style:italic;color:rgb(95,135,135)"># we do this instead of `self.figure.draw_without_rendering`</span>
+<span class="ansi-green-fg">   2255</span>     <span style="font-style:italic;color:rgb(95,135,135)"># so that we can inject the orientation</span>
+<span class="ansi-green-fg">   2256</span>     <span style="font-weight:bold;color:rgb(0,135,0)">with</span> <span style="color:rgb(0,135,0)">getattr</span>(renderer, <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">_draw_disabled</span><span class="ansi-yellow-fg">"</span>, nullcontext)():
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">2257</span>         <span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">figure</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">draw</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">renderer</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   2258</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">   2259</span>     renderer = <span style="font-weight:bold;color:rgb(0,135,0)">None</span>
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\artist.py:94</span>, in <span class="ansi-cyan-fg">_finalize_rasterization.&lt;locals&gt;.draw_wrapper</span><span class="ansi-blue-fg">(artist, renderer, *args, **kwargs)</span>
+<span class="ansi-green-fg">     92</span> <span style="color:rgb(175,0,255)">@wraps</span>(draw)
+<span class="ansi-green-fg">     93</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg">draw_wrapper</span>(artist, renderer, *args, **kwargs):
+<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">94</span>     result = <span class="ansi-black-fg ansi-yellow-bg">draw</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">artist</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">renderer</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">*</span><span class="ansi-black-fg ansi-yellow-bg">args</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">*</span><span class="ansi-black-fg ansi-yellow-bg">*</span><span class="ansi-black-fg ansi-yellow-bg">kwargs</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">     95</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> renderer._rasterizing:
+<span class="ansi-green-fg">     96</span>         renderer.stop_rasterizing()
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\artist.py:71</span>, in <span class="ansi-cyan-fg">allow_rasterization.&lt;locals&gt;.draw_wrapper</span><span class="ansi-blue-fg">(artist, renderer)</span>
+<span class="ansi-green-fg">     68</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> artist.get_agg_filter() <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">     69</span>         renderer.start_filter()
+<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">71</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-black-fg ansi-yellow-bg">draw</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">artist</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">renderer</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">     72</span> <span style="font-weight:bold;color:rgb(0,135,0)">finally</span>:
+<span class="ansi-green-fg">     73</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> artist.get_agg_filter() <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\figure.py:3282</span>, in <span class="ansi-cyan-fg">Figure.draw</span><span class="ansi-blue-fg">(self, renderer)</span>
+<span class="ansi-green-fg">   3279</span>             <span style="font-style:italic;color:rgb(95,135,135)"># ValueError can occur when resizing a window.</span>
+<span class="ansi-green-fg">   3281</span>     <span style="color:rgb(0,135,0)">self</span>.patch.draw(renderer)
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">3282</span>     <span class="ansi-black-fg ansi-yellow-bg">mimage</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">_draw_list_compositing_images</span><span class="ansi-black-fg ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   3283</span> <span class="ansi-black-fg ansi-yellow-bg">        </span><span class="ansi-black-fg ansi-yellow-bg">renderer</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">artists</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">suppressComposite</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   3285</span>     renderer.close_group(<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">figure</span><span class="ansi-yellow-fg">'</span>)
+<span class="ansi-green-fg">   3286</span> <span style="font-weight:bold;color:rgb(0,135,0)">finally</span>:
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\image.py:133</span>, in <span class="ansi-cyan-fg">_draw_list_compositing_images</span><span class="ansi-blue-fg">(renderer, parent, artists, suppress_composite)</span>
+<span class="ansi-green-fg">    131</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> not_composite <span style="font-weight:bold;color:rgb(175,0,255)">or</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> has_images:
+<span class="ansi-green-fg">    132</span>     <span style="font-weight:bold;color:rgb(0,135,0)">for</span> a <span style="font-weight:bold;color:rgb(175,0,255)">in</span> artists:
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">133</span>         <span class="ansi-black-fg ansi-yellow-bg">a</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">draw</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">renderer</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    134</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">    135</span>     <span style="font-style:italic;color:rgb(95,135,135)"># Composite any adjacent images together</span>
+<span class="ansi-green-fg">    136</span>     image_group = []
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\artist.py:71</span>, in <span class="ansi-cyan-fg">allow_rasterization.&lt;locals&gt;.draw_wrapper</span><span class="ansi-blue-fg">(artist, renderer)</span>
+<span class="ansi-green-fg">     68</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> artist.get_agg_filter() <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">     69</span>         renderer.start_filter()
+<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">71</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-black-fg ansi-yellow-bg">draw</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">artist</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">renderer</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">     72</span> <span style="font-weight:bold;color:rgb(0,135,0)">finally</span>:
+<span class="ansi-green-fg">     73</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> artist.get_agg_filter() <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\axes\_base.py:3367</span>, in <span class="ansi-cyan-fg">_AxesBase.draw</span><span class="ansi-blue-fg">(self, renderer)</span>
+<span class="ansi-green-fg">   3364</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> artists_rasterized:
+<span class="ansi-green-fg">   3365</span>     _draw_rasterized(<span style="color:rgb(0,135,0)">self</span>.get_figure(root=<span style="font-weight:bold;color:rgb(0,135,0)">True</span>), artists_rasterized, renderer)
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">3367</span> <span class="ansi-black-fg ansi-yellow-bg">mimage</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">_draw_list_compositing_images</span><span class="ansi-black-fg ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   3368</span> <span class="ansi-black-fg ansi-yellow-bg">    </span><span class="ansi-black-fg ansi-yellow-bg">renderer</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">artists</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">get_figure</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">root</span><span class="ansi-black-fg ansi-yellow-bg">=</span><span class="ansi-black-fg ansi-yellow-bg ansi-bold">True</span><span class="ansi-black-fg ansi-yellow-bg">)</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">suppressComposite</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   3370</span> renderer.close_group(<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">axes</span><span class="ansi-yellow-fg">'</span>)
+<span class="ansi-green-fg">   3371</span> <span style="color:rgb(0,135,0)">self</span>.stale = <span style="font-weight:bold;color:rgb(0,135,0)">False</span>
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\image.py:133</span>, in <span class="ansi-cyan-fg">_draw_list_compositing_images</span><span class="ansi-blue-fg">(renderer, parent, artists, suppress_composite)</span>
+<span class="ansi-green-fg">    131</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> not_composite <span style="font-weight:bold;color:rgb(175,0,255)">or</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> has_images:
+<span class="ansi-green-fg">    132</span>     <span style="font-weight:bold;color:rgb(0,135,0)">for</span> a <span style="font-weight:bold;color:rgb(175,0,255)">in</span> artists:
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">133</span>         <span class="ansi-black-fg ansi-yellow-bg">a</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">draw</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">renderer</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    134</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">    135</span>     <span style="font-style:italic;color:rgb(95,135,135)"># Composite any adjacent images together</span>
+<span class="ansi-green-fg">    136</span>     image_group = []
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\artist.py:71</span>, in <span class="ansi-cyan-fg">allow_rasterization.&lt;locals&gt;.draw_wrapper</span><span class="ansi-blue-fg">(artist, renderer)</span>
+<span class="ansi-green-fg">     68</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> artist.get_agg_filter() <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">     69</span>         renderer.start_filter()
+<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">71</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-black-fg ansi-yellow-bg">draw</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">artist</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">renderer</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">     72</span> <span style="font-weight:bold;color:rgb(0,135,0)">finally</span>:
+<span class="ansi-green-fg">     73</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> artist.get_agg_filter() <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\text.py:853</span>, in <span class="ansi-cyan-fg">Text.draw</span><span class="ansi-blue-fg">(self, renderer)</span>
+<span class="ansi-green-fg">    849</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span>
+<span class="ansi-green-fg">    851</span> renderer.open_group(<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">text</span><span class="ansi-yellow-fg">'</span>, <span style="color:rgb(0,135,0)">self</span>.get_gid())
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">853</span> bbox, info, _ = <span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">_get_layout</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">renderer</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    854</span> trans = <span style="color:rgb(0,135,0)">self</span>.get_transform()
+<span class="ansi-green-fg">    856</span> <span style="font-style:italic;color:rgb(95,135,135)"># don't use self.get_position here, which refers to text</span>
+<span class="ansi-green-fg">    857</span> <span style="font-style:italic;color:rgb(95,135,135)"># position in Text:</span>
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\text.py:479</span>, in <span class="ansi-cyan-fg">Text._get_layout</span><span class="ansi-blue-fg">(self, renderer)</span>
+<span class="ansi-green-fg">    477</span> clean_line, ismath = <span style="color:rgb(0,135,0)">self</span>._preprocess_math(line)
+<span class="ansi-green-fg">    478</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> clean_line:
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">479</span>     w, h, d = <span class="ansi-black-fg ansi-yellow-bg">_get_text_metrics_with_cache</span><span class="ansi-black-fg ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">    480</span> <span class="ansi-black-fg ansi-yellow-bg">        </span><span class="ansi-black-fg ansi-yellow-bg">renderer</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">clean_line</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">_fontproperties</span><span class="ansi-black-fg ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    481</span> <span class="ansi-black-fg ansi-yellow-bg">        </span><span class="ansi-black-fg ansi-yellow-bg">ismath</span><span class="ansi-black-fg ansi-yellow-bg">=</span><span class="ansi-black-fg ansi-yellow-bg">ismath</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">dpi</span><span class="ansi-black-fg ansi-yellow-bg">=</span><span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">get_figure</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">root</span><span class="ansi-black-fg ansi-yellow-bg">=</span><span class="ansi-black-fg ansi-yellow-bg ansi-bold">True</span><span class="ansi-black-fg ansi-yellow-bg">)</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">dpi</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    482</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">    483</span>     w = h = d = <span class="ansi-green-fg">0</span>
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\text.py:59</span>, in <span class="ansi-cyan-fg">_get_text_metrics_with_cache</span><span class="ansi-blue-fg">(renderer, text, fontprop, ismath, dpi)</span>
+<span class="ansi-green-fg">     52</span> get_text_metrics = _get_text_metrics_function(renderer)
+<span class="ansi-green-fg">     53</span> <span style="font-style:italic;color:rgb(95,135,135)"># call the function to compute the metrics and return</span>
+<span class="ansi-green-fg">     54</span> <span style="font-style:italic;color:rgb(95,135,135)">#</span>
+<span class="ansi-green-fg">     55</span> <span style="font-style:italic;color:rgb(95,135,135)"># We pass a copy of the fontprop because FontProperties is both mutable and</span>
+<span class="ansi-green-fg">     56</span> <span style="font-style:italic;color:rgb(95,135,135)"># has a `__hash__` that depends on that mutable state.  This is not ideal</span>
+<span class="ansi-green-fg">     57</span> <span style="font-style:italic;color:rgb(95,135,135)"># as it means the hash of an object is not stable over time which leads to</span>
+<span class="ansi-green-fg">     58</span> <span style="font-style:italic;color:rgb(95,135,135)"># very confusing behavior when used as keys in dictionaries or hashes.</span>
+<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">59</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-black-fg ansi-yellow-bg">get_text_metrics</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">text</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">fontprop</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">copy</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">)</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">ismath</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">dpi</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\text.py:125</span>, in <span class="ansi-cyan-fg">_get_text_metrics_function.&lt;locals&gt;._text_metrics</span><span class="ansi-blue-fg">(text, fontprop, ismath, dpi)</span>
+<span class="ansi-green-fg">    120</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">RuntimeError</span>(
+<span class="ansi-green-fg">    121</span>         <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">Trying to get text metrics for a renderer that no longer exists.  </span><span class="ansi-yellow-fg">"</span>
+<span class="ansi-green-fg">    122</span>         <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">This should never happen and is evidence of a bug elsewhere.</span><span class="ansi-yellow-fg">"</span>
+<span class="ansi-green-fg">    123</span>         )
+<span class="ansi-green-fg">    124</span> <span style="font-style:italic;color:rgb(95,135,135)"># do the actual method call we need and return the result</span>
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">125</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-black-fg ansi-yellow-bg">local_renderer</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">get_text_width_height_descent</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">text</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">fontprop</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">ismath</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\backends\backend_agg.py:259</span>, in <span class="ansi-cyan-fg">RendererAgg.get_text_width_height_descent</span><span class="ansi-blue-fg">(self, s, prop, ismath)</span>
+<span class="ansi-green-fg">    256</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)">super</span>().get_text_width_height_descent(s, prop, ismath)
+<span class="ansi-green-fg">    258</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> ismath:
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">259</span>     parse = <span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">mathtext_parser</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">parse</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">s</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">dpi</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">prop</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    260</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> parse.width, parse.height, parse.depth
+<span class="ansi-green-fg">    262</span> font = <span style="color:rgb(0,135,0)">self</span>._prepare_font(prop)
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\mathtext.py:86</span>, in <span class="ansi-cyan-fg">MathTextParser.parse</span><span class="ansi-blue-fg">(self, s, dpi, prop, antialiased)</span>
+<span class="ansi-green-fg">     81</span> <span style="font-weight:bold;color:rgb(0,135,0)">from</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">matplotlib</span><span class="ansi-blue-fg ansi-bold">.</span><span class="ansi-blue-fg ansi-bold">backends</span><span style="color:rgb(188,188,188)"> </span><span style="font-weight:bold;color:rgb(0,135,0)">import</span> backend_agg
+<span class="ansi-green-fg">     82</span> load_glyph_flags = {
+<span class="ansi-green-fg">     83</span>     <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">vector</span><span class="ansi-yellow-fg">"</span>: LoadFlags.NO_HINTING,
+<span class="ansi-green-fg">     84</span>     <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">raster</span><span class="ansi-yellow-fg">"</span>: backend_agg.get_hinting_flag(),
+<span class="ansi-green-fg">     85</span> }[<span style="color:rgb(0,135,0)">self</span>._output_type]
+<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">86</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">_parse_cached</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">s</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">dpi</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">prop</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">antialiased</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">load_glyph_flags</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\mathtext.py:100</span>, in <span class="ansi-cyan-fg">MathTextParser._parse_cached</span><span class="ansi-blue-fg">(self, s, dpi, prop, antialiased, load_glyph_flags)</span>
+<span class="ansi-green-fg">     97</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">self</span>._parser <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:  <span style="font-style:italic;color:rgb(95,135,135)"># Cache the parser globally.</span>
+<span class="ansi-green-fg">     98</span>     <span style="color:rgb(0,135,0)">self</span>.<span class="ansi-blue-fg">__class__</span>._parser = _mathtext.Parser()
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">100</span> box = <span class="ansi-black-fg ansi-yellow-bg">self</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">_parser</span><span class="ansi-black-fg ansi-yellow-bg">.</span><span class="ansi-black-fg ansi-yellow-bg">parse</span><span class="ansi-black-fg ansi-yellow-bg">(</span><span class="ansi-black-fg ansi-yellow-bg">s</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">fontset</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">fontsize</span><span class="ansi-black-fg ansi-yellow-bg">,</span><span class="ansi-black-fg ansi-yellow-bg"> </span><span class="ansi-black-fg ansi-yellow-bg">dpi</span><span class="ansi-black-fg ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    101</span> output = _mathtext.ship(box)
+<span class="ansi-green-fg">    102</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">self</span>._output_type == <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">vector</span><span class="ansi-yellow-fg">"</span>:
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\matplotlib\_mathtext.py:2306</span>, in <span class="ansi-cyan-fg">Parser.parse</span><span class="ansi-blue-fg">(self, s, fonts_object, fontsize, dpi)</span>
+<span class="ansi-green-fg">   2304</span>     result = <span style="color:rgb(0,135,0)">self</span>._expression.parse_string(s)
+<span class="ansi-green-fg">   2305</span> <span style="font-weight:bold;color:rgb(0,135,0)">except</span> ParseBaseException <span style="font-weight:bold;color:rgb(0,135,0)">as</span> err:
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">2306</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(<span class="ansi-yellow-fg">"</span><span style="font-weight:bold;color:rgb(175,95,0)">\n</span><span class="ansi-yellow-fg">"</span> + err.explain(<span class="ansi-green-fg">0</span>)) <span style="font-weight:bold;color:rgb(0,135,0)">from</span><span style="color:rgb(188,188,188)"> </span><span style="font-weight:bold;color:rgb(0,135,0)">None</span>
+<span class="ansi-green-fg">   2307</span> <span style="color:rgb(0,135,0)">self</span>._state_stack = []
+<span class="ansi-green-fg">   2308</span> <span style="color:rgb(0,135,0)">self</span>._needs_space_after_subsuper = <span style="font-weight:bold;color:rgb(0,135,0)">False</span>
+
+<span class="ansi-red-fg">ValueError</span>: 
+\left(\frac{-3-\sqrt{89}}8,0\right)
+           ^
+ParseSyntaxException: Expected \frac{num}{den}, found '{'  (at char 11), (line:1, col:12)</pre>
+</div>
+</div>
+<div id="fig-quadratic-derived-points" class="cell-output cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quadratic-derived-points-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<pre id="fig-quadratic-derived-points" class="cell-output cell-output-display"><code>&lt;Figure size 672x480 with 1 Axes&gt;</code></pre>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quadratic-derived-points-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The quadratic graph with all the points and the axis of symmetry identified.
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="solving-a-quadratic-equation-by-completing-the-square" class="level2">
+<h2 class="anchored" data-anchor-id="solving-a-quadratic-equation-by-completing-the-square">Solving a Quadratic Equation by Completing the Square</h2>
+<p>Start with</p>
+<p><span class="math display">
+ax^2 + bx + c = 0, \qquad a \ne 0.
+</span></p>
+<ol type="1">
+<li>Divide by <span class="math inline">a</span>: <span class="math display">
+x^2 + \frac{b}{a}x + \frac{c}{a} = 0.
+</span></li>
+<li>Rearrange the constant term: <span class="math display">
+x^2 + \frac{b}{a}x = -\frac{c}{a}.
+</span></li>
+<li>Add <span class="math inline">\left(\frac{b}{2a}\right)^2</span> to both sides: <span class="math display">
+x^2 + \frac{b}{a}x + \left(\frac{b}{2a}\right)^2
+= \left(\frac{b}{2a}\right)^2 - \frac{c}{a}.
+</span></li>
+<li>Write the left-hand side as a square and simplify the right-hand side: <span class="math display">
+\left(x + \frac{b}{2a}\right)^2
+= \frac{b^2 - 4ac}{4a^2}.
+</span></li>
+<li>Take the square root of both sides: <span class="math display">
+x + \frac{b}{2a} = \pm\frac{\sqrt{b^2 - 4ac}}{2a}.
+</span></li>
+<li>Solve for <span class="math inline">x</span>: <span class="math display">
+\boxed{x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}}.
+</span></li>
+</ol>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+</section>
+</section>
+<section id="solving-a-quadratic-curve-and-a-line" class="level1">
+<h1>Solving a Quadratic Curve and a Line</h1>
+<p>Consider the quadratic curve</p>
+<p><span class="math display">
+y = ax^2 + bx + c_1
+</span></p>
+<p>and the line</p>
+<p><span class="math display">
+y = mx + c_2.
+</span></p>
+<p>At a point of intersection, both equations have the same <span class="math inline">y</span>-value. Equating them gives</p>
+<p><span class="math display">
+ax^2 + bx + c_1 = mx + c_2.
+</span></p>
+<p>Rearranging gives the quadratic equation</p>
+<p><span class="math display">
+ax^2 + (b - m)x + (c_1 - c_2) = 0.
+</span></p>
+<p>The solutions of this equation are the <span class="math inline">x</span>-coordinates of the intersection points. The corresponding <span class="math inline">y</span>-coordinates can then be found by substituting each <span class="math inline">x</span>-value into either original equation.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/gvgk\.in\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Currently associated with <a href="https://farmhill.in"><em>Farm Hill Education Trust</em></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:venu.gvgk@gmail.com">
+      <i class="bi bi-envelope-at" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/venugvgk">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/venu.gvgk">
+      <i class="bi bi-facebook" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/venu.gvgk">
+      <i class="bi bi-instagram" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

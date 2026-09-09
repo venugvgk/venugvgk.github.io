@@ -227,21 +227,24 @@ ax.set_title('Effect of the linear term')
 plt.show()
 ```
 
-The shape is still the same as a parabola, but the vertex shifts left or right. The $x$-term changes the horizontal position of the graph, while the coefficient of $x^2$ still controls whether it opens upward or downward.
+The shape is still the same as a parabola, but the vertex shifts left or right as well as down or up. The $x$-term changes the horizontal position of the graph and moves the vertex, while the coefficient of $x^2$ still controls whether it opens upward or downward.
 
 ---
 
 ## 9. Effect of the coefficient of $x$
 
-The coefficient of $x$ moves the vertex horizontally.
+The coefficient of $x$ moves the vertex horizontally as well as vertically. The vertex of a parabola given by $y=ax^2+bx$ is at $x=-\frac{b}{2a}$.
 
-- In $y=x^2+2x$, the vertex is shifted to the left.
-- In $y=x^2-2x$, the vertex is shifted to the right.
+- In $y=x^2+2x$, the vertex is shifted to the left and down.
+- In $y=x^2-2x$, the vertex is shifted to the right and down.
+- in $y=-x^2+2x$, the vertex is shifted to the left and up.
+- in $y=-x^2-2x$, the vertex is shifted to the right and up.
 
 The sign of the coefficient tells us the direction of the shift:
 
 - a positive coefficient moves the vertex left,
 - a negative coefficient moves the vertex right.
+- The up and down movement is dependent on the sign of the coefficient of $x^2$.
 
 The overall shape remains a parabola, and the coefficient of $x^2$ still determines whether it opens upward or downward.
 
@@ -288,7 +291,7 @@ From all the examples, we can conclude:
   - If $a<0$, it opens downward.
   - A larger value of $|a|$ makes it narrower; a smaller value makes it wider.
 
-- The coefficient of $x$ shifts the graph horizontally by changing the position of the vertex.
+- The coefficient of $x$ shifts the graph horizontally and vertically by changing the position of the vertex.
   - A positive coefficient of $x$ moves the vertex to the left.
   - A negative coefficient of $x$ moves the vertex to the right.
 
@@ -309,7 +312,8 @@ has a parabolic graph whose direction, width, position, and vertical shift are a
 The key idea is that changing the coefficients changes the graph in a predictable way:
 
 - $a$ changes the opening and width,
-- $b$ changes the horizontal position of the vertex,
+- $b$ changes the position of the vertex,
 - $c$ changes the vertical position.
-
 This is why a quadratic equation can be understood both algebraically and geometrically as a curve with a particular shape and location.
+
+
