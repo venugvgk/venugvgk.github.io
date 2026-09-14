@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-09-13">
+
+<title>Properties of Number Sets – Venu GVGK Raju</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../venu-flute-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Properties of Number Sets – Venu GVGK Raju">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Venu GVGK Raju">
+<meta name="twitter:title" content="Properties of Number Sets – Venu GVGK Raju">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Venu GVGK Raju</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">Curriculum Vitae</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../books/index.html"> 
+<span class="menu-text">Books</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../education/index.html"> 
+<span class="menu-text">On Education</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cs_2026/index.html"> 
+<span class="menu-text">CS 2026</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../a_math_2028/index.html"> 
+<span class="menu-text">A Level Math</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../math-6-2026/index.html"> 
+<span class="menu-text">Grade 6 Math</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#beginning-with-a-question" id="toc-beginning-with-a-question" class="nav-link active" data-scroll-target="#beginning-with-a-question"><span class="header-section-number">1</span> Beginning with a question</a></li>
+  <li><a href="#closure-staying-inside-the-set" id="toc-closure-staying-inside-the-set" class="nav-link" data-scroll-target="#closure-staying-inside-the-set"><span class="header-section-number">2</span> Closure: staying inside the set</a>
+  <ul class="collapse">
+  <li><a href="#addition-and-natural-numbers" id="toc-addition-and-natural-numbers" class="nav-link" data-scroll-target="#addition-and-natural-numbers"><span class="header-section-number">2.1</span> Addition and natural numbers</a></li>
+  <li><a href="#multiplication-and-natural-numbers" id="toc-multiplication-and-natural-numbers" class="nav-link" data-scroll-target="#multiplication-and-natural-numbers"><span class="header-section-number">2.2</span> Multiplication and natural numbers</a></li>
+  <li><a href="#subtraction-and-natural-numbers" id="toc-subtraction-and-natural-numbers" class="nav-link" data-scroll-target="#subtraction-and-natural-numbers"><span class="header-section-number">2.3</span> Subtraction and natural numbers</a></li>
+  <li><a href="#division-and-natural-numbers" id="toc-division-and-natural-numbers" class="nav-link" data-scroll-target="#division-and-natural-numbers"><span class="header-section-number">2.4</span> Division and natural numbers</a></li>
+  </ul></li>
+  <li><a href="#closure-of-the-whole-numbers" id="toc-closure-of-the-whole-numbers" class="nav-link" data-scroll-target="#closure-of-the-whole-numbers"><span class="header-section-number">3</span> Closure of the whole numbers</a>
+  <ul class="collapse">
+  <li><a href="#addition-and-multiplication" id="toc-addition-and-multiplication" class="nav-link" data-scroll-target="#addition-and-multiplication"><span class="header-section-number">3.1</span> Addition and multiplication</a></li>
+  <li><a href="#subtraction" id="toc-subtraction" class="nav-link" data-scroll-target="#subtraction"><span class="header-section-number">3.2</span> Subtraction</a></li>
+  <li><a href="#division" id="toc-division" class="nav-link" data-scroll-target="#division"><span class="header-section-number">3.3</span> Division</a></li>
+  </ul></li>
+  <li><a href="#closure-of-the-integers" id="toc-closure-of-the-integers" class="nav-link" data-scroll-target="#closure-of-the-integers"><span class="header-section-number">4</span> Closure of the integers</a>
+  <ul class="collapse">
+  <li><a href="#addition-subtraction-and-multiplication" id="toc-addition-subtraction-and-multiplication" class="nav-link" data-scroll-target="#addition-subtraction-and-multiplication"><span class="header-section-number">4.1</span> Addition, subtraction, and multiplication</a></li>
+  <li><a href="#division-1" id="toc-division-1" class="nav-link" data-scroll-target="#division-1"><span class="header-section-number">4.2</span> Division</a></li>
+  </ul></li>
+  <li><a href="#closure-table" id="toc-closure-table" class="nav-link" data-scroll-target="#closure-table"><span class="header-section-number">5</span> Closure table</a></li>
+  <li><a href="#commutative-property-does-order-matter" id="toc-commutative-property-does-order-matter" class="nav-link" data-scroll-target="#commutative-property-does-order-matter"><span class="header-section-number">6</span> Commutative property: does order matter?</a>
+  <ul class="collapse">
+  <li><a href="#addition-is-commutative" id="toc-addition-is-commutative" class="nav-link" data-scroll-target="#addition-is-commutative"><span class="header-section-number">6.1</span> Addition is commutative</a></li>
+  <li><a href="#multiplication-is-commutative" id="toc-multiplication-is-commutative" class="nav-link" data-scroll-target="#multiplication-is-commutative"><span class="header-section-number">6.2</span> Multiplication is commutative</a></li>
+  <li><a href="#subtraction-is-not-commutative" id="toc-subtraction-is-not-commutative" class="nav-link" data-scroll-target="#subtraction-is-not-commutative"><span class="header-section-number">6.3</span> Subtraction is not commutative</a></li>
+  <li><a href="#division-is-not-commutative" id="toc-division-is-not-commutative" class="nav-link" data-scroll-target="#division-is-not-commutative"><span class="header-section-number">6.4</span> Division is not commutative</a></li>
+  </ul></li>
+  <li><a href="#associative-property-does-grouping-matter" id="toc-associative-property-does-grouping-matter" class="nav-link" data-scroll-target="#associative-property-does-grouping-matter"><span class="header-section-number">7</span> Associative property: does grouping matter?</a>
+  <ul class="collapse">
+  <li><a href="#addition-is-associative" id="toc-addition-is-associative" class="nav-link" data-scroll-target="#addition-is-associative"><span class="header-section-number">7.1</span> Addition is associative</a></li>
+  <li><a href="#multiplication-is-associative" id="toc-multiplication-is-associative" class="nav-link" data-scroll-target="#multiplication-is-associative"><span class="header-section-number">7.2</span> Multiplication is associative</a></li>
+  <li><a href="#subtraction-is-not-associative" id="toc-subtraction-is-not-associative" class="nav-link" data-scroll-target="#subtraction-is-not-associative"><span class="header-section-number">7.3</span> Subtraction is not associative</a></li>
+  <li><a href="#division-is-not-associative" id="toc-division-is-not-associative" class="nav-link" data-scroll-target="#division-is-not-associative"><span class="header-section-number">7.4</span> Division is not associative</a></li>
+  </ul></li>
+  <li><a href="#property-table" id="toc-property-table" class="nav-link" data-scroll-target="#property-table"><span class="header-section-number">8</span> Property table</a></li>
+  <li><a href="#additive-identity-adding-nothing" id="toc-additive-identity-adding-nothing" class="nav-link" data-scroll-target="#additive-identity-adding-nothing"><span class="header-section-number">9</span> Additive identity: adding nothing</a>
+  <ul class="collapse">
+  <li><a href="#which-sets-contain-the-additive-identity" id="toc-which-sets-contain-the-additive-identity" class="nav-link" data-scroll-target="#which-sets-contain-the-additive-identity"><span class="header-section-number">9.1</span> Which sets contain the additive identity?</a></li>
+  </ul></li>
+  <li><a href="#additive-inverse-cancelling-a-number" id="toc-additive-inverse-cancelling-a-number" class="nav-link" data-scroll-target="#additive-inverse-cancelling-a-number"><span class="header-section-number">10</span> Additive inverse: cancelling a number</a></li>
+  <li><a href="#additive-inverses-in-the-three-sets" id="toc-additive-inverses-in-the-three-sets" class="nav-link" data-scroll-target="#additive-inverses-in-the-three-sets"><span class="header-section-number">11</span> Additive inverses in the three sets</a>
+  <ul class="collapse">
+  <li><a href="#natural-numbers" id="toc-natural-numbers" class="nav-link" data-scroll-target="#natural-numbers"><span class="header-section-number">11.1</span> Natural numbers</a></li>
+  <li><a href="#whole-numbers" id="toc-whole-numbers" class="nav-link" data-scroll-target="#whole-numbers"><span class="header-section-number">11.2</span> Whole numbers</a></li>
+  <li><a href="#integers" id="toc-integers" class="nav-link" data-scroll-target="#integers"><span class="header-section-number">11.3</span> Integers</a></li>
+  </ul></li>
+  <li><a href="#identity-and-inverse-are-different" id="toc-identity-and-inverse-are-different" class="nav-link" data-scroll-target="#identity-and-inverse-are-different"><span class="header-section-number">12</span> Identity and inverse are different</a></li>
+  <li><a href="#putting-the-ideas-together" id="toc-putting-the-ideas-together" class="nav-link" data-scroll-target="#putting-the-ideas-together"><span class="header-section-number">13</span> Putting the ideas together</a>
+  <ul class="collapse">
+  <li><a href="#closure-summary" id="toc-closure-summary" class="nav-link" data-scroll-target="#closure-summary"><span class="header-section-number">13.1</span> Closure summary</a></li>
+  <li><a href="#commutativity-and-associativity-summary" id="toc-commutativity-and-associativity-summary" class="nav-link" data-scroll-target="#commutativity-and-associativity-summary"><span class="header-section-number">13.2</span> Commutativity and associativity summary</a></li>
+  <li><a href="#additive-identity-and-inverse-summary" id="toc-additive-identity-and-inverse-summary" class="nav-link" data-scroll-target="#additive-identity-and-inverse-summary"><span class="header-section-number">13.3</span> Additive identity and inverse summary</a></li>
+  </ul></li>
+  <li><a href="#short-summary-for-recall" id="toc-short-summary-for-recall" class="nav-link" data-scroll-target="#short-summary-for-recall"><span class="header-section-number">14</span> Short summary for recall</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">15</span> Check your understanding</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1"><span class="header-section-number">15.1</span> Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2"><span class="header-section-number">15.2</span> Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3"><span class="header-section-number">15.3</span> Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4"><span class="header-section-number">15.4</span> Question 4</a></li>
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5"><span class="header-section-number">15.5</span> Question 5</a></li>
+  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6"><span class="header-section-number">15.6</span> Question 6</a></li>
+  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7"><span class="header-section-number">15.7</span> Question 7</a></li>
+  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8"><span class="header-section-number">15.8</span> Question 8</a></li>
+  <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9"><span class="header-section-number">15.9</span> Question 9</a></li>
+  <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10"><span class="header-section-number">15.10</span> Question 10</a></li>
+  <li><a href="#question-11" id="toc-question-11" class="nav-link" data-scroll-target="#question-11"><span class="header-section-number">15.11</span> Question 11</a></li>
+  <li><a href="#question-12" id="toc-question-12" class="nav-link" data-scroll-target="#question-12"><span class="header-section-number">15.12</span> Question 12</a></li>
+  </ul></li>
+  <li><a href="#final-thinking-aloud-conversation" id="toc-final-thinking-aloud-conversation" class="nav-link" data-scroll-target="#final-thinking-aloud-conversation"><span class="header-section-number">16</span> Final thinking-aloud conversation</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Properties of Number Sets</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 13, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="beginning-with-a-question" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="beginning-with-a-question"><span class="header-section-number">1</span> Beginning with a question</h2>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> We have already built three number sets: natural numbers, whole numbers, and integers. Today we will ask a new question: <strong>What happens when we perform operations on numbers from a set?</strong></p>
+<p><strong>Student:</strong> You mean addition, subtraction, multiplication, and division?</p>
+<p><strong>Teacher:</strong> Exactly. We will investigate whether the answer always remains in the same set, whether changing the order changes the answer, and whether regrouping changes the answer.</p>
+</blockquote>
+<p>The number sets in this lesson are:</p>
+<p><span class="math display">\[
+\mathbb{N}=\{1,2,3,4,\ldots\}
+\]</span></p>
+<p><span class="math display">\[
+\mathbb{W}=\{0,1,2,3,4,\ldots\}
+\]</span></p>
+<p><span class="math display">\[
+\mathbb{Z}=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}
+\]</span></p>
+<p>We will use the four basic operations:</p>
+<ul>
+<li>Addition: <span class="math inline">\(+\)</span></li>
+<li>Subtraction: <span class="math inline">\(-\)</span></li>
+<li>Multiplication: <span class="math inline">\(\times\)</span></li>
+<li>Division: <span class="math inline">\(\div\)</span></li>
+</ul>
+<p>Throughout this note, we use the convention that natural numbers begin with 1.</p>
+</section>
+<section id="closure-staying-inside-the-set" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="closure-staying-inside-the-set"><span class="header-section-number">2</span> Closure: staying inside the set</h2>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Imagine that a set is a classroom. If I choose two students from the classroom and perform an operation on their numbers, what would it mean for the classroom to be closed under that operation?</p>
+<p><strong>Student:</strong> Perhaps the answer must also be a student in the same classroom?</p>
+<p><strong>Teacher:</strong> That is a useful way to think about it. A set is <strong>closed</strong> under an operation if applying that operation to members of the set always produces another member of the same set.</p>
+</blockquote>
+<p>For a set <span class="math inline">\(S\)</span> and an operation <span class="math inline">\(*\)</span>, closure means:</p>
+<p><span class="math display">\[
+\text{if }a\in S\text{ and }b\in S,\text{ then }a*b\in S.
+\]</span></p>
+<p>The important word is <strong>always</strong>. One successful example is not enough to prove closure. To show that a set is not closed, one counterexample is enough.</p>
+<section id="addition-and-natural-numbers" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="addition-and-natural-numbers"><span class="header-section-number">2.1</span> Addition and natural numbers</h3>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Let us begin with natural numbers. What happens when we add two natural numbers?</p>
+<p><strong>Student:</strong> For example, <span class="math inline">\(2+5=7\)</span>. The answer is still natural.</p>
+<p><strong>Teacher:</strong> Can you think of two natural numbers whose sum is not natural?</p>
+<p><strong>Student:</strong> No.&nbsp;Adding positive counting numbers always gives another positive counting number.</p>
+</blockquote>
+<p>Therefore, the natural numbers are closed under addition:</p>
+<p><span class="math display">\[
+a,b\in\mathbb{N}\implies a+b\in\mathbb{N}.
+\]</span></p>
+<p>Examples:</p>
+<p><span class="math display">\[
+1+4=5,\qquad 8+6=14,\qquad 100+25=125.
+\]</span></p>
+</section>
+<section id="multiplication-and-natural-numbers" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="multiplication-and-natural-numbers"><span class="header-section-number">2.2</span> Multiplication and natural numbers</h3>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> What about multiplication?</p>
+<p><strong>Student:</strong> A natural number multiplied by another natural number gives a natural number. For example, <span class="math inline">\(3\times4=12\)</span>.</p>
+<p><strong>Teacher:</strong> Correct. Natural numbers are also closed under multiplication.</p>
+</blockquote>
+<p><span class="math display">\[
+a,b\in\mathbb{N}\implies ab\in\mathbb{N}.
+\]</span></p>
+</section>
+<section id="subtraction-and-natural-numbers" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="subtraction-and-natural-numbers"><span class="header-section-number">2.3</span> Subtraction and natural numbers</h3>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Now let us try subtraction. Is <span class="math inline">\(7-3\)</span> natural?</p>
+<p><strong>Student:</strong> Yes, it is 4.</p>
+<p><strong>Teacher:</strong> Is <span class="math inline">\(3-7\)</span> natural?</p>
+<p><strong>Student:</strong> No.&nbsp;It is <span class="math inline">\(-4\)</span>, which is not a natural number.</p>
+<p><strong>Teacher:</strong> Therefore, what can we conclude?</p>
+<p><strong>Student:</strong> Natural numbers are not closed under subtraction.</p>
+</blockquote>
+<p>One counterexample is sufficient:</p>
+<p><span class="math display">\[
+3,7\in\mathbb{N},\qquad 3-7=-4\notin\mathbb{N}.
+\]</span></p>
+<p>The problem is that subtraction can move us to the left of zero, while natural numbers contain only positive counting numbers.</p>
+</section>
+<section id="division-and-natural-numbers" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="division-and-natural-numbers"><span class="header-section-number">2.4</span> Division and natural numbers</h3>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Let us try division. Is <span class="math inline">\(8\div2\)</span> natural?</p>
+<p><strong>Student:</strong> Yes, it is 4.</p>
+<p><strong>Teacher:</strong> Is <span class="math inline">\(2\div8\)</span> natural?</p>
+<p><strong>Student:</strong> No.&nbsp;It is <span class="math inline">\(\frac14\)</span>, which is not a natural number.</p>
+<p><strong>Teacher:</strong> So natural numbers are not closed under division.</p>
+</blockquote>
+<p><span class="math display">\[
+2,8\in\mathbb{N},\qquad 2\div8=\frac14\notin\mathbb{N}.
+\]</span></p>
+<p>Division can produce a fraction, and natural numbers do not include fractions.</p>
+</section>
+</section>
+<section id="closure-of-the-whole-numbers" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="closure-of-the-whole-numbers"><span class="header-section-number">3</span> Closure of the whole numbers</h2>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Whole numbers include zero as well as the natural numbers. Does adding zero change the closure results?</p>
+<p><strong>Student:</strong> Let me check operation by operation.</p>
+</blockquote>
+<section id="addition-and-multiplication" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="addition-and-multiplication"><span class="header-section-number">3.1</span> Addition and multiplication</h3>
+<p>Whole numbers are closed under addition:</p>
+<p><span class="math display">\[
+0+5=5,\qquad 6+3=9.
+\]</span></p>
+<p>They are also closed under multiplication:</p>
+<p><span class="math display">\[
+0\times8=0,\qquad 4\times7=28.
+\]</span></p>
+<p>In general,</p>
+<p><span class="math display">\[
+a,b\in\mathbb{W}\implies a+b\in\mathbb{W}\text{ and }ab\in\mathbb{W}.
+\]</span></p>
+</section>
+<section id="subtraction" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="subtraction"><span class="header-section-number">3.2</span> Subtraction</h3>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Is the set of whole numbers closed under subtraction?</p>
+<p><strong>Student:</strong> <span class="math inline">\(2-5=-3\)</span>, and <span class="math inline">\(-3\)</span> is not a whole number. So no.</p>
+</blockquote>
+<p><span class="math display">\[
+2,5\in\mathbb{W},\qquad 2-5=-3\notin\mathbb{W}.
+\]</span></p>
+</section>
+<section id="division" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="division"><span class="header-section-number">3.3</span> Division</h3>
+<blockquote class="blockquote">
+<p><strong>Student:</strong> Whole numbers are not closed under division either, because <span class="math inline">\(3\div2=\frac32\)</span> is not a whole number.</p>
+</blockquote>
+<p><span class="math display">\[
+3,2\in\mathbb{W},\qquad 3\div2=\frac32\notin\mathbb{W}.
+\]</span></p>
+<p>Adding zero makes the set larger, but it does not add negative numbers or fractions. Therefore, the closure table for whole numbers is the same as for natural numbers.</p>
+</section>
+</section>
+<section id="closure-of-the-integers" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="closure-of-the-integers"><span class="header-section-number">4</span> Closure of the integers</h2>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Integers include negative numbers, so subtraction may work better. Let us test all four operations.</p>
+</blockquote>
+<section id="addition-subtraction-and-multiplication" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="addition-subtraction-and-multiplication"><span class="header-section-number">4.1</span> Addition, subtraction, and multiplication</h3>
+<p>Integers are closed under addition:</p>
+<p><span class="math display">\[
+-4+7=3,\qquad -5+(-2)=-7.
+\]</span></p>
+<p>They are closed under subtraction:</p>
+<p><span class="math display">\[
+3-8=-5,\qquad -2-(-6)=4.
+\]</span></p>
+<p>They are closed under multiplication:</p>
+<p><span class="math display">\[
+(-3)\times4=-12,\qquad (-2)\times(-5)=10.
+\]</span></p>
+<blockquote class="blockquote">
+<p><strong>Student:</strong> In each case, the answer is still an integer.</p>
+<p><strong>Teacher:</strong> Yes. Adding, subtracting, or multiplying integers never creates a fraction.</p>
+</blockquote>
+</section>
+<section id="division-1" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="division-1"><span class="header-section-number">4.2</span> Division</h3>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Is division always safe for integers?</p>
+<p><strong>Student:</strong> <span class="math inline">\(8\div2=4\)</span> is an integer, but <span class="math inline">\(2\div8=\frac14\)</span> is not.</p>
+<p><strong>Teacher:</strong> Therefore, integers are not closed under division.</p>
+</blockquote>
+<p><span class="math display">\[
+2,8\in\mathbb{Z},\qquad 2\div8=\frac14\notin\mathbb{Z}.
+\]</span></p>
+</section>
+</section>
+<section id="closure-table" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="closure-table"><span class="header-section-number">5</span> Closure table</h2>
+<p>The results can be organised as follows.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Number set</th>
+<th style="text-align: center;">Addition</th>
+<th style="text-align: center;">Subtraction</th>
+<th style="text-align: center;">Multiplication</th>
+<th style="text-align: center;">Division</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Natural numbers <span class="math inline">\(\mathbb{N}\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Whole numbers <span class="math inline">\(\mathbb{W}\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Integers <span class="math inline">\(\mathbb{Z}\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> What pattern do you see?</p>
+<p><strong>Student:</strong> Moving from natural numbers to whole numbers fixes the need for zero, but not negative answers or fractions. Moving to integers fixes subtraction, but division can still produce fractions.</p>
+</blockquote>
+<p>Closure depends on both the set and the operation. We should never say simply, “This set is closed.” We should say, for example, “The integers are closed under subtraction” or “The whole numbers are not closed under division.”</p>
+</section>
+<section id="commutative-property-does-order-matter" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="commutative-property-does-order-matter"><span class="header-section-number">6</span> Commutative property: does order matter?</h2>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Closure asked whether we stay in the set. Now we will ask a different question: <strong>Does changing the order change the answer?</strong></p>
+<p><strong>Student:</strong> For addition, <span class="math inline">\(3+5\)</span> and <span class="math inline">\(5+3\)</span> both equal 8.</p>
+<p><strong>Teacher:</strong> Exactly. This is the <strong>commutative property</strong>.</p>
+</blockquote>
+<p>An operation is commutative when changing the order of the two numbers does not change the result:</p>
+<p><span class="math display">\[
+a*b=b*a.
+\]</span></p>
+<section id="addition-is-commutative" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="addition-is-commutative"><span class="header-section-number">6.1</span> Addition is commutative</h3>
+<p>Addition is commutative for natural numbers, whole numbers, and integers.</p>
+<p><span class="math display">\[
+4+7=7+4=11
+\]</span></p>
+<p><span class="math display">\[
+-3+8=8+(-3)=5
+\]</span></p>
+</section>
+<section id="multiplication-is-commutative" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="multiplication-is-commutative"><span class="header-section-number">6.2</span> Multiplication is commutative</h3>
+<p>Multiplication is also commutative for all three sets:</p>
+<p><span class="math display">\[
+3\times5=5\times3=15
+\]</span></p>
+<p><span class="math display">\[
+(-2)\times6=6\times(-2)=-12
+\]</span></p>
+<p>The numbers may be negative, but changing their order does not change the product.</p>
+</section>
+<section id="subtraction-is-not-commutative" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="subtraction-is-not-commutative"><span class="header-section-number">6.3</span> Subtraction is not commutative</h3>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Does the same idea work for subtraction?</p>
+<p><strong>Student:</strong> <span class="math inline">\(9-4=5\)</span>, but <span class="math inline">\(4-9=-5\)</span>. The answers are different.</p>
+<p><strong>Teacher:</strong> So subtraction is not commutative.</p>
+</blockquote>
+<p><span class="math display">\[
+9-4\neq4-9.
+\]</span></p>
+<p>The order matters because subtraction tells us to start with the first number and take away the second.</p>
+</section>
+<section id="division-is-not-commutative" class="level3" data-number="6.4">
+<h3 data-number="6.4" class="anchored" data-anchor-id="division-is-not-commutative"><span class="header-section-number">6.4</span> Division is not commutative</h3>
+<p>Division is not commutative either:</p>
+<p><span class="math display">\[
+12\div3=4,
+\qquad
+3\div12=\frac14.
+\]</span></p>
+<p>Thus,</p>
+<p><span class="math display">\[
+a\div b\neq b\div a
+\]</span></p>
+<p>in general, whenever both divisions are defined.</p>
+</section>
+</section>
+<section id="associative-property-does-grouping-matter" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="associative-property-does-grouping-matter"><span class="header-section-number">7</span> Associative property: does grouping matter?</h2>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> We have changed the order of two numbers. Now let us keep the order the same but change the grouping of three numbers.</p>
+<p><strong>Student:</strong> What does changing the grouping mean?</p>
+<p><strong>Teacher:</strong> Compare these two expressions:</p>
+<p><span class="math display">\[
+(2+3)+4
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+2+(3+4).
+\]</span></p>
+<p>The order is still 2, then 3, then 4. Only the brackets have moved.</p>
+</blockquote>
+<p>An operation is <strong>associative</strong> when changing the grouping does not change the answer:</p>
+<p><span class="math display">\[
+(a*b)*c=a*(b*c).
+\]</span></p>
+<p>The brackets tell us which operation is performed first.</p>
+<section id="addition-is-associative" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="addition-is-associative"><span class="header-section-number">7.1</span> Addition is associative</h3>
+<p>Addition is associative for natural numbers, whole numbers, and integers.</p>
+<p><span class="math display">\[
+(2+3)+4=5+4=9
+\]</span></p>
+<p><span class="math display">\[
+2+(3+4)=2+7=9
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+(2+3)+4=2+(3+4).
+\]</span></p>
+<p>This remains true when negative integers are used:</p>
+<p><span class="math display">\[
+((-5)+2)+7=-3+7=4
+\]</span></p>
+<p><span class="math display">\[
+(-5)+(2+7)=-5+9=4.
+\]</span></p>
+</section>
+<section id="multiplication-is-associative" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="multiplication-is-associative"><span class="header-section-number">7.2</span> Multiplication is associative</h3>
+<p>Multiplication is associative for all three number sets:</p>
+<p><span class="math display">\[
+(2\times3)\times4=6\times4=24
+\]</span></p>
+<p><span class="math display">\[
+2\times(3\times4)=2\times12=24.
+\]</span></p>
+<p>For integers,</p>
+<p><span class="math display">\[
+((-2)\times3)\times4=-6\times4=-24
+\]</span></p>
+<p><span class="math display">\[
+(-2)\times(3\times4)=(-2)\times12=-24.
+\]</span></p>
+</section>
+<section id="subtraction-is-not-associative" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="subtraction-is-not-associative"><span class="header-section-number">7.3</span> Subtraction is not associative</h3>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Let us test subtraction.</p>
+<p><strong>Student:</strong></p>
+<p><span class="math display">\[
+(10-6)-2=4-2=2
+\]</span></p>
+<p>but</p>
+<p><span class="math display">\[
+10-(6-2)=10-4=6.
+\]</span></p>
+<p>The answers are different.</p>
+</blockquote>
+<p>Therefore, subtraction is not associative:</p>
+<p><span class="math display">\[
+(10-6)-2\neq10-(6-2).
+\]</span></p>
+</section>
+<section id="division-is-not-associative" class="level3" data-number="7.4">
+<h3 data-number="7.4" class="anchored" data-anchor-id="division-is-not-associative"><span class="header-section-number">7.4</span> Division is not associative</h3>
+<p>Division is not associative either:</p>
+<p><span class="math display">\[
+(24\div6)\div2=4\div2=2
+\]</span></p>
+<p>but</p>
+<p><span class="math display">\[
+24\div(6\div2)=24\div3=8.
+\]</span></p>
+<p>Thus,</p>
+<p><span class="math display">\[
+(24\div6)\div2\neq24\div(6\div2).
+\]</span></p>
+</section>
+</section>
+<section id="property-table" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="property-table"><span class="header-section-number">8</span> Property table</h2>
+<p>For natural numbers, whole numbers, and integers, the commutative and associative results are the same wherever the operation is defined.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Operation</th>
+<th style="text-align: center;">Commutative?</th>
+<th style="text-align: center;">Associative?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Addition</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Subtraction</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Multiplication</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Division</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Can we use the word “associative” for two numbers?</p>
+<p><strong>Student:</strong> No.&nbsp;Associativity concerns the grouping of three numbers, while commutativity concerns changing the order of two numbers.</p>
+</blockquote>
+<p>That distinction is important:</p>
+<ul>
+<li><strong>Commutative:</strong> change the order: <span class="math inline">\(a+b\)</span> versus <span class="math inline">\(b+a\)</span>.</li>
+<li><strong>Associative:</strong> change the grouping: <span class="math inline">\((a+b)+c\)</span> versus <span class="math inline">\(a+(b+c)\)</span>.</li>
+</ul>
+</section>
+<section id="additive-identity-adding-nothing" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="additive-identity-adding-nothing"><span class="header-section-number">9</span> Additive identity: adding nothing</h2>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> We now turn to addition. Is there a number that we can add without changing a number?</p>
+<p><strong>Student:</strong> Adding zero does that. For example, <span class="math inline">\(7+0=7\)</span>.</p>
+<p><strong>Teacher:</strong> Correct. Zero is called the <strong>additive identity</strong>.</p>
+</blockquote>
+<p>A number <span class="math inline">\(e\)</span> is an additive identity for a set if adding it to any number in the set leaves that number unchanged:</p>
+<p><span class="math display">\[
+a+e=a=e+a.
+\]</span></p>
+<p>For ordinary number systems, the additive identity is <span class="math inline">\(0\)</span>.</p>
+<p><span class="math display">\[
+a+0=a=0+a.
+\]</span></p>
+<section id="which-sets-contain-the-additive-identity" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="which-sets-contain-the-additive-identity"><span class="header-section-number">9.1</span> Which sets contain the additive identity?</h3>
+<ul>
+<li>Natural numbers do not contain 0 under our convention. Therefore, the natural numbers do not contain their additive identity.</li>
+<li>Whole numbers contain 0. Therefore, the whole numbers contain their additive identity.</li>
+<li>Integers contain 0. Therefore, the integers contain their additive identity.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Student:</strong> Natural numbers can still be added to zero, but zero is not a member of the natural-number set.</p>
+<p><strong>Teacher:</strong> Exactly. The identity exists in the larger number system, but it is not included in <span class="math inline">\(\mathbb{N}\)</span> as we have defined it.</p>
+</blockquote>
+</section>
+</section>
+<section id="additive-inverse-cancelling-a-number" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="additive-inverse-cancelling-a-number"><span class="header-section-number">10</span> Additive inverse: cancelling a number</h2>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Now let us ask a different question. What number can we add to 5 to get back to zero?</p>
+<p><strong>Student:</strong> <span class="math inline">\(-5\)</span>, because <span class="math inline">\(5+(-5)=0\)</span>.</p>
+<p><strong>Teacher:</strong> Good. <span class="math inline">\(-5\)</span> is the additive inverse of 5.</p>
+</blockquote>
+<p>The <strong>additive inverse</strong> of a number <span class="math inline">\(a\)</span> is the number <span class="math inline">\(-a\)</span> such that</p>
+<p><span class="math display">\[
+a+(-a)=0.
+\]</span></p>
+<p>Examples:</p>
+<p><span class="math display">\[
+7+(-7)=0,
+\]</span></p>
+<p><span class="math display">\[
+-3+3=0,
+\]</span></p>
+<p><span class="math display">\[
+0+0=0.
+\]</span></p>
+<p>The additive inverse changes the direction of a number on the number line. The numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(-a\)</span> are the same distance from zero but lie on opposite sides.</p>
+<div id="b33bfeb7" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="properties-of-number-sets_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="additive-inverses-in-the-three-sets" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="additive-inverses-in-the-three-sets"><span class="header-section-number">11</span> Additive inverses in the three sets</h2>
+<section id="natural-numbers" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="natural-numbers"><span class="header-section-number">11.1</span> Natural numbers</h3>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Does every natural number have its additive inverse in the natural numbers?</p>
+<p><strong>Student:</strong> The additive inverse of 4 is <span class="math inline">\(-4\)</span>, but <span class="math inline">\(-4\)</span> is not natural. So no.</p>
+</blockquote>
+<p>Natural numbers do not contain the additive inverse of any positive natural number. The exception would be 0, but 0 is not in <span class="math inline">\(\mathbb{N}\)</span> under our convention. Therefore, <span class="math inline">\(\mathbb{N}\)</span> does not contain additive inverses for its members.</p>
+</section>
+<section id="whole-numbers" class="level3" data-number="11.2">
+<h3 data-number="11.2" class="anchored" data-anchor-id="whole-numbers"><span class="header-section-number">11.2</span> Whole numbers</h3>
+<p>Whole numbers also do not contain additive inverses for their positive members:</p>
+<p><span class="math display">\[
+5\in\mathbb{W},\qquad -5\notin\mathbb{W}.
+\]</span></p>
+<p>The number 0 is its own additive inverse because</p>
+<p><span class="math display">\[
+0+0=0.
+\]</span></p>
+<p>However, having one member with an inverse is not enough for the set to contain additive inverses for all its members. Therefore, the whole numbers do not contain additive inverses for all their members.</p>
+</section>
+<section id="integers" class="level3" data-number="11.3">
+<h3 data-number="11.3" class="anchored" data-anchor-id="integers"><span class="header-section-number">11.3</span> Integers</h3>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> What about the integers?</p>
+<p><strong>Student:</strong> If <span class="math inline">\(a\)</span> is an integer, then <span class="math inline">\(-a\)</span> is also an integer. So every integer has its additive inverse in the integers.</p>
+</blockquote>
+<p>Examples:</p>
+<p><span class="math display">\[
+6\text{ and }-6,
+\qquad
+-9\text{ and }9,
+\qquad
+0\text{ and }0.
+\]</span></p>
+<p>Therefore, the integers contain an additive inverse for every member.</p>
+</section>
+</section>
+<section id="identity-and-inverse-are-different" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="identity-and-inverse-are-different"><span class="header-section-number">12</span> Identity and inverse are different</h2>
+<blockquote class="blockquote">
+<p><strong>Student:</strong> Both additive identity and additive inverse involve zero. Are they the same idea?</p>
+<p><strong>Teacher:</strong> No.&nbsp;They are related, but they answer different questions.</p>
+</blockquote>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Idea</th>
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Additive identity</td>
+<td style="text-align: left;">What can I add without changing the number?</td>
+<td style="text-align: left;"><span class="math inline">\(8+0=8\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Additive inverse</td>
+<td style="text-align: left;">What can I add to cancel the number?</td>
+<td style="text-align: left;"><span class="math inline">\(8+(-8)=0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The identity is the number that leaves a value unchanged. The inverse is the number that combines with a given value to produce the identity.</p>
+</section>
+<section id="putting-the-ideas-together" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="putting-the-ideas-together"><span class="header-section-number">13</span> Putting the ideas together</h2>
+<blockquote class="blockquote">
+<p><strong>Teacher:</strong> Let us now review the whole investigation. We asked four different questions.</p>
+<p><strong>Student:</strong> First, whether the answer stays in the set. That was closure.</p>
+<p><strong>Teacher:</strong> Second, whether changing order changes the answer. That was commutativity.</p>
+<p><strong>Student:</strong> Third, whether changing brackets changes the answer. That was associativity.</p>
+<p><strong>Teacher:</strong> Fourth, whether the set contains zero and the opposites needed for addition. Those were additive identity and additive inverse.</p>
+</blockquote>
+<section id="closure-summary" class="level3" data-number="13.1">
+<h3 data-number="13.1" class="anchored" data-anchor-id="closure-summary"><span class="header-section-number">13.1</span> Closure summary</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Set</th>
+<th style="text-align: center;">Closed under <span class="math inline">\(+\)</span></th>
+<th style="text-align: center;">Closed under <span class="math inline">\(-\)</span></th>
+<th style="text-align: center;">Closed under <span class="math inline">\(\times\)</span></th>
+<th style="text-align: center;">Closed under <span class="math inline">\(\div\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mathbb{N}\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\mathbb{W}\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mathbb{Z}\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="commutativity-and-associativity-summary" class="level3" data-number="13.2">
+<h3 data-number="13.2" class="anchored" data-anchor-id="commutativity-and-associativity-summary"><span class="header-section-number">13.2</span> Commutativity and associativity summary</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Operation</th>
+<th style="text-align: center;">Commutative</th>
+<th style="text-align: center;">Associative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\times\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\div\)</span></td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="additive-identity-and-inverse-summary" class="level3" data-number="13.3">
+<h3 data-number="13.3" class="anchored" data-anchor-id="additive-identity-and-inverse-summary"><span class="header-section-number">13.3</span> Additive identity and inverse summary</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Set</th>
+<th style="text-align: center;">Contains additive identity <span class="math inline">\(0\)</span>?</th>
+<th style="text-align: center;">Contains additive inverse for every member?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mathbb{N}\)</span></td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\mathbb{W}\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mathbb{Z}\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="short-summary-for-recall" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="short-summary-for-recall"><span class="header-section-number">14</span> Short summary for recall</h2>
+<p>Remember the following sequence:</p>
+<ul>
+<li><strong>Closure:</strong> Do we stay inside the set?</li>
+<li><strong>Commutative:</strong> Can we change the order?</li>
+<li><strong>Associative:</strong> Can we change the grouping?</li>
+<li><strong>Additive identity:</strong> Zero leaves a number unchanged: <span class="math inline">\(a+0=a\)</span>.</li>
+<li><strong>Additive inverse:</strong> The opposite cancels a number: <span class="math inline">\(a+(-a)=0\)</span>.</li>
+</ul>
+<p>For the three sets:</p>
+<ul>
+<li>Natural numbers: closed under addition and multiplication only; no zero and no negative numbers.</li>
+<li>Whole numbers: closed under addition and multiplication; includes zero but not negative numbers.</li>
+<li>Integers: closed under addition, subtraction, and multiplication; includes zero and the additive inverse of every integer.</li>
+</ul>
+<p>For the four operations:</p>
+<ul>
+<li>Addition and multiplication are commutative and associative.</li>
+<li>Subtraction and division are neither commutative nor associative.</li>
+<li>Division is not closed for natural numbers, whole numbers, or integers because it can produce fractions.</li>
+</ul>
+<p>A compact memory sentence is:</p>
+<blockquote class="blockquote">
+<p><strong>Stay inside, swap order, regroup, leave unchanged, cancel:</strong> closure, commutative, associative, identity, inverse.</p>
+</blockquote>
+</section>
+<section id="check-your-understanding" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="check-your-understanding"><span class="header-section-number">15</span> Check your understanding</h2>
+<section id="question-1" class="level3" data-number="15.1">
+<h3 data-number="15.1" class="anchored" data-anchor-id="question-1"><span class="header-section-number">15.1</span> Question 1</h3>
+<p>Are natural numbers closed under subtraction? Explain using a counterexample.</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> Choose two natural numbers in the order that makes the smaller number come first: <span class="math inline">\(3-8=-5\)</span>. Since <span class="math inline">\(-5\)</span> is not natural, natural numbers are not closed under subtraction.</p>
+</blockquote>
+</section>
+<section id="question-2" class="level3" data-number="15.2">
+<h3 data-number="15.2" class="anchored" data-anchor-id="question-2"><span class="header-section-number">15.2</span> Question 2</h3>
+<p>Are whole numbers closed under division?</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> Try <span class="math inline">\(3\div2=\frac32\)</span>. The inputs are whole numbers, but the answer is not a whole number. Therefore, whole numbers are not closed under division.</p>
+</blockquote>
+</section>
+<section id="question-3" class="level3" data-number="15.3">
+<h3 data-number="15.3" class="anchored" data-anchor-id="question-3"><span class="header-section-number">15.3</span> Question 3</h3>
+<p>Are integers closed under subtraction?</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> Subtracting one integer from another gives an integer. For example, <span class="math inline">\(-4-7=-11\)</span> and <span class="math inline">\(3-(-5)=8\)</span>. Therefore, integers are closed under subtraction.</p>
+</blockquote>
+</section>
+<section id="question-4" class="level3" data-number="15.4">
+<h3 data-number="15.4" class="anchored" data-anchor-id="question-4"><span class="header-section-number">15.4</span> Question 4</h3>
+<p>Is subtraction commutative?</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> Compare <span class="math inline">\(9-4=5\)</span> with <span class="math inline">\(4-9=-5\)</span>. The answers differ, so subtraction is not commutative.</p>
+</blockquote>
+</section>
+<section id="question-5" class="level3" data-number="15.5">
+<h3 data-number="15.5" class="anchored" data-anchor-id="question-5"><span class="header-section-number">15.5</span> Question 5</h3>
+<p>Is addition associative?</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> Compare grouping rather than order: <span class="math inline">\((2+5)+3=7+3=10\)</span>, while <span class="math inline">\(2+(5+3)=2+8=10\)</span>. Addition is associative.</p>
+</blockquote>
+</section>
+<section id="question-6" class="level3" data-number="15.6">
+<h3 data-number="15.6" class="anchored" data-anchor-id="question-6"><span class="header-section-number">15.6</span> Question 6</h3>
+<p>Is division associative?</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> Compare <span class="math inline">\((24\div6)\div2=2\)</span> with <span class="math inline">\(24\div(6\div2)=8\)</span>. Since the answers differ, division is not associative.</p>
+</blockquote>
+</section>
+<section id="question-7" class="level3" data-number="15.7">
+<h3 data-number="15.7" class="anchored" data-anchor-id="question-7"><span class="header-section-number">15.7</span> Question 7</h3>
+<p>What is the additive identity?</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> We need a number that can be added without changing the original number. Since <span class="math inline">\(a+0=a\)</span>, the additive identity is 0.</p>
+</blockquote>
+</section>
+<section id="question-8" class="level3" data-number="15.8">
+<h3 data-number="15.8" class="anchored" data-anchor-id="question-8"><span class="header-section-number">15.8</span> Question 8</h3>
+<p>What is the additive inverse of <span class="math inline">\(-12\)</span>?</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> The additive inverse has the opposite sign. The opposite of <span class="math inline">\(-12\)</span> is 12, and <span class="math inline">\(-12+12=0\)</span>.</p>
+</blockquote>
+</section>
+<section id="question-9" class="level3" data-number="15.9">
+<h3 data-number="15.9" class="anchored" data-anchor-id="question-9"><span class="header-section-number">15.9</span> Question 9</h3>
+<p>Which of the three sets contains the additive identity?</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> The identity is 0. Zero is not in <span class="math inline">\(\mathbb{N}\)</span>, but it is in <span class="math inline">\(\mathbb{W}\)</span> and <span class="math inline">\(\mathbb{Z}\)</span>. Therefore, whole numbers and integers contain the additive identity.</p>
+</blockquote>
+</section>
+<section id="question-10" class="level3" data-number="15.10">
+<h3 data-number="15.10" class="anchored" data-anchor-id="question-10"><span class="header-section-number">15.10</span> Question 10</h3>
+<p>Which of the three sets contains the additive inverse of every member?</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> Natural and whole numbers contain positive numbers but not their negatives. Integers contain both <span class="math inline">\(a\)</span> and <span class="math inline">\(-a\)</span> for every integer <span class="math inline">\(a\)</span>. Therefore, the integers contain the additive inverse of every member.</p>
+</blockquote>
+</section>
+<section id="question-11" class="level3" data-number="15.11">
+<h3 data-number="15.11" class="anchored" data-anchor-id="question-11"><span class="header-section-number">15.11</span> Question 11</h3>
+<p>A student says, “The whole numbers are closed under subtraction because <span class="math inline">\(8-3=5\)</span>.” Is the reasoning complete?</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> No.&nbsp;One successful example does not prove closure. We must check whether the result is always a whole number. The counterexample <span class="math inline">\(3-8=-5\)</span> shows that whole numbers are not closed under subtraction.</p>
+</blockquote>
+</section>
+<section id="question-12" class="level3" data-number="15.12">
+<h3 data-number="15.12" class="anchored" data-anchor-id="question-12"><span class="header-section-number">15.12</span> Question 12</h3>
+<p>A student says, “The additive identity is the number that makes the answer zero.” Is this correct?</p>
+<blockquote class="blockquote">
+<p><strong>Think aloud:</strong> No.&nbsp;That describes an additive inverse. The additive identity leaves a number unchanged: <span class="math inline">\(7+0=7\)</span>. The additive inverse cancels a number: <span class="math inline">\(7+(-7)=0\)</span>.</p>
+</blockquote>
+</section>
+</section>
+<section id="final-thinking-aloud-conversation" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="final-thinking-aloud-conversation"><span class="header-section-number">16</span> Final thinking-aloud conversation</h2>
+<blockquote class="blockquote">
+<p><strong>Student:</strong> I can now separate the properties. Closure is about whether the answer remains in the set. Commutativity is about changing order. Associativity is about changing brackets.</p>
+<p><strong>Teacher:</strong> Good. And what do identity and inverse tell us?</p>
+<p><strong>Student:</strong> The additive identity is zero because adding it changes nothing. The additive inverse is the opposite number because adding the two gives zero.</p>
+<p><strong>Teacher:</strong> And which set is the most complete of the three for addition and subtraction?</p>
+<p><strong>Student:</strong> The integers. They include zero, every integer’s additive inverse, and they are closed under addition and subtraction.</p>
+</blockquote>
+<p>The purpose of these properties is not merely to memorise tables. They help us predict what operations will do before calculating. Once we understand the question each property asks, the patterns in the number sets become easier to see.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/gvgk\.in\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Currently associated with <a href="https://farmhill.in"><em>Farm Hill Education Trust</em></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:venu.gvgk@gmail.com">
+      <i class="bi bi-envelope-at" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/venugvgk">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/venu.gvgk">
+      <i class="bi bi-facebook" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/venu.gvgk">
+      <i class="bi bi-instagram" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
