@@ -1,0 +1,144 @@
+---
+title: Session 1 Class notes - Revision of Linear Equations
+date: 2026-09-08
+page-layout: article
+publish: false
+format:
+  html:
+    toc: true
+    code-fold: true
+    html-math-method: katex
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+jupyter: python3
+execute:
+  warning: false
+---
+## Course Overview & Prerequisites
+
+The instructor outlines the course structure, noting that A-Level Pure Mathematics 1 begins with quadratics.
+
+Key prerequisites reviewed include solving quadratic equations by factoring, solving linear inequalities and simultaneous equations, and manipulating surds.
+
+Online practice resources (such as Step Up to A-Level Math) and the Pure Mathematics 1 online textbook are highlighted for student reference.
+
+The instructor stresses the importance of completing all assigned questions and actively reflecting on concepts, warning that the fast-paced curriculum covers about 32 chapters across 4 textbooks.
+
+**The questions numbers here refer to the prework.**
+
+## Graphical Properties of Linear Relationships (Questions 1–3)
+
+Base Line ($y = x$): Plotting $y = x$ produces a straight line passing directly through the origin $(0, 0)$.
+
+Effect of Gradient ($m$):
+
+$y = 5x$ is significantly steeper than $y = x$, shifting closer to the $y$-axis.
+
+$y = \frac{x}{5}$ is much less steep, rotating closer to the $x$-axis.
+
+$y = -x$ flips direction into the negative quadrants.
+
+$y = -5x$ is steeper in the negative direction, while $y = -\frac{x}{5}$ flattens toward the $x$-axis.
+
+Vertical Translations ($c$):
+
+Comparing $y = 2x$, $y = 2x + 3$, and $y = 2x - 3$ shows that adding or subtracting a constant shifts the line up or down without altering its steepness.
+
+Slope-Intercept Form ($y = mx + c$):
+
+$m$ represents the gradient (steepness/inclination).
+
+$c$ represents the $y$-intercept, which is the exact value of $y$ when $x = 0$.
+
+## General Form & Finding Intercepts (Question 4)
+
+Converting $ax + by + c = 0$:
+
+Rearranging $ax + by + c = 0$ into $y = mx + c$ yields $y = \left(-\frac{a}{b}\right)x - \frac{c}{b}$.
+
+From this form, the gradient is $m = -\frac{a}{b}$ and the $y$-intercept is $-\frac{c}{b}$.
+
+Universal Intercept Method:
+
+To plot any linear relationship (such as $2x + 3y - 6 = 0$), finding two points is sufficient.
+
+Setting $x = 0$ gives the $y$-intercept: $3y = 6 \implies y = 2$, yielding point $(0, 2)$.
+
+Setting $y = 0$ gives the $x$-intercept: $2x = 6 \implies x = 3$, yielding point $(3, 0)$.
+
+### Geometric Rationale:
+
+Co-teacher Vijay explains that setting $x = 0$ and $y = 0$ is the simplest approach because it locates where the line crosses the existing axes on the graph grid.
+
+## Physical & Mathematical Meaning of Gradient
+
+Rise over Run: Gradient is defined as $\text{Rise} / \text{Run}$ ($\frac{\Delta y}{\Delta x}$).
+
+Sign of Gradient:
+
+A line rising from left to right has a positive slope.
+
+A line falling from left to right has a negative slope.
+
+### Real-World Rationale:
+
+The instructor uses an analogy of a mason building a slide: contractors measure slope physically as "4 feet rise over 6 feet run" rather than measuring angle degrees with a protractor in the field.
+
+Calculating Gradient from Two Points:
+
+Given $(x_1, y_1)$ and $(x_2, y_2)$, $m = \frac{y_2 - y_1}{x_2 - x_1}$.
+
+## Algebraic vs. Geometric Interpretations (Questions 5–6)
+
+Single Equation ($2x + 3y = 6$):
+
+Algebraic: Infinitely many ordered pairs $(x, y)$ that satisfy the equation.
+
+Geometric: A straight line where every point on the line represents a valid solution.
+
+Simultaneous Equations ($2x + 3y = 6$ and $3x + 2y = 4$):
+
+Algebraic: An ordered pair $(x, y)$ that makes both equations true simultaneously.
+
+Geometric: The specific intersection point of the two lines (in this case, $(0, 2)$).
+
+Non-linear Extension: The instructor notes that this concept extends to higher-degree equations, where solutions represent intersection points between curves.
+
+## Methods of Solving & Line Relationships (Questions 7–10)
+
+Algebraic Methods:
+
+Substitution: Rearranging one equation for $x$ or $y$ and substituting it into the second.
+
+Elimination: Equating coefficients of variable terms so adding or subtracting eliminates one variable.
+
+Three Geometric Cases for Two Lines:
+
+Parallel Lines: Equal gradients ($m_1 = m_2$) but different $y$-intercepts ($c_1 \neq c_2$) $\implies$ no solution.
+
+Intersecting Lines: Different gradients ($m_1 \neq m_2$) $\implies$ one unique solution.
+
+Coincident / Same Line: Equal gradients ($m_1 = m_2$) and equal $y$-intercepts ($c_1 = c_2$) $\implies$ infinitely many solutions.
+
+## Challenge Problem: Line Through $(1, 2)$ and $(3, 4)$
+
+Graphical/Geometric Solution:
+
+Plotting $(1, 2)$ and $(3, 4)$ allows students to read the $y$-intercept directly off the graph at $(0, 1)$ ($c = 1$).
+
+Calculating rise over run between the points gives $\frac{4 - 2}{3 - 1} = \frac{2}{2} = 1$ ($m = 1$).
+
+Combining these gives the equation directly: $y = x + 1$.
+
+Alternative Algebraic Methods:
+
+Method 1: Substitute both points into $y = mx + c$ to form simultaneous equations ($2 = m + c$ and $4 = 3m + c$) and solve for $m = 1, c = 1$.
+
+Method 2: Calculate $m = \frac{4-2}{3-1} = 1$ first, then substitute one point into $y = 1x + c$ to find $c = 1$.
+
+Value of Dual Approaches: While graphs provide immediate visual intuition, algebra is essential when dealing with non-integer values or decimals that cannot be accurately read by hand.
+
+## Digital Tools & Homework Assignment
+
+GeoGebra Demo: The class is introduced to geogebra.org as a digital graphing tool to inspect equations visually.

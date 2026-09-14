@@ -1,6 +1,6 @@
 ---
 title: Session 2 - Exploring Quadratic Curves - Answers
-date: 2026-09-08
+date: 2026-09-10
 page-layout: article
 publish: false
 format:

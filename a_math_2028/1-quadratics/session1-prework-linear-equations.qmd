@@ -1,16 +1,8 @@
 ---
-title: Preparation for A Level Math
-date: 2026-08-27
+title: Session 1 Prework Linear Equations
+date: 2026-09-05
 page-layout: article
 ---
-Revise the following.
-
-## Quadratics
-
-1. Solve quadratic equations by factorising
-2. Solve linear equalities and inequalities
-3. Solve simultaneous linear equations
-4. Carry out simple manipulation of surds
 
 ### Linear Equations - A few exercises to do and questions to think about
 
@@ -33,23 +25,3 @@ Revise the following.
 9. Is it always necessary for two simultaneous linear equations to have a unique solution? What are the other possibilities? Can you think of examples of two simultaneous linear equations that have no solution or infinitely many solutions? How do two simultaneous linear equations with no solution look like on a graph? How do two simultaneous linear equations with infinitely many solutions look like on a graph? How can you identify such equations algebraically?
 
 10. Suppose I tell you there is a linear equation with two solutions - $(1,2)$ and $(3,4)$. Can you find that linear equation? (hint: think geometrically)
-
-## Coordinate Geometry
-
-1. Find the midpoint and length of a line segment
-2. Find the gradient (slope) of a line and state the gradient of a line that is perpendicular to the line
-3. Interpret and use equations of lines of the form $y = mx + c$
-
-## Circular Measure
-
-1. Find the perimeter and area of sectors
-2. Use Pythagoras’ theorem and trigonometry on right-angled triangles.
-
-## Series
-
-1. Arithmetic and Geometric progressions
-2. Calculating the nth term
-
-## Online resources
-
-[Step up to A level Math](https://www.cimt.org.uk/projects/mepres/step-up/index.htm)

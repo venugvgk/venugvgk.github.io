@@ -1,0 +1,97 @@
+---
+title: Session 2 Class notes - Linear to quadratic
+date: 2026-09-10
+page-layout: article
+publish: false
+format:
+  html:
+    toc: true
+    code-fold: true
+    html-math-method: katex
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+jupyter: python3
+execute:
+  warning: false
+---
+
+## Part 1: Linear Equations, Conversion of Forms, and Finding Intercepts
+
+The instructor opens the class by connecting the foundational concepts developed in linear equations to quadratic equations.
+
+The two general forms of a linear relationship between $y$ and $x$ are identified as $y = mx + c$ (slope-intercept form) and $ax + by + c = 0$ (general form), noting that each can be converted into the other through algebraic rearrangement.
+
+To plot a linear equation such as $2x + 3y + 5 = 0$, the instructor emphasizes that finding at least two points is required.
+
+The most efficient method discussed is finding where the line crosses the coordinate axes:
+
+Setting $x = 0$ eliminates the $x$-term, leaving $3y = -5$, which solves to $y = -5/3$ (approximately $-1.6$ or $-1.66$).
+
+The resulting point $(0, -5/3)$ lies on the $y$-axis and represents the $y$-intercept.
+
+Setting $y = 0$ in $2x + 3y + 5 = 0$ gives $2x = -5$, which yields $x = -5/2$ ($-2.5$), defining the $x$-intercept where the line crosses the $x$-axis.
+
+## Part 2: Teaching Philosophy, Conceptual Understanding & Meta-Thinking
+
+The instructor and co-teacher (Vijay) explain the deliberate decision to pace foundational lessons slowly.
+
+Completing 10 to 15 homework problems perfunctorily without deep reflection is discouraged; true mastery requires "meta-thinking"—evaluating whether one genuinely understands the underlying concepts rather than just manipulating equations.
+
+While algorithmic procedures can be executed automatically by computers, human learning relies on recognizing unified algebraic and geometric patterns.
+
+## Part 3: Algebraic and Geometric Properties of Straight Lines
+
+A single linear equation like $2x + 3y + 5 = 0$ has infinitely many solutions, which correspond algebraically to ordered pairs $(x, y)$ and geometrically to points forming a straight line.
+
+Converting the general equation $ax + by + c = 0$ into $y = mx + c$ form gives a gradient of $m = -a/b$ and a $y$-intercept of $c = -c/b$.
+
+For a line passing through $(2, 0)$ and $(0, 2)$, calculating the gradient via $m = \frac{y_2 - y_1}{x_2 - x_1}$ gives $m = \frac{2 - 0}{0 - 2} = -1$. Combining this with the $y$-intercept at $(0, 2)$ yields the equation $y = -x + 2$.
+
+The sign of the gradient indicates the line's orientation: a line rising from left to right has a positive gradient, whereas a line falling from left to right has a negative gradient. A larger magnitude for $m$ signifies a steeper line.
+
+In $y = mx + 3$, varying $m$ while fixing $c = 3$ causes the line to rotate around the $y$-intercept $(0, 3)$ as a fulcrum.
+
+For $y = 2x - 5$, the $y$-intercept is $-5$, and setting $y = 0$ determines an $x$-intercept of $5/2$ ($2.5$).
+
+## Part 4: Systems of Linear Equations and Line Relationships
+
+Geometrically, the solution to a system of two linear equations corresponds to the intersection point of the two lines.
+
+Systems can be solved algebraically using substitution or elimination; elimination is often faster when matching terms cancel directly (e.g., adding $2x + y = 5$ and $x - y = 1$ eliminates $y$ to yield $3x = 6 \implies x = 2, y = 1$).
+
+Comparing two lines algebraically reveals three geometric cases:
+
+    Parallel Lines: Equal gradients ($m_1 = m_2$) but different $y$-intercepts ($c_1 \neq c_2$) $\implies$ no intersection and no solution (e.g., $y = 2x + 1$ and $y = 2x - 3$).
+
+    Coincident / Identical Lines: Equal gradients ($m_1 = m_2$) and equal $y$-intercepts ($c_1 = c_2$) $\implies$ infinitely many solutions (e.g., $y = 3x + 2$ and $2y = 6x + 4$).
+
+    Intersecting Lines: Different gradients $\implies$ a unique solution; if $y$-intercepts match (e.g., $y = x + 2$ and $y = -x + 2$), they intersect directly at $(0, 2)$ on the $y$-axis.
+
+## Part 5: Transition to Quadratic Equations and Parabolas
+
+The session transitions into exploring quadratic relationships, starting with $y = x^2$.
+
+Evaluating $y = x^2$ for positive, negative, and zero values of $x$ demonstrates that $y$ is never negative and the curve is symmetric about the $y$-axis.
+
+This U-shaped curve is defined as a parabola, with its lowest point (vertex) located at $(0, 0)$.
+
+In $y = ax^2$, increasing the coefficient $a$ narrows the parabola (e.g., $y = 2x^2$ is narrower than $y = x^2$, while $y = 0.5x^2$ is wider).
+
+When $a$ is negative (e.g., $y = -x^2$), the parabola flips to open downwards, placing its highest point at $(0, 0)$. A distinction is made between $y = -x^2$ (squaring first, opening downwards) and $y = (-x)^2$ (simplifying to $x^2$, opening upwards).
+
+Adding a constant $c$ in $y = ax^2 + c$ vertically translates the parabola up or down along the $y$-axis.
+
+The fundamental definition of intercepts remains identical across linear and non-linear functions: the $y$-intercept occurs where $x = 0$, and $x$-intercepts occur where $y = 0$.
+
+Depending on its vertical shift, a parabola can have zero, one, or two $x$-intercepts:
+
+For $y = x^2 - 4$, setting $y = 0$ gives $x^2 = 4 \implies x = \pm 2$, creating $x$-intercepts at $(-2, 0)$ and $(2, 0)$.
+
+For $y = x^2 + 2$, setting $y = 0$ gives $x^2 = -2$, which has no real solution, proving geometrically that the curve never crosses the $x$-axis.
+
+Sketching a general parabola $y = ax^2 + bx + c$ requires identifying four key salient points: the $y$-intercept ($x = 0$), two $x$-intercepts ($y = 0$), and the vertex.
+
+## Further Work 
+
+Homework assigned for the next class includes completing the quadratic exploration worksheet, providing real-world examples of straight lines and parabolas, and consolidating linear equation fundamentals.
