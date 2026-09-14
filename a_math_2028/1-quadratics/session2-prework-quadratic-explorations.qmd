@@ -1,5 +1,5 @@
 ---
-title: Session 2 - prework - Exploring Quadratic Curves
+title: Session 2 Prework Exploring Quadratic Curves
 date: 2026-09-09
 page-layout: article
 publish: false

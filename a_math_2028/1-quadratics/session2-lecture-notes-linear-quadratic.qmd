@@ -1,5 +1,5 @@
 ---
-title: Session 2 Class notes - Linear to quadratic
+title: Session 2 Lecture Notes Linear to quadratic
 date: 2026-09-10
 page-layout: article
 publish: false

@@ -1,6 +1,6 @@
 ---
-title: Check Your Understanding - Linear Equations  
-date: 2026-09-09
+title: Session 1 Check Your Understanding Linear Equations  
+date: 2026-09-08
 page-layout: article
 publish: false
 format:

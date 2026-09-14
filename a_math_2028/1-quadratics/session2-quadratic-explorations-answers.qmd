@@ -1,5 +1,5 @@
 ---
-title: Session 2 - Exploring Quadratic Curves - Answers
+title: Session 2 Exploring Quadratic Curves Solved
 date: 2026-09-10
 page-layout: article
 publish: false
