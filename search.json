@@ -1225,249 +1225,207 @@
     "text": "When we consider a quadratic function and a linear function together, we can have 0, 1, or 2 points of intersection. each point of intersection satisfies both the quadratic function and the linear function.\nTherefore, each point of intersection corresponds to a solution of the quadratic equation formed by equating the quadratic function in the y=f(x) form to the linear function in the y=mx+c form. This corresponds to how two linear equations of the form y = m_1x + c_1 and y = m_2x + c_2 can have 0, 1, or infinitely many points of intersection and can be solved by equating the two linear functions to form a linear equation.\nThe number of points of intersection between a quadratic curve and a line can be determined by the discriminant of the corresponding quadratic equation."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-prework-linear-equations.html",
-    "href": "a_math_2028/1-quadratics/session1-prework-linear-equations.html",
-    "title": "Session 1 Prework Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html",
+    "href": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html",
+    "title": "Session 2 Lecture Notes Linear to quadratic",
     "section": "",
-    "text": "Linear Equations - A few exercises to do and questions to think about\n\nOn a graph sheet, plot the relationship \\(y = x\\). This is a straight line through the origin. Now plot \\(y = 5x\\) and \\(y = x/5\\). What do you notice about the steepness of the lines? What is the gradient (slope) of each line? What happens when you plot \\(y = -x\\), \\(y = -5x\\) and \\(y = -x/5\\)?\nOn a graph sheet, plot \\(y = 2x\\). Now plot \\(y = 2x + 3\\) and \\(y = 2x - 3\\). What is changing? What do you notice about the steepness of the lines? What is the gradient (slope) of each line?\nUsing the above two graphs, interpret the general equation of a straight line \\(y = mx + c\\). What does \\(m\\) represent? What does \\(c\\) represent?\nThe other way of writing a linear relationship between \\(x\\) and \\(y\\) is in the form \\(ax + by + c = 0\\). How would you plot \\(2x + 3y - 6 = 0\\) on a graph sheet? Can you see how to convert this into \\(y = mx + c\\) form? (Hint: Rearranging gives \\(y = \\frac{-a}{b}x - \\frac{c}{b}\\)). What is the gradient (slope) of the line in this form? What is the \\(y\\)-intercept of the line in this form?\nConsider the linear equation \\(2x + 3y = 6\\). What is a solution to this equation? How many solutions does this equation have? Also, what does it mean when we say that \\((0,2)\\) is a solution to this equation? What is the algebraic meaning of a solution to a linear equation? What is the geometric meaning of a solution to a linear equation?\nNow consider two linear equations: \\(2x + 3y = 6\\) and \\(3x + 2y = 4\\). What does it mean when we say that the point \\((0,2)\\) is a solution to both equations? What is the algebraic meaning of a solution to two linear equations? What is the geometric meaning of a solution to two linear equations?\nCheck if you know how to solve two simultaneous linear equations using substitution method. In this method, you rearrange one equation to get y in terms of x (or x in terms of y) and then substitute this into the other equation. This will give you a single equation in one variable which you can solve. Once you have found the value of one variable, substitute it back into one of the original equations to find the value of the other variable.\nDo you know how to solve two simultaneous linear equations using elimination method? In this method, you multiply one or both equations by a suitable number so that when you add or subtract the two equations, one of the variables is eliminated. This will give you a single equation in one variable which you can solve. Once you have found the value of one variable, substitute it back into one of the original equations to find the value of the other variable.\nIs it always necessary for two simultaneous linear equations to have a unique solution? What are the other possibilities? Can you think of examples of two simultaneous linear equations that have no solution or infinitely many solutions? How do two simultaneous linear equations with no solution look like on a graph? How do two simultaneous linear equations with infinitely many solutions look like on a graph? How can you identify such equations algebraically?\nSuppose I tell you there is a linear equation with two solutions - \\((1,2)\\) and \\((3,4)\\). Can you find that linear equation? (hint: think geometrically)"
+    "text": "The instructor opens the class by connecting the foundational concepts developed in linear equations to quadratic equations.\nThe two general forms of a linear relationship between y and x are identified as y = mx + c (slope-intercept form) and ax + by + c = 0 (general form), noting that each can be converted into the other through algebraic rearrangement.\nTo plot a linear equation such as 2x + 3y + 5 = 0, the instructor emphasizes that finding at least two points is required.\nThe most efficient method discussed is finding where the line crosses the coordinate axes:\nSetting x = 0 eliminates the x-term, leaving 3y = -5, which solves to y = -5/3 (approximately -1.6 or -1.66).\nThe resulting point (0, -5/3) lies on the y-axis and represents the y-intercept.\nSetting y = 0 in 2x + 3y + 5 = 0 gives 2x = -5, which yields x = -5/2 (-2.5), defining the x-intercept where the line crosses the x-axis."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#part-1-linear-equations-conversion-of-forms-and-finding-intercepts",
+    "href": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#part-1-linear-equations-conversion-of-forms-and-finding-intercepts",
+    "title": "Session 2 Lecture Notes Linear to quadratic",
+    "section": "",
+    "text": "The instructor opens the class by connecting the foundational concepts developed in linear equations to quadratic equations.\nThe two general forms of a linear relationship between y and x are identified as y = mx + c (slope-intercept form) and ax + by + c = 0 (general form), noting that each can be converted into the other through algebraic rearrangement.\nTo plot a linear equation such as 2x + 3y + 5 = 0, the instructor emphasizes that finding at least two points is required.\nThe most efficient method discussed is finding where the line crosses the coordinate axes:\nSetting x = 0 eliminates the x-term, leaving 3y = -5, which solves to y = -5/3 (approximately -1.6 or -1.66).\nThe resulting point (0, -5/3) lies on the y-axis and represents the y-intercept.\nSetting y = 0 in 2x + 3y + 5 = 0 gives 2x = -5, which yields x = -5/2 (-2.5), defining the x-intercept where the line crosses the x-axis."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#part-2-teaching-philosophy-conceptual-understanding-meta-thinking",
+    "href": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#part-2-teaching-philosophy-conceptual-understanding-meta-thinking",
+    "title": "Session 2 Lecture Notes Linear to quadratic",
+    "section": "Part 2: Teaching Philosophy, Conceptual Understanding & Meta-Thinking",
+    "text": "Part 2: Teaching Philosophy, Conceptual Understanding & Meta-Thinking\nThe instructor and co-teacher (Vijay) explain the deliberate decision to pace foundational lessons slowly.\nCompleting 10 to 15 homework problems perfunctorily without deep reflection is discouraged; true mastery requires “meta-thinking”—evaluating whether one genuinely understands the underlying concepts rather than just manipulating equations.\nWhile algorithmic procedures can be executed automatically by computers, human learning relies on recognizing unified algebraic and geometric patterns."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#part-3-algebraic-and-geometric-properties-of-straight-lines",
+    "href": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#part-3-algebraic-and-geometric-properties-of-straight-lines",
+    "title": "Session 2 Lecture Notes Linear to quadratic",
+    "section": "Part 3: Algebraic and Geometric Properties of Straight Lines",
+    "text": "Part 3: Algebraic and Geometric Properties of Straight Lines\nA single linear equation like 2x + 3y + 5 = 0 has infinitely many solutions, which correspond algebraically to ordered pairs (x, y) and geometrically to points forming a straight line.\nConverting the general equation ax + by + c = 0 into y = mx + c form gives a gradient of m = -a/b and a y-intercept of c = -c/b.\nFor a line passing through (2, 0) and (0, 2), calculating the gradient via m = \\frac{y_2 - y_1}{x_2 - x_1} gives m = \\frac{2 - 0}{0 - 2} = -1. Combining this with the y-intercept at (0, 2) yields the equation y = -x + 2.\nThe sign of the gradient indicates the line’s orientation: a line rising from left to right has a positive gradient, whereas a line falling from left to right has a negative gradient. A larger magnitude for m signifies a steeper line.\nIn y = mx + 3, varying m while fixing c = 3 causes the line to rotate around the y-intercept (0, 3) as a fulcrum.\nFor y = 2x - 5, the y-intercept is -5, and setting y = 0 determines an x-intercept of 5/2 (2.5)."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#part-4-systems-of-linear-equations-and-line-relationships",
+    "href": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#part-4-systems-of-linear-equations-and-line-relationships",
+    "title": "Session 2 Lecture Notes Linear to quadratic",
+    "section": "Part 4: Systems of Linear Equations and Line Relationships",
+    "text": "Part 4: Systems of Linear Equations and Line Relationships\nGeometrically, the solution to a system of two linear equations corresponds to the intersection point of the two lines.\nSystems can be solved algebraically using substitution or elimination; elimination is often faster when matching terms cancel directly (e.g., adding 2x + y = 5 and x - y = 1 eliminates y to yield 3x = 6 \\implies x = 2, y = 1).\nComparing two lines algebraically reveals three geometric cases:\nParallel Lines: Equal gradients ($m_1 = m_2$) but different $y$-intercepts ($c_1 \\neq c_2$) $\\implies$ no intersection and no solution (e.g., $y = 2x + 1$ and $y = 2x - 3$).\n\nCoincident / Identical Lines: Equal gradients ($m_1 = m_2$) and equal $y$-intercepts ($c_1 = c_2$) $\\implies$ infinitely many solutions (e.g., $y = 3x + 2$ and $2y = 6x + 4$).\n\nIntersecting Lines: Different gradients $\\implies$ a unique solution; if $y$-intercepts match (e.g., $y = x + 2$ and $y = -x + 2$), they intersect directly at $(0, 2)$ on the $y$-axis."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#part-5-transition-to-quadratic-equations-and-parabolas",
+    "href": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#part-5-transition-to-quadratic-equations-and-parabolas",
+    "title": "Session 2 Lecture Notes Linear to quadratic",
+    "section": "Part 5: Transition to Quadratic Equations and Parabolas",
+    "text": "Part 5: Transition to Quadratic Equations and Parabolas\nThe session transitions into exploring quadratic relationships, starting with y = x^2.\nEvaluating y = x^2 for positive, negative, and zero values of x demonstrates that y is never negative and the curve is symmetric about the y-axis.\nThis U-shaped curve is defined as a parabola, with its lowest point (vertex) located at (0, 0).\nIn y = ax^2, increasing the coefficient a narrows the parabola (e.g., y = 2x^2 is narrower than y = x^2, while y = 0.5x^2 is wider).\nWhen a is negative (e.g., y = -x^2), the parabola flips to open downwards, placing its highest point at (0, 0). A distinction is made between y = -x^2 (squaring first, opening downwards) and y = (-x)^2 (simplifying to x^2, opening upwards).\nAdding a constant c in y = ax^2 + c vertically translates the parabola up or down along the y-axis.\nThe fundamental definition of intercepts remains identical across linear and non-linear functions: the y-intercept occurs where x = 0, and x-intercepts occur where y = 0.\nDepending on its vertical shift, a parabola can have zero, one, or two x-intercepts:\nFor y = x^2 - 4, setting y = 0 gives x^2 = 4 \\implies x = \\pm 2, creating x-intercepts at (-2, 0) and (2, 0).\nFor y = x^2 + 2, setting y = 0 gives x^2 = -2, which has no real solution, proving geometrically that the curve never crosses the x-axis.\nSketching a general parabola y = ax^2 + bx + c requires identifying four key salient points: the y-intercept (x = 0), two x-intercepts (y = 0), and the vertex."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#further-work",
+    "href": "a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html#further-work",
+    "title": "Session 2 Lecture Notes Linear to quadratic",
+    "section": "Further Work",
+    "text": "Further Work\nHomework assigned for the next class includes completing the quadratic exploration worksheet, providing real-world examples of straight lines and parabolas, and consolidating linear equation fundamentals."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "",
     "text": "These are worked responses to the questions in the exploration task. The aim is to help you see how the coefficients in a quadratic expression affect the graph."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#introduction",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#introduction",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "",
     "text": "These are worked responses to the questions in the exploration task. The aim is to help you see how the coefficients in a quadratic expression affect the graph."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#exploring-yax2",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#exploring-yax2",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "1. Exploring y=ax^2",
     "text": "1. Exploring y=ax^2\nTake values such as x=-3,-2,-1,0,1,2,3.\nFor y=x^2:\n\n\n\nx\ny=x^2\n\n\n\n\n-3\n9\n\n\n-2\n4\n\n\n-1\n1\n\n\n0\n0\n\n\n1\n1\n\n\n2\n4\n\n\n3\n9\n\n\n\nThe graph is symmetric about the y-axis, because (-x)^2=x^2. It is a U-shaped curve called a parabola. The lowest point is the vertex at (0,0)."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#comparing-y2x2-and-y0.5x2",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#comparing-y2x2-and-y0.5x2",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "2. Comparing y=2x^2 and y=0.5x^2",
     "text": "2. Comparing y=2x^2 and y=0.5x^2\nBoth graphs are parabolas with vertex at (0,0), and both are symmetric about the y-axis.\n\ny=2x^2 rises more quickly as |x| increases, so it is narrower.\ny=0.5x^2 rises more slowly, so it is wider.\nThe lowest point of each graph is still (0,0)."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#comparing-y-x2-and-y-2x2",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#comparing-y-x2-and-y-2x2",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "3. Comparing y=-x^2 and y=-2x^2",
     "text": "3. Comparing y=-x^2 and y=-2x^2\nThese curves open downward because the coefficient of x^2 is negative.\n\ny=-x^2 is a downward parabola with highest point (0,0).\ny=-2x^2 is also downward, but it falls more steeply, so it is narrower.\nThe highest point of each graph is the vertex at (0,0)."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x2",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x2",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "4. Effect of the coefficient of x^2",
     "text": "4. Effect of the coefficient of x^2\nFrom the graphs we see:\n\nIf a&gt;0, the graph opens upward and has a minimum point.\nIf a&lt;0, the graph opens downward and has a maximum point.\nThe larger |a| is, the narrower the parabola.\nThe smaller |a| is, the wider the parabola.\n\nSo the coefficient of x^2 controls both the direction and the width of the parabola."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#exploring-yax2c",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#exploring-yax2c",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "5. Exploring y=ax^2+c",
     "text": "5. Exploring y=ax^2+c\nConsider y=x^2+2 and y=x^2-3.\nThe shape remains the same as y=x^2, because the coefficient of x^2 is still 1. But the whole graph shifts upward or downward:\n\ny=x^2+2 is shifted upward by 2 units.\ny=x^2-3 is shifted downward by 3 units.\n\nThe vertex moves from (0,0) to (0,2) and (0,-3) respectively.\n\n\n\n\n\n\n\n\n\nThe graphs intersect the y-axis at the points (0,2) and (0,-3) respectively. In general, adding a positive constant shifts the graph upward; subtracting a constant shifts it downward."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#exploring-y2x2-y2x24-y2x2-4-y-2x24-and-y-2x2-4",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#exploring-y2x2-y2x24-y2x2-4-y-2x24-and-y-2x2-4",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "6. Exploring y=2x^2, y=2x^2+4, y=2x^2-4, y=-2x^2+4, and y=-2x^2-4",
     "text": "6. Exploring y=2x^2, y=2x^2+4, y=2x^2-4, y=-2x^2+4, and y=-2x^2-4\nThese graphs all have the same general shape as a parabola, but different vertical positions and openings.\n\ny=2x^2 has vertex at (0,0) and opens upward.\ny=2x^2+4 has vertex at (0,4) and opens upward.\ny=2x^2-4 has vertex at (0,-4) and opens upward.\ny=-2x^2+4 has vertex at (0,4) and opens downward.\ny=-2x^2-4 has vertex at (0,-4) and opens downward.\n\n\n\n\n\n\n\n\n\n\nThe x-intercepts depend on the equation. For example, y=2x^2-4=0 gives x^2=2, so the graph cuts the x-axis at approximately x=\\pm 1.41. The y-intercept is the value of c when x=0."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#effect-of-a-and-c",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#effect-of-a-and-c",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "7. Effect of a and c",
     "text": "7. Effect of a and c\nFrom the observations:\n\nThe coefficient a controls the width and direction of the parabola.\nIf a&gt;0, the parabola opens upward.\nIf a&lt;0, the parabola opens downward.\nThe constant term c shifts the graph vertically upward or downward without changing its shape.\n\nSo the graph of y=ax^2+c is a parabola whose vertex is at (0,c)."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#exploring-yax2bx",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#exploring-yax2bx",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "8. Exploring y=ax^2+bx",
     "text": "8. Exploring y=ax^2+bx\nConsider:\n\ny=x^2+2x\ny=x^2-2x\n\nThese curves are still parabolas, but the linear term changes the position of the vertex. The graph is not centered on the y-axis anymore.\nFor y=x^2+2x, the vertex is at x=-1. For y=x^2-2x, the vertex is at x=1.\n\n\n\n\n\n\n\n\n\nThe shape is still the same as a parabola, but the vertex shifts left or right as well as down or up. The x-term changes the horizontal position of the graph and moves the vertex, while the coefficient of x^2 still controls whether it opens upward or downward."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#effect-of-the-coefficient-of-x",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "9. Effect of the coefficient of x",
     "text": "9. Effect of the coefficient of x\nThe coefficient of x moves the vertex horizontally as well as vertically. The vertex of a parabola given by y=ax^2+bx is at x=-\\frac{b}{2a}.\n\nIn y=x^2+2x, the vertex is shifted to the left and down.\nIn y=x^2-2x, the vertex is shifted to the right and down.\nin y=-x^2+2x, the vertex is shifted to the left and up.\nin y=-x^2-2x, the vertex is shifted to the right and up.\n\nThe sign of the coefficient tells us the direction of the shift:\n\na positive coefficient moves the vertex left,\na negative coefficient moves the vertex right.\nThe up and down movement is dependent on the sign of the coefficient of x^2.\n\nThe overall shape remains a parabola, and the coefficient of x^2 still determines whether it opens upward or downward."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#exploring-yax2bxc",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#exploring-yax2bxc",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "10. Exploring y=ax^2+bx+c",
     "text": "10. Exploring y=ax^2+bx+c\nNow consider:\n\ny=x^2+2x+2\ny=x^2+2x-2\n\nThese are the same parabola as y=x^2+2x, but shifted vertically upward or downward by 2 units.\n\ny=x^2+2x+2 has vertex at (-1,1).\ny=x^2+2x-2 has vertex at (-1,-3).\n\n\n\n\n\n\n\n\n\n\nThe shape does not change; only the vertical position changes. The constant term c moves the whole graph up or down."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#summarising-the-observations",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#summarising-the-observations",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "11. Summarising the observations",
     "text": "11. Summarising the observations\nFrom all the examples, we can conclude:\n\nThe coefficient of x^2 controls the shape of the parabola.\n\nIf a&gt;0, it opens upward.\nIf a&lt;0, it opens downward.\nA larger value of |a| makes it narrower; a smaller value makes it wider.\n\nThe coefficient of x shifts the graph horizontally and vertically by changing the position of the vertex.\n\nA positive coefficient of x moves the vertex to the left.\nA negative coefficient of x moves the vertex to the right.\n\nThe constant term c shifts the graph vertically upward or downward without changing its basic shape.\n\nSo the general quadratic function\n\ny=ax^2+bx+c\n\nhas a parabolic graph whose direction, width, position, and vertical shift are all determined by the values of a, b, and c."
   },
   {
     "objectID": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#final-note",
     "href": "a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html#final-note",
-    "title": "Session 2 - Exploring Quadratic Curves - Answers",
+    "title": "Session 2 Exploring Quadratic Curves Solved",
     "section": "Final note",
     "text": "Final note\nThe key idea is that changing the coefficients changes the graph in a predictable way:\n\na changes the opening and width,\nb changes the position of the vertex,\nc changes the vertical position. This is why a quadratic equation can be understood both algebraically and geometrically as a curve with a particular shape and location."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html",
-    "title": "Session 1 - Revision of Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html",
+    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html",
+    "title": "Session 2 Prework Exploring Quadratic Curves",
     "section": "",
-    "text": "The questions given for session 1 prework are aimed at developing one central idea: a linear equation can be understood algebraically and geometrically. Algebraically, it describes numbers that make an equation true. Geometrically, it describes points on a straight line.\nWe are considering linear equations in two variables. In general, such a linear equation describes the relationship between two variable, typically x and y. One of the simplest such relationships can be described by the equation y=mx, where m is a constant. The other simple relationship can be y = x + c, where c is a constant. When you combine these two, you get the general equation of a linear relationship between x and y, which is y=mx+c (sidenote: Do you notice and understand that no other linear relationship between x and y can exist? or that all linear relationships between x and y can be expressed in this form?).\nWhat does the equation y=mx+c mean? What do m and c represent? How can we interpret this equation geometrically? How can we interpret this equation algebraically? We can proceed to understand these by considering some specific examples of linear equations, the kind of numbers that satisfy them, and the geometric representation of these numbers.\nWe will also consider the general equation of a straight line in the form ax + by + c = 0. How can we interpret this equation geometrically? How can we interpret this equation algebraically?"
+    "text": "Make a table of values for y=x^2, using positive, negative, and zero values of x. What do you notice? Is the graph symmetric? If so, about which axis? What is the shape of the graph? What is the lowest/highest point?\nPlot y=2x^2 and y=0.5x^2 on the same graph. What do you notice about the shape of the graphs? Which one is wider? Which one is narrower? What is the lowest/highest point of each graph?\nPlot y=-x^2 and y=-2x^2 on the same graph. What do you notice about the shape of the graphs? What is the lowest/highest point of each graph?\nBased on your observations, what is the effect of the coefficient of x^2 on the shape of the graph? What is the effect of a negative coefficient?"
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#introduction",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#introduction",
-    "title": "Session 1 - Revision of Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2",
+    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2",
+    "title": "Session 2 Prework Exploring Quadratic Curves",
     "section": "",
-    "text": "The questions given for session 1 prework are aimed at developing one central idea: a linear equation can be understood algebraically and geometrically. Algebraically, it describes numbers that make an equation true. Geometrically, it describes points on a straight line.\nWe are considering linear equations in two variables. In general, such a linear equation describes the relationship between two variable, typically x and y. One of the simplest such relationships can be described by the equation y=mx, where m is a constant. The other simple relationship can be y = x + c, where c is a constant. When you combine these two, you get the general equation of a linear relationship between x and y, which is y=mx+c (sidenote: Do you notice and understand that no other linear relationship between x and y can exist? or that all linear relationships between x and y can be expressed in this form?).\nWhat does the equation y=mx+c mean? What do m and c represent? How can we interpret this equation geometrically? How can we interpret this equation algebraically? We can proceed to understand these by considering some specific examples of linear equations, the kind of numbers that satisfy them, and the geometric representation of these numbers.\nWe will also consider the general equation of a straight line in the form ax + by + c = 0. How can we interpret this equation geometrically? How can we interpret this equation algebraically?"
+    "text": "Make a table of values for y=x^2, using positive, negative, and zero values of x. What do you notice? Is the graph symmetric? If so, about which axis? What is the shape of the graph? What is the lowest/highest point?\nPlot y=2x^2 and y=0.5x^2 on the same graph. What do you notice about the shape of the graphs? Which one is wider? Which one is narrower? What is the lowest/highest point of each graph?\nPlot y=-x^2 and y=-2x^2 on the same graph. What do you notice about the shape of the graphs? What is the lowest/highest point of each graph?\nBased on your observations, what is the effect of the coefficient of x^2 on the shape of the graph? What is the effect of a negative coefficient?"
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-of-the-type-ymx",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-of-the-type-ymx",
-    "title": "Session 1 - Revision of Linear Equations",
-    "section": "1. Equations of the type y=mx",
-    "text": "1. Equations of the type y=mx\nConsider the equations y=x, y=5x, and y=x/5. We can plot each equation by taking any value of x and calculating the corresponding value of y. For example, for y=x, if x=-2, then y=-2; if x=0, then y=0; and if x=2, then y=2. This gives us the points (-2,-2), (0,0), and (2,2) to plot. Remember that the x values for the other equations are also chosen arbitrarily. The points to plot for each equation are shown in the table below.\n\n\n\nEquation\nPoints to plot\n\n\n\n\ny=x\n(-2,-2),(0,0),(2,2)\n\n\ny=5x\n(-1,-5),(0,0),(1,5)\n\n\ny=x/5\n(-5,-1),(0,0),(5,1)\n\n\n\nAll three lines pass through the origin. They rise from left to right. The line y=5x is steepest, while y=x/5 is least steep.\n\n\n\n\n\n\n\n\n\nNow let’s do the same with y=-x, y=-5x, and y=-x/5. All these lines slope downwards from left to right.\n\n\n\n\n\n\n\n\n\nYou can see that changing the value of m changes the steepness of the line. The absolute value of m measures steepness, while the sign of m indicates whether the line slopes upwards or downwards. The value of m is called the gradient (or slope) of the line.\nYou can also see that the gradient is the ratio of the change in y to the change in x between any two points on the line. For example, for y=5x, the change in y between the points (0,0) and (1,5) is 5-0=5, while the change in x is 1-0=1. Hence the gradient is \\frac{5}{1}=5. For y=x/5, the change in y between the points (0,0) and (5,1) is 1-0=1, while the change in x is 5-0=5. Hence the gradient is \\frac{1}{5}.\nSo if points (x_1,y_1) and (x_2,y_2) are on the same line, the gradient can be calculated from the formula\nGradient =\\frac{y_2-y_1}{x_2-x_1}\nThe graph below shows the rise and run used to calculate the gradients of y=5x and y=x/5.\n\n\n\n\n\n\n\n\nFigure 1: Rise and run for calculating the gradient of two lines."
+    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2c",
+    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2c",
+    "title": "Session 2 Prework Exploring Quadratic Curves",
+    "section": "Exploring y=ax^2+c",
+    "text": "Exploring y=ax^2+c\n\nWhat happens when you plot y=x^2+2 and y=x^2-3? What do you notice about the shape of the graphs? What is the lowest/highest point of each graph? Do these graphs intersect the y-axis? If so, where? How does the graph of y=x^2 change when 2 is added or 3 is subtracted? Which way does it shift?\nPlot the graphs of y=2x^2, y=2x^2+4, y=2x^2-4, y=-2x^2+4, y=-2x^2-4. What do you notice about the shape of the graphs? What is the lowest/highest point of each graph? Do these graphs intersect the x-axis and y-axis? If so, where?\nBased on your observations, what is the effect of the coefficient of x^2 on the shape of the graph? What is the effect of a negative coefficient? What is the effect of the constant term c on the shape of the graph?"
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-of-the-type-ymxc",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-of-the-type-ymxc",
-    "title": "Session 1 - Revision of Linear Equations",
-    "section": "2. Equations of the type y=mx+c",
-    "text": "2. Equations of the type y=mx+c\nConsider the equations y=2x, y=2x+3, and y=2x-3.\nWhen you plot these three lines, you will see that they are parallel. From the equations themselves, you can see that all three lines have the same gradient, 2.\nWhat does adding or not adding a constant term do to the line? The constant term shifts the line vertically: y=2x+3 is 3 units above y=2x, and y=2x-3 is 3 units below it.\nIf you substitute x=0 into each equation, you will get the point where each line crosses the y-axis. This point is the y-intercept of each line. The y-intercepts of the three lines are 3, 0, and -3, respectively. Notice that these are the values of the constant term c in each equation."
+    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2bx",
+    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2bx",
+    "title": "Session 2 Prework Exploring Quadratic Curves",
+    "section": "Exploring y=ax^2+bx",
+    "text": "Exploring y=ax^2+bx\n\nPlot the graphs of y=x^2+2x and y=x^2-2x, What happens to the graph of y=x^2 when 2x is added or subtracted? Does the shape of the graph change? Does the lowest/highest point change? Does the point of intersection of the axis change?\nBased on your observations, what is the effect of the coefficient of x on the shape of the graph? What is the effect of a negative coefficient?"
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#interpreting-ymxc",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#interpreting-ymxc",
-    "title": "Session 1 - Revision of Linear Equations",
-    "section": "3. Interpreting y=mx+c",
-    "text": "3. Interpreting y=mx+c\nIn y=mx+c, m is the gradient. It determines the steepness of the line and whether it slopes upwards or downwards. A positive gradient gives an upward-sloping line; a negative gradient gives a downward-sloping line. The gradient can be calculated from any two points on the line using the formula:\n\nm=\\frac{y_2-y_1}{x_2-x_1}\n\nThe value c is the y-intercept because setting x=0 gives y=c."
+    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2bxc",
+    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2bxc",
+    "title": "Session 2 Prework Exploring Quadratic Curves",
+    "section": "Exploring y=ax^2+bx+c",
+    "text": "Exploring y=ax^2+bx+c\n\nPlot the graphs of y=x^2+2x+2, y=x^2+2x-2. What happens to the graph of y=x^2+2x when 2 is added or subtracted? Does the shape of the graph change? Does the lowest/highest point change? Does the point of intersection of the axis change?"
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-in-the-form-axbyc0",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-in-the-form-axbyc0",
-    "title": "Session 1 - Revision of Linear Equations",
-    "section": "4. Equations in the form ax+by+c=0",
-    "text": "4. Equations in the form ax+by+c=0\nRearrange:\n\n2x+3y-6=0\\qquad 3y=-2x+6,\n \ny=-\\frac{2}{3}x+2.\n\nWe can read the gradient and y-intercept, directly from this form:\n\nm=-\\frac23,\n\\qquad c=2.\n\nNow let us try plotting this line. At x=0, we have y=2, so the line crosses the y-axis at (0,2). Setting y=0 gives x=3, so it also passes through (3,0). Plot these two points and join them. Sidenote: Remember that setting x=0 to calculate y (the y-intercept) and setting y=0 to calculate x (the x-intercept) is a standard approach. You can plug any value of x into the equation to get the corresponding value of y, and vice versa.\nWe can see directly from the graph that the y-intercept is 2. We can calculate the gradient from the two points (0,2) and (3,0) - as -2/3.\n\n\n\n\n\n\n\n\nFigure 2: The line 2x+3y-6=0.\n\n\n\n\n\nIn general, for an equation of the form ax+by+c=0, where b\\ne0, we can rearrange to get \ny=-\\frac{a}{b}x-\\frac{c}{b}.\n\nThus the gradient is -a/b, and the y-intercept is -c/b."
+    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#summarising-the-observations",
+    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#summarising-the-observations",
+    "title": "Session 2 Prework Exploring Quadratic Curves",
+    "section": "Summarising the observations",
+    "text": "Summarising the observations\n\nBased on your observations, what is the effect of the coefficient of x^2 on the shape of the graph? What is the effect of a negative coefficient? What is the effect of the coefficient of x on the shape of the graph? What is the effect of a negative coefficient? What is the effect of the constant term c on the shape of the graph?"
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#solutions-of-a-single-linear-equation",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#solutions-of-a-single-linear-equation",
-    "title": "Session 1 - Revision of Linear Equations",
-    "section": "5. Solutions of a single linear equation",
-    "text": "5. Solutions of a single linear equation\nA solution is an ordered pair that makes the equation true. For example, (0,2) is a solution to the equation 2x+3y=6 because\n\n2(0)+3(2)=6.\n\nWhen you rearrange the equation to solve for y,\n\ny=2-\\frac23x.\n\nYou can see that for any value of x, there is a corresponding value of y that satisfies the equation. Examples include (3,0), (-3,4), and (6,-2). There are an infinite number of points that satisfy (make it true when substituted into) the equation.\nAlgebraically, a solution makes the equation true after substitution. Geometrically, it is a point on the line. The complete set of solutions is the entire line.\n\n\n\n\n\n\n\n\nFigure 3: The solution set of 2x+3y=6."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#solutions-of-two-simultaneous-linear-equations",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#solutions-of-two-simultaneous-linear-equations",
-    "title": "Session 1 - Revision of Linear Equations",
-    "section": "6. Solutions of two simultaneous linear equations",
-    "text": "6. Solutions of two simultaneous linear equations\nConsider\n\n2x+3y=6,\n\\qquad 3x+2y=4.\n\nThe point (0,2) is a solution to both equations because\n\n2(0)+3(2)=6\n\nand\n\n3(0)+2(2)=4.\n\nAlgebraically, a solution to two simultaneous equations is an ordered pair that satisfies both equations at the same time. Geometrically, it is a point common to both graphs. Here the lines meet at (0,2), so the simultaneous solution is unique.\n\n\n\n\n\n\n\n\nFigure 4: The common solution of 2x+3y=6 and 3x+2y=4."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#substitution-method-of-solving-two-simultaneous-linear-equations",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#substitution-method-of-solving-two-simultaneous-linear-equations",
-    "title": "Session 1 - Revision of Linear Equations",
-    "section": "7. Substitution method of solving two simultaneous linear equations",
-    "text": "7. Substitution method of solving two simultaneous linear equations\nFrom 2x+3y=6,\n\nx=3-\\frac32y.\n\nSubstitute into 3x+2y=4:\n\n3\\left(3-\\frac32y\\right)+2y=4,\n \n9-\\frac52y=4,\n\\qquad y=2.\n\nThen\n\n2x+3(2)=6\\implies x=0.\n\nTherefore\n\n\\boxed{(x,y)=(0,2)}."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#elimination-method-of-solving-two-simultaneous-linear-equations",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#elimination-method-of-solving-two-simultaneous-linear-equations",
-    "title": "Session 1 - Revision of Linear Equations",
-    "section": "8. Elimination method of solving two simultaneous linear equations",
-    "text": "8. Elimination method of solving two simultaneous linear equations\nMultiply the first equation by 2 and the second by 3:\n\n4x+6y=12,\n\\qquad 9x+6y=12.\n\nSubtracting gives\n\n5x=0\\implies x=0.\n\nSubstitution gives 3y=6, so y=2. Hence\n\n\\boxed{(x,y)=(0,2)}."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#possible-numbers-of-solutions-to-two-simultaneous-linear-equations",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#possible-numbers-of-solutions-to-two-simultaneous-linear-equations",
-    "title": "Session 1 - Revision of Linear Equations",
-    "section": "9. Possible numbers of solutions to two simultaneous linear equations",
-    "text": "9. Possible numbers of solutions to two simultaneous linear equations\nConsidering each linear equation can be represented as a line, there are three possible cases: the lines interesect at a single point, the lines are parallel and distinct, or the lines are coincident. These three cases correspond to one solution, no solution, and infinitely many solutions, respectively.\nHow do we identify these cases algebraically?\nIf the linear equations are in the form y = mx + c, then the gradients of the two lines are equal for parallel lines, but the y-intercepts are different. For coincident lines, both the gradients and y-intercepts are equal.\nif the two linear equations are in the form ax+by+c=0, the coefficients of x and y are proportional for parallel lines, but the constant terms are not. For coincident lines, all three coefficients are proportional.\nFor parallel lines, the following condition holds: \n\\frac{a_1}{a_2}=\\frac{b_1}{b_2}!=\\frac{c_1}{c_2}.\n\nFor coincident lines, the following condition holds: \n\\frac{a_1}{a_2}=\\frac{b_1}{b_2}=\\frac{c_1}{c_2}.\n\n\n\n\nRelationship\nGraph\nNumber of solutions\n\n\n\n\nDifferent gradients\nLines intersect once\nOne\n\n\nSame gradient, different intercepts\nDistinct parallel lines\nNone\n\n\nSame line\nCoincident lines\nInfinitely many\n\n\n\nConsider these equations: \ny=2x+1,\n\\qquad y=2x-3.\n\nThe lines are parallel (m values are same but c values are different).\nWhen written in the standard form, the equations become 2x-y+1=0 and 2x-y-3=0. The x- and y-coefficients are proportional, but the constants are not.\nNow consider these equations:\n\ny=2x+1,\n\\qquad 2y=4x+2.\n\nThe second equation is the first multiplied by 2, so both describe the same line.\nWhen written in the standard form, the equations become 2x-y+1=0 and 4x-2y+2=0. All three coefficients are proportional.\nNote: During elimination, 0=5 indicates no solution, while 0=0 indicates infinitely many solutions."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#finding-a-line-through-two-points",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#finding-a-line-through-two-points",
-    "title": "Session 1 - Revision of Linear Equations",
-    "section": "10. Finding a line through two points",
-    "text": "10. Finding a line through two points\nA straight line is determined by two distinct points. Consider the points (1,2) and (3,4). The gradient of the line through these two points is:\n\nm=\\frac{4-2}{3-1}=1.\n\nSince the general equation of a straight line is y=mx+c, we have y=x+c. To find c, we can substitute one of the points into the equation. Using (1,2):\n\n2=1+c\\implies c=1.\n\nTherefore\n\n\\boxed{y=x+1}.\n\nWe can check this is correct as both points satisfy the equation: 2=1+1 and 4=3+1."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#concluding-note",
-    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#concluding-note",
-    "title": "Session 1 - Revision of Linear Equations",
-    "section": "Concluding note",
-    "text": "Concluding note\nThe linear relationship between two variables can be described algebraically and geometrically. Algebraically, it is an equation that describes the relationship between the two variables. Geometrically, it is a straight line on the two dimensional cartesian graph.\nThe solution set of a single linear equation is the set of all ordered pairs that make the equation true, which is also the set of all points on the line.\nThe solution set of two simultaneous linear equations is the set of points common to both lines. Depending on the relationship between the two lines, there may be one solution, no solution, or infinitely many solutions.\nSince the relationship is between two variables, we can find the relationship, given any two solutions. This can also be thought of as finding the equation of the line through the two points."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html",
-    "href": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html",
-    "title": "Session 2 Class notes - Linear to quadratic",
+    "objectID": "a_math_2028/1-quadratics/session1-self-check-linear-equations.html",
+    "href": "a_math_2028/1-quadratics/session1-self-check-linear-equations.html",
+    "title": "Session 1 Check Your Understanding Linear Equations",
     "section": "",
-    "text": "The instructor opens the class by connecting the foundational concepts developed in linear equations to quadratic equations.\nThe two general forms of a linear relationship between y and x are identified as y = mx + c (slope-intercept form) and ax + by + c = 0 (general form), noting that each can be converted into the other through algebraic rearrangement.\nTo plot a linear equation such as 2x + 3y + 5 = 0, the instructor emphasizes that finding at least two points is required.\nThe most efficient method discussed is finding where the line crosses the coordinate axes:\nSetting x = 0 eliminates the x-term, leaving 3y = -5, which solves to y = -5/3 (approximately -1.6 or -1.66).\nThe resulting point (0, -5/3) lies on the y-axis and represents the y-intercept.\nSetting y = 0 in 2x + 3y + 5 = 0 gives 2x = -5, which yields x = -5/2 (-2.5), defining the x-intercept where the line crosses the x-axis."
+    "text": "Try these questions to see whether you have understood the main ideas of this session.\n\n\n\nFor each equation, state the gradient and the y-intercept:\n\ny=3x-4\ny=-\\frac{1}{2}x+5\n2x+5y-10=0\n\nExplain what the gradient tells you about a straight line. In your answer, mention both the sign and the size of the gradient.\nA line has equation y=mx+3. What is the effect of changing m while keeping the y-intercept fixed? Describe the graph in words.\nThe equation y=2x-5 is given. Find:\n\nthe y-intercept,\nthe x-intercept,\nanother point on the line.\n\nSolve the equation 3x+2y=12 for y. Then identify the gradient and y-intercept of the line.\nFor each pair of equations, decide whether the lines are parallel, coincident, or intersecting:\n\ny=2x+1 and y=2x-3\ny=3x+2 and 2y=6x+4\ny=x+2 and y=-x+2\n\nA line passes through the points (1,4) and (3,10). Find:\n\nthe gradient,\nthe equation of the line,\nwhether it passes through (5,16).\n\nSolve the simultaneous equations using substitution: \ny=2x+1,\n\\qquad\n3x+y=11.\n\nSolve the simultaneous equations using elimination: \n2x+3y=13,\n\\qquad\n4x+3y=17.\n\nExplain the difference between the algebraic and geometric interpretation of a solution to a single linear equation.\nTwo lines have equations 2x+y=5 and x-y=1. Find the point where they intersect and explain why this point is a solution to both equations.\nA student says: “If two linear equations have the same gradient, then they must have infinitely many solutions.” Is this statement true or false? Explain your answer.\n\n\n\n\n\nThe line through (2,5) and (6,13) is written in the form y=mx+c. Find m and c.\nA line has equation 3x-2y+12=0. Find the x-intercept and y-intercept, and describe the line in words.\nThe equations of two lines are \n   y=4x-7\n   \\quad \\text{and} \\quad\n   4x-y+3=0.\n    Determine whether the lines are parallel, coincident, or intersecting, and justify your answer.\nExplain why the complete set of solutions to a single linear equation is represented by a straight line on a graph.\n\n\n\n\n\nI can identify the gradient and y-intercept from an equation.\nI can describe the meaning of a linear equation algebraically and geometrically.\nI can solve simultaneous equations and explain what the solution means graphically.\nI can decide whether two linear equations have one solution, no solution, or infinitely many solutions."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#part-1-linear-equations-conversion-of-forms-and-finding-intercepts",
-    "href": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#part-1-linear-equations-conversion-of-forms-and-finding-intercepts",
-    "title": "Session 2 Class notes - Linear to quadratic",
+    "objectID": "a_math_2028/1-quadratics/session1-self-check-linear-equations.html#check-your-understanding-of-linear-equations",
+    "href": "a_math_2028/1-quadratics/session1-self-check-linear-equations.html#check-your-understanding-of-linear-equations",
+    "title": "Session 1 Check Your Understanding Linear Equations",
     "section": "",
-    "text": "The instructor opens the class by connecting the foundational concepts developed in linear equations to quadratic equations.\nThe two general forms of a linear relationship between y and x are identified as y = mx + c (slope-intercept form) and ax + by + c = 0 (general form), noting that each can be converted into the other through algebraic rearrangement.\nTo plot a linear equation such as 2x + 3y + 5 = 0, the instructor emphasizes that finding at least two points is required.\nThe most efficient method discussed is finding where the line crosses the coordinate axes:\nSetting x = 0 eliminates the x-term, leaving 3y = -5, which solves to y = -5/3 (approximately -1.6 or -1.66).\nThe resulting point (0, -5/3) lies on the y-axis and represents the y-intercept.\nSetting y = 0 in 2x + 3y + 5 = 0 gives 2x = -5, which yields x = -5/2 (-2.5), defining the x-intercept where the line crosses the x-axis."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#part-2-teaching-philosophy-conceptual-understanding-meta-thinking",
-    "href": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#part-2-teaching-philosophy-conceptual-understanding-meta-thinking",
-    "title": "Session 2 Class notes - Linear to quadratic",
-    "section": "Part 2: Teaching Philosophy, Conceptual Understanding & Meta-Thinking",
-    "text": "Part 2: Teaching Philosophy, Conceptual Understanding & Meta-Thinking\nThe instructor and co-teacher (Vijay) explain the deliberate decision to pace foundational lessons slowly.\nCompleting 10 to 15 homework problems perfunctorily without deep reflection is discouraged; true mastery requires “meta-thinking”—evaluating whether one genuinely understands the underlying concepts rather than just manipulating equations.\nWhile algorithmic procedures can be executed automatically by computers, human learning relies on recognizing unified algebraic and geometric patterns."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#part-3-algebraic-and-geometric-properties-of-straight-lines",
-    "href": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#part-3-algebraic-and-geometric-properties-of-straight-lines",
-    "title": "Session 2 Class notes - Linear to quadratic",
-    "section": "Part 3: Algebraic and Geometric Properties of Straight Lines",
-    "text": "Part 3: Algebraic and Geometric Properties of Straight Lines\nA single linear equation like 2x + 3y + 5 = 0 has infinitely many solutions, which correspond algebraically to ordered pairs (x, y) and geometrically to points forming a straight line.\nConverting the general equation ax + by + c = 0 into y = mx + c form gives a gradient of m = -a/b and a y-intercept of c = -c/b.\nFor a line passing through (2, 0) and (0, 2), calculating the gradient via m = \\frac{y_2 - y_1}{x_2 - x_1} gives m = \\frac{2 - 0}{0 - 2} = -1. Combining this with the y-intercept at (0, 2) yields the equation y = -x + 2.\nThe sign of the gradient indicates the line’s orientation: a line rising from left to right has a positive gradient, whereas a line falling from left to right has a negative gradient. A larger magnitude for m signifies a steeper line.\nIn y = mx + 3, varying m while fixing c = 3 causes the line to rotate around the y-intercept (0, 3) as a fulcrum.\nFor y = 2x - 5, the y-intercept is -5, and setting y = 0 determines an x-intercept of 5/2 (2.5)."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#part-4-systems-of-linear-equations-and-line-relationships",
-    "href": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#part-4-systems-of-linear-equations-and-line-relationships",
-    "title": "Session 2 Class notes - Linear to quadratic",
-    "section": "Part 4: Systems of Linear Equations and Line Relationships",
-    "text": "Part 4: Systems of Linear Equations and Line Relationships\nGeometrically, the solution to a system of two linear equations corresponds to the intersection point of the two lines.\nSystems can be solved algebraically using substitution or elimination; elimination is often faster when matching terms cancel directly (e.g., adding 2x + y = 5 and x - y = 1 eliminates y to yield 3x = 6 \\implies x = 2, y = 1).\nComparing two lines algebraically reveals three geometric cases:\nParallel Lines: Equal gradients ($m_1 = m_2$) but different $y$-intercepts ($c_1 \\neq c_2$) $\\implies$ no intersection and no solution (e.g., $y = 2x + 1$ and $y = 2x - 3$).\n\nCoincident / Identical Lines: Equal gradients ($m_1 = m_2$) and equal $y$-intercepts ($c_1 = c_2$) $\\implies$ infinitely many solutions (e.g., $y = 3x + 2$ and $2y = 6x + 4$).\n\nIntersecting Lines: Different gradients $\\implies$ a unique solution; if $y$-intercepts match (e.g., $y = x + 2$ and $y = -x + 2$), they intersect directly at $(0, 2)$ on the $y$-axis."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#part-5-transition-to-quadratic-equations-and-parabolas",
-    "href": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#part-5-transition-to-quadratic-equations-and-parabolas",
-    "title": "Session 2 Class notes - Linear to quadratic",
-    "section": "Part 5: Transition to Quadratic Equations and Parabolas",
-    "text": "Part 5: Transition to Quadratic Equations and Parabolas\nThe session transitions into exploring quadratic relationships, starting with y = x^2.\nEvaluating y = x^2 for positive, negative, and zero values of x demonstrates that y is never negative and the curve is symmetric about the y-axis.\nThis U-shaped curve is defined as a parabola, with its lowest point (vertex) located at (0, 0).\nIn y = ax^2, increasing the coefficient a narrows the parabola (e.g., y = 2x^2 is narrower than y = x^2, while y = 0.5x^2 is wider).\nWhen a is negative (e.g., y = -x^2), the parabola flips to open downwards, placing its highest point at (0, 0). A distinction is made between y = -x^2 (squaring first, opening downwards) and y = (-x)^2 (simplifying to x^2, opening upwards).\nAdding a constant c in y = ax^2 + c vertically translates the parabola up or down along the y-axis.\nThe fundamental definition of intercepts remains identical across linear and non-linear functions: the y-intercept occurs where x = 0, and x-intercepts occur where y = 0.\nDepending on its vertical shift, a parabola can have zero, one, or two x-intercepts:\nFor y = x^2 - 4, setting y = 0 gives x^2 = 4 \\implies x = \\pm 2, creating x-intercepts at (-2, 0) and (2, 0).\nFor y = x^2 + 2, setting y = 0 gives x^2 = -2, which has no real solution, proving geometrically that the curve never crosses the x-axis.\nSketching a general parabola y = ax^2 + bx + c requires identifying four key salient points: the y-intercept (x = 0), two x-intercepts (y = 0), and the vertex."
-  },
-  {
-    "objectID": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#further-work",
-    "href": "a_math_2028/1-quadratics/session2-class-notes-linear-quadratic.html#further-work",
-    "title": "Session 2 Class notes - Linear to quadratic",
-    "section": "Further Work",
-    "text": "Further Work\nHomework assigned for the next class includes completing the quadratic exploration worksheet, providing real-world examples of straight lines and parabolas, and consolidating linear equation fundamentals."
+    "text": "Try these questions to see whether you have understood the main ideas of this session.\n\n\n\nFor each equation, state the gradient and the y-intercept:\n\ny=3x-4\ny=-\\frac{1}{2}x+5\n2x+5y-10=0\n\nExplain what the gradient tells you about a straight line. In your answer, mention both the sign and the size of the gradient.\nA line has equation y=mx+3. What is the effect of changing m while keeping the y-intercept fixed? Describe the graph in words.\nThe equation y=2x-5 is given. Find:\n\nthe y-intercept,\nthe x-intercept,\nanother point on the line.\n\nSolve the equation 3x+2y=12 for y. Then identify the gradient and y-intercept of the line.\nFor each pair of equations, decide whether the lines are parallel, coincident, or intersecting:\n\ny=2x+1 and y=2x-3\ny=3x+2 and 2y=6x+4\ny=x+2 and y=-x+2\n\nA line passes through the points (1,4) and (3,10). Find:\n\nthe gradient,\nthe equation of the line,\nwhether it passes through (5,16).\n\nSolve the simultaneous equations using substitution: \ny=2x+1,\n\\qquad\n3x+y=11.\n\nSolve the simultaneous equations using elimination: \n2x+3y=13,\n\\qquad\n4x+3y=17.\n\nExplain the difference between the algebraic and geometric interpretation of a solution to a single linear equation.\nTwo lines have equations 2x+y=5 and x-y=1. Find the point where they intersect and explain why this point is a solution to both equations.\nA student says: “If two linear equations have the same gradient, then they must have infinitely many solutions.” Is this statement true or false? Explain your answer.\n\n\n\n\n\nThe line through (2,5) and (6,13) is written in the form y=mx+c. Find m and c.\nA line has equation 3x-2y+12=0. Find the x-intercept and y-intercept, and describe the line in words.\nThe equations of two lines are \n   y=4x-7\n   \\quad \\text{and} \\quad\n   4x-y+3=0.\n    Determine whether the lines are parallel, coincident, or intersecting, and justify your answer.\nExplain why the complete set of solutions to a single linear equation is represented by a straight line on a graph.\n\n\n\n\n\nI can identify the gradient and y-intercept from an equation.\nI can describe the meaning of a linear equation algebraically and geometrically.\nI can solve simultaneous equations and explain what the solution means graphically.\nI can decide whether two linear equations have one solution, no solution, or infinitely many solutions."
   },
   {
     "objectID": "a_math_2028/quadratic_relationship_questions_answers.html",
@@ -2419,7 +2377,7 @@
     "href": "a_math_2028/index.html",
     "title": "A Level Math 2028",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 10, 2026\n\n\nSession 2 Class notes - Linear to quadratic\n\n\n \n\n\n\n\nSep 10, 2026\n\n\nSession 2 - Exploring Quadratic Curves - Answers\n\n\n \n\n\n\n\nSep 9, 2026\n\n\nCheck Your Understanding - Linear Equations\n\n\n \n\n\n\n\nSep 9, 2026\n\n\nSession 2 - prework - Exploring Quadratic Curves\n\n\n \n\n\n\n\nSep 8, 2026\n\n\nSession 1 Class notes - Revision of Linear Equations\n\n\n \n\n\n\n\nSep 6, 2026\n\n\nSession 1 - Revision of Linear Equations\n\n\n \n\n\n\n\nSep 5, 2026\n\n\nSession 1 Prework Linear Equations\n\n\n \n\n\n\n\nAug 27, 2026\n\n\nPreparation for A Level Math\n\n\n \n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 10, 2026\n\n\nSession 2 Lecture Notes Linear to quadratic\n\n\n \n\n\n\n\nSep 10, 2026\n\n\nSession 2 Exploring Quadratic Curves Solved\n\n\n \n\n\n\n\nSep 9, 2026\n\n\nSession 2 Prework Exploring Quadratic Curves\n\n\n \n\n\n\n\nSep 8, 2026\n\n\nSession 1 Lecture Notes Revision of Linear Equations\n\n\n \n\n\n\n\nSep 8, 2026\n\n\nSession 1 Check Your Understanding Linear Equations\n\n\n \n\n\n\n\nSep 6, 2026\n\n\nSession 1 Revision of Linear Equations Solved\n\n\n \n\n\n\n\nSep 5, 2026\n\n\nSession 1 Prework Revision of Linear Equations\n\n\n \n\n\n\n\nAug 27, 2026\n\n\nPreparation for A Level Math\n\n\n \n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "a_math_2028/session3-understanding-quadratic-relationship.html",
@@ -2471,123 +2429,165 @@
     "text": "Online resources\nStep up to A level Math"
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-self-check-linear-equations.html",
-    "href": "a_math_2028/1-quadratics/session1-self-check-linear-equations.html",
-    "title": "Check Your Understanding - Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html",
+    "title": "Session 1 Revision of Linear Equations Solved",
     "section": "",
-    "text": "Try these questions to see whether you have understood the main ideas of this session.\n\n\n\nFor each equation, state the gradient and the y-intercept:\n\ny=3x-4\ny=-\\frac{1}{2}x+5\n2x+5y-10=0\n\nExplain what the gradient tells you about a straight line. In your answer, mention both the sign and the size of the gradient.\nA line has equation y=mx+3. What is the effect of changing m while keeping the y-intercept fixed? Describe the graph in words.\nThe equation y=2x-5 is given. Find:\n\nthe y-intercept,\nthe x-intercept,\nanother point on the line.\n\nSolve the equation 3x+2y=12 for y. Then identify the gradient and y-intercept of the line.\nFor each pair of equations, decide whether the lines are parallel, coincident, or intersecting:\n\ny=2x+1 and y=2x-3\ny=3x+2 and 2y=6x+4\ny=x+2 and y=-x+2\n\nA line passes through the points (1,4) and (3,10). Find:\n\nthe gradient,\nthe equation of the line,\nwhether it passes through (5,16).\n\nSolve the simultaneous equations using substitution: \ny=2x+1,\n\\qquad\n3x+y=11.\n\nSolve the simultaneous equations using elimination: \n2x+3y=13,\n\\qquad\n4x+3y=17.\n\nExplain the difference between the algebraic and geometric interpretation of a solution to a single linear equation.\nTwo lines have equations 2x+y=5 and x-y=1. Find the point where they intersect and explain why this point is a solution to both equations.\nA student says: “If two linear equations have the same gradient, then they must have infinitely many solutions.” Is this statement true or false? Explain your answer.\n\n\n\n\n\nThe line through (2,5) and (6,13) is written in the form y=mx+c. Find m and c.\nA line has equation 3x-2y+12=0. Find the x-intercept and y-intercept, and describe the line in words.\nThe equations of two lines are \n   y=4x-7\n   \\quad \\text{and} \\quad\n   4x-y+3=0.\n    Determine whether the lines are parallel, coincident, or intersecting, and justify your answer.\nExplain why the complete set of solutions to a single linear equation is represented by a straight line on a graph.\n\n\n\n\n\nI can identify the gradient and y-intercept from an equation.\nI can describe the meaning of a linear equation algebraically and geometrically.\nI can solve simultaneous equations and explain what the solution means graphically.\nI can decide whether two linear equations have one solution, no solution, or infinitely many solutions."
+    "text": "The questions given for session 1 prework are aimed at developing one central idea: a linear equation can be understood algebraically and geometrically. Algebraically, it describes numbers that make an equation true. Geometrically, it describes points on a straight line.\nWe are considering linear equations in two variables. In general, such a linear equation describes the relationship between two variable, typically x and y. One of the simplest such relationships can be described by the equation y=mx, where m is a constant. The other simple relationship can be y = x + c, where c is a constant. When you combine these two, you get the general equation of a linear relationship between x and y, which is y=mx+c (sidenote: Do you notice and understand that no other linear relationship between x and y can exist? or that all linear relationships between x and y can be expressed in this form?).\nWhat does the equation y=mx+c mean? What do m and c represent? How can we interpret this equation geometrically? How can we interpret this equation algebraically? We can proceed to understand these by considering some specific examples of linear equations, the kind of numbers that satisfy them, and the geometric representation of these numbers.\nWe will also consider the general equation of a straight line in the form ax + by + c = 0. How can we interpret this equation geometrically? How can we interpret this equation algebraically?"
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-self-check-linear-equations.html#check-your-understanding-of-linear-equations",
-    "href": "a_math_2028/1-quadratics/session1-self-check-linear-equations.html#check-your-understanding-of-linear-equations",
-    "title": "Check Your Understanding - Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#introduction",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#introduction",
+    "title": "Session 1 Revision of Linear Equations Solved",
     "section": "",
-    "text": "Try these questions to see whether you have understood the main ideas of this session.\n\n\n\nFor each equation, state the gradient and the y-intercept:\n\ny=3x-4\ny=-\\frac{1}{2}x+5\n2x+5y-10=0\n\nExplain what the gradient tells you about a straight line. In your answer, mention both the sign and the size of the gradient.\nA line has equation y=mx+3. What is the effect of changing m while keeping the y-intercept fixed? Describe the graph in words.\nThe equation y=2x-5 is given. Find:\n\nthe y-intercept,\nthe x-intercept,\nanother point on the line.\n\nSolve the equation 3x+2y=12 for y. Then identify the gradient and y-intercept of the line.\nFor each pair of equations, decide whether the lines are parallel, coincident, or intersecting:\n\ny=2x+1 and y=2x-3\ny=3x+2 and 2y=6x+4\ny=x+2 and y=-x+2\n\nA line passes through the points (1,4) and (3,10). Find:\n\nthe gradient,\nthe equation of the line,\nwhether it passes through (5,16).\n\nSolve the simultaneous equations using substitution: \ny=2x+1,\n\\qquad\n3x+y=11.\n\nSolve the simultaneous equations using elimination: \n2x+3y=13,\n\\qquad\n4x+3y=17.\n\nExplain the difference between the algebraic and geometric interpretation of a solution to a single linear equation.\nTwo lines have equations 2x+y=5 and x-y=1. Find the point where they intersect and explain why this point is a solution to both equations.\nA student says: “If two linear equations have the same gradient, then they must have infinitely many solutions.” Is this statement true or false? Explain your answer.\n\n\n\n\n\nThe line through (2,5) and (6,13) is written in the form y=mx+c. Find m and c.\nA line has equation 3x-2y+12=0. Find the x-intercept and y-intercept, and describe the line in words.\nThe equations of two lines are \n   y=4x-7\n   \\quad \\text{and} \\quad\n   4x-y+3=0.\n    Determine whether the lines are parallel, coincident, or intersecting, and justify your answer.\nExplain why the complete set of solutions to a single linear equation is represented by a straight line on a graph.\n\n\n\n\n\nI can identify the gradient and y-intercept from an equation.\nI can describe the meaning of a linear equation algebraically and geometrically.\nI can solve simultaneous equations and explain what the solution means graphically.\nI can decide whether two linear equations have one solution, no solution, or infinitely many solutions."
+    "text": "The questions given for session 1 prework are aimed at developing one central idea: a linear equation can be understood algebraically and geometrically. Algebraically, it describes numbers that make an equation true. Geometrically, it describes points on a straight line.\nWe are considering linear equations in two variables. In general, such a linear equation describes the relationship between two variable, typically x and y. One of the simplest such relationships can be described by the equation y=mx, where m is a constant. The other simple relationship can be y = x + c, where c is a constant. When you combine these two, you get the general equation of a linear relationship between x and y, which is y=mx+c (sidenote: Do you notice and understand that no other linear relationship between x and y can exist? or that all linear relationships between x and y can be expressed in this form?).\nWhat does the equation y=mx+c mean? What do m and c represent? How can we interpret this equation geometrically? How can we interpret this equation algebraically? We can proceed to understand these by considering some specific examples of linear equations, the kind of numbers that satisfy them, and the geometric representation of these numbers.\nWe will also consider the general equation of a straight line in the form ax + by + c = 0. How can we interpret this equation geometrically? How can we interpret this equation algebraically?"
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html",
-    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html",
-    "title": "Session 2 - prework - Exploring Quadratic Curves",
-    "section": "",
-    "text": "Make a table of values for y=x^2, using positive, negative, and zero values of x. What do you notice? Is the graph symmetric? If so, about which axis? What is the shape of the graph? What is the lowest/highest point?\nPlot y=2x^2 and y=0.5x^2 on the same graph. What do you notice about the shape of the graphs? Which one is wider? Which one is narrower? What is the lowest/highest point of each graph?\nPlot y=-x^2 and y=-2x^2 on the same graph. What do you notice about the shape of the graphs? What is the lowest/highest point of each graph?\nBased on your observations, what is the effect of the coefficient of x^2 on the shape of the graph? What is the effect of a negative coefficient?"
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-of-the-type-ymx",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-of-the-type-ymx",
+    "title": "Session 1 Revision of Linear Equations Solved",
+    "section": "1. Equations of the type y=mx",
+    "text": "1. Equations of the type y=mx\nConsider the equations y=x, y=5x, and y=x/5. We can plot each equation by taking any value of x and calculating the corresponding value of y. For example, for y=x, if x=-2, then y=-2; if x=0, then y=0; and if x=2, then y=2. This gives us the points (-2,-2), (0,0), and (2,2) to plot. Remember that the x values for the other equations are also chosen arbitrarily. The points to plot for each equation are shown in the table below.\n\n\n\nEquation\nPoints to plot\n\n\n\n\ny=x\n(-2,-2),(0,0),(2,2)\n\n\ny=5x\n(-1,-5),(0,0),(1,5)\n\n\ny=x/5\n(-5,-1),(0,0),(5,1)\n\n\n\nAll three lines pass through the origin. They rise from left to right. The line y=5x is steepest, while y=x/5 is least steep.\n\n\n\n\n\n\n\n\n\nNow let’s do the same with y=-x, y=-5x, and y=-x/5. All these lines slope downwards from left to right.\n\n\n\n\n\n\n\n\n\nYou can see that changing the value of m changes the steepness of the line. The absolute value of m measures steepness, while the sign of m indicates whether the line slopes upwards or downwards. The value of m is called the gradient (or slope) of the line.\nYou can also see that the gradient is the ratio of the change in y to the change in x between any two points on the line. For example, for y=5x, the change in y between the points (0,0) and (1,5) is 5-0=5, while the change in x is 1-0=1. Hence the gradient is \\frac{5}{1}=5. For y=x/5, the change in y between the points (0,0) and (5,1) is 1-0=1, while the change in x is 5-0=5. Hence the gradient is \\frac{1}{5}.\nSo if points (x_1,y_1) and (x_2,y_2) are on the same line, the gradient can be calculated from the formula\nGradient =\\frac{y_2-y_1}{x_2-x_1}\nThe graph below shows the rise and run used to calculate the gradients of y=5x and y=x/5.\n\n\n\n\n\n\n\n\nFigure 1: Rise and run for calculating the gradient of two lines."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2",
-    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2",
-    "title": "Session 2 - prework - Exploring Quadratic Curves",
-    "section": "",
-    "text": "Make a table of values for y=x^2, using positive, negative, and zero values of x. What do you notice? Is the graph symmetric? If so, about which axis? What is the shape of the graph? What is the lowest/highest point?\nPlot y=2x^2 and y=0.5x^2 on the same graph. What do you notice about the shape of the graphs? Which one is wider? Which one is narrower? What is the lowest/highest point of each graph?\nPlot y=-x^2 and y=-2x^2 on the same graph. What do you notice about the shape of the graphs? What is the lowest/highest point of each graph?\nBased on your observations, what is the effect of the coefficient of x^2 on the shape of the graph? What is the effect of a negative coefficient?"
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-of-the-type-ymxc",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-of-the-type-ymxc",
+    "title": "Session 1 Revision of Linear Equations Solved",
+    "section": "2. Equations of the type y=mx+c",
+    "text": "2. Equations of the type y=mx+c\nConsider the equations y=2x, y=2x+3, and y=2x-3.\nWhen you plot these three lines, you will see that they are parallel. From the equations themselves, you can see that all three lines have the same gradient, 2.\nWhat does adding or not adding a constant term do to the line? The constant term shifts the line vertically: y=2x+3 is 3 units above y=2x, and y=2x-3 is 3 units below it.\nIf you substitute x=0 into each equation, you will get the point where each line crosses the y-axis. This point is the y-intercept of each line. The y-intercepts of the three lines are 3, 0, and -3, respectively. Notice that these are the values of the constant term c in each equation."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2c",
-    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2c",
-    "title": "Session 2 - prework - Exploring Quadratic Curves",
-    "section": "Exploring y=ax^2+c",
-    "text": "Exploring y=ax^2+c\n\nWhat happens when you plot y=x^2+2 and y=x^2-3? What do you notice about the shape of the graphs? What is the lowest/highest point of each graph? Do these graphs intersect the y-axis? If so, where? How does the graph of y=x^2 change when 2 is added or 3 is subtracted? Which way does it shift?\nPlot the graphs of y=2x^2, y=2x^2+4, y=2x^2-4, y=-2x^2+4, y=-2x^2-4. What do you notice about the shape of the graphs? What is the lowest/highest point of each graph? Do these graphs intersect the x-axis and y-axis? If so, where?\nBased on your observations, what is the effect of the coefficient of x^2 on the shape of the graph? What is the effect of a negative coefficient? What is the effect of the constant term c on the shape of the graph?"
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#interpreting-ymxc",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#interpreting-ymxc",
+    "title": "Session 1 Revision of Linear Equations Solved",
+    "section": "3. Interpreting y=mx+c",
+    "text": "3. Interpreting y=mx+c\nIn y=mx+c, m is the gradient. It determines the steepness of the line and whether it slopes upwards or downwards. A positive gradient gives an upward-sloping line; a negative gradient gives a downward-sloping line. The gradient can be calculated from any two points on the line using the formula:\n\nm=\\frac{y_2-y_1}{x_2-x_1}\n\nThe value c is the y-intercept because setting x=0 gives y=c."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2bx",
-    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2bx",
-    "title": "Session 2 - prework - Exploring Quadratic Curves",
-    "section": "Exploring y=ax^2+bx",
-    "text": "Exploring y=ax^2+bx\n\nPlot the graphs of y=x^2+2x and y=x^2-2x, What happens to the graph of y=x^2 when 2x is added or subtracted? Does the shape of the graph change? Does the lowest/highest point change? Does the point of intersection of the axis change?\nBased on your observations, what is the effect of the coefficient of x on the shape of the graph? What is the effect of a negative coefficient?"
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-in-the-form-axbyc0",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#equations-in-the-form-axbyc0",
+    "title": "Session 1 Revision of Linear Equations Solved",
+    "section": "4. Equations in the form ax+by+c=0",
+    "text": "4. Equations in the form ax+by+c=0\nRearrange:\n\n2x+3y-6=0\\qquad 3y=-2x+6,\n \ny=-\\frac{2}{3}x+2.\n\nWe can read the gradient and y-intercept, directly from this form:\n\nm=-\\frac23,\n\\qquad c=2.\n\nNow let us try plotting this line. At x=0, we have y=2, so the line crosses the y-axis at (0,2). Setting y=0 gives x=3, so it also passes through (3,0). Plot these two points and join them. Sidenote: Remember that setting x=0 to calculate y (the y-intercept) and setting y=0 to calculate x (the x-intercept) is a standard approach. You can plug any value of x into the equation to get the corresponding value of y, and vice versa.\nWe can see directly from the graph that the y-intercept is 2. We can calculate the gradient from the two points (0,2) and (3,0) - as -2/3.\n\n\n\n\n\n\n\n\nFigure 2: The line 2x+3y-6=0.\n\n\n\n\n\nIn general, for an equation of the form ax+by+c=0, where b\\ne0, we can rearrange to get \ny=-\\frac{a}{b}x-\\frac{c}{b}.\n\nThus the gradient is -a/b, and the y-intercept is -c/b."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2bxc",
-    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#exploring-yax2bxc",
-    "title": "Session 2 - prework - Exploring Quadratic Curves",
-    "section": "Exploring y=ax^2+bx+c",
-    "text": "Exploring y=ax^2+bx+c\n\nPlot the graphs of y=x^2+2x+2, y=x^2+2x-2. What happens to the graph of y=x^2+2x when 2 is added or subtracted? Does the shape of the graph change? Does the lowest/highest point change? Does the point of intersection of the axis change?"
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#solutions-of-a-single-linear-equation",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#solutions-of-a-single-linear-equation",
+    "title": "Session 1 Revision of Linear Equations Solved",
+    "section": "5. Solutions of a single linear equation",
+    "text": "5. Solutions of a single linear equation\nA solution is an ordered pair that makes the equation true. For example, (0,2) is a solution to the equation 2x+3y=6 because\n\n2(0)+3(2)=6.\n\nWhen you rearrange the equation to solve for y,\n\ny=2-\\frac23x.\n\nYou can see that for any value of x, there is a corresponding value of y that satisfies the equation. Examples include (3,0), (-3,4), and (6,-2). There are an infinite number of points that satisfy (make it true when substituted into) the equation.\nAlgebraically, a solution makes the equation true after substitution. Geometrically, it is a point on the line. The complete set of solutions is the entire line.\n\n\n\n\n\n\n\n\nFigure 3: The solution set of 2x+3y=6."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#summarising-the-observations",
-    "href": "a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html#summarising-the-observations",
-    "title": "Session 2 - prework - Exploring Quadratic Curves",
-    "section": "Summarising the observations",
-    "text": "Summarising the observations\n\nBased on your observations, what is the effect of the coefficient of x^2 on the shape of the graph? What is the effect of a negative coefficient? What is the effect of the coefficient of x on the shape of the graph? What is the effect of a negative coefficient? What is the effect of the constant term c on the shape of the graph?"
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#solutions-of-two-simultaneous-linear-equations",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#solutions-of-two-simultaneous-linear-equations",
+    "title": "Session 1 Revision of Linear Equations Solved",
+    "section": "6. Solutions of two simultaneous linear equations",
+    "text": "6. Solutions of two simultaneous linear equations\nConsider\n\n2x+3y=6,\n\\qquad 3x+2y=4.\n\nThe point (0,2) is a solution to both equations because\n\n2(0)+3(2)=6\n\nand\n\n3(0)+2(2)=4.\n\nAlgebraically, a solution to two simultaneous equations is an ordered pair that satisfies both equations at the same time. Geometrically, it is a point common to both graphs. Here the lines meet at (0,2), so the simultaneous solution is unique.\n\n\n\n\n\n\n\n\nFigure 4: The common solution of 2x+3y=6 and 3x+2y=4."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html",
-    "href": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html",
-    "title": "Session 1 Class notes - Revision of Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#substitution-method-of-solving-two-simultaneous-linear-equations",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#substitution-method-of-solving-two-simultaneous-linear-equations",
+    "title": "Session 1 Revision of Linear Equations Solved",
+    "section": "7. Substitution method of solving two simultaneous linear equations",
+    "text": "7. Substitution method of solving two simultaneous linear equations\nFrom 2x+3y=6,\n\nx=3-\\frac32y.\n\nSubstitute into 3x+2y=4:\n\n3\\left(3-\\frac32y\\right)+2y=4,\n \n9-\\frac52y=4,\n\\qquad y=2.\n\nThen\n\n2x+3(2)=6\\implies x=0.\n\nTherefore\n\n\\boxed{(x,y)=(0,2)}."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#elimination-method-of-solving-two-simultaneous-linear-equations",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#elimination-method-of-solving-two-simultaneous-linear-equations",
+    "title": "Session 1 Revision of Linear Equations Solved",
+    "section": "8. Elimination method of solving two simultaneous linear equations",
+    "text": "8. Elimination method of solving two simultaneous linear equations\nMultiply the first equation by 2 and the second by 3:\n\n4x+6y=12,\n\\qquad 9x+6y=12.\n\nSubtracting gives\n\n5x=0\\implies x=0.\n\nSubstitution gives 3y=6, so y=2. Hence\n\n\\boxed{(x,y)=(0,2)}."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#possible-numbers-of-solutions-to-two-simultaneous-linear-equations",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#possible-numbers-of-solutions-to-two-simultaneous-linear-equations",
+    "title": "Session 1 Revision of Linear Equations Solved",
+    "section": "9. Possible numbers of solutions to two simultaneous linear equations",
+    "text": "9. Possible numbers of solutions to two simultaneous linear equations\nConsidering each linear equation can be represented as a line, there are three possible cases: the lines interesect at a single point, the lines are parallel and distinct, or the lines are coincident. These three cases correspond to one solution, no solution, and infinitely many solutions, respectively.\nHow do we identify these cases algebraically?\nIf the linear equations are in the form y = mx + c, then the gradients of the two lines are equal for parallel lines, but the y-intercepts are different. For coincident lines, both the gradients and y-intercepts are equal.\nif the two linear equations are in the form ax+by+c=0, the coefficients of x and y are proportional for parallel lines, but the constant terms are not. For coincident lines, all three coefficients are proportional.\nFor parallel lines, the following condition holds: \n\\frac{a_1}{a_2}=\\frac{b_1}{b_2}!=\\frac{c_1}{c_2}.\n\nFor coincident lines, the following condition holds: \n\\frac{a_1}{a_2}=\\frac{b_1}{b_2}=\\frac{c_1}{c_2}.\n\n\n\n\nRelationship\nGraph\nNumber of solutions\n\n\n\n\nDifferent gradients\nLines intersect once\nOne\n\n\nSame gradient, different intercepts\nDistinct parallel lines\nNone\n\n\nSame line\nCoincident lines\nInfinitely many\n\n\n\nConsider these equations: \ny=2x+1,\n\\qquad y=2x-3.\n\nThe lines are parallel (m values are same but c values are different).\nWhen written in the standard form, the equations become 2x-y+1=0 and 2x-y-3=0. The x- and y-coefficients are proportional, but the constants are not.\nNow consider these equations:\n\ny=2x+1,\n\\qquad 2y=4x+2.\n\nThe second equation is the first multiplied by 2, so both describe the same line.\nWhen written in the standard form, the equations become 2x-y+1=0 and 4x-2y+2=0. All three coefficients are proportional.\nNote: During elimination, 0=5 indicates no solution, while 0=0 indicates infinitely many solutions."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#finding-a-line-through-two-points",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#finding-a-line-through-two-points",
+    "title": "Session 1 Revision of Linear Equations Solved",
+    "section": "10. Finding a line through two points",
+    "text": "10. Finding a line through two points\nA straight line is determined by two distinct points. Consider the points (1,2) and (3,4). The gradient of the line through these two points is:\n\nm=\\frac{4-2}{3-1}=1.\n\nSince the general equation of a straight line is y=mx+c, we have y=x+c. To find c, we can substitute one of the points into the equation. Using (1,2):\n\n2=1+c\\implies c=1.\n\nTherefore\n\n\\boxed{y=x+1}.\n\nWe can check this is correct as both points satisfy the equation: 2=1+1 and 4=3+1."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#concluding-note",
+    "href": "a_math_2028/1-quadratics/session1-revision-of-linear-equations.html#concluding-note",
+    "title": "Session 1 Revision of Linear Equations Solved",
+    "section": "Concluding note",
+    "text": "Concluding note\nThe linear relationship between two variables can be described algebraically and geometrically. Algebraically, it is an equation that describes the relationship between the two variables. Geometrically, it is a straight line on the two dimensional cartesian graph.\nThe solution set of a single linear equation is the set of all ordered pairs that make the equation true, which is also the set of all points on the line.\nThe solution set of two simultaneous linear equations is the set of points common to both lines. Depending on the relationship between the two lines, there may be one solution, no solution, or infinitely many solutions.\nSince the relationship is between two variables, we can find the relationship, given any two solutions. This can also be thought of as finding the equation of the line through the two points."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html",
+    "href": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html",
+    "title": "Session 1 Lecture Notes Revision of Linear Equations",
     "section": "",
     "text": "The instructor outlines the course structure, noting that A-Level Pure Mathematics 1 begins with quadratics.\nKey prerequisites reviewed include solving quadratic equations by factoring, solving linear inequalities and simultaneous equations, and manipulating surds.\nOnline practice resources (such as Step Up to A-Level Math) and the Pure Mathematics 1 online textbook are highlighted for student reference.\nThe instructor stresses the importance of completing all assigned questions and actively reflecting on concepts, warning that the fast-paced curriculum covers about 32 chapters across 4 textbooks.\nThe questions numbers here refer to the prework."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#course-overview-prerequisites",
-    "href": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#course-overview-prerequisites",
-    "title": "Session 1 Class notes - Revision of Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#course-overview-prerequisites",
+    "href": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#course-overview-prerequisites",
+    "title": "Session 1 Lecture Notes Revision of Linear Equations",
     "section": "",
     "text": "The instructor outlines the course structure, noting that A-Level Pure Mathematics 1 begins with quadratics.\nKey prerequisites reviewed include solving quadratic equations by factoring, solving linear inequalities and simultaneous equations, and manipulating surds.\nOnline practice resources (such as Step Up to A-Level Math) and the Pure Mathematics 1 online textbook are highlighted for student reference.\nThe instructor stresses the importance of completing all assigned questions and actively reflecting on concepts, warning that the fast-paced curriculum covers about 32 chapters across 4 textbooks.\nThe questions numbers here refer to the prework."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#graphical-properties-of-linear-relationships-questions-13",
-    "href": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#graphical-properties-of-linear-relationships-questions-13",
-    "title": "Session 1 Class notes - Revision of Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#graphical-properties-of-linear-relationships-questions-13",
+    "href": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#graphical-properties-of-linear-relationships-questions-13",
+    "title": "Session 1 Lecture Notes Revision of Linear Equations",
     "section": "Graphical Properties of Linear Relationships (Questions 1–3)",
     "text": "Graphical Properties of Linear Relationships (Questions 1–3)\nBase Line (y = x): Plotting y = x produces a straight line passing directly through the origin (0, 0).\nEffect of Gradient (m):\ny = 5x is significantly steeper than y = x, shifting closer to the y-axis.\ny = \\frac{x}{5} is much less steep, rotating closer to the x-axis.\ny = -x flips direction into the negative quadrants.\ny = -5x is steeper in the negative direction, while y = -\\frac{x}{5} flattens toward the x-axis.\nVertical Translations (c):\nComparing y = 2x, y = 2x + 3, and y = 2x - 3 shows that adding or subtracting a constant shifts the line up or down without altering its steepness.\nSlope-Intercept Form (y = mx + c):\nm represents the gradient (steepness/inclination).\nc represents the y-intercept, which is the exact value of y when x = 0."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#general-form-finding-intercepts-question-4",
-    "href": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#general-form-finding-intercepts-question-4",
-    "title": "Session 1 Class notes - Revision of Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#general-form-finding-intercepts-question-4",
+    "href": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#general-form-finding-intercepts-question-4",
+    "title": "Session 1 Lecture Notes Revision of Linear Equations",
     "section": "General Form & Finding Intercepts (Question 4)",
     "text": "General Form & Finding Intercepts (Question 4)\nConverting ax + by + c = 0:\nRearranging ax + by + c = 0 into y = mx + c yields y = \\left(-\\frac{a}{b}\\right)x - \\frac{c}{b}.\nFrom this form, the gradient is m = -\\frac{a}{b} and the y-intercept is -\\frac{c}{b}.\nUniversal Intercept Method:\nTo plot any linear relationship (such as 2x + 3y - 6 = 0), finding two points is sufficient.\nSetting x = 0 gives the y-intercept: 3y = 6 \\implies y = 2, yielding point (0, 2).\nSetting y = 0 gives the x-intercept: 2x = 6 \\implies x = 3, yielding point (3, 0).\n\nGeometric Rationale:\nCo-teacher Vijay explains that setting x = 0 and y = 0 is the simplest approach because it locates where the line crosses the existing axes on the graph grid."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#physical-mathematical-meaning-of-gradient",
-    "href": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#physical-mathematical-meaning-of-gradient",
-    "title": "Session 1 Class notes - Revision of Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#physical-mathematical-meaning-of-gradient",
+    "href": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#physical-mathematical-meaning-of-gradient",
+    "title": "Session 1 Lecture Notes Revision of Linear Equations",
     "section": "Physical & Mathematical Meaning of Gradient",
     "text": "Physical & Mathematical Meaning of Gradient\nRise over Run: Gradient is defined as \\text{Rise} / \\text{Run} (\\frac{\\Delta y}{\\Delta x}).\nSign of Gradient:\nA line rising from left to right has a positive slope.\nA line falling from left to right has a negative slope.\n\nReal-World Rationale:\nThe instructor uses an analogy of a mason building a slide: contractors measure slope physically as “4 feet rise over 6 feet run” rather than measuring angle degrees with a protractor in the field.\nCalculating Gradient from Two Points:\nGiven (x_1, y_1) and (x_2, y_2), m = \\frac{y_2 - y_1}{x_2 - x_1}."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#algebraic-vs.-geometric-interpretations-questions-56",
-    "href": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#algebraic-vs.-geometric-interpretations-questions-56",
-    "title": "Session 1 Class notes - Revision of Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#algebraic-vs.-geometric-interpretations-questions-56",
+    "href": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#algebraic-vs.-geometric-interpretations-questions-56",
+    "title": "Session 1 Lecture Notes Revision of Linear Equations",
     "section": "Algebraic vs. Geometric Interpretations (Questions 5–6)",
     "text": "Algebraic vs. Geometric Interpretations (Questions 5–6)\nSingle Equation (2x + 3y = 6):\nAlgebraic: Infinitely many ordered pairs (x, y) that satisfy the equation.\nGeometric: A straight line where every point on the line represents a valid solution.\nSimultaneous Equations (2x + 3y = 6 and 3x + 2y = 4):\nAlgebraic: An ordered pair (x, y) that makes both equations true simultaneously.\nGeometric: The specific intersection point of the two lines (in this case, (0, 2)).\nNon-linear Extension: The instructor notes that this concept extends to higher-degree equations, where solutions represent intersection points between curves."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#methods-of-solving-line-relationships-questions-710",
-    "href": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#methods-of-solving-line-relationships-questions-710",
-    "title": "Session 1 Class notes - Revision of Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#methods-of-solving-line-relationships-questions-710",
+    "href": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#methods-of-solving-line-relationships-questions-710",
+    "title": "Session 1 Lecture Notes Revision of Linear Equations",
     "section": "Methods of Solving & Line Relationships (Questions 7–10)",
     "text": "Methods of Solving & Line Relationships (Questions 7–10)\nAlgebraic Methods:\nSubstitution: Rearranging one equation for x or y and substituting it into the second.\nElimination: Equating coefficients of variable terms so adding or subtracting eliminates one variable.\nThree Geometric Cases for Two Lines:\nParallel Lines: Equal gradients (m_1 = m_2) but different y-intercepts (c_1 \\neq c_2) \\implies no solution.\nIntersecting Lines: Different gradients (m_1 \\neq m_2) \\implies one unique solution.\nCoincident / Same Line: Equal gradients (m_1 = m_2) and equal y-intercepts (c_1 = c_2) \\implies infinitely many solutions."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#challenge-problem-line-through-1-2-and-3-4",
-    "href": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#challenge-problem-line-through-1-2-and-3-4",
-    "title": "Session 1 Class notes - Revision of Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#challenge-problem-line-through-1-2-and-3-4",
+    "href": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#challenge-problem-line-through-1-2-and-3-4",
+    "title": "Session 1 Lecture Notes Revision of Linear Equations",
     "section": "Challenge Problem: Line Through (1, 2) and (3, 4)",
     "text": "Challenge Problem: Line Through (1, 2) and (3, 4)\nGraphical/Geometric Solution:\nPlotting (1, 2) and (3, 4) allows students to read the y-intercept directly off the graph at (0, 1) (c = 1).\nCalculating rise over run between the points gives \\frac{4 - 2}{3 - 1} = \\frac{2}{2} = 1 (m = 1).\nCombining these gives the equation directly: y = x + 1.\nAlternative Algebraic Methods:\nMethod 1: Substitute both points into y = mx + c to form simultaneous equations (2 = m + c and 4 = 3m + c) and solve for m = 1, c = 1.\nMethod 2: Calculate m = \\frac{4-2}{3-1} = 1 first, then substitute one point into y = 1x + c to find c = 1.\nValue of Dual Approaches: While graphs provide immediate visual intuition, algebra is essential when dealing with non-integer values or decimals that cannot be accurately read by hand."
   },
   {
-    "objectID": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#digital-tools-homework-assignment",
-    "href": "a_math_2028/1-quadratics/session1-class-notes-linear-equations.html#digital-tools-homework-assignment",
-    "title": "Session 1 Class notes - Revision of Linear Equations",
+    "objectID": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#digital-tools-homework-assignment",
+    "href": "a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html#digital-tools-homework-assignment",
+    "title": "Session 1 Lecture Notes Revision of Linear Equations",
     "section": "Digital Tools & Homework Assignment",
     "text": "Digital Tools & Homework Assignment\nGeoGebra Demo: The class is introduced to geogebra.org as a digital graphing tool to inspect equations visually."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session1-prework-linear-equations.html",
+    "href": "a_math_2028/1-quadratics/session1-prework-linear-equations.html",
+    "title": "Session 1 Prework Revision of Linear Equations",
+    "section": "",
+    "text": "Linear Equations - A few exercises to do and questions to think about\n\nOn a graph sheet, plot the relationship \\(y = x\\). This is a straight line through the origin. Now plot \\(y = 5x\\) and \\(y = x/5\\). What do you notice about the steepness of the lines? What is the gradient (slope) of each line? What happens when you plot \\(y = -x\\), \\(y = -5x\\) and \\(y = -x/5\\)?\nOn a graph sheet, plot \\(y = 2x\\). Now plot \\(y = 2x + 3\\) and \\(y = 2x - 3\\). What is changing? What do you notice about the steepness of the lines? What is the gradient (slope) of each line?\nUsing the above two graphs, interpret the general equation of a straight line \\(y = mx + c\\). What does \\(m\\) represent? What does \\(c\\) represent?\nThe other way of writing a linear relationship between \\(x\\) and \\(y\\) is in the form \\(ax + by + c = 0\\). How would you plot \\(2x + 3y - 6 = 0\\) on a graph sheet? Can you see how to convert this into \\(y = mx + c\\) form? (Hint: Rearranging gives \\(y = \\frac{-a}{b}x - \\frac{c}{b}\\)). What is the gradient (slope) of the line in this form? What is the \\(y\\)-intercept of the line in this form?\nConsider the linear equation \\(2x + 3y = 6\\). What is a solution to this equation? How many solutions does this equation have? Also, what does it mean when we say that \\((0,2)\\) is a solution to this equation? What is the algebraic meaning of a solution to a linear equation? What is the geometric meaning of a solution to a linear equation?\nNow consider two linear equations: \\(2x + 3y = 6\\) and \\(3x + 2y = 4\\). What does it mean when we say that the point \\((0,2)\\) is a solution to both equations? What is the algebraic meaning of a solution to two linear equations? What is the geometric meaning of a solution to two linear equations?\nCheck if you know how to solve two simultaneous linear equations using substitution method. In this method, you rearrange one equation to get y in terms of x (or x in terms of y) and then substitute this into the other equation. This will give you a single equation in one variable which you can solve. Once you have found the value of one variable, substitute it back into one of the original equations to find the value of the other variable.\nDo you know how to solve two simultaneous linear equations using elimination method? In this method, you multiply one or both equations by a suitable number so that when you add or subtract the two equations, one of the variables is eliminated. This will give you a single equation in one variable which you can solve. Once you have found the value of one variable, substitute it back into one of the original equations to find the value of the other variable.\nIs it always necessary for two simultaneous linear equations to have a unique solution? What are the other possibilities? Can you think of examples of two simultaneous linear equations that have no solution or infinitely many solutions? How do two simultaneous linear equations with no solution look like on a graph? How do two simultaneous linear equations with infinitely many solutions look like on a graph? How can you identify such equations algebraically?\nSuppose I tell you there is a linear equation with two solutions - \\((1,2)\\) and \\((3,4)\\). Can you find that linear equation? (hint: think geometrically)"
   },
   {
     "objectID": "a_math_2028/session4-solving-quadratic-equations.html",
@@ -4239,14 +4239,14 @@
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Python: casino die game",
-    "text": "Python: casino die game\nThis version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.\n\nfrom secrets import randbelow\n\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{net_win:.2f}\")\nelse:\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{STAKE:.2f}\")\n\nRolled: 5\nYou lost ₹100.00\n\n\nThe die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result."
+    "text": "Python: casino die game\nThis version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.\n\nfrom secrets import randbelow\n\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{net_win:.2f}\")\nelse:\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{STAKE:.2f}\")\n\nRolled: 6\nYou lost ₹100.00\n\n\nThe die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Simulating 10,000 rolls",
-    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,675\nObserved win rate:          16.75%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-45,250.00\nCasino profit:              ₹45,250.00\nObserved house edge:        4.52%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
+    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,628\nObserved win rate:          16.28%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-72,040.00\nCasino profit:              ₹72,040.00\nObserved house edge:        7.20%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#conclusion",
