@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-09-10">
 
-<title>Today I Learnt – Venu GVGK Raju</title>
+<title>Session 2 Class notes - Linear to quadratic – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../venu-flute-logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../venu-flute-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,38 +68,23 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-language','listing-title','listing-date','listing-jupyter_client','listing-page-layout','listing-author','listing-execute','listing-categories','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-website","listing-format","listing-language","listing-title","listing-date","listing-jupyter_client","listing-page-layout","listing-author","listing-execute","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -129,12 +113,12 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Today I Learnt – Venu GVGK Raju">
-<meta property="og:description" content="Short Snippets of Learning">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Session 2 Class notes - Linear to quadratic – Venu GVGK Raju">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Today I Learnt – Venu GVGK Raju">
-<meta name="twitter:description" content="Short Snippets of Learning">
+<meta name="twitter:title" content="Session 2 Class notes - Linear to quadratic – Venu GVGK Raju">
+<meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -145,7 +129,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Venu GVGK Raju</span>
     </a>
   </div>
@@ -156,31 +140,31 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">Curriculum Vitae</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../books/index.html"> 
+    <a class="nav-link" href="../../books/index.html"> 
 <span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../education/index.html"> 
+    <a class="nav-link" href="../../education/index.html"> 
 <span class="menu-text">On Education</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../cs_2026/index.html"> 
+    <a class="nav-link" href="../../cs_2026/index.html"> 
 <span class="menu-text">CS 2026</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../a_math_2028/index.html"> 
+    <a class="nav-link" href="../../a_math_2028/index.html"> 
 <span class="menu-text">A Level Math</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../math-6-2026/index.html"> 
+    <a class="nav-link" href="../../math-6-2026/index.html"> 
 <span class="menu-text">Grade 6 Math</span></a>
   </li>  
 </ul>
@@ -195,15 +179,25 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(15)</span></div><div class="category" data-category="Using AI">Using AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="powerpoint">powerpoint <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(3)</span></div><div class="category" data-category="quarto">quarto <span class="quarto-category-count">(10)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#part-1-linear-equations-conversion-of-forms-and-finding-intercepts" id="toc-part-1-linear-equations-conversion-of-forms-and-finding-intercepts" class="nav-link active" data-scroll-target="#part-1-linear-equations-conversion-of-forms-and-finding-intercepts">Part 1: Linear Equations, Conversion of Forms, and Finding Intercepts</a></li>
+  <li><a href="#part-2-teaching-philosophy-conceptual-understanding-meta-thinking" id="toc-part-2-teaching-philosophy-conceptual-understanding-meta-thinking" class="nav-link" data-scroll-target="#part-2-teaching-philosophy-conceptual-understanding-meta-thinking">Part 2: Teaching Philosophy, Conceptual Understanding &amp; Meta-Thinking</a></li>
+  <li><a href="#part-3-algebraic-and-geometric-properties-of-straight-lines" id="toc-part-3-algebraic-and-geometric-properties-of-straight-lines" class="nav-link" data-scroll-target="#part-3-algebraic-and-geometric-properties-of-straight-lines">Part 3: Algebraic and Geometric Properties of Straight Lines</a></li>
+  <li><a href="#part-4-systems-of-linear-equations-and-line-relationships" id="toc-part-4-systems-of-linear-equations-and-line-relationships" class="nav-link" data-scroll-target="#part-4-systems-of-linear-equations-and-line-relationships">Part 4: Systems of Linear Equations and Line Relationships</a></li>
+  <li><a href="#part-5-transition-to-quadratic-equations-and-parabolas" id="toc-part-5-transition-to-quadratic-equations-and-parabolas" class="nav-link" data-scroll-target="#part-5-transition-to-quadratic-equations-and-parabolas">Part 5: Transition to Quadratic Equations and Parabolas</a></li>
+  <li><a href="#further-work" id="toc-further-work" class="nav-link" data-scroll-target="#further-work">Further Work</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Today I Learnt</h1>
-<p class="subtitle lead">Short Snippets of Learning</p>
+<h1 class="title">Session 2 Class notes - Linear to quadratic</h1>
 </div>
 
 
@@ -211,6 +205,12 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 10, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -220,248 +220,64 @@ window.Quarto = {
 </header>
 
 
+<section id="part-1-linear-equations-conversion-of-forms-and-finding-intercepts" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-linear-equations-conversion-of-forms-and-finding-intercepts">Part 1: Linear Equations, Conversion of Forms, and Finding Intercepts</h2>
+<p>The instructor opens the class by connecting the foundational concepts developed in linear equations to quadratic equations.</p>
+<p>The two general forms of a linear relationship between <span class="math inline">y</span> and <span class="math inline">x</span> are identified as <span class="math inline">y = mx + c</span> (slope-intercept form) and <span class="math inline">ax + by + c = 0</span> (general form), noting that each can be converted into the other through algebraic rearrangement.</p>
+<p>To plot a linear equation such as <span class="math inline">2x + 3y + 5 = 0</span>, the instructor emphasizes that finding at least two points is required.</p>
+<p>The most efficient method discussed is finding where the line crosses the coordinate axes:</p>
+<p>Setting <span class="math inline">x = 0</span> eliminates the <span class="math inline">x</span>-term, leaving <span class="math inline">3y = -5</span>, which solves to <span class="math inline">y = -5/3</span> (approximately <span class="math inline">-1.6</span> or <span class="math inline">-1.66</span>).</p>
+<p>The resulting point <span class="math inline">(0, -5/3)</span> lies on the <span class="math inline">y</span>-axis and represents the <span class="math inline">y</span>-intercept.</p>
+<p>Setting <span class="math inline">y = 0</span> in <span class="math inline">2x + 3y + 5 = 0</span> gives <span class="math inline">2x = -5</span>, which yields <span class="math inline">x = -5/2</span> (<span class="math inline">-2.5</span>), defining the <span class="math inline">x</span>-intercept where the line crosses the <span class="math inline">x</span>-axis.</p>
+</section>
+<section id="part-2-teaching-philosophy-conceptual-understanding-meta-thinking" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-teaching-philosophy-conceptual-understanding-meta-thinking">Part 2: Teaching Philosophy, Conceptual Understanding &amp; Meta-Thinking</h2>
+<p>The instructor and co-teacher (Vijay) explain the deliberate decision to pace foundational lessons slowly.</p>
+<p>Completing 10 to 15 homework problems perfunctorily without deep reflection is discouraged; true mastery requires “meta-thinking”—evaluating whether one genuinely understands the underlying concepts rather than just manipulating equations.</p>
+<p>While algorithmic procedures can be executed automatically by computers, human learning relies on recognizing unified algebraic and geometric patterns.</p>
+</section>
+<section id="part-3-algebraic-and-geometric-properties-of-straight-lines" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-algebraic-and-geometric-properties-of-straight-lines">Part 3: Algebraic and Geometric Properties of Straight Lines</h2>
+<p>A single linear equation like <span class="math inline">2x + 3y + 5 = 0</span> has infinitely many solutions, which correspond algebraically to ordered pairs <span class="math inline">(x, y)</span> and geometrically to points forming a straight line.</p>
+<p>Converting the general equation <span class="math inline">ax + by + c = 0</span> into <span class="math inline">y = mx + c</span> form gives a gradient of <span class="math inline">m = -a/b</span> and a <span class="math inline">y</span>-intercept of <span class="math inline">c = -c/b</span>.</p>
+<p>For a line passing through <span class="math inline">(2, 0)</span> and <span class="math inline">(0, 2)</span>, calculating the gradient via <span class="math inline">m = \frac{y_2 - y_1}{x_2 - x_1}</span> gives <span class="math inline">m = \frac{2 - 0}{0 - 2} = -1</span>. Combining this with the <span class="math inline">y</span>-intercept at <span class="math inline">(0, 2)</span> yields the equation <span class="math inline">y = -x + 2</span>.</p>
+<p>The sign of the gradient indicates the line’s orientation: a line rising from left to right has a positive gradient, whereas a line falling from left to right has a negative gradient. A larger magnitude for <span class="math inline">m</span> signifies a steeper line.</p>
+<p>In <span class="math inline">y = mx + 3</span>, varying <span class="math inline">m</span> while fixing <span class="math inline">c = 3</span> causes the line to rotate around the <span class="math inline">y</span>-intercept <span class="math inline">(0, 3)</span> as a fulcrum.</p>
+<p>For <span class="math inline">y = 2x - 5</span>, the <span class="math inline">y</span>-intercept is <span class="math inline">-5</span>, and setting <span class="math inline">y = 0</span> determines an <span class="math inline">x</span>-intercept of <span class="math inline">5/2</span> (<span class="math inline">2.5</span>).</p>
+</section>
+<section id="part-4-systems-of-linear-equations-and-line-relationships" class="level2">
+<h2 class="anchored" data-anchor-id="part-4-systems-of-linear-equations-and-line-relationships">Part 4: Systems of Linear Equations and Line Relationships</h2>
+<p>Geometrically, the solution to a system of two linear equations corresponds to the intersection point of the two lines.</p>
+<p>Systems can be solved algebraically using substitution or elimination; elimination is often faster when matching terms cancel directly (e.g., adding <span class="math inline">2x + y = 5</span> and <span class="math inline">x - y = 1</span> eliminates <span class="math inline">y</span> to yield <span class="math inline">3x = 6 \implies x = 2, y = 1</span>).</p>
+<p>Comparing two lines algebraically reveals three geometric cases:</p>
+<pre><code>Parallel Lines: Equal gradients ($m_1 = m_2$) but different $y$-intercepts ($c_1 \neq c_2$) $\implies$ no intersection and no solution (e.g., $y = 2x + 1$ and $y = 2x - 3$).
+
+Coincident / Identical Lines: Equal gradients ($m_1 = m_2$) and equal $y$-intercepts ($c_1 = c_2$) $\implies$ infinitely many solutions (e.g., $y = 3x + 2$ and $2y = 6x + 4$).
+
+Intersecting Lines: Different gradients $\implies$ a unique solution; if $y$-intercepts match (e.g., $y = x + 2$ and $y = -x + 2$), they intersect directly at $(0, 2)$ on the $y$-axis.</code></pre>
+</section>
+<section id="part-5-transition-to-quadratic-equations-and-parabolas" class="level2">
+<h2 class="anchored" data-anchor-id="part-5-transition-to-quadratic-equations-and-parabolas">Part 5: Transition to Quadratic Equations and Parabolas</h2>
+<p>The session transitions into exploring quadratic relationships, starting with <span class="math inline">y = x^2</span>.</p>
+<p>Evaluating <span class="math inline">y = x^2</span> for positive, negative, and zero values of <span class="math inline">x</span> demonstrates that <span class="math inline">y</span> is never negative and the curve is symmetric about the <span class="math inline">y</span>-axis.</p>
+<p>This U-shaped curve is defined as a parabola, with its lowest point (vertex) located at <span class="math inline">(0, 0)</span>.</p>
+<p>In <span class="math inline">y = ax^2</span>, increasing the coefficient <span class="math inline">a</span> narrows the parabola (e.g., <span class="math inline">y = 2x^2</span> is narrower than <span class="math inline">y = x^2</span>, while <span class="math inline">y = 0.5x^2</span> is wider).</p>
+<p>When <span class="math inline">a</span> is negative (e.g., <span class="math inline">y = -x^2</span>), the parabola flips to open downwards, placing its highest point at <span class="math inline">(0, 0)</span>. A distinction is made between <span class="math inline">y = -x^2</span> (squaring first, opening downwards) and <span class="math inline">y = (-x)^2</span> (simplifying to <span class="math inline">x^2</span>, opening upwards).</p>
+<p>Adding a constant <span class="math inline">c</span> in <span class="math inline">y = ax^2 + c</span> vertically translates the parabola up or down along the <span class="math inline">y</span>-axis.</p>
+<p>The fundamental definition of intercepts remains identical across linear and non-linear functions: the <span class="math inline">y</span>-intercept occurs where <span class="math inline">x = 0</span>, and <span class="math inline">x</span>-intercepts occur where <span class="math inline">y = 0</span>.</p>
+<p>Depending on its vertical shift, a parabola can have zero, one, or two <span class="math inline">x</span>-intercepts:</p>
+<p>For <span class="math inline">y = x^2 - 4</span>, setting <span class="math inline">y = 0</span> gives <span class="math inline">x^2 = 4 \implies x = \pm 2</span>, creating <span class="math inline">x</span>-intercepts at <span class="math inline">(-2, 0)</span> and <span class="math inline">(2, 0)</span>.</p>
+<p>For <span class="math inline">y = x^2 + 2</span>, setting <span class="math inline">y = 0</span> gives <span class="math inline">x^2 = -2</span>, which has no real solution, proving geometrically that the curve never crosses the <span class="math inline">x</span>-axis.</p>
+<p>Sketching a general parabola <span class="math inline">y = ax^2 + bx + c</span> requires identifying four key salient points: the <span class="math inline">y</span>-intercept (<span class="math inline">x = 0</span>), two <span class="math inline">x</span>-intercepts (<span class="math inline">y = 0</span>), and the vertex.</p>
+</section>
+<section id="further-work" class="level2">
+<h2 class="anchored" data-anchor-id="further-work">Further Work</h2>
+<p>Homework assigned for the next class includes completing the quadratic exploration worksheet, providing real-world examples of straight lines and parabolas, and consolidating linear equation fundamentals.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
-<!--
-<ul>
-    
-      <li><a href="/til/Using AI/extract-audio-with-VLC.qmd">Extract audio from video files with VLC</a></li>
-      Apr 5, 2025
-    
-      <li><a href="/til/quarto/downloadthis.qmd">Downloadthis - make your files downloadable!</a></li>
-      Mar 7, 2025
-    
-      <li><a href="/til/python/function-return-multiple-values.qmd">Returning multiple values from a function in python</a></li>
-      Dec 28, 2024
-    
-      <li><a href="/til/quarto/adding-code.qmd">write code and show output on the same qmd file</a></li>
-      Dec 25, 2024
-    
-      <li><a href="/til/quarto/spacebar-jupyter.qmd">spacebar does not work using jupyter in VS code</a></li>
-      Dec 24, 2024
-    
-      <li><a href="/til/quarto/using-jupyter-notebook.ipynb">using jupyter notebook on quarto website</a></li>
-      Dec 24, 2024
-    
-      <li><a href="/til/python/revealjs-code-with-python.qmd">Using code to write code - revealjs using python</a></li>
-      Dec 6, 2024
-    
-      <li><a href="/til/quarto/reading-book-revealjs.qmd">making a book readable online using revealjs</a></li>
-      Dec 3, 2024
-    
-      <li><a href="/til/python/merge-pdfs-python.qmd">Merging pdf files using python</a></li>
-      Dec 1, 2024
-    
-      <li><a href="/til/quarto/adding-links-to-yml-files.qmd">adding links to yml content files</a></li>
-      Nov 30, 2024
-    
-      <li><a href="/til/quarto/syntax-highlighting-the-code.qmd">syntax highlihgting code</a></li>
-      Nov 28, 2024
-    
-      <li><a href="/til/quarto/quarto-modify-table-listing.qmd">modifying table listing page on quarto</a></li>
-      Nov 27, 2024
-    
-      <li><a href="/til/quarto/quarto-add-custom-font.qmd">adding google fonts to quarto pages</a></li>
-      Nov 26, 2024
-    
-      <li><a href="/til/quarto/quarto-modify-listing-page.qmd">modifying default listing page on quarto</a></li>
-      Nov 25, 2024
-    
-      <li><a href="/til/powerpoint/powerpoint-morph-timeline.qmd">Timeline Morph on PPT</a></li>
-      Nov 24, 2024
-    
-    </ul>
--->
-<div class="til-listing list">
-
-    <div class="til-item" data-index="0" data-categories="Using AI" data-listing-date-sort="1743811200000" data-listing-file-modified-sort="1789398283164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="91">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Apr 5, 2025
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">Using AI</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/Using AI/extract-audio-with-VLC.html"><span class="listing-name">Extract audio from video files with VLC</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="1" data-categories="quarto" data-listing-date-sort="1741305600000" data-listing-file-modified-sort="1789398283165" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="37">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Mar 7, 2025
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/downloadthis.html"><span class="listing-name">Downloadthis - make your files downloadable!</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="2" data-categories="python" data-listing-date-sort="1735344000000" data-listing-file-modified-sort="1789398283164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="73">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Dec 28, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">python</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/python/function-return-multiple-values.html"><span class="listing-name">Returning multiple values from a function in python</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="3" data-categories="quarto" data-listing-date-sort="1735084800000" data-listing-file-modified-sort="1789398283164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="425">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Dec 25, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/adding-code.html"><span class="listing-name">write code and show output on the same qmd file</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="4" data-categories="quarto" data-listing-date-sort="1734998400000" data-listing-file-modified-sort="1789398283166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Dec 24, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/spacebar-jupyter.html"><span class="listing-name">spacebar does not work using jupyter in VS code</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="5" data-categories="quarto" data-listing-date-sort="1734998400000" data-listing-file-modified-sort="1789398283167" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Dec 24, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/using-jupyter-notebook.html"><span class="listing-name">using jupyter notebook on quarto website</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="6" data-categories="python" data-listing-date-sort="1733443200000" data-listing-file-modified-sort="1789398283164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Dec 6, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">python</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/python/revealjs-code-with-python.html"><span class="listing-name">Using code to write code - revealjs using python</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="7" data-categories="quarto" data-listing-date-sort="1733184000000" data-listing-file-modified-sort="1789398283166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="185">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Dec 3, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/reading-book-revealjs.html"><span class="listing-name">making a book readable online using revealjs</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="8" data-categories="python" data-listing-date-sort="1733011200000" data-listing-file-modified-sort="1789398283164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="189">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Dec 1, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">python</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/python/merge-pdfs-python.html"><span class="listing-name">Merging pdf files using python</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="9" data-categories="quarto" data-listing-date-sort="1732924800000" data-listing-file-modified-sort="1789398283165" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="93">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 30, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/adding-links-to-yml-files.html"><span class="listing-name">adding links to yml content files</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="10" data-categories="quarto" data-listing-date-sort="1732752000000" data-listing-file-modified-sort="1789398283166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 28, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/syntax-highlighting-the-code.html"><span class="listing-name">syntax highlihgting code</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="11" data-categories="quarto" data-listing-date-sort="1732665600000" data-listing-file-modified-sort="1789398283166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="726">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 27, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/quarto-modify-table-listing.html"><span class="listing-name">modifying table listing page on quarto</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="12" data-categories="quarto" data-listing-date-sort="1732579200000" data-listing-file-modified-sort="1789398283165" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="138">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 26, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/quarto-add-custom-font.html"><span class="listing-name">adding google fonts to quarto pages</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="13" data-categories="quarto" data-listing-date-sort="1732492800000" data-listing-file-modified-sort="1789398283165" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 25, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">quarto</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/quarto/quarto-modify-listing-page.html"><span class="listing-name">modifying default listing page on quarto</span></a></div>
-    </div>
-
-    <div class="til-item" data-index="14" data-categories="powerpoint" data-listing-date-sort="1732406400000" data-listing-file-modified-sort="1789398283164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="77">
-        <div class="til-item-header">
-            <span class="til-item-date listing-date">Nov 24, 2024
-            <span class="til-item-categories">
-                
-                    <span class="til-category listing-categories">powerpoint</span>
-                
-            </span>
-        </span></div>
-        <div class="til-item-title"><a href="../til/powerpoint/powerpoint-morph-timeline.html"><span class="listing-name">Timeline Morph on PPT</span></a></div>
-    </div>
-
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
