@@ -38,6 +38,8 @@ website:
          href: cs_2026/index.qmd
        - text: A Level Math
          href: a_math_2028/index.qmd
+       - text: Grade 6 Math
+         href: math-6-2026/index.qmd
 
 
         

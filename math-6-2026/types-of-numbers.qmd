@@ -1,0 +1,351 @@
+---
+title: Types of Numbers
+Subtitle: Why do we need different types of numbers?
+date: 2026-09-12
+page-layout: article
+format:
+  html:
+    toc: true
+    number-sections: true
+    code-fold: false
+jupyter: python3
+---
+
+## A conversation about numbers
+
+> **Teacher:** Today we will not begin by memorising a list of names. Instead, we will ask a more interesting question: **Why did people need different types of numbers?**
+>
+> **Student:** I already know numbers, fractions, and decimals.
+>
+> **Teacher:** Good. We will use what you already know. We will gradually enlarge our collection of numbers whenever an earlier collection is not enough for a new situation.
+
+The main idea is this:
+
+> We begin with counting. Then we add zero. Then we add numbers less than zero. Finally, we allow numbers between consecutive whole numbers.
+
+These collections are called **natural numbers**, **whole numbers**, **integers**, and **rational numbers**.
+
+## Starting with counting
+
+> **Teacher:** Imagine that I ask you to count the children in a classroom. What numbers might you say?
+>
+> **Student:** 1, 2, 3, 4, 5, and so on.
+>
+> **Teacher:** Exactly. These are the numbers we use when we count objects. We call them **natural numbers**.
+
+In this lesson, we use the convention
+
+$$
+\mathbb{N}=\{1,2,3,4,5,\ldots\}.
+$$
+
+A number such as 4 tells us that there are four objects. We can show these numbers on a number line:
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(figsize=(9, 1.6))
+ax.set_xlim(-0.5, 6.5); ax.set_ylim(-0.8, 0.8); ax.axhline(0, color='black')
+for x in range(1,7):
+    ax.plot(x,0,'o',color='#2563eb'); ax.text(x,-0.28,str(x),ha='center',fontsize=12)
+ax.set_yticks([]); ax.set_xticks([]); ax.spines[:].set_visible(False)
+ax.set_title('Natural numbers: 1, 2, 3, …')
+plt.tight_layout()
+```
+
+> **Teacher:** Notice something important. We are not marking every possible point on the line. We are marking only the counting numbers.
+>
+> **Student:** So there is no natural number between 1 and 2?
+>
+> **Teacher:** Correct. In our discussion of natural numbers, 1 and 2 are consecutive natural numbers. The natural numbers do not include numbers such as $1\frac12$, $\frac32$, or 1.7.
+
+This does **not** mean that the points between 1 and 2 do not exist. It means only that those points are not included in the set of natural numbers.
+
+## Why do we need zero?
+
+> **Teacher:** Suppose there are five books on a table. Which number describes the collection?
+>
+> **Student:** 5.
+>
+> **Teacher:** What if I remove all the books?
+>
+> **Student:** Then there are no books.
+>
+> **Teacher:** We need a number to describe that situation. That number is zero.
+
+Zero is useful when we need to describe an empty collection, no objects, or a starting point. When we include zero with the natural numbers, we get the **whole numbers**:
+
+$$
+\mathbb{W}=\{0,1,2,3,4,5,\ldots\}.
+$$
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(figsize=(9, 1.6))
+ax.set_xlim(-0.8, 6.5); ax.set_ylim(-0.8, 0.8); ax.axhline(0, color='black')
+for x in range(0,7):
+    ax.plot(x,0,'o',color='#16a34a'); ax.text(x,-0.28,str(x),ha='center',fontsize=12)
+ax.set_yticks([]); ax.set_xticks([]); ax.spines[:].set_visible(False)
+ax.set_title('Whole numbers: 0, 1, 2, 3, …')
+plt.tight_layout()
+```
+
+> **Student:** So every natural number is a whole number, but zero is a whole number that is not natural.
+>
+> **Teacher:** Exactly. We can write that as
+>
+> $$
+> \mathbb{N}\subset\mathbb{W}.
+> $$
+>
+> The symbol $\subset$ means “is contained in”. The whole-number collection contains all the natural numbers and adds zero.
+
+## Why do we need negative numbers?
+
+> **Teacher:** Now imagine that the temperature is 3 degrees above zero. We can write $+3$, or simply 3. What if the temperature is 3 degrees below zero?
+>
+> **Student:** We need $-3$.
+>
+> **Teacher:** Right. Negative numbers are useful for temperatures below zero, floors below ground level, debts, and movement in the opposite direction.
+
+Whole numbers alone cannot describe these situations. We therefore extend the number line to the left of zero:
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(figsize=(10, 1.8))
+ax.set_xlim(-5.8, 5.8); ax.set_ylim(-0.9, 0.9); ax.axhline(0, color='black')
+for x in range(-5,6):
+    ax.plot(x,0,'o',color='#dc2626'); ax.text(x,-0.3,str(x),ha='center',fontsize=11)
+ax.text(-3.3,0.35,'negative integers',ha='center',color='#991b1b')
+ax.text(0,0.35,'zero',ha='center',color='#991b1b')
+ax.text(3.3,0.35,'positive integers',ha='center',color='#991b1b')
+ax.set_yticks([]); ax.set_xticks([]); ax.spines[:].set_visible(False)
+ax.set_title('Integers: …, −3, −2, −1, 0, 1, 2, 3, …')
+plt.tight_layout()
+```
+
+The **integers** are
+
+$$
+\mathbb{Z}=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}.
+$$
+
+> **Teacher:** What do you notice about the integers on this number line?
+>
+> **Student:** They are still spaced one unit apart. There is no integer between 0 and 1, or between 1 and 2.
+>
+> **Teacher:** Exactly. We have added numbers to the left of zero, but we have not yet filled the gaps between the marked points.
+
+This is the meaning of **full numbers** in our discussion: integers occupy the regularly spaced marked positions. For example, 1 and 2 are consecutive integers. Numbers such as $\frac32$, 1.5, and 1.9 are not integers.
+
+We can now see the nesting:
+
+$$
+\mathbb{N}\subset\mathbb{W}\subset\mathbb{Z}.
+$$
+
+Every natural number is whole, and every whole number is an integer.
+
+## A possible confusion
+
+> **Student:** But fractions and decimals are also on the number line. If $\frac12$ is on the number line, is it a natural number or an integer?
+>
+> **Teacher:** Being on the number line is not enough to tell us which set a number belongs to. The number line can represent many different sets. We must ask whether the particular number is included in the set we are discussing.
+
+For instance:
+
+- $2$ is a natural number, whole number, and integer.
+- $0$ is a whole number and integer, but not a natural number under our convention.
+- $-2$ is an integer, but not a whole number or natural number.
+- $\frac12$ is not a natural number, whole number, or integer.
+
+The number line is like a map. A map may show many roads, but a particular journey may use only some of them. Similarly, a number line may show many possible locations, while a number set includes only selected locations.
+
+## Why do we need fractions?
+
+> **Teacher:** Suppose two children share one apple equally. Can each child receive a whole number of apples?
+>
+> **Student:** No. Each child gets half an apple.
+>
+> **Teacher:** So we need a number between 0 and 1. That number is $\frac12$.
+
+Now suppose we want to describe one and a half metres, or $2\frac14$ litres. Integers are not enough because they leave gaps between consecutive integers. Fractions allow us to describe points in those gaps.
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(figsize=(10, 1.8))
+ax.set_xlim(-0.2, 2.2); ax.set_ylim(-0.8, 0.8); ax.axhline(0, color='black')
+for x in [0, .25, .5, .75, 1, 1.25, 1.5, 1.75, 2]:
+    ax.plot(x,0,'o',color='#7c3aed')
+labels={0:'0',.25:'¼',.5:'½',.75:'¾',1:'1',1.25:'1¼',1.5:'1½',1.75:'1¾',2:'2'}
+for x,label in labels.items(): ax.text(x,-0.3,label,ha='center',fontsize=11)
+ax.text(1,0.35,'the interval from 0 to 2 divided into fourths',ha='center',color='#5b21b6')
+ax.set_yticks([]); ax.set_xticks([]); ax.spines[:].set_visible(False)
+ax.set_title('Fractions add points between integers')
+plt.tight_layout()
+```
+
+> **Student:** Between 1 and 2, I can place $\frac54$, $\frac32$, and $\frac74$.
+>
+> **Teacher:** Yes. We have divided the unit interval into equal parts. If we divide it into four equal parts, the points are $1\frac14$, $1\frac12$, and $1\frac34$ between 1 and 2.
+
+## Rational numbers
+
+A **rational number** is a number that can be written in the form
+
+$$
+\frac{p}{q},
+$$
+
+where $p$ and $q$ are integers and $q\neq0$.
+
+Examples include
+
+$$
+\frac12,\quad -\frac34,\quad 5=\frac51,\quad 0=\frac01,
+$$
+
+and terminating or repeating decimals such as
+
+$$
+0.5=\frac12,\qquad 1.25=\frac54,\qquad 0.333\ldots=\frac13.
+$$
+
+> **Student:** So whole numbers and integers are also rational numbers because they can be written over 1.
+>
+> **Teacher:** Exactly. For example, $-3=-\frac31$ and $7=\frac71$. Therefore,
+>
+> $$
+> \mathbb{N}\subset\mathbb{W}\subset\mathbb{Z}\subset\mathbb{Q},
+> $$
+>
+> where $\mathbb{Q}$ represents the rational numbers.
+
+The rational numbers include the integers and also many numbers between them:
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+from fractions import Fraction
+fig, ax = plt.subplots(figsize=(11, 2.1))
+ax.set_xlim(-2.2, 2.2); ax.set_ylim(-0.95, 0.9); ax.axhline(0, color='black')
+vals=[-2,-1.5,-1,-.75,-.5,-.25,0,.25,.5,.75,1,1.25,1.5,1.75,2]
+for x in vals:
+    ax.plot(x,0,'o',color='#ea580c')
+for x,label in [(-2,'−2'),(-1.5,'−1½'),(-1,'−1'),(-.75,'−¾'),(-.5,'−½'),(-.25,'−¼'),(0,'0'),(.25,'¼'),(.5,'½'),(.75,'¾'),(1,'1'),(1.25,'1¼'),(1.5,'1½'),(1.75,'1¾'),(2,'2')]:
+    ax.text(x,-0.32,label,ha='center',fontsize=10)
+ax.text(0,0.38,'rational numbers include integers and fractions between them',ha='center',color='#9a3412')
+ax.set_yticks([]); ax.set_xticks([]); ax.spines[:].set_visible(False)
+ax.set_title('A selection of rational numbers on the number line')
+plt.tight_layout()
+```
+
+There are still infinitely many rational numbers between any two different integers. Between 0 and 1, for example, we can find $\frac12$, $\frac13$, $\frac14$, $\frac{99}{100}$, and many more.
+
+## What about decimals?
+
+> **Student:** Are decimals different from fractions?
+>
+> **Teacher:** Some decimals are another way of writing fractions. A decimal tells us how a unit has been divided into tenths, hundredths, thousandths, and so on.
+
+For example,
+
+$$
+0.4=\frac4{10}=\frac25,
+\qquad
+1.25=\frac{125}{100}=\frac54.
+$$
+
+A terminating decimal is rational. A repeating decimal is also rational:
+
+$$
+0.666\ldots=\frac23.
+$$
+
+However, not every decimal is rational. Some decimals continue forever without repeating a pattern, such as the decimal representation of $\sqrt2$. That idea belongs to a later discussion of irrational numbers. For now, the important point is that fractions and many familiar decimals add points between the integers.
+
+## The complete chain
+
+We can now tell the story in one line:
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
+fig, ax = plt.subplots(figsize=(11, 2.2))
+ax.set_xlim(0, 11); ax.set_ylim(0, 2); ax.axis('off')
+items=[('Natural', '1, 2, 3, …'),('Whole', '0, 1, 2, …'),('Integers', '…, −1, 0, 1, …'),('Rational', 'fractions between them')]
+colors=['#dbeafe','#dcfce7','#fee2e2','#fef3c7']
+for i,(name,desc) in enumerate(items):
+    x=0.25+i*2.7
+    ax.add_patch(FancyBboxPatch((x,.65),2.15,.75,boxstyle='round,pad=.04',facecolor=colors[i],edgecolor='#374151'))
+    ax.text(x+1.075,1.15,name,ha='center',va='center',fontsize=13,weight='bold')
+    ax.text(x+1.075,.88,desc,ha='center',va='center',fontsize=9)
+    if i<3: ax.annotate('',xy=(x+2.57,1.02),xytext=(x+2.18,1.02),arrowprops=dict(arrowstyle='->',lw=1.5))
+ax.text(5.5,.25,'Each step responds to a limitation in the previous collection.',ha='center',fontsize=11)
+plt.tight_layout()
+```
+
+The inclusions are
+
+$$
+\boxed{\mathbb{N}\subset\mathbb{W}\subset\mathbb{Z}\subset\mathbb{Q}}.
+$$
+
+The thinking behind the chain is more important than memorising the symbols:
+
+1. **Natural numbers:** We need numbers for counting.
+2. **Whole numbers:** We need zero to describe none or an empty collection.
+3. **Integers:** We need negative numbers for quantities below zero or in the opposite direction.
+4. **Rational numbers:** We need fractions and suitable decimals to describe parts of a whole and points between integers.
+
+## Check your understanding
+
+### Question 1
+
+Is 0 a natural number?
+
+> **Think aloud:** In this lesson, natural numbers begin at 1. Zero was added to create the whole numbers. Therefore, 0 is a whole number, but not a natural number under our chosen convention.
+
+### Question 2
+
+Is $-4$ a whole number?
+
+> **Think aloud:** Whole numbers begin at 0 and move to the right: $0,1,2,3,\ldots$. Since $-4$ lies to the left of zero, it is not a whole number. It is an integer.
+
+### Question 3
+
+Is $\frac32$ an integer?
+
+> **Think aloud:** $\frac32=1.5$, which lies between 1 and 2. There is no integer between 1 and 2. Therefore, $\frac32$ is rational but not an integer.
+
+### Question 4
+
+Is 6 rational?
+
+> **Think aloud:** Any integer can be written with denominator 1. Since $6=\frac61$, 6 is rational.
+
+### Question 5
+
+Which sets contain $-2$?
+
+> **Think aloud:** $-2$ is not natural or whole because those sets do not include negative numbers. It is an integer, and it is rational because $-2=-\frac21$.
+
+## A final conversation
+
+> **Student:** I think I understand now. The different names are not saying that the number line changes. They tell us which points we have decided to include.
+>
+> **Teacher:** Exactly. We begin with a small collection and enlarge it when we need new kinds of numbers. Natural numbers are enough for counting. Whole numbers add zero. Integers add negative numbers. Rational numbers add fractions and many decimals between the integers.
+>
+> **Student:** And a number can belong to more than one collection.
+>
+> **Teacher:** Yes. For example, 3 is natural, whole, integer, and rational. But $\frac12$ is rational without being natural, whole, or integer.
+
+The most useful picture is therefore not a collection of unrelated definitions, but a sequence of questions:
+
+> **What can I describe with the numbers I have? What new situation forces me to add another kind of number?**
+
+That question turns number classification into a story of mathematical need.
