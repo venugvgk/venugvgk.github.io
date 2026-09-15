@@ -15,4 +15,152 @@ jupyter: python3
 execute:
   warning: false
 ---
-To be updated
+
+## 1. Review of Linear Graphs ($y = mx + c$)
+* **General Strategy**: To plot a linear graph, determine two key points on the axes:
+  * **$y$-intercept**: Set $x = 0 \implies y = c$. The graph passes through **$(0, c)$**.
+  * **$x$-intercept**: Set $y = 0 \implies mx + c = 0 \implies x = -\frac{c}{m}$. The graph passes through **$\left(-\frac{c}{m}, 0\right)$**.
+* **Why two points work**: Because $y = mx + c$ is a straight line, finding two points is sufficient to draw the complete line.
+
+---
+
+## 2. Understanding Functions ($y = f(x)$)
+* **Intuitive Meaning**: $y$ changes simultaneously as $x$ changes ($y$ depends on $x$).
+* **Mathematical Meaning**: $y$ can be expressed as an algebraic combination/expression involving $x$.
+* **Universal Plotting Strategy for any Curve $y = f(x)$**:
+  1. **Find the $y$-intercept**: Substitute $x = 0$ into $y = f(x)$ to evaluate $f(0)$.
+  2. **Find the $x$-intercept(s)**: Set $y = 0$ and solve the equation $f(x) = 0$.
+  3. **Determine Curve Geometry**: Identify additional points, symmetry, or vertices to complete the sketch.
+
+---
+
+## 3. Example: Plotting a Non-Linear Curve ($y^2 = 4 - x^2$)
+1. **$y$-intercepts**: Set $x = 0 \implies y^2 = 4 \implies y = \pm 2$. Points: **$(0, 2)$** and **$(0, -2)$**.
+2. **$x$-intercepts**: Set $y = 0 \implies 0 = 4 - x^2 \implies x^2 = 4 \implies x = \pm 2$. Points: **$(2, 0)$** and **$(-2, 0)$**.
+3. **Shape**: The given equation is the equation of a circle. Connecting these four points smoothly forms a **circle** centered at the origin with radius $r = 2$ ($x^2 + y^2 = 2^2$).
+
+---
+
+## 4. Basic Parabolas ($y = ax^2$)
+* **Standard Form ($y = x^2$ or $y = ax^2$)**:
+  * Setting $x = 0 \implies y = 0$ and setting $y = 0 \implies x = 0$. The $x$- and $y$-intercepts meet at the origin **$(0,0)$**.
+  * The curve is an **upward-turned parabola** symmetrical around the $y$-axis.
+  * **Fixing the scale**: Substitute one additional $x$-value (e.g., $x = 2 \implies y = 4a$) to fix the curve, then draw symmetrically.
+* **Negative Coefficient ($y = -2x^2$)**:
+  * Forms a **downward-turned parabola** passing through $(0,0)$ (e.g., at $x = 2$, $y = -8$).
+
+---
+
+## 5. Quadratic Curves of the Form $y = ax^2 + bx$
+
+### Step-by-Step Derivation & Formulas
+1. **$y$-intercept**: Set $x = 0 \implies y = 0$. Point: **$(0, 0)$**.
+2. **$x$-intercepts**: Set $y = 0 \implies ax^2 + bx = 0 \implies ax\left(x + \frac{b}{a}\right) = 0 \implies x = 0 \text{ or } x = -\frac{b}{a}$.
+3. **Axis of Symmetry & Vertex**:
+   * Parabolas are symmetrical around their vertex line.
+   * **Vertex $x$-coordinate ($x_v$)**: Midpoint of the two $x$-intercepts:
+     $$x_v = \frac{0 + \left(-\frac{b}{a}\right)}{2} = -\frac{b}{2a}$$.
+   * **Vertex $y$-coordinate ($y_v$)**: Substitute $x_v = -\frac{b}{2a}$ back into $y = ax^2 + bx$:
+     $$y_v = a\left(-\frac{b}{2a}\right)^2 + b\left(-\frac{b}{2a}\right) = \frac{b^2}{4a} - \frac{b^2}{2a} = -\frac{b^2}{4a}$$.
+   * **Vertex Coordinates**: **$\left(-\frac{b}{2a}, -\frac{b^2}{4a}\right)$**.
+
+### Worked Example: $y = 2x^2 + 6x$
+* **$y$-intercept**: $x = 0 \implies y = 0 \implies \mathbf{(0, 0)}$.
+* **$x$-intercepts**: Solve $2x^2 + 6x = 0 \implies 2x(x + 3) = 0 \implies x = 0 \text{ or } x = -3 \implies \mathbf{(0,0) \text{ and } (-3,0)}$.
+* **Vertex $x$-value**: $x_v = \frac{0 + (-3)}{2} = \mathbf{-1.5}$.
+* **Vertex $y$-value**: $y_v = 2(-1.5)^2 + 6(-1.5) = 4.5 - 9 = \mathbf{-4.5}$.
+* **Vertex Coordinates**: **$(-1.5, -4.5)$**.
+
+```{python}
+#| label: fig-worked-example-quadratic
+#| fig-cap: "The graph of $y=2x^2+6x$, showing its intercepts, vertex, and axis of symmetry."
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-4, 1, 500)
+y = 2 * x**2 + 6 * x
+roots = [-3, 0]
+vertex = (-1.5, -4.5)
+
+fig, ax = plt.subplots(figsize=(7, 5))
+ax.plot(x, y, color="navy", label=r"$y=2x^2+6x$")
+ax.scatter(roots, [0, 0], color="crimson", zorder=3, label="x-intercepts")
+ax.scatter(*vertex, color="darkorange", zorder=3, label="vertex")
+ax.axvline(vertex[0], color="darkorange", linestyle="--", alpha=0.8,
+           label=r"axis of symmetry $x=-1.5$")
+ax.annotate(r"$(-3,0)$", (-3, 0), xytext=(-3.7, 1.2),
+            arrowprops={"arrowstyle": "->", "color": "crimson"})
+ax.annotate(r"$(0,0)$", (0, 0), xytext=(0.2, 1.2),
+            arrowprops={"arrowstyle": "->", "color": "crimson"})
+ax.annotate(r"$(-1.5,-4.5)$", vertex, xytext=(-3.3, -5.8),
+            arrowprops={"arrowstyle": "->", "color": "darkorange"})
+ax.axhline(0, color="black", linewidth=0.7)
+ax.axvline(0, color="black", linewidth=0.7)
+ax.set(xlim=(-4, 1), ylim=(-7, 4), xlabel=r"$x$", ylabel=r"$y$")
+ax.grid(True, alpha=0.3)
+ax.legend()
+plt.show()
+```
+
+
+---
+
+## 6. General Quadratic Curves $y = ax^2 + bx + c$
+
+1. **$y$-intercept**: Set $x = 0 \implies y = c \implies \mathbf{(0, c)}$.
+2. **$x$-intercepts**: Solve $ax^2 + bx + c = 0$ using factorization or quadratic methods.
+3. **Symmetry Shortcut**: $y = c$ occurs at both $x = 0$ and $x = -\frac{b}{a}$. The midpoint between them gives the axis of symmetry $x = -\frac{b}{2a}$.
+
+### Factorizable Example: $y = x^2 + x - 12 = (x - 3)(x + 4)$
+* **$y$-intercept**: Set $x = 0 \implies y = (0-3)(0+4) = -12 \implies \mathbf{(0, -12)}$.
+* **$x$-intercepts**: Set $y = 0 \implies (x - 3)(x + 4) = 0 \implies x = 3 \text{ or } x = -4 \implies \mathbf{(3, 0) \text{ and } (-4, 0)}$.
+* **Vertex $x$-value**: $x_v = \frac{3 + (-4)}{2} = \mathbf{-0.5}$.
+* **Vertex $y$-value**: $y_v = (-0.5 - 3)(-0.5 + 4) = (-3.5)(3.5) = \mathbf{-12.25}$.
+* **Vertex Coordinates**: **$(-0.5, -12.25)$**.
+
+```{python}
+#| label: fig-factorizable-quadratic
+#| fig-cap: "The graph of $y=x^2+x-12$, showing its intercepts, vertex, and axis of symmetry."
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-5, 4, 500)
+y = x**2 + x - 12
+roots = [-4, 3]
+vertex = (-0.5, -12.25)
+
+fig, ax = plt.subplots(figsize=(7, 5))
+ax.plot(x, y, color="navy", label=r"$y=x^2+x-12$")
+ax.scatter(roots, [0, 0], color="crimson", zorder=3, label="x-intercepts")
+ax.scatter([0], [-12], color="seagreen", zorder=3, label="y-intercept")
+ax.scatter(*vertex, color="darkorange", zorder=3, label="vertex")
+ax.axvline(vertex[0], color="darkorange", linestyle="--", alpha=0.8,
+           label=r"axis of symmetry $x=-0.5$")
+ax.annotate(r"$(-4,0)$", (-4, 0), xytext=(-4.8, 2),
+            arrowprops={"arrowstyle": "->", "color": "crimson"})
+ax.annotate(r"$(3,0)$", (3, 0), xytext=(2.3, 2),
+            arrowprops={"arrowstyle": "->", "color": "crimson"})
+ax.annotate(r"$(0,-12)$", (0, -12), xytext=(0.5, -10),
+            arrowprops={"arrowstyle": "->", "color": "seagreen"})
+ax.annotate(r"$(-0.5,-12.25)$", vertex, xytext=(-3.2, -14.5),
+            arrowprops={"arrowstyle": "->", "color": "darkorange"})
+ax.axhline(0, color="black", linewidth=0.7)
+ax.axvline(0, color="black", linewidth=0.7)
+ax.set(xlim=(-5, 4), ylim=(-16, 6), xlabel=r"$x$", ylabel=r"$y$")
+ax.grid(True, alpha=0.3)
+ax.legend()
+plt.show()
+```
+
+
+
+---
+
+## 7. Homework & Pre-Work Assignment
+1. **Task 1**: Find $x$- and $y$-intercepts for various given functions $y = f(x)$.
+2. **Task 2**: Sketch curves of the form $y = ax^2 + bx$.
+3. **Task 3**: Sketch factorizable quadratic curves $y = ax^2 + bx + c$.
+4. **Mandatory Formatting**: Write mathematical steps on the left side of the page and the **step-by-step narrative reasoning** on the right side.
+5. **Class Preparation**: Practice explaining each step out loud to a classmate prior to the next session.
