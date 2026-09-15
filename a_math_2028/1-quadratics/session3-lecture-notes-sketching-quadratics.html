@@ -69,13 +69,54 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Session 3 Lecture Notes Sketching Quadratics – Venu GVGK Raju">
-<meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
 <meta name="twitter:title" content="Session 3 Lecture Notes Sketching Quadratics – Venu GVGK Raju">
-<meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -135,8 +176,27 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#review-of-linear-graphs-y-mx-c" id="toc-review-of-linear-graphs-y-mx-c" class="nav-link active" data-scroll-target="#review-of-linear-graphs-y-mx-c">1. Review of Linear Graphs (<span class="math inline">y = mx + c</span>)</a></li>
+  <li><a href="#understanding-functions-y-fx" id="toc-understanding-functions-y-fx" class="nav-link" data-scroll-target="#understanding-functions-y-fx">2. Understanding Functions (<span class="math inline">y = f(x)</span>)</a></li>
+  <li><a href="#example-plotting-a-non-linear-curve-y2-4---x2" id="toc-example-plotting-a-non-linear-curve-y2-4---x2" class="nav-link" data-scroll-target="#example-plotting-a-non-linear-curve-y2-4---x2">3. Example: Plotting a Non-Linear Curve (<span class="math inline">y^2 = 4 - x^2</span>)</a></li>
+  <li><a href="#basic-parabolas-y-ax2" id="toc-basic-parabolas-y-ax2" class="nav-link" data-scroll-target="#basic-parabolas-y-ax2">4. Basic Parabolas (<span class="math inline">y = ax^2</span>)</a></li>
+  <li><a href="#quadratic-curves-of-the-form-y-ax2-bx" id="toc-quadratic-curves-of-the-form-y-ax2-bx" class="nav-link" data-scroll-target="#quadratic-curves-of-the-form-y-ax2-bx">5. Quadratic Curves of the Form <span class="math inline">y = ax^2 + bx</span></a>
+  <ul class="collapse">
+  <li><a href="#step-by-step-derivation-formulas" id="toc-step-by-step-derivation-formulas" class="nav-link" data-scroll-target="#step-by-step-derivation-formulas">Step-by-Step Derivation &amp; Formulas</a></li>
+  <li><a href="#worked-example-y-2x2-6x" id="toc-worked-example-y-2x2-6x" class="nav-link" data-scroll-target="#worked-example-y-2x2-6x">Worked Example: <span class="math inline">y = 2x^2 + 6x</span></a></li>
+  </ul></li>
+  <li><a href="#general-quadratic-curves-y-ax2-bx-c" id="toc-general-quadratic-curves-y-ax2-bx-c" class="nav-link" data-scroll-target="#general-quadratic-curves-y-ax2-bx-c">6. General Quadratic Curves <span class="math inline">y = ax^2 + bx + c</span></a>
+  <ul class="collapse">
+  <li><a href="#factorizable-example-y-x2-x---12-x---3x-4" id="toc-factorizable-example-y-x2-x---12-x---3x-4" class="nav-link" data-scroll-target="#factorizable-example-y-x2-x---12-x---3x-4">Factorizable Example: <span class="math inline">y = x^2 + x - 12 = (x - 3)(x + 4)</span></a></li>
+  </ul></li>
+  <li><a href="#homework-pre-work-assignment" id="toc-homework-pre-work-assignment" class="nav-link" data-scroll-target="#homework-pre-work-assignment">7. Homework &amp; Pre-Work Assignment</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -166,9 +226,144 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>To be updated</p>
+<section id="review-of-linear-graphs-y-mx-c" class="level2">
+<h2 class="anchored" data-anchor-id="review-of-linear-graphs-y-mx-c">1. Review of Linear Graphs (<span class="math inline">y = mx + c</span>)</h2>
+<ul>
+<li><strong>General Strategy</strong>: To plot a linear graph, determine two key points on the axes:
+<ul>
+<li><strong><span class="math inline">y</span>-intercept</strong>: Set <span class="math inline">x = 0 \implies y = c</span>. The graph passes through <strong><span class="math inline">(0, c)</span></strong>.</li>
+<li><strong><span class="math inline">x</span>-intercept</strong>: Set <span class="math inline">y = 0 \implies mx + c = 0 \implies x = -\frac{c}{m}</span>. The graph passes through <strong><span class="math inline">\left(-\frac{c}{m}, 0\right)</span></strong>.</li>
+</ul></li>
+<li><strong>Why two points work</strong>: Because <span class="math inline">y = mx + c</span> is a straight line, finding two points is sufficient to draw the complete line.</li>
+</ul>
+<hr>
+</section>
+<section id="understanding-functions-y-fx" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-functions-y-fx">2. Understanding Functions (<span class="math inline">y = f(x)</span>)</h2>
+<ul>
+<li><strong>Intuitive Meaning</strong>: <span class="math inline">y</span> changes simultaneously as <span class="math inline">x</span> changes (<span class="math inline">y</span> depends on <span class="math inline">x</span>).</li>
+<li><strong>Mathematical Meaning</strong>: <span class="math inline">y</span> can be expressed as an algebraic combination/expression involving <span class="math inline">x</span>.</li>
+<li><strong>Universal Plotting Strategy for any Curve <span class="math inline">y = f(x)</span></strong>:
+<ol type="1">
+<li><strong>Find the <span class="math inline">y</span>-intercept</strong>: Substitute <span class="math inline">x = 0</span> into <span class="math inline">y = f(x)</span> to evaluate <span class="math inline">f(0)</span>.</li>
+<li><strong>Find the <span class="math inline">x</span>-intercept(s)</strong>: Set <span class="math inline">y = 0</span> and solve the equation <span class="math inline">f(x) = 0</span>.</li>
+<li><strong>Determine Curve Geometry</strong>: Identify additional points, symmetry, or vertices to complete the sketch.</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+<section id="example-plotting-a-non-linear-curve-y2-4---x2" class="level2">
+<h2 class="anchored" data-anchor-id="example-plotting-a-non-linear-curve-y2-4---x2">3. Example: Plotting a Non-Linear Curve (<span class="math inline">y^2 = 4 - x^2</span>)</h2>
+<ol type="1">
+<li><strong><span class="math inline">y</span>-intercepts</strong>: Set <span class="math inline">x = 0 \implies y^2 = 4 \implies y = \pm 2</span>. Points: <strong><span class="math inline">(0, 2)</span></strong> and <strong><span class="math inline">(0, -2)</span></strong>.</li>
+<li><strong><span class="math inline">x</span>-intercepts</strong>: Set <span class="math inline">y = 0 \implies 0 = 4 - x^2 \implies x^2 = 4 \implies x = \pm 2</span>. Points: <strong><span class="math inline">(2, 0)</span></strong> and <strong><span class="math inline">(-2, 0)</span></strong>.</li>
+<li><strong>Shape</strong>: The given equation is the equation of a circle. Connecting these four points smoothly forms a <strong>circle</strong> centered at the origin with radius <span class="math inline">r = 2</span> (<span class="math inline">x^2 + y^2 = 2^2</span>).</li>
+</ol>
+<hr>
+</section>
+<section id="basic-parabolas-y-ax2" class="level2">
+<h2 class="anchored" data-anchor-id="basic-parabolas-y-ax2">4. Basic Parabolas (<span class="math inline">y = ax^2</span>)</h2>
+<ul>
+<li><strong>Standard Form (<span class="math inline">y = x^2</span> or <span class="math inline">y = ax^2</span>)</strong>:
+<ul>
+<li>Setting <span class="math inline">x = 0 \implies y = 0</span> and setting <span class="math inline">y = 0 \implies x = 0</span>. The <span class="math inline">x</span>- and <span class="math inline">y</span>-intercepts meet at the origin <strong><span class="math inline">(0,0)</span></strong>.</li>
+<li>The curve is an <strong>upward-turned parabola</strong> symmetrical around the <span class="math inline">y</span>-axis.</li>
+<li><strong>Fixing the scale</strong>: Substitute one additional <span class="math inline">x</span>-value (e.g., <span class="math inline">x = 2 \implies y = 4a</span>) to fix the curve, then draw symmetrically.</li>
+</ul></li>
+<li><strong>Negative Coefficient (<span class="math inline">y = -2x^2</span>)</strong>:
+<ul>
+<li>Forms a <strong>downward-turned parabola</strong> passing through <span class="math inline">(0,0)</span> (e.g., at <span class="math inline">x = 2</span>, <span class="math inline">y = -8</span>).</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="quadratic-curves-of-the-form-y-ax2-bx" class="level2">
+<h2 class="anchored" data-anchor-id="quadratic-curves-of-the-form-y-ax2-bx">5. Quadratic Curves of the Form <span class="math inline">y = ax^2 + bx</span></h2>
+<section id="step-by-step-derivation-formulas" class="level3">
+<h3 class="anchored" data-anchor-id="step-by-step-derivation-formulas">Step-by-Step Derivation &amp; Formulas</h3>
+<ol type="1">
+<li><strong><span class="math inline">y</span>-intercept</strong>: Set <span class="math inline">x = 0 \implies y = 0</span>. Point: <strong><span class="math inline">(0, 0)</span></strong>.</li>
+<li><strong><span class="math inline">x</span>-intercepts</strong>: Set <span class="math inline">y = 0 \implies ax^2 + bx = 0 \implies ax\left(x + \frac{b}{a}\right) = 0 \implies x = 0 \text{ or } x = -\frac{b}{a}</span>.</li>
+<li><strong>Axis of Symmetry &amp; Vertex</strong>:
+<ul>
+<li>Parabolas are symmetrical around their vertex line.</li>
+<li><strong>Vertex <span class="math inline">x</span>-coordinate (<span class="math inline">x_v</span>)</strong>: Midpoint of the two <span class="math inline">x</span>-intercepts: <span class="math display">x_v = \frac{0 + \left(-\frac{b}{a}\right)}{2} = -\frac{b}{2a}</span>.</li>
+<li><strong>Vertex <span class="math inline">y</span>-coordinate (<span class="math inline">y_v</span>)</strong>: Substitute <span class="math inline">x_v = -\frac{b}{2a}</span> back into <span class="math inline">y = ax^2 + bx</span>: <span class="math display">y_v = a\left(-\frac{b}{2a}\right)^2 + b\left(-\frac{b}{2a}\right) = \frac{b^2}{4a} - \frac{b^2}{2a} = -\frac{b^2}{4a}</span>.</li>
+<li><strong>Vertex Coordinates</strong>: <strong><span class="math inline">\left(-\frac{b}{2a}, -\frac{b^2}{4a}\right)</span></strong>.</li>
+</ul></li>
+</ol>
+</section>
+<section id="worked-example-y-2x2-6x" class="level3">
+<h3 class="anchored" data-anchor-id="worked-example-y-2x2-6x">Worked Example: <span class="math inline">y = 2x^2 + 6x</span></h3>
+<ul>
+<li><strong><span class="math inline">y</span>-intercept</strong>: <span class="math inline">x = 0 \implies y = 0 \implies \mathbf{(0, 0)}</span>.</li>
+<li><strong><span class="math inline">x</span>-intercepts</strong>: Solve <span class="math inline">2x^2 + 6x = 0 \implies 2x(x + 3) = 0 \implies x = 0 \text{ or } x = -3 \implies \mathbf{(0,0) \text{ and } (-3,0)}</span>.</li>
+<li><strong>Vertex <span class="math inline">x</span>-value</strong>: <span class="math inline">x_v = \frac{0 + (-3)}{2} = \mathbf{-1.5}</span>.</li>
+<li><strong>Vertex <span class="math inline">y</span>-value</strong>: <span class="math inline">y_v = 2(-1.5)^2 + 6(-1.5) = 4.5 - 9 = \mathbf{-4.5}</span>.</li>
+<li><strong>Vertex Coordinates</strong>: <strong><span class="math inline">(-1.5, -4.5)</span></strong>.</li>
+</ul>
+<div id="cell-fig-worked-example-quadratic" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div id="fig-worked-example-quadratic" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-worked-example-quadratic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="session3-lecture-notes-sketching-quadratics_files/figure-html/fig-worked-example-quadratic-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-worked-example-quadratic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The graph of <span class="math inline">y=2x^2+6x</span>, showing its intercepts, vertex, and axis of symmetry.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="general-quadratic-curves-y-ax2-bx-c" class="level2">
+<h2 class="anchored" data-anchor-id="general-quadratic-curves-y-ax2-bx-c">6. General Quadratic Curves <span class="math inline">y = ax^2 + bx + c</span></h2>
+<ol type="1">
+<li><strong><span class="math inline">y</span>-intercept</strong>: Set <span class="math inline">x = 0 \implies y = c \implies \mathbf{(0, c)}</span>.</li>
+<li><strong><span class="math inline">x</span>-intercepts</strong>: Solve <span class="math inline">ax^2 + bx + c = 0</span> using factorization or quadratic methods.</li>
+<li><strong>Symmetry Shortcut</strong>: <span class="math inline">y = c</span> occurs at both <span class="math inline">x = 0</span> and <span class="math inline">x = -\frac{b}{a}</span>. The midpoint between them gives the axis of symmetry <span class="math inline">x = -\frac{b}{2a}</span>.</li>
+</ol>
+<section id="factorizable-example-y-x2-x---12-x---3x-4" class="level3">
+<h3 class="anchored" data-anchor-id="factorizable-example-y-x2-x---12-x---3x-4">Factorizable Example: <span class="math inline">y = x^2 + x - 12 = (x - 3)(x + 4)</span></h3>
+<ul>
+<li><strong><span class="math inline">y</span>-intercept</strong>: Set <span class="math inline">x = 0 \implies y = (0-3)(0+4) = -12 \implies \mathbf{(0, -12)}</span>.</li>
+<li><strong><span class="math inline">x</span>-intercepts</strong>: Set <span class="math inline">y = 0 \implies (x - 3)(x + 4) = 0 \implies x = 3 \text{ or } x = -4 \implies \mathbf{(3, 0) \text{ and } (-4, 0)}</span>.</li>
+<li><strong>Vertex <span class="math inline">x</span>-value</strong>: <span class="math inline">x_v = \frac{3 + (-4)}{2} = \mathbf{-0.5}</span>.</li>
+<li><strong>Vertex <span class="math inline">y</span>-value</strong>: <span class="math inline">y_v = (-0.5 - 3)(-0.5 + 4) = (-3.5)(3.5) = \mathbf{-12.25}</span>.</li>
+<li><strong>Vertex Coordinates</strong>: <strong><span class="math inline">(-0.5, -12.25)</span></strong>.</li>
+</ul>
+<div id="cell-fig-factorizable-quadratic" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div id="fig-factorizable-quadratic" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-factorizable-quadratic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="session3-lecture-notes-sketching-quadratics_files/figure-html/fig-factorizable-quadratic-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-factorizable-quadratic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The graph of <span class="math inline">y=x^2+x-12</span>, showing its intercepts, vertex, and axis of symmetry.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="homework-pre-work-assignment" class="level2">
+<h2 class="anchored" data-anchor-id="homework-pre-work-assignment">7. Homework &amp; Pre-Work Assignment</h2>
+<ol type="1">
+<li><strong>Task 1</strong>: Find <span class="math inline">x</span>- and <span class="math inline">y</span>-intercepts for various given functions <span class="math inline">y = f(x)</span>.</li>
+<li><strong>Task 2</strong>: Sketch curves of the form <span class="math inline">y = ax^2 + bx</span>.</li>
+<li><strong>Task 3</strong>: Sketch factorizable quadratic curves <span class="math inline">y = ax^2 + bx + c</span>.</li>
+<li><strong>Mandatory Formatting</strong>: Write mathematical steps on the left side of the page and the <strong>step-by-step narrative reasoning</strong> on the right side.</li>
+<li><strong>Class Preparation</strong>: Practice explaining each step out loud to a classmate prior to the next session.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

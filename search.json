@@ -2692,7 +2692,56 @@
     "href": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html",
     "title": "Session 3 Lecture Notes Sketching Quadratics",
     "section": "",
-    "text": "To be updated"
+    "text": "General Strategy: To plot a linear graph, determine two key points on the axes:\n\ny-intercept: Set x = 0 \\implies y = c. The graph passes through (0, c).\nx-intercept: Set y = 0 \\implies mx + c = 0 \\implies x = -\\frac{c}{m}. The graph passes through \\left(-\\frac{c}{m}, 0\\right).\n\nWhy two points work: Because y = mx + c is a straight line, finding two points is sufficient to draw the complete line."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#review-of-linear-graphs-y-mx-c",
+    "href": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#review-of-linear-graphs-y-mx-c",
+    "title": "Session 3 Lecture Notes Sketching Quadratics",
+    "section": "",
+    "text": "General Strategy: To plot a linear graph, determine two key points on the axes:\n\ny-intercept: Set x = 0 \\implies y = c. The graph passes through (0, c).\nx-intercept: Set y = 0 \\implies mx + c = 0 \\implies x = -\\frac{c}{m}. The graph passes through \\left(-\\frac{c}{m}, 0\\right).\n\nWhy two points work: Because y = mx + c is a straight line, finding two points is sufficient to draw the complete line."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#understanding-functions-y-fx",
+    "href": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#understanding-functions-y-fx",
+    "title": "Session 3 Lecture Notes Sketching Quadratics",
+    "section": "2. Understanding Functions (y = f(x))",
+    "text": "2. Understanding Functions (y = f(x))\n\nIntuitive Meaning: y changes simultaneously as x changes (y depends on x).\nMathematical Meaning: y can be expressed as an algebraic combination/expression involving x.\nUniversal Plotting Strategy for any Curve y = f(x):\n\nFind the y-intercept: Substitute x = 0 into y = f(x) to evaluate f(0).\nFind the x-intercept(s): Set y = 0 and solve the equation f(x) = 0.\nDetermine Curve Geometry: Identify additional points, symmetry, or vertices to complete the sketch."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#example-plotting-a-non-linear-curve-y2-4---x2",
+    "href": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#example-plotting-a-non-linear-curve-y2-4---x2",
+    "title": "Session 3 Lecture Notes Sketching Quadratics",
+    "section": "3. Example: Plotting a Non-Linear Curve (y^2 = 4 - x^2)",
+    "text": "3. Example: Plotting a Non-Linear Curve (y^2 = 4 - x^2)\n\ny-intercepts: Set x = 0 \\implies y^2 = 4 \\implies y = \\pm 2. Points: (0, 2) and (0, -2).\nx-intercepts: Set y = 0 \\implies 0 = 4 - x^2 \\implies x^2 = 4 \\implies x = \\pm 2. Points: (2, 0) and (-2, 0).\nShape: The given equation is the equation of a circle. Connecting these four points smoothly forms a circle centered at the origin with radius r = 2 (x^2 + y^2 = 2^2)."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#basic-parabolas-y-ax2",
+    "href": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#basic-parabolas-y-ax2",
+    "title": "Session 3 Lecture Notes Sketching Quadratics",
+    "section": "4. Basic Parabolas (y = ax^2)",
+    "text": "4. Basic Parabolas (y = ax^2)\n\nStandard Form (y = x^2 or y = ax^2):\n\nSetting x = 0 \\implies y = 0 and setting y = 0 \\implies x = 0. The x- and y-intercepts meet at the origin (0,0).\nThe curve is an upward-turned parabola symmetrical around the y-axis.\nFixing the scale: Substitute one additional x-value (e.g., x = 2 \\implies y = 4a) to fix the curve, then draw symmetrically.\n\nNegative Coefficient (y = -2x^2):\n\nForms a downward-turned parabola passing through (0,0) (e.g., at x = 2, y = -8)."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#quadratic-curves-of-the-form-y-ax2-bx",
+    "href": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#quadratic-curves-of-the-form-y-ax2-bx",
+    "title": "Session 3 Lecture Notes Sketching Quadratics",
+    "section": "5. Quadratic Curves of the Form y = ax^2 + bx",
+    "text": "5. Quadratic Curves of the Form y = ax^2 + bx\n\nStep-by-Step Derivation & Formulas\n\ny-intercept: Set x = 0 \\implies y = 0. Point: (0, 0).\nx-intercepts: Set y = 0 \\implies ax^2 + bx = 0 \\implies ax\\left(x + \\frac{b}{a}\\right) = 0 \\implies x = 0 \\text{ or } x = -\\frac{b}{a}.\nAxis of Symmetry & Vertex:\n\nParabolas are symmetrical around their vertex line.\nVertex x-coordinate (x_v): Midpoint of the two x-intercepts: x_v = \\frac{0 + \\left(-\\frac{b}{a}\\right)}{2} = -\\frac{b}{2a}.\nVertex y-coordinate (y_v): Substitute x_v = -\\frac{b}{2a} back into y = ax^2 + bx: y_v = a\\left(-\\frac{b}{2a}\\right)^2 + b\\left(-\\frac{b}{2a}\\right) = \\frac{b^2}{4a} - \\frac{b^2}{2a} = -\\frac{b^2}{4a}.\nVertex Coordinates: \\left(-\\frac{b}{2a}, -\\frac{b^2}{4a}\\right).\n\n\n\n\nWorked Example: y = 2x^2 + 6x\n\ny-intercept: x = 0 \\implies y = 0 \\implies \\mathbf{(0, 0)}.\nx-intercepts: Solve 2x^2 + 6x = 0 \\implies 2x(x + 3) = 0 \\implies x = 0 \\text{ or } x = -3 \\implies \\mathbf{(0,0) \\text{ and } (-3,0)}.\nVertex x-value: x_v = \\frac{0 + (-3)}{2} = \\mathbf{-1.5}.\nVertex y-value: y_v = 2(-1.5)^2 + 6(-1.5) = 4.5 - 9 = \\mathbf{-4.5}.\nVertex Coordinates: (-1.5, -4.5).\n\n\n\n\n\n\n\n\n\nFigure 1: The graph of y=2x^2+6x, showing its intercepts, vertex, and axis of symmetry."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#general-quadratic-curves-y-ax2-bx-c",
+    "href": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#general-quadratic-curves-y-ax2-bx-c",
+    "title": "Session 3 Lecture Notes Sketching Quadratics",
+    "section": "6. General Quadratic Curves y = ax^2 + bx + c",
+    "text": "6. General Quadratic Curves y = ax^2 + bx + c\n\ny-intercept: Set x = 0 \\implies y = c \\implies \\mathbf{(0, c)}.\nx-intercepts: Solve ax^2 + bx + c = 0 using factorization or quadratic methods.\nSymmetry Shortcut: y = c occurs at both x = 0 and x = -\\frac{b}{a}. The midpoint between them gives the axis of symmetry x = -\\frac{b}{2a}.\n\n\nFactorizable Example: y = x^2 + x - 12 = (x - 3)(x + 4)\n\ny-intercept: Set x = 0 \\implies y = (0-3)(0+4) = -12 \\implies \\mathbf{(0, -12)}.\nx-intercepts: Set y = 0 \\implies (x - 3)(x + 4) = 0 \\implies x = 3 \\text{ or } x = -4 \\implies \\mathbf{(3, 0) \\text{ and } (-4, 0)}.\nVertex x-value: x_v = \\frac{3 + (-4)}{2} = \\mathbf{-0.5}.\nVertex y-value: y_v = (-0.5 - 3)(-0.5 + 4) = (-3.5)(3.5) = \\mathbf{-12.25}.\nVertex Coordinates: (-0.5, -12.25).\n\n\n\n\n\n\n\n\n\nFigure 2: The graph of y=x^2+x-12, showing its intercepts, vertex, and axis of symmetry."
+  },
+  {
+    "objectID": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#homework-pre-work-assignment",
+    "href": "a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html#homework-pre-work-assignment",
+    "title": "Session 3 Lecture Notes Sketching Quadratics",
+    "section": "7. Homework & Pre-Work Assignment",
+    "text": "7. Homework & Pre-Work Assignment\n\nTask 1: Find x- and y-intercepts for various given functions y = f(x).\nTask 2: Sketch curves of the form y = ax^2 + bx.\nTask 3: Sketch factorizable quadratic curves y = ax^2 + bx + c.\nMandatory Formatting: Write mathematical steps on the left side of the page and the step-by-step narrative reasoning on the right side.\nClass Preparation: Practice explaining each step out loud to a classmate prior to the next session."
   },
   {
     "objectID": "a_math_2028/session4-solving-quadratic-equations.html",
@@ -4337,21 +4386,21 @@
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-mathematically-fair-die-game",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Python: mathematically fair die game",
-    "text": "Python: mathematically fair die game\n\nfrom secrets import randbelow\n\nSTAKE = 100\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE / win_probability  # ₹600 in a fair game\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    player_net = gross_payout - STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{player_net:.2f}\")\nelse:\n    player_net = -STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{-player_net:.2f}\")\n\nRolled: 6\nYou lost ₹100.00\n\n\nThe program uses secrets.randbelow(6) + 1 to generate a uniformly distributed die result from 1 to 6."
+    "text": "Python: mathematically fair die game\n\nfrom secrets import randbelow\n\nSTAKE = 100\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE / win_probability  # ₹600 in a fair game\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    player_net = gross_payout - STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{player_net:.2f}\")\nelse:\n    player_net = -STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{-player_net:.2f}\")\n\nRolled: 1\nYou lost ₹100.00\n\n\nThe program uses secrets.randbelow(6) + 1 to generate a uniformly distributed die result from 1 to 6."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Python: casino die game",
-    "text": "Python: casino die game\nThis version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.\n\nfrom secrets import randbelow\n\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{net_win:.2f}\")\nelse:\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{STAKE:.2f}\")\n\nRolled: 4\nYou won ₹470.00\n\n\nThe die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result."
+    "text": "Python: casino die game\nThis version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.\n\nfrom secrets import randbelow\n\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{net_win:.2f}\")\nelse:\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{STAKE:.2f}\")\n\nRolled: 1\nYou lost ₹100.00\n\n\nThe die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Simulating 10,000 rolls",
-    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,769\nObserved win rate:          17.69%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹8,330.00\nCasino profit:              ₹-8,330.00\nObserved house edge:        -0.83%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
+    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,647\nObserved win rate:          16.47%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-61,210.00\nCasino profit:              ₹61,210.00\nObserved house edge:        6.12%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#conclusion",
