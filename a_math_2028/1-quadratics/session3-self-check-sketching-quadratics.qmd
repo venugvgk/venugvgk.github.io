@@ -1,0 +1,75 @@
+---
+title: Session 3 Check Your Understanding Sketching Quadratics  
+date: 2026-09-16
+page-layout: article
+publish: false
+format:
+  html:
+    toc: true
+    code-fold: true
+    html-math-method: katex
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+jupyter: python3
+execute:
+  warning: false
+---
+## Section A: Finding x- and y-intercepts of $y = f(x)$
+
+For each function, find the **x-intercept(s)** (where $y = 0$) and the **y-intercept** (where $x = 0$).
+
+1. $y = (x+3)(x+5)$
+
+2. $y = (x-2)(2x^2 + 7x + 3)$
+
+3. $y = x^2 - 4$
+
+4. $y = x^2 - 5x + 6$
+
+5. $y = 2x^2 - 8x$
+
+---
+
+## Section B: Sketching $y = ax^2 + bx$ (no constant term)
+
+For each quadratic, do the following:
+- Find the y-intercept.
+- Factorise to find the x-intercepts.
+- Find the vertex
+- State whether the parabola opens upward ($a > 0$) or downward ($a < 0$).
+- Sketch the graph (on paper) using this information.
+- label all the points clearly with both x and y coordinates. 
+
+1. $y = x^2 + 3x$
+
+2. $y = x^2 - 5x$
+
+3. $y = 2x^2 - 4x$
+
+4. $y = -x^2 + 2x$
+
+5. $y = -2x^2 - 6x$
+
+---
+
+## Section C: Sketching $y = ax^2 + bx + c$ (can be factorised)
+
+For each quadratic, do the following:
+- Find the y-intercept.
+- Factorise to find the x-intercepts.
+- Find the vertex
+- State whether the parabola opens upward ($a > 0$) or downward ($a < 0$).
+- Sketch the graph (on paper) using this information.
+- label all the points clearly with both x and y coordinates. 
+
+1. $y = x^2 + 5x + 6$
+
+2. $y = x^2 - 7x + 10$
+
+3. $y = x^2 - 2x - 8$
+
+4. $y = 2x^2 + 7x + 3$
+
+5. $y = -x^2 + x + 6$
+

@@ -1,0 +1,18 @@
+---
+title: Session 3 Lecture Notes Sketching Quadratics
+date: 2026-09-15
+page-layout: article
+publish: false
+format:
+  html:
+    toc: true
+    code-fold: true
+    html-math-method: katex
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+jupyter: python3
+execute:
+  warning: false
+---
+To be updated
