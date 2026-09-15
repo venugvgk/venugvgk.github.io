@@ -212,6 +212,13 @@
     ]
   },
   {
+    "listing": "/math-6-2026/index.html",
+    "items": [
+      "/math-6-2026/properties-of-number-sets.html",
+      "/math-6-2026/types-of-numbers.html"
+    ]
+  },
+  {
     "listing": "/education/index.html",
     "items": [
       "/education/shepherd-age-math.html",
@@ -230,15 +237,10 @@
     ]
   },
   {
-    "listing": "/math-6-2026/index.html",
-    "items": [
-      "/math-6-2026/properties-of-number-sets.html",
-      "/math-6-2026/types-of-numbers.html"
-    ]
-  },
-  {
     "listing": "/a_math_2028/index.html",
     "items": [
+      "/a_math_2028/1-quadratics/session3-self-check-sketching-quadratics.html",
+      "/a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html",
       "/a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html",
       "/a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html",
       "/a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html",
