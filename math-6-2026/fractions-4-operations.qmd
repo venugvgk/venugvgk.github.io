@@ -8,7 +8,6 @@ format:
     toc: true
     number-sections: true
     code-fold: false
-jupyter: python3
 ---
 This worksheet is a short reminder of important fraction skills. Read each rule, study the example, and then try the practice sets.
 
