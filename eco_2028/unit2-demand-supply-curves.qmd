@@ -10,6 +10,24 @@ format:
     fig-align: center
     fig-width: 7
     fig-height: 5
+  pdf:
+    papersize: a4
+    geometry:
+      - margin=0.8in
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyhf{}
+        \fancyfoot[L]{\href{https://gvgk.in/}{gvgk.in}}
+        \fancyfoot[R]{\thepage}
+        \fancypagestyle{plain}{%
+          \fancyhf{}
+          \fancyfoot[L]{\href{https://gvgk.in/}{gvgk.in}}
+          \fancyfoot[R]{\thepage}
+        }
+        \renewcommand{\headrulewidth}{0pt}
+        \renewcommand{\footrulewidth}{0pt}
 jupyter: python3
 execute:
   warning: false
@@ -33,7 +51,7 @@ By the end of this chapter, you should be able to:
 **Demand** describes the buying side of a market. **Supply** describes the selling side. Price changes normally cause movements along a curve; changes in other determinants cause the whole curve to shift.
 :::
 
-{{< downloadthis unit2-demand-supply-curves.pdf label="Demand & Supply Curves" icon="file-earmark-pdf" type="success" >}}
+{{< downloadthis unit2-demand-supply-curves.pdf dname="demand-and-supply-curves" label="Demand & Supply Curves" icon="file-earmark-pdf" type="success" >}}
 
 # 1. Markets and the price mechanism
 
