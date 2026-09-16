@@ -7,6 +7,12 @@ format:
     number-sections: false
     code-fold: true
     smooth-scroll: true
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+jupyter: python3
+execute:
+  warning: false
 ---
 
 # Learning objectives
@@ -95,12 +101,26 @@ For example:
 | 1,000 | 6,000 |
 | 800 | 7,000 |
 
-```{mermaid}
-xychart-beta
-  title "Demand curve for a standard PC"
-  x-axis "Quantity demanded per week" [1000, 2000, 3000, 4000, 5000, 6000, 7000]
-  y-axis "Price ($)" 0 --> 2200
-  line [2000, 1800, 1600, 1400, 1200, 1000, 800]
+```{python}
+#| label: fig-demand-curve
+#| fig-cap: "Demand curve for a standard PC."
+#| echo: false
+import matplotlib.pyplot as plt
+
+quantity = [1000, 2000, 3000, 4000, 5000, 6000, 7000]
+price = [2000, 1800, 1600, 1400, 1200, 1000, 800]
+
+fig, ax = plt.subplots()
+ax.plot(quantity, price, marker="o", color="tab:blue")
+ax.set(
+    title="Demand curve for a standard PC",
+    xlabel="Quantity demanded per week",
+    ylabel="Price ($)",
+    xlim=(0, 7500),
+    ylim=(0, 2200),
+)
+ax.grid(True, alpha=0.3)
+plt.show()
 ```
 
 A demand curve shows a relationship that is usually:
@@ -194,12 +214,26 @@ A supply curve is usually upward sloping from left to right because a higher pri
 | 1,800 | 6,000 |
 | 2,000 | 7,000 |
 
-```{mermaid}
-xychart-beta
-  title "Supply curve for a standard PC"
-  x-axis "Quantity supplied per week" [1000, 2000, 3000, 4000, 5000, 6000, 7000]
-  y-axis "Price ($)" 0 --> 2200
-  line [800, 1000, 1200, 1400, 1600, 1800, 2000]
+```{python}
+#| label: fig-supply-curve
+#| fig-cap: "Supply curve for a standard PC."
+#| echo: false
+import matplotlib.pyplot as plt
+
+quantity = [1000, 2000, 3000, 4000, 5000, 6000, 7000]
+price = [800, 1000, 1200, 1400, 1600, 1800, 2000]
+
+fig, ax = plt.subplots()
+ax.plot(quantity, price, marker="o", color="tab:orange")
+ax.set(
+    title="Supply curve for a standard PC",
+    xlabel="Quantity supplied per week",
+    ylabel="Price ($)",
+    xlim=(0, 7500),
+    ylim=(0, 2200),
+)
+ax.grid(True, alpha=0.3)
+plt.show()
 ```
 
 A supply curve shows a relationship that is usually:
