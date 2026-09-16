@@ -339,7 +339,7 @@ x^2+y^2-4=0.
 <p><span class="math display">\[
 y=x^3-3x.
 \]</span></p>
-<div id="6c74b622" class="cell" data-execution_count="1">
+<div id="58c4488a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -390,7 +390,7 @@ y=x^3-3x.
 f(x)=x^3-3x,
 \]</span></p>
 <p>use SymPy as follows:</p>
-<div id="d77c7362" class="cell" data-execution_count="2">
+<div id="08ea1187" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> sp.symbols(<span class="st">"x"</span>)</span>
@@ -418,7 +418,7 @@ f'(x)=3x^2-3.
 3x^2-3=0,
 \]</span></p>
 <p>so <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=1\)</span>. Their corresponding coordinates can be calculated with:</p>
-<div id="d933c573" class="cell" data-execution_count="3">
+<div id="ab55a30e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[(p, f.subs(x, p)) <span class="cf">for</span> p <span class="kw">in</span> stationary_points]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>[(-1, 2), (1, -2)]</code></pre>
@@ -429,7 +429,7 @@ f'(x)=3x^2-3.
 <h1>Plotting parametric curves</h1>
 <section id="circle" class="level2">
 <h2 class="anchored" data-anchor-id="circle">Circle</h2>
-<div id="7b3d0747" class="cell" data-execution_count="4">
+<div id="aaceb185" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -456,7 +456,7 @@ f'(x)=3x^2-3.
 </section>
 <section id="spiral" class="level2">
 <h2 class="anchored" data-anchor-id="spiral">Spiral</h2>
-<div id="60aac22b" class="cell" data-execution_count="5">
+<div id="3b2b03df" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">6</span><span class="op">*</span>np.pi, <span class="dv">2000</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="fl">0.1</span> <span class="op">*</span> t</span>
@@ -484,7 +484,7 @@ f'(x)=3x^2-3.
 F(x,y)=x^2+y^2-4=0,
 \]</span></p>
 <p>create a two-dimensional grid and draw the contour where the expression equals zero:</p>
-<div id="00020fa9" class="cell" data-execution_count="6">
+<div id="88446edc" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -527,7 +527,7 @@ f(x)=0.
 <p><span class="math display">\[
 f(x)=x^3-2x-5.
 \]</span></p>
-<div id="e14de655" class="cell" data-execution_count="7">
+<div id="01b255d4" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> brentq</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -548,7 +548,7 @@ f(x)=x^3-2x-5.
 x\approx 2.0945514815.
 \]</span></p>
 <p>The interval <span class="math inline">\([2,3]\)</span> is suitable because the function changes sign across the interval:</p>
-<div id="90e5ee58" class="cell" data-execution_count="8">
+<div id="229c421a" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>f(<span class="dv">2</span>), f(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>(-1, 16)</code></pre>
@@ -558,7 +558,7 @@ x\approx 2.0945514815.
 </section>
 <section id="plotting-the-root" class="level2">
 <h2 class="anchored" data-anchor-id="plotting-the-root">Plotting the root</h2>
-<div id="537aff95" class="cell" data-execution_count="9">
+<div id="705332ed" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">500</span>)</span>
@@ -585,7 +585,7 @@ x\approx 2.0945514815.
 <section id="finding-several-roots-by-scanning" class="level1">
 <h1>Finding several roots by scanning</h1>
 <p>If the intervals containing roots are unknown, sample the function over a range and look for sign changes.</p>
-<div id="fddcd2aa" class="cell" data-execution_count="10">
+<div id="37662166" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> brentq</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -603,7 +603,7 @@ x\approx 2.0945514815.
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.unique(np.<span class="bu">round</span>(roots, <span class="dv">12</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Example:</p>
-<div id="08e74560" class="cell" data-execution_count="11">
+<div id="be1cc460" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sin(x)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -652,7 +652,7 @@ f(x)=x^2,
 \qquad
 g(x)=2x+3.
 \]</span></p>
-<div id="79d64d87" class="cell" data-execution_count="12">
+<div id="55b3479e" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -663,7 +663,7 @@ g(x)=2x+3.
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> f(x) <span class="op">-</span> g(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Find the two roots of the difference:</p>
-<div id="d645e76c" class="cell" data-execution_count="13">
+<div id="ded65542" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> brentq(difference, <span class="op">-</span><span class="dv">2</span>, <span class="dv">0</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> brentq(difference, <span class="dv">3</span>, <span class="dv">5</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -682,7 +682,7 @@ g(x)=2x+3.
 (-1,1) \quad\text{and}\quad (3,9).
 \]</span></p>
 <p>Plot the curves and mark the points:</p>
-<div id="b182554b" class="cell" data-execution_count="14">
+<div id="005788e6" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">500</span>)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x, f(x), label<span class="op">=</span><span class="vs">r"$y=x^2$"</span>)</span>
@@ -707,7 +707,7 @@ g(x)=2x+3.
 </section>
 <section id="automatic-intersection-search" class="level2">
 <h2 class="anchored" data-anchor-id="automatic-intersection-search">Automatic intersection search</h2>
-<div id="dc4b3fec" class="cell" data-execution_count="15">
+<div id="0bc6bd39" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_intersections(f, g, left, right, points<span class="op">=</span><span class="dv">5000</span>):</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    h <span class="op">=</span> <span class="kw">lambda</span> x: f(x) <span class="op">-</span> g(x)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    xs <span class="op">=</span> np.linspace(left, right, points)</span>
@@ -722,7 +722,7 @@ g(x)=2x+3.
 <span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [(x_value, f(x_value)) <span class="cf">for</span> x_value <span class="kw">in</span> roots]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Use the function as follows:</p>
-<div id="33f62ecb" class="cell" data-execution_count="16">
+<div id="0fd1bc4a" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="kw">lambda</span> x: <span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">3</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -746,7 +746,7 @@ g(x)=2x+3.
 <section id="solving-numerically-with-sympy" class="level1">
 <h1>Solving numerically with SymPy</h1>
 <p>SymPy is helpful when the equations are represented symbolically.</p>
-<div id="6cea18d9" class="cell" data-execution_count="17">
+<div id="b63e1d1b" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> sp.symbols(<span class="st">"x"</span>)</span>
@@ -760,7 +760,7 @@ g(x)=2x+3.
 </div>
 </div>
 <p>The second argument is an initial guess. For the intersection example:</p>
-<div id="ae0cfb6b" class="cell" data-execution_count="18">
+<div id="4b1dcd1c" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>f_expr <span class="op">=</span> x<span class="op">**</span><span class="dv">2</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>g_expr <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">3</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -775,7 +775,7 @@ g(x)=2x+3.
 </div>
 </div>
 <p>Use another initial guess to find the other intersection:</p>
-<div id="29de42a9" class="cell" data-execution_count="19">
+<div id="243f01cf" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>intersection_x <span class="op">=</span> sp.nsolve(f_expr <span class="op">-</span> g_expr, <span class="dv">3</span>)</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>intersection_y <span class="op">=</span> f_expr.subs(x, intersection_x)</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -798,7 +798,7 @@ x^2+y^2=25,
 <p><span class="math display">\[
 y=x+1.
 \]</span></p>
-<div id="95bf80c4" class="cell" data-execution_count="20">
+<div id="6e6be231" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> sp.symbols(<span class="st">"x y"</span>)</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>equations <span class="op">=</span> [</span>
@@ -813,7 +813,7 @@ y=x+1.
 </div>
 </div>
 <p>The values <code>[3, 4]</code> are an initial guess for the point <span class="math inline">\((x,y)\)</span>. Try a different initial guess to search for another solution:</p>
-<div id="d0774684" class="cell" data-execution_count="21">
+<div id="f94811f7" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>solution <span class="op">=</span> sp.nsolve(equations, [x, y], [<span class="op">-</span><span class="dv">4</span>, <span class="op">-</span><span class="dv">3</span>])</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(solution)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -829,7 +829,7 @@ y=x+1.
 x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.
 \]</span></p>
 <p>A simple implementation is:</p>
-<div id="0651be99" class="cell" data-execution_count="22">
+<div id="793a3e9d" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> newton(function, derivative, initial_guess,</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>           tolerance<span class="op">=</span><span class="fl">1e-10</span>, max_iterations<span class="op">=</span><span class="dv">100</span>):</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> initial_guess</span>
@@ -845,7 +845,7 @@ x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.
 <span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">RuntimeError</span>(<span class="st">"Newton's method did not converge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Example:</p>
-<div id="88cc235e" class="cell" data-execution_count="23">
+<div id="381d2dba" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">3</span> <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">-</span> <span class="dv">5</span></span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -939,7 +939,7 @@ y=\sin(x)
 <p><span class="math display">\[
 y=0.3x.
 \]</span></p>
-<div id="b9b698ae" class="cell" data-execution_count="24">
+<div id="ba92a5ba" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> brentq</span>

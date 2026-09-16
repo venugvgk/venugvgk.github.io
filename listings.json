@@ -212,13 +212,6 @@
     ]
   },
   {
-    "listing": "/math-6-2026/index.html",
-    "items": [
-      "/math-6-2026/properties-of-number-sets.html",
-      "/math-6-2026/types-of-numbers.html"
-    ]
-  },
-  {
     "listing": "/education/index.html",
     "items": [
       "/education/shepherd-age-math.html",
@@ -234,6 +227,14 @@
       "/education/rethinking-responsibility.html",
       "/education/kandukuri-phule.html",
       "/education/kaka-muttai-philosophy.html"
+    ]
+  },
+  {
+    "listing": "/math-6-2026/index.html",
+    "items": [
+      "/math-6-2026/fractions-4-operations.html",
+      "/math-6-2026/properties-of-number-sets.html",
+      "/math-6-2026/types-of-numbers.html"
     ]
   },
   {
