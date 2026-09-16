@@ -1,0 +1,126 @@
+---
+title: "Lecture Notes: Demand, Supply and Elasticities"
+date: 2026-09-14
+description: A review of demand, supply, market equilibrium and price elasticity of demand.
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+    smooth-scroll: true
+---
+
+# Review of demand and supply principles
+
+## Curve characteristics
+
+The demand curve usually slopes downwards from left to right, while the supply curve usually slopes upwards from left to right. When the two curves are drawn together, their intersection represents **market equilibrium**.
+
+Demand and supply schedules normally assume that the relationship is:
+
+- linear or approximately linear over the range being studied;
+- continuous;
+- measured over a stated period of time; and
+- based on the *ceteris paribus* assumption, meaning that other relevant factors remain unchanged.
+
+## Movements and shifts
+
+Price changes cause movements along the existing demand or supply curve. These movements change quantity demanded or quantity supplied.
+
+Changes in non-price determinants cause the entire demand or supply curve to shift. For example, a change in consumer income may shift demand, while a change in production costs may shift supply.
+
+# Clarifications from previous practice problems
+
+## Question 5: demand-curve relationship
+
+Option C, “as price changes, a greater or smaller quantity is demanded”, is preferable to option A, “quantity changes in proportion to a change in price”.
+
+Option A imposes an unnecessarily strict linear restriction. A demand curve shows the relationship between price and quantity demanded, but that relationship does not have to be proportional or perfectly linear.
+
+## Question 10: import tax on orange juice
+
+An indirect tax on imported US orange juice increases the cost of importing the product and reduces the overall volume available in the domestic market. The domestic market supply curve therefore shifts to the left.
+
+# Practice scenarios: the fidget-spinners case study
+
+The class reviewed the law of demand, the law of supply, equilibrium, shortages and surpluses through a series of [fidget-spinners scenarios](https://www.youtube.com/watch?v=9QSWLmyGpYc).
+
+| Scenario | Economic change | Predicted market effect |
+|---|---|---|
+| Evidence suggests fidget spinners improve learning | Tastes and preferences change | Demand shifts right; equilibrium price and quantity increase |
+| The price of bearings increases | Production costs rise | Supply shifts left; equilibrium price increases and quantity decreases |
+| The price of fidget cubes falls | A substitute becomes cheaper | Demand for fidget spinners shifts left; equilibrium price and quantity decrease |
+| The price of fidget spinners falls | The product's own price changes | Movement along the demand curve; quantity demanded increases, possibly causing a temporary shortage |
+| The government provides a manufacturer subsidy | Production costs fall | Supply shifts right; equilibrium price decreases and quantity increases |
+| A recession lowers consumer income | Purchasing power falls for a normal good | Demand shifts left; equilibrium price and quantity decrease |
+| The price of a complementary good falls | Joint consumption becomes cheaper | Demand shifts right; equilibrium price and quantity increase |
+| Demand and supply both increase | Both curves shift right | Equilibrium quantity increases; the effect on price is ambiguous |
+
+::: {.callout-warning}
+## Double shifts
+
+When demand and supply both increase, the equilibrium quantity will increase, but the effect on equilibrium price cannot be determined without knowing the relative size of the two shifts.
+:::
+
+# Introduction to price elasticity of demand
+
+## Definition
+
+Price elasticity of demand (PED) measures the responsiveness of quantity demanded to a change in the product's price.
+
+The formula is:
+
+$$
+\text{PED} = \frac{\%\ \text{change in quantity demanded}}{\%\ \text{change in price}}
+$$
+
+## Sign convention
+
+Because price and quantity demanded usually have an inverse relationship, PED values are naturally negative. Economists commonly report PED using its absolute value and omit the minus sign.
+
+## Key elasticity profiles
+
+| Type of demand | PED | Curve shape | Meaning |
+|---|---:|---|---|
+| Perfectly inelastic | $0$ | Vertical line | Quantity demanded remains constant regardless of price. |
+| Perfectly elastic | $\infty$ | Horizontal line | Buyers purchase at one specific price but none at other prices. |
+| Unit elastic | $1$ | Rectangular hyperbola | The percentage change in quantity equals the percentage change in price. |
+
+### Perfectly inelastic demand
+
+With perfectly inelastic demand, quantity demanded does not change when price changes. A possible example is a life-saving medicine for which there are no close alternatives.
+
+### Perfectly elastic demand
+
+With perfectly elastic demand, buyers are willing to purchase any available quantity at one specific price, but none at a higher price.
+
+### Unit elastic demand
+
+With unit elastic demand, the percentage change in quantity demanded equals the percentage change in price. A unit-elastic demand curve can be represented by the relationship:
+
+$$
+P \times Q = \text{constant}
+$$
+
+# Determinants of price elasticity of demand
+
+## Availability and attractiveness of substitutes
+
+The easier and more attractive it is to switch to a close substitute, the more price elastic demand is likely to be. For example, consumers may switch between filter coffee and instant coffee when the price of one changes.
+
+## Relative expense
+
+Products that represent a large share of a consumer's income are usually more price elastic than inexpensive routine purchases. Housing rent is generally more price elastic than a single cup of coffee because a change in rent has a larger effect on the household budget.
+
+## Time horizon
+
+Demand generally becomes more elastic over a longer period. Consumers have more time to find substitutes, change their habits or replace products with different technologies.
+
+# Homework and next class
+
+Complete the textbook reading and exercises up to Table 8.2. 
+
+Prepare for the next topics:
+
+- income elasticity of demand (YED); and
+- cross elasticity of demand (XED).

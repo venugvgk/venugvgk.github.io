@@ -1,0 +1,310 @@
+---
+title: Demand and Supply Curves Self Check
+date: 2026-09-11
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+    smooth-scroll: true
+---
+# How to use this pack
+
+Attempt each section without notes, writing tour answers down. Use fully labelled diagrams whenever a question asks you to explain or analyse a shift in demand or supply.
+
+::: {.callout-tip}
+## Diagram checklist
+
+For every demand or supply diagram, include a vertical axis labelled **Price**, a horizontal axis labelled **Quantity**, labelled curves such as $D_1$, $D_2$, $S_1$ and $S_2$, arrows showing shifts, and clearly marked equilibrium points where relevant.
+:::
+
+# A. Rapid recall
+
+Answer in one or two precise sentences.
+
+1. Define a market.
+2. Define the price mechanism.
+3. Define demand.
+4. Explain the difference between notional demand and effective demand.
+5. What does *ceteris paribus* mean?
+6. Define supply.
+7. What is meant by an individual demand curve?
+8. What is meant by a market demand curve?
+9. What is meant by an individual supply curve?
+10. What is meant by a market supply curve?
+11. Define quantity demanded.
+12. Define quantity supplied.
+13. What is a demand schedule?
+14. What is a supply schedule?
+15. Define a normal good.
+16. Define an inferior good.
+17. Define a substitute.
+18. Define a complement.
+19. What is an extension of demand?
+20. What is a contraction of demand?
+21. What is an extension of supply?
+22. What is a contraction of supply?
+23. What does a rightward shift of a demand curve show?
+24. What does a leftward shift of a supply curve show?
+25. Define an indirect tax and a subsidy.
+
+# B. Identify the change
+
+For each event, state whether it causes:
+
+- an extension or contraction of demand;
+- an extension or contraction of supply;
+- a rightward or leftward shift of demand;
+- a rightward or leftward shift of supply; or
+- no direct effect on the stated market curve.
+
+Give one reason for each answer.
+
+1. The price of cinema tickets falls.
+2. Household incomes increase, and restaurant meals are normal goods.
+3. The price of petrol rises; consider the market for car journeys.
+4. The price of Pepsi rises; consider demand for Coca-Cola.
+5. A popular influencer recommends a particular brand of trainers.
+6. The wage rate paid to workers producing bicycles rises.
+7. A new machine increases the productivity of coffee harvesting.
+8. The government introduces a new indirect tax on sugary drinks.
+9. The government increases the subsidy paid to solar-panel producers.
+10. Severe drought reduces the wheat harvest.
+11. The price of wheat rises, with all other factors affecting wheat supply unchanged.
+12. The price of laptop computers falls, with all other factors affecting laptop demand unchanged.
+13. The price of public transport rises; consider the demand for taxi journeys.
+14. Consumers begin to prefer reusable water bottles to bottled water.
+15. New firms enter the market for online tutoring.
+16. The price of a competing brand rises; consider the supply of the original brand.
+17. A recession reduces household income; consider demand for low-cost instant noodles, assumed to be inferior goods.
+18. Flooding disrupts transport routes used to distribute fresh vegetables.
+
+# C. Demand schedules and calculations
+
+## Question 1: demand schedule
+
+The table shows weekly market demand for wireless headphones.
+
+| Price per pair ($) | Quantity demanded per week |
+|---:|---:|
+| 80 | 200 |
+| 70 | 300 |
+| 60 | 400 |
+| 50 | 500 |
+| 40 | 600 |
+| 30 | 700 |
+
+1. Plot the demand curve, with price on the vertical axis and quantity on the horizontal axis.
+2. Describe the relationship between price and quantity demanded.
+3. Estimate the quantity demanded when price is $55.
+4. Estimate the price at which quantity demanded is 450 pairs.
+5. Calculate total consumer expenditure at each listed price.
+6. At which listed price is total consumer expenditure greatest?
+7. Explain why the answers to parts 3 and 4 are estimates.
+
+## Question 2: supply schedule
+
+The table shows weekly market supply for wireless headphones.
+
+| Price per pair ($) | Quantity supplied per week |
+|---:|---:|
+| 30 | 150 |
+| 40 | 250 |
+| 50 | 350 |
+| 60 | 450 |
+| 70 | 550 |
+| 80 | 650 |
+
+1. Plot the supply curve on a separate diagram.
+2. Describe the relationship between price and quantity supplied.
+3. Estimate quantity supplied when price is $55.
+4. Estimate the price at which quantity supplied is 500 pairs.
+5. Explain why firms may be more willing and able to supply at higher prices.
+
+## Question 3: market equilibrium
+
+Use the two schedules above.
+
+1. Identify the equilibrium price and equilibrium quantity.
+2. At a price of $40, calculate the excess demand or excess supply.
+3. At a price of $70, calculate the excess demand or excess supply.
+4. Explain how the price mechanism is likely to respond to each disequilibrium in parts 2 and 3.
+5. Calculate total consumer expenditure and total revenue at equilibrium.
+
+# D. Diagram practice
+
+Draw a separate, fully labelled diagram for each situation. Write two to four sentences explaining the causal chain.
+
+1. Demand for coffee rises after a favourable change in consumer tastes.
+2. Demand for bus travel falls after the price of petrol falls.
+3. Demand for branded clothing rises after an increase in income, assuming branded clothing is a normal good.
+4. Supply of vegetables falls after flooding damages crops.
+5. Supply of manufactured furniture rises after a fall in timber prices.
+6. Supply of electric vehicles rises after an increase in the producer subsidy.
+7. The price of tablets falls. Show the effect on quantity demanded, not demand.
+8. The price of tablets rises. Show the effect on quantity supplied, not supply.
+9. Demand for tea rises after the price of coffee rises.
+10. Supply of domestic airline flights falls after jet-fuel prices rise.
+
+# E. Explain the economics
+
+Answer using clear chains of reasoning. Use diagrams where indicated.
+
+1. Explain why demand must be both willing and able to buy.
+2. Explain why the time period is part of the definition of demand and supply.
+3. Explain how market demand is derived from individual demand.
+4. Explain why a good can be normal for one consumer and inferior for another.
+5. Explain why the strength of the relationship between two substitutes can vary.
+6. Explain why a rise in the price of petrol is likely to reduce demand for non-essential car journeys.
+7. Explain why an increase in worker productivity can increase supply.
+8. Explain why an indirect tax is likely to decrease supply.
+9. Explain why a subsidy is likely to increase supply.
+10. Explain why a fall in a product's own price does not necessarily mean demand has increased.
+11. Explain why a movement along a supply curve is not the same as a shift of the supply curve.
+12. Using a demand and supply diagram, explain how a fall in the cost of raw materials affects the market for a manufactured good.
+
+# F. Multiple-choice practice
+
+Choose the best answer. Do not check the solution until you have completed all questions.
+
+1. Which condition is required for effective demand?
+   A. A consumer sees an advertisement.
+   B. A consumer wants a product and has the purchasing power to buy it.
+   C. A firm is able to produce a product.
+   D. A product is available in a physical market.
+
+2. A market demand curve shows the quantity:
+   A. one consumer will buy at different prices.
+   B. one firm will sell at different prices.
+   C. all consumers in the market will buy at different prices.
+   D. all firms in the market will sell at different prices.
+
+3. A fall in the price of a product, *ceteris paribus*, causes:
+   A. an increase in demand.
+   B. an extension of demand.
+   C. a contraction of demand.
+   D. a leftward shift of the demand curve.
+
+4. Which change is most likely to increase demand for a normal good?
+   A. A fall in consumer income.
+   B. A rise in production costs.
+   C. A rise in consumer income.
+   D. A rise in indirect tax on producers.
+
+5. Tea and coffee are substitutes. What is the most likely effect of a rise in the price of coffee?
+   A. Demand for tea shifts right.
+   B. Demand for tea shifts left.
+   C. Supply of tea shifts right.
+   D. There is a contraction of demand for tea.
+
+6. Printers and printer ink are complements. What is the most likely effect of a rise in the price of printers?
+   A. Demand for ink shifts right.
+   B. Demand for ink shifts left.
+   C. Supply of ink shifts right.
+   D. There is an extension of demand for ink.
+
+7. Which change would move a supply curve to the right?
+   A. An increase in wages.
+   B. An increase in indirect tax.
+   C. A fall in productivity.
+   D. A fall in energy costs.
+
+8. Which event causes a movement along the supply curve for good X?
+   A. The price of good X rises.
+   B. The cost of producing X rises.
+   C. A subsidy for producers of X is removed.
+   D. New firms leave the industry producing X.
+
+9. A severe frost destroys part of the grape harvest. This is most likely to cause:
+   A. a rightward shift of grape demand.
+   B. a leftward shift of grape supply.
+   C. an extension of grape supply.
+   D. a contraction of grape demand.
+
+10. Which statement correctly distinguishes demand from quantity demanded?
+    A. Demand changes only when price changes.
+    B. Quantity demanded changes only when income changes.
+    C. Demand is the whole relationship between price and planned purchases.
+    D. Quantity demanded is the sum of all consumers' purchases at every price.
+
+11. At a price below equilibrium, quantity demanded exceeds quantity supplied. The market has:
+    A. excess demand.
+    B. excess supply.
+    C. an extension of supply.
+    D. a contraction of demand.
+
+12. A subsidy paid to producers is most likely to:
+    A. increase production costs and shift supply left.
+    B. decrease effective production costs and shift supply right.
+    C. increase demand and shift demand right.
+    D. cause an extension of supply along the same curve.
+
+# G. Structured questions
+
+## Question 1: Smartphones [8 marks]
+
+Smartphones are normal goods. A rise in household incomes occurs at the same time as a fall in the price of mobile data plans, which are a complement to smartphone use.
+
+1. Define a normal good. [2]
+2. Using a demand diagram, explain the effect of higher incomes on demand for smartphones. [3]
+3. Analyse the combined effect of the two changes on demand for smartphones. [3]
+
+## Question 2: Rice production [8 marks]
+
+Rice farmers experience a large rise in fertiliser prices. At the same time, the government removes a subsidy previously paid to rice producers.
+
+1. State two determinants of supply other than the product's own price. [2]
+2. Using a supply diagram, explain the effect of higher fertiliser prices on supply of rice. [3]
+3. Analyse the combined impact of the two changes on supply of rice. [3]
+
+## Question 3: Ride-hailing services [10 marks]
+
+The price of bus travel rises. At the same time, an increase in the number of licensed ride-hailing drivers reduces the cost of providing ride-hailing services.
+
+1. Explain why bus travel and ride-hailing services may be substitutes. [2]
+2. Using a demand and supply diagram, analyse the effect of the rise in bus fares on the ride-hailing market. [4]
+3. Analyse the effect of the increase in licensed drivers on the supply of ride-hailing services. [4]
+
+## Question 4: Coffee market [10 marks]
+
+Coffee growers introduce harvesting technology that substantially increases labour productivity. However, a health report makes some consumers switch from coffee to other drinks.
+
+1. Explain how higher labour productivity affects costs of production. [2]
+2. Using demand and supply analysis, explain the effect of the technology on the supply of coffee. [3]
+3. Analyse the effect of the health report on demand for coffee. [3]
+4. State why the final equilibrium price may be uncertain when both changes occur together. [2]
+
+# H. Extended-response practice
+
+In each answer, define relevant terms, use accurate diagrams, develop causal chains, and reach a supported judgement where the command word requires one.
+
+## Question 1 [12 marks]
+
+Discuss whether an increase in consumer income will always increase demand for a product.
+
+## Question 2 [12 marks]
+
+Analyse the likely effects on the market for electric vehicles when the price of petrol rises and the cost of producing electric vehicle batteries falls.
+
+## Question 3 [12 marks]
+
+Discuss whether a government subsidy to producers will always benefit consumers.
+
+## Question 4 [12 marks]
+
+Analyse how technological change may affect the supply of agricultural products. Consider possible limitations of the analysis.
+
+## Question 5 [12 marks]
+
+Discuss the usefulness and limitations of demand and supply curves in explaining changes in a real-world market.
+
+# Question bank
+
+1. Which change would cause a movement along the demand curve for good X? Explain why. [2]
+2. A government removes a specific indirect tax on a good. Analyse the likely effect on supply and market equilibrium. [4]
+3. Beef and leather are in joint supply. Explain one possible effect on the market for leather if demand for beef rises. [3]
+4. Explain why a significant increase in labour productivity shifts the supply curve for a manufactured product. [3]
+5. A severe frost affects coffee-growing regions while successful advertising increases demand for tea, a substitute for coffee. Analyse the effects on the coffee market and identify any uncertain outcome. [6]
+6. Electric vehicles are substitutes for petrol-powered cars. Battery costs fall and petrol prices rise. Using a diagram, analyse the effects on the equilibrium price and quantity of electric vehicles. [6]
+7. A period of unusually hot weather coincides with a reduction in raw-material costs for air-conditioning units. Explain the shifts in demand and supply, then discuss the final effect on equilibrium price and quantity. [7]
+8. Explain the rationing and signalling functions of the price mechanism when an unexpected rise in demand creates a shortage. [4]

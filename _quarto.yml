@@ -4,7 +4,6 @@ project:
 website:
   title: "Venu GVGK Raju"
   site-url: https://gvgk.in/
-  favicon: venu-flute-logo.png 
 
   open-graph: true
   twitter-card: true
@@ -39,7 +38,9 @@ website:
        - text: A Level Math
          href: a_math_2028/index.qmd
        - text: Grade 6 Math
-         href: math-6-2026/index.qmd
+         href: grade_6_math_2026\index.qmd
+       - text: A level Economics
+         href: eco_2028\index.qmd
 
 
         

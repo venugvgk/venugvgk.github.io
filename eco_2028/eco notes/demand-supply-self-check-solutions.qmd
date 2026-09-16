@@ -1,0 +1,256 @@
+---
+title: "Solutions: Demand and Supply Curves Self-Check Exercises"
+subtitle: "Cambridge International AS & A Level Economics (9708)"
+author: "GVGK Economics Notes"
+date: last-modified
+format:
+  html:
+    toc: true
+    number-sections: false
+    theme: cosmo
+    smooth-scroll: true
+---
+
+# How to use these solutions
+
+Use these answers to diagnose gaps, not simply to copy. Equivalent wording is acceptable where the economic meaning is accurate. For diagram questions, the solution states what your diagram must show.
+
+# A. Rapid recall
+
+1. A **market** is an arrangement through which buyers and sellers exchange goods, services or other tradable items.
+2. The **price mechanism** is the process by which price signals and incentives allocate scarce resources.
+3. **Demand** is the quantity buyers are willing and able to buy at different prices per period of time, *ceteris paribus*.
+4. **Notional demand** is willingness to buy; **effective demand** is willingness to buy backed by the ability to pay.
+5. *Ceteris paribus* means other relevant factors remain unchanged.
+6. **Supply** is the quantity sellers are willing and able to sell at different prices per period of time, *ceteris paribus*.
+7. An **individual demand curve** shows quantities one consumer is willing and able to buy at different prices.
+8. A **market demand curve** shows the total quantities all consumers are willing and able to buy at different prices.
+9. An **individual supply curve** shows quantities one firm is willing and able to sell at different prices.
+10. A **market supply curve** shows the total quantities all firms are willing and able to sell at different prices.
+11. **Quantity demanded** is the amount consumers are willing and able to buy at one particular price.
+12. **Quantity supplied** is the amount firms are willing and able to sell at one particular price.
+13. A **demand schedule** is a table of quantities demanded at different prices.
+14. A **supply schedule** is a table of quantities supplied at different prices.
+15. A **normal good** has demand that rises as income rises.
+16. An **inferior good** has demand that falls as income rises.
+17. A **substitute** is an alternative product satisfying a similar want.
+18. A **complement** is a product consumed together with another product.
+19. An **extension of demand** is a rise in quantity demanded caused by a fall in the product's own price.
+20. A **contraction of demand** is a fall in quantity demanded caused by a rise in the product's own price.
+21. An **extension of supply** is a rise in quantity supplied caused by a rise in the product's own price.
+22. A **contraction of supply** is a fall in quantity supplied caused by a fall in the product's own price.
+23. A rightward shift of demand shows an increase in demand at every price.
+24. A leftward shift of supply shows a decrease in supply at every price.
+25. An **indirect tax** is a tax on expenditure or production that raises firms' costs; a **subsidy** is government financial support that lowers effective costs or encourages production.
+
+# B. Identify the change
+
+1. **Extension of demand**: a fall in the cinema-ticket price raises quantity demanded, other things equal.
+2. **Demand shifts right**: higher income raises demand for a normal good.
+3. **Demand shifts left** for car journeys: petrol is a complement to car use, so higher petrol prices reduce demand for journeys.
+4. **Demand shifts right** for Coca-Cola: Pepsi is a substitute; its higher price makes Coca-Cola relatively more attractive.
+5. **Demand shifts right**: favourable advertising or recommendation changes tastes towards the trainers.
+6. **Supply shifts left**: higher wages raise production costs.
+7. **Supply shifts right**: higher harvesting productivity lowers unit costs and enables more output at each price.
+8. **Supply shifts left**: the new indirect tax raises firms' costs.
+9. **Supply shifts right**: the increased subsidy lowers effective production costs.
+10. **Supply shifts left**: drought reduces agricultural output at each price.
+11. **Extension of supply**: the product's own price rises, so quantity supplied increases along the same supply curve.
+12. **Extension of demand**: the product's own price falls, so quantity demanded rises along the same demand curve.
+13. **Demand shifts right** for taxi journeys: bus and taxi travel can be substitutes; higher bus fares increase demand for taxis.
+14. **Demand shifts left** for bottled water: tastes change against the product.
+15. **Supply shifts right**: more firms in the industry increase market supply.
+16. **Supply shifts right**, assuming the competing brand's higher price allows the original brand to attract more sales profitably; answers should acknowledge that the exact effect depends on market conditions.
+17. **Demand shifts right** for inferior instant noodles: lower income increases demand for an inferior good.
+18. **Supply shifts left**: disrupted distribution raises costs and prevents goods reaching the market.
+
+# C. Demand schedules and calculations
+
+## Question 1
+
+1. Plot the six price-quantity combinations with price on the vertical axis. Join them with a downward-sloping curve labelled $D$.
+2. There is an inverse relationship: as price falls from $80 to $30, quantity demanded rises from 200 to 700 pairs.
+3. At $55, estimated quantity demanded is 450 pairs.
+4. At 450 pairs, estimated price is $55.
+5. Total expenditure is calculated as $P \times Q$.
+
+| Price ($) | Quantity | Total expenditure ($) |
+|---:|---:|---:|
+| 80 | 200 | 16,000 |
+| 70 | 300 | 21,000 |
+| 60 | 400 | 24,000 |
+| 50 | 500 | 25,000 |
+| 40 | 600 | 24,000 |
+| 30 | 700 | 21,000 |
+
+6. Total expenditure is greatest at $50, when it equals $25,000.
+7. These are estimates because the table gives discrete observations. The answer assumes a smooth, continuous linear relationship between the neighbouring points.
+
+## Question 2
+
+1. Plot the six combinations with price on the vertical axis. Join them with an upward-sloping curve labelled $S$.
+2. There is a positive relationship: as price rises from $30 to $80, quantity supplied rises from 150 to 650 pairs.
+3. At $55, estimated quantity supplied is 400 pairs.
+4. At 500 pairs, estimated price is $65.
+5. A higher price normally increases expected revenue and profit incentives, making production worthwhile for more firms or units of output.
+
+## Question 3
+
+1. Equilibrium is at $50 and 500 pairs: quantity demanded equals quantity supplied.
+2. At $40: quantity demanded is 600; quantity supplied is 250. Excess demand is $600 - 250 = 350$ pairs.
+3. At $70: quantity demanded is 300; quantity supplied is 550. Excess supply is $550 - 300 = 250$ pairs.
+4. Excess demand tends to push price upward as buyers compete for scarce units. Excess supply tends to push price downward as sellers try to clear unsold stock.
+5. At equilibrium, total expenditure and total revenue are $50 \times 500 = \$25,000$.
+
+# D. Diagram practice
+
+1. Draw demand shifting right from $D_1$ to $D_2$. At every price, consumers want more coffee because preferences have changed favourably.
+2. Draw demand for bus travel shifting left. Petrol is a complement to car travel; lower petrol prices make car journeys more attractive and reduce demand for bus travel.
+3. Draw demand shifting right. Branded clothing is assumed normal, so higher income raises demand at every price.
+4. Draw supply shifting left from $S_1$ to $S_2$. Flood damage lowers crop output and reduces supply at each possible price.
+5. Draw supply shifting right. Cheaper timber lowers production costs, so furniture firms can profitably supply more at each price.
+6. Draw supply shifting right. A higher producer subsidy reduces effective costs and increases supply.
+7. Draw one unchanged demand curve and a movement downward along it from a higher to lower price. This is an extension of demand, not a shift.
+8. Draw one unchanged supply curve and a movement upward along it from a lower to higher price. This is an extension of supply, not a shift.
+9. Draw demand for tea shifting right. Coffee is a substitute; a higher coffee price raises demand for tea.
+10. Draw supply of airline flights shifting left. Higher jet-fuel costs raise costs of production, reducing supply.
+
+# E. Explain the economics
+
+1. Sellers require payment, so desire alone is insufficient. Demand exists in the economic sense only when willingness is backed by purchasing power.
+2. Demand and supply are flows measured over time. For example, selling 1,000 units per day indicates a different level of market activity from selling 1,000 units per year.
+3. Add the quantities each consumer demands at a given price; repeat this across prices. This horizontal aggregation gives market demand.
+4. Classification depends on the consumer's income, preferences and available alternatives. A lower-quality product may be preferred as income rises for one person but replaced by a higher-quality alternative for another.
+5. Substitutability depends on similarity, price, quality, location, brand loyalty and switching costs. Two cola brands are generally closer substitutes than cola and bottled water.
+6. Petrol and car journeys are complements. A higher petrol price raises the cost of driving, reducing demand for non-essential journeys.
+7. Higher productivity means more output per worker or per hour. Unit costs may fall, making firms willing and able to supply more at each price.
+8. An indirect tax raises the cost per unit or overall costs of supplying the good. Firms supply less at each price, shifting supply left.
+9. A subsidy reduces effective production costs or raises the return received by producers. Firms can supply more at each price, shifting supply right.
+10. A fall in the product's own price changes quantity demanded along the same curve. Demand itself changes only when a non-price determinant changes.
+11. A movement along supply results from a change in the product's own price. A shift results from a change in a non-price determinant, such as costs, taxation, technology or the number of firms.
+12. Diagram: shift supply right from $S_1$ to $S_2$, with demand unchanged. Lower raw-material costs reduce costs of production, increasing supply; equilibrium price falls and equilibrium quantity rises.
+
+# F. Multiple-choice practice
+
+| Question | Answer | Reason |
+|---:|:---:|---|
+| 1 | B | Effective demand requires willingness and purchasing power. |
+| 2 | C | Market demand aggregates all consumers' planned purchases. |
+| 3 | B | A fall in own price causes an extension along the demand curve. |
+| 4 | C | Demand for a normal good rises with income. |
+| 5 | A | A higher coffee price shifts demand for substitute tea right. |
+| 6 | B | Higher printer prices reduce demand for complementary ink. |
+| 7 | D | Lower energy costs reduce costs and increase supply. |
+| 8 | A | Only a change in the product's own price moves along supply. |
+| 9 | B | Frost reduces agricultural output and shifts supply left. |
+| 10 | C | Demand is the whole price-quantity relationship. |
+| 11 | A | Below equilibrium, quantity demanded exceeds quantity supplied. |
+| 12 | B | A subsidy lowers effective costs and shifts supply right. |
+
+# G. Structured questions
+
+## Question 1: Smartphones [8 marks]
+
+1. A normal good is a good for which demand increases when consumer income increases. [2]
+2. Diagram: demand shifts right from $D_1$ to $D_2$, with price on the vertical axis and quantity on the horizontal axis. Higher income raises consumers' purchasing power; because smartphones are normal goods, more are demanded at every price. [3]
+3. Mobile data plans complement smartphone use. Their lower price also raises demand for smartphones, so both changes shift demand right; the combined increase in demand is greater than either change alone. [3]
+
+## Question 2: Rice production [8 marks]
+
+1. Any two: costs of production, technology/productivity, number of firms, weather, indirect taxes, subsidies, prices of other products. [2]
+2. Diagram: supply shifts left from $S_1$ to $S_2$. Fertiliser is an input; its higher price raises costs of production, so rice farmers supply less at each price. [3]
+3. Removing the subsidy raises effective costs further. Both events reduce supply, so the supply curve shifts left by more; if demand is unchanged, equilibrium price rises and equilibrium quantity falls. [3]
+
+## Question 3: Ride-hailing services [10 marks]
+
+1. They are substitutes if consumers can switch between them to make similar journeys. A change in the price of bus travel affects demand for ride-hailing. [2]
+2. Diagram: demand for ride-hailing shifts right from $D_1$ to $D_2$, supply initially unchanged. Higher bus fares make ride-hailing relatively more attractive. In isolation, equilibrium price and quantity of ride-hailing rise. [4]
+3. More licensed drivers expand productive capacity and competition, reducing costs or increasing the number of suppliers. Supply shifts right from $S_1$ to $S_2$; in isolation, equilibrium price falls and equilibrium quantity rises. [4]
+
+## Question 4: Coffee market [10 marks]
+
+1. Higher labour productivity lowers labour cost per unit of output, other things equal. [2]
+2. Diagram: coffee supply shifts right. Lower unit costs make growers willing and able to supply more at every price. [3]
+3. The health report changes tastes against coffee, so demand shifts left. At each price, consumers demand less coffee. [3]
+4. Supply shifting right puts downward pressure on price; demand shifting left also puts downward pressure on price, so price falls. Both shifts reduce price, but each reduces or raises quantity in opposite directions: supply raises quantity while demand lowers it. Therefore the final quantity is uncertain. [2]
+
+# H. Extended-response outlines
+
+## Question 1 [12 marks]
+
+**Discuss whether an increase in consumer income will always increase demand for a product.**
+
+- Define income and demand; state the *ceteris paribus* condition.
+- Explain that higher income shifts demand right for normal goods because purchasing power rises.
+- Draw a rightward demand shift for a normal good.
+- Explain inferior goods: as income rises, consumers may switch from lower-quality products to superior alternatives, shifting demand left.
+- Explain that the classification can vary between consumers and across income ranges.
+- Consider other influences such as tastes, relative prices and expectations that may change simultaneously.
+- Judgement: income growth often increases demand, but not always; the result depends particularly on the type of good and consumer circumstances.
+
+## Question 2 [12 marks]
+
+**Analyse the likely effects on the market for electric vehicles when petrol prices rise and battery-production costs fall.**
+
+- Define substitutes and costs of production.
+- Higher petrol prices make EVs relatively more attractive than petrol cars: EV demand shifts right.
+- Lower battery costs reduce EV production costs: EV supply shifts right.
+- Diagram with both $D$ and $S$ shifting right.
+- Equilibrium quantity definitely rises because both changes increase it.
+- Effect on equilibrium price is uncertain: increased demand raises price, increased supply lowers it.
+- Explain factors determining the final price, such as size of the shifts, capacity constraints and time period.
+
+## Question 3 [12 marks]
+
+**Discuss whether a government subsidy to producers will always benefit consumers.**
+
+- Define subsidy and explain that it lowers effective production costs.
+- Diagram: supply shifts right, leading in the standard model to lower equilibrium price and higher equilibrium quantity.
+- Consumers may benefit through lower prices, greater availability and wider choice.
+- Qualify: producers may retain some or all of the benefit depending on market conditions; lower prices are not guaranteed to be large.
+- Consider whether firms use the subsidy to cover losses, pay dividends or invest rather than lower prices.
+- Discuss cost to taxpayers and opportunity cost of public funds.
+- Judgement: consumers often benefit, but the size and distribution of the benefit depend on market conditions and policy design.
+
+## Question 4 [12 marks]
+
+**Analyse how technological change may affect the supply of agricultural products. Consider possible limitations of the analysis.**
+
+- Define supply and technology/productivity.
+- Explain how improved machinery, irrigation, seeds, data systems or storage can raise output per input and lower unit costs.
+- Diagram: supply shifts right, with lower equilibrium price and higher quantity if demand is unchanged.
+- Explain possible short-run constraints: upfront capital costs, training, access to credit and infrastructure.
+- Consider weather variability, environmental costs, uneven access by small farmers and labour displacement.
+- Note that supply responsiveness depends on time periods and biological growing cycles.
+- Judgement: technology can increase supply, but outcomes depend on adoption, conditions and wider social/environmental effects.
+
+## Question 5 [12 marks]
+
+**Discuss the usefulness and limitations of demand and supply curves in explaining changes in a real-world market.**
+
+- Define demand, supply and equilibrium.
+- Explain usefulness: a clear framework for analysing price signals, shortages, surpluses, taxes, subsidies, cost changes and related-product prices.
+- Use a diagram to show one demand or supply shift.
+- Explain that the model isolates causes through the *ceteris paribus* assumption.
+- Limitations: data on preferences, costs and planned quantities are difficult to observe; multiple determinants often change at the same time.
+- Curves may not be stable, information is imperfect and markets may be regulated or affected by market power.
+- Judgement: the framework is highly useful as a simplified analytical model, but conclusions must be applied cautiously to real markets.
+
+# I. Past-paper-style question bank
+
+1. A movement along demand occurs when the **own price of good X changes**, with non-price determinants unchanged. A price fall causes an extension; a price rise causes a contraction. [2]
+2. Removing an indirect tax lowers firms' costs, shifting supply right. With demand unchanged, equilibrium quantity rises and equilibrium price falls. Diagram: $S_1$ shifts to $S_2$ rightward. [4]
+3. Greater demand for beef can increase beef output. Because leather is jointly supplied with beef, the supply of leather may rise, shifting leather supply right; price may fall and quantity may rise if leather demand is unchanged. [3]
+4. Higher labour productivity lowers labour cost per unit. Firms can supply more at each price, so the supply curve shifts right. [3]
+5. Frost reduces coffee supply, shifting supply left; this raises coffee price and lowers quantity, other things equal. Advertising raises tea demand; because tea is a coffee substitute, it reduces demand for coffee, shifting coffee demand left. Both shifts lower coffee quantity, but the effect on coffee price is uncertain because reduced supply raises price while reduced demand lowers it. [6]
+6. Petrol is a substitute-related product: higher petrol prices shift EV demand right. Lower battery costs shift EV supply right. Draw both shifts. Equilibrium EV quantity rises; equilibrium price is uncertain because demand pushes it up while supply pushes it down. [6]
+7. Hot weather raises demand for air conditioning, shifting demand right. Lower raw-material costs shift supply right. Equilibrium quantity rises; equilibrium price is uncertain because the demand effect raises it while the supply effect reduces it. [7]
+8. **Rationing:** a higher price reduces quantity demanded and allocates the available output to consumers who are willing and able to pay. **Signalling:** higher prices and profit incentives signal producers to expand output or encourage new suppliers to enter, where possible. [4]
+
+# Common errors to avoid
+
+- Do not say “demand increases” when only the product's own price falls; write “quantity demanded increases” or “extension of demand”.
+- Do not say “supply increases” when only the product's own price rises; write “quantity supplied increases” or “extension of supply”.
+- Do not shift a curve without naming the non-price determinant that caused the shift.
+- Do not omit the direction of a curve shift: right means increase; left means decrease.
+- Do not claim a definite equilibrium-price outcome when demand and supply shifts exert opposing pressure on price.

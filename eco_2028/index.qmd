@@ -1,0 +1,9 @@
+---
+title: A Level Economics 2028
+subtitle: Class notes and resources
+listing:
+  contents: 
+    - "/*.qmd"
+  sort: "date desc"
+  type: table
+---
