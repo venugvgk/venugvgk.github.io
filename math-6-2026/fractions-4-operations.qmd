@@ -1,0 +1,164 @@
+---
+title: Fractions Operations Rules and Practice
+description: "A Grade 6 revision worksheet on mixed fractions, improper fractions, and operations with fractions."
+date: 2026-09-16
+page-layout: article
+format:
+  html:
+    toc: true
+    number-sections: true
+    code-fold: false
+jupyter: python3
+---
+This worksheet is a short reminder of important fraction skills. Read each rule, study the example, and then try the practice sets.
+
+# Mixed fractions and improper fractions
+
+A **mixed fraction** has a whole number and a fraction, such as $2\frac{1}{3}$.
+
+An **improper fraction** has a numerator that is equal to or greater than its denominator, such as $\frac{7}{3}$.
+
+## Mixed fraction to improper fraction
+
+1. Multiply the whole number by the denominator.
+2. Add the numerator.
+3. Keep the same denominator.
+
+Example: $2\frac{1}{3}=\frac{2\times3+1}{3}=\frac{7}{3}$.
+
+## Improper fraction to mixed fraction
+
+1. Divide the numerator by the denominator.
+2. The answer from the division is the whole number.
+3. The remainder becomes the new numerator.
+4. Keep the same denominator.
+
+Example: $\frac{11}{4}=2\frac{3}{4}$ because $11$ divided by $4$ gives $2$ with a remainder of $3$.
+
+# Adding fractions
+
+## Same denominators
+
+Keep the denominator, add the numerators, and simplify if possible.
+
+Example: $\frac{2}{7}+\frac{3}{7}=\frac{5}{7}$.
+
+## Different denominators
+
+1. Multiply the numerator and denominator of the first fraction by the denominator of the second fraction.
+2. Multiply the numerator and denominator of the second fraction by the denominator of the first fraction.
+3. Add the new numerators and keep the new denominator.
+4. Simplify the answer.
+
+Example:
+
+$$
+\frac{1}{2}+\frac{1}{3}=\frac{1\times3}{2\times3}+\frac{1\times2}{3\times2}=\frac{3}{6}+\frac{2}{6}=\frac{5}{6}
+$$
+
+## Adding mixed fractions
+
+1. Change each mixed fraction into an improper fraction.
+2. Add the improper fractions.
+3. Change the answer back into a mixed fraction if needed.
+
+Example: $1\frac{2}{5}+2\frac{4}{5}=\frac{7}{5}+\frac{14}{5}=\frac{21}{5}=4\frac{1}{5}$.
+
+# Subtracting fractions
+
+## Same denominators
+
+Keep the denominator, subtract the numerators, and simplify if possible.
+
+Example: $\frac{6}{9}-\frac{2}{9}=\frac{4}{9}$.
+
+## Different denominators
+
+1. Multiply the numerator and denominator of the first fraction by the denominator of the second fraction.
+2. Multiply the numerator and denominator of the second fraction by the denominator of the first fraction.
+3. Subtract the new numerators and keep the new denominator.
+4. Simplify the answer.
+
+Example:
+
+$$
+\frac{3}{4}-\frac{1}{6}=\frac{3\times6}{4\times6}-\frac{1\times4}{6\times4}=\frac{18}{24}-\frac{4}{24}=\frac{14}{24}=\frac{7}{12}
+$$
+
+## Subtracting mixed fractions
+
+1. Change each mixed fraction into an improper fraction.
+2. Subtract the improper fractions.
+3. Change the answer back into a mixed fraction if needed.
+
+Example: $3\frac{1}{4}-1\frac{3}{4}=\frac{13}{4}-\frac{7}{4}=\frac{6}{4}=1\frac{1}{2}$.
+
+# Multiplying fractions
+
+1. Multiply the numerators.
+2. Multiply the denominators.
+3. Simplify the answer.
+
+Example: $\frac{2}{3}\times\frac{4}{5}=\frac{8}{15}$.
+
+For a mixed fraction, first change it into an improper fraction. Example: $1\frac{1}{2}\times\frac{2}{3}=\frac{3}{2}\times\frac{2}{3}=1$.
+
+# Dividing fractions
+
+1. Keep the first fraction.
+2. Change division to multiplication.
+3. Turn the second fraction upside down.
+4. Multiply and simplify.
+
+Example: $\frac{3}{4}\div\frac{2}{5}=\frac{3}{4}\times\frac{5}{2}=\frac{15}{8}=1\frac{7}{8}$.
+
+For division by a whole number, write the whole number over $1$. Example: $\frac{5}{6}\div2=\frac{5}{6}\times\frac{1}{2}=\frac{5}{12}$.
+
+# Helpful reminders
+
+- The denominator tells the number of the equal parts.
+- The numerator tells how many parts we have.
+- For addition and subtraction, make the denominators the same by multiplying each fraction by the other fraction's denominator.
+- For multiplication, just multiply the numerators and denominators directly. 
+- For division, multiply by the reciprocal of the second fraction.
+- Always simplify the final answer when possible.
+- Check whether an improper answer should be written as a mixed fraction.
+
+# Practice set 1
+
+1. Change $3\frac{2}{5}$ into an improper fraction.
+2. Change $\frac{17}{4}$ into a mixed fraction.
+3. $\frac{3}{8}+\frac{2}{8}$
+4. $\frac{1}{3}+\frac{1}{6}$
+5. $\frac{7}{10}-\frac{3}{10}$
+6. $\frac{5}{6}-\frac{1}{4}$
+7. $\frac{2}{5}\times\frac{3}{4}$
+8. $1\frac{1}{2}\times\frac{2}{3}$
+9. $\frac{3}{7}\div\frac{2}{5}$
+10. $2\frac{1}{4}\div\frac{3}{4}$
+
+# Practice set 2
+
+1. Change $4\frac{3}{7}$ into an improper fraction.
+2. Change $\frac{23}{6}$ into a mixed fraction.
+3. $2\frac{1}{5}+1\frac{3}{5}$
+4. $\frac{5}{8}+\frac{1}{4}$
+5. $4\frac{1}{3}-2\frac{2}{3}$
+6. $\frac{7}{9}-\frac{1}{6}$
+7. $\frac{3}{10}\times\frac{5}{6}$
+8. $2\frac{2}{3}\times\frac{3}{4}$
+9. $\frac{5}{8}\div\frac{10}{11}$
+10. $3\frac{1}{2}\div\frac{7}{8}$
+
+# Practice set 3
+
+1. Change $5\frac{5}{9}$ into an improper fraction.
+2. Change $\frac{31}{5}$ into a mixed fraction.
+3. $3\frac{3}{4}+2\frac{5}{8}$
+4. $\frac{7}{12}+\frac{5}{18}$
+5. $6\frac{1}{5}-3\frac{4}{5}$
+6. $\frac{11}{12}-\frac{2}{9}$
+7. $\frac{4}{7}\times\frac{14}{15}$
+8. $1\frac{3}{5}\times2\frac{1}{2}$
+9. $\frac{7}{9}\div\frac{14}{15}$
+10. $4\frac{1}{2}\div1\frac{1}{8}$
