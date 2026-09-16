@@ -33,7 +33,7 @@ By the end of this chapter, you should be able to:
 **Demand** describes the buying side of a market. **Supply** describes the selling side. Price changes normally cause movements along a curve; changes in other determinants cause the whole curve to shift.
 :::
 
-[Download a PDF](unit2-demand-supply-curves.pdf)
+{{< downloadthis unit2-demand-supply-curves.pdf label="Demand & Supply Curves" icon="file-earmark-pdf" type="success" >}}
 
 # 1. Markets and the price mechanism
 
