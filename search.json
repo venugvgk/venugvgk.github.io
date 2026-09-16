@@ -1547,6 +1547,76 @@
     "text": "Jun 8, 2025\n            \n                \n                    Education\n                \n            \n        \n        How Engineering Graduates are being exploited\n    \n\n    \n        \n            Feb 27, 2025\n            \n                \n                    History\n                \n            \n        \n        Ellora - and how history looks like\n    \n\n    \n        \n            Feb 15, 2025\n            \n                \n                    philosophy\n                \n            \n        \n        Most philosophers were bachelor men\n    \n\n    \n        \n            Feb 5, 2025\n            \n                \n                    history\n                \n            \n        \n        India's Prettiest Library - Rampur\n    \n\n    \n        \n            Feb 5, 2025\n            \n                \n                    sociology\n                \n            \n        \n        Begumpura by Sant Ravidas\n    \n\n    \n        \n            Dec 27, 2024\n            \n                \n                    history\n                \n            \n        \n        A Sanskrit Bible story was written in Ayodhya\n    \n\n\n\nNo matching items"
   },
   {
+    "objectID": "grade_6_math_2026/fractions-4-operations.html",
+    "href": "grade_6_math_2026/fractions-4-operations.html",
+    "title": "Fractions Operations Rules and Practice",
+    "section": "",
+    "text": "This worksheet is a short reminder of important fraction skills. Read each rule, study the example, and then try the practice sets."
+  },
+  {
+    "objectID": "grade_6_math_2026/fractions-4-operations.html#mixed-fraction-to-improper-fraction",
+    "href": "grade_6_math_2026/fractions-4-operations.html#mixed-fraction-to-improper-fraction",
+    "title": "Fractions Operations Rules and Practice",
+    "section": "1.1 Mixed fraction to improper fraction",
+    "text": "1.1 Mixed fraction to improper fraction\n\nMultiply the whole number by the denominator.\nAdd the numerator.\nKeep the same denominator.\n\nExample: \\(2\\frac{1}{3}=\\frac{2\\times3+1}{3}=\\frac{7}{3}\\)."
+  },
+  {
+    "objectID": "grade_6_math_2026/fractions-4-operations.html#improper-fraction-to-mixed-fraction",
+    "href": "grade_6_math_2026/fractions-4-operations.html#improper-fraction-to-mixed-fraction",
+    "title": "Fractions Operations Rules and Practice",
+    "section": "1.2 Improper fraction to mixed fraction",
+    "text": "1.2 Improper fraction to mixed fraction\n\nDivide the numerator by the denominator.\nThe answer from the division is the whole number.\nThe remainder becomes the new numerator.\nKeep the same denominator.\n\nExample: \\(\\frac{11}{4}=2\\frac{3}{4}\\) because \\(11\\) divided by \\(4\\) gives \\(2\\) with a remainder of \\(3\\)."
+  },
+  {
+    "objectID": "grade_6_math_2026/fractions-4-operations.html#same-denominators",
+    "href": "grade_6_math_2026/fractions-4-operations.html#same-denominators",
+    "title": "Fractions Operations Rules and Practice",
+    "section": "2.1 Same denominators",
+    "text": "2.1 Same denominators\nKeep the denominator, add the numerators, and simplify if possible.\nExample: \\(\\frac{2}{7}+\\frac{3}{7}=\\frac{5}{7}\\)."
+  },
+  {
+    "objectID": "grade_6_math_2026/fractions-4-operations.html#different-denominators",
+    "href": "grade_6_math_2026/fractions-4-operations.html#different-denominators",
+    "title": "Fractions Operations Rules and Practice",
+    "section": "2.2 Different denominators",
+    "text": "2.2 Different denominators\n\nMultiply the numerator and denominator of the first fraction by the denominator of the second fraction.\nMultiply the numerator and denominator of the second fraction by the denominator of the first fraction.\nAdd the new numerators and keep the new denominator.\nSimplify the answer.\n\nExample:\n\\[\n\\frac{1}{2}+\\frac{1}{3}=\\frac{1\\times3}{2\\times3}+\\frac{1\\times2}{3\\times2}=\\frac{3}{6}+\\frac{2}{6}=\\frac{5}{6}\n\\]"
+  },
+  {
+    "objectID": "grade_6_math_2026/fractions-4-operations.html#adding-mixed-fractions",
+    "href": "grade_6_math_2026/fractions-4-operations.html#adding-mixed-fractions",
+    "title": "Fractions Operations Rules and Practice",
+    "section": "2.3 Adding mixed fractions",
+    "text": "2.3 Adding mixed fractions\n\nChange each mixed fraction into an improper fraction.\nAdd the improper fractions.\nChange the answer back into a mixed fraction if needed.\n\nExample: \\(1\\frac{2}{5}+2\\frac{4}{5}=\\frac{7}{5}+\\frac{14}{5}=\\frac{21}{5}=4\\frac{1}{5}\\)."
+  },
+  {
+    "objectID": "grade_6_math_2026/fractions-4-operations.html#same-denominators-1",
+    "href": "grade_6_math_2026/fractions-4-operations.html#same-denominators-1",
+    "title": "Fractions Operations Rules and Practice",
+    "section": "3.1 Same denominators",
+    "text": "3.1 Same denominators\nKeep the denominator, subtract the numerators, and simplify if possible.\nExample: \\(\\frac{6}{9}-\\frac{2}{9}=\\frac{4}{9}\\)."
+  },
+  {
+    "objectID": "grade_6_math_2026/fractions-4-operations.html#different-denominators-1",
+    "href": "grade_6_math_2026/fractions-4-operations.html#different-denominators-1",
+    "title": "Fractions Operations Rules and Practice",
+    "section": "3.2 Different denominators",
+    "text": "3.2 Different denominators\n\nMultiply the numerator and denominator of the first fraction by the denominator of the second fraction.\nMultiply the numerator and denominator of the second fraction by the denominator of the first fraction.\nSubtract the new numerators and keep the new denominator.\nSimplify the answer.\n\nExample:\n\\[\n\\frac{3}{4}-\\frac{1}{6}=\\frac{3\\times6}{4\\times6}-\\frac{1\\times4}{6\\times4}=\\frac{18}{24}-\\frac{4}{24}=\\frac{14}{24}=\\frac{7}{12}\n\\]"
+  },
+  {
+    "objectID": "grade_6_math_2026/fractions-4-operations.html#subtracting-mixed-fractions",
+    "href": "grade_6_math_2026/fractions-4-operations.html#subtracting-mixed-fractions",
+    "title": "Fractions Operations Rules and Practice",
+    "section": "3.3 Subtracting mixed fractions",
+    "text": "3.3 Subtracting mixed fractions\n\nChange each mixed fraction into an improper fraction.\nSubtract the improper fractions.\nChange the answer back into a mixed fraction if needed.\n\nExample: \\(3\\frac{1}{4}-1\\frac{3}{4}=\\frac{13}{4}-\\frac{7}{4}=\\frac{6}{4}=1\\frac{1}{2}\\)."
+  },
+  {
+    "objectID": "grade_6_math_2026/index.html",
+    "href": "grade_6_math_2026/index.html",
+    "title": "Grade 6 Math 2026",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 16, 2026\n\n\nFractions Operations Rules and Practice\n\n\n \n\n\n\n\nSep 13, 2026\n\n\nProperties of Number Sets\n\n\n \n\n\n\n\nSep 12, 2026\n\n\nTypes of Numbers\n\n\n \n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "books/story-weaver/ambedkar/index.html",
     "href": "books/story-weaver/ambedkar/index.html",
     "title": "బి. ఆర్. అంబేద్కర్ - పుస్తకాలతో జీవితం",
@@ -1638,6 +1708,97 @@
     "text": "Children’s Pictures books translated for Storyweaver  స్టోరీవీవర్ కోసం అనువదించిన పిల్లల బొమ్మల పుస్తకాలు\n\n\n\n\n\n\n\n\nబొమ్మలు గీసే ఆట\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nపాస్‌వర్డ్ చెప్పవూ?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nప్రిన్సెస్ వీధిలో ఆర్ట్ గేలరీ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nఇంటి దగ్గర\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nమన భూమి, మన ఇల్లు వాతావరణ మార్పుపై కవితలు\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nబి. ఆర్. అంబేద్కర్ - పుస్తకాలతో జీవితం\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nఅమ్మ ఇంటికి ఎప్పుడు వస్తుంది?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nమా అన్నయ్య చక్రాల కుర్చీ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nబట్టలు ఉతికే రోజు\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "",
+    "text": "Attempt each section without notes, writing tour answers down. Use fully labelled diagrams whenever a question asks you to explain or analyse a shift in demand or supply.\n\n\n\n\n\n\nDiagram checklist\n\n\n\nFor every demand or supply diagram, include a vertical axis labelled Price, a horizontal axis labelled Quantity, labelled curves such as \\(D_1\\), \\(D_2\\), \\(S_1\\) and \\(S_2\\), arrows showing shifts, and clearly marked equilibrium points where relevant."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-1-demand-schedule",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-1-demand-schedule",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 1: demand schedule",
+    "text": "Question 1: demand schedule\nThe table shows weekly market demand for wireless headphones.\n\n\n\nPrice per pair ($)\nQuantity demanded per week\n\n\n\n\n80\n200\n\n\n70\n300\n\n\n60\n400\n\n\n50\n500\n\n\n40\n600\n\n\n30\n700\n\n\n\n\nPlot the demand curve, with price on the vertical axis and quantity on the horizontal axis.\nDescribe the relationship between price and quantity demanded.\nEstimate the quantity demanded when price is $55.\nEstimate the price at which quantity demanded is 450 pairs.\nCalculate total consumer expenditure at each listed price.\nAt which listed price is total consumer expenditure greatest?\nExplain why the answers to parts 3 and 4 are estimates."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-2-supply-schedule",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-2-supply-schedule",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 2: supply schedule",
+    "text": "Question 2: supply schedule\nThe table shows weekly market supply for wireless headphones.\n\n\n\nPrice per pair ($)\nQuantity supplied per week\n\n\n\n\n30\n150\n\n\n40\n250\n\n\n50\n350\n\n\n60\n450\n\n\n70\n550\n\n\n80\n650\n\n\n\n\nPlot the supply curve on a separate diagram.\nDescribe the relationship between price and quantity supplied.\nEstimate quantity supplied when price is $55.\nEstimate the price at which quantity supplied is 500 pairs.\nExplain why firms may be more willing and able to supply at higher prices."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-3-market-equilibrium",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-3-market-equilibrium",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 3: market equilibrium",
+    "text": "Question 3: market equilibrium\nUse the two schedules above.\n\nIdentify the equilibrium price and equilibrium quantity.\nAt a price of $40, calculate the excess demand or excess supply.\nAt a price of $70, calculate the excess demand or excess supply.\nExplain how the price mechanism is likely to respond to each disequilibrium in parts 2 and 3.\nCalculate total consumer expenditure and total revenue at equilibrium."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-1-smartphones-8-marks",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-1-smartphones-8-marks",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 1: Smartphones [8 marks]",
+    "text": "Question 1: Smartphones [8 marks]\nSmartphones are normal goods. A rise in household incomes occurs at the same time as a fall in the price of mobile data plans, which are a complement to smartphone use.\n\nDefine a normal good. [2]\nUsing a demand diagram, explain the effect of higher incomes on demand for smartphones. [3]\nAnalyse the combined effect of the two changes on demand for smartphones. [3]"
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-2-rice-production-8-marks",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-2-rice-production-8-marks",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 2: Rice production [8 marks]",
+    "text": "Question 2: Rice production [8 marks]\nRice farmers experience a large rise in fertiliser prices. At the same time, the government removes a subsidy previously paid to rice producers.\n\nState two determinants of supply other than the product’s own price. [2]\nUsing a supply diagram, explain the effect of higher fertiliser prices on supply of rice. [3]\nAnalyse the combined impact of the two changes on supply of rice. [3]"
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-3-ride-hailing-services-10-marks",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-3-ride-hailing-services-10-marks",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 3: Ride-hailing services [10 marks]",
+    "text": "Question 3: Ride-hailing services [10 marks]\nThe price of bus travel rises. At the same time, an increase in the number of licensed ride-hailing drivers reduces the cost of providing ride-hailing services.\n\nExplain why bus travel and ride-hailing services may be substitutes. [2]\nUsing a demand and supply diagram, analyse the effect of the rise in bus fares on the ride-hailing market. [4]\nAnalyse the effect of the increase in licensed drivers on the supply of ride-hailing services. [4]"
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-4-coffee-market-10-marks",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-4-coffee-market-10-marks",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 4: Coffee market [10 marks]",
+    "text": "Question 4: Coffee market [10 marks]\nCoffee growers introduce harvesting technology that substantially increases labour productivity. However, a health report makes some consumers switch from coffee to other drinks.\n\nExplain how higher labour productivity affects costs of production. [2]\nUsing demand and supply analysis, explain the effect of the technology on the supply of coffee. [3]\nAnalyse the effect of the health report on demand for coffee. [3]\nState why the final equilibrium price may be uncertain when both changes occur together. [2]"
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-1-12-marks",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-1-12-marks",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 1 [12 marks]",
+    "text": "Question 1 [12 marks]\nDiscuss whether an increase in consumer income will always increase demand for a product."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-2-12-marks",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-2-12-marks",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 2 [12 marks]",
+    "text": "Question 2 [12 marks]\nAnalyse the likely effects on the market for electric vehicles when the price of petrol rises and the cost of producing electric vehicle batteries falls."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-3-12-marks",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-3-12-marks",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 3 [12 marks]",
+    "text": "Question 3 [12 marks]\nDiscuss whether a government subsidy to producers will always benefit consumers."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-4-12-marks",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-4-12-marks",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 4 [12 marks]",
+    "text": "Question 4 [12 marks]\nAnalyse how technological change may affect the supply of agricultural products. Consider possible limitations of the analysis."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves-self-check.html#question-5-12-marks",
+    "href": "eco_2028/unit2-demand-supply-curves-self-check.html#question-5-12-marks",
+    "title": "Demand and Supply Curves Self Check",
+    "section": "Question 5 [12 marks]",
+    "text": "Question 5 [12 marks]\nDiscuss the usefulness and limitations of demand and supply curves in explaining changes in a real-world market."
+  },
+  {
     "objectID": "eco_2028/eco notes/coffee_case_study.html",
     "href": "eco_2028/eco notes/coffee_case_study.html",
     "title": "Coffee Prices, Mechanisation, and Supply–Demand",
@@ -1666,249 +1827,46 @@
     "text": "3 References\n\nDaily Telegraph, 26 August 2019 (adapted case study).\nDataMar News, “Colombian coffee boom fades as Brazil heads for record crop”, 28 August 2026.\nPerfect Daily Grind, “Coffee News Recap, 28 Aug: ICE-certified arabica stocks fall…”, 28 August 2026.\nStudies on labour conditions in Brazilian coffee production (SciELO, 2024).\nMongabay, “Labor rights violations at Brazil coffee farm linked to Starbucks…”, 2021.\nReporter Brasil, “Starbucks supplier farm ignores law and fails to provide coffee harvesting machine…”, 2024."
   },
   {
-    "objectID": "eco_2028/eco notes/why-ped-changes.html",
-    "href": "eco_2028/eco notes/why-ped-changes.html",
-    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
+    "objectID": "eco_2028/eco notes/why_price_on_y_axis.html",
+    "href": "eco_2028/eco notes/why_price_on_y_axis.html",
+    "title": "Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams?",
     "section": "",
-    "text": "Price elasticity of demand (PED) measures the responsiveness of the quantity demanded of a good to a change in its price.\nFormally:\n\\[\n\\text{PED} = \\frac{\\%\\ \\text{change in quantity demanded}}{\\%\\ \\text{change in price}}\n\\]\nor, using calculus for a demand function \\(Q = f(P)\\):\n\\[\n\\text{PED} = \\frac{dQ}{dP} \\times \\frac{P}{Q}\n\\]\nKey points:\n\nPED is usually negative for normal goods (because of the law of demand), but we often refer to its absolute value \\(|\\text{PED}|\\).\nInterpretation:\n\n\\(|\\text{PED}| &gt; 1\\): Elastic demand (quantity responds strongly to price changes).\n\\(|\\text{PED}| = 1\\): Unitary elastic demand.\n\\(|\\text{PED}| &lt; 1\\): Inelastic demand (quantity responds weakly to price changes)."
+    "text": "In mathematics and most sciences, we are taught to put the independent variable on the x‑axis and the dependent variable on the y‑axis.\nYet in introductory economics, supply and demand diagrams have:\n\nPrice (P) on the vertical (y) axis\nQuantity (Q) on the horizontal (x) axis\n\nBut we often say things like “quantity demanded depends on price” or “quantity supplied depends on price”.\nWhy, then, is quantity on the x‑axis and price on the y‑axis in standard supply–demand diagrams?"
   },
   {
-    "objectID": "eco_2028/eco notes/why-ped-changes.html#definition-of-price-elasticity-of-demand-ped",
-    "href": "eco_2028/eco notes/why-ped-changes.html#definition-of-price-elasticity-of-demand-ped",
-    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
+    "objectID": "eco_2028/eco notes/why_price_on_y_axis.html#question",
+    "href": "eco_2028/eco notes/why_price_on_y_axis.html#question",
+    "title": "Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams?",
     "section": "",
-    "text": "Price elasticity of demand (PED) measures the responsiveness of the quantity demanded of a good to a change in its price.\nFormally:\n\\[\n\\text{PED} = \\frac{\\%\\ \\text{change in quantity demanded}}{\\%\\ \\text{change in price}}\n\\]\nor, using calculus for a demand function \\(Q = f(P)\\):\n\\[\n\\text{PED} = \\frac{dQ}{dP} \\times \\frac{P}{Q}\n\\]\nKey points:\n\nPED is usually negative for normal goods (because of the law of demand), but we often refer to its absolute value \\(|\\text{PED}|\\).\nInterpretation:\n\n\\(|\\text{PED}| &gt; 1\\): Elastic demand (quantity responds strongly to price changes).\n\\(|\\text{PED}| = 1\\): Unitary elastic demand.\n\\(|\\text{PED}| &lt; 1\\): Inelastic demand (quantity responds weakly to price changes)."
+    "text": "In mathematics and most sciences, we are taught to put the independent variable on the x‑axis and the dependent variable on the y‑axis.\nYet in introductory economics, supply and demand diagrams have:\n\nPrice (P) on the vertical (y) axis\nQuantity (Q) on the horizontal (x) axis\n\nBut we often say things like “quantity demanded depends on price” or “quantity supplied depends on price”.\nWhy, then, is quantity on the x‑axis and price on the y‑axis in standard supply–demand diagrams?"
   },
   {
-    "objectID": "eco_2028/eco notes/why-ped-changes.html#how-ped-changes-along-a-straight-line-demand-curve",
-    "href": "eco_2028/eco notes/why-ped-changes.html#how-ped-changes-along-a-straight-line-demand-curve",
-    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
-    "section": "How PED Changes Along a Straight-Line Demand Curve",
-    "text": "How PED Changes Along a Straight-Line Demand Curve\nOn a typical downward-sloping straight-line (linear) demand curve, PED is not constant:\n\nHigh prices / low quantities (upper part of the curve): demand is more elastic.\nMidpoint of the curve: demand is unitary elastic (\\(|\\text{PED}| = 1\\)).\nLow prices / high quantities (lower part of the curve): demand is more inelastic.\n\n\nWhy PED changes even though the slope is constant\nFor a linear demand curve, the slope \\(\\frac{dP}{dQ}\\) (or \\(\\frac{dQ}{dP}\\)) is constant, but PED depends on both the slope and the ratio \\(\\frac{P}{Q}\\):\n\\[\n\\text{PED} = \\frac{dQ}{dP} \\times \\frac{P}{Q}\n\\]\n\n\\(\\frac{dQ}{dP}\\) is constant for a straight line.\nBut \\(\\frac{P}{Q}\\) changes as you move along the curve.\n\nSo even with a constant slope, the percentage responsiveness changes because the base levels of \\(P\\) and \\(Q\\) change.\nIntuitively:\n\nAt the top-left (high \\(P\\), low \\(Q\\)): a given absolute change in price is a small percentage change, but the same absolute change in quantity is a large percentage change → high elasticity.\nAt the bottom-right (low \\(P\\), high \\(Q\\)): the same absolute price change is a large percentage change, but the quantity change is a small percentage change → low elasticity."
+    "objectID": "eco_2028/eco notes/why_price_on_y_axis.html#teacher-explanation",
+    "href": "eco_2028/eco notes/why_price_on_y_axis.html#teacher-explanation",
+    "title": "Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams?",
+    "section": "2 Teacher Explanation",
+    "text": "2 Teacher Explanation\n\n2.1 1. It is mainly a historical convention\nThe standard diagram comes from Alfred Marshall’s Principles of Economics (1890). Marshall chose to draw:\n\nQuantity on the horizontal axis\n\nPrice on the vertical axis\n\neven though he understood that, mathematically, one can think of quantity demanded or supplied as a function of price.\nBecause Marshall’s textbook became so influential, this convention became standard in the Anglo‑American economics tradition. Later authors kept it for consistency and comparability, even though it goes against the usual maths convention.\nSo a large part of the answer is simply: this is how Marshall drew it, and everyone followed.\n\n\n\n2.2 2. Economists are plotting inverse demand and supply\nIn many models we write:\n\nDemand: \\(Q_d = D(P)\\) – quantity demanded as a function of price\n\nSupply: \\(Q_s = S(P)\\) – quantity supplied as a function of price\n\nBut the diagram you see in class is actually drawing the inverse functions:\n\nInverse demand: \\(P = D^{-1}(Q)\\) – the price consumers are willing to pay for each quantity\n\nInverse supply: \\(P = S^{-1}(Q)\\) – the price producers need to supply each quantity\n\nIn Marshall’s way of thinking:\n\nFor any given quantity \\(Q\\), the demand curve shows the maximum price consumers are willing to pay for that extra (marginal) unit.\nFor any given \\(Q\\), the supply curve shows the minimum price producers need to be willing to supply that extra unit (their marginal cost).\n\nSo in that view:\n\nQuantity is treated as the “driver”: “If the market sells this much, what price does that imply on the demand side? On the supply side?”\nPrice is the outcome variable that adjusts to equate quantity demanded and quantity supplied.\n\nThus, the diagram is consistent if you think of it as plotting price as a function of quantity, i.e. the inverse demand and inverse supply curves.\n\n\n\n2.3 3. Two ways to draw the same curves\nThe same underlying relationships can be drawn in two orientations.\n\n2.3.1 (A) Marshallian (economics) convention\nQuantity on x‑axis, Price on y‑axis\n\n\n\nMarshallian orientation\n\n\nThis is the standard diagram used in almost all introductory economics textbooks and exams.\n\nDemand slopes downward: as \\(Q\\) increases, the marginal willingness to pay falls.\nSupply slopes upward: as \\(Q\\) increases, the marginal cost of production rises.\nEquilibrium \\(E\\) is where the two curves cross.\n\n\n\n2.3.2 (B) Mathematics convention\nPrice as independent (x), Quantity as dependent (y)\n\n\n\nMathematics orientation\n\n\nHere we treat:\n\n\\(Q_d = D(P)\\) and \\(Q_s = S(P)\\) explicitly, with price on the horizontal axis and quantity on the vertical axis.\n\nThe curves represent the same relationships; they are just re‑expressed and re‑oriented.\n\n\n\n\n2.4 4. Why don’t we switch to the “maths” convention?\nYou could teach supply and demand with price on the x‑axis and quantity on the y‑axis. Some advanced texts do this when it is convenient. But introductory economics keeps Marshall’s convention because:\n\nStandardisation: All textbooks, exam boards, and policy graphs use the same orientation, so everyone can read each other’s diagrams.\nIntuition about shifts: It is very visual to think of “demand shifts right” or “supply shifts right” and immediately see the new equilibrium price and quantity in the same layout.\nSurplus and elasticity: Concepts like consumer surplus, producer surplus, and elasticity are taught using this standard picture; changing axes would confuse learners more than it helps.\n\nSo the diagram is not wrong; it is just using a different but consistent convention that the whole discipline has adopted."
   },
   {
-    "objectID": "eco_2028/eco notes/why-ped-changes.html#numerical-example",
-    "href": "eco_2028/eco notes/why-ped-changes.html#numerical-example",
-    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
-    "section": "Numerical Example",
-    "text": "Numerical Example\nConsider a simple linear demand function:\n\\[\nP = 100 - 2Q \\quad \\text{or} \\quad Q = 50 - 0.5P\n\\]\nHere, \\(\\frac{dQ}{dP} = -0.5\\) (constant).\nPED at any point:\n\\[\n\\text{PED} = \\frac{dQ}{dP} \\times \\frac{P}{Q} = -0.5 \\times \\frac{P}{Q}\n\\]\n\nPoint A: High price, low quantity (elastic region)\nLet \\(Q = 10\\):\n\n\\(P = 100 - 2(10) = 80\\)\n\\(\\text{PED} = -0.5 \\times \\frac{80}{10} = -0.5 \\times 8 = -4\\)\n\n\\(|\\text{PED}| = 4 &gt; 1\\) → elastic demand.\n\n\nPoint B: Midpoint (unitary elasticity)\nMidpoint in quantity terms: \\(Q = 25\\)\n\n\\(P = 100 - 2(25) = 50\\)\n\\(\\text{PED} = -0.5 \\times \\frac{50}{25} = -0.5 \\times 2 = -1\\)\n\n\\(|\\text{PED}| = 1\\) → unitary elastic.\n\n\nPoint C: Low price, high quantity (inelastic region)\nLet \\(Q = 40\\):\n\n\\(P = 100 - 2(40) = 20\\)\n\\(\\text{PED} = -0.5 \\times \\frac{20}{40} = -0.5 \\times 0.5 = -0.25\\)\n\n\\(|\\text{PED}| = 0.25 &lt; 1\\) → inelastic demand.\nSo along the same straight line:\n\nTop segment: \\(|\\text{PED}| &gt; 1\\) (elastic)\nMidpoint: \\(|\\text{PED}| = 1\\) (unitary)\nBottom segment: \\(|\\text{PED}| &lt; 1\\) (inelastic)"
+    "objectID": "eco_2028/eco notes/why_price_on_y_axis.html#how-to-explain-this-to-students",
+    "href": "eco_2028/eco notes/why_price_on_y_axis.html#how-to-explain-this-to-students",
+    "title": "Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams?",
+    "section": "3 How to explain this to students",
+    "text": "3 How to explain this to students\nYou might say:\n\n“In maths, we usually put the independent variable on the x‑axis. In economics, the supply–demand diagram is a historical convention from Marshall.”\n“The curves you see are really inverse functions: price as a function of quantity.”\n“Quantity is treated as the ‘given’, and price is the ‘resulting market price’ that clears the market.”\n“Everyone in economics uses this convention, so we stick with it to match textbooks, exams, and other economists’ graphs.”\n\nIf students ask, “So which is correct?” you can answer:\n\n“Both are mathematically fine. Economists have just agreed to use Marshall’s orientation for all the standard diagrams.”"
   },
   {
-    "objectID": "eco_2028/eco notes/why-ped-changes.html#using-the-percentage-change-midpoint-formula-between-two-points",
-    "href": "eco_2028/eco notes/why-ped-changes.html#using-the-percentage-change-midpoint-formula-between-two-points",
-    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
-    "section": "Using the Percentage-Change (Midpoint) Formula Between Two Points",
-    "text": "Using the Percentage-Change (Midpoint) Formula Between Two Points\nYou can also see this by computing PED between pairs of points using the midpoint formula:\n\\[\n\\text{PED} = \\frac{\\%\\ \\Delta Q}{\\%\\ \\Delta P}\n= \\frac{\\frac{Q_2 - Q_1}{(Q_1 + Q_2)/2}}{\\frac{P_2 - P_1}{(P_1 + P_2)/2}}\n\\]\nUsing the same curve \\(P = 100 - 2Q\\):\n\nBetween upper points (elastic region)\nBetween \\((P_1, Q_1) = (80, 10)\\) and \\((P_2, Q_2) = (60, 20)\\):\n\\[\n\\%\\ \\Delta Q = \\frac{20 - 10}{(10 + 20)/2} = \\frac{10}{15} \\approx 0.667\n\\] \\[\n\\%\\ \\Delta P = \\frac{60 - 80}{(80 + 60)/2} = \\frac{-20}{70} \\approx -0.286\n\\] \\[\n\\text{PED} \\approx \\frac{0.667}{-0.286} \\approx -2.33 \\quad (\\text{elastic})\n\\]\n\n\nBetween lower points (inelastic region)\nBetween \\((P_1, Q_1) = (40, 30)\\) and \\((P_2, Q_2) = (20, 40)\\):\n\\[\n\\%\\ \\Delta Q = \\frac{40 - 30}{(30 + 40)/2} = \\frac{10}{35} \\approx 0.286\n\\] \\[\n\\%\\ \\Delta P = \\frac{20 - 40}{(40 + 20)/2} = \\frac{-20}{30} \\approx -0.667\n\\] \\[\n\\text{PED} \\approx \\frac{0.286}{-0.667} \\approx -0.43 \\quad (\\text{inelastic})\n\\]\nSame straight line, but elasticity falls as you move down and to the right."
+    "objectID": "eco_2028/eco notes/why_price_on_y_axis.html#optional-extension-for-advanced-students",
+    "href": "eco_2028/eco notes/why_price_on_y_axis.html#optional-extension-for-advanced-students",
+    "title": "Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams?",
+    "section": "4 Optional extension for advanced students",
+    "text": "4 Optional extension for advanced students\nFor more advanced classes, you can:\n\nWrite demand as \\(Q_d = a - bP\\) and then derive the inverse demand \\(P = \\frac{a}{b} - \\frac{1}{b}Q\\).\nShow explicitly how the same line looks in both orientations.\nDiscuss how some research papers and advanced texts switch axes depending on what is most convenient for the analysis.\n\nThis helps students see that the choice of axes is a modelling and presentation choice, not a deep truth about the relationship."
   },
   {
-    "objectID": "eco_2028/eco notes/why-ped-changes.html#key-pattern-to-remember-for-exams",
-    "href": "eco_2028/eco notes/why-ped-changes.html#key-pattern-to-remember-for-exams",
-    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
-    "section": "Key Pattern to Remember (for Exams)",
-    "text": "Key Pattern to Remember (for Exams)\nOn a typical downward-sloping straight-line demand curve:\n\nUpper half: \\(|\\text{PED}| &gt; 1\\) → elastic\n\nMidpoint: \\(|\\text{PED}| = 1\\) → unitary\n\nLower half: \\(|\\text{PED}| &lt; 1\\) → inelastic\n\nAt the price-axis intercept (where \\(Q = 0\\)): \\(|\\text{PED}| \\to \\infty\\) (perfectly elastic in the limit)\n\nAt the quantity-axis intercept (where \\(P = 0\\)): \\(\\text{PED} = 0\\) (perfectly inelastic in the limit)\n\nThis is why total revenue behaves differently along the curve:\n\nIn the elastic region, a price decrease raises total revenue.\nIn the inelastic region, a price increase raises total revenue.\nMaximum total revenue occurs at the unitary-elastic midpoint."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html",
-    "href": "math-6-2026/properties-of-number-sets.html",
-    "title": "Properties of Number Sets",
+    "objectID": "eco_2028/index.html",
+    "href": "eco_2028/index.html",
+    "title": "A Level Economics 2028",
     "section": "",
-    "text": "Teacher: We have already built three number sets: natural numbers, whole numbers, and integers. Today we will ask a new question: What happens when we perform operations on numbers from a set?\nStudent: You mean addition, subtraction, multiplication, and division?\nTeacher: Exactly. We will investigate whether the answer always remains in the same set, whether changing the order changes the answer, and whether regrouping changes the answer.\n\nThe number sets in this lesson are:\n\\[\n\\mathbb{N}=\\{1,2,3,4,\\ldots\\}\n\\]\n\\[\n\\mathbb{W}=\\{0,1,2,3,4,\\ldots\\}\n\\]\n\\[\n\\mathbb{Z}=\\{\\ldots,-3,-2,-1,0,1,2,3,\\ldots\\}\n\\]\nWe will use the four basic operations:\n\nAddition: \\(+\\)\nSubtraction: \\(-\\)\nMultiplication: \\(\\times\\)\nDivision: \\(\\div\\)\n\nThroughout this note, we use the convention that natural numbers begin with 1."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#beginning-with-a-question",
-    "href": "math-6-2026/properties-of-number-sets.html#beginning-with-a-question",
-    "title": "Properties of Number Sets",
-    "section": "",
-    "text": "Teacher: We have already built three number sets: natural numbers, whole numbers, and integers. Today we will ask a new question: What happens when we perform operations on numbers from a set?\nStudent: You mean addition, subtraction, multiplication, and division?\nTeacher: Exactly. We will investigate whether the answer always remains in the same set, whether changing the order changes the answer, and whether regrouping changes the answer.\n\nThe number sets in this lesson are:\n\\[\n\\mathbb{N}=\\{1,2,3,4,\\ldots\\}\n\\]\n\\[\n\\mathbb{W}=\\{0,1,2,3,4,\\ldots\\}\n\\]\n\\[\n\\mathbb{Z}=\\{\\ldots,-3,-2,-1,0,1,2,3,\\ldots\\}\n\\]\nWe will use the four basic operations:\n\nAddition: \\(+\\)\nSubtraction: \\(-\\)\nMultiplication: \\(\\times\\)\nDivision: \\(\\div\\)\n\nThroughout this note, we use the convention that natural numbers begin with 1."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#closure-staying-inside-the-set",
-    "href": "math-6-2026/properties-of-number-sets.html#closure-staying-inside-the-set",
-    "title": "Properties of Number Sets",
-    "section": "2 Closure: staying inside the set",
-    "text": "2 Closure: staying inside the set\n\nTeacher: Imagine that a set is a classroom. If I choose two students from the classroom and perform an operation on their numbers, what would it mean for the classroom to be closed under that operation?\nStudent: Perhaps the answer must also be a student in the same classroom?\nTeacher: That is a useful way to think about it. A set is closed under an operation if applying that operation to members of the set always produces another member of the same set.\n\nFor a set \\(S\\) and an operation \\(*\\), closure means:\n\\[\n\\text{if }a\\in S\\text{ and }b\\in S,\\text{ then }a*b\\in S.\n\\]\nThe important word is always. One successful example is not enough to prove closure. To show that a set is not closed, one counterexample is enough.\n\n2.1 Addition and natural numbers\n\nTeacher: Let us begin with natural numbers. What happens when we add two natural numbers?\nStudent: For example, \\(2+5=7\\). The answer is still natural.\nTeacher: Can you think of two natural numbers whose sum is not natural?\nStudent: No. Adding positive counting numbers always gives another positive counting number.\n\nTherefore, the natural numbers are closed under addition:\n\\[\na,b\\in\\mathbb{N}\\implies a+b\\in\\mathbb{N}.\n\\]\nExamples:\n\\[\n1+4=5,\\qquad 8+6=14,\\qquad 100+25=125.\n\\]\n\n\n2.2 Multiplication and natural numbers\n\nTeacher: What about multiplication?\nStudent: A natural number multiplied by another natural number gives a natural number. For example, \\(3\\times4=12\\).\nTeacher: Correct. Natural numbers are also closed under multiplication.\n\n\\[\na,b\\in\\mathbb{N}\\implies ab\\in\\mathbb{N}.\n\\]\n\n\n2.3 Subtraction and natural numbers\n\nTeacher: Now let us try subtraction. Is \\(7-3\\) natural?\nStudent: Yes, it is 4.\nTeacher: Is \\(3-7\\) natural?\nStudent: No. It is \\(-4\\), which is not a natural number.\nTeacher: Therefore, what can we conclude?\nStudent: Natural numbers are not closed under subtraction.\n\nOne counterexample is sufficient:\n\\[\n3,7\\in\\mathbb{N},\\qquad 3-7=-4\\notin\\mathbb{N}.\n\\]\nThe problem is that subtraction can move us to the left of zero, while natural numbers contain only positive counting numbers.\n\n\n2.4 Division and natural numbers\n\nTeacher: Let us try division. Is \\(8\\div2\\) natural?\nStudent: Yes, it is 4.\nTeacher: Is \\(2\\div8\\) natural?\nStudent: No. It is \\(\\frac14\\), which is not a natural number.\nTeacher: So natural numbers are not closed under division.\n\n\\[\n2,8\\in\\mathbb{N},\\qquad 2\\div8=\\frac14\\notin\\mathbb{N}.\n\\]\nDivision can produce a fraction, and natural numbers do not include fractions."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#closure-of-the-whole-numbers",
-    "href": "math-6-2026/properties-of-number-sets.html#closure-of-the-whole-numbers",
-    "title": "Properties of Number Sets",
-    "section": "3 Closure of the whole numbers",
-    "text": "3 Closure of the whole numbers\n\nTeacher: Whole numbers include zero as well as the natural numbers. Does adding zero change the closure results?\nStudent: Let me check operation by operation.\n\n\n3.1 Addition and multiplication\nWhole numbers are closed under addition:\n\\[\n0+5=5,\\qquad 6+3=9.\n\\]\nThey are also closed under multiplication:\n\\[\n0\\times8=0,\\qquad 4\\times7=28.\n\\]\nIn general,\n\\[\na,b\\in\\mathbb{W}\\implies a+b\\in\\mathbb{W}\\text{ and }ab\\in\\mathbb{W}.\n\\]\n\n\n3.2 Subtraction\n\nTeacher: Is the set of whole numbers closed under subtraction?\nStudent: \\(2-5=-3\\), and \\(-3\\) is not a whole number. So no.\n\n\\[\n2,5\\in\\mathbb{W},\\qquad 2-5=-3\\notin\\mathbb{W}.\n\\]\n\n\n3.3 Division\n\nStudent: Whole numbers are not closed under division either, because \\(3\\div2=\\frac32\\) is not a whole number.\n\n\\[\n3,2\\in\\mathbb{W},\\qquad 3\\div2=\\frac32\\notin\\mathbb{W}.\n\\]\nAdding zero makes the set larger, but it does not add negative numbers or fractions. Therefore, the closure table for whole numbers is the same as for natural numbers."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#closure-of-the-integers",
-    "href": "math-6-2026/properties-of-number-sets.html#closure-of-the-integers",
-    "title": "Properties of Number Sets",
-    "section": "4 Closure of the integers",
-    "text": "4 Closure of the integers\n\nTeacher: Integers include negative numbers, so subtraction may work better. Let us test all four operations.\n\n\n4.1 Addition, subtraction, and multiplication\nIntegers are closed under addition:\n\\[\n-4+7=3,\\qquad -5+(-2)=-7.\n\\]\nThey are closed under subtraction:\n\\[\n3-8=-5,\\qquad -2-(-6)=4.\n\\]\nThey are closed under multiplication:\n\\[\n(-3)\\times4=-12,\\qquad (-2)\\times(-5)=10.\n\\]\n\nStudent: In each case, the answer is still an integer.\nTeacher: Yes. Adding, subtracting, or multiplying integers never creates a fraction.\n\n\n\n4.2 Division\n\nTeacher: Is division always safe for integers?\nStudent: \\(8\\div2=4\\) is an integer, but \\(2\\div8=\\frac14\\) is not.\nTeacher: Therefore, integers are not closed under division.\n\n\\[\n2,8\\in\\mathbb{Z},\\qquad 2\\div8=\\frac14\\notin\\mathbb{Z}.\n\\]"
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#closure-table",
-    "href": "math-6-2026/properties-of-number-sets.html#closure-table",
-    "title": "Properties of Number Sets",
-    "section": "5 Closure table",
-    "text": "5 Closure table\nThe results can be organised as follows.\n\n\n\nNumber set\nAddition\nSubtraction\nMultiplication\nDivision\n\n\n\n\nNatural numbers \\(\\mathbb{N}\\)\nYes\nNo\nYes\nNo\n\n\nWhole numbers \\(\\mathbb{W}\\)\nYes\nNo\nYes\nNo\n\n\nIntegers \\(\\mathbb{Z}\\)\nYes\nYes\nYes\nNo\n\n\n\n\nTeacher: What pattern do you see?\nStudent: Moving from natural numbers to whole numbers fixes the need for zero, but not negative answers or fractions. Moving to integers fixes subtraction, but division can still produce fractions.\n\nClosure depends on both the set and the operation. We should never say simply, “This set is closed.” We should say, for example, “The integers are closed under subtraction” or “The whole numbers are not closed under division.”"
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#commutative-property-does-order-matter",
-    "href": "math-6-2026/properties-of-number-sets.html#commutative-property-does-order-matter",
-    "title": "Properties of Number Sets",
-    "section": "6 Commutative property: does order matter?",
-    "text": "6 Commutative property: does order matter?\n\nTeacher: Closure asked whether we stay in the set. Now we will ask a different question: Does changing the order change the answer?\nStudent: For addition, \\(3+5\\) and \\(5+3\\) both equal 8.\nTeacher: Exactly. This is the commutative property.\n\nAn operation is commutative when changing the order of the two numbers does not change the result:\n\\[\na*b=b*a.\n\\]\n\n6.1 Addition is commutative\nAddition is commutative for natural numbers, whole numbers, and integers.\n\\[\n4+7=7+4=11\n\\]\n\\[\n-3+8=8+(-3)=5\n\\]\n\n\n6.2 Multiplication is commutative\nMultiplication is also commutative for all three sets:\n\\[\n3\\times5=5\\times3=15\n\\]\n\\[\n(-2)\\times6=6\\times(-2)=-12\n\\]\nThe numbers may be negative, but changing their order does not change the product.\n\n\n6.3 Subtraction is not commutative\n\nTeacher: Does the same idea work for subtraction?\nStudent: \\(9-4=5\\), but \\(4-9=-5\\). The answers are different.\nTeacher: So subtraction is not commutative.\n\n\\[\n9-4\\neq4-9.\n\\]\nThe order matters because subtraction tells us to start with the first number and take away the second.\n\n\n6.4 Division is not commutative\nDivision is not commutative either:\n\\[\n12\\div3=4,\n\\qquad\n3\\div12=\\frac14.\n\\]\nThus,\n\\[\na\\div b\\neq b\\div a\n\\]\nin general, whenever both divisions are defined."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#associative-property-does-grouping-matter",
-    "href": "math-6-2026/properties-of-number-sets.html#associative-property-does-grouping-matter",
-    "title": "Properties of Number Sets",
-    "section": "7 Associative property: does grouping matter?",
-    "text": "7 Associative property: does grouping matter?\n\nTeacher: We have changed the order of two numbers. Now let us keep the order the same but change the grouping of three numbers.\nStudent: What does changing the grouping mean?\nTeacher: Compare these two expressions:\n\\[\n(2+3)+4\n\\]\nand\n\\[\n2+(3+4).\n\\]\nThe order is still 2, then 3, then 4. Only the brackets have moved.\n\nAn operation is associative when changing the grouping does not change the answer:\n\\[\n(a*b)*c=a*(b*c).\n\\]\nThe brackets tell us which operation is performed first.\n\n7.1 Addition is associative\nAddition is associative for natural numbers, whole numbers, and integers.\n\\[\n(2+3)+4=5+4=9\n\\]\n\\[\n2+(3+4)=2+7=9\n\\]\nTherefore,\n\\[\n(2+3)+4=2+(3+4).\n\\]\nThis remains true when negative integers are used:\n\\[\n((-5)+2)+7=-3+7=4\n\\]\n\\[\n(-5)+(2+7)=-5+9=4.\n\\]\n\n\n7.2 Multiplication is associative\nMultiplication is associative for all three number sets:\n\\[\n(2\\times3)\\times4=6\\times4=24\n\\]\n\\[\n2\\times(3\\times4)=2\\times12=24.\n\\]\nFor integers,\n\\[\n((-2)\\times3)\\times4=-6\\times4=-24\n\\]\n\\[\n(-2)\\times(3\\times4)=(-2)\\times12=-24.\n\\]\n\n\n7.3 Subtraction is not associative\n\nTeacher: Let us test subtraction.\nStudent:\n\\[\n(10-6)-2=4-2=2\n\\]\nbut\n\\[\n10-(6-2)=10-4=6.\n\\]\nThe answers are different.\n\nTherefore, subtraction is not associative:\n\\[\n(10-6)-2\\neq10-(6-2).\n\\]\n\n\n7.4 Division is not associative\nDivision is not associative either:\n\\[\n(24\\div6)\\div2=4\\div2=2\n\\]\nbut\n\\[\n24\\div(6\\div2)=24\\div3=8.\n\\]\nThus,\n\\[\n(24\\div6)\\div2\\neq24\\div(6\\div2).\n\\]"
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#property-table",
-    "href": "math-6-2026/properties-of-number-sets.html#property-table",
-    "title": "Properties of Number Sets",
-    "section": "8 Property table",
-    "text": "8 Property table\nFor natural numbers, whole numbers, and integers, the commutative and associative results are the same wherever the operation is defined.\n\n\n\nOperation\nCommutative?\nAssociative?\n\n\n\n\nAddition\nYes\nYes\n\n\nSubtraction\nNo\nNo\n\n\nMultiplication\nYes\nYes\n\n\nDivision\nNo\nNo\n\n\n\n\nTeacher: Can we use the word “associative” for two numbers?\nStudent: No. Associativity concerns the grouping of three numbers, while commutativity concerns changing the order of two numbers.\n\nThat distinction is important:\n\nCommutative: change the order: \\(a+b\\) versus \\(b+a\\).\nAssociative: change the grouping: \\((a+b)+c\\) versus \\(a+(b+c)\\)."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#additive-identity-adding-nothing",
-    "href": "math-6-2026/properties-of-number-sets.html#additive-identity-adding-nothing",
-    "title": "Properties of Number Sets",
-    "section": "9 Additive identity: adding nothing",
-    "text": "9 Additive identity: adding nothing\n\nTeacher: We now turn to addition. Is there a number that we can add without changing a number?\nStudent: Adding zero does that. For example, \\(7+0=7\\).\nTeacher: Correct. Zero is called the additive identity.\n\nA number \\(e\\) is an additive identity for a set if adding it to any number in the set leaves that number unchanged:\n\\[\na+e=a=e+a.\n\\]\nFor ordinary number systems, the additive identity is \\(0\\).\n\\[\na+0=a=0+a.\n\\]\n\n9.1 Which sets contain the additive identity?\n\nNatural numbers do not contain 0 under our convention. Therefore, the natural numbers do not contain their additive identity.\nWhole numbers contain 0. Therefore, the whole numbers contain their additive identity.\nIntegers contain 0. Therefore, the integers contain their additive identity.\n\n\nStudent: Natural numbers can still be added to zero, but zero is not a member of the natural-number set.\nTeacher: Exactly. The identity exists in the larger number system, but it is not included in \\(\\mathbb{N}\\) as we have defined it."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#additive-inverse-cancelling-a-number",
-    "href": "math-6-2026/properties-of-number-sets.html#additive-inverse-cancelling-a-number",
-    "title": "Properties of Number Sets",
-    "section": "10 Additive inverse: cancelling a number",
-    "text": "10 Additive inverse: cancelling a number\n\nTeacher: Now let us ask a different question. What number can we add to 5 to get back to zero?\nStudent: \\(-5\\), because \\(5+(-5)=0\\).\nTeacher: Good. \\(-5\\) is the additive inverse of 5.\n\nThe additive inverse of a number \\(a\\) is the number \\(-a\\) such that\n\\[\na+(-a)=0.\n\\]\nExamples:\n\\[\n7+(-7)=0,\n\\]\n\\[\n-3+3=0,\n\\]\n\\[\n0+0=0.\n\\]\nThe additive inverse changes the direction of a number on the number line. The numbers \\(a\\) and \\(-a\\) are the same distance from zero but lie on opposite sides."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#additive-inverses-in-the-three-sets",
-    "href": "math-6-2026/properties-of-number-sets.html#additive-inverses-in-the-three-sets",
-    "title": "Properties of Number Sets",
-    "section": "11 Additive inverses in the three sets",
-    "text": "11 Additive inverses in the three sets\n\n11.1 Natural numbers\n\nTeacher: Does every natural number have its additive inverse in the natural numbers?\nStudent: The additive inverse of 4 is \\(-4\\), but \\(-4\\) is not natural. So no.\n\nNatural numbers do not contain the additive inverse of any positive natural number. The exception would be 0, but 0 is not in \\(\\mathbb{N}\\) under our convention. Therefore, \\(\\mathbb{N}\\) does not contain additive inverses for its members.\n\n\n11.2 Whole numbers\nWhole numbers also do not contain additive inverses for their positive members:\n\\[\n5\\in\\mathbb{W},\\qquad -5\\notin\\mathbb{W}.\n\\]\nThe number 0 is its own additive inverse because\n\\[\n0+0=0.\n\\]\nHowever, having one member with an inverse is not enough for the set to contain additive inverses for all its members. Therefore, the whole numbers do not contain additive inverses for all their members.\n\n\n11.3 Integers\n\nTeacher: What about the integers?\nStudent: If \\(a\\) is an integer, then \\(-a\\) is also an integer. So every integer has its additive inverse in the integers.\n\nExamples:\n\\[\n6\\text{ and }-6,\n\\qquad\n-9\\text{ and }9,\n\\qquad\n0\\text{ and }0.\n\\]\nTherefore, the integers contain an additive inverse for every member."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#identity-and-inverse-are-different",
-    "href": "math-6-2026/properties-of-number-sets.html#identity-and-inverse-are-different",
-    "title": "Properties of Number Sets",
-    "section": "12 Identity and inverse are different",
-    "text": "12 Identity and inverse are different\n\nStudent: Both additive identity and additive inverse involve zero. Are they the same idea?\nTeacher: No. They are related, but they answer different questions.\n\n\n\n\n\n\n\n\n\nIdea\nQuestion\nExample\n\n\n\n\nAdditive identity\nWhat can I add without changing the number?\n\\(8+0=8\\)\n\n\nAdditive inverse\nWhat can I add to cancel the number?\n\\(8+(-8)=0\\)\n\n\n\nThe identity is the number that leaves a value unchanged. The inverse is the number that combines with a given value to produce the identity."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#putting-the-ideas-together",
-    "href": "math-6-2026/properties-of-number-sets.html#putting-the-ideas-together",
-    "title": "Properties of Number Sets",
-    "section": "13 Putting the ideas together",
-    "text": "13 Putting the ideas together\n\nTeacher: Let us now review the whole investigation. We asked four different questions.\nStudent: First, whether the answer stays in the set. That was closure.\nTeacher: Second, whether changing order changes the answer. That was commutativity.\nStudent: Third, whether changing brackets changes the answer. That was associativity.\nTeacher: Fourth, whether the set contains zero and the opposites needed for addition. Those were additive identity and additive inverse.\n\n\n13.1 Closure summary\n\n\n\n\n\n\n\n\n\n\nSet\nClosed under \\(+\\)\nClosed under \\(-\\)\nClosed under \\(\\times\\)\nClosed under \\(\\div\\)\n\n\n\n\n\\(\\mathbb{N}\\)\nYes\nNo\nYes\nNo\n\n\n\\(\\mathbb{W}\\)\nYes\nNo\nYes\nNo\n\n\n\\(\\mathbb{Z}\\)\nYes\nYes\nYes\nNo\n\n\n\n\n\n13.2 Commutativity and associativity summary\n\n\n\nOperation\nCommutative\nAssociative\n\n\n\n\n\\(+\\)\nYes\nYes\n\n\n\\(-\\)\nNo\nNo\n\n\n\\(\\times\\)\nYes\nYes\n\n\n\\(\\div\\)\nNo\nNo\n\n\n\n\n\n13.3 Additive identity and inverse summary\n\n\n\n\n\n\n\n\nSet\nContains additive identity \\(0\\)?\nContains additive inverse for every member?\n\n\n\n\n\\(\\mathbb{N}\\)\nNo\nNo\n\n\n\\(\\mathbb{W}\\)\nYes\nNo\n\n\n\\(\\mathbb{Z}\\)\nYes\nYes"
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#short-summary-for-recall",
-    "href": "math-6-2026/properties-of-number-sets.html#short-summary-for-recall",
-    "title": "Properties of Number Sets",
-    "section": "14 Short summary for recall",
-    "text": "14 Short summary for recall\nRemember the following sequence:\n\nClosure: Do we stay inside the set?\nCommutative: Can we change the order?\nAssociative: Can we change the grouping?\nAdditive identity: Zero leaves a number unchanged: \\(a+0=a\\).\nAdditive inverse: The opposite cancels a number: \\(a+(-a)=0\\).\n\nFor the three sets:\n\nNatural numbers: closed under addition and multiplication only; no zero and no negative numbers.\nWhole numbers: closed under addition and multiplication; includes zero but not negative numbers.\nIntegers: closed under addition, subtraction, and multiplication; includes zero and the additive inverse of every integer.\n\nFor the four operations:\n\nAddition and multiplication are commutative and associative.\nSubtraction and division are neither commutative nor associative.\nDivision is not closed for natural numbers, whole numbers, or integers because it can produce fractions.\n\nA compact memory sentence is:\n\nStay inside, swap order, regroup, leave unchanged, cancel: closure, commutative, associative, identity, inverse."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#check-your-understanding",
-    "href": "math-6-2026/properties-of-number-sets.html#check-your-understanding",
-    "title": "Properties of Number Sets",
-    "section": "15 Check your understanding",
-    "text": "15 Check your understanding\n\n15.1 Question 1\nAre natural numbers closed under subtraction? Explain using a counterexample.\n\nThink aloud: Choose two natural numbers in the order that makes the smaller number come first: \\(3-8=-5\\). Since \\(-5\\) is not natural, natural numbers are not closed under subtraction.\n\n\n\n15.2 Question 2\nAre whole numbers closed under division?\n\nThink aloud: Try \\(3\\div2=\\frac32\\). The inputs are whole numbers, but the answer is not a whole number. Therefore, whole numbers are not closed under division.\n\n\n\n15.3 Question 3\nAre integers closed under subtraction?\n\nThink aloud: Subtracting one integer from another gives an integer. For example, \\(-4-7=-11\\) and \\(3-(-5)=8\\). Therefore, integers are closed under subtraction.\n\n\n\n15.4 Question 4\nIs subtraction commutative?\n\nThink aloud: Compare \\(9-4=5\\) with \\(4-9=-5\\). The answers differ, so subtraction is not commutative.\n\n\n\n15.5 Question 5\nIs addition associative?\n\nThink aloud: Compare grouping rather than order: \\((2+5)+3=7+3=10\\), while \\(2+(5+3)=2+8=10\\). Addition is associative.\n\n\n\n15.6 Question 6\nIs division associative?\n\nThink aloud: Compare \\((24\\div6)\\div2=2\\) with \\(24\\div(6\\div2)=8\\). Since the answers differ, division is not associative.\n\n\n\n15.7 Question 7\nWhat is the additive identity?\n\nThink aloud: We need a number that can be added without changing the original number. Since \\(a+0=a\\), the additive identity is 0.\n\n\n\n15.8 Question 8\nWhat is the additive inverse of \\(-12\\)?\n\nThink aloud: The additive inverse has the opposite sign. The opposite of \\(-12\\) is 12, and \\(-12+12=0\\).\n\n\n\n15.9 Question 9\nWhich of the three sets contains the additive identity?\n\nThink aloud: The identity is 0. Zero is not in \\(\\mathbb{N}\\), but it is in \\(\\mathbb{W}\\) and \\(\\mathbb{Z}\\). Therefore, whole numbers and integers contain the additive identity.\n\n\n\n15.10 Question 10\nWhich of the three sets contains the additive inverse of every member?\n\nThink aloud: Natural and whole numbers contain positive numbers but not their negatives. Integers contain both \\(a\\) and \\(-a\\) for every integer \\(a\\). Therefore, the integers contain the additive inverse of every member.\n\n\n\n15.11 Question 11\nA student says, “The whole numbers are closed under subtraction because \\(8-3=5\\).” Is the reasoning complete?\n\nThink aloud: No. One successful example does not prove closure. We must check whether the result is always a whole number. The counterexample \\(3-8=-5\\) shows that whole numbers are not closed under subtraction.\n\n\n\n15.12 Question 12\nA student says, “The additive identity is the number that makes the answer zero.” Is this correct?\n\nThink aloud: No. That describes an additive inverse. The additive identity leaves a number unchanged: \\(7+0=7\\). The additive inverse cancels a number: \\(7+(-7)=0\\)."
-  },
-  {
-    "objectID": "math-6-2026/properties-of-number-sets.html#final-thinking-aloud-conversation",
-    "href": "math-6-2026/properties-of-number-sets.html#final-thinking-aloud-conversation",
-    "title": "Properties of Number Sets",
-    "section": "16 Final thinking-aloud conversation",
-    "text": "16 Final thinking-aloud conversation\n\nStudent: I can now separate the properties. Closure is about whether the answer remains in the set. Commutativity is about changing order. Associativity is about changing brackets.\nTeacher: Good. And what do identity and inverse tell us?\nStudent: The additive identity is zero because adding it changes nothing. The additive inverse is the opposite number because adding the two gives zero.\nTeacher: And which set is the most complete of the three for addition and subtraction?\nStudent: The integers. They include zero, every integer’s additive inverse, and they are closed under addition and subtraction.\n\nThe purpose of these properties is not merely to memorise tables. They help us predict what operations will do before calculating. Once we understand the question each property asks, the patterns in the number sets become easier to see."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html",
-    "href": "math-6-2026/types-of-numbers.html",
-    "title": "Types of Numbers",
-    "section": "",
-    "text": "Teacher: Today we will not begin by memorising a list of names. Instead, we will ask a more interesting question: Why did people need different types of numbers?\nStudent: I already know numbers, fractions, and decimals.\nTeacher: Good. We will use what you already know. We will gradually enlarge our collection of numbers whenever an earlier collection is not enough for a new situation.\n\nThe main idea is this:\n\nWe begin with counting. Then we add zero. Then we add numbers less than zero. Finally, we allow numbers between consecutive whole numbers.\n\nThese collections are called natural numbers, whole numbers, integers, and rational numbers."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html#a-conversation-about-numbers",
-    "href": "math-6-2026/types-of-numbers.html#a-conversation-about-numbers",
-    "title": "Types of Numbers",
-    "section": "",
-    "text": "Teacher: Today we will not begin by memorising a list of names. Instead, we will ask a more interesting question: Why did people need different types of numbers?\nStudent: I already know numbers, fractions, and decimals.\nTeacher: Good. We will use what you already know. We will gradually enlarge our collection of numbers whenever an earlier collection is not enough for a new situation.\n\nThe main idea is this:\n\nWe begin with counting. Then we add zero. Then we add numbers less than zero. Finally, we allow numbers between consecutive whole numbers.\n\nThese collections are called natural numbers, whole numbers, integers, and rational numbers."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html#starting-with-counting",
-    "href": "math-6-2026/types-of-numbers.html#starting-with-counting",
-    "title": "Types of Numbers",
-    "section": "2 Starting with counting",
-    "text": "2 Starting with counting\n\nTeacher: Imagine that I ask you to count the children in a classroom. What numbers might you say?\nStudent: 1, 2, 3, 4, 5, and so on.\nTeacher: Exactly. These are the numbers we use when we count objects. We call them natural numbers.\n\nIn this lesson, we use the convention\n\\[\n\\mathbb{N}=\\{1,2,3,4,5,\\ldots\\}.\n\\]\nA number such as 4 tells us that there are four objects. We can show these numbers on a number line:\n\n\n\n\n\n\n\n\n\n\nTeacher: Notice something important. We are not marking every possible point on the line. We are marking only the counting numbers.\nStudent: So there is no natural number between 1 and 2?\nTeacher: Correct. In our discussion of natural numbers, 1 and 2 are consecutive natural numbers. The natural numbers do not include numbers such as \\(1\\frac12\\), \\(\\frac32\\), or 1.7.\n\nThis does not mean that the points between 1 and 2 do not exist. It means only that those points are not included in the set of natural numbers."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html#why-do-we-need-zero",
-    "href": "math-6-2026/types-of-numbers.html#why-do-we-need-zero",
-    "title": "Types of Numbers",
-    "section": "3 Why do we need zero?",
-    "text": "3 Why do we need zero?\n\nTeacher: Suppose there are five books on a table. Which number describes the collection?\nStudent: 5.\nTeacher: What if I remove all the books?\nStudent: Then there are no books.\nTeacher: We need a number to describe that situation. That number is zero.\n\nZero is useful when we need to describe an empty collection, no objects, or a starting point. When we include zero with the natural numbers, we get the whole numbers:\n\\[\n\\mathbb{W}=\\{0,1,2,3,4,5,\\ldots\\}.\n\\]\n\n\n\n\n\n\n\n\n\n\nStudent: So every natural number is a whole number, but zero is a whole number that is not natural.\nTeacher: Exactly. We can write that as\n\\[\n\\mathbb{N}\\subset\\mathbb{W}.\n\\]\nThe symbol \\(\\subset\\) means “is contained in”. The whole-number collection contains all the natural numbers and adds zero."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html#why-do-we-need-negative-numbers",
-    "href": "math-6-2026/types-of-numbers.html#why-do-we-need-negative-numbers",
-    "title": "Types of Numbers",
-    "section": "4 Why do we need negative numbers?",
-    "text": "4 Why do we need negative numbers?\n\nTeacher: Now imagine that the temperature is 3 degrees above zero. We can write \\(+3\\), or simply 3. What if the temperature is 3 degrees below zero?\nStudent: We need \\(-3\\).\nTeacher: Right. Negative numbers are useful for temperatures below zero, floors below ground level, debts, and movement in the opposite direction.\n\nWhole numbers alone cannot describe these situations. We therefore extend the number line to the left of zero:\n\n\n\n\n\n\n\n\n\nThe integers are\n\\[\n\\mathbb{Z}=\\{\\ldots,-3,-2,-1,0,1,2,3,\\ldots\\}.\n\\]\n\nTeacher: What do you notice about the integers on this number line?\nStudent: They are still spaced one unit apart. There is no integer between 0 and 1, or between 1 and 2.\nTeacher: Exactly. We have added numbers to the left of zero, but we have not yet filled the gaps between the marked points.\n\nThis is the meaning of full numbers in our discussion: integers occupy the regularly spaced marked positions. For example, 1 and 2 are consecutive integers. Numbers such as \\(\\frac32\\), 1.5, and 1.9 are not integers.\nWe can now see the nesting:\n\\[\n\\mathbb{N}\\subset\\mathbb{W}\\subset\\mathbb{Z}.\n\\]\nEvery natural number is whole, and every whole number is an integer."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html#a-possible-confusion",
-    "href": "math-6-2026/types-of-numbers.html#a-possible-confusion",
-    "title": "Types of Numbers",
-    "section": "5 A possible confusion",
-    "text": "5 A possible confusion\n\nStudent: But fractions and decimals are also on the number line. If \\(\\frac12\\) is on the number line, is it a natural number or an integer?\nTeacher: Being on the number line is not enough to tell us which set a number belongs to. The number line can represent many different sets. We must ask whether the particular number is included in the set we are discussing.\n\nFor instance:\n\n\\(2\\) is a natural number, whole number, and integer.\n\\(0\\) is a whole number and integer, but not a natural number under our convention.\n\\(-2\\) is an integer, but not a whole number or natural number.\n\\(\\frac12\\) is not a natural number, whole number, or integer.\n\nThe number line is like a map. A map may show many roads, but a particular journey may use only some of them. Similarly, a number line may show many possible locations, while a number set includes only selected locations."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html#why-do-we-need-fractions",
-    "href": "math-6-2026/types-of-numbers.html#why-do-we-need-fractions",
-    "title": "Types of Numbers",
-    "section": "6 Why do we need fractions?",
-    "text": "6 Why do we need fractions?\n\nTeacher: Suppose two children share one apple equally. Can each child receive a whole number of apples?\nStudent: No. Each child gets half an apple.\nTeacher: So we need a number between 0 and 1. That number is \\(\\frac12\\).\n\nNow suppose we want to describe one and a half metres, or \\(2\\frac14\\) litres. Integers are not enough because they leave gaps between consecutive integers. Fractions allow us to describe points in those gaps.\n\n\n\n\n\n\n\n\n\n\nStudent: Between 1 and 2, I can place \\(\\frac54\\), \\(\\frac32\\), and \\(\\frac74\\).\nTeacher: Yes. We have divided the unit interval into equal parts. If we divide it into four equal parts, the points are \\(1\\frac14\\), \\(1\\frac12\\), and \\(1\\frac34\\) between 1 and 2."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html#rational-numbers",
-    "href": "math-6-2026/types-of-numbers.html#rational-numbers",
-    "title": "Types of Numbers",
-    "section": "7 Rational numbers",
-    "text": "7 Rational numbers\nA rational number is a number that can be written in the form\n\\[\n\\frac{p}{q},\n\\]\nwhere \\(p\\) and \\(q\\) are integers and \\(q\\neq0\\).\nExamples include\n\\[\n\\frac12,\\quad -\\frac34,\\quad 5=\\frac51,\\quad 0=\\frac01,\n\\]\nand terminating or repeating decimals such as\n\\[\n0.5=\\frac12,\\qquad 1.25=\\frac54,\\qquad 0.333\\ldots=\\frac13.\n\\]\n\nStudent: So whole numbers and integers are also rational numbers because they can be written over 1.\nTeacher: Exactly. For example, \\(-3=-\\frac31\\) and \\(7=\\frac71\\). Therefore,\n\\[\n\\mathbb{N}\\subset\\mathbb{W}\\subset\\mathbb{Z}\\subset\\mathbb{Q},\n\\]\nwhere \\(\\mathbb{Q}\\) represents the rational numbers.\n\nThe rational numbers include the integers and also many numbers between them:\n\n\n\n\n\n\n\n\n\nThere are still infinitely many rational numbers between any two different integers. Between 0 and 1, for example, we can find \\(\\frac12\\), \\(\\frac13\\), \\(\\frac14\\), \\(\\frac{99}{100}\\), and many more."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html#what-about-decimals",
-    "href": "math-6-2026/types-of-numbers.html#what-about-decimals",
-    "title": "Types of Numbers",
-    "section": "8 What about decimals?",
-    "text": "8 What about decimals?\n\nStudent: Are decimals different from fractions?\nTeacher: Some decimals are another way of writing fractions. A decimal tells us how a unit has been divided into tenths, hundredths, thousandths, and so on.\n\nFor example,\n\\[\n0.4=\\frac4{10}=\\frac25,\n\\qquad\n1.25=\\frac{125}{100}=\\frac54.\n\\]\nA terminating decimal is rational. A repeating decimal is also rational:\n\\[\n0.666\\ldots=\\frac23.\n\\]\nHowever, not every decimal is rational. Some decimals continue forever without repeating a pattern, such as the decimal representation of \\(\\sqrt2\\). That idea belongs to a later discussion of irrational numbers. For now, the important point is that fractions and many familiar decimals add points between the integers."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html#the-complete-chain",
-    "href": "math-6-2026/types-of-numbers.html#the-complete-chain",
-    "title": "Types of Numbers",
-    "section": "9 The complete chain",
-    "text": "9 The complete chain\nWe can now tell the story in one line:\n\n\n\n\n\n\n\n\n\nThe inclusions are\n\\[\n\\boxed{\\mathbb{N}\\subset\\mathbb{W}\\subset\\mathbb{Z}\\subset\\mathbb{Q}}.\n\\]\nThe thinking behind the chain is more important than memorising the symbols:\n\nNatural numbers: We need numbers for counting.\nWhole numbers: We need zero to describe none or an empty collection.\nIntegers: We need negative numbers for quantities below zero or in the opposite direction.\nRational numbers: We need fractions and suitable decimals to describe parts of a whole and points between integers."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html#check-your-understanding",
-    "href": "math-6-2026/types-of-numbers.html#check-your-understanding",
-    "title": "Types of Numbers",
-    "section": "10 Check your understanding",
-    "text": "10 Check your understanding\n\n10.1 Question 1\nIs 0 a natural number?\n\nThink aloud: In this lesson, natural numbers begin at 1. Zero was added to create the whole numbers. Therefore, 0 is a whole number, but not a natural number under our chosen convention.\n\n\n\n10.2 Question 2\nIs \\(-4\\) a whole number?\n\nThink aloud: Whole numbers begin at 0 and move to the right: \\(0,1,2,3,\\ldots\\). Since \\(-4\\) lies to the left of zero, it is not a whole number. It is an integer.\n\n\n\n10.3 Question 3\nIs \\(\\frac32\\) an integer?\n\nThink aloud: \\(\\frac32=1.5\\), which lies between 1 and 2. There is no integer between 1 and 2. Therefore, \\(\\frac32\\) is rational but not an integer.\n\n\n\n10.4 Question 4\nIs 6 rational?\n\nThink aloud: Any integer can be written with denominator 1. Since \\(6=\\frac61\\), 6 is rational.\n\n\n\n10.5 Question 5\nWhich sets contain \\(-2\\)?\n\nThink aloud: \\(-2\\) is not natural or whole because those sets do not include negative numbers. It is an integer, and it is rational because \\(-2=-\\frac21\\)."
-  },
-  {
-    "objectID": "math-6-2026/types-of-numbers.html#a-final-conversation",
-    "href": "math-6-2026/types-of-numbers.html#a-final-conversation",
-    "title": "Types of Numbers",
-    "section": "11 A final conversation",
-    "text": "11 A final conversation\n\nStudent: I think I understand now. The different names are not saying that the number line changes. They tell us which points we have decided to include.\nTeacher: Exactly. We begin with a small collection and enlarge it when we need new kinds of numbers. Natural numbers are enough for counting. Whole numbers add zero. Integers add negative numbers. Rational numbers add fractions and many decimals between the integers.\nStudent: And a number can belong to more than one collection.\nTeacher: Yes. For example, 3 is natural, whole, integer, and rational. But \\(\\frac12\\) is rational without being natural, whole, or integer.\n\nThe most useful picture is therefore not a collection of unrelated definitions, but a sequence of questions:\n\nWhat can I describe with the numbers I have? What new situation forces me to add another kind of number?\n\nThat question turns number classification into a story of mathematical need."
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 14, 2026\n\n\nLecture Notes: Demand, Supply and Elasticities\n\n\n \n\n\n\n\nSep 11, 2026\n\n\nDemand and Supply Curves Self Check\n\n\n \n\n\n\n\nSep 10, 2026\n\n\nDemand and Supply Curves\n\n\n \n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -2338,109 +2296,347 @@
     "text": "“if Hindus migrate to other regions of earth, Indian caste will become a world problem.”\n\nDr. Ambedkar sets up the importance of studying caste. Caste is a parceling out of a homogenous population. Various definitions of caste are then examined and the characteristics of caste proposed in the definitions are separated into results of caste system (ideas of pollution and purity, prohibition of inter-dining) and the essential nature of caste. It is emphasized that caste exists within a system of castes and not as an isolated entity. Between autogeny and endogamy, ==Endogamy is established as the essence of caste.==\nThen there is a discussion of the imposition of endogamy on the system of exogamy that is practiced in India. ==Practices of widow burning, imposing a life long widowhood and child marriage are child marriage as practices that were needed to prevent problem of surplus man and surplus woman, necessary to maintain endogamy and caste. ==\nThe nature of the argument - if you take a natural exogamous society, if we superimpose endogamy, what are the potential problems? What solutions can solve these problems? If we show that these solutions are present in the current society, we can argue that endogamy was created at a certain time. and that it did not come from a divine origin.\nAmbedkar makes this argument to attack the idea of divine origin - since the divine origin theory is where Brahminical position derives its strength.\n\ntraditions are honored because they are practiced. origin of the caste is the origin of the mechanism for endogamy.\n\nSociety is composed not of individuals but classes. Caste is an enclosed class.\nHow did classes end up becoming enclosed? Look at where the customs are most strictly observed, and it seems reasonable that Brahmins must have been the group that enclosed themselves first.\nhowever, one cannot say that a law giver like Manu or a group like brahmins created caste. It is impossible to do so for one person or one group. Shastras could also not have been able to create this.\nMost likely, Brahmins closed the doors of their class and became a caste. everyone else imitated. Everyone else imitated because Brahmins were the highest in prestige. They were the servants of good, semi-gods and demi-gods.\nGabriel Tarde - three laws of imitation, hold good in the way caste is practiced.\nSome closed the door and the others found it closed against them. Anyone who violated caste rules was expelled and new castes were created. Fissiparous nature of the caste system.\ncaste as a unit within the system of castes - a singular caste does not exist. it is always the plural castes. it is an unconscious growth in the life of a human society in peculiar circumstances and not a conscious command of the supreme authority."
   },
   {
-    "objectID": "math-6-2026/index.html",
-    "href": "math-6-2026/index.html",
-    "title": "Grade 6 Math 2026",
+    "objectID": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html",
+    "href": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html",
+    "title": "Lecture Notes: Demand, Supply and Elasticities",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 16, 2026\n\n\nFractions Operations Rules and Practice\n\n\n \n\n\n\n\nSep 13, 2026\n\n\nProperties of Number Sets\n\n\n \n\n\n\n\nSep 12, 2026\n\n\nTypes of Numbers\n\n\n \n\n\n\n\n\nNo matching items"
+    "text": "The demand curve usually slopes downwards from left to right, while the supply curve usually slopes upwards from left to right. When the two curves are drawn together, their intersection represents market equilibrium.\nDemand and supply schedules normally assume that the relationship is:\n\nlinear or approximately linear over the range being studied;\ncontinuous;\nmeasured over a stated period of time; and\nbased on the ceteris paribus assumption, meaning that other relevant factors remain unchanged.\n\n\n\n\nPrice changes cause movements along the existing demand or supply curve. These movements change quantity demanded or quantity supplied.\nChanges in non-price determinants cause the entire demand or supply curve to shift. For example, a change in consumer income may shift demand, while a change in production costs may shift supply."
   },
   {
-    "objectID": "math-6-2026/fractions-4-operations.html",
-    "href": "math-6-2026/fractions-4-operations.html",
-    "title": "Fractions Operations Rules and Practice",
+    "objectID": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#curve-characteristics",
+    "href": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#curve-characteristics",
+    "title": "Lecture Notes: Demand, Supply and Elasticities",
     "section": "",
-    "text": "This worksheet is a short reminder of important fraction skills. Read each rule, study the example, and then try the practice sets."
+    "text": "The demand curve usually slopes downwards from left to right, while the supply curve usually slopes upwards from left to right. When the two curves are drawn together, their intersection represents market equilibrium.\nDemand and supply schedules normally assume that the relationship is:\n\nlinear or approximately linear over the range being studied;\ncontinuous;\nmeasured over a stated period of time; and\nbased on the ceteris paribus assumption, meaning that other relevant factors remain unchanged."
   },
   {
-    "objectID": "math-6-2026/fractions-4-operations.html#mixed-fraction-to-improper-fraction",
-    "href": "math-6-2026/fractions-4-operations.html#mixed-fraction-to-improper-fraction",
-    "title": "Fractions Operations Rules and Practice",
-    "section": "1.1 Mixed fraction to improper fraction",
-    "text": "1.1 Mixed fraction to improper fraction\n\nMultiply the whole number by the denominator.\nAdd the numerator.\nKeep the same denominator.\n\nExample: \\(2\\frac{1}{3}=\\frac{2\\times3+1}{3}=\\frac{7}{3}\\)."
-  },
-  {
-    "objectID": "math-6-2026/fractions-4-operations.html#improper-fraction-to-mixed-fraction",
-    "href": "math-6-2026/fractions-4-operations.html#improper-fraction-to-mixed-fraction",
-    "title": "Fractions Operations Rules and Practice",
-    "section": "1.2 Improper fraction to mixed fraction",
-    "text": "1.2 Improper fraction to mixed fraction\n\nDivide the numerator by the denominator.\nThe answer from the division is the whole number.\nThe remainder becomes the new numerator.\nKeep the same denominator.\n\nExample: \\(\\frac{11}{4}=2\\frac{3}{4}\\) because \\(11\\) divided by \\(4\\) gives \\(2\\) with a remainder of \\(3\\)."
-  },
-  {
-    "objectID": "math-6-2026/fractions-4-operations.html#same-denominators",
-    "href": "math-6-2026/fractions-4-operations.html#same-denominators",
-    "title": "Fractions Operations Rules and Practice",
-    "section": "2.1 Same denominators",
-    "text": "2.1 Same denominators\nKeep the denominator, add the numerators, and simplify if possible.\nExample: \\(\\frac{2}{7}+\\frac{3}{7}=\\frac{5}{7}\\)."
-  },
-  {
-    "objectID": "math-6-2026/fractions-4-operations.html#different-denominators",
-    "href": "math-6-2026/fractions-4-operations.html#different-denominators",
-    "title": "Fractions Operations Rules and Practice",
-    "section": "2.2 Different denominators",
-    "text": "2.2 Different denominators\n\nMultiply the numerator and denominator of the first fraction by the denominator of the second fraction.\nMultiply the numerator and denominator of the second fraction by the denominator of the first fraction.\nAdd the new numerators and keep the new denominator.\nSimplify the answer.\n\nExample:\n\\[\n\\frac{1}{2}+\\frac{1}{3}=\\frac{1\\times3}{2\\times3}+\\frac{1\\times2}{3\\times2}=\\frac{3}{6}+\\frac{2}{6}=\\frac{5}{6}\n\\]"
-  },
-  {
-    "objectID": "math-6-2026/fractions-4-operations.html#adding-mixed-fractions",
-    "href": "math-6-2026/fractions-4-operations.html#adding-mixed-fractions",
-    "title": "Fractions Operations Rules and Practice",
-    "section": "2.3 Adding mixed fractions",
-    "text": "2.3 Adding mixed fractions\n\nChange each mixed fraction into an improper fraction.\nAdd the improper fractions.\nChange the answer back into a mixed fraction if needed.\n\nExample: \\(1\\frac{2}{5}+2\\frac{4}{5}=\\frac{7}{5}+\\frac{14}{5}=\\frac{21}{5}=4\\frac{1}{5}\\)."
-  },
-  {
-    "objectID": "math-6-2026/fractions-4-operations.html#same-denominators-1",
-    "href": "math-6-2026/fractions-4-operations.html#same-denominators-1",
-    "title": "Fractions Operations Rules and Practice",
-    "section": "3.1 Same denominators",
-    "text": "3.1 Same denominators\nKeep the denominator, subtract the numerators, and simplify if possible.\nExample: \\(\\frac{6}{9}-\\frac{2}{9}=\\frac{4}{9}\\)."
-  },
-  {
-    "objectID": "math-6-2026/fractions-4-operations.html#different-denominators-1",
-    "href": "math-6-2026/fractions-4-operations.html#different-denominators-1",
-    "title": "Fractions Operations Rules and Practice",
-    "section": "3.2 Different denominators",
-    "text": "3.2 Different denominators\n\nMultiply the numerator and denominator of the first fraction by the denominator of the second fraction.\nMultiply the numerator and denominator of the second fraction by the denominator of the first fraction.\nSubtract the new numerators and keep the new denominator.\nSimplify the answer.\n\nExample:\n\\[\n\\frac{3}{4}-\\frac{1}{6}=\\frac{3\\times6}{4\\times6}-\\frac{1\\times4}{6\\times4}=\\frac{18}{24}-\\frac{4}{24}=\\frac{14}{24}=\\frac{7}{12}\n\\]"
-  },
-  {
-    "objectID": "math-6-2026/fractions-4-operations.html#subtracting-mixed-fractions",
-    "href": "math-6-2026/fractions-4-operations.html#subtracting-mixed-fractions",
-    "title": "Fractions Operations Rules and Practice",
-    "section": "3.3 Subtracting mixed fractions",
-    "text": "3.3 Subtracting mixed fractions\n\nChange each mixed fraction into an improper fraction.\nSubtract the improper fractions.\nChange the answer back into a mixed fraction if needed.\n\nExample: \\(3\\frac{1}{4}-1\\frac{3}{4}=\\frac{13}{4}-\\frac{7}{4}=\\frac{6}{4}=1\\frac{1}{2}\\)."
-  },
-  {
-    "objectID": "eco_2028/eco notes/why_price_on_y_axis.html",
-    "href": "eco_2028/eco notes/why_price_on_y_axis.html",
-    "title": "Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams?",
+    "objectID": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#movements-and-shifts",
+    "href": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#movements-and-shifts",
+    "title": "Lecture Notes: Demand, Supply and Elasticities",
     "section": "",
-    "text": "In mathematics and most sciences, we are taught to put the independent variable on the x‑axis and the dependent variable on the y‑axis.\nYet in introductory economics, supply and demand diagrams have:\n\nPrice (P) on the vertical (y) axis\nQuantity (Q) on the horizontal (x) axis\n\nBut we often say things like “quantity demanded depends on price” or “quantity supplied depends on price”.\nWhy, then, is quantity on the x‑axis and price on the y‑axis in standard supply–demand diagrams?"
+    "text": "Price changes cause movements along the existing demand or supply curve. These movements change quantity demanded or quantity supplied.\nChanges in non-price determinants cause the entire demand or supply curve to shift. For example, a change in consumer income may shift demand, while a change in production costs may shift supply."
   },
   {
-    "objectID": "eco_2028/eco notes/why_price_on_y_axis.html#question",
-    "href": "eco_2028/eco notes/why_price_on_y_axis.html#question",
-    "title": "Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams?",
+    "objectID": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#question-5-demand-curve-relationship",
+    "href": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#question-5-demand-curve-relationship",
+    "title": "Lecture Notes: Demand, Supply and Elasticities",
+    "section": "Question 5: demand-curve relationship",
+    "text": "Question 5: demand-curve relationship\nOption C, “as price changes, a greater or smaller quantity is demanded”, is preferable to option A, “quantity changes in proportion to a change in price”.\nOption A imposes an unnecessarily strict linear restriction. A demand curve shows the relationship between price and quantity demanded, but that relationship does not have to be proportional or perfectly linear."
+  },
+  {
+    "objectID": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#question-10-import-tax-on-orange-juice",
+    "href": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#question-10-import-tax-on-orange-juice",
+    "title": "Lecture Notes: Demand, Supply and Elasticities",
+    "section": "Question 10: import tax on orange juice",
+    "text": "Question 10: import tax on orange juice\nAn indirect tax on imported US orange juice increases the cost of importing the product and reduces the overall volume available in the domestic market. The domestic market supply curve therefore shifts to the left."
+  },
+  {
+    "objectID": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#definition",
+    "href": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#definition",
+    "title": "Lecture Notes: Demand, Supply and Elasticities",
+    "section": "Definition",
+    "text": "Definition\nPrice elasticity of demand (PED) measures the responsiveness of quantity demanded to a change in the product’s price.\nThe formula is:\n\\[\n\\text{PED} = \\frac{\\%\\ \\text{change in quantity demanded}}{\\%\\ \\text{change in price}}\n\\]"
+  },
+  {
+    "objectID": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#sign-convention",
+    "href": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#sign-convention",
+    "title": "Lecture Notes: Demand, Supply and Elasticities",
+    "section": "Sign convention",
+    "text": "Sign convention\nBecause price and quantity demanded usually have an inverse relationship, PED values are naturally negative. Economists commonly report PED using its absolute value and omit the minus sign."
+  },
+  {
+    "objectID": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#key-elasticity-profiles",
+    "href": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#key-elasticity-profiles",
+    "title": "Lecture Notes: Demand, Supply and Elasticities",
+    "section": "Key elasticity profiles",
+    "text": "Key elasticity profiles\n\n\n\n\n\n\n\n\n\nType of demand\nPED\nCurve shape\nMeaning\n\n\n\n\nPerfectly inelastic\n\\(0\\)\nVertical line\nQuantity demanded remains constant regardless of price.\n\n\nPerfectly elastic\n\\(\\infty\\)\nHorizontal line\nBuyers purchase at one specific price but none at other prices.\n\n\nUnit elastic\n\\(1\\)\nRectangular hyperbola\nThe percentage change in quantity equals the percentage change in price.\n\n\n\n\nPerfectly inelastic demand\nWith perfectly inelastic demand, quantity demanded does not change when price changes. A possible example is a life-saving medicine for which there are no close alternatives.\n\n\nPerfectly elastic demand\nWith perfectly elastic demand, buyers are willing to purchase any available quantity at one specific price, but none at a higher price.\n\n\nUnit elastic demand\nWith unit elastic demand, the percentage change in quantity demanded equals the percentage change in price. A unit-elastic demand curve can be represented by the relationship:\n\\[\nP \\times Q = \\text{constant}\n\\]"
+  },
+  {
+    "objectID": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#availability-and-attractiveness-of-substitutes",
+    "href": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#availability-and-attractiveness-of-substitutes",
+    "title": "Lecture Notes: Demand, Supply and Elasticities",
+    "section": "Availability and attractiveness of substitutes",
+    "text": "Availability and attractiveness of substitutes\nThe easier and more attractive it is to switch to a close substitute, the more price elastic demand is likely to be. For example, consumers may switch between filter coffee and instant coffee when the price of one changes."
+  },
+  {
+    "objectID": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#relative-expense",
+    "href": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#relative-expense",
+    "title": "Lecture Notes: Demand, Supply and Elasticities",
+    "section": "Relative expense",
+    "text": "Relative expense\nProducts that represent a large share of a consumer’s income are usually more price elastic than inexpensive routine purchases. Housing rent is generally more price elastic than a single cup of coffee because a change in rent has a larger effect on the household budget."
+  },
+  {
+    "objectID": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#time-horizon",
+    "href": "eco_2028/unit2-lecture-notes-demand-supply-elasticity.html#time-horizon",
+    "title": "Lecture Notes: Demand, Supply and Elasticities",
+    "section": "Time horizon",
+    "text": "Time horizon\nDemand generally becomes more elastic over a longer period. Consumers have more time to find substitutes, change their habits or replace products with different technologies."
+  },
+  {
+    "objectID": "eco_2028/eco notes/why-ped-changes.html",
+    "href": "eco_2028/eco notes/why-ped-changes.html",
+    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
     "section": "",
-    "text": "In mathematics and most sciences, we are taught to put the independent variable on the x‑axis and the dependent variable on the y‑axis.\nYet in introductory economics, supply and demand diagrams have:\n\nPrice (P) on the vertical (y) axis\nQuantity (Q) on the horizontal (x) axis\n\nBut we often say things like “quantity demanded depends on price” or “quantity supplied depends on price”.\nWhy, then, is quantity on the x‑axis and price on the y‑axis in standard supply–demand diagrams?"
+    "text": "Price elasticity of demand (PED) measures the responsiveness of the quantity demanded of a good to a change in its price.\nFormally:\n\\[\n\\text{PED} = \\frac{\\%\\ \\text{change in quantity demanded}}{\\%\\ \\text{change in price}}\n\\]\nor, using calculus for a demand function \\(Q = f(P)\\):\n\\[\n\\text{PED} = \\frac{dQ}{dP} \\times \\frac{P}{Q}\n\\]\nKey points:\n\nPED is usually negative for normal goods (because of the law of demand), but we often refer to its absolute value \\(|\\text{PED}|\\).\nInterpretation:\n\n\\(|\\text{PED}| &gt; 1\\): Elastic demand (quantity responds strongly to price changes).\n\\(|\\text{PED}| = 1\\): Unitary elastic demand.\n\\(|\\text{PED}| &lt; 1\\): Inelastic demand (quantity responds weakly to price changes)."
   },
   {
-    "objectID": "eco_2028/eco notes/why_price_on_y_axis.html#teacher-explanation",
-    "href": "eco_2028/eco notes/why_price_on_y_axis.html#teacher-explanation",
-    "title": "Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams?",
-    "section": "2 Teacher Explanation",
-    "text": "2 Teacher Explanation\n\n2.1 1. It is mainly a historical convention\nThe standard diagram comes from Alfred Marshall’s Principles of Economics (1890). Marshall chose to draw:\n\nQuantity on the horizontal axis\n\nPrice on the vertical axis\n\neven though he understood that, mathematically, one can think of quantity demanded or supplied as a function of price.\nBecause Marshall’s textbook became so influential, this convention became standard in the Anglo‑American economics tradition. Later authors kept it for consistency and comparability, even though it goes against the usual maths convention.\nSo a large part of the answer is simply: this is how Marshall drew it, and everyone followed.\n\n\n\n2.2 2. Economists are plotting inverse demand and supply\nIn many models we write:\n\nDemand: \\(Q_d = D(P)\\) – quantity demanded as a function of price\n\nSupply: \\(Q_s = S(P)\\) – quantity supplied as a function of price\n\nBut the diagram you see in class is actually drawing the inverse functions:\n\nInverse demand: \\(P = D^{-1}(Q)\\) – the price consumers are willing to pay for each quantity\n\nInverse supply: \\(P = S^{-1}(Q)\\) – the price producers need to supply each quantity\n\nIn Marshall’s way of thinking:\n\nFor any given quantity \\(Q\\), the demand curve shows the maximum price consumers are willing to pay for that extra (marginal) unit.\nFor any given \\(Q\\), the supply curve shows the minimum price producers need to be willing to supply that extra unit (their marginal cost).\n\nSo in that view:\n\nQuantity is treated as the “driver”: “If the market sells this much, what price does that imply on the demand side? On the supply side?”\nPrice is the outcome variable that adjusts to equate quantity demanded and quantity supplied.\n\nThus, the diagram is consistent if you think of it as plotting price as a function of quantity, i.e. the inverse demand and inverse supply curves.\n\n\n\n2.3 3. Two ways to draw the same curves\nThe same underlying relationships can be drawn in two orientations.\n\n2.3.1 (A) Marshallian (economics) convention\nQuantity on x‑axis, Price on y‑axis\n\n\n\nMarshallian orientation\n\n\nThis is the standard diagram used in almost all introductory economics textbooks and exams.\n\nDemand slopes downward: as \\(Q\\) increases, the marginal willingness to pay falls.\nSupply slopes upward: as \\(Q\\) increases, the marginal cost of production rises.\nEquilibrium \\(E\\) is where the two curves cross.\n\n\n\n2.3.2 (B) Mathematics convention\nPrice as independent (x), Quantity as dependent (y)\n\n\n\nMathematics orientation\n\n\nHere we treat:\n\n\\(Q_d = D(P)\\) and \\(Q_s = S(P)\\) explicitly, with price on the horizontal axis and quantity on the vertical axis.\n\nThe curves represent the same relationships; they are just re‑expressed and re‑oriented.\n\n\n\n\n2.4 4. Why don’t we switch to the “maths” convention?\nYou could teach supply and demand with price on the x‑axis and quantity on the y‑axis. Some advanced texts do this when it is convenient. But introductory economics keeps Marshall’s convention because:\n\nStandardisation: All textbooks, exam boards, and policy graphs use the same orientation, so everyone can read each other’s diagrams.\nIntuition about shifts: It is very visual to think of “demand shifts right” or “supply shifts right” and immediately see the new equilibrium price and quantity in the same layout.\nSurplus and elasticity: Concepts like consumer surplus, producer surplus, and elasticity are taught using this standard picture; changing axes would confuse learners more than it helps.\n\nSo the diagram is not wrong; it is just using a different but consistent convention that the whole discipline has adopted."
+    "objectID": "eco_2028/eco notes/why-ped-changes.html#definition-of-price-elasticity-of-demand-ped",
+    "href": "eco_2028/eco notes/why-ped-changes.html#definition-of-price-elasticity-of-demand-ped",
+    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
+    "section": "",
+    "text": "Price elasticity of demand (PED) measures the responsiveness of the quantity demanded of a good to a change in its price.\nFormally:\n\\[\n\\text{PED} = \\frac{\\%\\ \\text{change in quantity demanded}}{\\%\\ \\text{change in price}}\n\\]\nor, using calculus for a demand function \\(Q = f(P)\\):\n\\[\n\\text{PED} = \\frac{dQ}{dP} \\times \\frac{P}{Q}\n\\]\nKey points:\n\nPED is usually negative for normal goods (because of the law of demand), but we often refer to its absolute value \\(|\\text{PED}|\\).\nInterpretation:\n\n\\(|\\text{PED}| &gt; 1\\): Elastic demand (quantity responds strongly to price changes).\n\\(|\\text{PED}| = 1\\): Unitary elastic demand.\n\\(|\\text{PED}| &lt; 1\\): Inelastic demand (quantity responds weakly to price changes)."
   },
   {
-    "objectID": "eco_2028/eco notes/why_price_on_y_axis.html#how-to-explain-this-to-students",
-    "href": "eco_2028/eco notes/why_price_on_y_axis.html#how-to-explain-this-to-students",
-    "title": "Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams?",
-    "section": "3 How to explain this to students",
-    "text": "3 How to explain this to students\nYou might say:\n\n“In maths, we usually put the independent variable on the x‑axis. In economics, the supply–demand diagram is a historical convention from Marshall.”\n“The curves you see are really inverse functions: price as a function of quantity.”\n“Quantity is treated as the ‘given’, and price is the ‘resulting market price’ that clears the market.”\n“Everyone in economics uses this convention, so we stick with it to match textbooks, exams, and other economists’ graphs.”\n\nIf students ask, “So which is correct?” you can answer:\n\n“Both are mathematically fine. Economists have just agreed to use Marshall’s orientation for all the standard diagrams.”"
+    "objectID": "eco_2028/eco notes/why-ped-changes.html#how-ped-changes-along-a-straight-line-demand-curve",
+    "href": "eco_2028/eco notes/why-ped-changes.html#how-ped-changes-along-a-straight-line-demand-curve",
+    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
+    "section": "How PED Changes Along a Straight-Line Demand Curve",
+    "text": "How PED Changes Along a Straight-Line Demand Curve\nOn a typical downward-sloping straight-line (linear) demand curve, PED is not constant:\n\nHigh prices / low quantities (upper part of the curve): demand is more elastic.\nMidpoint of the curve: demand is unitary elastic (\\(|\\text{PED}| = 1\\)).\nLow prices / high quantities (lower part of the curve): demand is more inelastic.\n\n\nWhy PED changes even though the slope is constant\nFor a linear demand curve, the slope \\(\\frac{dP}{dQ}\\) (or \\(\\frac{dQ}{dP}\\)) is constant, but PED depends on both the slope and the ratio \\(\\frac{P}{Q}\\):\n\\[\n\\text{PED} = \\frac{dQ}{dP} \\times \\frac{P}{Q}\n\\]\n\n\\(\\frac{dQ}{dP}\\) is constant for a straight line.\nBut \\(\\frac{P}{Q}\\) changes as you move along the curve.\n\nSo even with a constant slope, the percentage responsiveness changes because the base levels of \\(P\\) and \\(Q\\) change.\nIntuitively:\n\nAt the top-left (high \\(P\\), low \\(Q\\)): a given absolute change in price is a small percentage change, but the same absolute change in quantity is a large percentage change → high elasticity.\nAt the bottom-right (low \\(P\\), high \\(Q\\)): the same absolute price change is a large percentage change, but the quantity change is a small percentage change → low elasticity."
   },
   {
-    "objectID": "eco_2028/eco notes/why_price_on_y_axis.html#optional-extension-for-advanced-students",
-    "href": "eco_2028/eco notes/why_price_on_y_axis.html#optional-extension-for-advanced-students",
-    "title": "Why Are Price and Quantity Plotted This Way in Supply–Demand Diagrams?",
-    "section": "4 Optional extension for advanced students",
-    "text": "4 Optional extension for advanced students\nFor more advanced classes, you can:\n\nWrite demand as \\(Q_d = a - bP\\) and then derive the inverse demand \\(P = \\frac{a}{b} - \\frac{1}{b}Q\\).\nShow explicitly how the same line looks in both orientations.\nDiscuss how some research papers and advanced texts switch axes depending on what is most convenient for the analysis.\n\nThis helps students see that the choice of axes is a modelling and presentation choice, not a deep truth about the relationship."
+    "objectID": "eco_2028/eco notes/why-ped-changes.html#numerical-example",
+    "href": "eco_2028/eco notes/why-ped-changes.html#numerical-example",
+    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
+    "section": "Numerical Example",
+    "text": "Numerical Example\nConsider a simple linear demand function:\n\\[\nP = 100 - 2Q \\quad \\text{or} \\quad Q = 50 - 0.5P\n\\]\nHere, \\(\\frac{dQ}{dP} = -0.5\\) (constant).\nPED at any point:\n\\[\n\\text{PED} = \\frac{dQ}{dP} \\times \\frac{P}{Q} = -0.5 \\times \\frac{P}{Q}\n\\]\n\nPoint A: High price, low quantity (elastic region)\nLet \\(Q = 10\\):\n\n\\(P = 100 - 2(10) = 80\\)\n\\(\\text{PED} = -0.5 \\times \\frac{80}{10} = -0.5 \\times 8 = -4\\)\n\n\\(|\\text{PED}| = 4 &gt; 1\\) → elastic demand.\n\n\nPoint B: Midpoint (unitary elasticity)\nMidpoint in quantity terms: \\(Q = 25\\)\n\n\\(P = 100 - 2(25) = 50\\)\n\\(\\text{PED} = -0.5 \\times \\frac{50}{25} = -0.5 \\times 2 = -1\\)\n\n\\(|\\text{PED}| = 1\\) → unitary elastic.\n\n\nPoint C: Low price, high quantity (inelastic region)\nLet \\(Q = 40\\):\n\n\\(P = 100 - 2(40) = 20\\)\n\\(\\text{PED} = -0.5 \\times \\frac{20}{40} = -0.5 \\times 0.5 = -0.25\\)\n\n\\(|\\text{PED}| = 0.25 &lt; 1\\) → inelastic demand.\nSo along the same straight line:\n\nTop segment: \\(|\\text{PED}| &gt; 1\\) (elastic)\nMidpoint: \\(|\\text{PED}| = 1\\) (unitary)\nBottom segment: \\(|\\text{PED}| &lt; 1\\) (inelastic)"
+  },
+  {
+    "objectID": "eco_2028/eco notes/why-ped-changes.html#using-the-percentage-change-midpoint-formula-between-two-points",
+    "href": "eco_2028/eco notes/why-ped-changes.html#using-the-percentage-change-midpoint-formula-between-two-points",
+    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
+    "section": "Using the Percentage-Change (Midpoint) Formula Between Two Points",
+    "text": "Using the Percentage-Change (Midpoint) Formula Between Two Points\nYou can also see this by computing PED between pairs of points using the midpoint formula:\n\\[\n\\text{PED} = \\frac{\\%\\ \\Delta Q}{\\%\\ \\Delta P}\n= \\frac{\\frac{Q_2 - Q_1}{(Q_1 + Q_2)/2}}{\\frac{P_2 - P_1}{(P_1 + P_2)/2}}\n\\]\nUsing the same curve \\(P = 100 - 2Q\\):\n\nBetween upper points (elastic region)\nBetween \\((P_1, Q_1) = (80, 10)\\) and \\((P_2, Q_2) = (60, 20)\\):\n\\[\n\\%\\ \\Delta Q = \\frac{20 - 10}{(10 + 20)/2} = \\frac{10}{15} \\approx 0.667\n\\] \\[\n\\%\\ \\Delta P = \\frac{60 - 80}{(80 + 60)/2} = \\frac{-20}{70} \\approx -0.286\n\\] \\[\n\\text{PED} \\approx \\frac{0.667}{-0.286} \\approx -2.33 \\quad (\\text{elastic})\n\\]\n\n\nBetween lower points (inelastic region)\nBetween \\((P_1, Q_1) = (40, 30)\\) and \\((P_2, Q_2) = (20, 40)\\):\n\\[\n\\%\\ \\Delta Q = \\frac{40 - 30}{(30 + 40)/2} = \\frac{10}{35} \\approx 0.286\n\\] \\[\n\\%\\ \\Delta P = \\frac{20 - 40}{(40 + 20)/2} = \\frac{-20}{30} \\approx -0.667\n\\] \\[\n\\text{PED} \\approx \\frac{0.286}{-0.667} \\approx -0.43 \\quad (\\text{inelastic})\n\\]\nSame straight line, but elasticity falls as you move down and to the right."
+  },
+  {
+    "objectID": "eco_2028/eco notes/why-ped-changes.html#key-pattern-to-remember-for-exams",
+    "href": "eco_2028/eco notes/why-ped-changes.html#key-pattern-to-remember-for-exams",
+    "title": "Price Elasticity of Demand (PED) Along a Straight-Line Demand Curve",
+    "section": "Key Pattern to Remember (for Exams)",
+    "text": "Key Pattern to Remember (for Exams)\nOn a typical downward-sloping straight-line demand curve:\n\nUpper half: \\(|\\text{PED}| &gt; 1\\) → elastic\n\nMidpoint: \\(|\\text{PED}| = 1\\) → unitary\n\nLower half: \\(|\\text{PED}| &lt; 1\\) → inelastic\n\nAt the price-axis intercept (where \\(Q = 0\\)): \\(|\\text{PED}| \\to \\infty\\) (perfectly elastic in the limit)\n\nAt the quantity-axis intercept (where \\(P = 0\\)): \\(\\text{PED} = 0\\) (perfectly inelastic in the limit)\n\nThis is why total revenue behaves differently along the curve:\n\nIn the elastic region, a price decrease raises total revenue.\nIn the inelastic region, a price increase raises total revenue.\nMaximum total revenue occurs at the unitary-elastic midpoint."
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "",
+    "text": "Use these answers to diagnose gaps, not simply to copy. Equivalent wording is acceptable where the economic meaning is accurate. For diagram questions, the solution states what your diagram must show."
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-1",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-1",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 1",
+    "text": "Question 1\n\nPlot the six price-quantity combinations with price on the vertical axis. Join them with a downward-sloping curve labelled \\(D\\).\nThere is an inverse relationship: as price falls from $80 to $30, quantity demanded rises from 200 to 700 pairs.\nAt $55, estimated quantity demanded is 450 pairs.\nAt 450 pairs, estimated price is $55.\nTotal expenditure is calculated as \\(P \\times Q\\).\n\n\n\n\nPrice (\\() | Quantity | Total expenditure (\\))\n\n\n\n\n\n\n80\n200\n16,000\n\n\n70\n300\n21,000\n\n\n60\n400\n24,000\n\n\n50\n500\n25,000\n\n\n40\n600\n24,000\n\n\n30\n700\n21,000\n\n\n\n\nTotal expenditure is greatest at $50, when it equals $25,000.\nThese are estimates because the table gives discrete observations. The answer assumes a smooth, continuous linear relationship between the neighbouring points."
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-2",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-2",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 2",
+    "text": "Question 2\n\nPlot the six combinations with price on the vertical axis. Join them with an upward-sloping curve labelled \\(S\\).\nThere is a positive relationship: as price rises from $30 to $80, quantity supplied rises from 150 to 650 pairs.\nAt $55, estimated quantity supplied is 400 pairs.\nAt 500 pairs, estimated price is $65.\nA higher price normally increases expected revenue and profit incentives, making production worthwhile for more firms or units of output."
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-3",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-3",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 3",
+    "text": "Question 3\n\nEquilibrium is at $50 and 500 pairs: quantity demanded equals quantity supplied.\nAt $40: quantity demanded is 600; quantity supplied is 250. Excess demand is \\(600 - 250 = 350\\) pairs.\nAt $70: quantity demanded is 300; quantity supplied is 550. Excess supply is \\(550 - 300 = 250\\) pairs.\nExcess demand tends to push price upward as buyers compete for scarce units. Excess supply tends to push price downward as sellers try to clear unsold stock.\nAt equilibrium, total expenditure and total revenue are \\(50 \\times 500 = \\$25,000\\)."
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-1-smartphones-8-marks",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-1-smartphones-8-marks",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 1: Smartphones [8 marks]",
+    "text": "Question 1: Smartphones [8 marks]\n\nA normal good is a good for which demand increases when consumer income increases. [2]\nDiagram: demand shifts right from \\(D_1\\) to \\(D_2\\), with price on the vertical axis and quantity on the horizontal axis. Higher income raises consumers’ purchasing power; because smartphones are normal goods, more are demanded at every price. [3]\nMobile data plans complement smartphone use. Their lower price also raises demand for smartphones, so both changes shift demand right; the combined increase in demand is greater than either change alone. [3]"
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-2-rice-production-8-marks",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-2-rice-production-8-marks",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 2: Rice production [8 marks]",
+    "text": "Question 2: Rice production [8 marks]\n\nAny two: costs of production, technology/productivity, number of firms, weather, indirect taxes, subsidies, prices of other products. [2]\nDiagram: supply shifts left from \\(S_1\\) to \\(S_2\\). Fertiliser is an input; its higher price raises costs of production, so rice farmers supply less at each price. [3]\nRemoving the subsidy raises effective costs further. Both events reduce supply, so the supply curve shifts left by more; if demand is unchanged, equilibrium price rises and equilibrium quantity falls. [3]"
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-3-ride-hailing-services-10-marks",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-3-ride-hailing-services-10-marks",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 3: Ride-hailing services [10 marks]",
+    "text": "Question 3: Ride-hailing services [10 marks]\n\nThey are substitutes if consumers can switch between them to make similar journeys. A change in the price of bus travel affects demand for ride-hailing. [2]\nDiagram: demand for ride-hailing shifts right from \\(D_1\\) to \\(D_2\\), supply initially unchanged. Higher bus fares make ride-hailing relatively more attractive. In isolation, equilibrium price and quantity of ride-hailing rise. [4]\nMore licensed drivers expand productive capacity and competition, reducing costs or increasing the number of suppliers. Supply shifts right from \\(S_1\\) to \\(S_2\\); in isolation, equilibrium price falls and equilibrium quantity rises. [4]"
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-4-coffee-market-10-marks",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-4-coffee-market-10-marks",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 4: Coffee market [10 marks]",
+    "text": "Question 4: Coffee market [10 marks]\n\nHigher labour productivity lowers labour cost per unit of output, other things equal. [2]\nDiagram: coffee supply shifts right. Lower unit costs make growers willing and able to supply more at every price. [3]\nThe health report changes tastes against coffee, so demand shifts left. At each price, consumers demand less coffee. [3]\nSupply shifting right puts downward pressure on price; demand shifting left also puts downward pressure on price, so price falls. Both shifts reduce price, but each reduces or raises quantity in opposite directions: supply raises quantity while demand lowers it. Therefore the final quantity is uncertain. [2]"
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-1-12-marks",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-1-12-marks",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 1 [12 marks]",
+    "text": "Question 1 [12 marks]\nDiscuss whether an increase in consumer income will always increase demand for a product.\n\nDefine income and demand; state the ceteris paribus condition.\nExplain that higher income shifts demand right for normal goods because purchasing power rises.\nDraw a rightward demand shift for a normal good.\nExplain inferior goods: as income rises, consumers may switch from lower-quality products to superior alternatives, shifting demand left.\nExplain that the classification can vary between consumers and across income ranges.\nConsider other influences such as tastes, relative prices and expectations that may change simultaneously.\nJudgement: income growth often increases demand, but not always; the result depends particularly on the type of good and consumer circumstances."
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-2-12-marks",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-2-12-marks",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 2 [12 marks]",
+    "text": "Question 2 [12 marks]\nAnalyse the likely effects on the market for electric vehicles when petrol prices rise and battery-production costs fall.\n\nDefine substitutes and costs of production.\nHigher petrol prices make EVs relatively more attractive than petrol cars: EV demand shifts right.\nLower battery costs reduce EV production costs: EV supply shifts right.\nDiagram with both \\(D\\) and \\(S\\) shifting right.\nEquilibrium quantity definitely rises because both changes increase it.\nEffect on equilibrium price is uncertain: increased demand raises price, increased supply lowers it.\nExplain factors determining the final price, such as size of the shifts, capacity constraints and time period."
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-3-12-marks",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-3-12-marks",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 3 [12 marks]",
+    "text": "Question 3 [12 marks]\nDiscuss whether a government subsidy to producers will always benefit consumers.\n\nDefine subsidy and explain that it lowers effective production costs.\nDiagram: supply shifts right, leading in the standard model to lower equilibrium price and higher equilibrium quantity.\nConsumers may benefit through lower prices, greater availability and wider choice.\nQualify: producers may retain some or all of the benefit depending on market conditions; lower prices are not guaranteed to be large.\nConsider whether firms use the subsidy to cover losses, pay dividends or invest rather than lower prices.\nDiscuss cost to taxpayers and opportunity cost of public funds.\nJudgement: consumers often benefit, but the size and distribution of the benefit depend on market conditions and policy design."
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-4-12-marks",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-4-12-marks",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 4 [12 marks]",
+    "text": "Question 4 [12 marks]\nAnalyse how technological change may affect the supply of agricultural products. Consider possible limitations of the analysis.\n\nDefine supply and technology/productivity.\nExplain how improved machinery, irrigation, seeds, data systems or storage can raise output per input and lower unit costs.\nDiagram: supply shifts right, with lower equilibrium price and higher quantity if demand is unchanged.\nExplain possible short-run constraints: upfront capital costs, training, access to credit and infrastructure.\nConsider weather variability, environmental costs, uneven access by small farmers and labour displacement.\nNote that supply responsiveness depends on time periods and biological growing cycles.\nJudgement: technology can increase supply, but outcomes depend on adoption, conditions and wider social/environmental effects."
+  },
+  {
+    "objectID": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-5-12-marks",
+    "href": "eco_2028/eco notes/demand-supply-self-check-solutions.html#question-5-12-marks",
+    "title": "Solutions: Demand and Supply Curves Self-Check Exercises",
+    "section": "Question 5 [12 marks]",
+    "text": "Question 5 [12 marks]\nDiscuss the usefulness and limitations of demand and supply curves in explaining changes in a real-world market.\n\nDefine demand, supply and equilibrium.\nExplain usefulness: a clear framework for analysing price signals, shortages, surpluses, taxes, subsidies, cost changes and related-product prices.\nUse a diagram to show one demand or supply shift.\nExplain that the model isolates causes through the ceteris paribus assumption.\nLimitations: data on preferences, costs and planned quantities are difficult to observe; multiple determinants often change at the same time.\nCurves may not be stable, information is imperfect and markets may be regulated or affected by market power.\nJudgement: the framework is highly useful as a simplified analytical model, but conclusions must be applied cautiously to real markets."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html",
+    "href": "eco_2028/unit2-demand-supply-curves.html",
+    "title": "Demand and Supply Curves",
+    "section": "",
+    "text": "By the end of this chapter, you should be able to:\n\nexplain what economists mean by a market and the price mechanism;\ndefine effective demand and supply;\ndistinguish between individual and market demand or supply;\nexplain the determinants of demand and supply;\ninterpret demand and supply schedules and curves;\ndistinguish a movement along a curve from a shift of the curve;\nexplain how changes in non-price determinants shift demand or supply.\n\n\n\n\n\n\n\nThe central idea\n\n\n\nDemand describes the buying side of a market. Supply describes the selling side. Price changes normally cause movements along a curve; changes in other determinants cause the whole curve to shift."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#definition",
+    "href": "eco_2028/unit2-demand-supply-curves.html#definition",
+    "title": "Demand and Supply Curves",
+    "section": "Definition",
+    "text": "Definition\nDemand is the quantity of a product that buyers are willing and able to buy at different prices per period of time, ceteris paribus (other things remaining equal).\nEach part of this definition matters:\n\nQuantity: a numerical amount.\nProduct: a good, service, currency or financial asset being traded.\nWilling to buy: the buyer wants the product. This is called notional demand.\nAble to buy: the buyer has sufficient purchasing power. Notional demand backed by purchasing power becomes effective demand.\nDifferent prices: demand is examined at various possible prices.\nPer period of time: the time period must be stated, such as 500 units per week.\nCeteris paribus: other influences are held constant so that the relationship can be analysed clearly.\n\n\n\n\n\n\n\nRemember\n\n\n\nWanting a product is not enough to create effective demand. A buyer must also be able to pay for it."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#individual-and-market-demand",
+    "href": "eco_2028/unit2-demand-supply-curves.html#individual-and-market-demand",
+    "title": "Demand and Supply Curves",
+    "section": "Individual and market demand",
+    "text": "Individual and market demand\nAn individual demand curve shows the quantity one consumer is willing and able to buy at different prices. A market demand curve is the horizontal sum or aggregation of the demand curves of all consumers in the market."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#the-law-of-demand",
+    "href": "eco_2028/unit2-demand-supply-curves.html#the-law-of-demand",
+    "title": "Demand and Supply Curves",
+    "section": "The law of demand",
+    "text": "The law of demand\nAssuming other factors remain unchanged, price and quantity demanded have an inverse relationship:\n\nwhen price rises, quantity demanded falls;\nwhen price falls, quantity demanded rises.\n\nA demand curve is usually drawn downward sloping from left to right."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#demand-schedule-and-curve",
+    "href": "eco_2028/unit2-demand-supply-curves.html#demand-schedule-and-curve",
+    "title": "Demand and Supply Curves",
+    "section": "Demand schedule and curve",
+    "text": "Demand schedule and curve\nA demand schedule is a table showing quantities demanded at different prices. Plotting these combinations gives a demand curve.\nFor example:\n\n\n\nPrice of a standard PC ($)\nQuantity demanded per week\n\n\n\n\n2,000\n1,000\n\n\n1,800\n2,000\n\n\n1,600\n3,000\n\n\n1,400\n4,000\n\n\n1,200\n5,000\n\n\n1,000\n6,000\n\n\n800\n7,000\n\n\n\n\n\n\n\n\nxychart-beta\n  title \"Demand curve for a standard PC\"\n  x-axis \"Quantity demanded per week\" [1000, 2000, 3000, 4000, 5000, 6000, 7000]\n  y-axis \"Price ($)\" 0 --&gt; 2200\n  line [2000, 1800, 1600, 1400, 1200, 1000, 800]\n\n\n\n\n\n\nA demand curve shows a relationship that is usually:\n\ninverse or negative;\ncontinuous;\ntime-based;\nsubject to the ceteris paribus assumption.\n\n\nQuantity demanded versus demand\nThese terms must not be confused:\n\nQuantity demanded means a particular amount bought at a particular price.\nDemand means the entire relationship or demand schedule.\n\nA change in the product’s own price causes a change in quantity demanded, shown by movement along the existing demand curve. It does not, by itself, shift the demand curve."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#consumer-expenditure-and-firm-revenue",
+    "href": "eco_2028/unit2-demand-supply-curves.html#consumer-expenditure-and-firm-revenue",
+    "title": "Demand and Supply Curves",
+    "section": "Consumer expenditure and firm revenue",
+    "text": "Consumer expenditure and firm revenue\nTotal consumer expenditure, which is also the firm’s total revenue for the product, is:\n\\[\n\\text{Total expenditure} = \\text{price} \\times \\text{quantity bought}\n\\]\nFor example, if 2,000 PCs are bought at $1,800 each:\n\\[\n2,000 \\times 1,800 = \\$3,600,000\n\\]"
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#income",
+    "href": "eco_2028/unit2-demand-supply-curves.html#income",
+    "title": "Demand and Supply Curves",
+    "section": "Income",
+    "text": "Income\nFor most normal goods, income and demand have a positive relationship. When income rises, demand increases; when income falls, demand decreases. Examples include cars, housing, restaurant meals and quality clothing.\nFor an inferior good, income and demand have a negative relationship. As income rises, consumers buy less of the inferior good and switch towards preferred alternatives. Examples may include low-quality food or used clothing, although classification depends on the consumer and context."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#related-products",
+    "href": "eco_2028/unit2-demand-supply-curves.html#related-products",
+    "title": "Demand and Supply Curves",
+    "section": "Related products",
+    "text": "Related products\n\nSubstitutes\nSubstitutes are goods that satisfy a similar want or need. Examples include Coca-Cola and Pepsi, or two competing brands of chocolate bar.\nIf the price of a substitute rises, demand for the product may increase. If the price of a substitute falls, demand for the product may decrease. The strength of the effect depends on how close the substitutes are.\n\n\nComplements\nComplements are products consumed together because they jointly increase satisfaction. Examples include cars and petrol, cricket bats and balls, and computers and monitors.\nIf the price of a complement rises, demand for the product may fall. If the price of a complement falls, demand may increase."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#fashion-taste-and-attitudes",
+    "href": "eco_2028/unit2-demand-supply-curves.html#fashion-taste-and-attitudes",
+    "title": "Demand and Supply Curves",
+    "section": "Fashion, taste and attitudes",
+    "text": "Fashion, taste and attitudes\nConsumer preferences can be influenced by fashion, advertising, reviews, culture, social attitudes and personal experience. A favourable change increases demand; an unfavourable change decreases demand."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#definition-1",
+    "href": "eco_2028/unit2-demand-supply-curves.html#definition-1",
+    "title": "Demand and Supply Curves",
+    "section": "Definition",
+    "text": "Definition\nSupply is the quantity of a product that suppliers are willing and able to sell at different prices over a period of time, ceteris paribus.\nSupply refers to the selling side of the market. Suppliers may be manufacturers, retailers, service providers or other participants in a supply chain."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#individual-and-market-supply",
+    "href": "eco_2028/unit2-demand-supply-curves.html#individual-and-market-supply",
+    "title": "Demand and Supply Curves",
+    "section": "Individual and market supply",
+    "text": "Individual and market supply\nAn individual supply curve shows how much one firm plans to sell at different prices. A market supply curve is the sum of the supply curves of all firms in the market."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#the-law-of-supply",
+    "href": "eco_2028/unit2-demand-supply-curves.html#the-law-of-supply",
+    "title": "Demand and Supply Curves",
+    "section": "The law of supply",
+    "text": "The law of supply\nAssuming other factors remain unchanged, price and quantity supplied have a positive or direct relationship:\n\nwhen price rises, quantity supplied generally rises;\nwhen price falls, quantity supplied generally falls.\n\nA supply curve is usually upward sloping from left to right because a higher price can make production more profitable."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#supply-schedule-and-curve",
+    "href": "eco_2028/unit2-demand-supply-curves.html#supply-schedule-and-curve",
+    "title": "Demand and Supply Curves",
+    "section": "Supply schedule and curve",
+    "text": "Supply schedule and curve\n\n\n\nPrice of a standard PC ($)\nQuantity supplied per week\n\n\n\n\n800\n1,000\n\n\n1,000\n2,000\n\n\n1,200\n3,000\n\n\n1,400\n4,000\n\n\n1,600\n5,000\n\n\n1,800\n6,000\n\n\n2,000\n7,000\n\n\n\n\n\n\n\n\nxychart-beta\n  title \"Supply curve for a standard PC\"\n  x-axis \"Quantity supplied per week\" [1000, 2000, 3000, 4000, 5000, 6000, 7000]\n  y-axis \"Price ($)\" 0 --&gt; 2200\n  line [800, 1000, 1200, 1400, 1600, 1800, 2000]\n\n\n\n\n\n\nA supply curve shows a relationship that is usually:\n\npositive or direct;\ncontinuous;\ntime-based;\nsubject to the ceteris paribus assumption.\n\nA change in the product’s own price causes a movement along the existing supply curve and changes quantity supplied. It does not, by itself, shift the supply curve."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#costs-of-production",
+    "href": "eco_2028/unit2-demand-supply-curves.html#costs-of-production",
+    "title": "Demand and Supply Curves",
+    "section": "Costs of production",
+    "text": "Costs of production\nSupply decisions are strongly influenced by production and distribution costs. Important costs may include:\n\nwages and other labour costs;\nenergy and raw materials;\ntransport and storage;\nmachinery and technology;\nworker productivity.\n\nA fall in costs usually increases supply. A rise in costs usually decreases supply."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#size-and-nature-of-the-industry",
+    "href": "eco_2028/unit2-demand-supply-curves.html#size-and-nature-of-the-industry",
+    "title": "Demand and Supply Curves",
+    "section": "Size and nature of the industry",
+    "text": "Size and nature of the industry\nGrowth in an industry may attract new firms and increase market supply. Increased competition may reduce prices. If firms leave the industry, market supply may fall."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#prices-of-other-products",
+    "href": "eco_2028/unit2-demand-supply-curves.html#prices-of-other-products",
+    "title": "Demand and Supply Curves",
+    "section": "Prices of other products",
+    "text": "Prices of other products\nFirms compare the profitability of different products. If a competitor raises its price, another firm may supply more of its own product. If a competitor lowers its price, the firm may reduce its supply, especially if its own costs remain unchanged."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#government-policy",
+    "href": "eco_2028/unit2-demand-supply-curves.html#government-policy",
+    "title": "Demand and Supply Curves",
+    "section": "Government policy",
+    "text": "Government policy\n\nAn indirect tax raises firms’ costs and usually decreases supply.\nA subsidy lowers effective costs and usually increases supply.\nRegulations may increase costs and reduce supply, depending on their design."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#other-factors",
+    "href": "eco_2028/unit2-demand-supply-curves.html#other-factors",
+    "title": "Demand and Supply Curves",
+    "section": "Other factors",
+    "text": "Other factors\nWeather, natural conditions, disruptions, technology and unexpected events can affect supply. These influences are especially important in agriculture, where drought, frost or storms may reduce output."
+  },
+  {
+    "objectID": "eco_2028/unit2-demand-supply-curves.html#worked-examples",
+    "href": "eco_2028/unit2-demand-supply-curves.html#worked-examples",
+    "title": "Demand and Supply Curves",
+    "section": "Worked examples",
+    "text": "Worked examples\n\nExample 1: Price change\nThe price of a smartphone falls. Other factors remain unchanged. Consumers buy more smartphones. This is an extension of demand, or an increase in quantity demanded, shown by movement down the existing demand curve.\n\n\nExample 2: Substitute price change\nThe price of iced tea rises. Cola becomes relatively more attractive, so demand for cola increases. The demand curve for cola shifts right.\n\n\nExample 3: Production cost change\nWages paid by smartphone producers rise. Production becomes more expensive, so firms supply less at every possible price. The supply curve shifts left."
   },
   {
     "objectID": "books/translated-story-books/akaasamlo/index.html",
@@ -2511,6 +2707,209 @@
     "title": "బట్టలు ఉతికే రోజు",
     "section": "",
     "text": "అది మేరీకి రోజులో చాలా ఇష్టమైన సమయం - బట్టలు ఉతికే సమయం! మేరీ, ఆమె చుట్టుపక్కల వాళ్ళూ చక్కగా, శుభ్రంగా బట్టలు ఉతుక్కునే రోజున వాళ్ళని కలుద్దాం పదండి!\nఈ పుస్తకాన్ని ఇక్కడ చదవండి"
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html",
+    "href": "grade_6_math_2026/types-of-numbers.html",
+    "title": "Types of Numbers",
+    "section": "",
+    "text": "Teacher: Today we will not begin by memorising a list of names. Instead, we will ask a more interesting question: Why did people need different types of numbers?\nStudent: I already know numbers, fractions, and decimals.\nTeacher: Good. We will use what you already know. We will gradually enlarge our collection of numbers whenever an earlier collection is not enough for a new situation.\n\nThe main idea is this:\n\nWe begin with counting. Then we add zero. Then we add numbers less than zero. Finally, we allow numbers between consecutive whole numbers.\n\nThese collections are called natural numbers, whole numbers, integers, and rational numbers."
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html#a-conversation-about-numbers",
+    "href": "grade_6_math_2026/types-of-numbers.html#a-conversation-about-numbers",
+    "title": "Types of Numbers",
+    "section": "",
+    "text": "Teacher: Today we will not begin by memorising a list of names. Instead, we will ask a more interesting question: Why did people need different types of numbers?\nStudent: I already know numbers, fractions, and decimals.\nTeacher: Good. We will use what you already know. We will gradually enlarge our collection of numbers whenever an earlier collection is not enough for a new situation.\n\nThe main idea is this:\n\nWe begin with counting. Then we add zero. Then we add numbers less than zero. Finally, we allow numbers between consecutive whole numbers.\n\nThese collections are called natural numbers, whole numbers, integers, and rational numbers."
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html#starting-with-counting",
+    "href": "grade_6_math_2026/types-of-numbers.html#starting-with-counting",
+    "title": "Types of Numbers",
+    "section": "2 Starting with counting",
+    "text": "2 Starting with counting\n\nTeacher: Imagine that I ask you to count the children in a classroom. What numbers might you say?\nStudent: 1, 2, 3, 4, 5, and so on.\nTeacher: Exactly. These are the numbers we use when we count objects. We call them natural numbers.\n\nIn this lesson, we use the convention\n\\[\n\\mathbb{N}=\\{1,2,3,4,5,\\ldots\\}.\n\\]\nA number such as 4 tells us that there are four objects. We can show these numbers on a number line:\n\n\n\n\n\n\n\n\n\n\nTeacher: Notice something important. We are not marking every possible point on the line. We are marking only the counting numbers.\nStudent: So there is no natural number between 1 and 2?\nTeacher: Correct. In our discussion of natural numbers, 1 and 2 are consecutive natural numbers. The natural numbers do not include numbers such as \\(1\\frac12\\), \\(\\frac32\\), or 1.7.\n\nThis does not mean that the points between 1 and 2 do not exist. It means only that those points are not included in the set of natural numbers."
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html#why-do-we-need-zero",
+    "href": "grade_6_math_2026/types-of-numbers.html#why-do-we-need-zero",
+    "title": "Types of Numbers",
+    "section": "3 Why do we need zero?",
+    "text": "3 Why do we need zero?\n\nTeacher: Suppose there are five books on a table. Which number describes the collection?\nStudent: 5.\nTeacher: What if I remove all the books?\nStudent: Then there are no books.\nTeacher: We need a number to describe that situation. That number is zero.\n\nZero is useful when we need to describe an empty collection, no objects, or a starting point. When we include zero with the natural numbers, we get the whole numbers:\n\\[\n\\mathbb{W}=\\{0,1,2,3,4,5,\\ldots\\}.\n\\]\n\n\n\n\n\n\n\n\n\n\nStudent: So every natural number is a whole number, but zero is a whole number that is not natural.\nTeacher: Exactly. We can write that as\n\\[\n\\mathbb{N}\\subset\\mathbb{W}.\n\\]\nThe symbol \\(\\subset\\) means “is contained in”. The whole-number collection contains all the natural numbers and adds zero."
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html#why-do-we-need-negative-numbers",
+    "href": "grade_6_math_2026/types-of-numbers.html#why-do-we-need-negative-numbers",
+    "title": "Types of Numbers",
+    "section": "4 Why do we need negative numbers?",
+    "text": "4 Why do we need negative numbers?\n\nTeacher: Now imagine that the temperature is 3 degrees above zero. We can write \\(+3\\), or simply 3. What if the temperature is 3 degrees below zero?\nStudent: We need \\(-3\\).\nTeacher: Right. Negative numbers are useful for temperatures below zero, floors below ground level, debts, and movement in the opposite direction.\n\nWhole numbers alone cannot describe these situations. We therefore extend the number line to the left of zero:\n\n\n\n\n\n\n\n\n\nThe integers are\n\\[\n\\mathbb{Z}=\\{\\ldots,-3,-2,-1,0,1,2,3,\\ldots\\}.\n\\]\n\nTeacher: What do you notice about the integers on this number line?\nStudent: They are still spaced one unit apart. There is no integer between 0 and 1, or between 1 and 2.\nTeacher: Exactly. We have added numbers to the left of zero, but we have not yet filled the gaps between the marked points.\n\nThis is the meaning of full numbers in our discussion: integers occupy the regularly spaced marked positions. For example, 1 and 2 are consecutive integers. Numbers such as \\(\\frac32\\), 1.5, and 1.9 are not integers.\nWe can now see the nesting:\n\\[\n\\mathbb{N}\\subset\\mathbb{W}\\subset\\mathbb{Z}.\n\\]\nEvery natural number is whole, and every whole number is an integer."
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html#a-possible-confusion",
+    "href": "grade_6_math_2026/types-of-numbers.html#a-possible-confusion",
+    "title": "Types of Numbers",
+    "section": "5 A possible confusion",
+    "text": "5 A possible confusion\n\nStudent: But fractions and decimals are also on the number line. If \\(\\frac12\\) is on the number line, is it a natural number or an integer?\nTeacher: Being on the number line is not enough to tell us which set a number belongs to. The number line can represent many different sets. We must ask whether the particular number is included in the set we are discussing.\n\nFor instance:\n\n\\(2\\) is a natural number, whole number, and integer.\n\\(0\\) is a whole number and integer, but not a natural number under our convention.\n\\(-2\\) is an integer, but not a whole number or natural number.\n\\(\\frac12\\) is not a natural number, whole number, or integer.\n\nThe number line is like a map. A map may show many roads, but a particular journey may use only some of them. Similarly, a number line may show many possible locations, while a number set includes only selected locations."
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html#why-do-we-need-fractions",
+    "href": "grade_6_math_2026/types-of-numbers.html#why-do-we-need-fractions",
+    "title": "Types of Numbers",
+    "section": "6 Why do we need fractions?",
+    "text": "6 Why do we need fractions?\n\nTeacher: Suppose two children share one apple equally. Can each child receive a whole number of apples?\nStudent: No. Each child gets half an apple.\nTeacher: So we need a number between 0 and 1. That number is \\(\\frac12\\).\n\nNow suppose we want to describe one and a half metres, or \\(2\\frac14\\) litres. Integers are not enough because they leave gaps between consecutive integers. Fractions allow us to describe points in those gaps.\n\n\n\n\n\n\n\n\n\n\nStudent: Between 1 and 2, I can place \\(\\frac54\\), \\(\\frac32\\), and \\(\\frac74\\).\nTeacher: Yes. We have divided the unit interval into equal parts. If we divide it into four equal parts, the points are \\(1\\frac14\\), \\(1\\frac12\\), and \\(1\\frac34\\) between 1 and 2."
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html#rational-numbers",
+    "href": "grade_6_math_2026/types-of-numbers.html#rational-numbers",
+    "title": "Types of Numbers",
+    "section": "7 Rational numbers",
+    "text": "7 Rational numbers\nA rational number is a number that can be written in the form\n\\[\n\\frac{p}{q},\n\\]\nwhere \\(p\\) and \\(q\\) are integers and \\(q\\neq0\\).\nExamples include\n\\[\n\\frac12,\\quad -\\frac34,\\quad 5=\\frac51,\\quad 0=\\frac01,\n\\]\nand terminating or repeating decimals such as\n\\[\n0.5=\\frac12,\\qquad 1.25=\\frac54,\\qquad 0.333\\ldots=\\frac13.\n\\]\n\nStudent: So whole numbers and integers are also rational numbers because they can be written over 1.\nTeacher: Exactly. For example, \\(-3=-\\frac31\\) and \\(7=\\frac71\\). Therefore,\n\\[\n\\mathbb{N}\\subset\\mathbb{W}\\subset\\mathbb{Z}\\subset\\mathbb{Q},\n\\]\nwhere \\(\\mathbb{Q}\\) represents the rational numbers.\n\nThe rational numbers include the integers and also many numbers between them:\n\n\n\n\n\n\n\n\n\nThere are still infinitely many rational numbers between any two different integers. Between 0 and 1, for example, we can find \\(\\frac12\\), \\(\\frac13\\), \\(\\frac14\\), \\(\\frac{99}{100}\\), and many more."
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html#what-about-decimals",
+    "href": "grade_6_math_2026/types-of-numbers.html#what-about-decimals",
+    "title": "Types of Numbers",
+    "section": "8 What about decimals?",
+    "text": "8 What about decimals?\n\nStudent: Are decimals different from fractions?\nTeacher: Some decimals are another way of writing fractions. A decimal tells us how a unit has been divided into tenths, hundredths, thousandths, and so on.\n\nFor example,\n\\[\n0.4=\\frac4{10}=\\frac25,\n\\qquad\n1.25=\\frac{125}{100}=\\frac54.\n\\]\nA terminating decimal is rational. A repeating decimal is also rational:\n\\[\n0.666\\ldots=\\frac23.\n\\]\nHowever, not every decimal is rational. Some decimals continue forever without repeating a pattern, such as the decimal representation of \\(\\sqrt2\\). That idea belongs to a later discussion of irrational numbers. For now, the important point is that fractions and many familiar decimals add points between the integers."
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html#the-complete-chain",
+    "href": "grade_6_math_2026/types-of-numbers.html#the-complete-chain",
+    "title": "Types of Numbers",
+    "section": "9 The complete chain",
+    "text": "9 The complete chain\nWe can now tell the story in one line:\n\n\n\n\n\n\n\n\n\nThe inclusions are\n\\[\n\\boxed{\\mathbb{N}\\subset\\mathbb{W}\\subset\\mathbb{Z}\\subset\\mathbb{Q}}.\n\\]\nThe thinking behind the chain is more important than memorising the symbols:\n\nNatural numbers: We need numbers for counting.\nWhole numbers: We need zero to describe none or an empty collection.\nIntegers: We need negative numbers for quantities below zero or in the opposite direction.\nRational numbers: We need fractions and suitable decimals to describe parts of a whole and points between integers."
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html#check-your-understanding",
+    "href": "grade_6_math_2026/types-of-numbers.html#check-your-understanding",
+    "title": "Types of Numbers",
+    "section": "10 Check your understanding",
+    "text": "10 Check your understanding\n\n10.1 Question 1\nIs 0 a natural number?\n\nThink aloud: In this lesson, natural numbers begin at 1. Zero was added to create the whole numbers. Therefore, 0 is a whole number, but not a natural number under our chosen convention.\n\n\n\n10.2 Question 2\nIs \\(-4\\) a whole number?\n\nThink aloud: Whole numbers begin at 0 and move to the right: \\(0,1,2,3,\\ldots\\). Since \\(-4\\) lies to the left of zero, it is not a whole number. It is an integer.\n\n\n\n10.3 Question 3\nIs \\(\\frac32\\) an integer?\n\nThink aloud: \\(\\frac32=1.5\\), which lies between 1 and 2. There is no integer between 1 and 2. Therefore, \\(\\frac32\\) is rational but not an integer.\n\n\n\n10.4 Question 4\nIs 6 rational?\n\nThink aloud: Any integer can be written with denominator 1. Since \\(6=\\frac61\\), 6 is rational.\n\n\n\n10.5 Question 5\nWhich sets contain \\(-2\\)?\n\nThink aloud: \\(-2\\) is not natural or whole because those sets do not include negative numbers. It is an integer, and it is rational because \\(-2=-\\frac21\\)."
+  },
+  {
+    "objectID": "grade_6_math_2026/types-of-numbers.html#a-final-conversation",
+    "href": "grade_6_math_2026/types-of-numbers.html#a-final-conversation",
+    "title": "Types of Numbers",
+    "section": "11 A final conversation",
+    "text": "11 A final conversation\n\nStudent: I think I understand now. The different names are not saying that the number line changes. They tell us which points we have decided to include.\nTeacher: Exactly. We begin with a small collection and enlarge it when we need new kinds of numbers. Natural numbers are enough for counting. Whole numbers add zero. Integers add negative numbers. Rational numbers add fractions and many decimals between the integers.\nStudent: And a number can belong to more than one collection.\nTeacher: Yes. For example, 3 is natural, whole, integer, and rational. But \\(\\frac12\\) is rational without being natural, whole, or integer.\n\nThe most useful picture is therefore not a collection of unrelated definitions, but a sequence of questions:\n\nWhat can I describe with the numbers I have? What new situation forces me to add another kind of number?\n\nThat question turns number classification into a story of mathematical need."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html",
+    "href": "grade_6_math_2026/properties-of-number-sets.html",
+    "title": "Properties of Number Sets",
+    "section": "",
+    "text": "Teacher: We have already built three number sets: natural numbers, whole numbers, and integers. Today we will ask a new question: What happens when we perform operations on numbers from a set?\nStudent: You mean addition, subtraction, multiplication, and division?\nTeacher: Exactly. We will investigate whether the answer always remains in the same set, whether changing the order changes the answer, and whether regrouping changes the answer.\n\nThe number sets in this lesson are:\n\\[\n\\mathbb{N}=\\{1,2,3,4,\\ldots\\}\n\\]\n\\[\n\\mathbb{W}=\\{0,1,2,3,4,\\ldots\\}\n\\]\n\\[\n\\mathbb{Z}=\\{\\ldots,-3,-2,-1,0,1,2,3,\\ldots\\}\n\\]\nWe will use the four basic operations:\n\nAddition: \\(+\\)\nSubtraction: \\(-\\)\nMultiplication: \\(\\times\\)\nDivision: \\(\\div\\)\n\nThroughout this note, we use the convention that natural numbers begin with 1."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#beginning-with-a-question",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#beginning-with-a-question",
+    "title": "Properties of Number Sets",
+    "section": "",
+    "text": "Teacher: We have already built three number sets: natural numbers, whole numbers, and integers. Today we will ask a new question: What happens when we perform operations on numbers from a set?\nStudent: You mean addition, subtraction, multiplication, and division?\nTeacher: Exactly. We will investigate whether the answer always remains in the same set, whether changing the order changes the answer, and whether regrouping changes the answer.\n\nThe number sets in this lesson are:\n\\[\n\\mathbb{N}=\\{1,2,3,4,\\ldots\\}\n\\]\n\\[\n\\mathbb{W}=\\{0,1,2,3,4,\\ldots\\}\n\\]\n\\[\n\\mathbb{Z}=\\{\\ldots,-3,-2,-1,0,1,2,3,\\ldots\\}\n\\]\nWe will use the four basic operations:\n\nAddition: \\(+\\)\nSubtraction: \\(-\\)\nMultiplication: \\(\\times\\)\nDivision: \\(\\div\\)\n\nThroughout this note, we use the convention that natural numbers begin with 1."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#closure-staying-inside-the-set",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#closure-staying-inside-the-set",
+    "title": "Properties of Number Sets",
+    "section": "2 Closure: staying inside the set",
+    "text": "2 Closure: staying inside the set\n\nTeacher: Imagine that a set is a classroom. If I choose two students from the classroom and perform an operation on their numbers, what would it mean for the classroom to be closed under that operation?\nStudent: Perhaps the answer must also be a student in the same classroom?\nTeacher: That is a useful way to think about it. A set is closed under an operation if applying that operation to members of the set always produces another member of the same set.\n\nFor a set \\(S\\) and an operation \\(*\\), closure means:\n\\[\n\\text{if }a\\in S\\text{ and }b\\in S,\\text{ then }a*b\\in S.\n\\]\nThe important word is always. One successful example is not enough to prove closure. To show that a set is not closed, one counterexample is enough.\n\n2.1 Addition and natural numbers\n\nTeacher: Let us begin with natural numbers. What happens when we add two natural numbers?\nStudent: For example, \\(2+5=7\\). The answer is still natural.\nTeacher: Can you think of two natural numbers whose sum is not natural?\nStudent: No. Adding positive counting numbers always gives another positive counting number.\n\nTherefore, the natural numbers are closed under addition:\n\\[\na,b\\in\\mathbb{N}\\implies a+b\\in\\mathbb{N}.\n\\]\nExamples:\n\\[\n1+4=5,\\qquad 8+6=14,\\qquad 100+25=125.\n\\]\n\n\n2.2 Multiplication and natural numbers\n\nTeacher: What about multiplication?\nStudent: A natural number multiplied by another natural number gives a natural number. For example, \\(3\\times4=12\\).\nTeacher: Correct. Natural numbers are also closed under multiplication.\n\n\\[\na,b\\in\\mathbb{N}\\implies ab\\in\\mathbb{N}.\n\\]\n\n\n2.3 Subtraction and natural numbers\n\nTeacher: Now let us try subtraction. Is \\(7-3\\) natural?\nStudent: Yes, it is 4.\nTeacher: Is \\(3-7\\) natural?\nStudent: No. It is \\(-4\\), which is not a natural number.\nTeacher: Therefore, what can we conclude?\nStudent: Natural numbers are not closed under subtraction.\n\nOne counterexample is sufficient:\n\\[\n3,7\\in\\mathbb{N},\\qquad 3-7=-4\\notin\\mathbb{N}.\n\\]\nThe problem is that subtraction can move us to the left of zero, while natural numbers contain only positive counting numbers.\n\n\n2.4 Division and natural numbers\n\nTeacher: Let us try division. Is \\(8\\div2\\) natural?\nStudent: Yes, it is 4.\nTeacher: Is \\(2\\div8\\) natural?\nStudent: No. It is \\(\\frac14\\), which is not a natural number.\nTeacher: So natural numbers are not closed under division.\n\n\\[\n2,8\\in\\mathbb{N},\\qquad 2\\div8=\\frac14\\notin\\mathbb{N}.\n\\]\nDivision can produce a fraction, and natural numbers do not include fractions."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#closure-of-the-whole-numbers",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#closure-of-the-whole-numbers",
+    "title": "Properties of Number Sets",
+    "section": "3 Closure of the whole numbers",
+    "text": "3 Closure of the whole numbers\n\nTeacher: Whole numbers include zero as well as the natural numbers. Does adding zero change the closure results?\nStudent: Let me check operation by operation.\n\n\n3.1 Addition and multiplication\nWhole numbers are closed under addition:\n\\[\n0+5=5,\\qquad 6+3=9.\n\\]\nThey are also closed under multiplication:\n\\[\n0\\times8=0,\\qquad 4\\times7=28.\n\\]\nIn general,\n\\[\na,b\\in\\mathbb{W}\\implies a+b\\in\\mathbb{W}\\text{ and }ab\\in\\mathbb{W}.\n\\]\n\n\n3.2 Subtraction\n\nTeacher: Is the set of whole numbers closed under subtraction?\nStudent: \\(2-5=-3\\), and \\(-3\\) is not a whole number. So no.\n\n\\[\n2,5\\in\\mathbb{W},\\qquad 2-5=-3\\notin\\mathbb{W}.\n\\]\n\n\n3.3 Division\n\nStudent: Whole numbers are not closed under division either, because \\(3\\div2=\\frac32\\) is not a whole number.\n\n\\[\n3,2\\in\\mathbb{W},\\qquad 3\\div2=\\frac32\\notin\\mathbb{W}.\n\\]\nAdding zero makes the set larger, but it does not add negative numbers or fractions. Therefore, the closure table for whole numbers is the same as for natural numbers."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#closure-of-the-integers",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#closure-of-the-integers",
+    "title": "Properties of Number Sets",
+    "section": "4 Closure of the integers",
+    "text": "4 Closure of the integers\n\nTeacher: Integers include negative numbers, so subtraction may work better. Let us test all four operations.\n\n\n4.1 Addition, subtraction, and multiplication\nIntegers are closed under addition:\n\\[\n-4+7=3,\\qquad -5+(-2)=-7.\n\\]\nThey are closed under subtraction:\n\\[\n3-8=-5,\\qquad -2-(-6)=4.\n\\]\nThey are closed under multiplication:\n\\[\n(-3)\\times4=-12,\\qquad (-2)\\times(-5)=10.\n\\]\n\nStudent: In each case, the answer is still an integer.\nTeacher: Yes. Adding, subtracting, or multiplying integers never creates a fraction.\n\n\n\n4.2 Division\n\nTeacher: Is division always safe for integers?\nStudent: \\(8\\div2=4\\) is an integer, but \\(2\\div8=\\frac14\\) is not.\nTeacher: Therefore, integers are not closed under division.\n\n\\[\n2,8\\in\\mathbb{Z},\\qquad 2\\div8=\\frac14\\notin\\mathbb{Z}.\n\\]"
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#closure-table",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#closure-table",
+    "title": "Properties of Number Sets",
+    "section": "5 Closure table",
+    "text": "5 Closure table\nThe results can be organised as follows.\n\n\n\nNumber set\nAddition\nSubtraction\nMultiplication\nDivision\n\n\n\n\nNatural numbers \\(\\mathbb{N}\\)\nYes\nNo\nYes\nNo\n\n\nWhole numbers \\(\\mathbb{W}\\)\nYes\nNo\nYes\nNo\n\n\nIntegers \\(\\mathbb{Z}\\)\nYes\nYes\nYes\nNo\n\n\n\n\nTeacher: What pattern do you see?\nStudent: Moving from natural numbers to whole numbers fixes the need for zero, but not negative answers or fractions. Moving to integers fixes subtraction, but division can still produce fractions.\n\nClosure depends on both the set and the operation. We should never say simply, “This set is closed.” We should say, for example, “The integers are closed under subtraction” or “The whole numbers are not closed under division.”"
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#commutative-property-does-order-matter",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#commutative-property-does-order-matter",
+    "title": "Properties of Number Sets",
+    "section": "6 Commutative property: does order matter?",
+    "text": "6 Commutative property: does order matter?\n\nTeacher: Closure asked whether we stay in the set. Now we will ask a different question: Does changing the order change the answer?\nStudent: For addition, \\(3+5\\) and \\(5+3\\) both equal 8.\nTeacher: Exactly. This is the commutative property.\n\nAn operation is commutative when changing the order of the two numbers does not change the result:\n\\[\na*b=b*a.\n\\]\n\n6.1 Addition is commutative\nAddition is commutative for natural numbers, whole numbers, and integers.\n\\[\n4+7=7+4=11\n\\]\n\\[\n-3+8=8+(-3)=5\n\\]\n\n\n6.2 Multiplication is commutative\nMultiplication is also commutative for all three sets:\n\\[\n3\\times5=5\\times3=15\n\\]\n\\[\n(-2)\\times6=6\\times(-2)=-12\n\\]\nThe numbers may be negative, but changing their order does not change the product.\n\n\n6.3 Subtraction is not commutative\n\nTeacher: Does the same idea work for subtraction?\nStudent: \\(9-4=5\\), but \\(4-9=-5\\). The answers are different.\nTeacher: So subtraction is not commutative.\n\n\\[\n9-4\\neq4-9.\n\\]\nThe order matters because subtraction tells us to start with the first number and take away the second.\n\n\n6.4 Division is not commutative\nDivision is not commutative either:\n\\[\n12\\div3=4,\n\\qquad\n3\\div12=\\frac14.\n\\]\nThus,\n\\[\na\\div b\\neq b\\div a\n\\]\nin general, whenever both divisions are defined."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#associative-property-does-grouping-matter",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#associative-property-does-grouping-matter",
+    "title": "Properties of Number Sets",
+    "section": "7 Associative property: does grouping matter?",
+    "text": "7 Associative property: does grouping matter?\n\nTeacher: We have changed the order of two numbers. Now let us keep the order the same but change the grouping of three numbers.\nStudent: What does changing the grouping mean?\nTeacher: Compare these two expressions:\n\\[\n(2+3)+4\n\\]\nand\n\\[\n2+(3+4).\n\\]\nThe order is still 2, then 3, then 4. Only the brackets have moved.\n\nAn operation is associative when changing the grouping does not change the answer:\n\\[\n(a*b)*c=a*(b*c).\n\\]\nThe brackets tell us which operation is performed first.\n\n7.1 Addition is associative\nAddition is associative for natural numbers, whole numbers, and integers.\n\\[\n(2+3)+4=5+4=9\n\\]\n\\[\n2+(3+4)=2+7=9\n\\]\nTherefore,\n\\[\n(2+3)+4=2+(3+4).\n\\]\nThis remains true when negative integers are used:\n\\[\n((-5)+2)+7=-3+7=4\n\\]\n\\[\n(-5)+(2+7)=-5+9=4.\n\\]\n\n\n7.2 Multiplication is associative\nMultiplication is associative for all three number sets:\n\\[\n(2\\times3)\\times4=6\\times4=24\n\\]\n\\[\n2\\times(3\\times4)=2\\times12=24.\n\\]\nFor integers,\n\\[\n((-2)\\times3)\\times4=-6\\times4=-24\n\\]\n\\[\n(-2)\\times(3\\times4)=(-2)\\times12=-24.\n\\]\n\n\n7.3 Subtraction is not associative\n\nTeacher: Let us test subtraction.\nStudent:\n\\[\n(10-6)-2=4-2=2\n\\]\nbut\n\\[\n10-(6-2)=10-4=6.\n\\]\nThe answers are different.\n\nTherefore, subtraction is not associative:\n\\[\n(10-6)-2\\neq10-(6-2).\n\\]\n\n\n7.4 Division is not associative\nDivision is not associative either:\n\\[\n(24\\div6)\\div2=4\\div2=2\n\\]\nbut\n\\[\n24\\div(6\\div2)=24\\div3=8.\n\\]\nThus,\n\\[\n(24\\div6)\\div2\\neq24\\div(6\\div2).\n\\]"
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#property-table",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#property-table",
+    "title": "Properties of Number Sets",
+    "section": "8 Property table",
+    "text": "8 Property table\nFor natural numbers, whole numbers, and integers, the commutative and associative results are the same wherever the operation is defined.\n\n\n\nOperation\nCommutative?\nAssociative?\n\n\n\n\nAddition\nYes\nYes\n\n\nSubtraction\nNo\nNo\n\n\nMultiplication\nYes\nYes\n\n\nDivision\nNo\nNo\n\n\n\n\nTeacher: Can we use the word “associative” for two numbers?\nStudent: No. Associativity concerns the grouping of three numbers, while commutativity concerns changing the order of two numbers.\n\nThat distinction is important:\n\nCommutative: change the order: \\(a+b\\) versus \\(b+a\\).\nAssociative: change the grouping: \\((a+b)+c\\) versus \\(a+(b+c)\\)."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#additive-identity-adding-nothing",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#additive-identity-adding-nothing",
+    "title": "Properties of Number Sets",
+    "section": "9 Additive identity: adding nothing",
+    "text": "9 Additive identity: adding nothing\n\nTeacher: We now turn to addition. Is there a number that we can add without changing a number?\nStudent: Adding zero does that. For example, \\(7+0=7\\).\nTeacher: Correct. Zero is called the additive identity.\n\nA number \\(e\\) is an additive identity for a set if adding it to any number in the set leaves that number unchanged:\n\\[\na+e=a=e+a.\n\\]\nFor ordinary number systems, the additive identity is \\(0\\).\n\\[\na+0=a=0+a.\n\\]\n\n9.1 Which sets contain the additive identity?\n\nNatural numbers do not contain 0 under our convention. Therefore, the natural numbers do not contain their additive identity.\nWhole numbers contain 0. Therefore, the whole numbers contain their additive identity.\nIntegers contain 0. Therefore, the integers contain their additive identity.\n\n\nStudent: Natural numbers can still be added to zero, but zero is not a member of the natural-number set.\nTeacher: Exactly. The identity exists in the larger number system, but it is not included in \\(\\mathbb{N}\\) as we have defined it."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#additive-inverse-cancelling-a-number",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#additive-inverse-cancelling-a-number",
+    "title": "Properties of Number Sets",
+    "section": "10 Additive inverse: cancelling a number",
+    "text": "10 Additive inverse: cancelling a number\n\nTeacher: Now let us ask a different question. What number can we add to 5 to get back to zero?\nStudent: \\(-5\\), because \\(5+(-5)=0\\).\nTeacher: Good. \\(-5\\) is the additive inverse of 5.\n\nThe additive inverse of a number \\(a\\) is the number \\(-a\\) such that\n\\[\na+(-a)=0.\n\\]\nExamples:\n\\[\n7+(-7)=0,\n\\]\n\\[\n-3+3=0,\n\\]\n\\[\n0+0=0.\n\\]\nThe additive inverse changes the direction of a number on the number line. The numbers \\(a\\) and \\(-a\\) are the same distance from zero but lie on opposite sides."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#additive-inverses-in-the-three-sets",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#additive-inverses-in-the-three-sets",
+    "title": "Properties of Number Sets",
+    "section": "11 Additive inverses in the three sets",
+    "text": "11 Additive inverses in the three sets\n\n11.1 Natural numbers\n\nTeacher: Does every natural number have its additive inverse in the natural numbers?\nStudent: The additive inverse of 4 is \\(-4\\), but \\(-4\\) is not natural. So no.\n\nNatural numbers do not contain the additive inverse of any positive natural number. The exception would be 0, but 0 is not in \\(\\mathbb{N}\\) under our convention. Therefore, \\(\\mathbb{N}\\) does not contain additive inverses for its members.\n\n\n11.2 Whole numbers\nWhole numbers also do not contain additive inverses for their positive members:\n\\[\n5\\in\\mathbb{W},\\qquad -5\\notin\\mathbb{W}.\n\\]\nThe number 0 is its own additive inverse because\n\\[\n0+0=0.\n\\]\nHowever, having one member with an inverse is not enough for the set to contain additive inverses for all its members. Therefore, the whole numbers do not contain additive inverses for all their members.\n\n\n11.3 Integers\n\nTeacher: What about the integers?\nStudent: If \\(a\\) is an integer, then \\(-a\\) is also an integer. So every integer has its additive inverse in the integers.\n\nExamples:\n\\[\n6\\text{ and }-6,\n\\qquad\n-9\\text{ and }9,\n\\qquad\n0\\text{ and }0.\n\\]\nTherefore, the integers contain an additive inverse for every member."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#identity-and-inverse-are-different",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#identity-and-inverse-are-different",
+    "title": "Properties of Number Sets",
+    "section": "12 Identity and inverse are different",
+    "text": "12 Identity and inverse are different\n\nStudent: Both additive identity and additive inverse involve zero. Are they the same idea?\nTeacher: No. They are related, but they answer different questions.\n\n\n\n\n\n\n\n\n\nIdea\nQuestion\nExample\n\n\n\n\nAdditive identity\nWhat can I add without changing the number?\n\\(8+0=8\\)\n\n\nAdditive inverse\nWhat can I add to cancel the number?\n\\(8+(-8)=0\\)\n\n\n\nThe identity is the number that leaves a value unchanged. The inverse is the number that combines with a given value to produce the identity."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#putting-the-ideas-together",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#putting-the-ideas-together",
+    "title": "Properties of Number Sets",
+    "section": "13 Putting the ideas together",
+    "text": "13 Putting the ideas together\n\nTeacher: Let us now review the whole investigation. We asked four different questions.\nStudent: First, whether the answer stays in the set. That was closure.\nTeacher: Second, whether changing order changes the answer. That was commutativity.\nStudent: Third, whether changing brackets changes the answer. That was associativity.\nTeacher: Fourth, whether the set contains zero and the opposites needed for addition. Those were additive identity and additive inverse.\n\n\n13.1 Closure summary\n\n\n\n\n\n\n\n\n\n\nSet\nClosed under \\(+\\)\nClosed under \\(-\\)\nClosed under \\(\\times\\)\nClosed under \\(\\div\\)\n\n\n\n\n\\(\\mathbb{N}\\)\nYes\nNo\nYes\nNo\n\n\n\\(\\mathbb{W}\\)\nYes\nNo\nYes\nNo\n\n\n\\(\\mathbb{Z}\\)\nYes\nYes\nYes\nNo\n\n\n\n\n\n13.2 Commutativity and associativity summary\n\n\n\nOperation\nCommutative\nAssociative\n\n\n\n\n\\(+\\)\nYes\nYes\n\n\n\\(-\\)\nNo\nNo\n\n\n\\(\\times\\)\nYes\nYes\n\n\n\\(\\div\\)\nNo\nNo\n\n\n\n\n\n13.3 Additive identity and inverse summary\n\n\n\n\n\n\n\n\nSet\nContains additive identity \\(0\\)?\nContains additive inverse for every member?\n\n\n\n\n\\(\\mathbb{N}\\)\nNo\nNo\n\n\n\\(\\mathbb{W}\\)\nYes\nNo\n\n\n\\(\\mathbb{Z}\\)\nYes\nYes"
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#short-summary-for-recall",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#short-summary-for-recall",
+    "title": "Properties of Number Sets",
+    "section": "14 Short summary for recall",
+    "text": "14 Short summary for recall\nRemember the following sequence:\n\nClosure: Do we stay inside the set?\nCommutative: Can we change the order?\nAssociative: Can we change the grouping?\nAdditive identity: Zero leaves a number unchanged: \\(a+0=a\\).\nAdditive inverse: The opposite cancels a number: \\(a+(-a)=0\\).\n\nFor the three sets:\n\nNatural numbers: closed under addition and multiplication only; no zero and no negative numbers.\nWhole numbers: closed under addition and multiplication; includes zero but not negative numbers.\nIntegers: closed under addition, subtraction, and multiplication; includes zero and the additive inverse of every integer.\n\nFor the four operations:\n\nAddition and multiplication are commutative and associative.\nSubtraction and division are neither commutative nor associative.\nDivision is not closed for natural numbers, whole numbers, or integers because it can produce fractions.\n\nA compact memory sentence is:\n\nStay inside, swap order, regroup, leave unchanged, cancel: closure, commutative, associative, identity, inverse."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#check-your-understanding",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#check-your-understanding",
+    "title": "Properties of Number Sets",
+    "section": "15 Check your understanding",
+    "text": "15 Check your understanding\n\n15.1 Question 1\nAre natural numbers closed under subtraction? Explain using a counterexample.\n\nThink aloud: Choose two natural numbers in the order that makes the smaller number come first: \\(3-8=-5\\). Since \\(-5\\) is not natural, natural numbers are not closed under subtraction.\n\n\n\n15.2 Question 2\nAre whole numbers closed under division?\n\nThink aloud: Try \\(3\\div2=\\frac32\\). The inputs are whole numbers, but the answer is not a whole number. Therefore, whole numbers are not closed under division.\n\n\n\n15.3 Question 3\nAre integers closed under subtraction?\n\nThink aloud: Subtracting one integer from another gives an integer. For example, \\(-4-7=-11\\) and \\(3-(-5)=8\\). Therefore, integers are closed under subtraction.\n\n\n\n15.4 Question 4\nIs subtraction commutative?\n\nThink aloud: Compare \\(9-4=5\\) with \\(4-9=-5\\). The answers differ, so subtraction is not commutative.\n\n\n\n15.5 Question 5\nIs addition associative?\n\nThink aloud: Compare grouping rather than order: \\((2+5)+3=7+3=10\\), while \\(2+(5+3)=2+8=10\\). Addition is associative.\n\n\n\n15.6 Question 6\nIs division associative?\n\nThink aloud: Compare \\((24\\div6)\\div2=2\\) with \\(24\\div(6\\div2)=8\\). Since the answers differ, division is not associative.\n\n\n\n15.7 Question 7\nWhat is the additive identity?\n\nThink aloud: We need a number that can be added without changing the original number. Since \\(a+0=a\\), the additive identity is 0.\n\n\n\n15.8 Question 8\nWhat is the additive inverse of \\(-12\\)?\n\nThink aloud: The additive inverse has the opposite sign. The opposite of \\(-12\\) is 12, and \\(-12+12=0\\).\n\n\n\n15.9 Question 9\nWhich of the three sets contains the additive identity?\n\nThink aloud: The identity is 0. Zero is not in \\(\\mathbb{N}\\), but it is in \\(\\mathbb{W}\\) and \\(\\mathbb{Z}\\). Therefore, whole numbers and integers contain the additive identity.\n\n\n\n15.10 Question 10\nWhich of the three sets contains the additive inverse of every member?\n\nThink aloud: Natural and whole numbers contain positive numbers but not their negatives. Integers contain both \\(a\\) and \\(-a\\) for every integer \\(a\\). Therefore, the integers contain the additive inverse of every member.\n\n\n\n15.11 Question 11\nA student says, “The whole numbers are closed under subtraction because \\(8-3=5\\).” Is the reasoning complete?\n\nThink aloud: No. One successful example does not prove closure. We must check whether the result is always a whole number. The counterexample \\(3-8=-5\\) shows that whole numbers are not closed under subtraction.\n\n\n\n15.12 Question 12\nA student says, “The additive identity is the number that makes the answer zero.” Is this correct?\n\nThink aloud: No. That describes an additive inverse. The additive identity leaves a number unchanged: \\(7+0=7\\). The additive inverse cancels a number: \\(7+(-7)=0\\)."
+  },
+  {
+    "objectID": "grade_6_math_2026/properties-of-number-sets.html#final-thinking-aloud-conversation",
+    "href": "grade_6_math_2026/properties-of-number-sets.html#final-thinking-aloud-conversation",
+    "title": "Properties of Number Sets",
+    "section": "16 Final thinking-aloud conversation",
+    "text": "16 Final thinking-aloud conversation\n\nStudent: I can now separate the properties. Closure is about whether the answer remains in the set. Commutativity is about changing order. Associativity is about changing brackets.\nTeacher: Good. And what do identity and inverse tell us?\nStudent: The additive identity is zero because adding it changes nothing. The additive inverse is the opposite number because adding the two gives zero.\nTeacher: And which set is the most complete of the three for addition and subtraction?\nStudent: The integers. They include zero, every integer’s additive inverse, and they are closed under addition and subtraction.\n\nThe purpose of these properties is not merely to memorise tables. They help us predict what operations will do before calculating. Once we understand the question each property asks, the patterns in the number sets become easier to see."
   },
   {
     "objectID": "tir/sociology/ravidas-begumpura.html",
@@ -4449,21 +4848,21 @@
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-mathematically-fair-die-game",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Python: mathematically fair die game",
-    "text": "Python: mathematically fair die game\n\nfrom secrets import randbelow\n\nSTAKE = 100\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE / win_probability  # ₹600 in a fair game\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    player_net = gross_payout - STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{player_net:.2f}\")\nelse:\n    player_net = -STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{-player_net:.2f}\")\n\nRolled: 6\nYou lost ₹100.00\n\n\nThe program uses secrets.randbelow(6) + 1 to generate a uniformly distributed die result from 1 to 6."
+    "text": "Python: mathematically fair die game\n\nfrom secrets import randbelow\n\nSTAKE = 100\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE / win_probability  # ₹600 in a fair game\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    player_net = gross_payout - STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{player_net:.2f}\")\nelse:\n    player_net = -STAKE\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{-player_net:.2f}\")\n\nRolled: 4\nYou won ₹500.00\n\n\nThe program uses secrets.randbelow(6) + 1 to generate a uniformly distributed die result from 1 to 6."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#python-casino-die-game",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Python: casino die game",
-    "text": "Python: casino die game\nThis version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.\n\nfrom secrets import randbelow\n\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{net_win:.2f}\")\nelse:\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{STAKE:.2f}\")\n\nRolled: 4\nYou won ₹470.00\n\n\nThe die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result."
+    "text": "Python: casino die game\nThis version uses the same unbiased die roll, but sets a 5% house edge by reducing the payout.\n\nfrom secrets import randbelow\n\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nroll = randbelow(6) + 1\n\nif roll == CHOSEN_FACE:\n    print(f\"Rolled: {roll}\")\n    print(f\"You won ₹{net_win:.2f}\")\nelse:\n    print(f\"Rolled: {roll}\")\n    print(f\"You lost ₹{STAKE:.2f}\")\n\nRolled: 1\nYou lost ₹100.00\n\n\nThe die remains unbiased. The house edge comes from the stated payout—₹570 rather than the fair ₹600—not from secretly changing the result."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "href": "cs_2026/notes/fairness-dice-games-lesson-2.html#simulating-10000-rolls",
     "title": "Fairness, Odds, and House Edge in Dice Games",
     "section": "Simulating 10,000 rolls",
-    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,637\nObserved win rate:          16.37%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-66,910.00\nCasino profit:              ₹66,910.00\nObserved house edge:        6.69%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
+    "text": "Simulating 10,000 rolls\n\nfrom secrets import randbelow\n\nNUM_ROLLS = 10_000\nSTAKE = 100\nHOUSE_EDGE = 0.05\nCHOSEN_FACE = 4\n\nwin_probability = 1 / 6\ngross_payout = STAKE * (1 - HOUSE_EDGE) / win_probability\nnet_win = gross_payout - STAKE\n\nplayer_profit = 0.0\ncasino_profit = 0.0\nwins = 0\n\nfor _ in range(NUM_ROLLS):\n    roll = randbelow(6) + 1\n\n    if roll == CHOSEN_FACE:\n        wins += 1\n        player_profit += net_win\n        casino_profit -= net_win\n    else:\n        player_profit -= STAKE\n        casino_profit += STAKE\n\ntotal_wagered = NUM_ROLLS * STAKE\nobserved_win_rate = wins / NUM_ROLLS\nobserved_house_edge = casino_profit / total_wagered\ntheoretical_casino_profit = total_wagered * HOUSE_EDGE\n\nprint(\"DICE CASINO SIMULATION\")\nprint(\"-\" * 35)\nprint(f\"Number of rolls:            {NUM_ROLLS:,}\")\nprint(f\"Stake per roll:             ₹{STAKE:.2f}\")\nprint(f\"House edge:                 {HOUSE_EDGE:.2%}\")\nprint(f\"Gross payout on a win:      ₹{gross_payout:.2f}\")\nprint(f\"Number of player wins:      {wins:,}\")\nprint(f\"Observed win rate:          {observed_win_rate:.2%}\")\nprint()\nprint(f\"Total amount wagered:       ₹{total_wagered:,.2f}\")\nprint(f\"Player net result:          ₹{player_profit:,.2f}\")\nprint(f\"Casino profit:              ₹{casino_profit:,.2f}\")\nprint(f\"Observed house edge:        {observed_house_edge:.2%}\")\nprint(f\"Expected casino profit:     ₹{theoretical_casino_profit:,.2f}\")\n\nDICE CASINO SIMULATION\n-----------------------------------\nNumber of rolls:            10,000\nStake per roll:             ₹100.00\nHouse edge:                 5.00%\nGross payout on a win:      ₹570.00\nNumber of player wins:      1,677\nObserved win rate:          16.77%\n\nTotal amount wagered:       ₹1,000,000.00\nPlayer net result:          ₹-44,110.00\nCasino profit:              ₹44,110.00\nObserved house edge:        4.41%\nExpected casino profit:     ₹50,000.00\n\n\nThe theoretical casino profit is:\n\\[\n10,000 \\times \\text{₹100} \\times 0.05 = \\text{₹50,000}\n\\]\nThe simulation will not necessarily produce exactly ₹50,000. Random variation means that 10,000 rolls may yield a higher or lower casino profit. Repeating the experiment, or increasing the number of rolls, should make the observed edge tend closer to 5%."
   },
   {
     "objectID": "cs_2026/notes/fairness-dice-games-lesson-2.html#conclusion",

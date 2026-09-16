@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-09-10">
 
-<title>unit2-demand-supply-curves – Venu GVGK Raju</title>
+<title>Demand and Supply Curves – Venu GVGK Raju</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../venu-flute-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -67,12 +67,47 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Venu GVGK Raju">
+<meta property="og:title" content="Demand and Supply Curves – Venu GVGK Raju">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Venu GVGK Raju">
-<meta name="twitter:title" content="Venu GVGK Raju">
+<meta name="twitter:title" content="Demand and Supply Curves – Venu GVGK Raju">
+<meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -118,8 +153,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">A Level Math</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../math-6-2026/index.html"> 
+    <a class="nav-link" href="../grade_6_math_2026/index.html"> 
 <span class="menu-text">Grade 6 Math</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../eco_2028/index.html"> 
+<span class="menu-text">A level Economics</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -132,17 +171,748 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#markets-and-the-price-mechanism" id="toc-markets-and-the-price-mechanism" class="nav-link" data-scroll-target="#markets-and-the-price-mechanism">1. Markets and the price mechanism</a></li>
+  <li><a href="#demand" id="toc-demand" class="nav-link" data-scroll-target="#demand">2. Demand</a>
+  <ul class="collapse">
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
+  <li><a href="#individual-and-market-demand" id="toc-individual-and-market-demand" class="nav-link" data-scroll-target="#individual-and-market-demand">Individual and market demand</a></li>
+  <li><a href="#the-law-of-demand" id="toc-the-law-of-demand" class="nav-link" data-scroll-target="#the-law-of-demand">The law of demand</a></li>
+  <li><a href="#demand-schedule-and-curve" id="toc-demand-schedule-and-curve" class="nav-link" data-scroll-target="#demand-schedule-and-curve">Demand schedule and curve</a>
+  <ul class="collapse">
+  <li><a href="#quantity-demanded-versus-demand" id="toc-quantity-demanded-versus-demand" class="nav-link" data-scroll-target="#quantity-demanded-versus-demand">Quantity demanded versus demand</a></li>
+  </ul></li>
+  <li><a href="#consumer-expenditure-and-firm-revenue" id="toc-consumer-expenditure-and-firm-revenue" class="nav-link" data-scroll-target="#consumer-expenditure-and-firm-revenue">Consumer expenditure and firm revenue</a></li>
+  </ul></li>
+  <li><a href="#determinants-of-demand" id="toc-determinants-of-demand" class="nav-link" data-scroll-target="#determinants-of-demand">3. Determinants of demand</a>
+  <ul class="collapse">
+  <li><a href="#income" id="toc-income" class="nav-link" data-scroll-target="#income">Income</a></li>
+  <li><a href="#related-products" id="toc-related-products" class="nav-link" data-scroll-target="#related-products">Related products</a>
+  <ul class="collapse">
+  <li><a href="#substitutes" id="toc-substitutes" class="nav-link" data-scroll-target="#substitutes">Substitutes</a></li>
+  <li><a href="#complements" id="toc-complements" class="nav-link" data-scroll-target="#complements">Complements</a></li>
+  </ul></li>
+  <li><a href="#fashion-taste-and-attitudes" id="toc-fashion-taste-and-attitudes" class="nav-link" data-scroll-target="#fashion-taste-and-attitudes">Fashion, taste and attitudes</a></li>
+  </ul></li>
+  <li><a href="#supply" id="toc-supply" class="nav-link" data-scroll-target="#supply">4. Supply</a>
+  <ul class="collapse">
+  <li><a href="#definition-1" id="toc-definition-1" class="nav-link" data-scroll-target="#definition-1">Definition</a></li>
+  <li><a href="#individual-and-market-supply" id="toc-individual-and-market-supply" class="nav-link" data-scroll-target="#individual-and-market-supply">Individual and market supply</a></li>
+  <li><a href="#the-law-of-supply" id="toc-the-law-of-supply" class="nav-link" data-scroll-target="#the-law-of-supply">The law of supply</a></li>
+  <li><a href="#supply-schedule-and-curve" id="toc-supply-schedule-and-curve" class="nav-link" data-scroll-target="#supply-schedule-and-curve">Supply schedule and curve</a></li>
+  </ul></li>
+  <li><a href="#determinants-of-supply" id="toc-determinants-of-supply" class="nav-link" data-scroll-target="#determinants-of-supply">5. Determinants of supply</a>
+  <ul class="collapse">
+  <li><a href="#costs-of-production" id="toc-costs-of-production" class="nav-link" data-scroll-target="#costs-of-production">Costs of production</a></li>
+  <li><a href="#size-and-nature-of-the-industry" id="toc-size-and-nature-of-the-industry" class="nav-link" data-scroll-target="#size-and-nature-of-the-industry">Size and nature of the industry</a></li>
+  <li><a href="#prices-of-other-products" id="toc-prices-of-other-products" class="nav-link" data-scroll-target="#prices-of-other-products">Prices of other products</a></li>
+  <li><a href="#government-policy" id="toc-government-policy" class="nav-link" data-scroll-target="#government-policy">Government policy</a></li>
+  <li><a href="#other-factors" id="toc-other-factors" class="nav-link" data-scroll-target="#other-factors">Other factors</a></li>
+  </ul></li>
+  <li><a href="#shifts-in-demand" id="toc-shifts-in-demand" class="nav-link" data-scroll-target="#shifts-in-demand">6. Shifts in demand</a></li>
+  <li><a href="#shifts-in-supply" id="toc-shifts-in-supply" class="nav-link" data-scroll-target="#shifts-in-supply">7. Shifts in supply</a></li>
+  <li><a href="#movement-along-a-curve-or-shift" id="toc-movement-along-a-curve-or-shift" class="nav-link" data-scroll-target="#movement-along-a-curve-or-shift">8. Movement along a curve or shift?</a>
+  <ul class="collapse">
+  <li><a href="#worked-examples" id="toc-worked-examples" class="nav-link" data-scroll-target="#worked-examples">Worked examples</a>
+  <ul class="collapse">
+  <li><a href="#example-1-price-change" id="toc-example-1-price-change" class="nav-link" data-scroll-target="#example-1-price-change">Example 1: Price change</a></li>
+  <li><a href="#example-2-substitute-price-change" id="toc-example-2-substitute-price-change" class="nav-link" data-scroll-target="#example-2-substitute-price-change">Example 2: Substitute price change</a></li>
+  <li><a href="#example-3-production-cost-change" id="toc-example-3-production-cost-change" class="nav-link" data-scroll-target="#example-3-production-cost-change">Example 3: Production cost change</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#applying-the-model-coffee-production" id="toc-applying-the-model-coffee-production" class="nav-link" data-scroll-target="#applying-the-model-coffee-production">9. Applying the model: coffee production</a></li>
+  <li><a href="#key-terms-for-quick-recall" id="toc-key-terms-for-quick-recall" class="nav-link" data-scroll-target="#key-terms-for-quick-recall">Key terms for quick recall</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Demand and Supply Curves</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 10, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="learning-objectives" class="level1">
+<h1>Learning objectives</h1>
+<p>By the end of this chapter, you should be able to:</p>
+<ul>
+<li>explain what economists mean by a market and the price mechanism;</li>
+<li>define effective demand and supply;</li>
+<li>distinguish between individual and market demand or supply;</li>
+<li>explain the determinants of demand and supply;</li>
+<li>interpret demand and supply schedules and curves;</li>
+<li>distinguish a movement along a curve from a shift of the curve;</li>
+<li>explain how changes in non-price determinants shift demand or supply.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The central idea
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Demand</strong> describes the buying side of a market. <strong>Supply</strong> describes the selling side. Price changes normally cause movements along a curve; changes in other determinants cause the whole curve to shift.</p>
+</div>
+</div>
+</section>
+<section id="markets-and-the-price-mechanism" class="level1">
+<h1>1. Markets and the price mechanism</h1>
+<p>A <strong>market</strong> is any arrangement through which buyers and sellers exchange goods, services or other tradable items. A market does not need to be a physical place. Examples include:</p>
+<ul>
+<li>the local food market;</li>
+<li>the housing and labour markets;</li>
+<li>the market for smartphones or computers;</li>
+<li>global markets for coffee, cotton and oil;</li>
+<li>stock, foreign-exchange and online markets.</li>
+</ul>
+<p>The <strong>price mechanism</strong> helps allocate scarce resources. Prices communicate information:</p>
+<ul>
+<li>a shortage tends to push price upwards and signals producers to allocate more resources to the product;</li>
+<li>an oversupply tends to push price downwards and signals producers to allocate fewer resources to the product.</li>
+</ul>
+<p>When it works effectively, the price mechanism coordinates decisions without direct government instruction.</p>
+</section>
+<section id="demand" class="level1">
+<h1>2. Demand</h1>
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>Demand is the quantity of a product that buyers are <strong>willing and able to buy</strong> at different prices per period of time, <em>ceteris paribus</em> (other things remaining equal).</p>
+<p>Each part of this definition matters:</p>
+<ul>
+<li><strong>Quantity:</strong> a numerical amount.</li>
+<li><strong>Product:</strong> a good, service, currency or financial asset being traded.</li>
+<li><strong>Willing to buy:</strong> the buyer wants the product. This is called <strong>notional demand</strong>.</li>
+<li><strong>Able to buy:</strong> the buyer has sufficient purchasing power. Notional demand backed by purchasing power becomes <strong>effective demand</strong>.</li>
+<li><strong>Different prices:</strong> demand is examined at various possible prices.</li>
+<li><strong>Per period of time:</strong> the time period must be stated, such as 500 units per week.</li>
+<li><strong>Ceteris paribus:</strong> other influences are held constant so that the relationship can be analysed clearly.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remember
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Wanting a product is not enough to create effective demand. A buyer must also be able to pay for it.</p>
+</div>
+</div>
+</section>
+<section id="individual-and-market-demand" class="level2">
+<h2 class="anchored" data-anchor-id="individual-and-market-demand">Individual and market demand</h2>
+<p>An <strong>individual demand curve</strong> shows the quantity one consumer is willing and able to buy at different prices. A <strong>market demand curve</strong> is the horizontal sum or aggregation of the demand curves of all consumers in the market.</p>
+</section>
+<section id="the-law-of-demand" class="level2">
+<h2 class="anchored" data-anchor-id="the-law-of-demand">The law of demand</h2>
+<p>Assuming other factors remain unchanged, price and quantity demanded have an <strong>inverse relationship</strong>:</p>
+<ul>
+<li>when price rises, quantity demanded falls;</li>
+<li>when price falls, quantity demanded rises.</li>
+</ul>
+<p>A demand curve is usually drawn downward sloping from left to right.</p>
+</section>
+<section id="demand-schedule-and-curve" class="level2">
+<h2 class="anchored" data-anchor-id="demand-schedule-and-curve">Demand schedule and curve</h2>
+<p>A <strong>demand schedule</strong> is a table showing quantities demanded at different prices. Plotting these combinations gives a demand curve.</p>
+<p>For example:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Price of a standard PC ($)</th>
+<th style="text-align: right;">Quantity demanded per week</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2,000</td>
+<td style="text-align: right;">1,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1,800</td>
+<td style="text-align: right;">2,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1,600</td>
+<td style="text-align: right;">3,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1,400</td>
+<td style="text-align: right;">4,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1,200</td>
+<td style="text-align: right;">5,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">6,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">800</td>
+<td style="text-align: right;">7,000</td>
+</tr>
+</tbody>
+</table>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">xychart-beta
+  title "Demand curve for a standard PC"
+  x-axis "Quantity demanded per week" [1000, 2000, 3000, 4000, 5000, 6000, 7000]
+  y-axis "Price ($)" 0 --&gt; 2200
+  line [2000, 1800, 1600, 1400, 1200, 1000, 800]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A demand curve shows a relationship that is usually:</p>
+<ul>
+<li>inverse or negative;</li>
+<li>continuous;</li>
+<li>time-based;</li>
+<li>subject to the <em>ceteris paribus</em> assumption.</li>
+</ul>
+<section id="quantity-demanded-versus-demand" class="level3">
+<h3 class="anchored" data-anchor-id="quantity-demanded-versus-demand">Quantity demanded versus demand</h3>
+<p>These terms must not be confused:</p>
+<ul>
+<li><strong>Quantity demanded</strong> means a particular amount bought at a particular price.</li>
+<li><strong>Demand</strong> means the entire relationship or demand schedule.</li>
+</ul>
+<p>A change in the product’s own price causes a change in <strong>quantity demanded</strong>, shown by movement along the existing demand curve. It does not, by itself, shift the demand curve.</p>
+</section>
+</section>
+<section id="consumer-expenditure-and-firm-revenue" class="level2">
+<h2 class="anchored" data-anchor-id="consumer-expenditure-and-firm-revenue">Consumer expenditure and firm revenue</h2>
+<p>Total consumer expenditure, which is also the firm’s total revenue for the product, is:</p>
+<p><span class="math display">\[
+\text{Total expenditure} = \text{price} \times \text{quantity bought}
+\]</span></p>
+<p>For example, if 2,000 PCs are bought at $1,800 each:</p>
+<p><span class="math display">\[
+2,000 \times 1,800 = \$3,600,000
+\]</span></p>
+</section>
+</section>
+<section id="determinants-of-demand" class="level1">
+<h1>3. Determinants of demand</h1>
+<p>The product’s own price is not the only influence on demand. Important non-price determinants include income, related products, and fashion, taste and attitudes.</p>
+<section id="income" class="level2">
+<h2 class="anchored" data-anchor-id="income">Income</h2>
+<p>For most <strong>normal goods</strong>, income and demand have a positive relationship. When income rises, demand increases; when income falls, demand decreases. Examples include cars, housing, restaurant meals and quality clothing.</p>
+<p>For an <strong>inferior good</strong>, income and demand have a negative relationship. As income rises, consumers buy less of the inferior good and switch towards preferred alternatives. Examples may include low-quality food or used clothing, although classification depends on the consumer and context.</p>
+</section>
+<section id="related-products" class="level2">
+<h2 class="anchored" data-anchor-id="related-products">Related products</h2>
+<section id="substitutes" class="level3">
+<h3 class="anchored" data-anchor-id="substitutes">Substitutes</h3>
+<p><strong>Substitutes</strong> are goods that satisfy a similar want or need. Examples include Coca-Cola and Pepsi, or two competing brands of chocolate bar.</p>
+<p>If the price of a substitute rises, demand for the product may increase. If the price of a substitute falls, demand for the product may decrease. The strength of the effect depends on how close the substitutes are.</p>
+</section>
+<section id="complements" class="level3">
+<h3 class="anchored" data-anchor-id="complements">Complements</h3>
+<p><strong>Complements</strong> are products consumed together because they jointly increase satisfaction. Examples include cars and petrol, cricket bats and balls, and computers and monitors.</p>
+<p>If the price of a complement rises, demand for the product may fall. If the price of a complement falls, demand may increase.</p>
+</section>
+</section>
+<section id="fashion-taste-and-attitudes" class="level2">
+<h2 class="anchored" data-anchor-id="fashion-taste-and-attitudes">Fashion, taste and attitudes</h2>
+<p>Consumer preferences can be influenced by fashion, advertising, reviews, culture, social attitudes and personal experience. A favourable change increases demand; an unfavourable change decreases demand.</p>
+</section>
+</section>
+<section id="supply" class="level1">
+<h1>4. Supply</h1>
+<section id="definition-1" class="level2">
+<h2 class="anchored" data-anchor-id="definition-1">Definition</h2>
+<p>Supply is the quantity of a product that suppliers are <strong>willing and able to sell</strong> at different prices over a period of time, <em>ceteris paribus</em>.</p>
+<p>Supply refers to the selling side of the market. Suppliers may be manufacturers, retailers, service providers or other participants in a supply chain.</p>
+</section>
+<section id="individual-and-market-supply" class="level2">
+<h2 class="anchored" data-anchor-id="individual-and-market-supply">Individual and market supply</h2>
+<p>An <strong>individual supply curve</strong> shows how much one firm plans to sell at different prices. A <strong>market supply curve</strong> is the sum of the supply curves of all firms in the market.</p>
+</section>
+<section id="the-law-of-supply" class="level2">
+<h2 class="anchored" data-anchor-id="the-law-of-supply">The law of supply</h2>
+<p>Assuming other factors remain unchanged, price and quantity supplied have a <strong>positive or direct relationship</strong>:</p>
+<ul>
+<li>when price rises, quantity supplied generally rises;</li>
+<li>when price falls, quantity supplied generally falls.</li>
+</ul>
+<p>A supply curve is usually upward sloping from left to right because a higher price can make production more profitable.</p>
+</section>
+<section id="supply-schedule-and-curve" class="level2">
+<h2 class="anchored" data-anchor-id="supply-schedule-and-curve">Supply schedule and curve</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Price of a standard PC ($)</th>
+<th style="text-align: right;">Quantity supplied per week</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">800</td>
+<td style="text-align: right;">1,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">2,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1,200</td>
+<td style="text-align: right;">3,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1,400</td>
+<td style="text-align: right;">4,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1,600</td>
+<td style="text-align: right;">5,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1,800</td>
+<td style="text-align: right;">6,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2,000</td>
+<td style="text-align: right;">7,000</td>
+</tr>
+</tbody>
+</table>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">xychart-beta
+  title "Supply curve for a standard PC"
+  x-axis "Quantity supplied per week" [1000, 2000, 3000, 4000, 5000, 6000, 7000]
+  y-axis "Price ($)" 0 --&gt; 2200
+  line [800, 1000, 1200, 1400, 1600, 1800, 2000]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A supply curve shows a relationship that is usually:</p>
+<ul>
+<li>positive or direct;</li>
+<li>continuous;</li>
+<li>time-based;</li>
+<li>subject to the <em>ceteris paribus</em> assumption.</li>
+</ul>
+<p>A change in the product’s own price causes a movement along the existing supply curve and changes <strong>quantity supplied</strong>. It does not, by itself, shift the supply curve.</p>
+</section>
+</section>
+<section id="determinants-of-supply" class="level1">
+<h1>5. Determinants of supply</h1>
+<section id="costs-of-production" class="level2">
+<h2 class="anchored" data-anchor-id="costs-of-production">Costs of production</h2>
+<p>Supply decisions are strongly influenced by production and distribution costs. Important costs may include:</p>
+<ul>
+<li>wages and other labour costs;</li>
+<li>energy and raw materials;</li>
+<li>transport and storage;</li>
+<li>machinery and technology;</li>
+<li>worker productivity.</li>
+</ul>
+<p>A fall in costs usually increases supply. A rise in costs usually decreases supply.</p>
+</section>
+<section id="size-and-nature-of-the-industry" class="level2">
+<h2 class="anchored" data-anchor-id="size-and-nature-of-the-industry">Size and nature of the industry</h2>
+<p>Growth in an industry may attract new firms and increase market supply. Increased competition may reduce prices. If firms leave the industry, market supply may fall.</p>
+</section>
+<section id="prices-of-other-products" class="level2">
+<h2 class="anchored" data-anchor-id="prices-of-other-products">Prices of other products</h2>
+<p>Firms compare the profitability of different products. If a competitor raises its price, another firm may supply more of its own product. If a competitor lowers its price, the firm may reduce its supply, especially if its own costs remain unchanged.</p>
+</section>
+<section id="government-policy" class="level2">
+<h2 class="anchored" data-anchor-id="government-policy">Government policy</h2>
+<ul>
+<li>An indirect tax raises firms’ costs and usually decreases supply.</li>
+<li>A subsidy lowers effective costs and usually increases supply.</li>
+<li>Regulations may increase costs and reduce supply, depending on their design.</li>
+</ul>
+</section>
+<section id="other-factors" class="level2">
+<h2 class="anchored" data-anchor-id="other-factors">Other factors</h2>
+<p>Weather, natural conditions, disruptions, technology and unexpected events can affect supply. These influences are especially important in agriculture, where drought, frost or storms may reduce output.</p>
+</section>
+</section>
+<section id="shifts-in-demand" class="level1">
+<h1>6. Shifts in demand</h1>
+<p>The demand curve is drawn assuming that non-price determinants remain constant. When a non-price determinant changes, the entire demand curve shifts.</p>
+<ul>
+<li>A shift to the <strong>right</strong> means an increase in demand.</li>
+<li>A shift to the <strong>left</strong> means a decrease in demand.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Demand increases: curve shifts right</th>
+<th>Demand decreases: curve shifts left</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Income increases for a normal good</td>
+<td>Income decreases for a normal good</td>
+</tr>
+<tr class="even">
+<td>Price of a substitute increases</td>
+<td>Price of a substitute decreases</td>
+</tr>
+<tr class="odd">
+<td>Price of a complement decreases</td>
+<td>Price of a complement increases</td>
+</tr>
+<tr class="even">
+<td>Favourable change in fashion, taste or attitudes</td>
+<td>Unfavourable change in fashion, taste or attitudes</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exam language
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Say <strong>“demand increases”</strong> or <strong>“the demand curve shifts right”</strong> when a non-price determinant changes. Say <strong>“quantity demanded increases”</strong> or <strong>“there is an extension along the demand curve”</strong> when the product’s own price falls.</p>
+</div>
+</div>
+</section>
+<section id="shifts-in-supply" class="level1">
+<h1>7. Shifts in supply</h1>
+<p>When a non-price determinant of supply changes, the entire supply curve shifts.</p>
+<ul>
+<li>A shift to the <strong>right</strong> means an increase in supply.</li>
+<li>A shift to the <strong>left</strong> means a decrease in supply.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Supply increases: curve shifts right</th>
+<th>Supply decreases: curve shifts left</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Costs of production decrease</td>
+<td>Costs of production increase</td>
+</tr>
+<tr class="even">
+<td>The industry grows</td>
+<td>The industry declines</td>
+</tr>
+<tr class="odd">
+<td>Price of a competing product decreases</td>
+<td>Price of a competing product increases</td>
+</tr>
+<tr class="even">
+<td>Indirect tax decreases</td>
+<td>Indirect tax increases</td>
+</tr>
+<tr class="odd">
+<td>Subsidy increases</td>
+<td>Subsidy decreases</td>
+</tr>
+<tr class="even">
+<td>Technology or productivity improves</td>
+<td>Disruption, poor weather or lower productivity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Effect of change in the price of a competing product on supply</strong></p>
+<p>Think of a firm as trying to make as much profit as possible. Profit depends on two things: how much it can sell each unit for (price) and how much it costs to make each extra unit.</p>
+<ul>
+<li>When a <strong>competitor raises its price</strong>, their product becomes less attractive to buyers.
+<ul>
+<li>More customers are willing to buy your product instead, even at your current price.<br>
+</li>
+<li>So you can <strong>sell more</strong> and make more total profit.<br>
+</li>
+<li>You respond by <strong>producing and supplying more</strong> of your product.</li>
+</ul></li>
+<li>When a <strong>competitor lowers its price</strong>, their product becomes more attractive.
+<ul>
+<li>Some of your customers switch to them, or you must accept selling less at your price.<br>
+</li>
+<li>Each unit you make is now less profitable in practice, even if your costs haven’t changed.<br>
+</li>
+<li>So you respond by <strong>producing and supplying less</strong>.</li>
+</ul></li>
+</ul>
+<p>In short: firms watch how profitable each product looks compared to others. If a rival’s price move makes your product look more profitable, you supply more; if it makes your product look less profitable, you supply less - even if your own costs stay the same.</p>
+</section>
+<section id="movement-along-a-curve-or-shift" class="level1">
+<h1>8. Movement along a curve or shift?</h1>
+<p>Use this decision rule:</p>
+<ol type="1">
+<li>Ask whether the product’s own price has changed.</li>
+<li>If only the product’s own price changes, show a movement along the curve.</li>
+<li>If any non-price determinant changes, shift the entire curve.</li>
+<li>Identify whether the change is an increase or decrease.</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situation</th>
+<th>What changes?</th>
+<th>Diagram effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Price of the product falls</td>
+<td>Quantity demanded rises</td>
+<td>Extension along demand curve</td>
+</tr>
+<tr class="even">
+<td>Price of the product rises</td>
+<td>Quantity demanded falls</td>
+<td>Contraction along demand curve</td>
+</tr>
+<tr class="odd">
+<td>Price of the product falls</td>
+<td>Quantity supplied falls</td>
+<td>Contraction along supply curve</td>
+</tr>
+<tr class="even">
+<td>Price of the product rises</td>
+<td>Quantity supplied rises</td>
+<td>Extension along supply curve</td>
+</tr>
+<tr class="odd">
+<td>Income rises for a normal good</td>
+<td>Demand rises</td>
+<td>Demand curve shifts right</td>
+</tr>
+<tr class="even">
+<td>Production costs rise</td>
+<td>Supply falls</td>
+<td>Supply curve shifts left</td>
+</tr>
+</tbody>
+</table>
+<section id="worked-examples" class="level2">
+<h2 class="anchored" data-anchor-id="worked-examples">Worked examples</h2>
+<section id="example-1-price-change" class="level3">
+<h3 class="anchored" data-anchor-id="example-1-price-change">Example 1: Price change</h3>
+<p>The price of a smartphone falls. Other factors remain unchanged. Consumers buy more smartphones. This is an <strong>extension of demand</strong>, or an increase in quantity demanded, shown by movement down the existing demand curve.</p>
+</section>
+<section id="example-2-substitute-price-change" class="level3">
+<h3 class="anchored" data-anchor-id="example-2-substitute-price-change">Example 2: Substitute price change</h3>
+<p>The price of iced tea rises. Cola becomes relatively more attractive, so demand for cola increases. The demand curve for cola shifts right.</p>
+</section>
+<section id="example-3-production-cost-change" class="level3">
+<h3 class="anchored" data-anchor-id="example-3-production-cost-change">Example 3: Production cost change</h3>
+<p>Wages paid by smartphone producers rise. Production becomes more expensive, so firms supply less at every possible price. The supply curve shifts left.</p>
+</section>
+</section>
+</section>
+<section id="applying-the-model-coffee-production" class="level1">
+<h1>9. Applying the model: coffee production</h1>
+<p>Suppose coffee producers adopt harvesting machines that reduce harvesting costs. Lower costs increase supply, so the supply curve shifts right. If global demand for coffee is also increasing but supply increases by even more because of mechanisation, the market price may still fall.</p>
+<p>The example also raises wider questions:</p>
+<ul>
+<li>Does the technology reduce employment for agricultural workers?</li>
+<li>Who receives the benefits of lower costs?</li>
+<li>Can small producers afford the machinery?</li>
+<li>Are environmental and social effects included in the market price?</li>
+</ul>
+<p>Economic analysis should therefore be combined with ethical and social analysis when evaluating real-world policies and technologies.</p>
+</section>
+<section id="key-terms-for-quick-recall" class="level1">
+<h1>Key terms for quick recall</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Market</strong></td>
+<td>An arrangement through which buyers and sellers exchange products.</td>
+</tr>
+<tr class="even">
+<td><strong>Price mechanism</strong></td>
+<td>The way prices communicate information and allocate resources between competing uses.</td>
+</tr>
+<tr class="odd">
+<td><strong>Demand</strong></td>
+<td>The quantity buyers are willing and able to buy at different prices per period of time, other things equal.</td>
+</tr>
+<tr class="even">
+<td><strong>Notional demand</strong></td>
+<td>The desire or willingness to buy a product without necessarily having the purchasing power to do so.</td>
+</tr>
+<tr class="odd">
+<td><strong>Effective demand</strong></td>
+<td>Demand supported by both willingness to buy and the ability to pay.</td>
+</tr>
+<tr class="even">
+<td><strong>Quantity demanded</strong></td>
+<td>The amount consumers buy at a particular price.</td>
+</tr>
+<tr class="odd">
+<td><strong>Demand schedule</strong></td>
+<td>A table showing quantities demanded at different prices.</td>
+</tr>
+<tr class="even">
+<td><strong>Demand curve</strong></td>
+<td>A graph showing the relationship between price and quantity demanded.</td>
+</tr>
+<tr class="odd">
+<td><strong>Market demand</strong></td>
+<td>The total demand of all consumers in a market.</td>
+</tr>
+<tr class="even">
+<td><strong>Normal good</strong></td>
+<td>A good whose demand rises when income rises and falls when income falls.</td>
+</tr>
+<tr class="odd">
+<td><strong>Inferior good</strong></td>
+<td>A good whose demand falls when income rises, as consumers switch to preferred alternatives.</td>
+</tr>
+<tr class="even">
+<td><strong>Substitute</strong></td>
+<td>A product that can satisfy a similar want or need to another product.</td>
+</tr>
+<tr class="odd">
+<td><strong>Complement</strong></td>
+<td>A product consumed jointly with another product.</td>
+</tr>
+<tr class="even">
+<td><strong>Supply</strong></td>
+<td>The quantity sellers are willing and able to sell at different prices over a period of time, other things equal.</td>
+</tr>
+<tr class="odd">
+<td><strong>Quantity supplied</strong></td>
+<td>The amount firms plan to sell at a particular price.</td>
+</tr>
+<tr class="even">
+<td><strong>Supply schedule</strong></td>
+<td>A table showing quantities supplied at different prices.</td>
+</tr>
+<tr class="odd">
+<td><strong>Supply curve</strong></td>
+<td>A graph showing the relationship between price and quantity supplied.</td>
+</tr>
+<tr class="even">
+<td><strong>Market supply</strong></td>
+<td>The total supply of all firms in a market.</td>
+</tr>
+<tr class="odd">
+<td><strong>Movement along a curve</strong></td>
+<td>A change in quantity demanded or supplied caused by a change in the product’s own price.</td>
+</tr>
+<tr class="even">
+<td><strong>Extension of demand or supply</strong></td>
+<td>An increase in quantity demanded or supplied caused by a fall or rise in the product’s own price, respectively.</td>
+</tr>
+<tr class="odd">
+<td><strong>Contraction of demand or supply</strong></td>
+<td>A decrease in quantity demanded or supplied caused by a rise or fall in the product’s own price, respectively.</td>
+</tr>
+<tr class="even">
+<td><strong>Shift of a curve</strong></td>
+<td>A change in demand or supply caused by a non-price determinant.</td>
+</tr>
+<tr class="odd">
+<td><strong>Increase in demand or supply</strong></td>
+<td>A rightward shift of the relevant curve.</td>
+</tr>
+<tr class="even">
+<td><strong>Decrease in demand or supply</strong></td>
+<td>A leftward shift of the relevant curve.</td>
+</tr>
+<tr class="odd">
+<td><strong>Ceteris paribus</strong></td>
+<td>A Latin phrase meaning “other things remaining equal”.</td>
+</tr>
+<tr class="even">
+<td><strong>Indirect tax</strong></td>
+<td>A tax placed on spending or production that can increase firms’ costs.</td>
+</tr>
+<tr class="odd">
+<td><strong>Subsidy</strong></td>
+<td>A payment or financial support that lowers firms’ effective costs or encourages production.</td>
+</tr>
+<tr class="even">
+<td><strong>Consumer expenditure</strong></td>
+<td>The amount consumers spend, calculated as price multiplied by quantity purchased.</td>
+</tr>
+<tr class="odd">
+<td><strong>Revenue</strong></td>
+<td>The income received by firms from selling a product; price multiplied by quantity sold.</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -608,4 +1378,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
