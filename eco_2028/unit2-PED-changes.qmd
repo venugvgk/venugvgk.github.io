@@ -58,6 +58,8 @@ Key points:
 
 ---
 
+{{< downloadthis unit2-PED-changes.pdf dname="PED Changes" label="PED Changes-Linear Demand Curve" icon="file-earmark-pdf" type="success" >}}
+
 ## How PED Changes Along a Straight-Line Demand Curve
 
 On a typical downward-sloping **straight-line (linear) demand curve**, PED is **not constant**:
