@@ -1,0 +1,12 @@
+{
+  "hash": "27de1a6010692563dc430cabdaa7c7f9",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: Session 14 Revision of plots and primes \ndate: 2026-08-06\npage-layout: article\n---\n\nWe revised the math behind the prime number problem and the pseudocode for the program. We also discussed how to plot the results of a simulation using matplotlib. Specifically, we looked at how to plot a bar graph, a line graph, both on the same graph, and how to draw subplots. \n\nHere is an example program that uses a dictionary to plot a line and bars on the same graph. \n\n::: {#7580f07f .cell execution_count=1}\n``` {.python .cell-code}\nimport matplotlib.pyplot as plt\n\n# Create a simple dictionary with categories and values\ndata = {\n    \"Apples\": 10,\n    \"Bananas\": 15,\n    \"Cherries\": 7,\n    \"Dates\": 12,\n    \"Elderberries\": 5,\n}\n\n# Extract keys and values for plotting\ncategories = list(data.keys())\nvalues = list(data.values())\n\n# Create the bar chart\nplt.figure(figsize=(8, 5))\nplt.bar(categories, values, color='skyblue', label='Value (bar)')\n\n# Add a line plot for the same data\nplt.plot(categories, values, color='darkorange', marker='o', linestyle='-', label='Value (line)')\n\n# Add labels and title\nplt.xlabel('Category')\nplt.ylabel('Value')\nplt.title('Dictionary Values: Bar and Line Plot')\nplt.legend()\nplt.grid(axis='y', linestyle='--', alpha=0.5)\n\n# Show the plot\nplt.tight_layout()\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![](session14_files/figure-html/cell-2-output-1.png){width=759 height=470}\n:::\n:::\n\n\nHomework for the next session is to generate a program for rock paper scissors. \n\n",
+    "supporting": [
+      "session14_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

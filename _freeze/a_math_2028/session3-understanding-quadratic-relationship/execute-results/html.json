@@ -1,0 +1,12 @@
+{
+  "hash": "18d5c08af940f306a191da0f6d41327b",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: Session 3 - Understanding the quadratic relationship\ndate: 2026-09-08\npage-layout: article\npublish: false\nformat:\n  html:\n    toc: true\n    code-fold: true\n    html-math-method: katex\n    fig-align: center\n    fig-width: 7\n    fig-height: 5\njupyter: python3\nexecute:\n  warning: false\n---\n\nUnderstanding $ax^2+bx+c$\n\nSketching the graph\n\nFinding the points where the graph crosses the x-axis \n\n",
+    "supporting": [
+      "session3-understanding-quadratic-relationship_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

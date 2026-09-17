@@ -1,0 +1,12 @@
+{
+  "hash": "6f76fb7cffce7d3783cba7eb7ea42c9e",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: Session 4 - Solving Quadratic Equations\ndate: 2026-09-08\npage-layout: article\npublish: false\nformat:\n  html:\n    toc: true\n    code-fold: true\n    html-math-method: katex\n    fig-align: center\n    fig-width: 7\n    fig-height: 5\njupyter: python3\nexecute:\n  warning: false\n---\n\nFactorization, completing the square, and the quadratic formula are three methods for solving quadratic equations. Quadratic formula can be derived from the method of completing the square. \n\nThe solutions to a quadratic equation correspond to the x-coordinates of the points where the graph of the corresponding quadratic function intersects the x-axis. \n\nConsidering that a quadratic function may or may not intersect the x-axis, we can have 0, 1, or 2 solutions to a quadratic equation. The discriminant of a quadratic equation helps us determine the number of solutions without actually solving the equation.\n\n",
+    "supporting": [
+      "session4-solving-quadratic-equations_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

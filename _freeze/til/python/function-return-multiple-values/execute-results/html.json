@@ -1,0 +1,12 @@
+{
+  "hash": "b09aef7fe68f38615cab46bb5f2c5494",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: Returning multiple values from a function in python\ndate: 2024-12-28\npage-layout: article\nauthor: Venu GVGK\ncategories:\n    - python\n---\n\nA function can return multiple values in a list. Each value can be used at multiple places using the index of the list. \n\nFor example,\n\n::: {#eee02881 .cell execution_count=1}\n``` {.python .cell-code}\ndef add(x,y,z):\n    i = x+y\n    j = y+z\n    k = x+z\n    return [i,j,k]\n\na = add(3,4,5)[0] # this gives us i, 7\nb = add(3,4,5)[1] # this gives us j, 9\nc = add(3,4,5)[2] # this gives us k, 8\n\nprint(a,b,c)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n7 9 8\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "function-return-multiple-values_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

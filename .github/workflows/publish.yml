@@ -2,6 +2,28 @@ on:
   workflow_dispatch:
   push:
     branches: main
+    paths:
+      - '**/*.qmd'
+      - '**/*.ipynb'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - '**/*.css'
+      - '**/*.scss'
+      - '**/*.js'
+      - '**/*.png'
+      - '**/*.jpg'
+      - '**/*.jpeg'
+      - '**/*.gif'
+      - '**/*.svg'
+      - '**/*.webp'
+      - '_extensions/**'
+      - '_themes/**'
+      - 'CNAME'
+      - 'requirements.txt'
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 name: Quarto Publish
 
@@ -18,12 +40,8 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.11'
-
-      - name: Cache pip
-        uses: actions/cache@v5
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          cache: pip
+          cache-dependency-path: requirements.txt
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2

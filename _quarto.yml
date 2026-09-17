@@ -1,6 +1,9 @@
 project:
   type: website
 
+execute:
+  freeze: auto
+
 website:
   title: "Venu GVGK Raju"
   site-url: https://gvgk.in/
