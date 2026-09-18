@@ -49,45 +49,22 @@
     ]
   },
   {
-    "listing": "/a_math_2028/index.html",
+    "listing": "/tir/index.html",
     "items": [
-      "/a_math_2028/1-quadratics/session3-self-check-sketching-quadratics.html",
-      "/a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html",
-      "/a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html",
-      "/a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html",
-      "/a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html",
-      "/a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html",
-      "/a_math_2028/1-quadratics/session1-self-check-linear-equations.html",
-      "/a_math_2028/1-quadratics/session1-revision-of-linear-equations.html",
-      "/a_math_2028/1-quadratics/session1-prework-linear-equations.html",
-      "/a_math_2028/0-preparation/prep.html"
+      "/tir/engineering-economic-exploitation.html",
+      "/tir/ellora-how-history-looks.html",
+      "/tir/philosophy/bachelor-men.html",
+      "/tir/history/indias-prettiest-library.html",
+      "/tir/sociology/ravidas-begumpura.html",
+      "/tir/history/indian-syncretism.html"
     ]
   },
   {
-    "listing": "/education/index.html",
+    "listing": "/grade_6_math_2026/index.html",
     "items": [
-      "/education/shepherd-age-math.html",
-      "/education/language-policy-quick-thoughts.html",
-      "/education/rm-case-study-ndp.html",
-      "/education/social-cultural-reproduction.html",
-      "/education/reflections.html",
-      "/education/bernstein-langauge-education-social-reproduction.html",
-      "/education/bruner-chomsky-deb-roy.html",
-      "/education/mirabai-history-perspectives.html",
-      "/education/timeline-indian-education.html",
-      "/education/ambedkar-1916.html",
-      "/education/rethinking-responsibility.html",
-      "/education/kandukuri-phule.html",
-      "/education/kaka-muttai-philosophy.html"
-    ]
-  },
-  {
-    "listing": "/eco_2028/index.html",
-    "items": [
-      "/eco_2028/unit2-PED-changes.html",
-      "/eco_2028/unit2-lecture-notes-demand-supply-elasticity.html",
-      "/eco_2028/unit2-demand-supply-curves-self-check.html",
-      "/eco_2028/unit2-demand-supply-curves.html"
+      "/grade_6_math_2026/fractions-4-operations.html",
+      "/grade_6_math_2026/properties-of-number-sets.html",
+      "/grade_6_math_2026/types-of-numbers.html"
     ]
   },
   {
@@ -113,22 +90,46 @@
     ]
   },
   {
-    "listing": "/grade_6_math_2026/index.html",
+    "listing": "/eco_2028/index.html",
     "items": [
-      "/grade_6_math_2026/fractions-4-operations.html",
-      "/grade_6_math_2026/properties-of-number-sets.html",
-      "/grade_6_math_2026/types-of-numbers.html"
+      "/eco_2028/unit2-PED-changes.html",
+      "/eco_2028/unit2-lecture-notes-demand-supply-elasticity.html",
+      "/eco_2028/unit2-demand-supply-curves-self-check.html",
+      "/eco_2028/unit2-demand-supply-curves.html"
     ]
   },
   {
-    "listing": "/tir/index.html",
+    "listing": "/education/index.html",
     "items": [
-      "/tir/engineering-economic-exploitation.html",
-      "/tir/ellora-how-history-looks.html",
-      "/tir/philosophy/bachelor-men.html",
-      "/tir/history/indias-prettiest-library.html",
-      "/tir/sociology/ravidas-begumpura.html",
-      "/tir/history/indian-syncretism.html"
+      "/education/shepherd-age-math.html",
+      "/education/language-policy-quick-thoughts.html",
+      "/education/rm-case-study-ndp.html",
+      "/education/social-cultural-reproduction.html",
+      "/education/reflections.html",
+      "/education/bernstein-langauge-education-social-reproduction.html",
+      "/education/bruner-chomsky-deb-roy.html",
+      "/education/mirabai-history-perspectives.html",
+      "/education/timeline-indian-education.html",
+      "/education/ambedkar-1916.html",
+      "/education/rethinking-responsibility.html",
+      "/education/kandukuri-phule.html",
+      "/education/kaka-muttai-philosophy.html"
+    ]
+  },
+  {
+    "listing": "/a_math_2028/index.html",
+    "items": [
+      "/a_math_2028/1-quadratics/session4-lecture-notes-quadratic-formula.html",
+      "/a_math_2028/1-quadratics/session3-self-check-sketching-quadratics.html",
+      "/a_math_2028/1-quadratics/session3-lecture-notes-sketching-quadratics.html",
+      "/a_math_2028/1-quadratics/session2-lecture-notes-linear-quadratic.html",
+      "/a_math_2028/1-quadratics/session2-quadratic-explorations-answers.html",
+      "/a_math_2028/1-quadratics/session2-prework-quadratic-explorations.html",
+      "/a_math_2028/1-quadratics/session1-lecture-notes-linear-equations.html",
+      "/a_math_2028/1-quadratics/session1-self-check-linear-equations.html",
+      "/a_math_2028/1-quadratics/session1-revision-of-linear-equations.html",
+      "/a_math_2028/1-quadratics/session1-prework-linear-equations.html",
+      "/a_math_2028/0-preparation/prep.html"
     ]
   },
   {
