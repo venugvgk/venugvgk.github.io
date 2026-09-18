@@ -1,5 +1,5 @@
 ---
-title: Session 3 Lecture Notes Sketching Quadratics
+title: Session 3 Lecture Notes Sketching Quadratics - Factorization
 date: 2026-09-15
 page-layout: article
 publish: false

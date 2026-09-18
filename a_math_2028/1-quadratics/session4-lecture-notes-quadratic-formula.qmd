@@ -1,0 +1,534 @@
+---
+title: Session 4 Lecture Notes Sketching Quadratics - Quadratic Formula
+date: 2026-09-18
+page-layout: article
+publish: false
+format:
+  html:
+    toc: true
+    code-fold: true
+    html-math-method: katex
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+jupyter: python3
+execute:
+  warning: false
+---
+
+# The quadratic relationship
+
+A quadratic relationship has the form
+
+$$
+y=ax^2+bx+c,
+$$
+
+where $a$, $b$, and $c$ are constants and $a\ne0$. Its graph is a **parabola**.
+
+The values of $a$, $b$, and $c$ influence the graph in different ways:
+
+- $a$ determines whether the parabola opens upwards or downwards and affects its width.
+- $b$ helps determine the horizontal position of the vertex.
+- $c$ gives the $y$-intercept.
+
+To sketch a parabola accurately, it is useful to identify its vertex, axis of symmetry, $y$-intercept, and $x$-intercepts.
+
+## Important points and features
+
+### The $y$-intercept
+
+The $y$-intercept occurs when $x=0$. Substituting $x=0$ gives
+
+$$
+y=a(0)^2+b(0)+c=c.
+$$
+
+Therefore, the graph crosses the $y$-axis at
+
+$$
+(0,c).
+$$
+
+### The axis of symmetry
+
+The axis of symmetry is the vertical line that divides the parabola into two mirror-image halves.
+
+Notice that the equation has the same value $y=c$ at two different points that can be found by solving
+
+$$
+ax^2+bx+c=c
+$$
+
+Subtracting $c$ from both sides gives
+
+$$
+ax^2+bx=0.
+$$
+
+Factorising,
+
+$$
+x(ax+b)=0.
+$$
+
+Thus,
+
+$$
+x=0\qquad\text{or}\qquad x=-\frac ba.
+$$
+
+These two points have the same $y$-coordinate, so they are symmetric about the axis of symmetry. The axis lies halfway between their $x$-coordinates:
+
+$$
+x=\frac{0+(-b/a)}2=-\frac{b}{2a}.
+$$
+
+Hence the axis of symmetry is
+
+$$
+\boxed{x=-\frac{b}{2a}}.
+$$
+
+### The vertex
+
+The vertex lies on the axis of symmetry, so its $x$-coordinate is
+
+$$
+x_v=-\frac{b}{2a}.
+$$
+
+Substituting this into $y=ax^2+bx+c$ gives
+
+$$
+y_v=a\left(-\frac{b}{2a}\right)^2+b\left(-\frac{b}{2a}\right)+c.
+$$
+
+Simplifying,
+
+$$
+y_v=\frac{b^2}{4a}-\frac{b^2}{2a}+c
+=\frac{b^2-2b^2+4ac}{4a}
+=\frac{4ac-b^2}{4a}.
+$$
+
+Therefore,
+
+$$
+\boxed{\left(-\frac{b}{2a},\frac{4ac-b^2}{4a}\right)}
+$$
+
+is the vertex.
+
+The expression can also be written as
+
+$$
+y_v=-\frac{b^2-4ac}{4a}.
+$$
+
+### The $x$-intercepts
+
+An $x$-intercept occurs when $y=0$. Therefore, we solve
+
+$$
+ax^2+bx+c=0.
+$$
+
+If the quadratic factorises easily, factorisation is often the quickest method. For example,
+
+$$
+x^2-5x+6=0
+$$
+
+becomes
+
+$$
+(x-2)(x-3)=0,
+$$
+
+so $x=2$ or $x=3$.
+
+When factorisation is difficult or impossible using integers, we can use **completing the square**.
+
+## Completing the square
+
+Completing the square rewrites a quadratic expression in the form
+
+$$
+(x+p)^2+q.
+$$
+
+The key identity is
+
+$$
+(x+p)^2=x^2+2px+p^2.
+$$
+
+For an expression such as
+
+$$
+x^2+px,
+$$
+
+we add and subtract the square of half the coefficient of $x$:
+
+$$
+x^2+px
+=x^2+px+\left(\frac p2\right)^2-\left(\frac p2\right)^2.
+$$
+
+The first three terms form a perfect square:
+
+$$
+x^2+px+\left(\frac p2\right)^2
+=\left(x+\frac p2\right)^2.
+$$
+
+Therefore,
+
+$$
+x^2+px=\left(x+\frac p2\right)^2-\left(\frac p2\right)^2.
+$$
+
+### Completing the square in a quadratic equation
+
+Start with
+
+$$
+ax^2+bx+c=0.
+$$
+
+We assume $a\ne0$.
+
+### Step 1: Divide by $a$
+
+Dividing every term by $a$ gives
+
+$$
+x^2+\frac ba x+\frac ca=0.
+$$
+
+Move the constant term to the right-hand side:
+
+$$
+x^2+\frac ba x=-\frac ca.
+$$
+
+### Step 2: Rewrite the x-coefficient as 2*b/2a and add the square of this
+
+The coefficient of $x$ is $\frac ba$. Half of it is $\frac{b}{2a}$, so add
+
+$$
+\left(\frac{b}{2a}\right)^2=\frac{b^2}{4a^2}
+$$
+
+to both sides:
+
+$$
+x^2+2*\frac {b}{2a} x+\frac{b^2}{4a^2}
+=-\frac ca+\frac{b^2}{4a^2}.
+$$
+
+### Step 3: Write the left-hand side as a square
+
+Using the identity for a perfect square,
+
+$$
+\left(x+\frac{b}{2a}\right)^2
+=-\frac ca+\frac{b^2}{4a^2}.
+$$
+
+Rewrite the right-hand side using the common denominator $4a^2$:
+
+$$
+-\frac ca=-\frac{4ac}{4a^2}.
+$$
+
+Therefore,
+
+$$
+\left(x+\frac{b}{2a}\right)^2
+=\frac{b^2-4ac}{4a^2}.
+$$
+
+### Step 4: Take square roots
+
+Taking the square root of both sides requires both the positive and negative square roots:
+
+$$
+x+\frac{b}{2a}=\pm\sqrt{\frac{b^2-4ac}{4a^2}}.
+$$
+
+Since $\sqrt{4a^2}=2|a|$, the expression can be written in the equivalent form needed for the formula as
+
+$$
+x+\frac{b}{2a}=\pm\frac{\sqrt{b^2-4ac}}{2a}.
+$$
+
+### Step 5: Isolate $x$
+
+Subtract $\frac{b}{2a}$ from both sides:
+
+$$
+x=-\frac{b}{2a}\pm\frac{\sqrt{b^2-4ac}}{2a}.
+$$
+
+Combining the terms gives the quadratic formula:
+
+$$
+\boxed{x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}}.
+$$
+
+The symbol $\pm$ means that we calculate two possibilities:
+
+$$
+x_1=\frac{-b+\sqrt{b^2-4ac}}{2a}
+$$
+
+and
+
+$$
+x_2=\frac{-b-\sqrt{b^2-4ac}}{2a}.
+$$
+
+## Meaning of the two values of $x$
+
+The solutions of
+
+$$
+ax^2+bx+c=0
+$$
+
+are the values of $x$ for which $y=0$. Thus, they give the $x$-coordinates of the points where the parabola meets the $x$-axis.
+
+If two different real values are obtained, the graph crosses the $x$-axis twice. The corresponding points are
+
+$$
+(x_1,0)\qquad\text{and}\qquad(x_2,0).
+$$
+
+The two values are symmetric about the axis of symmetry. Their average is
+
+$$
+\frac{x_1+x_2}{2}=-\frac{b}{2a}.
+$$
+
+This shows directly from the solutions that the axis of symmetry is
+
+$$
+\boxed{x=-\frac{b}{2a}}.
+$$
+
+## The discriminant
+
+The expression inside the square root is called the **discriminant**:
+
+$$
+\Delta=b^2-4ac.
+$$
+
+It determines the type and number of real solutions.
+
+| Discriminant | Algebraic result | Geometric meaning |
+|---|---|---|
+| $\Delta>0$ | Two distinct real solutions | The parabola crosses the $x$-axis twice. |
+| $\Delta=0$ | One repeated real solution | The parabola touches the $x$-axis at its vertex. |
+| $\Delta<0$ | No real solutions | The parabola does not meet the $x$-axis. |
+
+When $\Delta<0$, the quadratic formula still gives two complex solutions, but there are no real $x$-intercepts.
+
+The relationship between the discriminant and the vertex is also useful. Since
+
+$$
+y_v=-\frac{\Delta}{4a},
+$$
+
+we can determine the position of the vertex relative to the $x$-axis.
+
+- If $a>0$ and $\Delta>0$, then $y_v<0$, so the upward-opening parabola crosses the axis twice.
+- If $a>0$ and $\Delta=0$, then $y_v=0$, so the vertex lies on the axis.
+- If $a>0$ and $\Delta<0$, then $y_v>0$, so the graph remains above the axis.
+
+For a downward-opening parabola, the corresponding positions are reversed.
+
+## Worked examples
+
+### Example 1: Two real solutions
+
+Solve
+
+$$
+x^2-5x+6=0.
+$$
+
+Here,
+
+$$
+a=1,\qquad b=-5,\qquad c=6.
+$$
+
+The discriminant is
+
+$$
+\Delta=(-5)^2-4(1)(6)=25-24=1.
+$$
+
+Since $\Delta>0$, there are two distinct real solutions. Using the quadratic formula,
+
+$$
+x=\frac{-(-5)\pm\sqrt{1}}{2(1)}
+=\frac{5\pm1}{2}.
+$$
+
+Thus,
+
+$$
+x=3\qquad\text{or}\qquad x=2.
+$$
+
+The graph of $y=x^2-5x+6$ crosses the $x$-axis at $(2,0)$ and $(3,0)$. Its axis of symmetry is
+
+$$
+x=-\frac{-5}{2(1)}=\frac52.
+$$
+
+### Example 2: One real solution
+
+Solve
+
+$$
+x^2-4x+4=0.
+$$
+
+Here,
+
+$$
+a=1,\qquad b=-4,\qquad c=4.
+$$
+
+The discriminant is
+
+$$
+\Delta=(-4)^2-4(1)(4)=16-16=0.
+$$
+
+Since $\Delta=0$, the two solutions coincide:
+
+$$
+x=\frac{-(-4)\pm\sqrt0}{2(1)}=\frac42=2.
+$$
+
+There is one distinct real solution, $x=2$. Algebraically, this is a repeated root because
+
+$$
+x^2-4x+4=(x-2)^2.
+$$
+
+Geometrically, the parabola touches the $x$-axis at its vertex, $(2,0)$, and does not cross it.
+
+### Example 3: No real solutions
+
+Solve
+
+$$
+x^2+2x+2=0.
+$$
+
+Here,
+
+$$
+a=1,\qquad b=2,\qquad c=2.
+$$
+
+The discriminant is
+
+$$
+\Delta=2^2-4(1)(2)=4-8=-4.
+$$
+
+Since $\Delta<0$, there are no real solutions. The quadratic formula gives
+
+$$
+x=\frac{-2\pm\sqrt{-4}}2,
+$$
+
+which involves the imaginary number $i$, because $\sqrt{-4}=2i$. Thus the complex solutions are
+
+$$
+x=-1+i\qquad\text{and}\qquad x=-1-i.
+$$
+
+There are no real $x$-intercepts. In fact,
+
+$$
+x^2+2x+2=(x+1)^2+1,
+$$
+
+so the graph has minimum value $1$ at $x=-1$ and remains above the $x$-axis.
+
+## Graphs of the numerical examples
+
+The following graph shows the three worked examples. The labels identify the real $x$-intercepts when they exist and the vertex in each case.
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-5, 5, 600)
+examples = [
+    (1, -5, 6, "Example 1: two real solutions"),
+    (1, -4, 4, "Example 2: one repeated solution"),
+    (1, 2, 2, "Example 3: no real solutions"),
+]
+
+fig, axes = plt.subplots(1, 3, figsize=(14, 4), sharey=True)
+for ax, (a, b, c, title) in zip(axes, examples):
+    y = a*x**2 + b*x + c
+    delta = b**2 - 4*a*c
+    vertex_x = -b / (2*a)
+    vertex_y = a*vertex_x**2 + b*vertex_x + c
+
+    ax.plot(x, y, color="navy", label=f"y = {a}x² + {b}x + {c}")
+    ax.axhline(0, color="black", linewidth=0.8)
+    ax.axvline(0, color="black", linewidth=0.8)
+    ax.scatter(vertex_x, vertex_y, color="darkorange", zorder=3)
+    ax.annotate(
+        f"vertex ({vertex_x:g}, {vertex_y:g})",
+        (vertex_x, vertex_y),
+        xytext=(6, 8),
+        textcoords="offset points",
+        color="darkorange",
+    )
+
+    if delta >= 0:
+        roots = np.roots([a, b, c])
+        real_roots = sorted(r.real for r in roots if abs(r.imag) < 1e-9)
+        ax.scatter(real_roots, [0] * len(real_roots), color="crimson", zorder=3)
+        for root in real_roots:
+            ax.annotate(
+                f"({root:g}, 0)",
+                (root, 0),
+                xytext=(0, -18),
+                textcoords="offset points",
+                ha="center",
+                color="crimson",
+            )
+
+    ax.set_title(title)
+    ax.set_xlabel("x")
+    ax.grid(alpha=0.25)
+    ax.legend(fontsize=8, loc="upper left")
+
+axes[0].set_ylabel("y")
+plt.tight_layout()
+plt.show()
+```
+
+## Key ideas
+
+- The $y$-intercept is $(0,c)$.
+- The axis of symmetry is $x=-\frac{b}{2a}$.
+- The vertex is $\left(-\frac{b}{2a},\frac{4ac-b^2}{4a}\right)$.
+- The $x$-intercepts are found by solving $ax^2+bx+c=0$.
+- Completing the square leads to the quadratic formula.
+- The discriminant $\Delta=b^2-4ac$ tells us whether the graph has two, one, or no real $x$-intercepts.

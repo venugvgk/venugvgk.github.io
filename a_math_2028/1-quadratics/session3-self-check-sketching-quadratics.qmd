@@ -1,5 +1,5 @@
 ---
-title: Session 3 Check Your Understanding Sketching Quadratics  
+title: Session 3 Check Your Understanding Sketching Quadratics - Factorization
 date: 2026-09-16
 page-layout: article
 publish: false
