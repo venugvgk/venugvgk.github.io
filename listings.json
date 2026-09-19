@@ -60,11 +60,30 @@
     ]
   },
   {
-    "listing": "/grade_6_math_2026/index.html",
+    "listing": "/education/index.html",
     "items": [
-      "/grade_6_math_2026/fractions-4-operations.html",
-      "/grade_6_math_2026/properties-of-number-sets.html",
-      "/grade_6_math_2026/types-of-numbers.html"
+      "/education/shepherd-age-math.html",
+      "/education/language-policy-quick-thoughts.html",
+      "/education/rm-case-study-ndp.html",
+      "/education/social-cultural-reproduction.html",
+      "/education/reflections.html",
+      "/education/bernstein-langauge-education-social-reproduction.html",
+      "/education/bruner-chomsky-deb-roy.html",
+      "/education/mirabai-history-perspectives.html",
+      "/education/timeline-indian-education.html",
+      "/education/ambedkar-1916.html",
+      "/education/rethinking-responsibility.html",
+      "/education/kandukuri-phule.html",
+      "/education/kaka-muttai-philosophy.html"
+    ]
+  },
+  {
+    "listing": "/eco_2028/index.html",
+    "items": [
+      "/eco_2028/unit2-PED-changes.html",
+      "/eco_2028/unit2-lecture-notes-demand-supply-elasticity.html",
+      "/eco_2028/unit2-demand-supply-curves-self-check.html",
+      "/eco_2028/unit2-demand-supply-curves.html"
     ]
   },
   {
@@ -90,30 +109,12 @@
     ]
   },
   {
-    "listing": "/eco_2028/index.html",
+    "listing": "/grade_6_math_2026/index.html",
     "items": [
-      "/eco_2028/unit2-PED-changes.html",
-      "/eco_2028/unit2-lecture-notes-demand-supply-elasticity.html",
-      "/eco_2028/unit2-demand-supply-curves-self-check.html",
-      "/eco_2028/unit2-demand-supply-curves.html"
-    ]
-  },
-  {
-    "listing": "/education/index.html",
-    "items": [
-      "/education/shepherd-age-math.html",
-      "/education/language-policy-quick-thoughts.html",
-      "/education/rm-case-study-ndp.html",
-      "/education/social-cultural-reproduction.html",
-      "/education/reflections.html",
-      "/education/bernstein-langauge-education-social-reproduction.html",
-      "/education/bruner-chomsky-deb-roy.html",
-      "/education/mirabai-history-perspectives.html",
-      "/education/timeline-indian-education.html",
-      "/education/ambedkar-1916.html",
-      "/education/rethinking-responsibility.html",
-      "/education/kandukuri-phule.html",
-      "/education/kaka-muttai-philosophy.html"
+      "/grade_6_math_2026/fractions-more-practice-LCM.html",
+      "/grade_6_math_2026/fractions-4-operations.html",
+      "/grade_6_math_2026/properties-of-number-sets.html",
+      "/grade_6_math_2026/types-of-numbers.html"
     ]
   },
   {
