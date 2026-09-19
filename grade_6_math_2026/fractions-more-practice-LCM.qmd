@@ -1,0 +1,55 @@
+---
+title: "Grade 6 Fractions: Two More Practice Sets"
+description: "Two additional practice sets on fractions, including addition and subtraction using LCM."
+date: 2026-09-19
+page-layout: article
+format:
+  html:
+    toc: true
+    number-sections: true
+    theme: cosmo
+---
+
+# Fractions: two more practice sets
+
+Show your working. Write each answer in its simplest form. For addition and subtraction with different denominators, find the **LCM** of the denominators first, and then rename the fractions before calculating.
+
+## A reminder about LCM
+
+**LCM** means the smallest number that is a multiple of two or more numbers.
+
+Example: To add $\frac{1}{6}+\frac{3}{8}$:
+
+- Multiples of $6$ include $6$, $12$, $18$, $24$.
+- Multiples of $8$ include $8$, $16$, $24$.
+- The LCM of $6$ and $8$ is $24$.
+- Rename the fractions: $\frac{1}{6}=\frac{4}{24}$ and $\frac{3}{8}=\frac{9}{24}$.
+- Add: $\frac{4}{24}+\frac{9}{24}=\frac{13}{24}$.
+- You can also use the division method to find LCM. 
+
+# Practice set 4
+
+1. Change $3\frac{4}{7}$ into an improper fraction.
+2. Change $\frac{29}{6}$ into a mixed fraction.
+3. Add $\frac{5}{12}+\frac{7}{18}$. Find the LCM of $12$ and $18$ first.
+4. Subtract $\frac{11}{15}-\frac{2}{9}$. Find the LCM of $15$ and $9$ first.
+5. Add $2\frac{3}{8}+1\frac{5}{6}$. Convert the mixed fractions to improper fractions and find the LCM of $8$ and $6$.
+6. Subtract $4\frac{1}{5}-2\frac{3}{4}$. Convert the mixed fractions to improper fractions and find the LCM of $5$ and $4$.
+7. Multiply $\frac{7}{9}\times\frac{3}{14}$.
+8. Multiply $1\frac{2}{3}\times\frac{3}{5}$. First change the mixed fraction into an improper fraction.
+9. Divide $\frac{5}{6}\div\frac{10}{9}$.
+10. Divide $2\frac{1}{2}\div1\frac{1}{4}$. First change both mixed fractions into improper fractions.
+
+# Practice set 5
+
+1. Change $6\frac{5}{8}$ into an improper fraction.
+2. Change $\frac{47}{9}$ into a mixed fraction.
+3. Add $\frac{7}{20}+\frac{5}{12}$. Find the LCM of $20$ and $12$ first.
+4. Subtract $\frac{13}{14}-\frac{5}{21}$. Find the LCM of $14$ and $21$ first.
+5. Add $3\frac{1}{6}+2\frac{3}{10}$. Convert the mixed fractions to improper fractions and find the LCM of $6$ and $10$.
+6. Subtract $5\frac{2}{9}-1\frac{5}{12}$. Convert the mixed fractions to improper fractions and find the LCM of $9$ and $12$.
+7. Multiply $\frac{8}{15}\times\frac{5}{16}$.
+8. Multiply $2\frac{1}{4}\times1\frac{1}{3}$. First change both mixed fractions into improper fractions.
+9. Divide $\frac{7}{10}\div\frac{14}{25}$.
+10. Divide $3\frac{3}{5}\div1\frac{1}{5}$. First change both mixed fractions into improper fractions.
+
