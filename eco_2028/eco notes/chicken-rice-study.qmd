@@ -1,0 +1,186 @@
+The owner of a local restaurant has asked for your help. Sales of the most popular dish, chicken and rice, have fallen sharply since the price of the meal increased. The owner is keen to know if the price increase is the only reason for the fall in sales or whether there are other reasons. In a group, undertake an investigation and then report findings to the whole class. In planning your investigation, you should consider the following:  1 What data do you need? 2 How might the data be collected? 3 How certain are you about what you have found out?  You could present your findings using a presentation app. REFLECTION How easy was it for your group to undertake Activity 8.7? How did you allocate tasks to group members? What might you do differently if you were to repeat the activity? How well was your presentation received by the rest of the class? How has this activity increased your understanding of the three elasticity of demand concepts?
+
+The fall in chicken-and-rice sales should not automatically be attributed entirely to the price increase. Your group should collect evidence about prices, quantities sold and other possible influences, then use the data to estimate **price elasticity of demand (PED)** while considering income elasticity (YED) and cross elasticity of demand (XED).
+
+## 1. Investigation question
+
+**Main question:**  
+*Has the increase in the price of chicken and rice caused the fall in sales, or have other factors also contributed?*
+
+Possible explanations include:
+
+- The meal became too expensive for customers.
+- Customers’ incomes or spending power have fallen.
+- A competing restaurant reduced its prices.
+- Customers switched to substitutes such as burgers, noodles or vegetarian meals.
+- The quality, portion size or taste changed.
+- The restaurant’s service deteriorated.
+- There was bad weather, a local event, road construction or a change in nearby employment or student numbers.
+- The restaurant had shortages or reduced opening hours.
+- Customers became concerned about health, food quality or hygiene.
+
+## 2. Data required
+
+| Information needed | Why it matters | Possible measure |
+|---|---|---|
+| Price of chicken and rice before and after the increase | To calculate the percentage change in price | Price per meal |
+| Number of meals sold each day or week | To measure the change in quantity demanded | Units sold |
+| Total revenue | A price increase may raise revenue even if sales fall | Price × quantity |
+| Prices and sales of substitute meals | To investigate cross elasticity of demand | Prices of burgers, noodles and vegetarian meals |
+| Prices at competing restaurants | Customers may have switched to competitors | Local prices and estimated sales |
+| Customer income or budget information | To investigate income effects | Anonymous survey categories |
+| Portion size, quality and service | To identify non-price causes | Customer ratings and staff records |
+| Weather, holidays and local events | To control for unusual conditions | Daily records |
+| Promotions and opening hours | These may affect sales independently of price | Discount and operating records |
+
+Historical sales records are particularly important. A useful dataset would contain daily or weekly observations for several weeks before and after the price change, rather than only one comparison between two dates.
+
+## 3. Data collection methods
+
+### Restaurant records
+
+Ask the owner for:
+
+- Daily sales of chicken and rice for several months.
+- Prices charged during the same period.
+- Sales of other main meals.
+- Discounts, promotions and changes in portion size.
+- Opening hours, stock shortages and staff changes.
+
+These records are likely to be more reliable than customers’ memories.
+
+### Customer survey
+
+Use a short, anonymous questionnaire. For example:
+
+1. How often did you buy chicken and rice before the price increase?
+2. How often do you buy it now?
+3. Has the price affected your decision?
+4. What do you buy instead?
+5. Have you noticed changes in quality, portion size or service?
+6. Has your personal budget changed?
+7. How do you rate the meal’s value for money?
+
+Use a mixture of multiple-choice and open-response questions. Survey customers who still buy the meal as well as former customers, otherwise the results will be biased towards loyal customers.
+
+### Competitor research
+
+Record the prices of similar meals at nearby restaurants over the same period. Ask customers whether they have switched to another restaurant or meal.
+
+### Observation and interviews
+
+Observe queues, customer numbers and busy periods. Interview the owner and staff about changes in quality, supply, service and customer behaviour.
+
+## 4. Analysis
+
+Calculate the percentage changes:
+
+\[
+\%\Delta Q=\frac{Q_2-Q_1}{Q_1}\times100
+\]
+
+\[
+\%\Delta P=\frac{P_2-P_1}{P_1}\times100
+\]
+
+Then calculate price elasticity of demand:
+
+\[
+PED=\frac{\%\Delta Q_d}{\%\Delta P}
+\]
+
+For example, suppose the price rises from ₹160 to ₹200 and weekly sales fall from 500 meals to 350 meals:
+
+\[
+\%\Delta P=\frac{200-160}{160}\times100=25\%
+\]
+
+\[
+\%\Delta Q_d=\frac{350-500}{500}\times100=-30\%
+\]
+
+\[
+PED=\frac{-30}{25}=-1.2
+\]
+
+The absolute value is \(1.2\), so demand is relatively elastic in this example. This suggests that the price increase may have caused a more-than-proportionate fall in sales. However, it does not prove that price was the only cause.
+
+Also compare revenue:
+
+- Before: \(₹160 \times 500=₹80{,}000\).
+- After: \(₹200 \times 350=₹70{,}000\).
+
+In this example, the price increase has reduced total revenue because demand was elastic.
+
+PED measures the response of demand to the price of the same product; YED measures the response to consumer income; and XED measures the response to the price of another good.
+
+## 5. Applying the three elasticities
+
+### Price elasticity of demand
+
+Use the restaurant’s own price and sales data.
+
+- A large fall in sales after a small price increase suggests elastic demand.
+- A small fall in sales after a large price increase suggests inelastic demand.
+- The result is stronger if other conditions remained broadly unchanged.
+
+### Income elasticity of demand
+
+Ask whether customers’ incomes or available spending money have changed.
+
+\[
+YED=\frac{\%\Delta Q_d}{\%\Delta Y}
+\]
+
+If customers’ incomes have fallen and demand for the meal has also fallen, the meal may be a normal good. If demand rises when incomes fall, it may behave as an inferior good, perhaps because customers are switching from more expensive meals.
+
+Income data should be collected anonymously and in broad bands rather than by asking customers for exact incomes.
+
+### Cross elasticity of demand
+
+Compare chicken-and-rice sales with the prices of possible substitutes.
+
+\[
+XED=\frac{\%\Delta Q_d\text{ of chicken and rice}}{\%\Delta P\text{ of another meal}}
+\]
+
+If the price of a competing burger meal falls and chicken-and-rice sales fall, the meals may be substitutes, producing a positive relationship between the price of the alternative and demand for chicken and rice. If chicken-and-rice is normally bought with another product, such as a drink, the relationship may be complementary.
+
+## 6. Reliability and limitations
+
+The group should be cautious about claiming that the price increase caused the entire fall. Important limitations include:
+
+- There may be too few observations.
+- The price change may have occurred during a holiday or unusual season.
+- Customers may give inaccurate answers.
+- Survey respondents may not represent all customers.
+- Several factors may have changed at the same time.
+- Competitor sales data may be estimates rather than exact figures.
+- Sales are not exactly the same as quantity demanded if the restaurant had shortages or limited opening hours.
+- Inflation may affect customers’ budgets and the restaurant’s costs simultaneously.
+
+A stronger investigation would compare:
+
+- Several weeks before and after the price change.
+- Chicken-and-rice sales with sales of other meals.
+- The restaurant with similar nearby restaurants.
+- Busy and quiet days separately.
+- Customer responses with the restaurant’s recorded sales.
+
+A spreadsheet or graph could show price and quantity sold over time. A scatter graph with a trend line could help identify whether higher prices are generally associated with lower sales, although correlation alone does not establish causation.
+
+## 7. Likely conclusion format
+
+Your conclusion could be written like this:
+
+> Sales of chicken and rice fell by ___% after the price increased by ___%. This gives an estimated PED of ___. The evidence therefore suggests that demand was relatively elastic/inelastic. However, the price increase was probably not the only cause because ___% of surveyed customers reported switching to ___, competitor prices changed by ___%, and ___ also changed. Our conclusion is reasonably/unreasonably certain because ___. More reliable evidence would require a longer time series and better information about competitors and customer incomes.
+
+## Reflection
+
+You could address the reflection questions as follows:
+
+- The activity was manageable, but collecting reliable information from customers and competitors was difficult.
+- Tasks were allocated by assigning separate roles: research design, customer survey, competitor research, data analysis and presentation design.
+- If repeating the activity, the group would pilot-test the questionnaire, collect data for a longer period and use a larger, more representative sample.
+- The presentation was effective if the class understood the graphs, calculations and limitations, rather than simply accepting the conclusion.
+- The activity showed that PED examines the effect of a product’s own price, YED examines the effect of income, and XED examines the effect of another product’s price. These concepts help separate different possible explanations for a change in demand.
