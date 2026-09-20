@@ -1,0 +1,176 @@
+---
+title: YED, Business Strategy and a Case Study
+date: 2026-09-20
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+    smooth-scroll: true
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+  pdf:
+    papersize: a4
+    geometry:
+      - margin=0.8in
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyhf{}
+        \fancyfoot[L]{\href{https://gvgk.in/}{gvgk.in}}
+        \fancyfoot[R]{\thepage}
+        \fancypagestyle{plain}{%
+          \fancyhf{}
+          \fancyfoot[L]{\href{https://gvgk.in/}{gvgk.in}}
+          \fancyfoot[R]{\thepage}
+        }
+        \renewcommand{\headrulewidth}{0pt}
+        \renewcommand{\footrulewidth}{0pt}
+jupyter: python3
+execute:
+  warning: false
+---
+
+## Income elasticity of demand
+
+**Income elasticity of demand (YED)** measures how responsive the quantity demanded of a good or service is to a change in consumers' income, *ceteris paribus*.
+
+$$
+\text{YED} = \frac{\%\text{ change in quantity demanded}}{\%\text{ change in income}}
+$$
+
+A positive YED indicates a **normal good**: demand increases when income increases. A negative YED indicates an **inferior good**: demand falls when income increases.
+
+| YED value | Classification | Likely income effect |
+|---:|---|---|
+| $YED < 0$ | Inferior good | Demand falls as income rises |
+| $0 < YED < 1$ | Necessity; income-inelastic normal good | Demand rises, but by a smaller percentage than income |
+| $YED > 1$ | Luxury; income-elastic normal good | Demand rises by a larger percentage than income |
+
+{{< downloadthis unit2-YED-strategy.pdf dname="YED Strategy Case Study" label="YED Strategy Case Study" icon="file-earmark-pdf" type="success" >}}
+
+## Using YED in business strategy
+
+A firm need not calculate a perfectly precise YED for every item. However, estimates from sales data, consumer surveys and market research can help it predict how demand may change during periods of rising or falling household incomes.
+
+### Planning a product mix
+
+A firm that produces only luxury, high-YED products faces substantial risk in a recession: falling incomes can cause a more-than-proportionate fall in demand. A firm that sells only low-YED necessities may be safer, but may miss strong sales and profit growth when incomes rise.
+
+A diversified product mix can reduce this risk:
+
+- **Value and necessity lines** with low YED can provide comparatively stable sales when incomes stagnate or fall.
+- **Mid-market lines** can serve households with moderate and steadily rising incomes.
+- **Premium or luxury lines** with high YED can generate rapid sales growth when incomes rise strongly.
+
+For example, a firm selling mass-market soap, standard soap and premium skincare can retain customers who trade down during a downturn, while also benefiting when consumers trade up in an expansion. The important idea is not that every product has a fixed YED forever, but that products aimed at different income groups are likely to respond differently to economic conditions.
+
+### Capacity planning
+
+YED estimates can guide the amount and type of productive capacity a firm maintains.
+
+- A high-YED premium product may need flexible capacity because its demand can rise quickly in an economic boom and fall sharply in a downturn.
+- A low-YED necessity usually has more predictable demand, so the firm can plan steadier production schedules and inventories.
+- Producing goods with different YED values reduces the danger of having all factories, workers and distribution channels underused at the same time.
+
+A firm may therefore keep core capacity for stable everyday products while using flexible labour, subcontracting or adaptable production lines for more cyclical premium products.
+
+### Investment decisions
+
+YED helps managers judge the risk and expected return of investment.
+
+- Investment in high-YED products can be profitable where incomes are rising, but it is riskier because demand is more exposed to recessions.
+- Investment in low-YED necessities tends to offer more stable, though possibly slower, growth.
+- A balanced investment programme can combine dependable products with products that offer higher growth potential.
+
+For example, rather than investing all available funds in premium products, a consumer-goods firm might invest in both a value range and a premium range. This diversifies revenue across different possible income scenarios.
+
+### Marketing decisions
+
+Marketing can be adjusted as incomes and consumer confidence change.
+
+- In a boom, firms may advertise premium quality, convenience, status, innovation and upgrades to stimulate demand for high-YED goods.
+- In a downturn, they may highlight affordability, value for money, smaller packs, promotions and essential benefits.
+- A firm with several brands can encourage customers to move within its own portfolio, for example from a premium brand to a value brand, rather than switching to a competitor.
+
+## Indian examples
+
+The following examples illustrate strategies similar to using a spread of YED values. These firms do not necessarily publish product-level YED estimates, so the classifications below are economic interpretations rather than reported company calculations.
+
+### Tata Consumer Products
+
+Tata Consumer Products combines staple categories such as tea and salt with faster-growing, more premium-oriented food and wellness categories. Tata Tea and Tata Salt are everyday household products whose demand is likely to be relatively income-inelastic, while speciality teas, wellness products, ready-to-cook foods and premium coffee products are generally more discretionary and likely to have higher YED values.
+
+| Portfolio element | Illustrative products | Likely YED pattern | Strategic role |
+|---|---|---|---|
+| Core staples | Tata Salt; mainstream Tata Tea products | Low positive YED | Stable sales base |
+| Premium and health-focused products | Speciality teas; wellness products; premium beverages | Higher positive YED | Faster growth as incomes and aspirations rise |
+| Convenience foods | Ready-to-cook and ready-to-eat products | Moderate to higher positive YED | Captures urbanisation and changing lifestyles |
+
+This mix allows Tata Consumer to retain reliable revenue from essentials while participating in premiumisation. If household budgets tighten, demand for staples may remain relatively resilient; if incomes rise, premium and convenience products can grow faster.
+
+### Maruti Suzuki
+
+Maruti Suzuki operates across several car price points. Cars are generally more income-elastic than everyday FMCG products, but entry-level and practical family cars are likely to have lower YED values than premium SUVs or lifestyle vehicles.
+
+| Segment | Illustrative models | Likely YED pattern | Strategic role |
+|---|---|---|---|
+| Entry-level and practical cars | Alto K10; S-Presso; WagonR | Relatively lower YED within the car market | Serves budget-conscious and first-time buyers |
+| Mainstream family cars | Swift; Dzire; Baleno; Ertiga | Moderate positive YED | Broad middle-income demand |
+| Higher-priced SUVs and lifestyle models | Brezza; Grand Vitara; Jimny | Higher positive YED | Growth and higher-margin opportunities in stronger economic conditions |
+
+The broad model range reduces dependence on one income group. When consumer confidence is strong, demand for SUVs and better-equipped vehicles may rise quickly. When incomes or credit conditions weaken, practical and lower-priced models may provide a comparatively more resilient source of sales.
+
+### Titan Company
+
+Titan sells watches, jewellery, eyewear and accessories through brands aimed at different consumer budgets. Its portfolio includes mass-market and youth-oriented offerings as well as premium and luxury jewellery.
+
+| Segment | Illustrative brands/products | Likely YED pattern | Strategic role |
+|---|---|---|---|
+| Mass-market watches | Sonata | Relatively low to moderate YED | Accessible volumes and broad market reach |
+| Fashion and mid-market products | Fastrack; Titan watches; Mia jewellery | Moderate positive YED | Appeals to rising middle-income and younger consumers |
+| Premium and luxury jewellery | Tanishq premium collections; Zoya | High positive YED | Higher-value sales when incomes, wealth and confidence rise |
+
+For Titan, premium diamond jewellery and luxury watches are likely to be especially sensitive to changes in disposable income and confidence. By also serving lower and middle price points, Titan is less dependent on a single highly income-elastic market.
+
+## Case study: HUL's soap portfolio
+
+Hindustan Unilever Limited (HUL) is a major Indian fast-moving consumer goods firm. It sells products across mass, mid-market and premium price segments. This case study uses three representative soap categories to examine how YED can help a firm plan its product mix.
+
+HUL's strategy team estimates how demand for three soap categories changes as monthly household income changes. The figures are an index of quantity demanded, where $100$ is the base value at a monthly household income of ₹40,000.
+
+| Monthly household income (₹) | Mass soap index | Mid-market soap index | Premium soap index |
+|---:|---:|---:|---:|
+| 20,000 | 95 | 70 | 30 |
+| 30,000 | 98 | 85 | 55 |
+| 40,000 | 100 | 100 | 100 |
+| 50,000 | 101 | 110 | 150 |
+| 60,000 | 102 | 118 | 190 |
+| 80,000 | 103 | 130 | 260 |
+
+*Note: This is constructed classroom data. It is designed to represent a plausible mass, mid-market and premium portfolio; it is not HUL's published product-level sales data.*
+
+### Questions
+
+1. Using the data above, calculate the YED for each soap category when monthly household income rises from ₹40,000 to ₹60,000. Show your working for mass soap, mid-market soap and premium soap.
+
+2. Classify each soap category as an inferior good, a necessity or a luxury. Justify each classification using the YED values you calculated.
+
+3. Explain what the data suggest about the extent to which sales of each category are affected by changes in household income.
+
+4. HUL currently earns most of its soap revenue from the mid-market category, with smaller shares from mass and premium products. Explain one risk of concentrating production mainly on the mid-market category.
+
+5. Using YED, explain how keeping a mix of mass, mid-market and premium soap products could reduce HUL's risk over the business cycle.
+
+6. Suppose India experiences slow real income growth and rising unemployment. Predict the likely change in demand for each soap category relative to the index of $100$ at ₹40,000 monthly income. Use the data to support your answer.
+
+7. Suggest two actions HUL could take, using its existing product portfolio, to protect revenue and profit during this period.
+
+## Sources
+
+- Hindustan Unilever Limited, *Annual Report 2023--24*. The report discusses the differing performance of premium and mass segments in its portfolio.
+- Tata Consumer Products, Tata Group business profile. The profile describes the company's expansion into high-growth and premium categories.
+- Harvard Business Publishing, *ITC Limited: Diversification Strategy*. Useful background on diversification as a way of de-risking a portfolio.
+
