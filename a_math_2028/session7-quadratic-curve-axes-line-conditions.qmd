@@ -1,0 +1,22 @@
+---
+title: Session 7 - Quadratic Curves, Axes, Lines and Conditions
+date: 2026-09-08
+page-layout: article
+publish: false
+format:
+  html:
+    toc: true
+    code-fold: true
+    html-math-method: katex
+    fig-align: center
+    fig-width: 7
+    fig-height: 5
+jupyter: python3
+execute:
+  warning: false
+---
+The condition for a quadratic equation to have certain number of roots
+The conditions for a quadratic curve to cross or not cross axes
+The conditions for interaction of a quadratic curve and a line
+
+
