@@ -1,0 +1,12 @@
+{
+  "hash": "09bfa4b229ac1e4527271e6b6750bf68",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: Session 7 - Quadratic Curves, Axes, Lines and Conditions\ndate: '2026-09-08'\npage-layout: article\npublish: false\nformat:\n  html:\n    toc: true\n    code-fold: true\n    html-math-method: katex\n    fig-align: center\n    fig-width: 7\n    fig-height: 5\nexecute:\n  warning: false\n---\n\nThe condition for a quadratic equation to have certain number of roots\nThe conditions for a quadratic curve to cross or not cross axes\nThe conditions for interaction of a quadratic curve and a line\n\n",
+    "supporting": [
+      "session7-quadratic-curve-axes-line-conditions_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

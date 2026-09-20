@@ -1,0 +1,12 @@
+{
+  "hash": "d5f7ffe6b66931f1c34d165d62364a2b",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: Session 6 - Solving inequalities\ndate: '2026-09-08'\npage-layout: article\npublish: false\nformat:\n  html:\n    toc: true\n    code-fold: true\n    html-math-method: katex\n    fig-align: center\n    fig-width: 7\n    fig-height: 5\nexecute:\n  warning: false\n---\n\nRevisit how to solve linear inequalities\nShow how to solve quadratic inequalities\n\n",
+    "supporting": [
+      "session6-solving-inequalities_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
