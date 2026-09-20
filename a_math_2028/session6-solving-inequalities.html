@@ -27,6 +27,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -75,14 +110,63 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Session 6 - Solving inequalities – Venu GVGK Raju">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://gvgk.in/a_math_2028/session6-solving-inequalities_files/figure-html/cell-2-output-1.png">
 <meta property="og:site_name" content="Venu GVGK Raju">
+<meta property="og:image:height" content="326">
+<meta property="og:image:width" content="1324">
 <meta name="twitter:title" content="Session 6 - Solving inequalities – Venu GVGK Raju">
 <meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gvgk.in/a_math_2028/session6-solving-inequalities_files/figure-html/cell-2-output-1.png">
+<meta name="twitter:image-height" content="326">
+<meta name="twitter:image-width" content="1324">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -145,8 +229,37 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-inequalities-matter" id="toc-why-inequalities-matter" class="nav-link active" data-scroll-target="#why-inequalities-matter">Why Inequalities Matter</a></li>
+  <li><a href="#part-1-linear-inequalities" id="toc-part-1-linear-inequalities" class="nav-link" data-scroll-target="#part-1-linear-inequalities">Part 1: Linear Inequalities</a>
+  <ul class="collapse">
+  <li><a href="#the-golden-rule" id="toc-the-golden-rule" class="nav-link" data-scroll-target="#the-golden-rule">1.1 The Golden Rule</a></li>
+  <li><a href="#worked-example-1-basic-linear-inequality" id="toc-worked-example-1-basic-linear-inequality" class="nav-link" data-scroll-target="#worked-example-1-basic-linear-inequality">1.2 Worked Example 1 — Basic Linear Inequality</a></li>
+  <li><a href="#worked-example-2-the-sign-flip-case" id="toc-worked-example-2-the-sign-flip-case" class="nav-link" data-scroll-target="#worked-example-2-the-sign-flip-case">1.3 Worked Example 2 — The Sign-Flip Case</a></li>
+  <li><a href="#worked-example-3-compound-double-inequality" id="toc-worked-example-3-compound-double-inequality" class="nav-link" data-scroll-target="#worked-example-3-compound-double-inequality">1.4 Worked Example 3 — Compound (Double) Inequality</a></li>
+  <li><a href="#visualizing-on-a-number-line" id="toc-visualizing-on-a-number-line" class="nav-link" data-scroll-target="#visualizing-on-a-number-line">1.5 Visualizing on a Number Line</a></li>
+  <li><a href="#practice-problems-linear" id="toc-practice-problems-linear" class="nav-link" data-scroll-target="#practice-problems-linear">1.6 Practice Problems (Linear)</a></li>
+  </ul></li>
+  <li><a href="#part-2-quadratic-inequalities" id="toc-part-2-quadratic-inequalities" class="nav-link" data-scroll-target="#part-2-quadratic-inequalities">Part 2: Quadratic Inequalities</a>
+  <ul class="collapse">
+  <li><a href="#the-three-step-method" id="toc-the-three-step-method" class="nav-link" data-scroll-target="#the-three-step-method">2.1 The Three-Step Method</a></li>
+  <li><a href="#worked-example-4-factorable-quadratic" id="toc-worked-example-4-factorable-quadratic" class="nav-link" data-scroll-target="#worked-example-4-factorable-quadratic">2.2 Worked Example 4 — Factorable Quadratic</a></li>
+  <li><a href="#worked-example-5-inclusive-inequality-downward-parabola" id="toc-worked-example-5-inclusive-inequality-downward-parabola" class="nav-link" data-scroll-target="#worked-example-5-inclusive-inequality-downward-parabola">2.3 Worked Example 5 — Inclusive Inequality, Downward Parabola</a></li>
+  <li><a href="#worked-example-6-using-the-quadratic-formula-non-factorable" id="toc-worked-example-6-using-the-quadratic-formula-non-factorable" class="nav-link" data-scroll-target="#worked-example-6-using-the-quadratic-formula-non-factorable">2.4 Worked Example 6 — Using the Quadratic Formula (Non-Factorable)</a></li>
+  <li><a href="#visualizing-quadratic-inequalities-with-the-parabola" id="toc-visualizing-quadratic-inequalities-with-the-parabola" class="nav-link" data-scroll-target="#visualizing-quadratic-inequalities-with-the-parabola">2.5 Visualizing Quadratic Inequalities with the Parabola</a></li>
+  <li><a href="#a-general-purpose-solver-optional-extension" id="toc-a-general-purpose-solver-optional-extension" class="nav-link" data-scroll-target="#a-general-purpose-solver-optional-extension">2.6 A General-Purpose Solver (Optional Extension)</a></li>
+  <li><a href="#practice-problems-quadratic" id="toc-practice-problems-quadratic" class="nav-link" data-scroll-target="#practice-problems-quadratic">2.7 Practice Problems (Quadratic)</a></li>
+  </ul></li>
+  <li><a href="#part-3-key-takeaways" id="toc-part-3-key-takeaways" class="nav-link" data-scroll-target="#part-3-key-takeaways">Part 3: Key Takeaways</a>
+  <ul class="collapse">
+  <li><a href="#looking-ahead-to-grade-11" id="toc-looking-ahead-to-grade-11" class="nav-link" data-scroll-target="#looking-ahead-to-grade-11">Looking Ahead to Grade 11</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -176,9 +289,414 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Revisit how to solve linear inequalities Show how to solve quadratic inequalities</p>
+<section id="why-inequalities-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-inequalities-matter">Why Inequalities Matter</h2>
+<p>An <strong>equation</strong> like <span class="math inline">x + 3 = 7</span> has a single answer, <span class="math inline">x = 4</span>. An <strong>inequality</strong> like <span class="math inline">x + 3 &gt; 7</span> asks a different question: not “what one value works?” but “what is the <em>entire range</em> of values that works?”</p>
+<p>Inequalities show up whenever you deal with limits, budgets, speed limits, safe temperature ranges, or feasible regions in optimization — which is exactly why they become central in Grade 11 topics like linear programming, calculus (domains, error bounds), and coordinate geometry.</p>
+<p>There are four inequality symbols you need to be completely comfortable with:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: center;">Boundary point included?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">&gt;</span></td>
+<td style="text-align: left;">greater than</td>
+<td style="text-align: center;">No (open circle)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">&lt;</span></td>
+<td style="text-align: left;">less than</td>
+<td style="text-align: center;">No (open circle)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\geq</span></td>
+<td style="text-align: left;">greater than or equal to</td>
+<td style="text-align: center;">Yes (closed circle)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\leq</span></td>
+<td style="text-align: left;">less than or equal to</td>
+<td style="text-align: center;">Yes (closed circle)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="part-1-linear-inequalities" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-linear-inequalities">Part 1: Linear Inequalities</h2>
+<p>A <strong>linear inequality</strong> in one variable has the form <span class="math inline">ax + b &gt; 0</span> (or <span class="math inline">&lt;, \geq, \leq</span>), where the variable appears only to the power 1.</p>
+<section id="the-golden-rule" class="level3">
+<h3 class="anchored" data-anchor-id="the-golden-rule">1.1 The Golden Rule</h3>
+<p>Solving a linear inequality works almost exactly like solving a linear equation — add, subtract, multiply, divide on both sides — <strong>with one critical exception</strong>:</p>
+<blockquote class="blockquote">
+<p><strong>If you multiply or divide both sides by a negative number, you must flip the direction of the inequality sign.</strong></p>
+</blockquote>
+<p><strong>Why does this happen?</strong> Consider the true statement <span class="math inline">2 &lt; 5</span>. If we multiply both sides by <span class="math inline">-1</span>, we get <span class="math inline">-2</span> and <span class="math inline">-5</span>. But <span class="math inline">-2 &gt; -5</span>, not <span class="math inline">-2 &lt; -5</span>. Multiplying by a negative number reverses the order on the number line, so the inequality sign must reverse too.</p>
+</section>
+<section id="worked-example-1-basic-linear-inequality" class="level3">
+<h3 class="anchored" data-anchor-id="worked-example-1-basic-linear-inequality">1.2 Worked Example 1 — Basic Linear Inequality</h3>
+<p>Solve <span class="math inline">3x - 7 &gt; 8</span>.</p>
+<p><span class="math display">
+\begin{aligned}
+3x - 7 &amp;&gt; 8 \\
+3x &amp;&gt; 15 \quad \text{(added 7 to both sides)} \\
+x &amp;&gt; 5 \quad \text{(divided by 3, positive, no flip)}
+\end{aligned}
+</span></p>
+<p><strong>Solution:</strong> <span class="math inline">x &gt; 5</span>, or in interval notation, <span class="math inline">x \in (5, \infty)</span>.</p>
+</section>
+<section id="worked-example-2-the-sign-flip-case" class="level3">
+<h3 class="anchored" data-anchor-id="worked-example-2-the-sign-flip-case">1.3 Worked Example 2 — The Sign-Flip Case</h3>
+<p>Solve <span class="math inline">-2x + 6 \leq 14</span>.</p>
+<p><span class="math display">
+\begin{aligned}
+-2x + 6 &amp;\leq 14 \\
+-2x &amp;\leq 8 \\
+x &amp;\geq -4 \quad \text{(divided by } -2 \text{, so the sign flipped from } \leq \text{ to } \geq \text{)}
+\end{aligned}
+</span></p>
+<p><strong>Solution:</strong> <span class="math inline">x \geq -4</span>, or <span class="math inline">x \in [-4, \infty)</span>.</p>
+</section>
+<section id="worked-example-3-compound-double-inequality" class="level3">
+<h3 class="anchored" data-anchor-id="worked-example-3-compound-double-inequality">1.4 Worked Example 3 — Compound (Double) Inequality</h3>
+<p>Solve <span class="math inline">-3 &lt; 2x + 1 \leq 9</span>.</p>
+<p>Treat this as one inequality with three parts — do the same operation to all three:</p>
+<p><span class="math display">
+\begin{aligned}
+-3 &lt; \ &amp;2x + 1 \leq 9 \\
+-4 &lt; \ &amp;2x \leq 8 \quad \text{(subtracted 1 from all parts)} \\
+-2 &lt; \ &amp;x \leq 4 \quad \text{(divided all parts by 2)}
+\end{aligned}
+</span></p>
+<p><strong>Solution:</strong> <span class="math inline">x \in (-2, 4]</span>.</p>
+</section>
+<section id="visualizing-on-a-number-line" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-on-a-number-line">1.5 Visualizing on a Number Line</h3>
+<div id="8705dd3a" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_number_line(intervals, title, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">8</span>, <span class="dv">8</span>)):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    intervals: list of tuples (start, end, start_closed, end_closed)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Use None for -inf / +inf ends.</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="fl">1.8</span>))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    ax.hlines(<span class="dv">0</span>, xlim[<span class="dv">0</span>], xlim[<span class="dv">1</span>], color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> start, end, start_closed, end_closed <span class="kw">in</span> intervals:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        left <span class="op">=</span> xlim[<span class="dv">0</span>] <span class="cf">if</span> start <span class="kw">is</span> <span class="va">None</span> <span class="cf">else</span> start</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        right <span class="op">=</span> xlim[<span class="dv">1</span>] <span class="cf">if</span> end <span class="kw">is</span> <span class="va">None</span> <span class="cf">else</span> end</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        ax.hlines(<span class="dv">0</span>, left, right, color<span class="op">=</span><span class="st">'steelblue'</span>, linewidth<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> start <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>            ax.plot(start, <span class="dv">0</span>, <span class="st">'o'</span>, color<span class="op">=</span><span class="st">'steelblue'</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                     markerfacecolor<span class="op">=</span><span class="st">'steelblue'</span> <span class="cf">if</span> start_closed <span class="cf">else</span> <span class="st">'white'</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                     markersize<span class="op">=</span><span class="dv">10</span>, markeredgewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> end <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>            ax.plot(end, <span class="dv">0</span>, <span class="st">'o'</span>, color<span class="op">=</span><span class="st">'steelblue'</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                     markerfacecolor<span class="op">=</span><span class="st">'steelblue'</span> <span class="cf">if</span> end_closed <span class="cf">else</span> <span class="st">'white'</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                     markersize<span class="op">=</span><span class="dv">10</span>, markeredgewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    ax.set_xticks(<span class="bu">range</span>(xlim[<span class="dv">0</span>], xlim[<span class="dv">1</span>] <span class="op">+</span> <span class="dv">1</span>))</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    ax.set_yticks([])</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    ax.set_ylim(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    ax.set_title(title)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> spine <span class="kw">in</span> [<span class="st">'top'</span>, <span class="st">'right'</span>, <span class="st">'left'</span>]:</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        ax.spines[spine].set_visible(<span class="va">False</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 1: x &gt; 5</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>plot_number_line([(<span class="dv">5</span>, <span class="va">None</span>, <span class="va">False</span>, <span class="va">False</span>)], <span class="st">"Solution: x &gt; 5"</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 2: x &gt;= -4</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>plot_number_line([(<span class="op">-</span><span class="dv">4</span>, <span class="va">None</span>, <span class="va">True</span>, <span class="va">False</span>)], <span class="st">"Solution: x ≥ -4"</span>)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 3: -2 &lt; x &lt;= 4</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>plot_number_line([(<span class="op">-</span><span class="dv">2</span>, <span class="dv">4</span>, <span class="va">False</span>, <span class="va">True</span>)], <span class="st">"Solution: -2 &lt; x ≤ 4"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session6-solving-inequalities_files/figure-html/cell-2-output-1.png" width="662" height="163" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session6-solving-inequalities_files/figure-html/cell-2-output-2.png" width="662" height="163" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session6-solving-inequalities_files/figure-html/cell-2-output-3.png" width="662" height="163" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Notice the <strong>open circle</strong> for strict inequalities (<span class="math inline">&gt;</span>, <span class="math inline">&lt;</span>) and the <strong>filled circle</strong> for inclusive ones (<span class="math inline">\geq</span>, <span class="math inline">\leq</span>).</p>
+</section>
+<section id="practice-problems-linear" class="level3">
+<h3 class="anchored" data-anchor-id="practice-problems-linear">1.6 Practice Problems (Linear)</h3>
+<ol type="1">
+<li>Solve <span class="math inline">5x + 2 &lt; 17</span>.</li>
+<li>Solve <span class="math inline">-4x - 3 \geq 9</span>.</li>
+<li>Solve <span class="math inline">6 \leq 3x - 3 &lt; 15</span>.</li>
+<li>A cab charges a base fare of ₹50 plus ₹12 per km. If a passenger wants the total fare to stay under ₹200, how many kilometres can they travel? (Set up and solve an inequality.)</li>
+</ol>
+<p><em>(Answers: 1) <span class="math inline">x &lt; 3</span> 2) <span class="math inline">x \leq -3</span> 3) <span class="math inline">3 \leq x &lt; 6</span> 4) Let <span class="math inline">d</span> = distance: <span class="math inline">50 + 12d &lt; 200 \Rightarrow d &lt; 12.5</span> km.)</em></p>
+<hr>
+</section>
+</section>
+<section id="part-2-quadratic-inequalities" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-quadratic-inequalities">Part 2: Quadratic Inequalities</h2>
+<p>A <strong>quadratic inequality</strong> has the form <span class="math inline">ax^2 + bx + c &gt; 0</span> (or <span class="math inline">&lt;, \geq, \leq</span>), where <span class="math inline">a \neq 0</span>.</p>
+<p>Unlike linear inequalities, you <strong>cannot</strong> just isolate <span class="math inline">x</span> by dividing — quadratics can change sign more than once. The reliable method has three steps:</p>
+<section id="the-three-step-method" class="level3">
+<h3 class="anchored" data-anchor-id="the-three-step-method">2.1 The Three-Step Method</h3>
+<ol type="1">
+<li><strong>Rearrange</strong> so one side is <span class="math inline">0</span>: <span class="math inline">ax^2 + bx + c \; \square \; 0</span>.</li>
+<li><strong>Find the roots</strong> of the corresponding equation <span class="math inline">ax^2 + bx + c = 0</span> (by factoring, quadratic formula, or completing the square). These roots are the <strong>critical points</strong> — they split the number line into intervals.</li>
+<li><strong>Test each interval</strong> (pick any convenient value inside it) to see whether the quadratic is positive or negative there, then select the intervals matching your inequality sign.</li>
+</ol>
+<p>A quick shortcut: since a quadratic’s graph is a <strong>parabola</strong>, the sign pattern is easy to predict: - If <span class="math inline">a &gt; 0</span> (opens upward): the expression is <strong>negative between the roots</strong> and <strong>positive outside</strong> them. - If <span class="math inline">a &lt; 0</span> (opens downward): the expression is <strong>positive between the roots</strong> and <strong>negative outside</strong> them.</p>
+</section>
+<section id="worked-example-4-factorable-quadratic" class="level3">
+<h3 class="anchored" data-anchor-id="worked-example-4-factorable-quadratic">2.2 Worked Example 4 — Factorable Quadratic</h3>
+<p>Solve <span class="math inline">x^2 - x - 6 &gt; 0</span>.</p>
+<p><strong>Step 1:</strong> Already in the form <span class="math inline">\square &gt; 0</span>.</p>
+<p><strong>Step 2:</strong> Factor: <span class="math inline">x^2 - x - 6 = (x-3)(x+2)</span>. Roots are <span class="math inline">x = 3</span> and <span class="math inline">x = -2</span>.</p>
+<p><strong>Step 3:</strong> These roots split the number line into three intervals: <span class="math inline">(-\infty, -2)</span>, <span class="math inline">(-2, 3)</span>, <span class="math inline">(3, \infty)</span>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Interval</th>
+<th style="text-align: center;">Test point</th>
+<th style="text-align: center;"><span class="math inline">(x-3)(x+2)</span></th>
+<th style="text-align: center;">Sign</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">(-\infty, -2)</span></td>
+<td style="text-align: center;"><span class="math inline">x = -3</span></td>
+<td style="text-align: center;"><span class="math inline">(-6)(-1) = 6</span></td>
+<td style="text-align: center;"><span class="math inline">+</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">(-2, 3)</span></td>
+<td style="text-align: center;"><span class="math inline">x = 0</span></td>
+<td style="text-align: center;"><span class="math inline">(-3)(2) = -6</span></td>
+<td style="text-align: center;"><span class="math inline">-</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">(3, \infty)</span></td>
+<td style="text-align: center;"><span class="math inline">x = 4</span></td>
+<td style="text-align: center;"><span class="math inline">(1)(6) = 6</span></td>
+<td style="text-align: center;"><span class="math inline">+</span></td>
+</tr>
+</tbody>
+</table>
+<p>Since we want <span class="math inline">&gt; 0</span> (positive), and <span class="math inline">a = 1 &gt; 0</span> (upward parabola, positive <em>outside</em> the roots — matches our table):</p>
+<p><strong>Solution:</strong> <span class="math inline">x &lt; -2</span> or <span class="math inline">x &gt; 3</span>, i.e.&nbsp;<span class="math inline">x \in (-\infty, -2) \cup (3, \infty)</span>.</p>
+</section>
+<section id="worked-example-5-inclusive-inequality-downward-parabola" class="level3">
+<h3 class="anchored" data-anchor-id="worked-example-5-inclusive-inequality-downward-parabola">2.3 Worked Example 5 — Inclusive Inequality, Downward Parabola</h3>
+<p>Solve <span class="math inline">-x^2 + 2x + 8 \geq 0</span>.</p>
+<p><strong>Step 1:</strong> Multiply both sides by <span class="math inline">-1</span> (remember: <strong>flip the sign!</strong>): <span class="math inline">x^2 - 2x - 8 \leq 0</span>.</p>
+<p><strong>Step 2:</strong> Factor: <span class="math inline">x^2 - 2x - 8 = (x-4)(x+2)</span>. Roots: <span class="math inline">x = 4, x = -2</span>.</p>
+<p><strong>Step 3:</strong> Here <span class="math inline">a = 1 &gt; 0</span>, and we want <span class="math inline">\leq 0</span>, which is the region <strong>between</strong> the roots (inclusive, since <span class="math inline">\leq</span>).</p>
+<p><strong>Solution:</strong> <span class="math inline">-2 \leq x \leq 4</span>, i.e.&nbsp;<span class="math inline">x \in [-2, 4]</span>.</p>
+</section>
+<section id="worked-example-6-using-the-quadratic-formula-non-factorable" class="level3">
+<h3 class="anchored" data-anchor-id="worked-example-6-using-the-quadratic-formula-non-factorable">2.4 Worked Example 6 — Using the Quadratic Formula (Non-Factorable)</h3>
+<p>Solve <span class="math inline">x^2 - 4x - 1 &lt; 0</span>.</p>
+<p>This doesn’t factor nicely, so use the quadratic formula <span class="math inline">x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}</span> with <span class="math inline">a=1, b=-4, c=-1</span>:</p>
+<p><span class="math display">
+x = \frac{4 \pm \sqrt{16 + 4}}{2} = \frac{4 \pm \sqrt{20}}{2} = 2 \pm \sqrt{5}
+</span></p>
+<p>So roots are approximately <span class="math inline">x \approx -0.236</span> and <span class="math inline">x \approx 4.236</span>. Since <span class="math inline">a = 1 &gt; 0</span> and we want <span class="math inline">&lt; 0</span> (between the roots):</p>
+<p><strong>Solution:</strong> <span class="math inline">2 - \sqrt{5} &lt; x &lt; 2 + \sqrt{5}</span>.</p>
+</section>
+<section id="visualizing-quadratic-inequalities-with-the-parabola" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-quadratic-inequalities-with-the-parabola">2.5 Visualizing Quadratic Inequalities with the Parabola</h3>
+<p>Graphing the parabola makes the “positive/negative” regions completely visual: wherever the curve is <strong>above</strong> the x-axis, the expression is positive; wherever it’s <strong>below</strong>, it’s negative.</p>
+<div id="06cffdcc" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_quadratic_inequality(a, b, c, condition, title):</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Plots y = ax^2 + bx + c, shades the region satisfying the condition,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">    and marks the roots.</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">    condition: one of '&gt;', '&lt;', '&gt;=', '&lt;='</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    roots <span class="op">=</span> np.roots([a, b, c])</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    roots <span class="op">=</span> np.sort(roots.real)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    span <span class="op">=</span> <span class="bu">max</span>(<span class="dv">4</span>, (roots[<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> roots[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">1.5</span>) <span class="cf">if</span> <span class="bu">len</span>(roots) <span class="op">==</span> <span class="dv">2</span> <span class="cf">else</span> <span class="dv">6</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.linspace(roots[<span class="dv">0</span>] <span class="op">-</span> span<span class="op">/</span><span class="dv">3</span> <span class="cf">if</span> <span class="bu">len</span>(roots) <span class="cf">else</span> <span class="op">-</span><span class="dv">6</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                     roots[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> span<span class="op">/</span><span class="dv">3</span> <span class="cf">if</span> <span class="bu">len</span>(roots) <span class="cf">else</span> <span class="dv">6</span>, <span class="dv">400</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> a <span class="op">*</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b <span class="op">*</span> x <span class="op">+</span> c</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">5</span>))</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, y, color<span class="op">=</span><span class="st">'navy'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="ss">f"$y = </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">x^2 + </span><span class="sc">{</span>b<span class="sc">:+}</span><span class="ss">x + </span><span class="sc">{</span>c<span class="sc">:+}</span><span class="ss">$"</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Shade the region satisfying the inequality</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> condition <span class="kw">in</span> (<span class="st">'&gt;'</span>, <span class="st">'&gt;='</span>):</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        mask <span class="op">=</span> y <span class="op">&gt;=</span> <span class="dv">0</span> <span class="cf">if</span> condition <span class="op">==</span> <span class="st">'&gt;='</span> <span class="cf">else</span> y <span class="op">&gt;</span> <span class="dv">0</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        mask <span class="op">=</span> y <span class="op">&lt;=</span> <span class="dv">0</span> <span class="cf">if</span> condition <span class="op">==</span> <span class="st">'&lt;='</span> <span class="cf">else</span> y <span class="op">&lt;</span> <span class="dv">0</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    ax.fill_between(x, y, <span class="dv">0</span>, where<span class="op">=</span>mask, color<span class="op">=</span><span class="st">'orange'</span>, alpha<span class="op">=</span><span class="fl">0.3</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                     label<span class="op">=</span><span class="st">"Region satisfying inequality"</span>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> r <span class="kw">in</span> roots:</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        ax.plot(r, <span class="dv">0</span>, <span class="st">'o'</span>, color<span class="op">=</span><span class="st">'red'</span>, markersize<span class="op">=</span><span class="dv">8</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>        ax.annotate(<span class="ss">f"x = </span><span class="sc">{</span>r<span class="sc">:.2f}</span><span class="ss">"</span>, (r, <span class="dv">0</span>), textcoords<span class="op">=</span><span class="st">"offset points"</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>                    xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="op">-</span><span class="dv">20</span>), ha<span class="op">=</span><span class="st">'center'</span>, fontsize<span class="op">=</span><span class="dv">9</span>, color<span class="op">=</span><span class="st">'red'</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    ax.set_title(title)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">"y"</span>)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    ax.legend(loc<span class="op">=</span><span class="st">'upper center'</span>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 4: x^2 - x - 6 &gt; 0</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>plot_quadratic_inequality(<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">6</span>, <span class="st">'&gt;'</span>, <span class="st">"Example 4: $x^2 - x - 6 &gt; 0$"</span>)</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 5 (rearranged form): x^2 - 2x - 8 &lt;= 0</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>plot_quadratic_inequality(<span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">8</span>, <span class="st">'&lt;='</span>, <span class="st">"Example 5: $x^2 - 2x - 8 </span><span class="ch">\\</span><span class="st">leq 0$"</span>)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 6: x^2 - 4x - 1 &lt; 0</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>plot_quadratic_inequality(<span class="dv">1</span>, <span class="op">-</span><span class="dv">4</span>, <span class="op">-</span><span class="dv">1</span>, <span class="st">'&lt;'</span>, <span class="st">"Example 6: $x^2 - 4x - 1 &lt; 0$"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session6-solving-inequalities_files/figure-html/cell-3-output-1.png" width="664" height="470" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session6-solving-inequalities_files/figure-html/cell-3-output-2.png" width="664" height="470" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session6-solving-inequalities_files/figure-html/cell-3-output-3.png" width="664" height="470" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The shaded orange region shows exactly where the curve satisfies the inequality — compare it directly with the algebraic answers above.</p>
+</section>
+<section id="a-general-purpose-solver-optional-extension" class="level3">
+<h3 class="anchored" data-anchor-id="a-general-purpose-solver-optional-extension">2.6 A General-Purpose Solver (Optional Extension)</h3>
+<p>For students comfortable with a bit more code, here’s a small function that solves <em>any</em> quadratic inequality symbolically using <code>sympy</code>, useful for checking your hand-worked answers.</p>
+<div id="5c33a2ee" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> sp.symbols(<span class="st">'x'</span>, real<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> solve_quadratic_inequality(a, b, c, relation):</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">    relation: one of sp.StrictGreaterThan, sp.GreaterThan,</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">              sp.StrictLessThan, sp.LessThan — or simply use</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">              sp.solve_univariate_inequality directly as shown below.</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    expr <span class="op">=</span> a<span class="op">*</span>x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b<span class="op">*</span>x <span class="op">+</span> c</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    ineq <span class="op">=</span> relation(expr, <span class="dv">0</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    solution <span class="op">=</span> sp.solve_univariate_inequality(ineq, x, relational<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> solution</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Check Example 4: x^2 - x - 6 &gt; 0</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Example 4:"</span>, solve_quadratic_inequality(<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">6</span>, sp.StrictGreaterThan))</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Check Example 5: x^2 - 2x - 8 &lt;= 0</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Example 5:"</span>, solve_quadratic_inequality(<span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">8</span>, sp.LessThan))</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Check Example 6: x^2 - 4x - 1 &lt; 0</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Example 6:"</span>, solve_quadratic_inequality(<span class="dv">1</span>, <span class="op">-</span><span class="dv">4</span>, <span class="op">-</span><span class="dv">1</span>, sp.StrictLessThan))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Example 4: Union(Interval.open(-oo, -2), Interval.open(3, oo))
+Example 5: Interval(-2, 4)
+Example 6: Interval.open(2 - sqrt(5), 2 + sqrt(5))</code></pre>
+</div>
+</div>
+</section>
+<section id="practice-problems-quadratic" class="level3">
+<h3 class="anchored" data-anchor-id="practice-problems-quadratic">2.7 Practice Problems (Quadratic)</h3>
+<ol type="1">
+<li>Solve <span class="math inline">x^2 - 5x + 6 \leq 0</span>.</li>
+<li>Solve <span class="math inline">x^2 + 3x - 10 &gt; 0</span>.</li>
+<li>Solve <span class="math inline">2x^2 - 7x + 3 \geq 0</span>.</li>
+<li>Solve <span class="math inline">x^2 + 4 &lt; 4x</span> <em>(hint: rearrange first)</em>.</li>
+<li>A ball is thrown upward; its height in metres after <span class="math inline">t</span> seconds is <span class="math inline">h(t) = -5t^2 + 20t</span>. For how long is the ball <strong>at least 15 m</strong> above the ground? (Solve <span class="math inline">-5t^2 + 20t \geq 15</span>.)</li>
+</ol>
+<p><em>(Answers: 1) <span class="math inline">2 \leq x \leq 3</span> 2) <span class="math inline">x &lt; -5</span> or <span class="math inline">x &gt; 2</span> 3) <span class="math inline">x \leq 1</span> or <span class="math inline">x \geq 3</span> 4) <span class="math inline">x^2 - 4x + 4 &lt; 0 \Rightarrow (x-2)^2 &lt; 0</span>, which has <strong>no solution</strong> since a square can’t be negative — good discussion point! 5) <span class="math inline">t^2 - 4t + 3 \leq 0 \Rightarrow 1 \leq t \leq 3</span>, so the ball is at least 15 m high for 2 seconds.)</em></p>
+<hr>
+</section>
+</section>
+<section id="part-3-key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-key-takeaways">Part 3: Key Takeaways</h2>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Linear inequalities:</strong></p>
+<ul>
+<li>Solve like an equation, but <strong>flip the sign</strong> when multiplying/dividing by a negative number.</li>
+<li>Solutions are typically a single ray or interval on the number line.</li>
+</ul>
+<p><strong>Quadratic inequalities:</strong></p>
+<ul>
+<li>Move everything to one side so it’s compared to <span class="math inline">0</span>.</li>
+<li>Find the roots — they are the boundary (“critical”) points.</li>
+<li>Use a sign table or the parabola’s shape (<span class="math inline">a&gt;0</span>: positive outside roots, negative between; <span class="math inline">a&lt;0</span>: opposite) to pick the correct interval(s).</li>
+<li>Always double check special cases: no real roots (expression never changes sign) or a repeated root (touches zero but doesn’t cross).</li>
+</ul>
+</div>
+</div>
+</div>
+<section id="looking-ahead-to-grade-11" class="level3">
+<h3 class="anchored" data-anchor-id="looking-ahead-to-grade-11">Looking Ahead to Grade 11</h3>
+<p>These skills feed directly into:</p>
+<ul>
+<li><strong>Systems of inequalities &amp; linear programming</strong> (feasible regions, optimization)</li>
+<li><strong>Domain restrictions</strong> for functions like <span class="math inline">\sqrt{f(x)}</span> or <span class="math inline">\dfrac{1}{f(x)}</span>, which require <span class="math inline">f(x) \geq 0</span> or <span class="math inline">f(x) \neq 0</span></li>
+<li><strong>Rational and higher-degree inequalities</strong>, which extend this same critical-point method to more complex expressions</li>
+</ul>
+<p>Mastering the sign-analysis method here will make all of these topics far more manageable.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
