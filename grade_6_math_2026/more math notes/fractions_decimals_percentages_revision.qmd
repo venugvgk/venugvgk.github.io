@@ -1,0 +1,139 @@
+---
+title: "Fractions, Decimals & Percentages"
+subtitle: "Quick Revision"
+format:
+  pdf:
+    documentclass: article
+    classoption: [landscape]
+    geometry:
+      - top=0.45in
+      - bottom=0.45in
+      - left=0.5in
+      - right=0.5in
+    fontsize: 10pt
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist[itemize]{nosep,leftmargin=*}
+        \setlength{\parskip}{3pt}
+        \setlength{\abovedisplayskip}{4pt}
+        \setlength{\belowdisplayskip}{4pt}
+        \setlength{\tabcolsep}{4pt}
+        \renewcommand{\arraystretch}{1.05}
+        \usepackage{titlesec}
+        \titlespacing*{\section}{0pt}{5pt}{4pt}
+        \titlespacing*{\subsection}{0pt}{4pt}{3pt}
+---
+
+## Key Conversions
+
+**Fraction → Decimal:** Divide numerator by denominator  
+$\frac{3}{4} = 3 \div 4 = 0.75$
+
+**Decimal → Fraction:** Write as fraction over 10, 100, 1000... then simplify  
+$0.6 = \frac{6}{10} = \frac{3}{5}$
+
+**Fraction → Percentage:** Multiply by 100  
+$\frac{2}{5} = \frac{2}{5} \times 100 = 40\%$
+
+**Percentage → Fraction:** Write over 100, then simplify  
+$75\% = \frac{75}{100} = \frac{3}{4}$
+
+**Decimal → Percentage:** Multiply by 100  
+$0.25 = 25\%$
+
+**Percentage → Decimal:** Divide by 100  
+$60\% = 0.60$
+
+---
+
+## Operations with Fractions
+
+### Addition & Subtraction
+1. Find common denominator (LCM)  
+2. Convert to equivalent fractions  
+3. Add/subtract numerators, keep denominator
+
+$$\frac{1}{3} + \frac{1}{4} = \frac{4}{12} + \frac{3}{12} = \frac{7}{12}$$
+
+### Multiplication
+Multiply numerators and denominators
+
+$$\frac{2}{3} \times \frac{4}{5} = \frac{8}{15}$$
+
+### Division
+Multiply by the reciprocal
+
+$$\frac{3}{4} \div \frac{2}{5} = \frac{3}{4} \times \frac{5}{2} = \frac{15}{8}$$
+
+---
+
+## Operations with Decimals
+
+### Addition & Subtraction
+- Line up decimal points vertically
+- Add zeros if needed for place value
+
+$$\begin{array}{r}
+  3.45 \\
++ 2.70 \\
+\hline
+  6.15
+\end{array}$$
+
+### Multiplication
+1. Multiply as whole numbers
+2. Count total decimal places in both numbers
+3. Place decimal point in answer
+
+$2.5 \times 0.4 = 1.00 = 1$ (1 + 1 = 2 decimal places)
+
+### Division
+- Convert to fractions
+- Simplify powers of 10
+- Divide normally
+- Place decimal point
+
+$3.6 \div 0.9 = 36/10 \div 9/10 = 4$
+
+---
+
+## Operations with Percentages
+
+**Find a percentage of a number:** write % as a fraction
+
+$20\% \text{ of } 80 = 80 \times 20/100 = 16$
+
+**Percentage change:**
+
+$$\text{Change \%} = \frac{\text{Change}}{\text{Original}} \times 100$$
+
+$80 \to 100$: Change = 20, so $\frac{20}{80} \times 100 = 25\%$
+
+---
+
+## Common Equivalents
+
+| Fraction | Decimal | Percentage |
+|----------|---------|------------|
+| $\frac{1}{2}$ | 0.5 | 50% |
+| $\frac{1}{4}$ | 0.25 | 25% |
+| $\frac{3}{4}$ | 0.75 | 75% |
+| $\frac{1}{5}$ | 0.2 | 20% |
+| $\frac{1}{10}$ | 0.1 | 10% |
+| $\frac{1}{3}$ | 0.333... | 33.3% |
+| $\frac{2}{3}$ | 0.666... | 66.7% |
+| $\frac{1}{8}$ | 0.125 | 12.5% |
+
+---
+
+## Quick Tips
+
+✓ Simplify fractions to lowest terms  
+✓ Estimate first to check reasonableness  
+✓ Convert everything to the same form when unsure  
+✓ Practice common equivalents daily
+
+---
+
+*Revise this sheet for 5 minutes daily.*
