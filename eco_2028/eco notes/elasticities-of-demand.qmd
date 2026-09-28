@@ -164,7 +164,7 @@ Q = np.linspace(0, 50, 100)
 P = 100 - 2 * Q
 TR = P * Q
 
-ax1 = axs
+ax1 = axs[0, 0]
 ax1.plot(Q, P, 'b-', label='Demand (P = 100 - 2Q)', linewidth=2)
 ax1.axvline(25, color='gray', linestyle='--')
 ax1.axhline(50, color='gray', linestyle='--')
@@ -179,7 +179,7 @@ ax1.grid(True)
 
 # Graph 2: Extreme Demand Elasticity Curves
 Q_ext = np.linspace(5, 50, 100)
-ax2 = axs
+ax2 = axs[0, 1]
 ax2.axvline(25, color='red', linewidth=2.5, label='Perfectly Inelastic (PED = 0)')
 ax2.axhline(50, color='green', linewidth=2.5, label='Perfectly Elastic (PED = ∞)')
 ax2.plot(Q_ext, 500 / Q_ext, 'purple', linewidth=2.5, label='Unitary Elastic (PED = 1, xy = k)')
@@ -193,7 +193,7 @@ ax2.grid(True)
 
 # Graph 3: Income Elasticity of Demand (YED) Curves
 Y = np.linspace(10, 100, 100)
-ax3 = axs
+ax3 = axs[1, 0]
 ax3.plot(10 + 0.3 * Y, Y, 'g-', label='Necessity Good (0 < YED < 1)', linewidth=2.5)
 ax3.plot(2 * Y, Y, 'b-', label='Luxury Good (YED > 1)', linewidth=2.5)
 ax3.plot(80 - 0.5 * Y, Y, 'r-', label='Inferior Good (YED < 0)', linewidth=2.5)
@@ -204,7 +204,7 @@ ax3.legend()
 ax3.grid(True)
 
 # Graph 4: Cross-Price Elasticity (XED) Market Shifts
-ax4 = axs
+ax4 = axs[1, 1]
 ax4.plot(Q, 100 - 2 * Q, 'b--', label='Original Demand (D0)', linewidth=2)
 ax4.plot(Q, 120 - 2 * Q, 'g-', label='Shift Right (D1): Substitute P↑ / Complement P↓', linewidth=2)
 ax4.plot(Q, 80 - 2 * Q, 'r-', label='Shift Left (D2): Substitute P↓ / Complement P↑', linewidth=2)
@@ -215,7 +215,6 @@ ax4.legend()
 ax4.grid(True)
 
 plt.tight_layout()
-plt.savefig('/workspace/scratch/elasticity_summary_graphs.png', dpi=150)
 plt.show()
 ```
 ```
