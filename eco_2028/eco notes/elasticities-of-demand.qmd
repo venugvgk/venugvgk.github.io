@@ -34,11 +34,19 @@ $$\text{PED} = \left( \frac{\Delta Q}{\Delta P} \right) \times \left( \frac{P}{Q
 - **Midpoint ($P = \frac{a}{2}, Q = \frac{a}{2b}$):** The term $\frac{\Delta Q}{\Delta P}$ and the ratio $\frac{P}{Q}$ become exact mathematical reciprocals ($\frac{\Delta Q}{\Delta P} = \frac{Q}{P}$), yielding $\text{PED} = 1.0$ (**Unitary Elastic**).
 - **Lower Segment (Low Price, High Quantity):** The ratio $\frac{P}{Q}$ is small, making $\text{PED} < 1$ (**Price Inelastic**). Large price changes yield proportionately smaller percentage changes in quantity demanded.
 
+::: {.callout-note}
 #### Numerical Class Example
-Given the demand function $P = 100 - 2Q \implies Q = 50 - 0.5P$, the slope derivative $\frac{dQ}{dP} = -0.5$ is constant:
-- **Point A ($P = 80, Q = 10$):** $\text{PED} = |-0.5 \times \frac{80}{10}| = 4.0$ (Elastic).
-- **Midpoint ($P = 50, Q = 25$):** $\text{PED} = |-0.5 \times \frac{50}{25}| = 1.0$ (Unitary Elastic).
-- **Point C ($P = 20, Q = 40$):** $\text{PED} = |-0.5 \times \frac{20}{40}| = 0.25$ (Inelastic).
+Given the demand function:
+$$P = 100 - 2Q \implies Q = 50 - 0.5P$$
+
+The slope derivative $\frac{dQ}{dP} = -0.5$ is constant. Using the formula $\text{PED} = \left| \frac{dQ}{dP} \times \frac{P}{Q} \right|$:
+
+| Point | Price ($P$) | Quantity ($Q$) | Calculation | $\text{PED}$ Value | Classification |
+|-------|-----------|--------------|-------------|-----------|----------------|
+| **A** | 80 | 10 | $\left| -0.5 \times \frac{80}{10} \right|$ | **4.0** | Price Elastic |
+| **Midpoint** | 50 | 25 | $\left| -0.5 \times \frac{50}{25} \right|$ | **1.0** | Unitary Elastic |
+| **C** | 20 | 40 | $\left| -0.5 \times \frac{20}{40} \right|$ | **0.25** | Price Inelastic |
+:::
 
 ### Special and Extreme Elasticity Curves
 1. **Perfectly Inelastic Demand ($\text{PED} = 0$):** Quantity demanded is completely unresponsive to price changes (e.g., life-saving drugs like insulin). Graphically represented as a vertical line ($Q = k$) parallel to the Y-axis.
@@ -119,7 +127,7 @@ Total Revenue ($\text{TR}$) or Total Spending is defined as $\text{TR} = P \time
 
 ## Case Study 3: Natural Gas & Energy Policy in China
 - **Data Provided:** Short-run $\text{PED} = -1.52$, Long-run $\text{PED} = +0.41$ (identified as a printing typo and corrected to $-0.41$). $\text{XED}$ of coal with respect to natural gas prices was $-0.76$ (short run) and $+0.01$ (long run).
-- **Policy Analysis:** A 10% reduction in natural gas prices increases natural gas consumption by 15.2% in the short run. Simultaneously, it reduces coal demand by 7.6%. Economists use these elasticities to design taxes on coal and oil to accelerate green energy adoption.
+- **Policy Analysis:** A $10\%$ reduction in natural gas prices increases natural gas consumption by $15.2\%$ in the short run. Simultaneously, it reduces coal demand by $7.6\%$. Economists use these elasticities to design taxes on coal and oil to accelerate green energy adoption.
 
 ## Case Study 4: Fidget Spinner Market Shifters (Jacob Clifford Framework)
 1. **Classroom Learning Study Finding:** Tastes/preferences shift $\implies$ Demand curve shifts Right.
