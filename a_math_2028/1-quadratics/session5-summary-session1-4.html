@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-09-25">
+
+<title>Summary: Linear Equations, Functions, &amp; Quadratic Curves – Venu GVGK Raju</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-52db394cf1c950120975338c64ae4068.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Summary: Linear Equations, Functions, &amp; Quadratic Curves – Venu GVGK Raju">
+<meta property="og:description" content="Comprehensive Lecture Notes, Theoretical Proofs &amp; Graphical Analysis">
+<meta property="og:image" content="https://gvgk.in/a_math_2028/1-quadratics/session5-summary-session1-4_files/figure-html/fig-linear-transformations-output-1.png">
+<meta property="og:site_name" content="Venu GVGK Raju">
+<meta property="og:image:height" content="940">
+<meta property="og:image:width" content="2286">
+<meta name="twitter:title" content="Summary: Linear Equations, Functions, &amp; Quadratic Curves – Venu GVGK Raju">
+<meta name="twitter:description" content="Comprehensive Lecture Notes, Theoretical Proofs &amp; Graphical Analysis">
+<meta name="twitter:image" content="https://gvgk.in/a_math_2028/1-quadratics/session5-summary-session1-4_files/figure-html/fig-linear-transformations-output-1.png">
+<meta name="twitter:image-height" content="940">
+<meta name="twitter:image-width" content="2286">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Venu GVGK Raju</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">Curriculum Vitae</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../books/index.html"> 
+<span class="menu-text">Books</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../education/index.html"> 
+<span class="menu-text">On Education</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cs_2026/index.html"> 
+<span class="menu-text">CS 2026</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../a_math_2028/index.html"> 
+<span class="menu-text">A Level Math</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../grade_6_math_2026/index.html"> 
+<span class="menu-text">Grade 6 Math</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../eco_2028/index.html"> 
+<span class="menu-text">A level Economics</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pedagogical-philosophy-academic-foundations" id="toc-pedagogical-philosophy-academic-foundations" class="nav-link active" data-scroll-target="#pedagogical-philosophy-academic-foundations"><span class="header-section-number">1</span> Pedagogical Philosophy &amp; Academic Foundations</a>
+  <ul class="collapse">
+  <li><a href="#course-prerequisites-pure-mathematics-1-standards" id="toc-course-prerequisites-pure-mathematics-1-standards" class="nav-link" data-scroll-target="#course-prerequisites-pure-mathematics-1-standards"><span class="header-section-number">1.1</span> Course Prerequisites &amp; Pure Mathematics 1 Standards</a></li>
+  <li><a href="#meta-thinking-vs.-perfunctory-execution" id="toc-meta-thinking-vs.-perfunctory-execution" class="nav-link" data-scroll-target="#meta-thinking-vs.-perfunctory-execution"><span class="header-section-number">1.2</span> “Meta-Thinking” vs.&nbsp;Perfunctory Execution</a></li>
+  <li><a href="#required-homework-practice-standards" id="toc-required-homework-practice-standards" class="nav-link" data-scroll-target="#required-homework-practice-standards"><span class="header-section-number">1.3</span> Required Homework &amp; Practice Standards</a></li>
+  </ul></li>
+  <li><a href="#linear-relationships-coordinate-geometry" id="toc-linear-relationships-coordinate-geometry" class="nav-link" data-scroll-target="#linear-relationships-coordinate-geometry"><span class="header-section-number">2</span> Linear Relationships &amp; Coordinate Geometry</a>
+  <ul class="collapse">
+  <li><a href="#standard-linear-forms-and-conversion" id="toc-standard-linear-forms-and-conversion" class="nav-link" data-scroll-target="#standard-linear-forms-and-conversion"><span class="header-section-number">2.1</span> Standard Linear Forms and Conversion</a></li>
+  <li><a href="#physical-concept-of-gradient-rise-over-run" id="toc-physical-concept-of-gradient-rise-over-run" class="nav-link" data-scroll-target="#physical-concept-of-gradient-rise-over-run"><span class="header-section-number">2.2</span> Physical Concept of Gradient (“Rise over Run”)</a></li>
+  <li><a href="#the-universal-intercept-method-for-linear-graphs" id="toc-the-universal-intercept-method-for-linear-graphs" class="nav-link" data-scroll-target="#the-universal-intercept-method-for-linear-graphs"><span class="header-section-number">2.3</span> The Universal Intercept Method for Linear Graphs</a>
+  <ul class="collapse">
+  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example"><span class="header-section-number">2.3.1</span> Worked Example</a></li>
+  </ul></li>
+  <li><a href="#systems-of-linear-equations-geometric-classifications" id="toc-systems-of-linear-equations-geometric-classifications" class="nav-link" data-scroll-target="#systems-of-linear-equations-geometric-classifications"><span class="header-section-number">2.4</span> Systems of Linear Equations &amp; Geometric Classifications</a></li>
+  </ul></li>
+  <li><a href="#universal-function-graphing-strategy-non-linear-curves" id="toc-universal-function-graphing-strategy-non-linear-curves" class="nav-link" data-scroll-target="#universal-function-graphing-strategy-non-linear-curves"><span class="header-section-number">3</span> Universal Function Graphing Strategy &amp; Non-Linear Curves</a>
+  <ul class="collapse">
+  <li><a href="#definition-of-a-function-y-fx" id="toc-definition-of-a-function-y-fx" class="nav-link" data-scroll-target="#definition-of-a-function-y-fx"><span class="header-section-number">3.1</span> Definition of a Function <span class="math inline">\(y = f(x)\)</span></a></li>
+  <li><a href="#the-universal-intercept-protocol" id="toc-the-universal-intercept-protocol" class="nav-link" data-scroll-target="#the-universal-intercept-protocol"><span class="header-section-number">3.2</span> The Universal Intercept Protocol</a></li>
+  <li><a href="#demonstration-on-non-linear-curves" id="toc-demonstration-on-non-linear-curves" class="nav-link" data-scroll-target="#demonstration-on-non-linear-curves"><span class="header-section-number">3.3</span> Demonstration on Non-Linear Curves</a>
+  <ul class="collapse">
+  <li><a href="#circular-curve-y2-4---x2-iff-x2-y2-4" id="toc-circular-curve-y2-4---x2-iff-x2-y2-4" class="nav-link" data-scroll-target="#circular-curve-y2-4---x2-iff-x2-y2-4"><span class="header-section-number">3.3.1</span> Circular Curve (<span class="math inline">\(y^2 = 4 - x^2 \iff x^2 + y^2 = 4\)</span>)</a></li>
+  <li><a href="#higher-order-polynomials" id="toc-higher-order-polynomials" class="nav-link" data-scroll-target="#higher-order-polynomials"><span class="header-section-number">3.3.2</span> Higher-Order Polynomials</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#fundamentals-of-quadratic-curves-parabolas" id="toc-fundamentals-of-quadratic-curves-parabolas" class="nav-link" data-scroll-target="#fundamentals-of-quadratic-curves-parabolas"><span class="header-section-number">4</span> Fundamentals of Quadratic Curves &amp; Parabolas</a>
+  <ul class="collapse">
+  <li><a href="#properties-of-the-standard-parabola-y-x2" id="toc-properties-of-the-standard-parabola-y-x2" class="nav-link" data-scroll-target="#properties-of-the-standard-parabola-y-x2"><span class="header-section-number">4.1</span> Properties of the Standard Parabola (<span class="math inline">\(y = x^2\)</span>)</a></li>
+  <li><a href="#the-scaling-coefficient-a-in-y-ax2" id="toc-the-scaling-coefficient-a-in-y-ax2" class="nav-link" data-scroll-target="#the-scaling-coefficient-a-in-y-ax2"><span class="header-section-number">4.2</span> The Scaling Coefficient <span class="math inline">\(a\)</span> in <span class="math inline">\(y = ax^2\)</span></a></li>
+  <li><a href="#vertical-translations-y-ax2-c" id="toc-vertical-translations-y-ax2-c" class="nav-link" data-scroll-target="#vertical-translations-y-ax2-c"><span class="header-section-number">4.3</span> Vertical Translations (<span class="math inline">\(y = ax^2 + c\)</span>)</a></li>
+  </ul></li>
+  <li><a href="#advanced-quadratic-forms-vertex-derivation-symmetry" id="toc-advanced-quadratic-forms-vertex-derivation-symmetry" class="nav-link" data-scroll-target="#advanced-quadratic-forms-vertex-derivation-symmetry"><span class="header-section-number">5</span> Advanced Quadratic Forms, Vertex Derivation &amp; Symmetry</a>
+  <ul class="collapse">
+  <li><a href="#derivation-of-vertex-formulas-for-y-ax2-bx" id="toc-derivation-of-vertex-formulas-for-y-ax2-bx" class="nav-link" data-scroll-target="#derivation-of-vertex-formulas-for-y-ax2-bx"><span class="header-section-number">5.1</span> Derivation of Vertex Formulas for <span class="math inline">\(y = ax^2 + bx\)</span></a>
+  <ul class="collapse">
+  <li><a href="#worked-example-y-2x2-6x" id="toc-worked-example-y-2x2-6x" class="nav-link" data-scroll-target="#worked-example-y-2x2-6x"><span class="header-section-number">5.1.1</span> Worked Example: <span class="math inline">\(y = 2x^2 + 6x\)</span></a></li>
+  </ul></li>
+  <li><a href="#general-quadratic-form-y-ax2-bx-c" id="toc-general-quadratic-form-y-ax2-bx-c" class="nav-link" data-scroll-target="#general-quadratic-form-y-ax2-bx-c"><span class="header-section-number">5.2</span> General Quadratic Form <span class="math inline">\(y = ax^2 + bx + c\)</span></a>
+  <ul class="collapse">
+  <li><a href="#factorizable-example-y-x2-x---12" id="toc-factorizable-example-y-x2-x---12" class="nav-link" data-scroll-target="#factorizable-example-y-x2-x---12"><span class="header-section-number">5.2.1</span> Factorizable Example: <span class="math inline">\(y = x^2 + x - 12\)</span></a></li>
+  </ul></li>
+  <li><a href="#uniqueness-of-the-vertex" id="toc-uniqueness-of-the-vertex" class="nav-link" data-scroll-target="#uniqueness-of-the-vertex"><span class="header-section-number">5.3</span> Uniqueness of the Vertex</a></li>
+  </ul></li>
+  <li><a href="#completing-the-square-formal-proof-the-discriminant" id="toc-completing-the-square-formal-proof-the-discriminant" class="nav-link" data-scroll-target="#completing-the-square-formal-proof-the-discriminant"><span class="header-section-number">6</span> Completing the Square, Formal Proof, &amp; The Discriminant</a>
+  <ul class="collapse">
+  <li><a href="#completing-the-square-technique" id="toc-completing-the-square-technique" class="nav-link" data-scroll-target="#completing-the-square-technique"><span class="header-section-number">6.1</span> Completing the Square Technique</a>
+  <ul class="collapse">
+  <li><a href="#numerical-example-solve-x2-x---7-0" id="toc-numerical-example-solve-x2-x---7-0" class="nav-link" data-scroll-target="#numerical-example-solve-x2-x---7-0"><span class="header-section-number">6.1.1</span> Numerical Example: Solve <span class="math inline">\(x^2 + x - 7 = 0\)</span></a></li>
+  </ul></li>
+  <li><a href="#general-proof-of-the-quadratic-formula" id="toc-general-proof-of-the-quadratic-formula" class="nav-link" data-scroll-target="#general-proof-of-the-quadratic-formula"><span class="header-section-number">6.2</span> General Proof of the Quadratic Formula</a>
+  <ul class="collapse">
+  <li><a href="#structural-geometric-interpretation-of-the-formula" id="toc-structural-geometric-interpretation-of-the-formula" class="nav-link" data-scroll-target="#structural-geometric-interpretation-of-the-formula"><span class="header-section-number">6.2.1</span> Structural &amp; Geometric Interpretation of the Formula</a></li>
+  </ul></li>
+  <li><a href="#the-discriminant-d-b2---4ac" id="toc-the-discriminant-d-b2---4ac" class="nav-link" data-scroll-target="#the-discriminant-d-b2---4ac"><span class="header-section-number">6.3</span> The Discriminant (<span class="math inline">\(D = b^2 - 4ac\)</span>)</a></li>
+  </ul></li>
+  <li><a href="#critical-graphing-protocol-homework-assignment" id="toc-critical-graphing-protocol-homework-assignment" class="nav-link" data-scroll-target="#critical-graphing-protocol-homework-assignment"><span class="header-section-number">7</span> Critical Graphing Protocol &amp; Homework Assignment</a>
+  <ul class="collapse">
+  <li><a href="#master-checklist-for-sketching-any-parabola" id="toc-master-checklist-for-sketching-any-parabola" class="nav-link" data-scroll-target="#master-checklist-for-sketching-any-parabola"><span class="header-section-number">7.1</span> Master Checklist for Sketching Any Parabola</a></li>
+  <li><a href="#homework-exercises-textbook-reference" id="toc-homework-exercises-textbook-reference" class="nav-link" data-scroll-target="#homework-exercises-textbook-reference"><span class="header-section-number">7.2</span> Homework Exercises &amp; Textbook Reference</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Summary: Linear Equations, Functions, &amp; Quadratic Curves</h1>
+<p class="subtitle lead">Comprehensive Lecture Notes, Theoretical Proofs &amp; Graphical Analysis</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 25, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="pedagogical-philosophy-academic-foundations" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Pedagogical Philosophy &amp; Academic Foundations</h1>
+<section id="course-prerequisites-pure-mathematics-1-standards" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="course-prerequisites-pure-mathematics-1-standards"><span class="header-section-number">1.1</span> Course Prerequisites &amp; Pure Mathematics 1 Standards</h2>
+<p>A Level Mathematics requires a transition from mechanical computation to deep conceptual fluency. Before progressing through quadratic analysis, students are expected to possess strong proficiency in foundational algebra, including:</p>
+<ul>
+<li>Solving linear equations and inequalities.</li>
+<li>Solving simultaneous linear equations algebraically and geometrically.</li>
+<li>Factoring quadratic expressions over integers.</li>
+<li>Manipulating surds and working with exact radical values.</li>
+</ul>
+<p>The core textbook for this unit is <strong>Pure Mathematics 1</strong> (specifically covering Sections 1.1–1.3, 1.6, and 1.8).</p>
+</section>
+<section id="meta-thinking-vs.-perfunctory-execution" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="meta-thinking-vs.-perfunctory-execution"><span class="header-section-number">1.2</span> “Meta-Thinking” vs.&nbsp;Perfunctory Execution</h2>
+<p>A central tenet of this course is rejecting perfunctory, superficial problem-solving. Students must engage in <strong>meta-thinking</strong>—actively evaluating the structural rationale behind every mathematical step rather than passively following memorized algorithms.</p>
+<p>Every algebraic expression possesses an equivalent geometric representation on the coordinate plane. True mathematical intuition lies in moving fluidly between algebraic manipulation and coordinate geometry.</p>
+</section>
+<section id="required-homework-practice-standards" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="required-homework-practice-standards"><span class="header-section-number">1.3</span> Required Homework &amp; Practice Standards</h2>
+<p>To enforce rigorous learning habits, all assignments must strictly adhere to the following layout and practice standards:</p>
+<ol type="1">
+<li><strong>Two-Column Layout</strong>:
+<ul>
+<li><strong>Left Column</strong>: Formal algebraic derivations, mathematical steps, and precision graph sketches.</li>
+<li><strong>Right Column</strong>: Explicit narrative explanations written in full sentences detailing the logical reasoning behind each operation (e.g., explaining <em>why</em> the vertex represents a global minimum or <em>how</em> completing the square isolates the variable).</li>
+</ul></li>
+<li><strong>Elimination of Split Attention</strong>: Graphing and derivations must be performed by hand on graph paper with full presence. Reliance on software or secondary materials during live derivations is strictly discouraged.</li>
+<li><strong>Peer Verbal Practice</strong>: Before each class session, students are required to explain their step-by-step narrative reasoning out loud to a peer to verify conceptual clarity.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="linear-relationships-coordinate-geometry" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Linear Relationships &amp; Coordinate Geometry</h1>
+<section id="standard-linear-forms-and-conversion" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="standard-linear-forms-and-conversion"><span class="header-section-number">2.1</span> Standard Linear Forms and Conversion</h2>
+<p>A linear relationship between two variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> represents a constant rate of change. It can be expressed in two primary forms:</p>
+<ol type="1">
+<li><strong>Slope-Intercept Form</strong>: <span class="math inline">\(y = mx + c\)</span>, where <span class="math inline">\(m\)</span> is the gradient and <span class="math inline">\(c\)</span> is the <span class="math inline">\(y\)</span>-intercept.</li>
+<li><strong>General Linear Form</strong>: <span class="math inline">\(ax + by + c = 0\)</span>, where <span class="math inline">\(a, b, c \in \mathbb{R}\)</span>.</li>
+</ol>
+<p>To understand the geometric properties of the general form, we convert <span class="math inline">\(ax + by + c = 0\)</span> into slope-intercept form by isolating <span class="math inline">\(y\)</span>:</p>
+<p><span class="math display">\[by = -ax - c \implies y = \left(-\frac{a}{b}\right)x - \frac{c}{b}\]</span></p>
+<p>Comparing this directly with <span class="math inline">\(y = mx + c\)</span> reveals: * <strong>Gradient (<span class="math inline">\(m\)</span>)</strong>: <span class="math inline">\(m = -\frac{a}{b}\)</span> * <strong><span class="math inline">\(y\)</span>-intercept (<span class="math inline">\(c\)</span>)</strong>: <span class="math inline">\(\left(0, -\frac{c}{b}\right)\)</span> * <strong><span class="math inline">\(x\)</span>-intercept</strong>: Setting <span class="math inline">\(y = 0 \implies ax + c = 0 \implies \left(-\frac{c}{a}, 0\right)\)</span></p>
+</section>
+<section id="physical-concept-of-gradient-rise-over-run" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="physical-concept-of-gradient-rise-over-run"><span class="header-section-number">2.2</span> Physical Concept of Gradient (“Rise over Run”)</h2>
+<p>The gradient <span class="math inline">\(m\)</span> quantifies the rate of vertical change relative to horizontal change:</p>
+<p><span class="math display">\[m = \frac{\text{Rise}}{\text{Run}} = \frac{y_2 - y_1}{x_2 - x_1}\]</span></p>
+<ul>
+<li><strong>Positive Gradient (<span class="math inline">\(m &gt; 0\)</span>)</strong>: The line rises from left to right.</li>
+<li><strong>Negative Gradient (<span class="math inline">\(m &lt; 0\)</span>)</strong>: The line falls from left to right.</li>
+<li><strong>Rotational Fulcrum Effect</strong>: In <span class="math inline">\(y = mx + c\)</span>, holding <span class="math inline">\(c\)</span> constant while varying <span class="math inline">\(m\)</span> rotates the line around the fixed fulcrum point <span class="math inline">\((0, c)\)</span> on the <span class="math inline">\(y\)</span>-axis.</li>
+<li><strong>Vertical Translation</strong>: Holding <span class="math inline">\(m\)</span> constant while varying <span class="math inline">\(c\)</span> shifts the line parallel to itself along the <span class="math inline">\(y\)</span>-axis.</li>
+</ul>
+<div id="cell-fig-linear-transformations" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">200</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">5</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Subplot 1: Rotational effect around fulcrum (0,3)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>m_values <span class="op">=</span> [<span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="dv">2</span>]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> m <span class="kw">in</span> m_values:</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    ax1.plot(x, m <span class="op">*</span> x <span class="op">+</span> <span class="dv">3</span>, label<span class="op">=</span><span class="ss">f'y = </span><span class="sc">{</span>m<span class="sc">}</span><span class="ss">x + 3'</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ax1.scatter([<span class="dv">0</span>], [<span class="dv">3</span>], color<span class="op">=</span><span class="st">'red'</span>, zorder<span class="op">=</span><span class="dv">5</span>, label<span class="op">=</span><span class="st">'Fulcrum (0, 3)'</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>ax1.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ax1.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax1.set_xlim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax1.set_ylim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Gradient Rotation around (0, 3)'</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'x'</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'y'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax1.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">':'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>ax1.legend()</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Subplot 2: Vertical Translations y = 2x + c</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>c_values <span class="op">=</span> [<span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">6</span>]</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> c <span class="kw">in</span> c_values:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    ax2.plot(x, <span class="dv">2</span> <span class="op">*</span> x <span class="op">+</span> c, label<span class="op">=</span><span class="ss">f'y = 2x + </span><span class="sc">{</span>c<span class="sc">}</span><span class="ss">'</span> <span class="cf">if</span> c <span class="op">&gt;=</span> <span class="dv">0</span> <span class="cf">else</span> <span class="ss">f'y = 2x - </span><span class="sc">{</span><span class="bu">abs</span>(c)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>ax2.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>ax2.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>ax2.set_xlim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>ax2.set_ylim(<span class="op">-</span><span class="dv">8</span>, <span class="dv">12</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Vertical Translations y = 2x + c'</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'x'</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'y'</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>ax2.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">':'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>ax2.legend()</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-linear-transformations" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linear-transformations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="session5-summary-session1-4_files/figure-html/fig-linear-transformations-output-1.png" width="1143" height="470" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linear-transformations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Rotational effect of gradient m around the fulcrum (0,3) and vertical translation of linear graphs.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="the-universal-intercept-method-for-linear-graphs" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="the-universal-intercept-method-for-linear-graphs"><span class="header-section-number">2.3</span> The Universal Intercept Method for Linear Graphs</h2>
+<p>Because two points uniquely determine a straight line, the most efficient plotting strategy is identifying the axis intercepts:</p>
+<ol type="1">
+<li><strong><span class="math inline">\(y\)</span>-intercept</strong>: Set <span class="math inline">\(x = 0 \implies\)</span> solve for <span class="math inline">\(y\)</span>.</li>
+<li><strong><span class="math inline">\(x\)</span>-intercept</strong>: Set <span class="math inline">\(y = 0 \implies\)</span> solve for <span class="math inline">\(x\)</span>.</li>
+</ol>
+<section id="worked-example" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="worked-example"><span class="header-section-number">2.3.1</span> Worked Example</h3>
+<p>Plot the line <span class="math inline">\(2x + 3y - 6 = 0\)</span>: * Set <span class="math inline">\(x = 0 \implies 3y = 6 \implies y = 2 \implies (0, 2)\)</span> * Set <span class="math inline">\(y = 0 \implies 2x = 6 \implies x = 3 \implies (3, 0)\)</span></p>
+<div id="cell-fig-intercept-method" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">5</span>))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">200</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> (<span class="dv">6</span> <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> x) <span class="op">/</span> <span class="dv">3</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'$2x + 3y - 6 = 0$'</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>plt.scatter([<span class="dv">0</span>, <span class="dv">3</span>], [<span class="dv">2</span>, <span class="dv">0</span>], color<span class="op">=</span><span class="st">'red'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>plt.annotate(<span class="st">'$(0, 2)$'</span>, (<span class="fl">0.1</span>, <span class="fl">2.1</span>), fontsize<span class="op">=</span><span class="dv">11</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>plt.annotate(<span class="st">'$(3, 0)$'</span>, (<span class="fl">3.1</span>, <span class="fl">0.1</span>), fontsize<span class="op">=</span><span class="dv">11</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="op">-</span><span class="dv">1</span>, <span class="dv">5</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'y'</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Plotting via Intercepts: (0, 2) and (3, 0)'</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">':'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-intercept-method" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-intercept-method-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="session5-summary-session1-4_files/figure-html/fig-intercept-method-output-1.png" width="568" height="470" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-intercept-method-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The Intercept Method applied to 2x + 3y - 6 = 0.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="systems-of-linear-equations-geometric-classifications" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="systems-of-linear-equations-geometric-classifications"><span class="header-section-number">2.4</span> Systems of Linear Equations &amp; Geometric Classifications</h2>
+<p>An algebraic system of two linear equations corresponds to the geometric relationship between two lines in a plane:</p>
+<ol type="1">
+<li><strong>Parallel Lines</strong>: Equal gradients (<span class="math inline">\(m_1 = m_2\)</span>) but distinct <span class="math inline">\(y\)</span>-intercepts (<span class="math inline">\(c_1 \neq c_2\)</span>). The lines never intersect <span class="math inline">\(\implies\)</span> <strong>No solution</strong>.</li>
+<li><strong>Intersecting Lines</strong>: Different gradients (<span class="math inline">\(m_1 \neq m_2\)</span>). The lines intersect at a single point <span class="math inline">\((x_0, y_0)\)</span> <span class="math inline">\(\implies\)</span> <strong>1 Unique solution</strong>.</li>
+<li><strong>Coincident Lines</strong>: Equal gradients (<span class="math inline">\(m_1 = m_2\)</span>) and identical <span class="math inline">\(y\)</span>-intercepts (<span class="math inline">\(c_1 = c_2\)</span>). The lines overlap entirely <span class="math inline">\(\implies\)</span> <strong>Infinitely many solutions</strong>.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="universal-function-graphing-strategy-non-linear-curves" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Universal Function Graphing Strategy &amp; Non-Linear Curves</h1>
+<section id="definition-of-a-function-y-fx" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="definition-of-a-function-y-fx"><span class="header-section-number">3.1</span> Definition of a Function <span class="math inline">\(y = f(x)\)</span></h2>
+<p>A function <span class="math inline">\(y = f(x)\)</span> expresses an explicit mathematical rule where each input <span class="math inline">\(x\)</span> maps to a unique output <span class="math inline">\(y\)</span>.</p>
+</section>
+<section id="the-universal-intercept-protocol" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="the-universal-intercept-protocol"><span class="header-section-number">3.2</span> The Universal Intercept Protocol</h2>
+<p>For any function <span class="math inline">\(y = f(x)\)</span>—whether linear, quadratic, circular, or cubic—identifying key landmarks begins with the <strong>Universal Intercept Protocol</strong>:</p>
+<ol type="1">
+<li><strong><span class="math inline">\(y\)</span>-intercept</strong>: Evaluate <span class="math inline">\(y = f(0)\)</span> by setting <span class="math inline">\(x = 0\)</span>.</li>
+<li><strong><span class="math inline">\(x\)</span>-intercept(s)</strong>: Solve <span class="math inline">\(f(x) = 0\)</span> by setting <span class="math inline">\(y = 0\)</span>.</li>
+</ol>
+</section>
+<section id="demonstration-on-non-linear-curves" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="demonstration-on-non-linear-curves"><span class="header-section-number">3.3</span> Demonstration on Non-Linear Curves</h2>
+<section id="circular-curve-y2-4---x2-iff-x2-y2-4" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="circular-curve-y2-4---x2-iff-x2-y2-4"><span class="header-section-number">3.3.1</span> Circular Curve (<span class="math inline">\(y^2 = 4 - x^2 \iff x^2 + y^2 = 4\)</span>)</h3>
+<p>Applying the protocol to <span class="math inline">\(y^2 = 4 - x^2\)</span>: * <strong><span class="math inline">\(y\)</span>-intercepts</strong>: Set <span class="math inline">\(x = 0 \implies y^2 = 4 \implies y = \pm 2 \implies (0, 2) \text{ and } (0, -2)\)</span>. * <strong><span class="math inline">\(x\)</span>-intercepts</strong>: Set <span class="math inline">\(y = 0 \implies x^2 = 4 \implies x = \pm 2 \implies (2, 0) \text{ and } (-2, 0)\)</span>.</p>
+<p>Connecting these four symmetric points yields a circle centered at <span class="math inline">\((0,0)\)</span> with radius <span class="math inline">\(r = 2\)</span>.</p>
+</section>
+<section id="higher-order-polynomials" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="higher-order-polynomials"><span class="header-section-number">3.3.2</span> Higher-Order Polynomials</h3>
+<p>For a cubic function such as <span class="math inline">\(y = (x - 2)(2x^2 + 7x + 3)\)</span>: * <strong><span class="math inline">\(y\)</span>-intercept</strong>: Set <span class="math inline">\(x = 0 \implies y = (-2)(3) = -6 \implies (0, -6)\)</span>. * <strong><span class="math inline">\(x\)</span>-intercepts</strong>: Set <span class="math inline">\(y = 0 \implies (x - 2)(2x + 1)(x + 3) = 0 \implies x = 2, x = -0.5, x = -3\)</span>. * The curve crosses the <span class="math inline">\(x\)</span>-axis at three distinct points.</p>
+<div id="cell-fig-circle-cubic" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">5</span>))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Circle x^2 + y^2 = 4</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">300</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>ax1.plot(<span class="dv">2</span> <span class="op">*</span> np.cos(theta), <span class="dv">2</span> <span class="op">*</span> np.sin(theta), color<span class="op">=</span><span class="st">'purple'</span>, label<span class="op">=</span><span class="st">'$x^2 + y^2 = 4$'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>ax1.scatter([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>], [<span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">0</span>], color<span class="op">=</span><span class="st">'red'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>ax1.annotate(<span class="st">'$(0, 2)$'</span>, (<span class="fl">0.1</span>, <span class="fl">2.1</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>ax1.annotate(<span class="st">'$(0, -2)$'</span>, (<span class="fl">0.1</span>, <span class="op">-</span><span class="fl">2.3</span>))</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>ax1.annotate(<span class="st">'$(2, 0)$'</span>, (<span class="fl">2.1</span>, <span class="fl">0.1</span>))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>ax1.annotate(<span class="st">'$(-2, 0)$'</span>, (<span class="op">-</span><span class="fl">2.8</span>, <span class="fl">0.1</span>))</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>ax1.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>ax1.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>ax1.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>ax1.set_xlim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>ax1.set_ylim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Circle: $x^2 + y^2 = 4$'</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax1.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">':'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Cubic Polynomial y = (x - 2)(2x^2 + 7x + 3)</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>x_cubic <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">3.5</span>, <span class="fl">2.5</span>, <span class="dv">200</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>y_cubic <span class="op">=</span> (x_cubic <span class="op">-</span> <span class="dv">2</span>) <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> x_cubic<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">7</span> <span class="op">*</span> x_cubic <span class="op">+</span> <span class="dv">3</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>ax2.plot(x_cubic, y_cubic, color<span class="op">=</span><span class="st">'teal'</span>, label<span class="op">=</span><span class="st">'$y = (x-2)(2x^2+7x+3)$'</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>ax2.scatter([<span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="fl">0.5</span>, <span class="dv">2</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">6</span>], color<span class="op">=</span><span class="st">'red'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'$(-3, 0)$'</span>, (<span class="op">-</span><span class="fl">3.4</span>, <span class="fl">1.5</span>))</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'$(-0.5, 0)$'</span>, (<span class="op">-</span><span class="fl">1.1</span>, <span class="op">-</span><span class="dv">3</span>))</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'$(2, 0)$'</span>, (<span class="fl">1.8</span>, <span class="dv">2</span>))</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'$(0, -6)$'</span>, (<span class="fl">0.1</span>, <span class="op">-</span><span class="dv">6</span>))</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>ax2.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>ax2.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>ax2.set_xlim(<span class="op">-</span><span class="dv">4</span>, <span class="dv">3</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>ax2.set_ylim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">10</span>)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Cubic Intercepts: 3 Real Roots'</span>)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>ax2.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">':'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-circle-cubic" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-circle-cubic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="session5-summary-session1-4_files/figure-html/fig-circle-cubic-output-1.png" width="1096" height="470" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-circle-cubic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Universal Intercept Protocol applied to a circle (x² + y² = 4) and a cubic polynomial.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+</section>
+<section id="fundamentals-of-quadratic-curves-parabolas" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Fundamentals of Quadratic Curves &amp; Parabolas</h1>
+<section id="properties-of-the-standard-parabola-y-x2" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="properties-of-the-standard-parabola-y-x2"><span class="header-section-number">4.1</span> Properties of the Standard Parabola (<span class="math inline">\(y = x^2\)</span>)</h2>
+<ol type="1">
+<li><strong>Non-Negativity</strong>: For all <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x^2 \ge 0\)</span>, meaning <span class="math inline">\(y\)</span> cannot be negative.</li>
+<li><strong>Symmetry</strong>: <span class="math inline">\(f(-x) = (-x)^2 = x^2 = f(x)\)</span>, making the curve perfectly symmetrical across the <span class="math inline">\(y\)</span>-axis (<span class="math inline">\(x = 0\)</span>).</li>
+<li><strong>Vertex</strong>: The lowest turning point sits at the origin <span class="math inline">\((0,0)\)</span>, acting as a global minimum.</li>
+</ol>
+</section>
+<section id="the-scaling-coefficient-a-in-y-ax2" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="the-scaling-coefficient-a-in-y-ax2"><span class="header-section-number">4.2</span> The Scaling Coefficient <span class="math inline">\(a\)</span> in <span class="math inline">\(y = ax^2\)</span></h2>
+<p>The coefficient <span class="math inline">\(a\)</span> dictates the vertical stretch/compression and direction of opening: * <strong><span class="math inline">\(|a| &gt; 1\)</span></strong>: Vertically stretches the parabola, making it <strong>narrower</strong>. * <strong><span class="math inline">\(0 &lt; |a| &lt; 1\)</span></strong>: Vertically compresses the parabola, making it <strong>wider</strong>. * <strong><span class="math inline">\(a &gt; 0\)</span></strong>: Opens <strong>upward</strong> (minimum turning point). * <strong><span class="math inline">\(a &lt; 0\)</span></strong>: Opens <strong>downward</strong> (maximum turning point).</p>
+</section>
+<section id="vertical-translations-y-ax2-c" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="vertical-translations-y-ax2-c"><span class="header-section-number">4.3</span> Vertical Translations (<span class="math inline">\(y = ax^2 + c\)</span>)</h2>
+<p>The constant <span class="math inline">\(c\)</span> translates the parabola vertically along the <span class="math inline">\(y\)</span>-axis by <span class="math inline">\(c\)</span> units, shifting the vertex to <span class="math inline">\((0, c)\)</span>.</p>
+<div id="cell-fig-parabola-family" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">5</span>))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">200</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Subplot 1: Effect of coefficient a</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, x<span class="op">**</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'$y = x^2$ (Standard)'</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, <span class="dv">2</span> <span class="op">*</span> x<span class="op">**</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'$y = 2x^2$ (Narrower)'</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, <span class="fl">0.5</span> <span class="op">*</span> x<span class="op">**</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'$y = 0.5x^2$ (Wider)'</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, <span class="op">-</span>x<span class="op">**</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'$y = -x^2$ (Inverted)'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>ax1.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>ax1.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>ax1.set_xlim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>ax1.set_ylim(<span class="op">-</span><span class="dv">4</span>, <span class="dv">6</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Coefficient $a$ Stretch &amp; Inversion'</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>ax1.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">':'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>ax1.legend()</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Subplot 2: Vertical translations y = x^2 + c</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>ax2.plot(x, x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span>, label<span class="op">=</span><span class="st">'$y = x^2 + 2$ (No Real Roots)'</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>ax2.plot(x, x<span class="op">**</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'$y = x^2$ (1 Root at Origin)'</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>ax2.plot(x, x<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">4</span>, label<span class="op">=</span><span class="st">'$y = x^2 - 4$ (2 Real Roots: $</span><span class="ch">\\</span><span class="st">pm 2$)'</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>ax2.scatter([<span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>], [<span class="dv">0</span>, <span class="dv">0</span>], color<span class="op">=</span><span class="st">'red'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>ax2.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>ax2.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>ax2.set_xlim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>ax2.set_ylim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Vertical Shifts $y = x^2 + c$ &amp; Roots'</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>ax2.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">':'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>ax2.legend()</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-parabola-family" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-parabola-family-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="session5-summary-session1-4_files/figure-html/fig-parabola-family-output-1.png" width="1144" height="470" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-parabola-family-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Effects of scaling coefficient a and vertical translation c on parabolas.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="advanced-quadratic-forms-vertex-derivation-symmetry" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Advanced Quadratic Forms, Vertex Derivation &amp; Symmetry</h1>
+<section id="derivation-of-vertex-formulas-for-y-ax2-bx" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="derivation-of-vertex-formulas-for-y-ax2-bx"><span class="header-section-number">5.1</span> Derivation of Vertex Formulas for <span class="math inline">\(y = ax^2 + bx\)</span></h2>
+<p>To analyze <span class="math inline">\(y = ax^2 + bx\)</span>, we factorize the expression to locate its <span class="math inline">\(x\)</span>-intercepts:</p>
+<p><span class="math display">\[y = ax\left(x + \frac{b}{a}\right)\]</span></p>
+<ol type="1">
+<li><strong><span class="math inline">\(y\)</span>-intercept</strong>: Set <span class="math inline">\(x = 0 \implies y = 0 \implies (0,0)\)</span>.</li>
+<li><strong><span class="math inline">\(x\)</span>-intercepts</strong>: Set <span class="math inline">\(y = 0 \implies ax\left(x + \frac{b}{a}\right) = 0 \implies x_1 = 0 \quad \text{and} \quad x_2 = -\frac{b}{a}\)</span>.</li>
+<li><strong>Axis of Symmetry (<span class="math inline">\(x_v\)</span>)</strong>: Due to parabolic symmetry, the vertex <span class="math inline">\(x\)</span>-coordinate lies at the exact midpoint of the two <span class="math inline">\(x\)</span>-intercepts: <span class="math display">\[x_v = \frac{0 + \left(-\frac{b}{a}\right)}{2} = -\frac{b}{2a}\]</span></li>
+<li><strong>Vertex <span class="math inline">\(y\)</span>-coordinate (<span class="math inline">\(y_v\)</span>)</strong>: Substitute <span class="math inline">\(x_v = -\frac{b}{2a}\)</span> back into the equation: <span class="math display">\[y_v = a\left(-\frac{b}{2a}\right)^2 + b\left(-\frac{b}{2a}\right) = a\left(\frac{b^2}{4a^2}\right) - \frac{b^2}{2a} = \frac{b^2}{4a} - \frac{b^2}{2a} = -\frac{b^2}{4a}\]</span></li>
+</ol>
+<p><span class="math display">\[\text{Vertex Coordinates: } \mathbf{\left(-\frac{b}{2a}, -\frac{b^2}{4a}\right)}\]</span></p>
+<section id="worked-example-y-2x2-6x" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="worked-example-y-2x2-6x"><span class="header-section-number">5.1.1</span> Worked Example: <span class="math inline">\(y = 2x^2 + 6x\)</span></h3>
+<ul>
+<li><strong><span class="math inline">\(x\)</span>-intercepts</strong>: <span class="math inline">\(2x(x + 3) = 0 \implies (0,0) \text{ and } (-3,0)\)</span>.</li>
+<li><strong>Axis of Symmetry</strong>: <span class="math inline">\(x_v = \frac{0 + (-3)}{2} = -1.5\)</span>.</li>
+<li><strong>Vertex <span class="math inline">\(y\)</span>-value</strong>: <span class="math inline">\(y_v = 2(-1.5)^2 + 6(-1.5) = 4.5 - 9 = -4.5\)</span>.</li>
+<li><strong>Vertex</strong>: <span class="math inline">\((-1.5, -4.5)\)</span>.</li>
+</ul>
+</section>
+</section>
+<section id="general-quadratic-form-y-ax2-bx-c" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="general-quadratic-form-y-ax2-bx-c"><span class="header-section-number">5.2</span> General Quadratic Form <span class="math inline">\(y = ax^2 + bx + c\)</span></h2>
+<p>Adding <span class="math inline">\(c\)</span> translates the parabola <span class="math inline">\(y = ax^2 + bx\)</span> vertically by <span class="math inline">\(c\)</span> units: * <strong><span class="math inline">\(y\)</span>-intercept</strong>: Set <span class="math inline">\(x = 0 \implies y = c \implies (0, c)\)</span>. * <strong>Axis of Symmetry</strong>: Substituting <span class="math inline">\(y = c \implies ax^2 + bx + c = c \implies ax^2 + bx = 0 \implies x = 0 \text{ and } x = -\frac{b}{a}\)</span>. The midpoint remains <strong><span class="math inline">\(x_v = -\frac{b}{2a}\)</span></strong>.</p>
+<section id="factorizable-example-y-x2-x---12" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="factorizable-example-y-x2-x---12"><span class="header-section-number">5.2.1</span> Factorizable Example: <span class="math inline">\(y = x^2 + x - 12\)</span></h3>
+<ol type="1">
+<li><strong>Factorize</strong>: <span class="math inline">\(y = (x - 3)(x + 4)\)</span>.</li>
+<li><strong><span class="math inline">\(y\)</span>-intercept</strong>: Set <span class="math inline">\(x = 0 \implies y = -12 \implies (0, -12)\)</span>.</li>
+<li><strong><span class="math inline">\(x\)</span>-intercepts</strong>: Set <span class="math inline">\(y = 0 \implies (x - 3)(x + 4) = 0 \implies (3,0) \text{ and } (-4,0)\)</span>.</li>
+<li><strong>Vertex <span class="math inline">\(x\)</span>-coordinate</strong>: <span class="math inline">\(x_v = \frac{3 + (-4)}{2} = -0.5\)</span>.</li>
+<li><strong>Vertex <span class="math inline">\(y\)</span>-coordinate</strong>: <span class="math inline">\(y_v = (-0.5 - 3)(-0.5 + 4) = (-3.5)(3.5) = -12.25\)</span>.</li>
+<li><strong>Vertex</strong>: <span class="math inline">\((-0.5, -12.25)\)</span>.</li>
+</ol>
+</section>
+</section>
+<section id="uniqueness-of-the-vertex" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="uniqueness-of-the-vertex"><span class="header-section-number">5.3</span> Uniqueness of the Vertex</h2>
+<p>The vertex is geometrically unique: it is the <strong>only point</strong> on a parabola that possesses a single unique <span class="math inline">\(x\)</span>-value for its <span class="math inline">\(y\)</span>-value. For every other <span class="math inline">\(y\)</span>-value above (or below) the vertex, there exist exactly two symmetric <span class="math inline">\(x\)</span>-values equidistant from the axis of symmetry <span class="math inline">\(x = -\frac{b}{2a}\)</span>.</p>
+<div id="cell-fig-quadratic-vertex-symmetry" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">5</span>))</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot 1: y = 2x^2 + 6x</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">200</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> x1<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">6</span> <span class="op">*</span> x1</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>ax1.plot(x1, y1, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'$y = 2x^2 + 6x$'</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>ax1.axvline(<span class="op">-</span><span class="fl">1.5</span>, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Axis of Symmetry: $x = -1.5$'</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>ax1.scatter([<span class="dv">0</span>, <span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="fl">1.5</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="fl">4.5</span>], color<span class="op">=</span><span class="st">'black'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>ax1.annotate(<span class="st">'$(0,0)$'</span>, (<span class="fl">0.1</span>, <span class="fl">0.5</span>))</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>ax1.annotate(<span class="st">'$(-3,0)$'</span>, (<span class="op">-</span><span class="fl">3.8</span>, <span class="fl">0.5</span>))</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>ax1.annotate(<span class="st">'Vertex: $(-1.5, -4.5)$'</span>, (<span class="op">-</span><span class="fl">2.8</span>, <span class="op">-</span><span class="fl">5.2</span>), fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>ax1.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>ax1.set_xlim(<span class="op">-</span><span class="fl">4.5</span>, <span class="fl">1.5</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>ax1.set_ylim(<span class="op">-</span><span class="dv">6</span>, <span class="dv">5</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'$y = 2x^2 + 6x$ Symmetry'</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>ax1.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">':'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>ax1.legend()</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot 2: y = x^2 + x - 12</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">200</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> x2<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> x2 <span class="op">-</span> <span class="dv">12</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>ax2.plot(x2, y2, color<span class="op">=</span><span class="st">'green'</span>, label<span class="op">=</span><span class="st">'$y = x^2 + x - 12$'</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>ax2.axvline(<span class="op">-</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Axis of Symmetry: $x = -0.5$'</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>ax2.scatter([<span class="dv">3</span>, <span class="op">-</span><span class="dv">4</span>, <span class="dv">0</span>, <span class="op">-</span><span class="fl">0.5</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">12</span>, <span class="op">-</span><span class="fl">12.25</span>], color<span class="op">=</span><span class="st">'black'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'$(3,0)$'</span>, (<span class="fl">3.1</span>, <span class="dv">1</span>))</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'$(-4,0)$'</span>, (<span class="op">-</span><span class="fl">4.8</span>, <span class="dv">1</span>))</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'$(0,-12)$'</span>, (<span class="fl">0.2</span>, <span class="op">-</span><span class="fl">11.5</span>))</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>ax2.annotate(<span class="st">'Vertex: $(-0.5, -12.25)$'</span>, (<span class="op">-</span><span class="fl">3.5</span>, <span class="op">-</span><span class="fl">13.8</span>), fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>ax2.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>ax2.set_xlim(<span class="op">-</span><span class="fl">5.5</span>, <span class="fl">4.5</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>ax2.set_ylim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">5</span>)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'$y = x^2 + x - 12$ Landmarks'</span>)</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>ax2.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">':'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>ax2.legend()</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-quadratic-vertex-symmetry" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quadratic-vertex-symmetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="session5-summary-session1-4_files/figure-html/fig-quadratic-vertex-symmetry-output-1.png" width="1143" height="470" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quadratic-vertex-symmetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Parabolic symmetry, axis of symmetry, and vertex for y = 2x² + 6x and y = x² + x - 12.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="completing-the-square-formal-proof-the-discriminant" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Completing the Square, Formal Proof, &amp; The Discriminant</h1>
+<section id="completing-the-square-technique" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="completing-the-square-technique"><span class="header-section-number">6.1</span> Completing the Square Technique</h2>
+<p>When a quadratic expression cannot be easily factorized over integers, we isolate <span class="math inline">\(x\)</span> by transforming the quadratic into a perfect square binomial:</p>
+<p><span class="math display">\[(x + a)^2 = x^2 + 2ax + a^2\]</span></p>
+<section id="numerical-example-solve-x2-x---7-0" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="numerical-example-solve-x2-x---7-0"><span class="header-section-number">6.1.1</span> Numerical Example: Solve <span class="math inline">\(x^2 + x - 7 = 0\)</span></h3>
+<ol type="1">
+<li>Group the <span class="math inline">\(x\)</span>-terms: <span class="math inline">\((x^2 + x) - 7 = 0\)</span>.</li>
+<li>Take half the linear coefficient <span class="math inline">\(\left(\frac{1}{2}\right)\)</span> and square it <span class="math inline">\(\left(\frac{1}{4}\right)\)</span>. Add and subtract inside the expression: <span class="math display">\[\left(x^2 + x + \frac{1}{4}\right) - \frac{1}{4} - 7 = 0\]</span></li>
+<li>Write as a perfect square: <span class="math display">\[\left(x + \frac{1}{2}\right)^2 - \frac{29}{4} = 0 \implies \left(x + \frac{1}{2}\right)^2 = \frac{29}{4}\]</span></li>
+<li>Take the square root on both sides: <span class="math display">\[x + \frac{1}{2} = \pm \frac{\sqrt{29}}{2} \implies x = -\frac{1}{2} \pm \frac{\sqrt{29}}{2}\]</span></li>
+</ol>
+</section>
+</section>
+<section id="general-proof-of-the-quadratic-formula" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="general-proof-of-the-quadratic-formula"><span class="header-section-number">6.2</span> General Proof of the Quadratic Formula</h2>
+<p>Starting with the general quadratic equation <span class="math inline">\(ax^2 + bx + c = 0\)</span> (where <span class="math inline">\(a \neq 0\)</span>):</p>
+<p><span class="math display">\[\text{Divide by } a: \quad x^2 + \frac{b}{a}x + \frac{c}{a} = 0\]</span></p>
+<p>Rewrite the middle linear term as <span class="math inline">\(2 \cdot \left(\frac{b}{2a}\right)x\)</span> and complete the square by adding and subtracting <span class="math inline">\(\left(\frac{b}{2a}\right)^2\)</span>:</p>
+<p><span class="math display">\[\left[x^2 + 2\left(\frac{b}{2a}\right)x + \left(\frac{b}{2a}\right)^2\right] - \left(\frac{b}{2a}\right)^2 + \frac{c}{a} = 0\]</span></p>
+<p><span class="math display">\[\left(x + \frac{b}{2a}\right)^2 - \frac{b^2}{4a^2} + \frac{c}{a} = 0\]</span></p>
+<p><span class="math display">\[\left(x + \frac{b}{2a}\right)^2 = \frac{b^2}{4a^2} - \frac{c}{a} = \frac{b^2 - 4ac}{4a^2}\]</span></p>
+<p>Taking the square root on both sides:</p>
+<p><span class="math display">\[x + \frac{b}{2a} = \pm \sqrt{\frac{b^2 - 4ac}{4a^2}} = \pm \frac{\sqrt{b^2 - 4ac}}{2a}\]</span></p>
+<p><span class="math display">\[\mathbf{x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}}\]</span></p>
+<section id="structural-geometric-interpretation-of-the-formula" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="structural-geometric-interpretation-of-the-formula"><span class="header-section-number">6.2.1</span> Structural &amp; Geometric Interpretation of the Formula</h3>
+<p>The quadratic formula is composed of two geometric components: 1. <strong>Axis of Symmetry</strong>: The term <strong><span class="math inline">\(-\frac{b}{2a}\)</span></strong> gives the horizontal center line of the parabola. 2. <strong>Symmetric Offset</strong>: The term <strong><span class="math inline">\(\pm \frac{\sqrt{b^2 - 4ac}}{2a}\)</span></strong> gives the exact horizontal distance from the axis of symmetry to the two <span class="math inline">\(x\)</span>-intercepts.</p>
+<p><span class="math display">\[\text{Root } x_1, x_2 = \underbrace{-\frac{b}{2a}}_{\text{Axis of Symmetry}} \pm \underbrace{\frac{\sqrt{b^2 - 4ac}}{2a}}_{\text{Distance to Intercepts}}\]</span></p>
+</section>
+</section>
+<section id="the-discriminant-d-b2---4ac" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="the-discriminant-d-b2---4ac"><span class="header-section-number">6.3</span> The Discriminant (<span class="math inline">\(D = b^2 - 4ac\)</span>)</h2>
+<p>The expression under the radical sign, <span class="math inline">\(D = b^2 - 4ac\)</span>, determines the nature and number of real roots (and <span class="math inline">\(x\)</span>-intercepts):</p>
+<ul>
+<li><strong><span class="math inline">\(b^2 - 4ac &gt; 0\)</span></strong>: <strong>2 Distinct Real Roots</strong>. The parabola intersects the <span class="math inline">\(x\)</span>-axis at two distinct points equidistant from <span class="math inline">\(x = -\frac{b}{2a}\)</span>.</li>
+<li><strong><span class="math inline">\(b^2 - 4ac = 0\)</span></strong>: <strong>1 Repeated Real Root</strong>. The offset distance is zero, meaning the vertex sits directly on the <span class="math inline">\(x\)</span>-axis at <span class="math inline">\(x = -\frac{b}{2a}\)</span>.</li>
+<li><strong><span class="math inline">\(b^2 - 4ac &lt; 0\)</span></strong>: <strong>No Real Roots</strong>. The square root of a negative number is non-real, meaning the parabola floats entirely above (if <span class="math inline">\(a &gt; 0\)</span>) or lies entirely below (if <span class="math inline">\(a &lt; 0\)</span>) the <span class="math inline">\(x\)</span>-axis without touching it.</li>
+</ul>
+<div id="cell-fig-discriminant-cases" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">5</span>))</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">200</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x, x<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">-</span> <span class="dv">3</span>, color<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'D &gt; 0: $y = x^2 - 2x - 3$ (2 Real Roots)'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>plt.plot(x, x<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">1</span>, color<span class="op">=</span><span class="st">'green'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'D = 0: $y = x^2 - 2x + 1$ (1 Root / Touches Axis)'</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>plt.plot(x, x<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">4</span>, color<span class="op">=</span><span class="st">'purple'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'D &lt; 0: $y = x^2 - 2x + 4$ (0 Real Roots / Floats)'</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>plt.scatter([<span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>], color<span class="op">=</span><span class="st">'red'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">1</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">1</span>, color<span class="op">=</span><span class="st">'gray'</span>, linestyle<span class="op">=</span><span class="st">':'</span>, label<span class="op">=</span><span class="st">'Axis of Symmetry $x = 1$'</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="op">-</span><span class="fl">2.5</span>, <span class="fl">3.5</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">7</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'y'</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'The Discriminant $D = b^2 - 4ac$ &amp; Geometric Intercepts'</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">':'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-discriminant-cases" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-discriminant-cases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="session5-summary-session1-4_files/figure-html/fig-discriminant-cases-output-1.png" width="855" height="470" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-discriminant-cases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Geometric classification of parabolas based on the Discriminant D = b² - 4ac.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="critical-graphing-protocol-homework-assignment" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Critical Graphing Protocol &amp; Homework Assignment</h1>
+<section id="master-checklist-for-sketching-any-parabola" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="master-checklist-for-sketching-any-parabola"><span class="header-section-number">7.1</span> Master Checklist for Sketching Any Parabola</h2>
+<p>When sketching a quadratic curve <span class="math inline">\(y = ax^2 + bx + c\)</span>, identify and label these four landmarks:</p>
+<ol type="1">
+<li><strong><span class="math inline">\(y\)</span>-intercept</strong>: Evaluate <span class="math inline">\((0, c)\)</span>.</li>
+<li><strong>Discriminant Check &amp; <span class="math inline">\(x\)</span>-intercepts</strong>: Compute <span class="math inline">\(D = b^2 - 4ac\)</span>. If <span class="math inline">\(D \ge 0\)</span>, solve for roots via factoring or the quadratic formula.</li>
+<li><strong>Axis of Symmetry</strong>: Draw the dashed line <span class="math inline">\(x = -\frac{b}{2a}\)</span>.</li>
+<li><strong>Vertex Coordinates</strong>: Calculate <span class="math inline">\(\left(-\frac{b}{2a}, \frac{4ac - b^2}{4a}\right)\)</span>.</li>
+</ol>
+</section>
+<section id="homework-exercises-textbook-reference" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="homework-exercises-textbook-reference"><span class="header-section-number">7.2</span> Homework Exercises &amp; Textbook Reference</h2>
+<ul>
+<li><strong>Textbook</strong>: <em>Pure Mathematics 1</em> (Sections 1.1–1.3, 1.6, and 1.8).</li>
+<li><strong>Exercises</strong>: Complete selected sub-questions from Exercises 1A, 1B, and 1C using the mandatory two-column layout.</li>
+<li><strong>Practice Task</strong>: Reproduce the algebraic proof of the quadratic formula via completing the square on a blank page without looking at notes, and practice verbally presenting the proof to a peer.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/gvgk\.in\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Currently associated with <a href="https://farmhill.in"><em>Farm Hill Education Trust</em></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:venu.gvgk@gmail.com">
+      <i class="bi bi-envelope-at" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/venugvgk">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/venu.gvgk">
+      <i class="bi bi-facebook" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/venu.gvgk">
+      <i class="bi bi-instagram" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

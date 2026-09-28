@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-09-24">
+
+<title>Elasticities of Demand, Decision Mechanics, and Case Studies – Venu GVGK Raju</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-52db394cf1c950120975338c64ae4068.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Elasticities of Demand, Decision Mechanics, and Case Studies – Venu GVGK Raju">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Venu GVGK Raju">
+<meta name="twitter:title" content="Elasticities of Demand, Decision Mechanics, and Case Studies – Venu GVGK Raju">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Venu GVGK Raju</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">Curriculum Vitae</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../books/index.html"> 
+<span class="menu-text">Books</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../education/index.html"> 
+<span class="menu-text">On Education</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cs_2026/index.html"> 
+<span class="menu-text">CS 2026</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../a_math_2028/index.html"> 
+<span class="menu-text">A Level Math</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../grade_6_math_2026/index.html"> 
+<span class="menu-text">Grade 6 Math</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../eco_2028/index.html"> 
+<span class="menu-text">A level Economics</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-to-elasticity-of-demand" id="toc-introduction-to-elasticity-of-demand" class="nav-link active" data-scroll-target="#introduction-to-elasticity-of-demand"><span class="header-section-number">1</span> Introduction to Elasticity of Demand</a></li>
+  <li><a href="#elasticities-of-demand-theory-and-mathematical-representations" id="toc-elasticities-of-demand-theory-and-mathematical-representations" class="nav-link" data-scroll-target="#elasticities-of-demand-theory-and-mathematical-representations"><span class="header-section-number">2</span> Elasticities of Demand: Theory and Mathematical Representations</a>
+  <ul class="collapse">
+  <li><a href="#price-elasticity-of-demand-ped" id="toc-price-elasticity-of-demand-ped" class="nav-link" data-scroll-target="#price-elasticity-of-demand-ped"><span class="header-section-number">2.1</span> Price Elasticity of Demand (PED)</a>
+  <ul class="collapse">
+  <li><a href="#definition-and-formula" id="toc-definition-and-formula" class="nav-link" data-scroll-target="#definition-and-formula"><span class="header-section-number">2.1.1</span> Definition and Formula</a></li>
+  <li><a href="#behavior-along-a-downward-sloping-linear-demand-curve" id="toc-behavior-along-a-downward-sloping-linear-demand-curve" class="nav-link" data-scroll-target="#behavior-along-a-downward-sloping-linear-demand-curve"><span class="header-section-number">2.1.2</span> Behavior Along a Downward-Sloping Linear Demand Curve</a></li>
+  <li><a href="#special-and-extreme-elasticity-curves" id="toc-special-and-extreme-elasticity-curves" class="nav-link" data-scroll-target="#special-and-extreme-elasticity-curves"><span class="header-section-number">2.1.3</span> Special and Extreme Elasticity Curves</a></li>
+  </ul></li>
+  <li><a href="#income-elasticity-of-demand-yed" id="toc-income-elasticity-of-demand-yed" class="nav-link" data-scroll-target="#income-elasticity-of-demand-yed"><span class="header-section-number">2.2</span> Income Elasticity of Demand (YED)</a>
+  <ul class="collapse">
+  <li><a href="#definition-and-formula-1" id="toc-definition-and-formula-1" class="nav-link" data-scroll-target="#definition-and-formula-1"><span class="header-section-number">2.2.1</span> Definition and Formula</a></li>
+  <li><a href="#good-classifications-via-yed" id="toc-good-classifications-via-yed" class="nav-link" data-scroll-target="#good-classifications-via-yed"><span class="header-section-number">2.2.2</span> Good Classifications via YED</a></li>
+  </ul></li>
+  <li><a href="#cross-price-elasticity-of-demand-xed" id="toc-cross-price-elasticity-of-demand-xed" class="nav-link" data-scroll-target="#cross-price-elasticity-of-demand-xed"><span class="header-section-number">2.3</span> Cross-Price Elasticity of Demand (XED)</a>
+  <ul class="collapse">
+  <li><a href="#definition-and-formula-2" id="toc-definition-and-formula-2" class="nav-link" data-scroll-target="#definition-and-formula-2"><span class="header-section-number">2.3.1</span> Definition and Formula</a></li>
+  <li><a href="#good-relationships-via-xed" id="toc-good-relationships-via-xed" class="nav-link" data-scroll-target="#good-relationships-via-xed"><span class="header-section-number">2.3.2</span> Good Relationships via XED</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#operational-dynamics-and-impact-on-decision-making" id="toc-operational-dynamics-and-impact-on-decision-making" class="nav-link" data-scroll-target="#operational-dynamics-and-impact-on-decision-making"><span class="header-section-number">3</span> Operational Dynamics and Impact on Decision-Making</a>
+  <ul class="collapse">
+  <li><a href="#determinants-of-price-elasticity-of-demand" id="toc-determinants-of-price-elasticity-of-demand" class="nav-link" data-scroll-target="#determinants-of-price-elasticity-of-demand"><span class="header-section-number">3.1</span> Determinants of Price Elasticity of Demand</a></li>
+  <li><a href="#the-total-revenue-total-spending-test" id="toc-the-total-revenue-total-spending-test" class="nav-link" data-scroll-target="#the-total-revenue-total-spending-test"><span class="header-section-number">3.2</span> The Total Revenue / Total Spending Test</a></li>
+  <li><a href="#producer-and-consumer-applications" id="toc-producer-and-consumer-applications" class="nav-link" data-scroll-target="#producer-and-consumer-applications"><span class="header-section-number">3.3</span> Producer and Consumer Applications</a></li>
+  </ul></li>
+  <li><a href="#real-life-case-studies-from-class-discussions" id="toc-real-life-case-studies-from-class-discussions" class="nav-link" data-scroll-target="#real-life-case-studies-from-class-discussions"><span class="header-section-number">4</span> Real-Life Case Studies from Class Discussions</a>
+  <ul class="collapse">
+  <li><a href="#case-study-1-global-coffee-market-mechanization" id="toc-case-study-1-global-coffee-market-mechanization" class="nav-link" data-scroll-target="#case-study-1-global-coffee-market-mechanization"><span class="header-section-number">4.1</span> Case Study 1: Global Coffee Market Mechanization</a></li>
+  <li><a href="#case-study-2-restaurant-demand-analysis-chicken-and-rice-meal" id="toc-case-study-2-restaurant-demand-analysis-chicken-and-rice-meal" class="nav-link" data-scroll-target="#case-study-2-restaurant-demand-analysis-chicken-and-rice-meal"><span class="header-section-number">4.2</span> Case Study 2: Restaurant Demand Analysis (Chicken and Rice Meal)</a></li>
+  <li><a href="#case-study-3-natural-gas-energy-policy-in-china" id="toc-case-study-3-natural-gas-energy-policy-in-china" class="nav-link" data-scroll-target="#case-study-3-natural-gas-energy-policy-in-china"><span class="header-section-number">4.3</span> Case Study 3: Natural Gas &amp; Energy Policy in China</a></li>
+  <li><a href="#case-study-4-fidget-spinner-market-shifters-jacob-clifford-framework" id="toc-case-study-4-fidget-spinner-market-shifters-jacob-clifford-framework" class="nav-link" data-scroll-target="#case-study-4-fidget-spinner-market-shifters-jacob-clifford-framework"><span class="header-section-number">4.4</span> Case Study 4: Fidget Spinner Market Shifters (Jacob Clifford Framework)</a></li>
+  </ul></li>
+  <li><a href="#textbook-questions-and-exam-practice-solutions" id="toc-textbook-questions-and-exam-practice-solutions" class="nav-link" data-scroll-target="#textbook-questions-and-exam-practice-solutions"><span class="header-section-number">5</span> Textbook Questions and Exam Practice Solutions</a></li>
+  <li><a href="#python-visualisations" id="toc-python-visualisations" class="nav-link" data-scroll-target="#python-visualisations"><span class="header-section-number">6</span> Python Visualisations</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Elasticities of Demand, Decision Mechanics, and Case Studies</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 24, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction-to-elasticity-of-demand" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction to Elasticity of Demand</h1>
+<p>Elasticity is a general measure of the <strong>responsiveness</strong> of one variable to changes in another variable, <em>ceteris paribus</em> (all other things remaining equal). Because elasticity measures relative or percentage changes, it is expressed as a unitless coefficient or pure ratio, meaning original measurement units cancel out.</p>
+<hr>
+</section>
+<section id="elasticities-of-demand-theory-and-mathematical-representations" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Elasticities of Demand: Theory and Mathematical Representations</h1>
+<section id="price-elasticity-of-demand-ped" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="price-elasticity-of-demand-ped"><span class="header-section-number">2.1</span> Price Elasticity of Demand (PED)</h2>
+<section id="definition-and-formula" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="definition-and-formula"><span class="header-section-number">2.1.1</span> Definition and Formula</h3>
+<p>Price Elasticity of Demand (<span class="math inline">\(\text{PED}\)</span>) measures the responsiveness of the quantity demanded of a product following a change in its own price.</p>
+<p><span class="math display">\[\text{PED} = \frac{\% \Delta Q_d}{\% \Delta P} = \frac{\frac{\Delta Q}{Q_1} \times 100}{\frac{\Delta P}{P_1} \times 100} = \frac{\Delta Q}{\Delta P} \times \frac{P_1}{Q_1}\]</span></p>
+<p>By the Law of Demand, price and quantity demanded move in opposite directions, making the default mathematical value of <span class="math inline">\(\text{PED}\)</span> negative. However, standard economic convention drops the negative sign and treats <span class="math inline">\(\text{PED}\)</span> in absolute terms.</p>
+</section>
+<section id="behavior-along-a-downward-sloping-linear-demand-curve" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="behavior-along-a-downward-sloping-linear-demand-curve"><span class="header-section-number">2.1.2</span> Behavior Along a Downward-Sloping Linear Demand Curve</h3>
+<p>Along a linear downward-sloping demand curve (<span class="math inline">\(P = a - bQ\)</span>), the slope or gradient (<span class="math inline">\(\frac{\Delta P}{\Delta Q} = -b\)</span>) remains constant throughout. However, <span class="math inline">\(\text{PED}\)</span> <strong>does not remain constant</strong> along the curve because it depends on the ratio of absolute price to quantity (<span class="math inline">\(\frac{P}{Q}\)</span>):</p>
+<p><span class="math display">\[\text{PED} = \left( \frac{\Delta Q}{\Delta P} \right) \times \left( \frac{P}{Q} \right) = \left( \frac{1}{\text{Slope}} \right) \times \left( \frac{P}{Q} \right)\]</span></p>
+<ul>
+<li><strong>Upper Segment (High Price, Low Quantity):</strong> The ratio <span class="math inline">\(\frac{P}{Q}\)</span> is large, making <span class="math inline">\(\text{PED} &gt; 1\)</span> (<strong>Price Elastic</strong>). Small price changes trigger proportionately larger percentage changes in quantity demanded.</li>
+<li><strong>Midpoint (<span class="math inline">\(P = \frac{a}{2}, Q = \frac{a}{2b}\)</span>):</strong> The term <span class="math inline">\(\frac{\Delta Q}{\Delta P}\)</span> and the ratio <span class="math inline">\(\frac{P}{Q}\)</span> become exact mathematical reciprocals (<span class="math inline">\(\frac{\Delta Q}{\Delta P} = \frac{Q}{P}\)</span>), yielding <span class="math inline">\(\text{PED} = 1.0\)</span> (<strong>Unitary Elastic</strong>).</li>
+<li><strong>Lower Segment (Low Price, High Quantity):</strong> The ratio <span class="math inline">\(\frac{P}{Q}\)</span> is small, making <span class="math inline">\(\text{PED} &lt; 1\)</span> (<strong>Price Inelastic</strong>). Large price changes yield proportionately smaller percentage changes in quantity demanded.</li>
+</ul>
+<section id="numerical-class-example" class="level4" data-number="2.1.2.1">
+<h4 data-number="2.1.2.1" class="anchored" data-anchor-id="numerical-class-example"><span class="header-section-number">2.1.2.1</span> Numerical Class Example</h4>
+<p>Given the demand function <span class="math inline">\(P = 100 - 2Q \implies Q = 50 - 0.5P\)</span>, the slope derivative <span class="math inline">\(\frac{dQ}{dP} = -0.5\)</span> is constant: - <strong>Point A (<span class="math inline">\(P = 80, Q = 10\)</span>):</strong> <span class="math inline">\(\text{PED} = |-0.5 \times \frac{80}{10}| = 4.0\)</span> (Elastic). - <strong>Midpoint (<span class="math inline">\(P = 50, Q = 25\)</span>):</strong> <span class="math inline">\(\text{PED} = |-0.5 \times \frac{50}{25}| = 1.0\)</span> (Unitary Elastic). - <strong>Point C (<span class="math inline">\(P = 20, Q = 40\)</span>):</strong> <span class="math inline">\(\text{PED} = |-0.5 \times \frac{20}{40}| = 0.25\)</span> (Inelastic).</p>
+</section>
+</section>
+<section id="special-and-extreme-elasticity-curves" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="special-and-extreme-elasticity-curves"><span class="header-section-number">2.1.3</span> Special and Extreme Elasticity Curves</h3>
+<ol type="1">
+<li><strong>Perfectly Inelastic Demand (<span class="math inline">\(\text{PED} = 0\)</span>):</strong> Quantity demanded is completely unresponsive to price changes (e.g., life-saving drugs like insulin). Graphically represented as a vertical line (<span class="math inline">\(Q = k\)</span>) parallel to the Y-axis.</li>
+<li><strong>Perfectly Elastic Demand (<span class="math inline">\(\text{PED} = \infty\)</span>):</strong> Consumers buy infinitely at a single specific price, but demand drops to zero at any higher price. Graphically represented as a horizontal line (<span class="math inline">\(P = k\)</span>) parallel to the X-axis.</li>
+<li><strong>Unitary Elastic Demand Curve (<span class="math inline">\(\text{PED} = 1.0\)</span> throughout):</strong> Percentage change in quantity demanded exactly equals percentage change in price at all points. Graphically represented as a rectangular hyperbola (<span class="math inline">\(P \times Q = k\)</span>).</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="income-elasticity-of-demand-yed" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="income-elasticity-of-demand-yed"><span class="header-section-number">2.2</span> Income Elasticity of Demand (YED)</h2>
+<section id="definition-and-formula-1" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="definition-and-formula-1"><span class="header-section-number">2.2.1</span> Definition and Formula</h3>
+<p>Income Elasticity of Demand (<span class="math inline">\(\text{YED}\)</span> or <span class="math inline">\(y\)</span>) measures the responsiveness of quantity demanded to changes in consumer income.</p>
+<p><span class="math display">\[\text{YED} = \frac{\% \Delta Q_d}{\% \Delta Y} = \frac{\Delta Q}{\Delta Y} \times \frac{Y_1}{Q_1}\]</span></p>
+</section>
+<section id="good-classifications-via-yed" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="good-classifications-via-yed"><span class="header-section-number">2.2.2</span> Good Classifications via YED</h3>
+<ul>
+<li><strong>Normal Goods (<span class="math inline">\(\text{YED} &gt; 0\)</span>):</strong> Quantity demanded increases as consumer income rises.
+<ul>
+<li><strong>Necessity Goods (<span class="math inline">\(0 &lt; \text{YED} &lt; 1\)</span>):</strong> Quantity demanded increases by a smaller proportion than the increase in income (e.g., basic flour, rice, pulses).</li>
+<li><strong>Luxury or Superior Goods (<span class="math inline">\(\text{YED} &gt; 1\)</span>):</strong> Quantity demanded increases by a greater proportion than the increase in income (e.g., designer clothing, jewelry, high-end electronics, premium dining/ramen, automobiles in developing economies).</li>
+</ul></li>
+<li><strong>Inferior Goods (<span class="math inline">\(\text{YED} &lt; 0\)</span>):</strong> Quantity demanded decreases as consumer income rises (e.g., low-grade cooking oil, cheap packet noodles like Maggi, lower-quality grain).</li>
+</ul>
+<section id="graphing-conventions-for-yed" class="level4" data-number="2.2.2.1">
+<h4 data-number="2.2.2.1" class="anchored" data-anchor-id="graphing-conventions-for-yed"><span class="header-section-number">2.2.2.1</span> Graphing Conventions for YED</h4>
+<p>When plotting <span class="math inline">\(\text{YED}\)</span>, Income (<span class="math inline">\(Y\)</span>) is placed on the Y-axis and Quantity (<span class="math inline">\(Q\)</span>) on the X-axis. Necessity curves are steep (closer to the Y-axis), Luxury curves are flat/gradual, and Inferior good curves bend backward (negative slope).</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="cross-price-elasticity-of-demand-xed" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="cross-price-elasticity-of-demand-xed"><span class="header-section-number">2.3</span> Cross-Price Elasticity of Demand (XED)</h2>
+<section id="definition-and-formula-2" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="definition-and-formula-2"><span class="header-section-number">2.3.1</span> Definition and Formula</h3>
+<p>Cross-Price Elasticity of Demand (<span class="math inline">\(\text{XED}\)</span>) measures the responsiveness of quantity demanded of Product <span class="math inline">\(A\)</span> following a change in the price of Product <span class="math inline">\(B\)</span>.</p>
+<p><span class="math display">\[\text{XED}_{AB} = \frac{\% \Delta Q_A}{\% \Delta P_B} = \frac{\Delta Q_A}{\Delta P_B} \times \frac{P_{B1}}{Q_{A1}}\]</span></p>
+</section>
+<section id="good-relationships-via-xed" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="good-relationships-via-xed"><span class="header-section-number">2.3.2</span> Good Relationships via XED</h3>
+<ul>
+<li><strong>Substitute Goods (<span class="math inline">\(\text{XED} &gt; 0\)</span>):</strong> A price increase for Product <span class="math inline">\(B\)</span> increases demand for Product <span class="math inline">\(A\)</span> as consumers switch products (e.g., Coca-Cola vs.&nbsp;Pepsi, PCs vs.&nbsp;Laptops, a la carte vs.&nbsp;set meals).</li>
+<li><strong>Complementary Goods (<span class="math inline">\(\text{XED} &lt; 0\)</span>):</strong> A price increase for Product <span class="math inline">\(B\)</span> reduces demand for Product <span class="math inline">\(A\)</span> as the goods are consumed jointly (e.g., cinema tickets and popcorn, petrol and cars, smartphone contracts and mobile apps).</li>
+<li><strong>Unrelated Goods (<span class="math inline">\(\text{XED} = 0\)</span>):</strong> Changes in the price of one product have no effect on the demand for the other.</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="operational-dynamics-and-impact-on-decision-making" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Operational Dynamics and Impact on Decision-Making</h1>
+<section id="determinants-of-price-elasticity-of-demand" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="determinants-of-price-elasticity-of-demand"><span class="header-section-number">3.1</span> Determinants of Price Elasticity of Demand</h2>
+<ol type="1">
+<li><strong>Availability and Attractiveness of Substitutes:</strong> Goods with close, attractive substitutes (e.g., filter coffee vs.&nbsp;Nescafe, KFC vs.&nbsp;5-Star Chicken) have highly elastic demand.</li>
+<li><strong>Relative Expense as a Proportion of Income:</strong> Products accounting for a small fraction of a consumer’s budget (e.g., a cup of coffee) have lower <span class="math inline">\(\text{PED}\)</span>, whereas large budget items (e.g., housing rent) exhibit higher <span class="math inline">\(\text{PED}\)</span> over time.</li>
+<li><strong>Time Horizon:</strong> Demand is less elastic in the short run because spending habits take time to alter, but becomes increasingly elastic in the long run as consumers locate substitutes.</li>
+</ol>
+</section>
+<section id="the-total-revenue-total-spending-test" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="the-total-revenue-total-spending-test"><span class="header-section-number">3.2</span> The Total Revenue / Total Spending Test</h2>
+<p>Total Revenue (<span class="math inline">\(\text{TR}\)</span>) or Total Spending is defined as <span class="math inline">\(\text{TR} = P \times Q\)</span>. - <strong>Unitary Elastic Demand (<span class="math inline">\(\text{PED} = 1.0\)</span>):</strong> A price change causes an exact offset in quantity demanded, leaving total spending completely unchanged (<span class="math inline">\(\% \Delta P = \% \Delta Q_d\)</span>). - <strong>Price Inelastic Demand (<span class="math inline">\(\text{PED} &lt; 1.0\)</span>):</strong> A price increase results in a smaller percentage drop in quantity demanded (<span class="math inline">\(\% \Delta P &gt; \% \Delta Q_d\)</span>), increasing total revenue. - <strong>Price Elastic Demand (<span class="math inline">\(\text{PED} &gt; 1.0\)</span>):</strong> A price increase results in a larger percentage drop in quantity demanded (<span class="math inline">\(\% \Delta Q_d &gt; \% \Delta P\)</span>), decreasing total revenue.</p>
+</section>
+<section id="producer-and-consumer-applications" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="producer-and-consumer-applications"><span class="header-section-number">3.3</span> Producer and Consumer Applications</h2>
+<ul>
+<li><strong>Pricing and Retail Channels:</strong> Manufacturers adjust prices based on channel-specific elasticity (e.g., local market stalls with <span class="math inline">\(\text{PED}=1.0\)</span>, fashion boutiques with inelastic <span class="math inline">\(\text{PED}=0.5\)</span>, and online shops with highly elastic <span class="math inline">\(\text{PED}=3.0\)</span> due to instant price comparison).</li>
+<li><strong>Taxation and Subsidies:</strong> Governments evaluate <span class="math inline">\(\text{PED}\)</span> to predict tax yields or subsidy efficiency.</li>
+<li><strong>Resource Reallocation Across Competitor Goods:</strong> When two goods share the same resource base in an industry (e.g., leaf tea vs.&nbsp;dust tea, sedans vs.&nbsp;SUVs), a drop in the price of one competitor good reduces its profitability, prompting producers to redeploy resources to increase the supply of the other good.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="real-life-case-studies-from-class-discussions" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Real-Life Case Studies from Class Discussions</h1>
+<section id="case-study-1-global-coffee-market-mechanization" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="case-study-1-global-coffee-market-mechanization"><span class="header-section-number">4.1</span> Case Study 1: Global Coffee Market Mechanization</h2>
+<ul>
+<li><strong>Context:</strong> Global coffee prices dropped to a 13-year low, severe for Brazilian and Indian growers.</li>
+<li><strong>Mechanization Drive:</strong> Producers introduced $150,000 harvesting machines cutting harvest costs by 40–60%.</li>
+<li><strong>Market Paradox:</strong> Despite rising global coffee demand, prices crashed because supply growth outpaced demand growth due to rapid mechanization.</li>
+<li><strong>Ethical &amp; Structural Issues:</strong> Mechanization made rural plantation labor redundant, driving rural unemployment. Non-perishable coffee stockpiles in godowns created a multi-year supply overhang preventing price recovery.</li>
+</ul>
+</section>
+<section id="case-study-2-restaurant-demand-analysis-chicken-and-rice-meal" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="case-study-2-restaurant-demand-analysis-chicken-and-rice-meal"><span class="header-section-number">4.2</span> Case Study 2: Restaurant Demand Analysis (Chicken and Rice Meal)</h2>
+<ul>
+<li><strong>Problem:</strong> A restaurant raised chicken meal prices and observed a drop in orders.</li>
+<li><strong>Competing Hypotheses &amp; Diagnostic Data Needed:</strong>
+<ul>
+<li><strong>Elasticity Measurements:</strong> Exact price change vs.&nbsp;order drop size.</li>
+<li><strong>Menu Substitutes:</strong> Cross-substitution toward mutton/fish dishes or ala carte options.</li>
+<li><strong>External Substitutes:</strong> Nearby competing restaurants within 0.5 km.</li>
+<li><strong>Customer Income &amp; Population Drifts:</strong> Local economic downturns or conversions of family housing into student/bachelor hostels.</li>
+<li><strong>Complements &amp; Combos:</strong> Removal of complementary free drinks or bundled combo offers.</li>
+<li><strong>Exogenous Factors:</strong> Ingredient/chef changes, bird flu health scares, seasonal school terms, or deteriorating store ambience/drainage issues.</li>
+</ul></li>
+</ul>
+</section>
+<section id="case-study-3-natural-gas-energy-policy-in-china" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="case-study-3-natural-gas-energy-policy-in-china"><span class="header-section-number">4.3</span> Case Study 3: Natural Gas &amp; Energy Policy in China</h2>
+<ul>
+<li><strong>Data Provided:</strong> Short-run <span class="math inline">\(\text{PED} = -1.52\)</span>, Long-run <span class="math inline">\(\text{PED} = +0.41\)</span> (identified as a printing typo and corrected to <span class="math inline">\(-0.41\)</span>). <span class="math inline">\(\text{XED}\)</span> of coal with respect to natural gas prices was <span class="math inline">\(-0.76\)</span> (short run) and <span class="math inline">\(+0.01\)</span> (long run).</li>
+<li><strong>Policy Analysis:</strong> A 10% reduction in natural gas prices increases natural gas consumption by 15.2% in the short run. Simultaneously, it reduces coal demand by 7.6%. Economists use these elasticities to design taxes on coal and oil to accelerate green energy adoption.</li>
+</ul>
+</section>
+<section id="case-study-4-fidget-spinner-market-shifters-jacob-clifford-framework" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="case-study-4-fidget-spinner-market-shifters-jacob-clifford-framework"><span class="header-section-number">4.4</span> Case Study 4: Fidget Spinner Market Shifters (Jacob Clifford Framework)</h2>
+<ol type="1">
+<li><strong>Classroom Learning Study Finding:</strong> Tastes/preferences shift <span class="math inline">\(\implies\)</span> Demand curve shifts Right.</li>
+<li><strong>Bearing Resource Price Increase:</strong> Input costs rise <span class="math inline">\(\implies\)</span> Supply curve shifts Left.</li>
+<li><strong>Fidget Cube Substitute Price Drop:</strong> Substitute cheaper <span class="math inline">\(\implies\)</span> Demand for fidget spinners shifts Left.</li>
+<li><strong>Fidget Spinner Price Drop:</strong> Own-price change <span class="math inline">\(\implies\)</span> Movement along curve (Quantity Demanded rises).</li>
+<li><strong>Government Producer Subsidy:</strong> Cost reduction <span class="math inline">\(\implies\)</span> Supply curve shifts Right.</li>
+<li><strong>Recession / Income Fall:</strong> Incomes drop for normal good <span class="math inline">\(\implies\)</span> Demand curve shifts Left.</li>
+<li><strong>Complement Price Drop:</strong> Complement cheaper <span class="math inline">\(\implies\)</span> Demand curve shifts Right.</li>
+<li><strong>Simultaneous Demand and Supply Increase:</strong> Quantity increases unambiguously; Price outcome is <strong>indeterminate</strong>.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="textbook-questions-and-exam-practice-solutions" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Textbook Questions and Exam Practice Solutions</h1>
+<ol type="1">
+<li><strong>Linear Demand Gradient:</strong> A straight-line demand curve has a constant gradient, meaning quantity changes in proportion to price changes.</li>
+<li><strong>Substitute Price Surge:</strong> A large price increase for iced tea causes consumers to switch, shifting the demand curve for cola to the right.</li>
+<li><strong>Individual Income Drop:</strong> A decrease in an individual’s income shifts their personal demand curve for a Range Rover Evoke to the left.</li>
+<li><strong>Production Worker Wage Increase:</strong> Higher labor costs shift the market supply curve for Range Rovers to the left.</li>
+<li><strong>Cooking Oil Subsidy:</strong> Government subsidies lower production costs, shifting the market supply curve to the right.</li>
+<li><strong>Tax on Imported US Orange Juice:</strong> Import taxes reduce raw material availability/imported supply, shifting the domestic orange juice market supply curve to the left.</li>
+<li><strong>Calculated Tourism Cross-Elasticity:</strong> Australian tourists visiting Indonesia relative to Malaysian trip prices (<span class="math inline">\(\text{XED} = 2.4\)</span>). A 5% increase in Malaysian trip prices yields a <span class="math inline">\(2.4 \times 5\% = 12\%\)</span> surge in Indonesian visits.</li>
+<li><strong>Promotional Product Selection:</strong> When selecting products for promotion under rising consumer incomes, goods with high positive <span class="math inline">\(\text{YED}\)</span> will expand naturally; promotional efforts/discounts should target products hardest hit by rising incomes or those with high <span class="math inline">\(\text{PED}\)</span> (e.g., Product D with <span class="math inline">\(\text{PED}=2.0, \text{YED}=-1.7\)</span>).</li>
+</ol>
+<hr>
+</section>
+<section id="python-visualisations" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Python Visualisations</h1>
+<p>The executable Python script below uses <code>matplotlib</code> to render the primary demand elasticity graphs.</p>
+<div id="a92331ef" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Set headless backend</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.switch_backend(<span class="st">'Agg'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">13</span>, <span class="dv">11</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Graph 1: PED along Linear Demand Curve &amp; Total Revenue</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Q <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">50</span>, <span class="dv">100</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> <span class="dv">100</span> <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> Q</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>TR <span class="op">=</span> P <span class="op">*</span> Q</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> axs[<span class="dv">0</span>, <span class="dv">0</span>]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax1.plot(Q, P, <span class="st">'b-'</span>, label<span class="op">=</span><span class="st">'Demand (P = 100 - 2Q)'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax1.axvline(<span class="dv">25</span>, color<span class="op">=</span><span class="st">'gray'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax1.axhline(<span class="dv">50</span>, color<span class="op">=</span><span class="st">'gray'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax1.plot(<span class="dv">25</span>, <span class="dv">50</span>, <span class="st">'ro'</span>, markersize<span class="op">=</span><span class="dv">8</span>, label<span class="op">=</span><span class="st">'Midpoint: PED = 1.0'</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax1.plot(<span class="dv">10</span>, <span class="dv">80</span>, <span class="st">'go'</span>, markersize<span class="op">=</span><span class="dv">8</span>, label<span class="op">=</span><span class="st">'Upper: PED = 4.0 (Elastic)'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax1.plot(<span class="dv">40</span>, <span class="dv">20</span>, <span class="st">'mo'</span>, markersize<span class="op">=</span><span class="dv">8</span>, label<span class="op">=</span><span class="st">'Lower: PED = 0.25 (Inelastic)'</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Price Elasticity along Linear Demand Curve'</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'Quantity Demanded (Q)'</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Price (P)'</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>ax1.legend()</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ax1.grid(<span class="va">True</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Graph 2: Extreme Demand Elasticity Curves</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Q_ext <span class="op">=</span> np.linspace(<span class="dv">5</span>, <span class="dv">50</span>, <span class="dv">100</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> axs[<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>ax2.axvline(<span class="dv">25</span>, color<span class="op">=</span><span class="st">'red'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>, label<span class="op">=</span><span class="st">'Perfectly Inelastic (PED = 0)'</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>ax2.axhline(<span class="dv">50</span>, color<span class="op">=</span><span class="st">'green'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>, label<span class="op">=</span><span class="st">'Perfectly Elastic (PED = ∞)'</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>ax2.plot(Q_ext, <span class="dv">500</span> <span class="op">/</span> Q_ext, <span class="st">'purple'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>, label<span class="op">=</span><span class="st">'Unitary Elastic (PED = 1, xy = k)'</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>ax2.set_xlim(<span class="dv">0</span>, <span class="dv">60</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>ax2.set_ylim(<span class="dv">0</span>, <span class="dv">100</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Special/Extreme Demand Elasticity Curves'</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'Quantity Demanded (Q)'</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Price (P)'</span>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>ax2.legend()</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>ax2.grid(<span class="va">True</span>)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Graph 3: Income Elasticity of Demand (YED) Curves</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> np.linspace(<span class="dv">10</span>, <span class="dv">100</span>, <span class="dv">100</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>ax3 <span class="op">=</span> axs[<span class="dv">1</span>, <span class="dv">0</span>]</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>ax3.plot(<span class="dv">10</span> <span class="op">+</span> <span class="fl">0.3</span> <span class="op">*</span> Y, Y, <span class="st">'g-'</span>, label<span class="op">=</span><span class="st">'Necessity Good (0 &lt; YED &lt; 1)'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>ax3.plot(<span class="dv">2</span> <span class="op">*</span> Y, Y, <span class="st">'b-'</span>, label<span class="op">=</span><span class="st">'Luxury Good (YED &gt; 1)'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>ax3.plot(<span class="dv">80</span> <span class="op">-</span> <span class="fl">0.5</span> <span class="op">*</span> Y, Y, <span class="st">'r-'</span>, label<span class="op">=</span><span class="st">'Inferior Good (YED &lt; 0)'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>ax3.set_title(<span class="st">'Income Elasticity of Demand (YED)'</span>)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>ax3.set_xlabel(<span class="st">'Quantity Demanded (Q)'</span>)</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>ax3.set_ylabel(<span class="st">'Consumer Income (Y)'</span>)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>ax3.legend()</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>ax3.grid(<span class="va">True</span>)</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Graph 4: Cross-Price Elasticity (XED) Market Shifts</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>ax4 <span class="op">=</span> axs[<span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>ax4.plot(Q, <span class="dv">100</span> <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> Q, <span class="st">'b--'</span>, label<span class="op">=</span><span class="st">'Original Demand (D0)'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>ax4.plot(Q, <span class="dv">120</span> <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> Q, <span class="st">'g-'</span>, label<span class="op">=</span><span class="st">'Shift Right (D1): Substitute P↑ / Complement P↓'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ax4.plot(Q, <span class="dv">80</span> <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> Q, <span class="st">'r-'</span>, label<span class="op">=</span><span class="st">'Shift Left (D2): Substitute P↓ / Complement P↑'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>ax4.set_title(<span class="st">'Cross-Price Elasticity (XED) Market Shifts'</span>)</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>ax4.set_xlabel(<span class="st">'Quantity Demanded (Q)'</span>)</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>ax4.set_ylabel(<span class="st">'Price (P)'</span>)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>ax4.legend()</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>ax4.grid(<span class="va">True</span>)</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\Venu\AppData\Local\Temp\ipykernel_37220\4219488125.py:65: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()</code></pre>
+</div>
+</div>
+<p>```</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/gvgk\.in\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Currently associated with <a href="https://farmhill.in"><em>Farm Hill Education Trust</em></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:venu.gvgk@gmail.com">
+      <i class="bi bi-envelope-at" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/venugvgk">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/venu.gvgk">
+      <i class="bi bi-facebook" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/venu.gvgk">
+      <i class="bi bi-instagram" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
