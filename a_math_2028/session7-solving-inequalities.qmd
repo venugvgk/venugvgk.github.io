@@ -1,6 +1,6 @@
 ---
-title: Session 7 - Solving inequalities
-date: 2026-09-08
+title: Session 7 Solving inequalities
+date: 2026-10-02
 page-layout: article
 publish: false
 format:
@@ -271,37 +271,7 @@ plot_quadratic_inequality(1, -4, -1, '<', "Example 6: $x^2 - 4x - 1 < 0$")
 
 The shaded orange region shows exactly where the curve satisfies the inequality — compare it directly with the algebraic answers above.
 
-### 2.6 A General-Purpose Solver (Optional Extension)
-
-For students comfortable with a bit more code, here's a small function that solves *any* quadratic inequality symbolically using `sympy`, useful for checking your hand-worked answers.
-
-```{python}
-import sympy as sp
-
-x = sp.symbols('x', real=True)
-
-def solve_quadratic_inequality(a, b, c, relation):
-    """
-    relation: one of sp.StrictGreaterThan, sp.GreaterThan,
-              sp.StrictLessThan, sp.LessThan — or simply use
-              sp.solve_univariate_inequality directly as shown below.
-    """
-    expr = a*x**2 + b*x + c
-    ineq = relation(expr, 0)
-    solution = sp.solve_univariate_inequality(ineq, x, relational=False)
-    return solution
-
-# Check Example 4: x^2 - x - 6 > 0
-print("Example 4:", solve_quadratic_inequality(1, -1, -6, sp.StrictGreaterThan))
-
-# Check Example 5: x^2 - 2x - 8 <= 0
-print("Example 5:", solve_quadratic_inequality(1, -2, -8, sp.LessThan))
-
-# Check Example 6: x^2 - 4x - 1 < 0
-print("Example 6:", solve_quadratic_inequality(1, -4, -1, sp.StrictLessThan))
-```
-
-### 2.7 Practice Problems (Quadratic)
+### 2.6 Practice Problems (Quadratic)
 
 1. Solve $x^2 - 5x + 6 \leq 0$.
 2. Solve $x^2 + 3x - 10 > 0$.
@@ -329,12 +299,3 @@ print("Example 6:", solve_quadratic_inequality(1, -4, -1, sp.StrictLessThan))
 - Always double check special cases: no real roots (expression never changes sign) or a repeated root (touches zero but doesn't cross).
 :::
 
-### Looking Ahead to Grade 11
-
-These skills feed directly into:
-
-- **Systems of inequalities & linear programming** (feasible regions, optimization)
-- **Domain restrictions** for functions like $\sqrt{f(x)}$ or $\dfrac{1}{f(x)}$, which require $f(x) \geq 0$ or $f(x) \neq 0$
-- **Rational and higher-degree inequalities**, which extend this same critical-point method to more complex expressions
-
-Mastering the sign-analysis method here will make all of these topics far more manageable.

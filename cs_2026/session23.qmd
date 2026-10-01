@@ -1,0 +1,25 @@
+---
+title: Session 23 - Plotting a Quadratic Curve
+date: 2026-10-01
+page-layout: article
+---
+The pre-work task for this session was to write a program to plot a quadratic curve of the form $y = ax^2 + bx + c$, given the values of $a, b$ and $c$. 
+
+The students brought their programs to the class. We discussed the importance of specifying $x$-limits so that the graph can show all the points of interest. 
+
+We also discussed the benefits of writing a logic, trying to hand assemble a program and then looking for help from AI agents versus giving a one line prompt and generating the entire program. 
+
+Also discussed was the intuitive feel one develops for the geometry of a curve while dealing with its algebra, via the code. 
+
+# Further work
+
+Consider a quadratic curve of the form $y = ax^2 + bx + c$ and a straight line $y = mx + k$. 
+
+1. For specific values of $a, b, c, m$ and $k$, plot the curve, salient points, the line and the points of intersection. 
+
+2. Write a program that takes any values of $a, b, c, m$ and $k$ and plots the above. 
+ 
+
+
+
+
