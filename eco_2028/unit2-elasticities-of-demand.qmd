@@ -6,6 +6,7 @@ format:
     toc: true
     number-sections: true
     theme: cosmo
+    code-fold: true
 ---
 
 # Introduction to Elasticity of Demand
@@ -48,10 +49,91 @@ The slope derivative $\frac{dQ}{dP} = -0.5$ is constant. Using the formula $\tex
 | **C** | 20 | 40 | $\left| -0.5 \times \frac{20}{40} \right|$ | **0.25** | Price Inelastic |
 :::
 
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Demand function: P = 100 - 2Q => Q = 50 - 0.5P
+Q = np.linspace(0, 50, 100)
+P = 100 - 2 * Q
+
+plt.figure(figsize=(8, 6))
+plt.plot(Q, P, label='Demand Curve: $P = 100 - 2Q$')
+
+# Highlight points A, Midpoint, and C
+points = {
+    'A': (10, 80, 'PED = 4.0 (Elastic)'),
+    'Midpoint': (25, 50, 'PED = 1.0 (Unitary)'),
+    'C': (40, 20, 'PED = 0.25 (Inelastic)')
+}
+
+for label, (q_val, p_val, ped_text) in points.items():
+    plt.scatter(q_val, p_val, color='red')
+    plt.text(q_val + 1, p_val + 2, f'{label} ({ped_text})')
+
+plt.title('PED Along a Linear Demand Curve')
+plt.xlabel('Quantity (Q)')
+plt.ylabel('Price (P)')
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.axhline(0, color='black', lw=1)
+plt.axvline(0, color='black', lw=1)
+plt.legend()
+plt.show()
+```
+
 ### Special and Extreme Elasticity Curves
-1. **Perfectly Inelastic Demand ($\text{PED} = 0$):** Quantity demanded is completely unresponsive to price changes (e.g., life-saving drugs like insulin). Graphically represented as a vertical line ($Q = k$) parallel to the Y-axis.
-2. **Perfectly Elastic Demand ($\text{PED} = \infty$):** Consumers buy infinitely at a single specific price, but demand drops to zero at any higher price. Graphically represented as a horizontal line ($P = k$) parallel to the X-axis.
+
+1. **Perfectly Inelastic Demand ($\text{PED} = 0$):** Quantity demanded is completely unresponsive to price changes (e.g., life-saving drugs like insulin). Graphically represented as a vertical line ($Q = k$) parallel to the $Y$-axis.
+2. **Perfectly Elastic Demand ($\text{PED} = \infty$):** Consumers buy infinitely at a single specific price, but demand drops to zero at any higher price. Graphically represented as a horizontal line ($P = k$) parallel to the $X$-axis.
+
 3. **Unitary Elastic Demand Curve ($\text{PED} = 1.0$ throughout):** Percentage change in quantity demanded exactly equals percentage change in price at all points. Graphically represented as a rectangular hyperbola ($P \times Q = k$).
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, axs = plt.subplots(1, 3, figsize=(18, 5))
+
+# 1. Perfectly Inelastic Demand (PED = 0)
+q_inelastic = [20, 20]
+p_inelastic = [0, 100]
+axs[0].plot(q_inelastic, p_inelastic, color='blue', lw=3)
+axs[0].set_title('Perfectly Inelastic Demand (PED = 0)')
+axs[0].set_xlabel('Quantity')
+axs[0].set_ylabel('Price')
+axs[0].set_xlim(0, 40)
+axs[0].set_ylim(0, 110)
+axs[0].grid(True, linestyle='--', alpha=0.6)
+
+# 2. Perfectly Elastic Demand (PED = infinity)
+q_elastic = [0, 100]
+p_elastic = [50, 50]
+axs[1].plot(q_elastic, p_elastic, color='green', lw=3)
+axs[1].set_title('Perfectly Elastic Demand (PED = $\infty$)')
+axs[1].set_xlabel('Quantity')
+axs[1].set_ylabel('Price')
+axs[1].set_xlim(0, 110)
+axs[1].set_ylim(0, 100)
+axs[1].grid(True, linestyle='--', alpha=0.6)
+
+# 3. Unitary Elastic Demand (PED = 1)
+# P * Q = k => P = k / Q
+q_unitary = np.linspace(5, 100, 100)
+k = 1000
+p_unitary = k / q_unitary
+axs[2].plot(q_unitary, p_unitary, color='purple', lw=3)
+axs[2].set_title('Unitary Elastic Demand (PED = 1)')
+axs[2].set_xlabel('Quantity')
+axs[2].set_ylabel('Price')
+axs[2].set_xlim(0, 110)
+axs[2].set_ylim(0, 210)
+axs[2].grid(True, linestyle='--', alpha=0.6)
+
+plt.tight_layout()
+plt.show()
+```
+
+
 
 ---
 
@@ -69,7 +151,44 @@ $$\text{YED} = \frac{\% \Delta Q_d}{\% \Delta Y} = \frac{\Delta Q}{\Delta Y} \ti
 - **Inferior Goods ($\text{YED} < 0$):** Quantity demanded decreases as consumer income rises (e.g., low-grade cooking oil, cheap packet noodles like Maggi, lower-quality grain).
 
 #### Graphing Conventions for YED
-When plotting $\text{YED}$, Income ($Y$) is placed on the Y-axis and Quantity ($Q$) on the X-axis. Necessity curves are steep (closer to the Y-axis), Luxury curves are flat/gradual, and Inferior good curves bend backward (negative slope).
+When plotting $\text{YED}$, Income ($Y$) is placed on the $Y$-axis and Quantity ($Q$) on the $X$-axis. Necessity curves are steep (closer to the $Y$-axis), Luxury curves are flat/gradual, and Inferior good curves bend backward (negative slope).
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Income range
+Y = np.linspace(10, 100, 100)
+
+# 1. Necessity Good (0 < YED < 1) - Q increases slowly with Y
+Q_necessity = 2 * np.sqrt(Y) + 5
+
+# 2. Luxury Good (YED > 1) - Q increases rapidly with Y
+Q_luxury = (Y**1.5) / 25
+
+# 3. Inferior Good (YED < 0) - Q decreases as Y increases
+Q_inferior = 40 - 0.3 * Y
+
+plt.figure(figsize=(10, 7))
+
+plt.plot(Q_necessity, Y, label='Necessity Good ($0 < YED < 1$)', color='blue', lw=2)
+plt.plot(Q_luxury, Y, label='Luxury Good ($YED > 1$)', color='green', lw=2)
+plt.plot(Q_inferior, Y, label='Inferior Good ($YED < 0$)', color='red', lw=2)
+
+plt.title('Engel Curves: Good Classification via Income Elasticity (YED)')
+plt.xlabel('Quantity Demanded (Q)')
+plt.ylabel('Consumer Income (Y)')
+plt.axvline(0, color='black', lw=1)
+plt.axhline(0, color='black', lw=1)
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.legend()
+plt.xlim(0, 60)
+plt.ylim(0, 110)
+
+plt.show()
+```
+
+
 
 ---
 
@@ -84,6 +203,45 @@ $$\text{XED}_{AB} = \frac{\% \Delta Q_A}{\% \Delta P_B} = \frac{\Delta Q_A}{\Del
 - **Substitute Goods ($\text{XED} > 0$):** A price increase for Product $B$ increases demand for Product $A$ as consumers switch products (e.g., Coca-Cola vs. Pepsi, PCs vs. Laptops, a la carte vs. set meals).
 - **Complementary Goods ($\text{XED} < 0$):** A price increase for Product $B$ reduces demand for Product $A$ as the goods are consumed jointly (e.g., cinema tickets and popcorn, petrol and cars, smartphone contracts and mobile apps).
 - **Unrelated Goods ($\text{XED} = 0$):** Changes in the price of one product have no effect on the demand for the other.
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, axs = plt.subplots(1, 3, figsize=(18, 5))
+
+# 1. Substitutes (XED > 0)
+pb_sub = np.linspace(10, 100, 100)
+qa_sub = 20 + 0.5 * pb_sub
+axs[0].plot(qa_sub, pb_sub, color='orange', lw=3)
+axs[0].set_title('Substitute Goods (XED > 0)\ne.g., Coke vs Pepsi')
+axs[0].set_xlabel('Quantity of Good A ($Q_A$)')
+axs[0].set_ylabel('Price of Good B ($P_B$)')
+axs[0].grid(True, linestyle='--', alpha=0.6)
+
+# 2. Complements (XED < 0)
+pb_comp = np.linspace(10, 100, 100)
+qa_comp = 100 - 0.8 * pb_comp
+axs[1].plot(qa_comp, pb_comp, color='red', lw=3)
+axs[1].set_title('Complementary Goods (XED < 0)\ne.g., Burgers and Fries')
+axs[1].set_xlabel('Quantity of Good A ($Q_A$)')
+axs[1].set_ylabel('Price of Good B ($P_B$)')
+axs[1].grid(True, linestyle='--', alpha=0.6)
+
+# 3. Unrelated Goods (XED = 0)
+pb_unrel = np.linspace(10, 100, 100)
+qa_unrel = np.full_like(pb_unrel, 50)
+axs[2].plot(qa_unrel, pb_unrel, color='gray', lw=3)
+axs[2].set_title('Unrelated Goods (XED = 0)\ne.g., Salt and Smartphones')
+axs[2].set_xlabel('Quantity of Good A ($Q_A$)')
+axs[2].set_ylabel('Price of Good B ($P_B$)')
+axs[2].set_xlim(0, 100)
+axs[2].grid(True, linestyle='--', alpha=0.6)
+
+plt.tight_layout()
+plt.show()
+```
+
 
 ---
 
@@ -101,7 +259,8 @@ Total Revenue ($\text{TR}$) or Total Spending is defined as $\text{TR} = P \time
 - **Price Elastic Demand ($\text{PED} > 1.0$):** A price increase results in a larger percentage drop in quantity demanded ($\% \Delta Q_d > \% \Delta P$), decreasing total revenue.
 
 ## Producer and Consumer Applications
-- **Pricing and Retail Channels:** Manufacturers adjust prices based on channel-specific elasticity (e.g., local market stalls with $\text{PED}=1.0$, fashion boutiques with inelastic $\text{PED}=0.5$, and online shops with highly elastic $\text{PED}=3.0$ due to instant price comparison).
+- **Pricing and Retail Channels:** Manufacturers adjust prices based on channel-specific elasticity (e.g., local market stalls with $\text{PED} = 1.0$, fashion boutiques with inelastic $\text{PED} = 0.5$, and online shops with highly elastic $\text{PED} = 3.0$ due to instant price comparison).
+
 - **Taxation and Subsidies:** Governments evaluate $\text{PED}$ to predict tax yields or subsidy efficiency.
 - **Resource Reallocation Across Competitor Goods:** When two goods share the same resource base in an industry (e.g., leaf tea vs. dust tea, sedans vs. SUVs), a drop in the price of one competitor good reduces its profitability, prompting producers to redeploy resources to increase the supply of the other good.
 
@@ -129,7 +288,7 @@ Total Revenue ($\text{TR}$) or Total Spending is defined as $\text{TR} = P \time
 - **Data Provided:** Short-run $\text{PED} = -1.52$, Long-run $\text{PED} = +0.41$ (identified as a printing typo and corrected to $-0.41$). $\text{XED}$ of coal with respect to natural gas prices was $-0.76$ (short run) and $+0.01$ (long run).
 - **Policy Analysis:** A $10\%$ reduction in natural gas prices increases natural gas consumption by $15.2\%$ in the short run. Simultaneously, it reduces coal demand by $7.6\%$. Economists use these elasticities to design taxes on coal and oil to accelerate green energy adoption.
 
-## Case Study 4: Fidget Spinner Market Shifters (Jacob Clifford Framework)
+## Case Study 4: Fidget Spinner Market Shifters
 1. **Classroom Learning Study Finding:** Tastes/preferences shift $\implies$ Demand curve shifts Right.
 2. **Bearing Resource Price Increase:** Input costs rise $\implies$ Supply curve shifts Left.
 3. **Fidget Cube Substitute Price Drop:** Substitute cheaper $\implies$ Demand for fidget spinners shifts Left.
@@ -149,81 +308,8 @@ Total Revenue ($\text{TR}$) or Total Spending is defined as $\text{TR} = P \time
 4. **Production Worker Wage Increase:** Higher labor costs shift the market supply curve for Range Rovers to the left.
 5. **Cooking Oil Subsidy:** Government subsidies lower production costs, shifting the market supply curve to the right.
 6. **Tax on Imported US Orange Juice:** Import taxes reduce raw material availability/imported supply, shifting the domestic orange juice market supply curve to the left.
-7. **Calculated Tourism Cross-Elasticity:** Australian tourists visiting Indonesia relative to Malaysian trip prices ($\text{XED} = 2.4$). A 5% increase in Malaysian trip prices yields a $2.4 \times 5\% = 12\%$ surge in Indonesian visits.
-8. **Promotional Product Selection:** When selecting products for promotion under rising consumer incomes, goods with high positive $\text{YED}$ will expand naturally; promotional efforts/discounts should target products hardest hit by rising incomes or those with high $\text{PED}$ (e.g., Product D with $\text{PED}=2.0, \text{YED}=-1.7$).
+7. **Calculated Tourism Cross-Elasticity:** Australian tourists visiting Indonesia relative to Malaysian trip prices ($\text{XED} = 2.4$). A $5\%$ increase in Malaysian trip prices yields a $2.4 \times 5\% = 12\%$ surge in Indonesian visits.
+8. **Promotional Product Selection:** When selecting products for promotion under rising consumer incomes, goods with high positive $\text{YED}$ will expand naturally; promotional efforts/discounts should target products hardest hit by rising incomes or those with high $\text{PED}$ (e.g., Product $D$ with $\text{PED} = 2.0, \text{YED} = -1.7$).
+
 
 ---
-
-# Python Visualisations
-
-The executable Python script below uses `matplotlib` to render the primary demand elasticity graphs.
-
-```{python}
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Set headless backend
-plt.switch_backend('Agg')
-
-fig, axs = plt.subplots(2, 2, figsize=(13, 11))
-
-# Graph 1: PED along Linear Demand Curve & Total Revenue
-Q = np.linspace(0, 50, 100)
-P = 100 - 2 * Q
-TR = P * Q
-
-ax1 = axs[0, 0]
-ax1.plot(Q, P, 'b-', label='Demand (P = 100 - 2Q)', linewidth=2)
-ax1.axvline(25, color='gray', linestyle='--')
-ax1.axhline(50, color='gray', linestyle='--')
-ax1.plot(25, 50, 'ro', markersize=8, label='Midpoint: PED = 1.0')
-ax1.plot(10, 80, 'go', markersize=8, label='Upper: PED = 4.0 (Elastic)')
-ax1.plot(40, 20, 'mo', markersize=8, label='Lower: PED = 0.25 (Inelastic)')
-ax1.set_title('Price Elasticity along Linear Demand Curve')
-ax1.set_xlabel('Quantity Demanded (Q)')
-ax1.set_ylabel('Price (P)')
-ax1.legend()
-ax1.grid(True)
-
-# Graph 2: Extreme Demand Elasticity Curves
-Q_ext = np.linspace(5, 50, 100)
-ax2 = axs[0, 1]
-ax2.axvline(25, color='red', linewidth=2.5, label='Perfectly Inelastic (PED = 0)')
-ax2.axhline(50, color='green', linewidth=2.5, label='Perfectly Elastic (PED = ∞)')
-ax2.plot(Q_ext, 500 / Q_ext, 'purple', linewidth=2.5, label='Unitary Elastic (PED = 1, xy = k)')
-ax2.set_xlim(0, 60)
-ax2.set_ylim(0, 100)
-ax2.set_title('Special/Extreme Demand Elasticity Curves')
-ax2.set_xlabel('Quantity Demanded (Q)')
-ax2.set_ylabel('Price (P)')
-ax2.legend()
-ax2.grid(True)
-
-# Graph 3: Income Elasticity of Demand (YED) Curves
-Y = np.linspace(10, 100, 100)
-ax3 = axs[1, 0]
-ax3.plot(10 + 0.3 * Y, Y, 'g-', label='Necessity Good (0 < YED < 1)', linewidth=2.5)
-ax3.plot(2 * Y, Y, 'b-', label='Luxury Good (YED > 1)', linewidth=2.5)
-ax3.plot(80 - 0.5 * Y, Y, 'r-', label='Inferior Good (YED < 0)', linewidth=2.5)
-ax3.set_title('Income Elasticity of Demand (YED)')
-ax3.set_xlabel('Quantity Demanded (Q)')
-ax3.set_ylabel('Consumer Income (Y)')
-ax3.legend()
-ax3.grid(True)
-
-# Graph 4: Cross-Price Elasticity (XED) Market Shifts
-ax4 = axs[1, 1]
-ax4.plot(Q, 100 - 2 * Q, 'b--', label='Original Demand (D0)', linewidth=2)
-ax4.plot(Q, 120 - 2 * Q, 'g-', label='Shift Right (D1): Substitute P↑ / Complement P↓', linewidth=2)
-ax4.plot(Q, 80 - 2 * Q, 'r-', label='Shift Left (D2): Substitute P↓ / Complement P↑', linewidth=2)
-ax4.set_title('Cross-Price Elasticity (XED) Market Shifts')
-ax4.set_xlabel('Quantity Demanded (Q)')
-ax4.set_ylabel('Price (P)')
-ax4.legend()
-ax4.grid(True)
-
-plt.tight_layout()
-plt.show()
-```
-```
-
