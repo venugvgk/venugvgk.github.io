@@ -1,0 +1,525 @@
+---
+title: "A Level Economics Unit Test 1"
+subtitle: "Basic Economic Ideas and the Price System"
+format:
+  html:
+    toc: true
+    number-sections: true
+    code-fold: false
+    html-math-method: katex
+jupyter: python3
+---
+
+# Unit test information
+
+| Assessment information | Details |
+|---|---|
+| Content | Scarcity, economic methodology, factors of production, economic systems, production possibility curves, goods and services, demand, supply and elasticity |
+| Time allowed | 1 hour 30 minutes |
+| Total marks | 45 |
+| Sections | Section A: Multiple choice (20 marks); Section B: Data response (25 marks) |
+
+::: {.callout-important}
+## Instructions
+
+- Answer all questions in Sections A and B.
+- Show all working for numerical questions.
+- Draw clearly labelled diagrams where appropriate.
+- Use economic terminology accurately.
+:::
+
+# Section A: Multiple-choice questions
+
+**20 marks.** Choose the correct answer: A, B, C or D.
+
+## Question 1
+
+A student has two hours available for revision. She can revise economics, mathematics or biology. Her first preference is economics, followed by mathematics and then biology. What is the opportunity cost of revising economics?
+
+A. The time spent revising economics  
+B. The examination grade gained in economics  
+C. The mathematics revision that she gives up  
+D. The biology revision that she gives up
+
+## Question 2
+
+Which statement best explains scarcity?
+
+A. All goods are produced at a price.  
+B. Human wants are unlimited but resources are limited.  
+C. Governments must provide all essential goods.  
+D. Some goods are available only to high-income consumers.
+
+## Question 3
+
+Which is an example of a positive statement?
+
+A. The government should increase spending on education.  
+B. Inflation is unfair because it harms people on low incomes.  
+C. An increase in income tax reduces disposable income.  
+D. The government ought to reduce income inequality.
+
+## Question 4
+
+Which statement is a normative economic statement?
+
+A. A fall in the price of coffee increases the quantity demanded of coffee.  
+B. The unemployment rate is 7%.  
+C. Higher interest rates may reduce investment.  
+D. The government should provide free university education.
+
+## Question 5
+
+Which factor of production receives rent as its reward?
+
+A. Capital  
+B. Enterprise  
+C. Labour  
+D. Land
+
+## Question 6
+
+Which is an example of human capital?
+
+A. A factory building  
+B. A worker’s education and training  
+C. A country’s mineral deposits  
+D. A firm’s financial investment
+
+## Question 7
+
+What is the main economic role of an entrepreneur?
+
+A. To provide all the labour used by a firm  
+B. To organise resources and bear risk  
+C. To provide land without receiving payment  
+D. To consume the output produced by a firm
+
+## Question 8
+
+A country’s production possibility curve is a straight line. What does this indicate?
+
+A. Increasing opportunity cost  
+B. Constant opportunity cost  
+C. Decreasing opportunity cost  
+D. No opportunity cost
+
+## Question 9
+
+An economy is operating at a point inside its production possibility curve. This could indicate:
+
+A. Productive efficiency  
+B. Full employment of resources  
+C. An unattainable combination of output  
+D. Unemployment or inefficient use of resources
+
+## Question 10
+
+An outward shift of a production possibility curve could result from:
+
+A. A fall in labour productivity  
+B. An increase in unemployment  
+C. An improvement in technology  
+D. A reduction in the working population
+
+## Question 11
+
+Which statement about a command economy is correct?
+
+A. Resources are allocated mainly through changes in market prices.  
+B. The government makes significant decisions about resource allocation.  
+C. Private firms determine all production decisions.  
+D. Consumers have complete freedom of choice.
+
+## Question 12
+
+One possible advantage of a market economic system is that it:
+
+A. Eliminates income inequality  
+B. Guarantees that all consumers receive essential goods  
+C. Encourages resources to respond to changes in consumer demand  
+D. Prevents firms from earning abnormal profit
+
+## Question 13
+
+Which statement best describes a public good?
+
+A. It is rival and excludable.  
+B. It is non-rival and non-excludable.  
+C. It is provided only by private firms.  
+D. It has no opportunity cost.
+
+## Question 14
+
+Which good is most likely to be a merit good?
+
+A. National defence  
+B. Street lighting  
+C. Cigarettes  
+D. Vaccinations
+
+## Question 15
+
+A good has an income elasticity of demand of $-0.6$. The good is most likely to be:
+
+A. A luxury good  
+B. A normal good  
+C. An inferior good  
+D. A public good
+
+## Question 16
+
+If the price elasticity of demand for a product is $-2.4$, demand is:
+
+A. Perfectly inelastic  
+B. Relatively inelastic  
+C. Unitary elastic  
+D. Relatively elastic
+
+## Question 17
+
+If demand for a product is price inelastic, an increase in price will usually:
+
+A. Reduce total revenue  
+B. Increase total revenue  
+C. Leave total revenue unchanged  
+D. Reduce both price and quantity demanded
+
+## Question 18
+
+The price of tea increases by $10\%$ and the demand for coffee increases by $5\%$. The cross elasticity of demand for coffee with respect to the price of tea is:
+
+A. $-2$  
+B. $-0.5$  
+C. $0.5$  
+D. $2$
+
+## Question 19
+
+Which factor is most likely to make the supply of a product price inelastic in the short run?
+
+A. The product can be stored easily.  
+B. Firms have considerable spare capacity.  
+C. Production can be increased quickly.  
+D. The production process requires a long period of time.
+
+## Question 20
+
+A product has a price elasticity of supply of $0.2$. A $10\%$ increase in price will cause approximately:
+
+A. A $2\%$ increase in quantity supplied  
+B. A $5\%$ increase in quantity supplied  
+C. A $10\%$ increase in quantity supplied  
+D. A $50\%$ increase in quantity supplied
+
+# Section B: Data response
+
+**25 marks.** Answer all parts of Question 21.
+
+## Question 21: The market for electric scooters
+
+A city government is considering whether to encourage the use of electric scooters. Electric scooters use fewer fossil fuels than many petrol-powered vehicles and may reduce congestion. However, the production of scooters requires lithium batteries, specialised machinery and skilled labour.
+
+A manufacturer currently sells $20,000$ scooters per year at a price of $\$500$ each. The firm estimates that the price elasticity of demand for its scooters is $-1.5$. It also estimates that the income elasticity of demand is $+2.0$.
+
+The price of a close substitute, electric bicycles, falls by $10\%$. The manufacturer estimates that the cross elasticity of demand for electric scooters with respect to the price of electric bicycles is $-0.4$.
+
+In the short run, the firm has limited spare capacity because the production process requires imported components and specially trained workers.
+
+### Question 21(a)
+
+Define scarcity. **[2]**
+
+### Question 21(b)
+
+Explain two reasons why the production of electric scooters involves an opportunity cost. **[4]**
+
+### Question 21(c)
+
+Using the information provided, calculate the percentage change in quantity demanded if:
+
+1. the price of scooters increases by $8\%$;
+2. consumer incomes increase by $5\%$;
+3. the price of electric bicycles falls by $10\%$.
+
+Show your working. **[6]**
+
+### Question 21(d)
+
+Explain two factors that may determine the price elasticity of supply of electric scooters in the short run. **[4]**
+
+### Question 21(e)
+
+Analyse the likely effect of an $8\%$ increase in the price of scooters on the firm’s total revenue. **[4]**
+
+### Question 21(f)
+
+Discuss whether the government should encourage the production and consumption of electric scooters. **[5]**
+
+# Teacher answer key
+
+## Section A answers
+
+| Question | Answer | Question | Answer |
+|---:|:---:|---:|:---:|
+| 1 | C | 11 | B |
+| 2 | B | 12 | C |
+| 3 | C | 13 | B |
+| 4 | D | 14 | D |
+| 5 | D | 15 | C |
+| 6 | B | 16 | D |
+| 7 | B | 17 | B |
+| 8 | B | 18 | C |
+| 9 | D | 19 | D |
+| 10 | C | 20 | A |
+
+## Section B marking guidance
+## (a) Define scarcity. [2]
+
+### Full-mark answer
+
+Scarcity exists because resources are limited in relation to unlimited human wants. Therefore, it is impossible to produce all the goods and services that people would like to consume, so choices have to be made.
+
+### Why this earns full marks
+
+- **1 mark:** identifies that resources are limited.
+- **1 mark:** links limited resources to unlimited wants and the need for choice.
+
+A definition that states only that resources are limited is incomplete because it does not establish the relationship between limited resources and unlimited wants.
+
+> **Key terms:** limited resources; unlimited wants; choice.
+
+---
+
+## (b) Explain two reasons why the production of electric scooters involves an opportunity cost. [4]
+
+### Full-mark answer
+
+The production of electric scooters uses scarce lithium batteries, specialised machinery, skilled labour and finance. These resources could have been used to produce alternative goods and services, such as electric bicycles, public transport equipment or other manufactured products. The value of the best alternative that is sacrificed is the opportunity cost of producing the scooters.
+
+The government may also use public funds to support scooter production or consumption through subsidies, infrastructure or research grants. These funds could instead be spent on schools, hospitals, public transport or other environmental projects. The benefit lost from the best alternative use of these funds is another opportunity cost.
+
+### Why this earns full marks
+
+The question requires **two explained reasons**, not merely two examples of scarce resources.
+
+| Reason | Economic development | Marks |
+|---|---|---:|
+| Use of productive resources | Lithium, machinery, skilled labour and finance used for scooters cannot simultaneously be used for their next-best alternative use. | 2 |
+| Use of government resources | Subsidies, infrastructure spending or research support may displace spending on education, healthcare, public transport or other environmental projects. | 2 |
+
+For each reason:
+
+- **1 mark:** identifies a relevant scarce resource or alternative use.
+- **1 mark:** explains that the next-best alternative is forgone and therefore represents opportunity cost.
+
+The answer is applied to the context through lithium batteries, specialised machinery, skilled labour, subsidies and public infrastructure.
+
+---
+
+## (c) Calculate the percentage change in quantity demanded. [6]
+
+### 1. Price of scooters increases by $8\%$
+
+The formula is:
+
+$$\text{PED} = \frac{\%\Delta Q_d}{\%\Delta P}$$
+
+Therefore:
+
+$$\%\Delta Q_d = \text{PED} \times \%\Delta P$$
+
+$$\%\Delta Q_d = -1.5 \times 8\% = -12\%$$
+
+Quantity demanded decreases by $12\%$.
+
+### 2. Consumer incomes increase by $5\%$
+
+The formula is:
+
+$$\text{YED} = \frac{\%\Delta Q_d}{\%\Delta Y}$$
+
+Therefore:
+
+$$\%\Delta Q_d = \text{YED} \times \%\Delta Y$$
+
+$$\%\Delta Q_d = +2.0 \times 5\% = +10\%$$
+
+Quantity demanded increases by $10\%$.
+
+### 3. Price of electric bicycles falls by $10\%$
+
+The formula is:
+
+$$\text{XED} = \frac{\%\Delta Q_d\text{ of scooters}}{\%\Delta P\text{ of electric bicycles}}$$
+
+Therefore:
+
+$$\%\Delta Q_d\text{ of scooters} = \text{XED} \times \%\Delta P\text{ of electric bicycles}$$
+
+$$\%\Delta Q_d = -0.4 \times (-10\%) = +4\%$$
+
+Demand for electric scooters increases by $4\%$.
+
+### Final answers
+
+| Change | Elasticity | Calculation | Effect on quantity demanded |
+|---|---:|---:|---:|
+| Scooter price increases by $8\%$ | $\text{PED} = -1.5$ | $-1.5 \times 8\%$ | Decreases by $12\%$ |
+| Income increases by $5\%$ | $\text{YED} = +2.0$ | $+2.0 \times 5\%$ | Increases by $10\%$ |
+| Electric bicycle price falls by $10\%$ | $\text{XED} = -0.4$ | $-0.4 \times -10\%$ | Increases by $4\%$ |
+
+### Why this earns full marks
+
+Award **2 marks for each calculation**:
+
+- **1 mark:** correct elasticity relationship and substitution.
+- **1 mark:** correct numerical answer and direction of change.
+
+The signs must be interpreted correctly. The negative PED means that quantity demanded changes in the opposite direction to price. The positive YED indicates that electric scooters are a normal good, and the negative XED indicates that electric scooters and electric bicycles are substitutes.
+
+---
+
+## (d) Explain two factors that may determine the price elasticity of supply in the short run. [4]
+
+### Full-mark answer
+
+First, the availability of spare capacity affects the price elasticity of supply. The manufacturer has limited spare capacity, so it may be unable to increase output substantially when the price rises. Existing machinery and workers may already be fully used, making supply relatively price inelastic in the short run.
+
+Second, the availability of imported components and skilled labour affects supply elasticity. If batteries and other components take time to import, or if specially trained workers are difficult to recruit, the firm cannot respond quickly to a price increase. Quantity supplied will therefore rise by a smaller percentage than price, making short-run supply relatively inelastic.
+
+The time period itself is also important. In the short run, at least one factor of production is fixed, whereas in the long run the firm may expand its factory, purchase machinery, train workers and arrange alternative suppliers. Supply is therefore likely to become more elastic over time.
+
+### Why this earns full marks
+
+| Factor | Explanation | Marks |
+|---|---|---:|
+| Limited spare capacity | Existing machinery and labour are heavily used, so the firm cannot increase output greatly after a price rise. | 2 |
+| Imported components and skilled labour | Delays in obtaining batteries or recruiting trained workers restrict the short-run response of output. | 2 |
+
+For each factor:
+
+- **1 mark:** identifies the factor.
+- **1 mark:** explains how it affects the responsiveness of quantity supplied to price.
+
+The answer gains additional quality through direct application to the information in the case: limited spare capacity, imported components and specially trained workers.
+
+---
+
+## (e) Analyse the likely effect of an $8\%$ increase in the price of scooters on total revenue. [4]
+
+### Full-mark answer
+
+The initial total revenue is:
+
+$$\text{TR} = P \times Q$$
+
+$$\text{TR} = \$500 \times 20,000 = \$10,000,000$$
+
+The price elasticity of demand is $-1.5$. Therefore, an $8\%$ increase in price causes a:
+
+$$-1.5 \times 8\% = -12\%$$
+
+fall in quantity demanded.
+
+The new price is:
+
+$$\$500 \times 1.08 = \$540$$
+
+The new quantity demanded is:
+
+$$20,000 \times 0.88 = 17,600$$
+
+The new total revenue is:
+
+$$\text{TR} = \$540 \times 17,600 = \$9,504,000$$
+
+Therefore, total revenue falls by:
+
+$$\$10,000,000 - \$9,504,000 = \$496,000$$
+
+The percentage fall in quantity demanded is greater than the percentage increase in price because demand is price elastic. Consequently, the fall in quantity sold outweighs the higher price per scooter, so total revenue decreases.
+
+### Why this earns full marks
+
+| Required element | Evidence in the answer | Marks |
+|---|---|---:|
+| Initial total revenue | $\$500 \times 20,000 = \$10,000,000$ | 1 |
+| Elasticity analysis | An $8\%$ price increase causes a $12\%$ fall in quantity demanded | 1 |
+| New total revenue | $\$540 \times 17,600 = \$9,504,000$ | 1 |
+| Economic conclusion | Revenue falls by $\$496,000$ because demand is elastic | 1 |
+
+A response that merely states “revenue falls because demand is elastic” shows some understanding but does not fully analyse the numerical effect. The calculations are needed to demonstrate the size of the change.
+
+---
+
+## (f) Discuss whether the government should encourage the production and consumption of electric scooters. [5]
+
+### Full-mark answer
+
+The government may have a case for encouraging electric scooters because they may generate positive external benefits. If consumers switch from petrol-powered vehicles to electric scooters, fossil-fuel use and possibly air pollution may fall. They may also reduce road congestion if they replace car journeys. These benefits to third parties are not fully reflected in the market price, so the market may produce and consume fewer electric scooters than is socially optimal. Government support could therefore increase consumption towards the socially efficient level.
+
+Encouragement may also support the development of a new industry. Subsidies, investment in charging infrastructure, or support for research and development could reduce firms’ costs and increase supply. This may create employment, develop technical skills and encourage innovation in battery and transport technology. However, the opportunity cost must be considered: resources used for lithium batteries, specialised machinery, skilled labour and government subsidies cannot be used for other goods and services.
+
+There are also possible disadvantages. Battery production requires scarce resources and may create environmental costs during the extraction of lithium and the manufacture and disposal of batteries. Electric scooters may not always replace car journeys; some users may otherwise have walked or used public transport. In that case, the reduction in congestion and pollution may be smaller than expected. Increased scooter use may also create safety problems, impose costs on pedestrians and require additional public regulation and infrastructure.
+
+Whether government encouragement is justified depends on the size of the external benefits compared with these costs. The government should not provide unlimited support simply because scooters are electric. A targeted policy, such as temporary subsidies for cleaner production combined with safety rules, recycling requirements and investment in appropriate infrastructure, is more likely to be justified. Overall, the government should encourage electric scooters if reliable evidence shows that their external benefits are significant and exceed the environmental, safety and opportunity costs; otherwise, resources may be allocated inefficiently.
+
+### Why this earns full marks
+
+This is a short **5-mark discuss question**. A full-mark answer needs relevant economic analysis on both sides and a supported judgement. It should remain focused on whether government encouragement is justified in the market for electric scooters.
+
+| Mark | Evidence in the model answer | Reason for awarding the mark |
+|---:|---|---|
+| 1 | “They may generate positive external benefits.” | Identifies a relevant market-failure argument and applies it to pollution and congestion. |
+| 1 | “The market may produce and consume fewer electric scooters than is socially optimal.” | Develops the positive-externality argument by explaining why underconsumption may occur. |
+| 1 | “The opportunity cost must be considered.” | Recognises that lithium, machinery, skilled labour, finance and government funds have alternative uses. |
+| 1 | “Battery production… may create environmental costs… [and] increased scooter use may also create safety problems.” | Gives relevant disadvantages, including negative externalities and social costs. |
+| 1 | “The government should encourage electric scooters if… benefits are significant and exceed… costs.” | Provides a balanced, conditional judgement rather than an unsupported opinion. |
+
+### Analytical chains in the answer
+
+- Positive externalities → social benefits exceed private benefits → market demand is lower than socially desirable → underconsumption may occur → government intervention may improve resource allocation.
+- Government support → lower costs or improved infrastructure → supply and/or demand increases → output and consumption rise → employment, innovation and environmental benefits may increase.
+- Scarce resources and battery production → opportunity costs and possible environmental damage → social costs may rise → unlimited encouragement may cause over-allocation of resources.
+- Effective policy depends on the size of benefits and costs → evidence and appropriate regulation matter → a targeted policy is preferable to unconditional support.
+
+### Why weaker answers lose marks
+
+- They state that electric scooters are environmentally friendly without explaining the economic implications.
+- They list advantages only and do not discuss opportunity cost, environmental costs or safety concerns.
+- They say that “the government should intervene” without identifying the market failure.
+- They claim that scooters always reduce pollution or congestion without considering whether they replace car journeys, walking or public transport.
+- They provide a conclusion that is not supported by the analysis.
+
+### Examiner-style level guidance
+
+- **5 marks:** balanced and relevant discussion, with clear analysis and a supported judgement.
+- **4 marks:** both sides are considered and the analysis is mostly relevant, but the judgement is weak, brief or insufficiently supported.
+- **2–3 marks:** some relevant knowledge and analysis, but discussion is one-sided, undeveloped or insufficiently applied.
+- **1 mark:** a basic relevant point with little or no development.
+- **0 marks:** no relevant economic material.
+
+---
+
+# Overall mark allocation
+
+| Part | Maximum mark |
+|---|---:|
+| (a) Scarcity | 2 |
+| (b) Opportunity cost | 4 |
+| (c) Elasticity calculations | 6 |
+| (d) Price elasticity of supply | 4 |
+| (e) Total revenue | 4 |
+| (f) Government intervention | 5 |
+| **Total** | **25** |
+
+# General examiner principles
+
+Credit any alternative answer that is economically accurate, relevant to electric scooters and sufficiently developed. Do not require the exact wording used in the model answers.
+
+For explanation questions, distinguish between a stated point and a developed chain of reasoning. A point such as “there are imported components” should not receive full credit unless the student explains how this restricts the short-run supply response.
+
+For numerical questions, award method marks when the correct formula and substitution are shown. Minor arithmetic or rounding errors should not automatically remove marks if the economic method is correct.
+
+For discussion questions, reward application to the case study, balanced analysis, relevant evaluation and a supported judgement. A conclusion alone is not evaluation; it must follow from the analysis of benefits, costs and conditions.
