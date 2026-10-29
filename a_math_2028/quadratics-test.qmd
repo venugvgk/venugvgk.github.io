@@ -1,0 +1,63 @@
+---
+title: "Cambridge 9709 Pure Mathematics 1 — Quadratics Test"
+date: today
+format:
+  html:
+    toc: false
+  pdf:
+    documentclass: article
+    fontsize: 12pt
+    geometry: margin=1.2cm
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist{nosep,topsep=0pt,parsep=0pt,partopsep=0pt}
+        \setlength{\parskip}{0pt}
+        \setlength{\parindent}{0pt}
+---
+
+# Instructions
+
+- **Time allowed:** 90 minutes
+- **Total marks:** 50
+- Answer all questions.
+- Give non-exact numerical answers correct to **3 significant figures**, unless otherwise stated.
+- Show sufficient working; marks may be lost for missing essential steps.
+
+**1.** The expression $9x^2 - 36x + 8$ can be written in the form $p(x+q)^2 + r$, where $p$, $q$ and $r$ are constants.
+
+1. Find the values of $p$, $q$ and $r$. **[3]**
+2. Hence state the minimum value of $9x^2 - 36x + 8$ and the value of $x$ at which it occurs. **[2]**
+3. Hence find the set of values of the constant $k$ for which $9x^2 - 36x + 8 = k$ has no real solutions. **[1]**
+
+**2.** The equation $3kx^2 + (k+8)x + 3 = 0$, where $k$ is a constant, has two distinct real roots.
+
+1. Show that $k^2 - 20k + 64 > 0$. **[3]**
+2. Hence find the set of possible values of $k$. **[3]**
+3. State one value of $k$ for which the equation has no real roots. **[1]**
+
+**3.** The curve $C$ has equation $y = 2x^2 - 8x + 5$.
+
+1. Express $2x^2 - 8x + 5$ in the form $a(x+b)^2 + c$. **[3]**
+2. Write down the coordinates of the vertex of $C$. **[1]**
+3. Sketch $C$, showing the vertex and the $y$-intercept. **[2]**
+4. Find the equation of the line of symmetry of $C$. **[2]**
+
+**4.** The line $y = 2x + 3$ intersects the curve $y = x^2 - 4x + k$, where $k$ is a constant.
+
+1. Show that the $x$-coordinates of the points of intersection satisfy $x^2 - 6x + k - 3 = 0$. **[2]**
+2. Given that the line is a tangent to the curve, find the value of $k$. **[3]**
+3. For this value of $k$, find the coordinates of the point of contact. **[4]**
+
+**5.** A quadratic curve has equation $y = x^2 - 2mx + m^2 + 3$, where $m$ is a constant.
+
+1. Show that the curve has no real $x$-intercepts for all values of $m$. **[4]**
+2. Find the minimum value of $y$ in terms of $m$. **[2]**
+3. State the coordinates of the vertex in terms of $m$. **[2]**
+
+**6.** The curve $C$ has equation $y = x^2 - 6x + 11$.
+
+1. Express $x^2 - 6x + 11$ in the form $(x-a)^2 + b$. **[2]**
+2. Sketch $C$, showing the coordinates of its vertex and its $y$-intercept. **[3]**
+3. The line $y = 2x + c$ intersects $C$ at two distinct points. Show that $c < 1$. **[4]**
+4. Given that $c = -3$, find the coordinates of the two points of intersection. Give your answers in exact form. **[3]**
