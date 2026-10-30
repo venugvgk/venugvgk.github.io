@@ -1,16 +1,5 @@
 [
   {
-    "listing": "/eco_2028/index.html",
-    "items": [
-      "/eco_2028/unit2-elasticities-of-demand.html",
-      "/eco_2028/unit2-YED-strategy.html",
-      "/eco_2028/unit2-PED-changes.html",
-      "/eco_2028/unit2-lecture-notes-demand-supply-elasticity.html",
-      "/eco_2028/unit2-demand-supply-curves-self-check.html",
-      "/eco_2028/unit2-demand-supply-curves.html"
-    ]
-  },
-  {
     "listing": "/about.html",
     "items": []
   },
@@ -299,6 +288,19 @@
       "/blog/book-review-ian-rankin/index.html",
       "/blog/babaspeak-freedom/index.html",
       "/blog/here-we-go/index.html"
+    ]
+  },
+  {
+    "listing": "/eco_2028/index.html",
+    "items": [
+      "/eco_2028/unit2-demand-and-supply-between-markets.html",
+      "/eco_2028/unit2-demand-and-supply-equilibrium.html",
+      "/eco_2028/unit2-elasticities-of-demand.html",
+      "/eco_2028/unit2-YED-strategy.html",
+      "/eco_2028/unit2-PED-changes.html",
+      "/eco_2028/unit2-lecture-notes-demand-supply-elasticity.html",
+      "/eco_2028/unit2-demand-supply-curves-self-check.html",
+      "/eco_2028/unit2-demand-supply-curves.html"
     ]
   }
 ]
