@@ -1,0 +1,213 @@
+---
+title: Demand and Supply - Relationships Between Markets
+date: 2026-10-29
+jupyter: python3
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+    smooth-scroll: true
+---
+
+This lesson reviews market equilibrium and disequilibrium, applies supply and demand to case studies, explains relationships between markets, and considers the role of prices in allocating resources.
+
+---
+
+### 1. Reading Graphs and Understanding Disequilibrium
+
+* **Market equilibrium:** In the basic model, equilibrium is where planned quantity supplied equals planned quantity demanded: $Q_s = Q_d$. This is a point of balance in the model; it does not mean that real markets are static or that they always converge to equilibrium.
+* **Excess supply (surplus):**
+  * **At a price above equilibrium:** At price $P_1 > P$, quantity supplied is $Q_2$ and quantity demanded is $Q_1$. The surplus is $Q_2 - Q_1$.
+  * **Possible adjustment:** If prices can adjust, unsold stocks may put downward pressure on price. As price falls from $P_1$ toward $P$, quantity demanded rises along the demand curve ($Q_1 \to Q$) and quantity supplied falls along the supply curve ($Q_2 \to Q$).
+* **Excess demand (shortage):**
+  * **At a price below equilibrium:** At price $P_1' < P$, quantity demanded is $Q_1$ and quantity supplied is $Q_2$. The shortage is $Q_1 - Q_2$.
+  * **Possible adjustment:** If prices can adjust, competition among buyers or stockouts may put upward pressure on price. As price rises from $P_1'$ toward $P$, quantity supplied rises ($Q_2 \to Q$) and quantity demanded falls ($Q_1 \to Q$).
+* **Graph literacy:** A change in a good's own price causes movement along its demand or supply curve, assuming other factors are unchanged. Changes in non-price determinants shift the curves.
+
+---
+
+### 2. Kenya Passion Fruit and Cut Flowers Case Study
+
+The class discussed case-study figures about Kenyan agricultural exports. Treat the following elasticity calculation as an estimate based on those figures, not as proof that price alone caused the export change.
+
+* **Cut flowers:** The case reports that flower exports to the UK rose by 2% while the traded price rose by 10% in 2017. The simple percentage-change estimate is:
+
+  $$\text{Estimated PES} = \frac{2\%}{10\%} = 0.2$$
+
+  If the export-volume change is a suitable measure of quantity supplied and other influences are held constant, this estimate suggests relatively price-inelastic supply over that period. A single pair of observed changes cannot establish that price caused the quantity change: weather, capacity, exchange rates, and other factors may also have mattered.
+* **Passion fruit shortages:** Higher prices can encourage producers to expand supply or switch land from other crops, but how much and how quickly depends on growing cycles, available land, costs, and other constraints. Buyers may also switch to substitutes, depending on their needs and the availability of alternatives.
+
+---
+
+### 3. Shifts and Movements Along Curves
+
+* **Movement along a curve:** A change in the good's own price changes quantity demanded or quantity supplied along the existing curve, *ceteris paribus*.
+* **Curve shift:** A change in another determinant changes demand or supply at each price. Examples include income, tastes, prices of substitutes or complements, input costs, technology, subsidies, and taxes.
+
+---
+
+### 4. Relationships Between Markets
+
+The graphs show illustrative linear curves, not observed market data. In each panel, $D_0$ and $S_0$ are the initial curves, $D_1$ or $S_1$ is the shifted curve, and $E_0$ and $E_1$ mark the initial and new equilibria. Prices and quantities are shown in arbitrary units. Read each pair from left to right: first identify the initial market change, then trace its effect into the related market. The stated equilibrium effects assume the other curve in that market stays fixed.
+
+1. **Substitute goods: brand-name and own-label sweet chilli sauce**
+   1. Suppose a rise in production costs reduces the brand-name sauce's supply. Its supply curve shifts left from $S_0$ to $S_1$; with demand unchanged, equilibrium moves from $E_0$ to $E_1$: price rises and quantity falls.
+   2. The higher relative price makes the own-label sauce more attractive to some buyers. Its demand shifts right from $D_0$ to $D_1$.
+   3. If own-label supply is unchanged, its new equilibrium has both a higher price and a higher quantity.
+   4. A price increase by itself does not establish that supply fell; the graph's first shift here is caused by the assumed increase in costs.
+
+```{python}
+#| label: fig-substitute-markets
+#| fig-cap: "A supply decrease for brand-name sauce raises demand for its own-label substitute."
+#| echo: false
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+q = np.linspace(0, 100, 300)
+
+def plot_market(ax, demand0, supply0, equilibrium0, title, x_label,
+                demand1=None, supply1=None, equilibrium1=None):
+    demand_shifted = demand1 is not None
+    supply_shifted = supply1 is not None
+
+    ax.plot(q, demand0, color='tab:blue', linestyle='--' if demand_shifted else '-',
+            alpha=0.55 if demand_shifted else 1, label=r'$D_0$')
+    ax.plot(q, supply0, color='tab:red', linestyle='--' if supply_shifted else '-',
+            alpha=0.55 if supply_shifted else 1, label=r'$S_0$')
+    if demand_shifted:
+        ax.plot(q, demand1, color='tab:blue', label=r'$D_1$')
+    if supply_shifted:
+        ax.plot(q, supply1, color='tab:red', label=r'$S_1$')
+
+    q0, p0 = equilibrium0
+    ax.scatter(q0, p0, color='black', s=55, zorder=5, label=fr'$E_0$ ({q0:g}, {p0:g})')
+    ax.axhline(p0, color='0.5', linestyle=':', linewidth=1)
+    ax.axvline(q0, color='0.5', linestyle=':', linewidth=1)
+    if equilibrium1 is not None:
+        q1, p1 = equilibrium1
+        ax.scatter(q1, p1, color='tab:green', s=60, zorder=5,
+                   label=fr'$E_1$ ({q1:g}, {p1:g})')
+        ax.axhline(p1, color='tab:green', linestyle=':', linewidth=1, alpha=0.7)
+        ax.axvline(q1, color='tab:green', linestyle=':', linewidth=1, alpha=0.7)
+        ax.annotate('', xy=(q1, p1), xytext=(q0, p0),
+                    arrowprops=dict(arrowstyle='->', color='black', lw=1.5))
+
+    ax.set(title=title, xlabel=x_label, ylabel='Price (arbitrary units)',
+           xlim=(0, 100), ylim=(0, 120))
+    ax.grid(True, alpha=0.25)
+    ax.legend(fontsize=8, loc='best')
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 4.8), constrained_layout=True)
+plot_market(
+    axes[0], 100 - 0.8 * q, 20 + 0.8 * q, (50, 60),
+    'Brand-name sauce: supply decreases', 'Quantity of brand-name sauce',
+    supply1=35 + 0.8 * q, equilibrium1=(40.625, 67.5),
+)
+plot_market(
+    axes[1], 100 - 0.8 * q, 15 + 0.8 * q, (53.125, 57.5),
+    'Own-label sauce: demand increases', 'Quantity of own-label sauce',
+    demand1=115 - 0.8 * q, equilibrium1=(62.5, 65),
+)
+fig.suptitle('Substitutes: the first market changes before the related market', fontsize=13)
+plt.show()
+```
+
+2. **Complementary goods: football shirts and shorts**
+   1. Suppose production costs fall or production capacity improves for football shirts. Shirt supply shifts right from $S_0$ to $S_1$.
+   2. With shirt demand unchanged, the shirt price falls and the quantity sold rises.
+   3. If buyers commonly use shirts and shorts together, the lower shirt price can increase demand for shorts. Shorts demand shifts right from $D_0$ to $D_1$.
+   4. If shorts supply is unchanged, the shorts equilibrium price and quantity both rise. This is a demand shift in the shorts market, not a movement along its original demand curve.
+
+```{python}
+#| label: fig-complement-markets
+#| fig-cap: "Greater shirt supply lowers shirt prices and can raise demand for complementary shorts."
+#| echo: false
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 4.8), constrained_layout=True)
+plot_market(
+    axes[0], 100 - 0.8 * q, 30 + 0.8 * q, (43.75, 65),
+    'Football shirts: supply increases', 'Quantity of football shirts',
+    supply1=15 + 0.8 * q, equilibrium1=(53.125, 57.5),
+)
+plot_market(
+    axes[1], 100 - 0.8 * q, 20 + 0.8 * q, (50, 60),
+    'Football shorts: demand increases', 'Quantity of football shorts',
+    demand1=115 - 0.8 * q, equilibrium1=(59.375, 67.5),
+)
+fig.suptitle('Complements: cheaper shirts can increase demand for shorts', fontsize=13)
+plt.show()
+```
+
+3. **Derived demand: hotel stays and hotel workers**
+   1. Suppose more visitors want hotel stays. Demand for hotel services shifts right from $D_0$ to $D_1$.
+   2. If hotel supply slopes upward, the new equilibrium has a higher room price and more stays.
+   3. Providing additional hotel stays requires labour. If hotels need more workers and other determinants are unchanged, derived demand for hotel labour shifts right from $D_0$ to $D_1$.
+   4. With an upward-sloping labour supply curve, the new labour-market equilibrium has a higher wage and employment. The size of both changes depends on how readily hotels can expand and how responsive labour supply is.
+
+```{python}
+#| label: fig-derived-demand-markets
+#| fig-cap: "Higher demand for hotel stays can increase derived demand for hotel labour."
+#| echo: false
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 4.8), constrained_layout=True)
+plot_market(
+    axes[0], 100 - 0.8 * q, 20 + 0.8 * q, (50, 60),
+    'Hotel services: demand increases', 'Quantity of hotel stays',
+    demand1=115 - 0.8 * q, equilibrium1=(59.375, 67.5),
+)
+plot_market(
+    axes[1], 90 - 0.8 * q, 10 + 0.8 * q, (50, 50),
+    'Hotel labour: derived demand increases', 'Employment of hotel workers',
+    demand1=105 - 0.8 * q, equilibrium1=(59.375, 57.5),
+)
+fig.suptitle('Derived demand: more hotel output can increase demand for workers', fontsize=13)
+plt.show()
+```
+
+4. **Joint supply: soybean oil and soybean meal**
+   1. Soybean oil and soybean meal are joint products of crushing soybeans. Suppose demand for soybean oil increases from $D_0$ to $D_1$.
+   2. If the higher oil price makes it profitable and feasible to crush more soybeans, oil supply also expands from $S_0$ to $S_1$. Oil-market quantity rises; its new price depends on the relative sizes of the demand and supply shifts. The graph illustrates one possible outcome, not a general prediction about price.
+   3. More crushing produces more soybean meal as a by-product, shifting meal supply right from $S_0$ to $S_1$.
+   4. If meal demand is unchanged, the greater meal supply lowers its equilibrium price and raises the quantity sold. This result depends on the production link and on processors being able to increase crushing.
+
+```{python}
+#| label: fig-joint-supply-markets
+#| fig-cap: "Higher soybean-oil demand can increase crushing and joint supply of soybean meal."
+#| echo: false
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 4.8), constrained_layout=True)
+plot_market(
+    axes[0], 100 - 0.8 * q, 20 + 0.8 * q, (50, 60),
+    'Soybean oil: demand and supply increase', 'Quantity of soybean oil',
+    demand1=115 - 0.8 * q, supply1=10 + 0.8 * q,
+    equilibrium1=(65.625, 62.5),
+)
+plot_market(
+    axes[1], 90 - 0.8 * q, 10 + 0.8 * q, (50, 50),
+    'Soybean meal: joint supply increases', 'Quantity of soybean meal',
+    supply1=-5 + 0.8 * q, equilibrium1=(59.375, 42.5),
+)
+fig.suptitle('Joint supply: increasing soybean crushing also supplies meal', fontsize=13)
+plt.show()
+```
+
+---
+
+### 5. Functions of Price in Resource Allocation
+
+1. **Rationing:** When a good is scarce and prices can adjust, a higher price tends to reduce quantity demanded and allocates the available good among people willing and able to pay. This does not necessarily mean it goes to those with the greatest need or social value.
+2. **Signalling:** Price changes communicate information about relative scarcity and changes in demand or supply. They are signals, but do not convey every relevant piece of information.
+3. **Incentives:** A higher market price can encourage firms to supply more and can encourage buyers to conserve or seek alternatives. The response depends on costs, capacity, and how responsive buyers and sellers are to price.
+
+---
+
+### 6. Homework and Unit Roadmap
+
+* **Homework:**
+  1. Practise drawing and explaining the four inter-market relationship graphs.
+  2. Read the Coffee Bean Production case study and complete the accompanying exam-style questions.
+* **Upcoming course progression:**
+  * **Next class:** Complete consumer and producer surplus to conclude Unit 2.
+  * **Following units:** Study government interventions in microeconomics (taxes, subsidies, price ceilings and floors, and buffer stocks), followed by macroeconomic concepts such as GDP, GNP, and national income.

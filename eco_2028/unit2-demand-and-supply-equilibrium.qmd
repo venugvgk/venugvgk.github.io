@@ -1,0 +1,294 @@
+---
+title: The interaction of demand and supply - The equilibrium
+date: 2026-10-26
+jupyter: python3
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+    smooth-scroll: true
+---
+
+# Introduction & Core Concepts
+
+In previous sessions, demand and supply were examined in isolation. This lecture brings them together in a graphical framework for explaining how markets can clear and how prices may respond to imbalances.
+
+## The Price Mechanism
+* **The role of price:** At a given price, suppliers choose how much to offer and consumers choose how much to buy. Price is an important coordinating signal, although real markets can also adjust through non-price mechanisms such as queues, rationing, and contracts.
+* **Movements vs. Shifts:** 
+  * A change in the good's own price causes a **movement along** the existing supply or demand curve, assuming other factors are unchanged.
+  * **Non-price determinants** (e.g., changes in income, preferences, input costs, technology, related goods) cause entire curves to **shift**.
+
+---
+
+# Market Equilibrium & Dynamic Disequilibrium
+
+## Market Equilibrium
+In the basic model, market equilibrium is the price and quantity at which planned quantity supplied equals planned quantity demanded.
+
+$$
+\text{At equilibrium } E: \quad Q_s = Q_d = Q \quad \text{at price } P
+$$
+
+* **Market-clearing price ($P$):** The price at which planned quantity supplied equals planned quantity demanded.
+* **Equilibrium quantity ($Q$):** The quantity bought and sold at price $P$, if the market clears.
+
+## Real-World Dynamic Disequilibrium
+Textbook diagrams show equilibrium as a point of balance. Actual markets can be away from equilibrium, and adjustment is not necessarily immediate or automatic.
+
+* **Adjustment takes time:** Information, production, and contracting take time, so observed prices and quantities may differ from their equilibrium values.
+* **Convergence is conditional:** The basic supply-and-demand model predicts pressure toward equilibrium when prices can adjust and its assumptions hold. Price controls, market power, and other frictions can alter or prevent that adjustment. Equilibrium is not by itself a guarantee of an efficient outcome.
+* **What affects adjustment:** Price elasticity of supply matters, but adjustment also depends on demand responsiveness, time lags, information, and market institutions.
+
+---
+
+# Step-by-Step Disequilibrium Adjustments
+
+```{python}
+#| label: fig-disequilibrium-overview
+#| fig-cap: "Market Equilibrium, Excess Supply, and Excess Demand Regions"
+#| echo: false
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Define price and quantity range
+Q = np.linspace(0, 100, 200)
+P_D = 100 - 0.8 * Q
+P_S = 20 + 0.8 * Q
+
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Plot curves
+ax.plot(Q, P_D, 'b-', label='Demand Curve (D)', linewidth=2.5)
+ax.plot(Q, P_S, 'r-', label='Supply Curve (S)', linewidth=2.5)
+
+# Equilibrium point (50, 60)
+ax.plot(50, 60, 'go', markersize=9, label=r'Equilibrium E ($P=60$, $Q=50$)')
+ax.axhline(60, color='gray', linestyle='--', alpha=0.6)
+ax.text(2, 60, r'$P$', color='dimgray', va='bottom', ha='left',
+        bbox=dict(facecolor='white', edgecolor='none', alpha=0.8))
+ax.axvline(50, color='gray', linestyle='--', alpha=0.6)
+
+# Excess Supply Zone at P = 80
+ax.axhline(80, color='orange', linestyle=':', linewidth=2, label=r'$P_1 = 80$ (Excess Supply)')
+ax.text(2, 80, r'$P_1$', color='darkorange', va='bottom', ha='left',
+        bbox=dict(facecolor='white', edgecolor='none', alpha=0.8))
+ax.plot([25, 75], [80, 80], 'o-', color='orange', linewidth=2)
+ax.text(25, 84, r'$Q_d = 25$', color='blue', ha='center')
+ax.text(75, 73, r'$Q_s = 75$', color='red', ha='center')
+ax.text(45, 93, r'Excess supply: $Q_s > Q_d$', color='orange', weight='bold', ha='center')
+
+# Excess Demand Zone at P = 40
+ax.axhline(40, color='purple', linestyle=':', linewidth=2, label=r"$P_1' = 40$ (Excess Demand)")
+ax.text(2, 40, r"$P_1'$", color='purple', va='bottom', ha='left',
+        bbox=dict(facecolor='white', edgecolor='none', alpha=0.8))
+ax.plot([25, 75], [40, 40], 'o-', color='purple', linewidth=2)
+ax.text(25, 34, r'$Q_s = 25$', color='red', ha='center')
+ax.text(75, 34, r'$Q_d = 75$', color='blue', ha='center')
+ax.text(50, 27, r'Excess demand ($Q_d > Q_s$)', color='purple', weight='bold', ha='center')
+
+ax.set_title('Market Equilibrium & Disequilibrium Zones', fontsize=13, weight='bold')
+ax.set_xlabel(r'Quantity ($Q$)', fontsize=11)
+ax.set_ylabel(r'Price ($P$)', fontsize=11)
+ax.legend(loc='upper right')
+ax.grid(True, alpha=0.3)
+ax.set_xlim(0, 100)
+ax.set_ylim(0, 110)
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## Case 1: Excess Supply (Market Surplus)
+
+### 1. Initial Market Conditions & Price Expectations
+* **Price above equilibrium ($P_1 > P$):** At price $P_1$, suppliers plan to offer more than consumers plan to buy.
+  * *Class Examples:* A tomato farmer assuming tomatoes will fetch 100 Rs/kg, or a computer manufacturer building stock expecting a selling price of 1,000,000 Rs per laptop.
+* **Quantity supplied ($Q_2$):** At $P_1$, producers plan to supply $Q_2$.
+* **Quantity demanded ($Q_1$):** At $P_1$, consumers plan to buy $Q_1$.
+* **Market surplus:** Because $Q_2 > Q_1$, planned excess supply is $Q_2 - Q_1$.
+
+### 2. Market Adjustment Mechanism
+1. **Inventory Accumulation:** Unsold stock piles up in warehouses and retail outlets.
+2. **Price reductions:** Sellers may cut prices to sell excess stock, moving the market price downward from $P_1$ toward $P$.
+3. **Simultaneous Movements Along Curves:**
+   * **Along the demand curve:** As price falls, quantity demanded increases from $Q_1$ to $Q$.
+   * **Along the supply curve:** As price falls, quantity supplied decreases from $Q_2$ to $Q$.
+4. **Restoring balance:** Under the model's assumptions, these changes reduce the surplus as the market moves toward equilibrium $E$ at $(P, Q)$.
+
+```{python}
+#| label: fig-excess-supply
+#| fig-cap: "Adjustment from Excess Supply to Equilibrium"
+#| echo: false
+
+fig, ax = plt.subplots(figsize=(8, 6))
+
+ax.plot(Q, P_D, 'b-', label='Demand (D)', linewidth=2.5)
+ax.plot(Q, P_S, 'r-', label='Supply (S)', linewidth=2.5)
+
+# P1 = 80 line
+ax.axhline(80, color='orange', linestyle=':', alpha=0.7)
+ax.axhline(60, color='gray', linestyle='--', alpha=0.6)
+ax.text(2, 80, r'$P_1$', color='darkorange', va='bottom', ha='left',
+        bbox=dict(facecolor='white', edgecolor='none', alpha=0.8))
+ax.text(2, 60, r'$P$', color='dimgray', va='bottom', ha='left',
+        bbox=dict(facecolor='white', edgecolor='none', alpha=0.8))
+ax.plot([25, 75], [80, 80], 'o-', color='orange', linewidth=2.5, label='Excess supply')
+ax.plot([25, 25], [0, 80], 'b--', alpha=0.5)
+ax.plot([75, 75], [0, 80], 'r--', alpha=0.5)
+ax.plot(50, 60, 'go', markersize=8, label='Equilibrium E')
+
+# Convergence arrows
+ax.annotate('', xy=(50, 60), xytext=(25, 80),
+             arrowprops=dict(arrowstyle="->", color="blue", lw=2.5, mutation_scale=15))
+ax.annotate('', xy=(50, 60), xytext=(75, 80),
+             arrowprops=dict(arrowstyle="->", color="red", lw=2.5, mutation_scale=15))
+
+ax.text(25, -5, r'$Q_1$ ($Q_d$)', ha='center', color='blue', weight='bold')
+ax.text(75, -5, r'$Q_2$ ($Q_s$)', ha='center', color='red', weight='bold')
+ax.text(50, -5, r'$Q$ ($E$)', ha='center', color='green', weight='bold')
+ax.text(50, 83, r'Excess Supply ($Q_2 - Q_1$)', color='orange', weight='bold', ha='center')
+
+ax.set_title(r'Excess Supply Adjustment Mechanism ($P_1 > P$)', fontsize=13, weight='bold')
+ax.set_xlabel(r'Quantity ($Q$)', fontsize=11)
+ax.set_ylabel(r'Price ($P$)', fontsize=11)
+ax.set_xlim(0, 100)
+ax.set_ylim(-10, 100)
+ax.legend(loc='upper right')
+ax.grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## Case 2: Excess Demand (Market Shortage)
+
+### 1. Initial Market Conditions
+*(Note: To maintain consistent notation across both diagrams, $Q_1$ represents quantity demanded and $Q_2$ represents quantity supplied.)*
+
+* **Price below equilibrium ($P_1' < P$):** The market price $P_1'$ is below the clearing price $P$.
+* **Quantity demanded ($Q_1$):** At $P_1'$, consumers plan to buy $Q_1$.
+* **Quantity supplied ($Q_2$):** At $P_1'$, producers plan to supply $Q_2$.
+* **Market shortage:** Because $Q_1 > Q_2$, planned excess demand is $Q_1 - Q_2$.
+
+### 2. Market Adjustment Mechanism
+1. **Stockouts & Competition:** Retailers quickly run out of stock as buyers compete for limited units.
+2. **Price increases:** If prices can adjust, competition among buyers may push the price upward from $P_1'$ toward $P$.
+3. **Simultaneous Movements Along Curves:**
+   * **Along the supply curve:** Higher prices encourage producers to increase quantity supplied from $Q_2$ to $Q$.
+   * **Along the demand curve:** Higher prices lead consumers to reduce quantity demanded from $Q_1$ to $Q$.
+4. **Restoring balance:** Under the model's assumptions, these changes reduce the shortage as the market moves toward equilibrium $E$ at $(P, Q)$.
+
+```{python}
+#| label: fig-excess-demand
+#| fig-cap: "Adjustment from Excess Demand to Equilibrium"
+#| echo: false
+
+fig, ax = plt.subplots(figsize=(8, 6))
+
+ax.plot(Q, P_D, 'b-', label='Demand (D)', linewidth=2.5)
+ax.plot(Q, P_S, 'r-', label='Supply (S)', linewidth=2.5)
+
+# P1 = 40 line
+ax.axhline(40, color='purple', linestyle=':', alpha=0.7)
+ax.axhline(60, color='gray', linestyle='--', alpha=0.6)
+ax.text(2, 40, r"$P_1'$", color='purple', va='bottom', ha='left',
+        bbox=dict(facecolor='white', edgecolor='none', alpha=0.8))
+ax.text(2, 60, r'$P$', color='dimgray', va='bottom', ha='left',
+        bbox=dict(facecolor='white', edgecolor='none', alpha=0.8))
+ax.plot([25, 75], [40, 40], 'o-', color='purple', linewidth=2.5, label='Excess demand')
+ax.plot([25, 25], [0, 40], 'r--', alpha=0.5)
+ax.plot([75, 75], [0, 40], 'b--', alpha=0.5)
+ax.plot(50, 60, 'go', markersize=8, label='Equilibrium E')
+
+# Convergence arrows
+ax.annotate('', xy=(50, 60), xytext=(75, 40),
+             arrowprops=dict(arrowstyle="->", color="blue", lw=2.5, mutation_scale=15))
+ax.annotate('', xy=(50, 60), xytext=(25, 40),
+             arrowprops=dict(arrowstyle="->", color="red", lw=2.5, mutation_scale=15))
+
+ax.text(25, -5, r'$Q_2$ ($Q_s$)', ha='center', color='red', weight='bold')
+ax.text(75, -5, r'$Q_1$ ($Q_d$)', ha='center', color='blue', weight='bold')
+ax.text(50, -5, r'$Q$ ($E$)', ha='center', color='green', weight='bold')
+ax.text(50, 33, r'Excess Demand ($Q_1 - Q_2$)', color='purple', weight='bold', ha='center')
+
+ax.set_title(r"Excess Demand Adjustment Mechanism ($P_1' < P$)", fontsize=13, weight='bold')
+ax.set_xlabel(r'Quantity ($Q$)', fontsize=11)
+ax.set_ylabel(r'Price ($P$)', fontsize=11)
+ax.set_xlim(0, 100)
+ax.set_ylim(-10, 100)
+ax.legend(loc='upper right')
+ax.grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+# Numerical Table & Market Schedule
+
+The lecture illustrated dynamic price convergence using the following schedule:
+
+| Price (Rs) | Quantity Supplied ($Q_s$) | Quantity Demanded ($Q_d$) | Market State | Market Adjustment Force |
+| :---: | :---: | :---: | :---: | :--- |
+| **1,600** | 5,000 units | 3,000 units | Excess Supply (+2,000) | Unsold inventory can put downward pressure on price (↓) |
+| **1,500** | 4,500 units | 3,500 units | Excess Supply (+1,000) | Surplus can put downward pressure on price (↓) |
+| **1,400** | **4,000 units** | **4,000 units** | **Market Equilibrium** | **Market clears ($Q_s = Q_d$)** |
+| **1,300** | 3,500 units | 4,500 units | Excess Demand (+1,000) | Shortage can put upward pressure on price (↑) |
+| **1,200** | 3,000 units | 5,000 units | Excess Demand (+2,000) | Shortage can put upward pressure on price (↑) |
+
+---
+
+# Non-Price Factors & Simultaneous Curve Shifts
+
+When non-price factors change, the baseline demand or supply curves shift position.
+
+```{python}
+#| label: fig-simultaneous-shifts
+#| fig-cap: "Simultaneous Equal Rightward Shifts in Demand and Supply"
+#| echo: false
+
+P_D1 = 120 - 0.8 * Q
+P_S1 = 0 + 0.8 * Q
+
+fig, ax = plt.subplots(figsize=(8, 6))
+
+ax.plot(Q, P_D, 'b--', label=r'Original Demand ($D$)', alpha=0.5)
+ax.plot(Q, P_S, 'r--', label=r'Original Supply ($S$)', alpha=0.5)
+ax.plot(Q, P_D1, 'b-', label=r'New Demand ($D_1$)', linewidth=2.5)
+ax.plot(Q, P_S1, 'r-', label=r'New Supply ($S_1$)', linewidth=2.5)
+
+# Equilibrium points
+ax.plot(50, 60, 'go', markersize=8, label=r'$E_0$ ($P=60$, $Q=50$)')
+ax.plot(75, 60, 'mo', markersize=9, label=r'$E_1$ ($P=60$, $Q=75$)')
+
+ax.axhline(60, color='gray', linestyle='--', alpha=0.6)
+ax.text(2, 60, r'$P_0 = P_1$', color='dimgray', va='bottom', ha='left',
+        bbox=dict(facecolor='white', edgecolor='none', alpha=0.8))
+ax.annotate('', xy=(75, 60), xytext=(50, 60),
+             arrowprops=dict(arrowstyle="->", color="magenta", lw=2.5, mutation_scale=15))
+
+ax.set_title('Simultaneous Equal Shifts in Demand & Supply', fontsize=13, weight='bold')
+ax.set_xlabel(r'Quantity ($Q$)', fontsize=11)
+ax.set_ylabel(r'Price ($P$)', fontsize=11)
+ax.legend(loc='upper right')
+ax.grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+```
+
+## Special Case: Identical Magnitude Rightward Shifts
+* **Scenario:** Non-price factors shift demand right from $D$ to $D_1$ and supply right from $S$ to $S_1$ by the same horizontal amount at every price.
+* **Outcome:** The new equilibrium point moves horizontally from $E_0$ to $E_1$.
+  * **Equilibrium quantity:** In this example, increases from $Q_0 = 50$ to $Q_1 = 75$.
+  * **Equilibrium price:** Remains unchanged at $P_0 = P_1 = 60$, because the demand and supply curves are parallel and shift horizontally by the same amount. Equal shifts do not generally leave price unchanged if the curve slopes or shift sizes differ.
+
+---
