@@ -1,0 +1,54 @@
+
+---
+title: "Worksheet 3: Addition and Subtraction"
+format:
+  docx:
+    toc: false
+    number-sections: false
+---
+
+### A. Addition
+
+1. $3x+5x$
+
+2. $7a+2a+4$
+
+3. $(4y+3)+(2y+5)$
+
+4. $(6m-2)+(3m+7)$
+
+5. $(5p+2q)+(3p+4q)$
+
+6. $(2x^2+3x)+(4x^2+x)$
+
+7. $(7a-3b+2)+(-2a+5b+6)$
+
+8. $(x^2+2x+1)+(3x^2-x+4)$
+
+### B. Subtraction
+
+9. $9x-4x$
+
+10. $(8a+7)-(3a+2)$
+
+11. $(6y+4)-(2y+9)$
+
+12. $(9m-3)-(4m-8)$
+
+13. $(7p+5q)-(2p+3q)$
+
+14. $(6x^2+5x+4)-(2x^2+3x+1)$
+
+15. Subtract $3a-4b+2$ from $8a+2b+9$.
+
+16. Subtract $2y^2-3y+5$ from $5y^2+y+8$.
+
+### C. Mixed practice
+
+17. Simplify $(3x+4)+(2x-7)-(x+1)$.
+
+18. Find the missing expression: $(4a+3)+\square=7a+8$.
+
+19. A rectangle has length $3x+2$ cm and width $x+1$ cm. Find its perimeter by adding all four sides.
+
+20. A ribbon is $9y+8$ cm long. A piece measuring $4y+3$ cm is cut off. Write a simplified expression for the length remaining.

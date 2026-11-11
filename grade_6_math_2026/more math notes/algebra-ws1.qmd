@@ -1,0 +1,59 @@
+---
+title: "Worksheet 1: Algebra Basics"
+format:
+  docx:
+    toc: false
+    number-sections: false
+---
+
+**A. Constants and variables**
+
+1. In $7x+4$, identify the variable and the constant term.
+
+2. In $12-5y$, identify the variable and the constant term.
+
+3. Write the literals (letters) appearing in $6ab+3c-9$.
+
+4. A notebook costs ₹$p$. Riya buys 4 notebooks. In the expression $4p$, what does $p$ represent, and which number is fixed?
+
+**B. Operations and expressions**
+
+5. Write $8\times m$ without the multiplication sign.
+
+6. Write $3ab$ using multiplication signs between all factors.
+
+7. Write an expression for “9 more than a number $n$”.
+
+8. Write an expression for “5 less than twice a number $t$”.
+
+9. Write an expression for “a number $k$ divided by 4”.
+
+10. In $6x+5$, which operation is performed first when finding its value?
+
+**C. Types of expressions**
+
+**For Questions 11–15, write the number of terms and classify the expression as a monomial, binomial, trinomial or multinomial.**
+
+11. $9a$
+
+12. $x+7$
+
+13. $p^2+3p-2$
+
+14. $a+b+c+d$
+
+15. $14$
+
+**D. Numerical coefficients**
+
+**Write the numerical coefficient of the variable term indicated. Include its sign.**
+
+16. $8x$
+
+17. $-6ab$
+
+18. $y$
+
+19. $-m^2$
+
+20. Write the numerical coefficients of both variable terms in $4p-9q+6$.

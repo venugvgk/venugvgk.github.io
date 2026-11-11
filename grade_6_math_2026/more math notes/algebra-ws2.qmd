@@ -1,0 +1,59 @@
+---
+title: "Worksheet 2: Terms and Polynomials"
+format:
+  docx:
+    toc: false
+    number-sections: false
+---
+
+### A. Like and unlike terms
+
+**For Questions 1–4, write “like” or “unlike”.**
+
+1. $5x$ and $-8x$
+
+2. $4a$ and $4b$
+
+3. $7m^2$ and $2m$
+
+4. $3ab$ and $-6ba$
+
+5. From the list below, write all the terms like $6y$: $2y,\quad 6x,\quad -9y,\quad y^2,\quad y$.
+
+6. Arrange these terms into groups of like terms: $3x,\quad 5y,\quad -2x,\quad 7,\quad y,\quad -4$.
+
+### B. Degree of polynomials
+
+**Find the degree of each expression.**
+
+7. $9x$
+
+8. $4a^2$
+
+9. $7$
+
+10. $x^3+2x+8$
+
+11. $5y^2-y+4$
+
+12. $3ab+2a+1$
+
+13. $2x^2y+5xy+6$
+
+14. Simplify first, then find the degree: $4x^2+3x-4x^2+7$.
+
+### C. Substitution
+
+**Find the value of each expression for the given value or values.**
+
+15. $3x+5$, when $x=4$
+
+16. $7a-6$, when $a=3$
+
+17. $2m^2+1$, when $m=3$
+
+18. $p^2+2p+4$, when $p=2$
+
+19. $4x+3y$, when $x=2$ and $y=5$
+
+20. $2a^2-b+3$, when $a=2$ and $b=6$
